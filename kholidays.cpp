@@ -37,9 +37,9 @@ extern "C" {
 }
 
 
-KHolidays::KHolidays( const QString& locale )
+KHolidays::KHolidays( const QString& location )
 {
-  mHolidayFile = locate( "data", "libkholidays/holiday_" + locale );
+  mHolidayFile = locate( "data", "libkholidays/holiday_" + location );
 
   mYearLast = 0;
 }
@@ -57,7 +57,8 @@ bool KHolidays::parseFile( const QDate &date )
 {
   int lastYear = 0; //current year less 1900
 
-  if ( mHolidayFile.isEmpty() || date.isNull() ) return false;
+  if ( mHolidayFile.isNull() || mHolidayFile.isEmpty() || date.isNull() )
+    return false;
 
   if ( ( mYearLast == 0 ) || ( date.year() != mYearLast ) ) {
     mYearLast = date.year();
