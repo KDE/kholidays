@@ -114,7 +114,7 @@ class LunarPhase
     /**
        Return the string representation of phase.
 
-       @parm phase the lunar phase.
+       @param phase the lunar phase.
     */
     static QString phaseName( Phase phase );
 
