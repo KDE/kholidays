@@ -24,7 +24,9 @@
 #include <qstringlist.h>
 #include <qdatetime.h>
 
-class KHolidays {
+#include <kdepimmacros.h>
+
+class KDE_EXPORT KHolidays {
   public:
     /**
        Return a list of all available locations which have a holiday definition.
