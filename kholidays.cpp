@@ -36,8 +36,22 @@ extern "C" {
   extern struct holiday holiday[366];
 }
 
+QStringList KHolidays::locations()
+{
+  QStringList files =
+    KGlobal::dirs()->findAllResources( "data", "libkholidays/holiday_*",
+                                       false, true );
+  QStringList locs;
+
+  QStringList::ConstIterator it;
+  for ( it = files.begin(); it != files.end(); ++it )
+    locs.append( (*it).mid((*it).findRev('_') + 1) );
+
+  return locs;
+}
 
 KHolidays::KHolidays( const QString& location )
+  : mLocation( location )
 {
   mHolidayFile = locate( "data", "libkholidays/holiday_" + location );
 
@@ -46,6 +60,11 @@ KHolidays::KHolidays( const QString& location )
 
 KHolidays::~KHolidays()
 {
+}
+
+QString KHolidays::location() const
+{
+  return mLocation;
 }
 
 QString KHolidays::shortText( const QDate &date )

@@ -21,12 +21,23 @@
 #define KHOLIDAYS_HOLIDAYS_H
 
 #include <qstring.h>
+#include <qstringlist.h>
 #include <qdatetime.h>
 
 class KHolidays {
   public:
-    KHolidays( const QString& );
+    /**
+       Return a list of all available locations which have a holiday definition.
+       One of these can then be passed to the constructor for a new KHolidays
+       object.
+    */
+    static QStringList locations();
+
+    KHolidays( const QString& location );
     ~KHolidays();
+
+    /// return the location with which this object was constructed
+    QString location() const;
 
     QString shortText( const QDate& );
 
@@ -38,6 +49,7 @@ class KHolidays {
   private:
     bool parseFile( const QDate& );
 
+    QString mLocation;    // location string used to determine holidays file
     QString mHolidayFile; // name of file containing holiday data
     int mYearLast;        // save off the last year we have seen
 };
