@@ -27,4 +27,4 @@ libkholidays_la_SOURCES = kholidays.cpp scanholiday.c parseholiday.h parseholida
 messages: rc.cpp
 	$(XGETTEXT) *.cpp -o $(podir)/libkholidays.pot
 
-include ../admin/Doxyfile.am
+include $(top_srcdir)/doc/api/Doxyfile.am
