@@ -31,6 +31,8 @@
     your version.
 */
 
+#include "config.h"
+
 #include <kglobal.h>
 #include <klocale.h>
 #include <kdebug.h>
@@ -181,7 +183,9 @@ LunarPhase::Phase LunarPhase::phase( const QDate &date ) const
  * SUCH DAMAGE.
  */
 
+#if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
+#endif
 
 /*
  * Phase of the Moon.  Calculates the current phase of the moon.
@@ -197,7 +201,9 @@ LunarPhase::Phase LunarPhase::phase( const QDate &date ) const
 
 
 #include <ctype.h>
+#if HAVE_ERR_H
 #include <err.h>
+#endif
 #include <math.h>
 #include <string.h>
 #include <stdlib.h>
