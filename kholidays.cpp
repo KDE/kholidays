@@ -23,7 +23,7 @@
 #include <kstandarddirs.h>
 
 #include "kholidays.h"
-
+#include "kholidays_version.h"
 
 extern "C" {
   char *parse_holidays( const char *, int year, short force );
