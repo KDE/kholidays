@@ -89,6 +89,7 @@ short	         monthbegin[12] = { 0, 31, 59, 90,
 
 struct holiday {
   char            *string;        /* name of holiday, 0=not a holiday */
+  int             color;
   unsigned short  dup;            /* reference count */
 };
 
@@ -414,6 +415,7 @@ static void setliteraldate(int month, int day, int off, int *dup)
     if (!*dup)
       holiday_name = strdup(holiday_name);
     hp->string	= holiday_name;
+    hp->color   = (yacc_stringcolor == 0) ? yacc_daycolor : yacc_stringcolor;
     hp->dup		= (*dup)++;
   }
 }
@@ -437,6 +439,7 @@ static void seteaster(int off, int length)
       if (!dup)
 	holiday_name = strdup(holiday_name);
       hp->string	= holiday_name;
+      hp->color     = (yacc_stringcolor == 0) ? yacc_daycolor : yacc_stringcolor;
       hp->dup		= dup++;
     }
     julian++, hp++;

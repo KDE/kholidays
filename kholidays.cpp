@@ -30,6 +30,7 @@ extern "C" {
   /** \internal */
   struct holiday {
     char            *string;        /* name of holiday, 0=not a holiday */
+    int             color;          /* color code, see scanholiday.lex */
     unsigned short  dup;            /* reference count */
   };
   extern struct holiday holiday[366];
@@ -52,11 +53,11 @@ QString KHolidays::shortText( const QDate &date )
   return getHoliday( date );
 }
 
-QString KHolidays::getHoliday( const QDate &date )
+bool KHolidays::parseFile( const QDate &date )
 {
   int lastYear = 0; //current year less 1900
 
-  if ( mHolidayFile.isEmpty() || date.isNull() ) return QString::null;
+  if ( mHolidayFile.isEmpty() || date.isNull() ) return false;
 
   if ( ( mYearLast == 0 ) || ( date.year() != mYearLast ) ) {
     mYearLast = date.year();
@@ -64,9 +65,24 @@ QString KHolidays::getHoliday( const QDate &date )
     parse_holidays( QFile::encodeName( mHolidayFile ), lastYear, 1 );
   }
 
+  return true;
+}
+
+QString KHolidays::getHoliday( const QDate &date )
+{
+  if ( !parseFile( date ) ) return QString::null;
+
   if ( holiday[date.dayOfYear()-1].string ) {
     return QString::fromUtf8( holiday[date.dayOfYear()-1].string );
   } else {
     return QString::null;
   }
+}
+
+int KHolidays::category( const QDate &date )
+{
+  if ( !parseFile(date) ) return WORKDAY;
+
+  return (holiday[date.dayOfYear()-1].color == 2/*red*/) ||
+         (holiday[date.dayOfYear()-1].color == 9/*weekend*/) ? HOLIDAY : WORKDAY;
 }

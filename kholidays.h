@@ -32,7 +32,12 @@ class KHolidays {
 
     QString getHoliday( const QDate& );
 
+    enum { WORKDAY, HOLIDAY };
+    int category( const QDate& );
+
   private:
+    bool parseFile( const QDate& );
+
     QString mHolidayFile; // name of file containing holiday data
     int mYearLast;        // save off the last year we have seen
 };
