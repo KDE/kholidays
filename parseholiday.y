@@ -29,6 +29,8 @@
 #include <sys/stat.h>
 #include <string.h>
 
+#include <limits.h>
+
 #ifdef HAVE_MALLOC_H
 #include <malloc.h>
 #endif
@@ -75,8 +77,8 @@ char	        *yacc_string;		/* holiday name text */
 int	         yacc_daycolor;		/* color of day number, 1..8 */
 char	        *progname;		/* argv[0] */
 int	         parse_year = -1;	/* year being parsed, 0=1970..99=2069*/
-static char	*filename;		/* holiday filename */
-static char	 errormsg[200];		/* error message if any, or "" */
+static const char *filename;		/* holiday filename */
+static char	 errormsg[PATH_MAX+200];/* error message if any, or "" */
 static int	 easter_julian;		/* julian date of Easter Sunday */
 static char	*holiday_name;		/* strdup'd yacc_string */
 short 	         monthlen[12] = { 31, 28, 31, 30, 
@@ -221,7 +223,7 @@ static void kcalerror(char *msg)
   fprintf(stderr, "%s: %s in line %d of %s\n", progname,
 	  msg, kcallineno+1, filename);
   if (!*errormsg)
-    sprintf(errormsg,
+    snprintf(errormsg,sizeof(errormsg),
 	    "Problem with holiday file %s:\n%.80s in line %d",
 	    filename, msg, kcallineno+1);
 }
