@@ -1,0 +1,23 @@
+SUBDIRS=holidays
+
+METASOURCES = AUTO
+
+INCLUDES = -I$(top_srcdir) $(all_includes)
+
+lib_LTLIBRARIES = libkholidays.la
+
+libkholidays_la_LDFLAGS = $(all_libraries) -no-undefined -version-info 1:0:0
+libkholidays_la_LIBADD = $(LIB_KIO)
+libkholidays_la_SOURCES = holidays.cpp scanholiday.c parseholiday.h parseholiday.c
+
+parseholiday.c:
+	$(YACC) -p kcal -d -o parseholiday.c parseholiday.y
+
+parseholiday.h:
+	$(YACC) -p kcal -d -o parseholiday.c parseholiday.y
+
+scanholiday.c:
+	$(LEX) -Pkcal -B -oscanholiday.c scanholiday.lex
+
+clean:
+	-rm -f scanholiday.c parseholiday.h parseholiday.c
