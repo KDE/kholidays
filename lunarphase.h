@@ -74,10 +74,11 @@ class LunarPhase
     ~LunarPhase();
 
     /**
-       Return the lunar phase for the specified date.  The enum 'None' is
-       returned if one of the supported phases does not occur on the date.
+       Return the lunar phase for the specified Gregorian date.
+       The enum 'None' is returned if one of the supported phases
+       does not occur on the date.
 
-       @param date compute the lunar phase for the date specified
+       @param date compute the lunar phase for the specified Gregorian date.
     */
     Phase phase( const QDate &date ) const;
 
@@ -86,7 +87,7 @@ class LunarPhase
        A null string is returned if one of the supported phases does
        not occur on the date.
 
-       @param date compute the lunar phase for the date specified
+       @param date compute the lunar phase for the specified Gregorian date.
     */
     QString phaseStr( const QDate &date ) const;
 
@@ -114,20 +115,32 @@ class LunarPhase
 
     /**
        Return the string representation of phase.
+
+       @parm phase the lunar phase.
     */
     static QString phaseName( Phase phase );
 
 private:
     /**
        Return the phase of the moon as a percentage of full
+
+       @param t is the time since the Epoch, measured in seconds.
+
+       @return the percent fullness [0,100] of the moon.
     */
     double percentFull( uint t ) const;
     /**
        Convert degrees to radians.
+
+       @param degree degrees to convert.
+
+       @return degrees in radians.
     */
     double degreesToRadians( double degree ) const;
     /**
        Adjust value so that 0 <= degree <= 360.
+
+       @param degree a pointer to the degree value.
     */
     void adj360( double *degree ) const;
 
