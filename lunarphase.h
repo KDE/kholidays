@@ -62,8 +62,6 @@
 
 #include <time.h>
 
-namespace KHolidays {
-
 class LunarPhase
 {
   public:
@@ -146,8 +144,6 @@ private:
 
     Hemisphere mHemisphere;
 };
-
-}
 
 #endif
 

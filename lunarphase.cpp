@@ -37,8 +37,6 @@
 
 #include "lunarphase.h"
 
-using namespace KHolidays;
-
 LunarPhase::LunarPhase( Hemisphere hemisphere )
 {
   mHemisphere = hemisphere;
