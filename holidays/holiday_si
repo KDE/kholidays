@@ -13,7 +13,7 @@ small  "Velika noč"                 weekend on easter
 small  "Velikonočni ponedeljek"     weekend on easter plus 1 day
 small  "Dan upora proti okupatorju" on 27.4.
 small  "Praznik dela"               on 1.5. length 2 days
-small  "Binkošti"                   on 31.5.
+small  "Binkošti"                   weekend on easter plus 49 days
 small  "Dan državnosti"             on 25.6.
 small  "Marijino vnebovzetje"       on 15.8.
 small  "Dan reformacije"            on 31.10.

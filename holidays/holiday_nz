@@ -32,7 +32,7 @@ small "Mother's Day" on second sunday in may
 small "Father's Day" on first sunday in september
 small "Halloween" on october 31
 small "Guy Fawkes" on november 5
-small "Melbourne Cup" on first tuesday in november 
+small "Melbourne Cup" on first tuesday in november
 
 : Daylight Savings Reminders, defined by Internal Affairs
 small "Clocks Forward" on first sunday in october
@@ -45,7 +45,7 @@ small "Clocks Back" on third sunday in march
 small "Ash Wednesday" on easter minus 46 days
 :small "Palm Sunday" on easter minus 7 days
 small "Ascension" on easter plus 42 days
-small "Pentecost" on easter plus 49 days
+small "Pentecost" weekend on easter plus 49 days
 small "Trinity" on easter plus 56 days
 small "Corpus Christi" on easter plus 63 days
 :small "Sacred Heart" on easter plus 68 days
@@ -84,7 +84,7 @@ small "Marlborough Day" on fourth monday in october plus 7 days
 small "Nelson Day" on monday after 29 january
 : Canterbury		16 December	Moves to 2nd Fri after 1st Tues in Nov
 small "Canterbury Day" on friday after 11 november
-: Canterbury (South)	16 December	Moves to 4th monday in september	
+: Canterbury (South)	16 December	Moves to 4th monday in september
 small "S.Canterbury Day" on fourth monday in september
 : Westland		1 December	Moves to nearest monday
 small "Westland Day" on monday after 28 november
