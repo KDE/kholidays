@@ -16,7 +16,7 @@ parseholiday.c:
 parseholiday.h:
 	$(YACC) -p kcal -d -o parseholiday.c parseholiday.y
 
-scanholiday.c:
+scanholiday.c: parseholiday.h
 	$(LEX) -Pkcal -B -oscanholiday.c scanholiday.lex
 
 clean:
