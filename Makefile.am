@@ -23,3 +23,6 @@ libkholidays_la_SOURCES = kholidays.cpp scanholiday.c parseholiday.h parseholida
 #
 #clean:
 #	-rm -f scanholiday.c parseholiday.h parseholiday.c
+
+messages: rc.cpp
+	$(XGETTEXT) *.cpp -o $(podir)/libkholidays.pot
