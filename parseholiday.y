@@ -610,11 +610,14 @@ char *parse_holidays(const char *holidays, int year, short force)
   easter_julian = calc_easter(year + 1900);
   
   for (hp=holiday, d=0; d < 366; d++, hp++)
+  {
+      hp->color = 0;
       if (hp->string) {
 	  if (!hp->dup)
 	      free(hp->string);
 	  hp->string      = 0;
       }
+  }
   /*  for (hp=sm_holiday, d=0; d < 366; d++, hp++)
       if (hp->string) {
       if (!hp->dup)
