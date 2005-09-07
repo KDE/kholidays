@@ -1,6 +1,5 @@
 :
-: Danish holiday file. Copy to ~/.holiday for private changes or tip
-: aneks@kom.auc.dk if things are missing.
+: Danish holiday file.
 : (colors edited by thomas@bitrot.in-berlin.de)
 :
 : Helligdage
@@ -18,12 +17,12 @@ weekend "2. Pinsedag" weekend on easter plus 50 days
 "Skt. Hans dag" on 24.6
 "Mortensdag" on 11.11
 weekend "Juleaftensdag" weekend on 24.12
-weekend "1.Juledag" weekend on 25.12
-weekend "2.Juledag" weekend on 26.12
-weekend "1. Advent" weekend on sunday before 25.12 minus 21 days
-weekend "2. Advent" weekend on sunday before 25.12 minus 14 days
-weekend "3. Advent" weekend on sunday before 25.12 minus 7 days
-weekend "4. Advent" weekend on sunday before 25.12
+weekend "Juledag" weekend on 25.12
+weekend "2. Juledag" weekend on 26.12
+weekend "1. Advent" weekend on sunday before 24.12 minus 21 days
+weekend "2. Advent" weekend on sunday before 24.12 minus 14 days
+weekend "3. Advent" weekend on sunday before 24.12 minus 7 days
+weekend "4. Advent" weekend on sunday before 24.12
 : 
 : Nationle fridage 
 weekend "Nytårsdag" weekend on 1.1
@@ -44,13 +43,15 @@ weekend "Grundlovsdag/Fars dag" weekend on 5.6
 "FN-dag" on 24.10
 :
 : Royale fødselsdage
-"Dronning Ingrid" on 28.3
+"Kronprinsesse Mary" on 5.2
 "Dronning Margrete II" on 16.4
 "Prinsesse Benedikte" on 29.4
 "Kronprins Frederik" on 26.5
 "Prins Joachim" on 7.6
 "Prins Henrik" on 11.6
 "Prinsesse Alexandra" on 30.6
+"Prins Felix" on 22.7
+"Prins Nikolai" on 28.8
 :
 : Andet
 small blue "Sommertid" on last sunday in march
