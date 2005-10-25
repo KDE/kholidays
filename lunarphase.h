@@ -65,10 +65,23 @@
 class LunarPhase
 {
   public:
+    /** 
+      Phases of the moon, in traditional English notation. The
+      phase @c None is used only as an error indicator, for instance
+      in phase().
+    */
     enum Phase { New,  FirstQ, LastQ, Full, None };
+    /**
+      Enum for the hemispheres of the Earth.
+    */
     enum Hemisphere { Northern,  Southern };
 
+    /**
+      Constructor. Sets the hemisphere for phase calculations
+      to @p hemisphere.
+    */
     LunarPhase( Hemisphere hemisphere = Northern );
+    /** Destructor. */
     ~LunarPhase();
 
     /**
@@ -107,7 +120,9 @@ class LunarPhase
     QString hemisphereStr() const;
 
     /**
-       Return the string representation of hemisphere.
+       Return the string representation of @p hemisphere.
+       This is already translated with 18n, and used as an adjective.
+       @param hemisphere Which hemisphere to name.
     */
     static QString hemisphereName( Hemisphere hemisphere );
 
