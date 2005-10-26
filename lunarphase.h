@@ -79,6 +79,9 @@ class LunarPhase
     /**
       Constructor. Sets the hemisphere for phase calculations
       to @p hemisphere.
+
+      @param hemisphere Hemisphere of the earth for which the phase 
+                         should be computed.
     */
     LunarPhase( Hemisphere hemisphere = Northern );
     /** Destructor. */
