@@ -90,12 +90,12 @@ bool KHolidays::parseFile( const QDate &date )
 
 QString KHolidays::getHoliday( const QDate &date )
 {
-  if ( !parseFile( date ) ) return QString::null;
+  if ( !parseFile( date ) ) return QString();
 
   if ( holiday[date.dayOfYear()-1].string ) {
     return QString::fromUtf8( holiday[date.dayOfYear()-1].string );
   } else {
-    return QString::null;
+    return QString();
   }
 }
 
