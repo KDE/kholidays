@@ -98,7 +98,7 @@ QString LunarPhase::phaseName( LunarPhase::Phase phase )
     break;
   default:
   case None:
-    return( QString() );
+    return QString();
     break;
   }
 }
