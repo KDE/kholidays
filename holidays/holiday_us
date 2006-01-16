@@ -5,17 +5,17 @@
 :
 : Author: Ron Harichandran <harichan@cee.msu.edu>
 :
-small "New Year" weekend on 1/1
-small "M.L.King B'day" weekend on third monday in january
+: Federal holidays
+small "New Year's Day" weekend on 1/1
+small "Martin Luther King's Birthday" weekend on third monday in january
 small "President's Day" weekend on third monday in february
-small "Easter" weekend on easter
 small "Memorial Day" weekend on last monday in may
 small "Independence Day" weekend on july 4
 small "Labor Day" weekend on first monday in september
 small "Columbus Day" weekend on second monday in october
-small "Veteran's Day" weekend on november 11
+small "Veterans Day" weekend on november 11
 small "Thanksgiving" weekend on fourth thursday in november
-small "Christmas" weekend on december 25
+small "Christmas Day" weekend on december 25
 
 :
 : more holidays from Jeff Buhrt <jeff@amesbvap.ci.in.ameritech.com>
@@ -30,7 +30,6 @@ small "Loyalty Day" on may 1
 small "Mother's Day" on second sunday in may
 small "Armed Forces Day" on third saturday in may
 : small "Victoria Day" on monday in may and 18 thru 24
-small "Memorial Day" weekend on last monday in may
 small "Father's Day" on third sunday in june
 small "Citizenship Day" on september 17
 small "Child Health Day" on first monday in september
@@ -41,6 +40,7 @@ small "Bill of Rights' Day" on december 15
 small "Wright Brothers' Day" on december 17
 
 : Easter related
+small "Easter" weekend on easter
 small "Ash Wednesday" on easter minus 46 days
 small "Pentecost" weekend on easter plus 49 days
 small "Ascension" on easter plus 40 days
