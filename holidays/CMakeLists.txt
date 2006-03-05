@@ -1,0 +1,32 @@
+kde4_header()
+
+include_directories( ${KDE4_INCLUDE_DIR} ${QT_INCLUDES} ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR}  )
+
+
+########### install files ###############
+
+install_files( ${DATA_INSTALL_DIR}/libkholidays FILES holiday_at holiday_au holiday_bavarian holiday_be holiday_ca                   holiday_catalan holiday_co                  holiday_ch holiday_cz holiday_de holiday_dk holiday_ee                  holiday_es holiday_fi holiday_fr holiday_frswiss holiday_gb                  holiday_gt                  holiday_hu holiday_is holiday_il holiday_it holiday_ja                  holiday_lt holiday_mx                  holiday_nl                  holiday_no holiday_nz holiday_pl holiday_pt holiday_py                  holiday_quebec                  holiday_ro holiday_se holiday_si holiday_th holiday_us                  holiday_uy holiday_ie                  holiday_Suedtirol )
+
+kde4_footer()
+
+
+
+#original Makefile.am contents follow:
+
+#
+#holidaysdir = $(kde_datadir)/libkholidays
+#
+#holidays_DATA = holiday_at holiday_au holiday_bavarian holiday_be holiday_ca  \
+#                holiday_catalan holiday_co \
+#                holiday_ch holiday_cz holiday_de holiday_dk holiday_ee \
+#                holiday_es holiday_fi holiday_fr holiday_frswiss holiday_gb \
+#                holiday_gt \
+#                holiday_hu holiday_is holiday_il holiday_it holiday_ja \
+#                holiday_lt holiday_mx \
+#                holiday_nl \
+#                holiday_no holiday_nz holiday_pl holiday_pt holiday_py \
+#                holiday_quebec \
+#                holiday_ro holiday_se holiday_si holiday_th holiday_us \
+#                holiday_uy holiday_ie \
+#                holiday_Suedtirol
+#
