@@ -18,7 +18,7 @@ kde4_automoc(${kholidays_LIB_SRCS})
 
 kde4_add_library(kholidays SHARED ${kholidays_LIB_SRCS})
 
-target_link_libraries(kholidays  ${QT_AND_KDECORE_LIBS} kio )
+target_link_libraries(kholidays  ${KDE4_KDECORE_LIBS} kio )
 
 set_target_properties(kholidays PROPERTIES VERSION 1.0.0 SOVERSION 1 )
 install_targets(${LIB_INSTALL_DIR} kholidays )
