@@ -12,8 +12,8 @@
 : Feriados no laborables
 :
 small "Año nuevo" on 1 january
-small "Jura de la constituación" 18 jule
-small "Declaratoria de Independencia" 25 august
+small "Jura de la constituación" on 18 july
+small "Declaratoria de Independencia" on 25 august
 small "Día del Trabajo" on 1 may
 small "Día de los difuntos" on 2 november
 small "Navidad" on 25 december

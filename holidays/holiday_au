@@ -50,10 +50,10 @@ small "SA - Proclamation Day" weekend on december 28
 small "TAS - Eight Hours Day" weekend on march 7
 small "TAS - Bank Holiday" weekend on april 5
 small "TAS - Recreation Day" weekend on november 7
- 
+
 : Specific holidays for WA
 small "WA - Labour Day" weekend on first monday in march
-small "WA - Foundation Day" weekend first monday in june
+small "WA - Foundation Day" weekend on first monday in june
 small "WA - Queen's Birthday" weekend on september 26
 
 : Specific holidays for NT
@@ -66,3 +66,4 @@ small "NT - Picnic Day" weekend on first monday in august
 
 : Specific holidays for QLD
 small "QLD - Labour Day"  weekend on first monday in may
+

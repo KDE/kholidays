@@ -3,7 +3,7 @@
 : Use this as a starting point, These are the Official holidays.
 : Chineese New Year along with most other Chineese holidays are also
 : widely celebrated but not included here.
-.
+:
 :
 : Author: Gerald Williams <gwilli@samart.co.th>
 :
@@ -22,9 +22,9 @@ black "Chulalongkorn Day" on October 23
 black "H.M. The King's B'day" on December 5
 black "Constitution Day" on December 10
 black "New Years Eve" on December 31
- 
- 
+
+
 : Seasons (Basically only three)
 green "Hot season Begins" on march 1
 green "Rainy season Begins" on june 1
-green "Cool season Begins" on november 1                                     
+green "Cool season Begins" on november 1
