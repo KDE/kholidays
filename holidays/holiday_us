@@ -44,7 +44,7 @@ small "Easter" weekend on easter
 small "Ash Wednesday" on easter minus 46 days
 small "Pentecost" weekend on easter plus 49 days
 small "Ascension" on easter plus 40 days
-small "Trinity" on easter plus 46 day
+small "Trinity" on easter plus 46 days
 small "Corpus Christi" on easter plus 53 days
 
 : Seasons (are these really hardcoded or calculated?)

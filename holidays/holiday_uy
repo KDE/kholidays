@@ -30,8 +30,8 @@ small "Día de las Américas" on 18 october
 :
 small "Domingo de Pascua" on easter
 small "Sábado de gloria" on easter minus 1 day
-small "Viernes santo" on easter minus 2 day
-small "Jueves santo" on easter minus 3 day
+small "Viernes santo" on easter minus 2 days
+small "Jueves santo" on easter minus 3 days
 :
 : Carnaval ( cada año es diferente )
 :
