@@ -38,8 +38,8 @@ small "San Esteban" on december 26
 ::
 small "Jueves Santo" on easter minus 3 days
 "Viernes Santo" weekend on easter minus 2 days
-small "Lunes de Pascua" on easter
-small "Pentecostes / 2º Pascua" on easter plus 49 days
+small "Lunes de Pascua" on easter plus 1 day
+small "Pentecostes / 2º Pascua" on easter plus 50 days
 
 
 ::
