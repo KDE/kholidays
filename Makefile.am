@@ -7,7 +7,7 @@ INCLUDES = -I$(top_srcdir) $(all_includes)
 lib_LTLIBRARIES = libkholidays.la
 
 libkholidays_la_LDFLAGS = $(all_libraries) -no-undefined -version-info 1:0:0
-libkholidays_la_LIBADD = $(LIB_KIO)
+libkholidays_la_LIBADD = $(LIB_QTCORE) $(LIB_KDECORE) $(LIB_KIO)
 libkholidays_la_SOURCES = kholidays.cpp scanholiday.c parseholiday.h parseholiday.c lunarphase.cpp
 
 #the lex/flex and yacc/bison files are in CVS and NOT generated
