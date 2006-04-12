@@ -898,9 +898,9 @@ static char *resolve_tilde(char *path)
  * Return an error message if an error occurred, 0 otherwise.
  */
 
+extern FILE  *kcalin;                /* file currently being processed */
 char *parse_holidays(const char *holidays, int year, short force)
 {
-  FILE  *kcalin;                /* file currently being processed */
   register struct holiday *hp;
   register int		d, n;
   short			piped = 0;
