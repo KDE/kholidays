@@ -45,7 +45,7 @@ QStringList KHolidays::locations()
 
   QStringList::ConstIterator it;
   for ( it = files.begin(); it != files.end(); ++it )
-    locs.append( (*it).mid((*it).findRev('_') + 1) );
+    locs.append( (*it).mid((*it).lastIndexOf('_') + 1) );
 
   return locs;
 }
