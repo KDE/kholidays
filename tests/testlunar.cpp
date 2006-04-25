@@ -44,7 +44,7 @@ int main(int argc,char **argv)
   KCmdLineArgs::init(argc,argv,&aboutData);
   KCmdLineArgs::addCmdLineOptions( options );
 
-  KApplication app( false, false );
+  KApplication app( false );
 //  KApplication app;
 
   KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
@@ -59,8 +59,8 @@ int main(int argc,char **argv)
     qd = qd.addDays( 1 );
     pStr = lp.phaseStr( qd );
     if ( !pStr.isNull() ) {
-      cout << qd.toString( Qt::TextDate ).local8Bit () << ": "
-           << pStr.local8Bit()
+      cout << qd.toString( Qt::TextDate ).toLocal8Bit().constData() << ": "
+           << pStr.toLocal8Bit().constData()
            << endl;
     }
   }

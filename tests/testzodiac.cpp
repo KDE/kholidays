@@ -44,7 +44,7 @@ int main(int argc,char **argv)
   KCmdLineArgs::init(argc,argv,&aboutData);
   KCmdLineArgs::addCmdLineOptions( options );
 
-  KApplication app( false, false );
+  KApplication app( false );
 //  KApplication app;
 
   KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
@@ -63,9 +63,9 @@ int main(int argc,char **argv)
       sign = zd.sign( qd );
       pStr = zd.signName( sign );
       if ( !pStr.isNull() ) {
-          cout << qd.toString( Qt::TextDate ).local8Bit () << ": "
-               << pStr.local8Bit()
-               << " [" << zd.signSymbol( sign ) << "]"
+          cout << qd.toString( Qt::TextDate ).toLocal8Bit().constData() << ": "
+               << pStr.toLocal8Bit().constData()
+               << " [" << qPrintable( zd.signSymbol( sign ) ) << "]"
                << endl;
       }
       qd = qd.addDays( 1 );
@@ -77,9 +77,9 @@ int main(int argc,char **argv)
       sign = zd2.sign( qd2 );
       pStr = zd2.signName( sign );
       if ( !pStr.isNull() ) {
-          cout << qd2.toString( Qt::TextDate ).local8Bit () << ": "
-               << pStr.local8Bit()
-               << " [" << zd2.signSymbol( sign ) << "]"
+          cout << qd2.toString( Qt::TextDate ).toLocal8Bit().constData() << ": "
+               << pStr.toLocal8Bit().constData()
+               << " [" << qPrintable( zd2.signSymbol( sign ) ) << "]"
                << endl;
       }
       qd2 = qd2.addDays( 1 );

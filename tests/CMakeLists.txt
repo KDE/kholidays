@@ -21,7 +21,7 @@ target_link_libraries(testlunar kholidays_ng ${KDE4_KDECORE_LIBS} )
 
 ########### next target ###############
 
-set(testseason_SRCS testseason.cpp )
+set(testseason_SRCS testseasons.cpp )
 
 kde4_automoc(${testseason_SRCS})
 
