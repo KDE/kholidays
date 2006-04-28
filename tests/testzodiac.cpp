@@ -28,7 +28,7 @@
 
 #include "zodiac.h"
 
-using namespace KHolidays;
+using namespace LibKHolidays;
 using namespace std;
 
 static const KCmdLineOptions options[] =

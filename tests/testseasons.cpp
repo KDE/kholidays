@@ -28,7 +28,7 @@
 
 #include "astroseasons.h"
 
-using namespace KHolidays;
+using namespace LibKHolidays;
 using namespace std;
 
 static const KCmdLineOptions options[] =
