@@ -26,8 +26,6 @@ install_targets(${LIB_INSTALL_DIR} kholidays )
 ########### install files ###############
 
 
-kde4_create_doxygen_docs(  )
-
 kde4_footer()
 
 
