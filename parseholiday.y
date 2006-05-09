@@ -598,6 +598,7 @@ static char *resolve_tilde(char *path)
 extern FILE  *kcalin;                /* file currently being processed */
 char *parse_holidays(const char *holidays, int year, short force)
 {
+  int kcalparse();
   register struct holiday *hp;
   register int		d, n;
   short			piped = 0;
