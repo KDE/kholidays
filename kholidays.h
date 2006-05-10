@@ -20,7 +20,7 @@
 #ifndef KHOLIDAYS_HOLIDAYS_H
 #define KHOLIDAYS_HOLIDAYS_H
 
-#include <qstring.h>
+#include <QString>
 #include <qstringlist.h>
 #include <qdatetime.h>
 

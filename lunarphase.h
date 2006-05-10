@@ -57,7 +57,7 @@
    Note that crescent and gibbous phases are not currently supported.
 */
 
-#include <qstring.h>
+#include <QString>
 #include <qdatetime.h>
 
 #include <time.h>
