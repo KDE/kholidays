@@ -5,7 +5,7 @@ if(KDE4_BUILD_TESTS)
 include_directories(
 	${CMAKE_SOURCE_DIR}/libkholidays_ng
 	${CMAKE_SOURCE_DIR}/libkholidays_ng/tests
-	${KDE4_INCLUDES}
+	
 )
 
 
