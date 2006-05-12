@@ -1,4 +1,3 @@
-kde4_header()
 
 add_subdirectory( holidays ) 
 
@@ -26,7 +25,6 @@ install_targets(${LIB_INSTALL_DIR} kholidays )
 ########### install files ###############
 
 
-kde4_footer()
 
 
 

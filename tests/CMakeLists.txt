@@ -1,4 +1,3 @@
-kde4_header()
 
 if(KDE4_BUILD_TESTS)
 
@@ -43,4 +42,3 @@ target_link_libraries(testzodiac kholidays_ng ${KDE4_KDECORE_LIBS} )
 
 endif(KDE4_BUILD_TESTS)
 
-kde4_footer()
