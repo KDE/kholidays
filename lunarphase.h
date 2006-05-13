@@ -58,7 +58,7 @@
 */
 
 #include <QString>
-#include <qdatetime.h>
+#include <QDateTime>
 
 #include <time.h>
 

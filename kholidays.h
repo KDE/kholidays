@@ -21,8 +21,8 @@
 #define KHOLIDAYS_HOLIDAYS_H
 
 #include <QString>
-#include <qstringlist.h>
-#include <qdatetime.h>
+#include <QStringList>
+#include <QDateTime>
 
 #include <kdepimmacros.h>
 
