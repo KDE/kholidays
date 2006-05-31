@@ -1,7 +1,7 @@
 
 add_subdirectory( holidays ) 
 
-
+configure_file (config-libkholidays.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-libkholidays.h )
 
 ########### next target ###############
 
