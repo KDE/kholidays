@@ -60,7 +60,7 @@ static int yygrowstack();
  */
 
 #include <config.h>
-
+#include <config-libkholidays.h>
 #include <stdio.h>
 #include <unistd.h>
 #include <time.h>
