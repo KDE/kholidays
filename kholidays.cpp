@@ -53,7 +53,7 @@ QStringList KHolidays::locations()
 KHolidays::KHolidays( const QString& location )
   : mLocation( location )
 {
-  mHolidayFile = locate( "data", "libkholidays/holiday_" + location );
+  mHolidayFile = KStandardDirs::locate( "data", "libkholidays/holiday_" + location );
 
   mYearLast = 0;
 }
