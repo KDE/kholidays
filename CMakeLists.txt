@@ -19,7 +19,7 @@ kde4_add_library(kholidays SHARED ${kholidays_LIB_SRCS})
 target_link_libraries(kholidays  ${KDE4_KIO_LIBS} )
 
 set_target_properties(kholidays PROPERTIES VERSION 1.0.0 SOVERSION 1 )
-install_targets(${LIB_INSTALL_DIR} kholidays )
+install(TARGETS kholidays  DESTINATION ${LIB_INSTALL_DIR})
 
 
 ########### install files ###############
