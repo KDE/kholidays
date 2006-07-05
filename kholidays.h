@@ -23,8 +23,15 @@
 #include <QString>
 #include <QStringList>
 #include <QDateTime>
+#include <QList>
 
 #include <kdepimmacros.h>
+
+struct KHoliday {
+  QString text;
+  QString shortText;
+  int Category;
+};
 
 class KDE_EXPORT KHolidays {
   public:
@@ -41,12 +48,13 @@ class KDE_EXPORT KHolidays {
     /// return the location with which this object was constructed
     QString location() const;
 
-    QString shortText( const QDate& );
-
-    QString getHoliday( const QDate& );
+    QList<KHoliday> getHolidays( const QDate& );
+    
+    KDE_DEPRECATED QString shortText( const QDate& );
+    KDE_DEPRECATED QString getHoliday( const QDate& );
 
     enum { WORKDAY, HOLIDAY };
-    int category( const QDate& );
+    KDE_DEPRECATED int category( const QDate& );
 
   private:
     bool parseFile( const QDate& );

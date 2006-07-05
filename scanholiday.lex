@@ -54,7 +54,9 @@ every				;
 day				;
 days				;
 on				;
+to				;
 in				{ return(IN);    }
+if				{ return(IF); }
 plus				{ return(PLUS);  }
 minus				{ return(MINUS); }
 small				{ return(SMALL); }
@@ -62,6 +64,7 @@ year				{ return(CYEAR);  }
 leapyear			{ return(LEAPYEAR); }
 easter				{ return(EASTER); }
 length				{ return(LENGTH); }
+shift				{ return(SHIFT); }
 
 black				{ kcallval.ival = 1; return(COLOR); }
 red				{ kcallval.ival = 2; return(COLOR); }

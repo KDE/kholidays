@@ -21,6 +21,7 @@
 #include <QFile>
 #include <kapplication.h>
 #include <kstandarddirs.h>
+#include <kdebug.h>
 
 #include "kholidays.h"
 #include "kholidays_version.h"
@@ -32,8 +33,9 @@ extern "C" {
     char            *string;        /* name of holiday, 0=not a holiday */
     int             color;          /* color code, see scanholiday.lex */
     unsigned short  dup;            /* reference count */
+    holiday         *next;          /* single-linked list if more than one holida appears on a given date */
   };
-  extern struct holiday holiday[366];
+  extern struct holiday holidays[366];
 }
 
 QStringList KHolidays::locations()
@@ -69,17 +71,22 @@ QString KHolidays::location() const
 
 QString KHolidays::shortText( const QDate &date )
 {
-  return getHoliday( date );
+  QList<KHoliday> lst = getHolidays( date );
+  if ( !lst.isEmpty() ) 
+    return lst.first().text;
+  else return QString::null;
 }
 
 bool KHolidays::parseFile( const QDate &date )
 {
+// kdDebug()<<"KHolidays::parseFile( date=" << date << ")"<<endl;
   int lastYear = 0; //current year less 1900
 
-  if ( mHolidayFile.isNull() || mHolidayFile.isEmpty() || date.isNull() )
+  if ( mHolidayFile.isNull() || mHolidayFile.isEmpty() || date.isNull() || !date.isValid() )
     return false;
 
-  if ( ( mYearLast == 0 ) || ( date.year() != mYearLast ) ) {
+  if ( ( date.year() != mYearLast ) || ( mYearLast == 0 ) ) {
+// kdDebug()<<kdBacktrace();
     mYearLast = date.year();
     lastYear = date.year() - 1900; // silly parse_year takes 2 digit year...
     parse_holidays( QFile::encodeName( mHolidayFile ), lastYear, 1 );
@@ -90,19 +97,34 @@ bool KHolidays::parseFile( const QDate &date )
 
 QString KHolidays::getHoliday( const QDate &date )
 {
-  if ( !parseFile( date ) ) return QString();
+  QList<KHoliday> lst = getHolidays( date );
+  if ( !lst.isEmpty() ) 
+    return lst.first().text;
+  else return QString::null;
+}
 
-  if ( holiday[date.dayOfYear()-1].string ) {
-    return QString::fromUtf8( holiday[date.dayOfYear()-1].string );
-  } else {
-    return QString();
+QList<KHoliday> KHolidays::getHolidays( const QDate &date )
+{
+  QList<KHoliday> list;
+  if ( !parseFile( date ) ) return list;
+  struct holiday *hd = &holidays[date.dayOfYear()-1];
+  while ( hd ) {
+    if ( hd->string ) {
+      KHoliday holiday;
+      holiday.text = QString::fromUtf8( hd->string );
+      holiday.shortText = holiday.text;
+      holiday.Category = (hd->color == 2/*red*/) || (hd->color == 9/*weekend*/) ? HOLIDAY : WORKDAY;
+      list.append( holiday );
+    }
+    hd = hd->next;
   }
+  return list;
 }
 
 int KHolidays::category( const QDate &date )
 {
   if ( !parseFile(date) ) return WORKDAY;
 
-  return (holiday[date.dayOfYear()-1].color == 2/*red*/) ||
-         (holiday[date.dayOfYear()-1].color == 9/*weekend*/) ? HOLIDAY : WORKDAY;
+  return (holidays[date.dayOfYear()-1].color == 2/*red*/) ||
+         (holidays[date.dayOfYear()-1].color == 9/*weekend*/) ? HOLIDAY : WORKDAY;
 }

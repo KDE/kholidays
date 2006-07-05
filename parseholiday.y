@@ -14,8 +14,9 @@
  *					arrays. If force is set, re-eval even
  *					if year is the same as last time.
  *
- * Taken from plan by Thomas Driemeyer (thomas@bitrot.de)
- * Adapted for use in KOrganizer by Preston Brown (pbrown@kde.org)
+ * Taken from plan by Thomas Driemeyer <thomas@bitrot.de>
+ * Adapted for use in KOrganizer by Preston Brown <pbrown@kde.org> and
+ * Reinhold Kainhofer <reinhold@kainhofer.com>
  */
 
 #include <config.h>
@@ -48,22 +49,24 @@
 #define ANY		0
 #define	BEFORE		-1
 #define AFTER		-2
+/**** Public forward declarations  ****/
+char *parse_holidays(const char *holidays, int year, short force);
 
 /**** Private forward declarations ****/
 extern int       kcallex(void);          /* external lexical analyzer */
-static void      kcalerror(char *s);
+static void      kcalerror(const char *s);
 static time_t    date_to_time(int day, int month, int year, 
 			      int *wkday, int *julian, int *weeknum);
 static time_t    tm_to_time(struct tm *tm);
 static int	 day_from_name(char *str);
 static int	 day_from_easter(void);
-static int	 day_from_monthday(int m, int d);
+static int	 day_from_monthday(int month, int day);
 static int	 day_from_wday(int day, int wday, int num);
 static void	 monthday_from_day(int day, int *m, int *d, int *y);
-static int	 calc_easter();
-static void      setliteraldate();
-static void      seteaster();
-static void      setdate(int month, int day, int year, int off, int length);
+static int       calc_easter(int year);
+static void      setliteraldate(int month, int day, int off, int *ddup);
+static void      seteaster(int off, int length);
+static void      setdate(int month, int day, int year, int off, int conditionaloff, int length);
 static void      setwday(int num, int wday, int month, int off, int length); 
 static void      setdoff(int wday, int rel, int month, int day, 
 			 int year, int off, int length);
@@ -88,22 +91,25 @@ short	         monthbegin[12] = { 0, 31, 59, 90,
 				    212, 243, 273,
 				    304, 334 };
 
+/* struct holiday;*/
 struct holiday {
   char            *string;        /* name of holiday, 0=not a holiday */
   int             color;
   unsigned short  dup;            /* reference count */
+  struct holiday         *next;
 };
 
-struct holiday	 holiday[366];		/* info for each day, separate for */
+struct holiday	 holidays[366];		/* info for each day, separate for */
 /*struct holiday   sm_holiday[366];*/	/* full-line texts under, and small */
 					/* texts next to day number */
+static int	initialized=0;
 %}
 
 %union { int ival; char *sval; }
-%type	<ival> color offset length expr pexpr number month reldate
+%type	<ival> color offset conditionaloffset length expr pexpr number month reldate wdaycondition
 %token <ival> NUMBER MONTH WDAY COLOR
 %token <sval> STRING
-%token	IN PLUS MINUS SMALL CYEAR LEAPYEAR
+%token	IN PLUS MINUS SMALL CYEAR LEAPYEAR SHIFT IF 
 %token	LENGTH EASTER EQ NE LE GE LT GT
 
 %left OR
@@ -134,7 +140,7 @@ small	:					{ yacc_small = 0; }
 	 ;
 
  entry	: EASTER offset length			{ seteaster($2, $3); }
-	 | date offset length			{ setdate( m,  d,  y, $2, $3);}
+	 | date offset conditionaloffset length			{ setdate( m,  d,  y, $2, $3, $4);}
 	 | WDAY offset length			{ setwday( 0, $1,  0, $2, $3);}
 	 | pexpr WDAY offset length		{ setwday($1, $2,  0, $3, $4);}
 	 | pexpr WDAY IN month offset length	{ setwday($1, $2, $4, $5, $6);}
@@ -144,6 +150,15 @@ small	:					{ yacc_small = 0; }
  offset	:					{ $$ =	0; }
 	 | PLUS expr				{ $$ =	$2; }
 	 | MINUS expr				{ $$ = -$2; }
+	 ;
+
+ conditionaloffset :      { $$ = 0; }
+	 | SHIFT wdaycondition IF wdaycondition    { $$ = ($2<<8) | $4;printf("Shift to %i if %i\n", $2, $4); }
+	 ;
+
+ wdaycondition : 	 	 	 { $$ = 0; }
+	 | WDAY					 { $$ = (1<<$1); }
+	 | WDAY OR wdaycondition	 	 { $$ = (1<<$1) | $3; }
 	 ;
 
  length	:					{ $$ =	1; }
@@ -178,10 +193,10 @@ small	:					{ yacc_small = 0; }
 								 ($1, $2); }
 	 | WDAY pexpr pexpr			{ $$ = day_from_wday($3, $1,
 							 $2 == -1 ? -1 : 0); }
-	 | pexpr WDAY IN month			{ int d=day_from_monthday($4,1);
+	 | pexpr WDAY IN month			{ int day=day_from_monthday($4,1);
 						   $$ = $1 == 999
-						    ? day_from_wday(d+1,$2,-1)
-						    : day_from_wday(d,$2,$1-1);}
+						    ? day_from_wday(day+1,$2,-1)
+						    : day_from_wday(day,$2,$1-1);}
 	 ;
 
  month	: MONTH | pexpr;
@@ -217,7 +232,7 @@ small	:					{ yacc_small = 0; }
 %%
 	 
 /*** Private Yacc callbacks and helper functions ***/
-static void kcalerror(char *msg)
+static void kcalerror(const char *msg)
 {
   fprintf(stderr, "%s: %s in line %d of %s\n", progname,
 	  msg, kcallineno+1, filename);
@@ -231,7 +246,7 @@ static time_t date_to_time(int day, int month, int year,
 			   int *wkday, int *julian, int *weeknum)
 {
   struct tm               tm;
-  time_t                  time;
+  time_t                  ttime;
   
   tm.tm_sec   = 0;
   tm.tm_min   = 0;
@@ -239,7 +254,7 @@ static time_t date_to_time(int day, int month, int year,
   tm.tm_mday  = day;
   tm.tm_mon   = month;
   tm.tm_year  = year;
-  time = tm_to_time(&tm);
+  ttime = tm_to_time(&tm);
   if (wkday)
     *wkday   = tm.tm_wday;
   if (julian)
@@ -248,7 +263,7 @@ static time_t date_to_time(int day, int month, int year,
     *weeknum = 0
       ? tm.tm_yday / 7
       : tm.tm_yday ? ((tm.tm_yday - 1) /7) + 1 : 0;
-  return(time == -1 || day != tm.tm_mday ? 0 : time);
+  return(ttime == -1 || day != tm.tm_mday ? 0 : ttime);
 } 
 
 static time_t tm_to_time(struct tm *tm)
@@ -280,8 +295,8 @@ static void setwday(int num, int wday, int month, int off, int length)
 {
   int		min_month = 0, max_month = 11;
   int		min_num   = 0, max_num   = 4;
-  int		m, n, d, l, mlen, wday1;
-  int		dup = 0;
+  int		mn, n, dy, l, mlen, wday1;
+  int		ddup = 0;
   
   if (month != ANY)
     min_month = max_month = month-1;
@@ -291,19 +306,19 @@ static void setwday(int num, int wday, int month, int off, int length)
     min_num = max_num = num-1;
   
   holiday_name = yacc_string;
-  for (m=min_month; m <= max_month; m++) {
-    (void)date_to_time(1, m, parse_year, &wday1, 0, 0);
-    d = (wday-1 - (wday1-1) +7) % 7 + 1;
-    mlen = monthlen[m] + (m==1 && ISLEAPYEAR(parse_year));
+  for (mn=min_month; mn <= max_month; mn++) {
+    (void)date_to_time(1, mn, parse_year, &wday1, 0, 0);
+    dy = (wday-1 - (wday1-1) +7) % 7 + 1;
+    mlen = monthlen[mn] + (mn==1 && ISLEAPYEAR(parse_year));
     if (num == LAST)
       for (l=0; l < length; l++)
-	setliteraldate(m, d+28<=mlen ? d+28 : d+21,
-		       off+l, &dup);
+	setliteraldate(mn, dy+28<=mlen ? dy+28 : dy+21,
+		       off+l, &ddup);
     else
-      for (d+=min_num*7, n=min_num; n <= max_num; n++, d+=7)
-	if (d >= 1 && d <= mlen)
+      for (dy+=min_num*7, n=min_num; n <= max_num; n++, dy+=7)
+	if (dy >= 1 && dy <= mlen)
 	  for (l=0; l < length; l++)
-	    setliteraldate(m,d,off+l,&dup);
+	    setliteraldate(mn,dy,off+l,&ddup);
   }
 }
 
@@ -318,8 +333,8 @@ static void setdoff(int wday, int rel, int month, int day,
 {
   int		min_month = 0, max_month = 11;
   int		min_day   = 1, max_day   = 31;
-  int		m, d, nd, l, wday1;
-  int		dup = 0;
+  int		mn, dy, nd, l, wday1;
+  int		ddup = 0;
   
   if (year != ANY) {
     year %= 100;
@@ -335,25 +350,46 @@ static void setdoff(int wday, int rel, int month, int day,
     min_day   = max_day   = day;
   
   holiday_name = yacc_string;
-  for (m=min_month; m <= max_month; m++)
+  for (mn=min_month; mn <= max_month; mn++)
     if (day == LAST) {
-      (void)date_to_time(monthlen[m], m, parse_year,
+      (void)date_to_time(monthlen[mn], mn, parse_year,
 			 &wday1, 0, 0);
       nd = (((wday - wday1 + 7) % 7) -
 	    ((rel == BEFORE) ? 7 : 0)) % 7;
       for (l=0; l < length; l++)
-	setliteraldate(m,monthlen[m]+nd, off+l, &dup);
+	setliteraldate(mn,monthlen[mn]+nd, off+l, &ddup);
     } else
-      for (d=min_day; d <= max_day; d++) {
-	(void)date_to_time(d, m, parse_year,
+      for (dy=min_day; dy <= max_day; dy++) {
+	(void)date_to_time(dy, mn, parse_year,
 			   &wday1, 0, 0);
 	nd = (((wday - wday1 + 7) % 7) -
 	      ((rel == BEFORE) ? 7 : 0)) % 7;
 	for (l=0; l < length; l++)
-	  setliteraldate(m, d+nd, off+l, &dup);
+	  setliteraldate(mn, dy+nd, off+l, &ddup);
       }
 }
 
+static int conditionalOffset( int day, int month, int year, int cond ) 
+{
+printf("ConditionalOffset: %i.%i.%i, condition=%i\n", day, month, year, cond );
+  int off = 0;
+  int wday = 0;
+  (void)date_to_time( day, month, year, &wday, 0, 0);
+  if ( wday == 0 ) { wday = 7; } /* sunday is 7, not 0 */
+printf("Date is a %i\n", wday );
+  if ( cond & (1<<wday) ) { 
+printf("  Matches condition\n");
+    /* condition matches -> higher 8 bits contain the possible days to shift to */
+    int to = (cond >> 8);
+printf("  To condition: %i\n", to);
+    while ( !(to & (1<<((wday+off)%7))) && (off < 8) ) {
+      ++off;
+    }
+printf("  Resulting offset: %i\n", off);
+  }
+  if ( off >= 8 ) return 0;
+  else return off;
+}
 
 /*
  * set holiday by date. Ignore holidays in the wrong year. The code is
@@ -361,12 +397,12 @@ static void setdoff(int wday, int rel, int month, int day,
  * the month).
  */
 
-static void setdate(int month, int day, int year, int off, int length)
+static void setdate(int month, int day, int year, int off, int conditionaloff, int length)
 {
   int		min_month = 0, max_month = 11;
   int		min_day   = 1, max_day   = 31;
-  int		m, d, l;
-  int		dup = 0;
+  int		mn, dy, l;
+  int		ddup = 0;
   
   if (year != ANY) {
     year %= 100;
@@ -382,14 +418,24 @@ static void setdate(int month, int day, int year, int off, int length)
     min_day   = max_day   = day;
   
   holiday_name = yacc_string;
-  for (m=min_month; m <= max_month; m++)
-    if (day == LAST)
+  /** TODO: Include the conditionaloff variable. */
+  /** The encoding of the conditional offset is:
+        8 lower bits: conditions to shift (bit-register, bit 1=mon, ..., bit 7=sun)
+        8 higher bits: weekday to shift to (bit-register, bit 1=mon, ..., bit 7=sun)
+  */
+  for (mn=min_month; mn <= max_month; mn++) {
+    if (day == LAST) {
+      int newoff = off + conditionalOffset( monthlen[mn], mn, parse_year, conditionaloff );
       for (l=0; l < length; l++)
-	setliteraldate(m, monthlen[m], off+l, &dup);
-    else
-      for (d=min_day; d <= max_day; d++)
+	setliteraldate(mn, monthlen[mn], newoff+l, &ddup);
+    } else {
+      for (dy=min_day; dy <= max_day; dy++) {
+        int newoff = off + conditionalOffset( dy, mn, parse_year, conditionaloff );
 	for (l=0; l < length; l++)
-	  setliteraldate(m, d, off+l, &dup);
+	  setliteraldate(mn, dy, newoff+l, &ddup);
+      }
+    }
+  }	  
 }
 
 
@@ -399,25 +445,34 @@ static void setdate(int month, int day, int year, int off, int length)
  * array. There are two of these, for full-line holidays (they take away one
  * appointment line in the month calendar daybox) and "small" holidays, which
  * appear next to the day number. If the day is already some other holiday,
- * ignore the new one. <dup> is information stored for parse_holidays(), it
+ * add a new item to the singly-linked list and insert the holiday there.
+ * <ddup> is information stored for parse_holidays(), it
  * will free() the holiday name only if its dup field is 0 (because many
  * string fields can point to the same string, which was allocated only once
  * by the lexer, and should therefore only be freed once).
  */
 
-static void setliteraldate(int month, int day, int off, int *dup)
+static void setliteraldate(int month, int day, int off, int *ddup)
 {
   int julian = JULIAN(month, day) + off;
   /*  struct holiday *hp = yacc_small ? &sm_holiday[julian]
       : &holiday[julian]; */
-  struct holiday *hp = &holiday[julian];
+  struct holiday *hp = 0;
 
-  if (julian >= 0 && julian <= 365 && !hp->string) {
-    if (!*dup)
+  if (julian >= 0 && julian <= 365 ) {
+    hp = &holidays[julian];
+    if ( hp->string ) {
+      while (hp->next) { hp = hp->next; }
+      hp->next = malloc( sizeof(struct holiday)*2 );
+      hp = hp->next;
+      hp->next = 0;
+    }
+    if (!*ddup)
       holiday_name = strdup(holiday_name);
     hp->string	= holiday_name;
     hp->color   = (yacc_stringcolor == 0) ? yacc_daycolor : yacc_stringcolor;
-    hp->dup		= (*dup)++;
+    hp->dup		= (*ddup)++;
+    
   }
 }
 
@@ -428,22 +483,29 @@ static void setliteraldate(int month, int day, int off, int *dup)
 
 static void seteaster(int off, int length)
 {
-  int		dup = 0;	/* flag for later free() */
+  int		ddup = 0;	/* flag for later free() */
   int julian = easter_julian + off;
   /*  struct holiday *hp = yacc_small ? &sm_holiday[julian]
-      : &holiday[julian];*/
-  struct holiday *hp = &holiday[julian];
+      : &holidays[julian];*/
+  struct holiday *hp = 0;
   
   holiday_name = yacc_string;
   while (length-- > 0) {
-    if (julian >= 0 && julian <= 365 && !hp->string) {
-      if (!dup)
+    if (julian >= 0 && julian <= 365 ) {
+      hp = &holidays[julian];
+      if ( hp->string ) {
+        while (hp->next) { hp = hp->next; }
+        hp->next = malloc( sizeof(struct holiday)*2 );
+        hp = hp->next;
+        hp->next = 0;
+      }
+      if (!ddup)
 	holiday_name = strdup(holiday_name);
       hp->string	= holiday_name;
       hp->color     = (yacc_stringcolor == 0) ? yacc_daycolor : yacc_stringcolor;
-      hp->dup		= dup++;
+      hp->dup		= ddup++;
     }
-    julian++, hp++;
+    julian++;
   }
 }
 
@@ -492,7 +554,7 @@ static int calc_easter(int year)
  *
  * day_from_name (str)			gets day from symbolic name
  * day_from_easter ()			gets day as easter sunday
- * day_from_monthday (m, d)		gets <day> from <month/day>
+ * day_from_monthday (month, day)		gets <day> from <month/day>
  * day_from_wday (day, wday, num)	gets num-th day (wday) after <day> day
  * monthday_from_day (day, *m, *d, *y)	gets month/day/cur_year from <day>
  */
@@ -503,7 +565,7 @@ static int day_from_name(char *str)
   char	*name;
   
   for (i=0; i < 366; i++) {
-    name = holiday[i].string;
+    name = holidays[i].string;
     if (name && !strcmp(str, name))
       return(i);
   }
@@ -517,28 +579,28 @@ static int day_from_easter(void)
 }
 
 
-static int day_from_monthday(int m, int d)
+static int day_from_monthday(int month, int day)
 {
-  if (m == 13)
+  if (month == 13)
     return(365 + ISLEAPYEAR(parse_year));
-  return(JULIAN(m - 1, d));
+  return(JULIAN(month - 1, day));
 }
 
 
-static void monthday_from_day(int day, int *m, int *d, int *y)
+static void monthday_from_day(int day, int *mn, int *dy, int *yr)
 {
   int	i, len;
   
-  *y = parse_year;
-  *m = 0;
-  *d = 0;
+  *yr = parse_year;
+  *mn = 0;
+  *dy = 0;
   if (day < 0)
     return;
   for (i=0; i < 12; i++) {
     len = monthlen[i] + (i == 1 && ISLEAPYEAR(parse_year));
     if (day < len) {
-      *m = i + 1;
-      *d = day + 1;
+      *mn = i + 1;
+      *dy = day + 1;
       break;
     }
     day -= len;
@@ -556,34 +618,18 @@ static int day_from_wday(int day, int wday, int num)
   return (day);
 }
 
-static char *resolve_tilde(char *path)
+static void initialize() 
 {
-  struct passwd   *pw;                    /* for searching home dirs */
-  static char     pathbuf[512];           /* path with ~ expanded */
-  char            *p, *q;                 /* username copy pointers */
-  char            *home = 0;              /* home dir (if ~ in path) */
-  
-  if (*path != '~')
-    return(path);
-  
-  if (!path[1] || path[1] == '/') {
-    *pathbuf = 0;
-    if (!(home = getenv("HOME")))
-      home = getenv("home");
-  } else {
-    for (p=path+1, q=pathbuf; *p && *p != '/'; p++, q++)
-      *q = *p;
-    *q = 0;
-    if ((pw = getpwnam(pathbuf)))
-      home = pw->pw_dir;
+  initialized = 1;
+  register struct holiday *hp;
+  register int		dy;
+  for (hp=holidays, dy=0; dy < 366; dy++, hp++)
+  {
+      hp->color = 0;
+      hp->dup = 0;
+      hp->string = 0;
+      hp->next = 0;
   }
-  if (!home) {
-    fprintf(stderr, "%s: can't evaluate ~%s in %s, using .\n",
-	    progname, pathbuf, path);
-    home = ".";
-  }
-  sprintf(pathbuf, "%s/%s", home, path+1);
-  return(pathbuf);
 }
 
 /*** Public Functions ***/
@@ -596,14 +642,14 @@ static char *resolve_tilde(char *path)
  */
 
 extern FILE  *kcalin;                /* file currently being processed */
-char *parse_holidays(const char *holidays, int year, short force)
+char *parse_holidays(const char *holidayfile, int year, short force)
 {
   int kcalparse();
   register struct holiday *hp;
-  register int		d, n;
+  register int		dy;
   short			piped = 0;
-  char			buf[200];
-  char *kdedir;
+  if (!initialized)
+    initialize();
 
   if (year == parse_year && !force)
       return(0);
@@ -612,13 +658,23 @@ char *parse_holidays(const char *holidays, int year, short force)
   parse_year = year;
   easter_julian = calc_easter(year + 1900);
   
-  for (hp=holiday, d=0; d < 366; d++, hp++)
+  for (hp=holidays, dy=0; dy < 366; dy++, hp++)
   {
       hp->color = 0;
       if (hp->string) {
-	  if (!hp->dup)
-	      free(hp->string);
-	  hp->string      = 0;
+        if (!hp->dup )
+              free(hp->string);
+          hp->string = 0;
+      }
+      struct holiday *nx = hp->next;
+      hp->next = 0;
+      while (nx) {
+        if ( nx->string && !nx->dup ) {
+          free( nx->string );
+        }
+        struct holiday *nxtmp=nx;
+        nx = nxtmp->next;
+        free( nxtmp );
       }
   }
   /*  for (hp=sm_holiday, d=0; d < 366; d++, hp++)
@@ -628,7 +684,7 @@ char *parse_holidays(const char *holidays, int year, short force)
       hp->string      = 0;
       }*/
 
-  filename = holidays;
+  filename = holidayfile;
   if (access(filename, R_OK)) return(0);
   kcalin = fopen(filename, "r");
   if (!kcalin) return(0);

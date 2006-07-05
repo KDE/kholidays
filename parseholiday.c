@@ -135,7 +135,7 @@ struct holiday {
   unsigned short  dup;            /* reference count */
 };
 
-struct holiday	 holiday[366];		/* info for each day, separate for */
+struct holiday	 holidays[366];		/* info for each day, separate for */
 /*struct holiday   sm_holiday[366];*/	/* full-line texts under, and small */
 					/* texts next to day number */
 #line 102 "parseholiday.y"
@@ -712,8 +712,8 @@ static void setliteraldate(int month, int day, int off, int *dup)
 {
   int julian = JULIAN(month, day) + off;
   /*  struct holiday *hp = yacc_small ? &sm_holiday[julian]
-      : &holiday[julian]; */
-  struct holiday *hp = &holiday[julian];
+      : &holidays[julian]; */
+  struct holiday *hp = &holidays[julian];
 
   if (julian >= 0 && julian <= 365 && !hp->string) {
     if (!*dup)
@@ -734,8 +734,8 @@ static void seteaster(int off, int length)
   int		dup = 0;	/* flag for later free() */
   int julian = easter_julian + off;
   /*  struct holiday *hp = yacc_small ? &sm_holiday[julian]
-      : &holiday[julian];*/
-  struct holiday *hp = &holiday[julian];
+      : &holidays[julian];*/
+  struct holiday *hp = &holidays[julian];
   
   holiday_name = yacc_string;
   while (length-- > 0) {
@@ -806,7 +806,7 @@ static int day_from_name(char *str)
   char	*name;
   
   for (i=0; i < 366; i++) {
-    name = holiday[i].string;
+    name = holidays[i].string;
     if (name && !strcmp(str, name))
       return(i);
   }
@@ -899,7 +899,7 @@ static char *resolve_tilde(char *path)
  */
 
 extern FILE  *kcalin;                /* file currently being processed */
-char *parse_holidays(const char *holidays, int year, short force)
+char *parse_holidays(const char *holidayfile, int year, short force)
 {
   int kcalparse();
   register struct holiday *hp;
@@ -915,7 +915,7 @@ char *parse_holidays(const char *holidays, int year, short force)
   parse_year = year;
   easter_julian = calc_easter(year + 1900);
   
-  for (hp=holiday, d=0; d < 366; d++, hp++)
+  for (hp=holidays, d=0; d < 366; d++, hp++)
   {
       hp->color = 0;
       if (hp->string) {
