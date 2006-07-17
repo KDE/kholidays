@@ -45,10 +45,10 @@ install(TARGETS kholidays  DESTINATION ${LIB_INSTALL_DIR})
 ##the lex/flex and yacc/bison files are in CVS and NOT generated
 ##we do this to eliminate the need for those programs
 ##parseholiday.c:
-##	$(YACC) -p kcal -d -o parseholiday.c parseholiday.y
+##	$(YACC) -p ${KDE4_KCAL_LIBS} -d -o parseholiday.c parseholiday.y
 ##
 ##parseholiday.h:
-##	$(YACC) -p kcal -d -o parseholiday.c parseholiday.y
+##	$(YACC) -p ${KDE4_KCAL_LIBS} -d -o parseholiday.c parseholiday.y
 ##
 ##scanholiday.c: parseholiday.h
 ##	$(LEX) -Pkcal -B -oscanholiday.c scanholiday.lex
