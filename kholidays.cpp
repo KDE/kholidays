@@ -72,9 +72,9 @@ QString KHolidays::location() const
 QString KHolidays::shortText( const QDate &date )
 {
   QList<KHoliday> lst = getHolidays( date );
-  if ( !lst.isEmpty() ) 
+  if ( !lst.isEmpty() )
     return lst.first().text;
-  else return QString::null;
+  else return QString();
 }
 
 bool KHolidays::parseFile( const QDate &date )
@@ -98,9 +98,9 @@ bool KHolidays::parseFile( const QDate &date )
 QString KHolidays::getHoliday( const QDate &date )
 {
   QList<KHoliday> lst = getHolidays( date );
-  if ( !lst.isEmpty() ) 
+  if ( !lst.isEmpty() )
     return lst.first().text;
-  else return QString::null;
+  else return QString();
 }
 
 QList<KHoliday> KHolidays::getHolidays( const QDate &date )
