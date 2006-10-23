@@ -12,7 +12,7 @@ set(kholidays_LIB_SRCS
    parseholiday.c 
    lunarphase.cpp )
 
-kde4_automoc(kholidays ${kholidays_LIB_SRCS})
+kde4_automoc(${kholidays_LIB_SRCS})
 
 kde4_add_library(kholidays SHARED ${kholidays_LIB_SRCS})
 

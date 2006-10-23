@@ -12,7 +12,7 @@ include_directories(
 
 set(testlunar_SRCS testlunar.cpp )
 
-kde4_automoc(testlunar ${testlunar_SRCS})
+kde4_automoc(${testlunar_SRCS})
 
 kde4_add_executable(testlunar RUN_UNINSTALLED ${testlunar_SRCS})
 
@@ -22,7 +22,7 @@ target_link_libraries(testlunar kholidays_ng ${KDE4_KDECORE_LIBS} )
 
 set(testseason_SRCS testseasons.cpp )
 
-kde4_automoc(testseason ${testseason_SRCS})
+kde4_automoc(${testseason_SRCS})
 
 kde4_add_executable(testseason RUN_UNINSTALLED ${testseason_SRCS})
 
@@ -32,7 +32,7 @@ target_link_libraries(testseason kholidays_ng ${KDE4_KDECORE_LIBS} )
 
 set(testzodiac_SRCS testzodiac.cpp )
 
-kde4_automoc(testzodiac ${testzodiac_SRCS})
+kde4_automoc(${testzodiac_SRCS})
 
 kde4_add_executable(testzodiac RUN_UNINSTALLED ${testzodiac_SRCS})
 
