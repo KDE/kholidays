@@ -18,6 +18,7 @@ install( FILES
 	 holiday_fr
 	 holiday_frswiss
 	 holiday_gb
+	 holiday_gr
          holiday_gt
          holiday_hu
 	 holiday_is
