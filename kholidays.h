@@ -25,7 +25,7 @@
 #include <QDateTime>
 #include <QList>
 
-#include <kdepimmacros.h>
+#include <kdepim_export.h>
 
 struct KHoliday {
   QString text;
@@ -33,7 +33,7 @@ struct KHoliday {
   int Category;
 };
 
-class KDE_EXPORT KHolidays {
+class KHOLIDAYS_EXPORT KHolidays {
   public:
     /**
        Return a list of all available locations which have a holiday definition.
