@@ -1,22 +1,28 @@
 :
-: Swedish holiday file. Copy to ~/.holiday for private changes or tip
-: wedberg@mednet.gu.se if things are missing.
+: Swedish holiday file.
 :
 weekend "Nyårsdagen" weekend on 1.1
 black "Trett.d.afton" black on 5.1
 weekend "Trett.d. Jul" weekend on 6.1
 black "Alla hjärtans dag" on 14.2
+black "Fettisdagen" on easter minus 47 days
+black "Askonsdagen" on easter minus 46 days
 blue "Sommartid" on last sunday in march
+black "Skärtorsdagen" black on easter minus 3
+weekend "Långfredagen" weekend on easter minus 2
 black "Påskafton" black on easter minus 1
 weekend "Påskdagen" weekend on easter
-weekend "Långfredagen" weekend on easter minus 2
 weekend "Annandag påsk" weekend on easter plus 1
-black "Pingstafton" black on easter plus 48 days 
-weekend "Pingstdagen" weekend on easter plus 49 days 
-weekend "Annandag Pingst" weekend on easter plus 50 days 
+black "Pingstafton" black on easter plus 48 days
+weekend "Pingstdagen" weekend on easter plus 49 days
+:Before 2005
+:weekend "Annandag Pingst" weekend on easter plus 50 days
+black "Annandag Pingst" black on easter plus 50 days
 weekend "Kristi Him.f." weekend on easter plus 39 days
 weekend "Första Maj" weekend on 1.5
-black "Nationaldagen" black on 6.6
+:Before 2005
+:black "Nationaldagen" black on 6.6
+weekend "Nationaldagen" weekend on 6.6
 black "Midsommarafton" black on friday before 26.6
 weekend "Midsommardagen" weekend on saturday before 27.6
 blue "Vintertid" on last sunday in october
