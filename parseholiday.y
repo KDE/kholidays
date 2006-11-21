@@ -371,21 +371,16 @@ static void setdoff(int wday, int rel, int month, int day,
 
 static int conditionalOffset( int day, int month, int year, int cond ) 
 {
-printf("ConditionalOffset: %i.%i.%i, condition=%i\n", day, month, year, cond );
   int off = 0;
   int wday = 0;
   (void)date_to_time( day, month, year, &wday, 0, 0);
   if ( wday == 0 ) { wday = 7; } /* sunday is 7, not 0 */
-printf("Date is a %i\n", wday );
   if ( cond & (1<<wday) ) { 
-printf("  Matches condition\n");
     /* condition matches -> higher 8 bits contain the possible days to shift to */
     int to = (cond >> 8);
-printf("  To condition: %i\n", to);
     while ( !(to & (1<<((wday+off)%7))) && (off < 8) ) {
       ++off;
     }
-printf("  Resulting offset: %i\n", off);
   }
   if ( off >= 8 ) return 0;
   else return off;
