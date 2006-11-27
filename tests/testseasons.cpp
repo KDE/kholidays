@@ -21,10 +21,10 @@
 #include <stdlib.h>
 #include <iostream>
 #include <kaboutdata.h>
-#include <kapplication.h>
 #include <kdebug.h>
 #include <klocale.h>
 #include <kcmdlineargs.h>
+#include <QCoreApplication>
 
 #include "astroseasons.h"
 
@@ -40,15 +40,7 @@ static const KCmdLineOptions options[] =
 int main(int argc,char **argv)
 {
   KAboutData aboutData("testseasons","Test Astronomical Seasons","0.1");
-  KCmdLineArgs::init(argc,argv,&aboutData);
-  KCmdLineArgs::addCmdLineOptions( options );
-
-  KApplication app( false );
-//  KApplication app;
-
-  KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
-
-  Q_UNUSED( args );
+  QCoreApplication app( argc, argv );
 
   AstroSeasons as;
   QString pStr;

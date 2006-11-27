@@ -21,34 +21,21 @@
 #include <stdlib.h>
 #include <iostream>
 #include <kaboutdata.h>
-#include <kapplication.h>
 #include <kdebug.h>
 #include <klocale.h>
 #include <kcmdlineargs.h>
+#include <QCoreApplication>
 
 #include "lunarphase.h"
 
 using namespace LibKHolidays;
 using namespace std;
 
-static const KCmdLineOptions options[] =
-{
-  {"verbose", "Verbose output", 0},
-  KCmdLineLastOption
-};
-
 int main(int argc,char **argv)
 {
-  KAboutData aboutData("testlunar","Test Lunar Phases","0.1");
-  KCmdLineArgs::init(argc,argv,&aboutData);
-  KCmdLineArgs::addCmdLineOptions( options );
+  //KAboutData aboutData("testlunar","Test Lunar Phases","0.1");
 
-  KApplication app( false );
-//  KApplication app;
-
-  KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
-
-  Q_UNUSED( args );
+  QCoreApplication app( argc, argv );
 
   LunarPhase lp;
   QString pStr;
