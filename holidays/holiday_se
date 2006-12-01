@@ -27,11 +27,11 @@ black "Midsommarafton" black on friday before 26.6
 weekend "Midsommardagen" weekend on saturday before 27.6
 blue "Vintertid" on last sunday in october
 weekend "Alla helgons dag" weekend on first sunday in november minus 1
-black "1. Advent" on sunday before 23.12 minus 21 days
-black "2. Advent" on sunday before 23.12 minus 14 days
-black "3. Advent" on sunday before 23.12 minus 7 days
-black "4. Advent" on sunday before 23.12
+black "1. Advent" on sunday before 24.12 minus 21 days
+black "2. Advent" on sunday before 24.12 minus 14 days
+black "3. Advent" on sunday before 24.12 minus 7 days
 black "Julafton" black on 24.12
+black "4. Advent" on sunday before 24.12
 weekend "Juldagen" weekend on 25.12
 weekend "Annandag Jul" weekend on 26.12
 black "Nyårsafton" on 31.12
