@@ -79,14 +79,14 @@ QString KHolidays::shortText( const QDate &date )
 
 bool KHolidays::parseFile( const QDate &date )
 {
-// kdDebug()<<"KHolidays::parseFile( date=" << date << ")"<<endl;
+// kDebug()<<"KHolidays::parseFile( date=" << date << ")"<<endl;
   int lastYear = 0; //current year less 1900
 
   if ( mHolidayFile.isNull() || mHolidayFile.isEmpty() || date.isNull() || !date.isValid() )
     return false;
 
   if ( ( date.year() != mYearLast ) || ( mYearLast == 0 ) ) {
-// kdDebug()<<kdBacktrace();
+// kDebug()<<kdBacktrace();
     mYearLast = date.year();
     lastYear = date.year() - 1900; // silly parse_year takes 2 digit year...
     parse_holidays( QFile::encodeName( mHolidayFile ), lastYear, 1 );
