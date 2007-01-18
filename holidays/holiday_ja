@@ -26,26 +26,26 @@
 :small "The Emperor's Birthday" weekend on 12/23
 
 : National Holidays. (Japanese and English messages)
-small "¸µÃ¶(New Year's Day)" weekend on 1/1
-small "À®¿Í¤ÎÆü(Coming of Age)" weekend on second monday in january
-small "·ú¹ñµ­Ç°Æü(National Foundation Day)" weekend on 2/11
-small "½ÕÊ¬¤ÎÆü(Vernal Equinox Day)" weekend on 3/20/2005
-small "½ÕÊ¬¤ÎÆü(Vernal Equinox Day)" weekend on 3/21/2006
-small "½ÕÊ¬¤ÎÆü(Vernal Equinox Day)" weekend on 3/21/2007
-small "½ÕÊ¬¤ÎÆü(Vernal Equinox Day)" weekend on 3/20/2008
-small "½ÕÊ¬¤ÎÆü(Vernal Equinox Day)" weekend on 3/20/2009
-small "½ÕÊ¬¤ÎÆü(Vernal Equinox Day)" weekend on 3/21/2010
-small "¤ß¤É¤ê¤ÎÆü(Greenery Day)" weekend on 4/29
-small "·ûË¡µ­Ç°Æü(Constitution Day)" weekend on 5/3
-small "µÙÆü(Holiday)" weekend on 5/4
-small "¤³¤É¤â¤ÎÆü(Children's Day)" weekend on 5/5
-small "³¤¤ÎÆü(Oceans' Day)" weekend on third monday in july
-small "·ÉÏ·¤ÎÆü(Respect for Senior Citizens Day)" weekend on third monday in september
-small "½©Ê¬¤ÎÆü(Autumnal Equinox Day)" weekend on 9/23
-small "ÂÎ°é¤ÎÆü(Sports Day)" weekend on second monday in october
-small "Ê¸²½¤ÎÆü(Culture Day)" weekend on 11/3
-small "¶ĞÏ«´¶¼Õ¤ÎÆü(Labor Thanksgiving Day)" weekend on 11/23
-small "Å·¹ÄÃÂÀ¸Æü(The Emperor's Birthday)" weekend on 12/23
+small "å…ƒæ—¦(New Year's Day)" weekend on 1/1
+small "æˆäººã®æ—¥(Coming of Age)" weekend on second monday in january
+small "å»ºå›½è¨˜å¿µæ—¥(National Foundation Day)" weekend on 2/11
+small "æ˜¥åˆ†ã®æ—¥(Vernal Equinox Day)" weekend on 3/20/2005
+small "æ˜¥åˆ†ã®æ—¥(Vernal Equinox Day)" weekend on 3/21/2006
+small "æ˜¥åˆ†ã®æ—¥(Vernal Equinox Day)" weekend on 3/21/2007
+small "æ˜¥åˆ†ã®æ—¥(Vernal Equinox Day)" weekend on 3/20/2008
+small "æ˜¥åˆ†ã®æ—¥(Vernal Equinox Day)" weekend on 3/20/2009
+small "æ˜¥åˆ†ã®æ—¥(Vernal Equinox Day)" weekend on 3/21/2010
+small "ã¿ã©ã‚Šã®æ—¥(Greenery Day)" weekend on 4/29
+small "æ†²æ³•è¨˜å¿µæ—¥(Constitution Day)" weekend on 5/3
+small "ä¼‘æ—¥(Holiday)" weekend on 5/4
+small "ã“ã©ã‚‚ã®æ—¥(Children's Day)" weekend on 5/5
+small "æµ·ã®æ—¥(Oceans' Day)" weekend on third monday in july
+small "æ•¬è€ã®æ—¥(Respect for Senior Citizens Day)" weekend on third monday in september
+small "ç§‹åˆ†ã®æ—¥(Autumnal Equinox Day)" weekend on 9/23
+small "ä½“è‚²ã®æ—¥(Sports Day)" weekend on second monday in october
+small "æ–‡åŒ–ã®æ—¥(Culture Day)" weekend on 11/3
+small "å‹¤åŠ´æ„Ÿè¬ã®æ—¥(Labor Thanksgiving Day)" weekend on 11/23
+small "å¤©çš‡èª•ç”Ÿæ—¥(The Emperor's Birthday)" weekend on 12/23
 
 : If a "National Holiday" is on Sunday,the following day
 : shall be a substitute holiday.
@@ -58,14 +58,14 @@ small "Å·¹ÄÃÂÀ¸Æü(The Emperor's Birthday)" weekend on 12/23
 :small "Substitute holiday" weekend on 11/24/2008
 :small "Substitute holiday" weekend on 3/22/2010
 
-small "¿¶ÂØµÙÆü(Substitute holiday)" weekend on 3/21/2005
-small "¿¶ÂØµÙÆü(Substitute holiday)" weekend on 1/2/2006
-small "¿¶ÂØµÙÆü(Substitute holiday)" weekend on 2/12/2007
-small "¿¶ÂØµÙÆü(Substitute holiday)" weekend on 4/30/2007
-small "¿¶ÂØµÙÆü(Substitute holiday)" weekend on 9/24/2007
-small "¿¶ÂØµÙÆü(Substitute holiday)" weekend on 12/24/2007
-small "¿¶ÂØµÙÆü(Substitute holiday)" weekend on 11/24/2008
-small "¿¶ÂØµÙÆü(Substitute holiday)" weekend on 3/22/2010
+small "æŒ¯æ›¿ä¼‘æ—¥(Substitute holiday)" weekend on 3/21/2005
+small "æŒ¯æ›¿ä¼‘æ—¥(Substitute holiday)" weekend on 1/2/2006
+small "æŒ¯æ›¿ä¼‘æ—¥(Substitute holiday)" weekend on 2/12/2007
+small "æŒ¯æ›¿ä¼‘æ—¥(Substitute holiday)" weekend on 4/30/2007
+small "æŒ¯æ›¿ä¼‘æ—¥(Substitute holiday)" weekend on 9/24/2007
+small "æŒ¯æ›¿ä¼‘æ—¥(Substitute holiday)" weekend on 12/24/2007
+small "æŒ¯æ›¿ä¼‘æ—¥(Substitute holiday)" weekend on 11/24/2008
+small "æŒ¯æ›¿ä¼‘æ—¥(Substitute holiday)" weekend on 3/22/2010
 
 
 : Japanese Events , not National Holidays.
