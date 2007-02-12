@@ -42,7 +42,7 @@ QStringList KHolidays::locations()
 {
   QStringList files =
     KGlobal::dirs()->findAllResources( "data", "libkholidays/holiday_*",
-                                       false, true );
+                                       KStandardDirs::NoDuplicates );
   QStringList locs;
 
   QStringList::ConstIterator it;
