@@ -46,7 +46,7 @@ int main(int argc,char **argv)
   QString pStr;
 
   int year = 2004;
-  int days = ( QDate::leapYear( year ) ? 366 : 355 );
+  int days = ( QDate::isLeapYear( year ) ? 366 : 355 );
 
   Zodiac zd( Zodiac::Tropical );
   QDate qd( year, 1, 1 );
