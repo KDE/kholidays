@@ -12,7 +12,6 @@
 : Author: Guido van Rossum, CWI, Amsterdam <Guido.van.Rossum@cwi.nl>
 :
 small "Nieuwjaar" weekend on 1.1.
-small "Goede Vrijdag" on easter minus 2 days
 small "Pasen" weekend on easter length 2 days
 small "Hemelvaart" weekend on easter plus 39 days
 small "Pinksteren" weekend on easter plus 49 days length 2 days
