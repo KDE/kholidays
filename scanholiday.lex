@@ -1,9 +1,14 @@
 %{
 #include <string.h>
 #include "parseholiday.h"
+#define YY_NO_UNPUT
 %}
 
+%option nomain
 %option noyywrap
+%option never-interactive
+%option noalways-interactive
+%option nostack
 
 %%
 
