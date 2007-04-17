@@ -39,6 +39,7 @@ install( FILES
          holiday_se
          holiday_si
          holiday_th
+         holiday_ua
          holiday_us
          holiday_uy
          holiday_ie
