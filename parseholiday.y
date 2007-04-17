@@ -615,9 +615,9 @@ static int day_from_wday(int day, int wday, int num)
 
 static void initialize() 
 {
-  initialized = 1;
   register struct holiday *hp;
-  register int		dy;
+  register int dy;
+  initialized = 1;
   for (hp=holidays, dy=0; dy < 366; dy++, hp++)
   {
       hp->color = 0;
@@ -636,10 +636,9 @@ static void initialize()
  * Return an error message if an error occurred, 0 otherwise.
  */
 
-extern FILE  *kcalin;                /* file currently being processed */
 char *parse_holidays(const char *holidayfile, int year, short force)
 {
-  int kcalparse();
+  FILE *kcalin;                  /* file currently being processed */
   register struct holiday *hp;
   register int		dy;
   short			piped = 0;
@@ -661,15 +660,18 @@ char *parse_holidays(const char *holidayfile, int year, short force)
               free(hp->string);
           hp->string = 0;
       }
+      {
       struct holiday *nx = hp->next;
       hp->next = 0;
       while (nx) {
+        struct holiday *nxtmp;
         if ( nx->string && !nx->dup ) {
           free( nx->string );
         }
-        struct holiday *nxtmp=nx;
+        nxtmp=nx;
         nx = nxtmp->next;
         free( nxtmp );
+      }
       }
   }
   /*  for (hp=sm_holiday, d=0; d < 366; d++, hp++)
