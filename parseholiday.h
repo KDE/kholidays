@@ -60,9 +60,10 @@
      GE = 276,
      LT = 277,
      GT = 278,
-     OR = 279,
-     AND = 280,
-     UMINUS = 281
+     PASCHA = 279,
+     OR = 280,
+     AND = 281,
+     UMINUS = 282
    };
 #endif
 /* Tokens.  */
@@ -87,19 +88,20 @@
 #define GE 276
 #define LT 277
 #define GT 278
-#define OR 279
-#define AND 280
-#define UMINUS 281
+#define PASCHA 279
+#define OR 280
+#define AND 281
+#define UMINUS 282
 
 
 
 
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 typedef union YYSTYPE
-#line 109 "parseholiday.y"
+#line 110 "parseholiday.y"
 { int ival; char *sval; }
 /* Line 1529 of yacc.c.  */
-#line 103 "parseholiday.h"
+#line 105 "parseholiday.h"
 	YYSTYPE;
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
 # define YYSTYPE_IS_DECLARED 1

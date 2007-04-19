@@ -20,7 +20,7 @@
  */
 
 #include <config.h>
-#include <config-libkholidays.h>
+
 #include <stdio.h>
 #include <unistd.h>
 #include <time.h>
@@ -64,8 +64,9 @@ static int	 day_from_monthday(int month, int day);
 static int	 day_from_wday(int day, int wday, int num);
 static void	 monthday_from_day(int day, int *m, int *d, int *y);
 static int       calc_easter(int year);
+static int       calc_pascha(int year);
 static void      setliteraldate(int month, int day, int off, int *ddup);
-static void      seteaster(int off, int length);
+static void      seteaster(int off, int length, int pascha);
 static void      setdate(int month, int day, int year, int off, int conditionaloff, int length);
 static void      setwday(int num, int wday, int month, int off, int length); 
 static void      setdoff(int wday, int rel, int month, int day, 
@@ -73,7 +74,6 @@ static void      setdoff(int wday, int rel, int month, int day,
 /*** Variables and structures ***/
 static int	 m, d, y;
 int              kcallineno;	       	/* current line # being parsed */
-FILE            *kcalin;                  /* file currently being processed */
 int	         yacc_small;		/* small string or on its own line? */
 int	         yacc_stringcolor;	/* color of holiday name text, 1..8 */
 char	        *yacc_string;		/* holiday name text */
@@ -83,6 +83,7 @@ int	         parse_year = -1;	/* year being parsed, 0=1970..99=2069*/
 static const char *filename;		/* holiday filename */
 static char	 errormsg[PATH_MAX+200];/* error message if any, or "" */
 static int	 easter_julian;		/* julian date of Easter Sunday */
+static int	 pascha_julian;		/* julian date of Pascha Sunday */
 static char	*holiday_name;		/* strdup'd yacc_string */
 short 	         monthlen[12] = { 31, 28, 31, 30, 
 				 31, 30, 31, 31,
@@ -111,7 +112,7 @@ static int	initialized=0;
 %token <ival> NUMBER MONTH WDAY COLOR
 %token <sval> STRING
 %token	IN PLUS MINUS SMALL CYEAR LEAPYEAR SHIFT IF 
-%token	LENGTH EASTER EQ NE LE GE LT GT
+%token	LENGTH EASTER EQ NE LE GE LT GT PASCHA
 
 %left OR
 %left AND
@@ -140,7 +141,8 @@ small	:					{ yacc_small = 0; }
 	 | COLOR					{ $$ = $1; }
 	 ;
 
- entry	: EASTER offset length			{ seteaster($2, $3); }
+entry	: EASTER offset length			{ seteaster($2, $3, 0); }
+         | PASCHA offset length                 { seteaster($2, $3, 1); }
 	 | date offset conditionaloffset length			{ setdate( m,  d,  y, $2, $3, $4);}
 	 | WDAY offset length			{ setwday( 0, $1,  0, $2, $3);}
 	 | pexpr WDAY offset length		{ setwday($1, $2,  0, $3, $4);}
@@ -477,10 +479,10 @@ static void setliteraldate(int month, int day, int off, int *ddup)
  * set a holiday relative to Easter
  */
 
-static void seteaster(int off, int length)
+static void seteaster(int off, int length, int pascha /*0=Easter, 1=Pascha*/)
 {
   int		ddup = 0;	/* flag for later free() */
-  int julian = easter_julian + off;
+  int julian = (pascha ? pascha_julian : easter_julian) + off;
   /*  struct holiday *hp = yacc_small ? &sm_holiday[julian]
       : &holidays[julian];*/
   struct holiday *hp = 0;
@@ -542,6 +544,25 @@ static int calc_easter(int year)
   easter += extra+7;
   easter += 31+28+!(year&3)-1;
   return(easter);
+}
+
+
+/*
+ * set a holiday relative to Pascha, which is the Christian Orthodox Easter.
+ * Algorithm provided by Efthimios Mavrogeorgiadis <emav@enl.auth.gr>.
+ * Changed 12.9.99 by Efthimios Mavrogeorgiadis <emav@enl.auth.gr>.
+ */
+
+static int calc_pascha(int year)           /* Pascha in which year? */
+{
+  int a = year % 19;
+  int b = (19 * a + 15) % 30;
+  int c = (year + (year - (year % 4))/4 + b) % 7;
+  int dd = b - c;
+  int e = dd-3 - (2 - (year-(year%100))/100 + (year-(year%400))/400);
+  int f = (e - (e % 31))/31;
+  int day = e - 30 * f;
+  return(31 + 28+!(year&3) + 31 + (f ? 30 : 0) + day-1);
 }
 
 
@@ -639,6 +660,7 @@ static void initialize()
 
 char *parse_holidays(const char *holidayfile, int year, short force)
 {
+  extern FILE *kcalin;                  /* file currently being processed */
   register struct holiday *hp;
   register int		dy;
   short			piped = 0;
@@ -651,6 +673,7 @@ char *parse_holidays(const char *holidayfile, int year, short force)
       year = parse_year;
   parse_year = year;
   easter_julian = calc_easter(year + 1900);
+  pascha_julian = calc_pascha(year + 1900);
   
   for (hp=holidays, dy=0; dy < 366; dy++, hp++)
   {

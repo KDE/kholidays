@@ -14,7 +14,7 @@
 
 #.*\n				;
 ^:.*\n				;
-[ \t\n]				;
+[ \t\r\n]				;
 [-+*/%.!?:()\[\]]		{ return(*kcaltext); }
 
 january				{ kcallval.ival =   1; return(MONTH); }
@@ -68,6 +68,7 @@ small				{ return(SMALL); }
 year				{ return(CYEAR);  }
 leapyear			{ return(LEAPYEAR); }
 easter				{ return(EASTER); }
+pascha				{ return(PASCHA); }
 length				{ return(LENGTH); }
 shift				{ return(SHIFT); }
 
