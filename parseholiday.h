@@ -96,7 +96,7 @@
 
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 typedef union YYSTYPE
-#line 108 "parseholiday.y"
+#line 109 "parseholiday.y"
 { int ival; char *sval; }
 /* Line 1529 of yacc.c.  */
 #line 103 "parseholiday.h"

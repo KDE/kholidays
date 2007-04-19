@@ -206,6 +206,7 @@ static void      setdoff(int wday, int rel, int month, int day,
 /*** Variables and structures ***/
 static int	 m, d, y;
 int              kcallineno;	       	/* current line # being parsed */
+FILE            *kcalin;                  /* file currently being processed */
 int	         yacc_small;		/* small string or on its own line? */
 int	         yacc_stringcolor;	/* color of holiday name text, 1..8 */
 char	        *yacc_string;		/* holiday name text */
@@ -258,10 +259,10 @@ static int	initialized=0;
 
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 typedef union YYSTYPE
-#line 108 "parseholiday.y"
+#line 109 "parseholiday.y"
 { int ival; char *sval; }
 /* Line 193 of yacc.c.  */
-#line 265 "parseholiday.c"
+#line 266 "parseholiday.c"
 	YYSTYPE;
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
 # define YYSTYPE_IS_DECLARED 1
@@ -274,7 +275,7 @@ typedef union YYSTYPE
 
 
 /* Line 216 of yacc.c.  */
-#line 278 "parseholiday.c"
+#line 279 "parseholiday.c"
 
 #ifdef short
 # undef short
@@ -587,13 +588,13 @@ static const yytype_int8 yyrhs[] =
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,   127,   127,   128,   128,   134,   135,   138,   139,   142,
-     143,   144,   145,   146,   147,   150,   151,   152,   155,   156,
-     159,   160,   161,   164,   165,   168,   169,   170,   171,   172,
-     173,   174,   175,   176,   177,   178,   182,   183,   184,   186,
-     188,   190,   192,   194,   196,   202,   202,   204,   205,   206,
-     207,   208,   209,   210,   211,   212,   213,   214,   215,   216,
-     217,   218,   219,   220,   223,   224,   227,   228,   229,   230
+       0,   128,   128,   129,   129,   135,   136,   139,   140,   143,
+     144,   145,   146,   147,   148,   151,   152,   153,   156,   157,
+     160,   161,   162,   165,   166,   169,   170,   171,   172,   173,
+     174,   175,   176,   177,   178,   179,   183,   184,   185,   187,
+     189,   191,   193,   195,   197,   203,   203,   205,   206,   207,
+     208,   209,   210,   211,   212,   213,   214,   215,   216,   217,
+     218,   219,   220,   221,   224,   225,   228,   229,   230,   231
 };
 #endif
 
@@ -1602,221 +1603,221 @@ yyreduce:
   switch (yyn)
     {
         case 3:
-#line 128 "parseholiday.y"
+#line 129 "parseholiday.y"
     { yacc_stringcolor = (yyvsp[(3) - (5)].ival);
 						  yacc_string	= (yyvsp[(4) - (5)].sval);
 						  yacc_daycolor	= (yyvsp[(5) - (5)].ival); ;}
     break;
 
   case 4:
-#line 131 "parseholiday.y"
+#line 132 "parseholiday.y"
     { free(yacc_string); ;}
     break;
 
   case 5:
-#line 134 "parseholiday.y"
+#line 135 "parseholiday.y"
     { yacc_small = 0; ;}
     break;
 
   case 6:
-#line 135 "parseholiday.y"
+#line 136 "parseholiday.y"
     { yacc_small = 1; ;}
     break;
 
   case 7:
-#line 138 "parseholiday.y"
+#line 139 "parseholiday.y"
     { (yyval.ival) = 0; ;}
     break;
 
   case 8:
-#line 139 "parseholiday.y"
+#line 140 "parseholiday.y"
     { (yyval.ival) = (yyvsp[(1) - (1)].ival); ;}
     break;
 
   case 9:
-#line 142 "parseholiday.y"
+#line 143 "parseholiday.y"
     { seteaster((yyvsp[(2) - (3)].ival), (yyvsp[(3) - (3)].ival)); ;}
     break;
 
   case 10:
-#line 143 "parseholiday.y"
+#line 144 "parseholiday.y"
     { setdate( m,  d,  y, (yyvsp[(2) - (4)].ival), (yyvsp[(3) - (4)].ival), (yyvsp[(4) - (4)].ival));;}
     break;
 
   case 11:
-#line 144 "parseholiday.y"
+#line 145 "parseholiday.y"
     { setwday( 0, (yyvsp[(1) - (3)].ival),  0, (yyvsp[(2) - (3)].ival), (yyvsp[(3) - (3)].ival));;}
     break;
 
   case 12:
-#line 145 "parseholiday.y"
+#line 146 "parseholiday.y"
     { setwday((yyvsp[(1) - (4)].ival), (yyvsp[(2) - (4)].ival),  0, (yyvsp[(3) - (4)].ival), (yyvsp[(4) - (4)].ival));;}
     break;
 
   case 13:
-#line 146 "parseholiday.y"
+#line 147 "parseholiday.y"
     { setwday((yyvsp[(1) - (6)].ival), (yyvsp[(2) - (6)].ival), (yyvsp[(4) - (6)].ival), (yyvsp[(5) - (6)].ival), (yyvsp[(6) - (6)].ival));;}
     break;
 
   case 14:
-#line 147 "parseholiday.y"
+#line 148 "parseholiday.y"
     { setdoff((yyvsp[(1) - (5)].ival), (yyvsp[(2) - (5)].ival),m,d,y,(yyvsp[(4) - (5)].ival),(yyvsp[(5) - (5)].ival));;}
     break;
 
   case 15:
-#line 150 "parseholiday.y"
+#line 151 "parseholiday.y"
     { (yyval.ival) =	0; ;}
     break;
 
   case 16:
-#line 151 "parseholiday.y"
+#line 152 "parseholiday.y"
     { (yyval.ival) =	(yyvsp[(2) - (2)].ival); ;}
     break;
 
   case 17:
-#line 152 "parseholiday.y"
+#line 153 "parseholiday.y"
     { (yyval.ival) = -(yyvsp[(2) - (2)].ival); ;}
     break;
 
   case 18:
-#line 155 "parseholiday.y"
+#line 156 "parseholiday.y"
     { (yyval.ival) = 0; ;}
     break;
 
   case 19:
-#line 156 "parseholiday.y"
+#line 157 "parseholiday.y"
     { (yyval.ival) = ((yyvsp[(2) - (4)].ival)<<8) | (yyvsp[(4) - (4)].ival);printf("Shift to %i if %i\n", (yyvsp[(2) - (4)].ival), (yyvsp[(4) - (4)].ival)); ;}
     break;
 
   case 20:
-#line 159 "parseholiday.y"
+#line 160 "parseholiday.y"
     { (yyval.ival) = 0; ;}
     break;
 
   case 21:
-#line 160 "parseholiday.y"
+#line 161 "parseholiday.y"
     { (yyval.ival) = (1<<(yyvsp[(1) - (1)].ival)); ;}
     break;
 
   case 22:
-#line 161 "parseholiday.y"
+#line 162 "parseholiday.y"
     { (yyval.ival) = (1<<(yyvsp[(1) - (3)].ival)) | (yyvsp[(3) - (3)].ival); ;}
     break;
 
   case 23:
-#line 164 "parseholiday.y"
+#line 165 "parseholiday.y"
     { (yyval.ival) =	1; ;}
     break;
 
   case 24:
-#line 165 "parseholiday.y"
+#line 166 "parseholiday.y"
     { (yyval.ival) =	(yyvsp[(2) - (2)].ival); ;}
     break;
 
   case 25:
-#line 168 "parseholiday.y"
+#line 169 "parseholiday.y"
     { m = (yyvsp[(3) - (3)].ival); d = (yyvsp[(1) - (3)].ival); y = 0;  ;}
     break;
 
   case 26:
-#line 169 "parseholiday.y"
+#line 170 "parseholiday.y"
     { m = (yyvsp[(3) - (4)].ival); d = (yyvsp[(1) - (4)].ival); y = 0;  ;}
     break;
 
   case 27:
-#line 170 "parseholiday.y"
+#line 171 "parseholiday.y"
     { m = (yyvsp[(3) - (5)].ival); d = (yyvsp[(1) - (5)].ival); y = (yyvsp[(5) - (5)].ival); ;}
     break;
 
   case 28:
-#line 171 "parseholiday.y"
+#line 172 "parseholiday.y"
     { m = (yyvsp[(1) - (3)].ival); d = (yyvsp[(3) - (3)].ival); y = 0;  ;}
     break;
 
   case 29:
-#line 172 "parseholiday.y"
+#line 173 "parseholiday.y"
     { m = (yyvsp[(1) - (5)].ival); d = (yyvsp[(3) - (5)].ival); y = (yyvsp[(5) - (5)].ival); ;}
     break;
 
   case 30:
-#line 173 "parseholiday.y"
+#line 174 "parseholiday.y"
     { m = (yyvsp[(1) - (2)].ival); d = (yyvsp[(2) - (2)].ival); y = 0;  ;}
     break;
 
   case 31:
-#line 174 "parseholiday.y"
+#line 175 "parseholiday.y"
     { m = (yyvsp[(1) - (3)].ival); d = (yyvsp[(2) - (3)].ival); y = (yyvsp[(3) - (3)].ival); ;}
     break;
 
   case 32:
-#line 175 "parseholiday.y"
+#line 176 "parseholiday.y"
     { m = (yyvsp[(2) - (2)].ival); d = (yyvsp[(1) - (2)].ival); y = 0;  ;}
     break;
 
   case 33:
-#line 176 "parseholiday.y"
+#line 177 "parseholiday.y"
     { m = (yyvsp[(2) - (3)].ival); d = (yyvsp[(1) - (3)].ival); y = (yyvsp[(3) - (3)].ival); ;}
     break;
 
   case 34:
-#line 177 "parseholiday.y"
+#line 178 "parseholiday.y"
     { m = (yyvsp[(3) - (4)].ival); d = (yyvsp[(1) - (4)].ival); y = (yyvsp[(4) - (4)].ival); ;}
     break;
 
   case 35:
-#line 178 "parseholiday.y"
+#line 179 "parseholiday.y"
     { monthday_from_day((yyvsp[(1) - (1)].ival),
 								 &m, &d, &y); ;}
     break;
 
   case 36:
-#line 182 "parseholiday.y"
+#line 183 "parseholiday.y"
     { (yyval.ival) = day_from_name((yyvsp[(1) - (1)].sval)); ;}
     break;
 
   case 37:
-#line 183 "parseholiday.y"
+#line 184 "parseholiday.y"
     { (yyval.ival) = day_from_easter(); ;}
     break;
 
   case 38:
-#line 184 "parseholiday.y"
+#line 185 "parseholiday.y"
     { (yyval.ival) = day_from_monthday
 								 ((yyvsp[(3) - (3)].ival), (yyvsp[(1) - (3)].ival)); ;}
     break;
 
   case 39:
-#line 186 "parseholiday.y"
+#line 187 "parseholiday.y"
     { (yyval.ival) = day_from_monthday
 								 ((yyvsp[(3) - (4)].ival), (yyvsp[(1) - (4)].ival)); ;}
     break;
 
   case 40:
-#line 188 "parseholiday.y"
+#line 189 "parseholiday.y"
     { (yyval.ival) = day_from_monthday
 								 ((yyvsp[(1) - (3)].ival), (yyvsp[(3) - (3)].ival)); ;}
     break;
 
   case 41:
-#line 190 "parseholiday.y"
+#line 191 "parseholiday.y"
     { (yyval.ival) = day_from_monthday
 								 ((yyvsp[(2) - (2)].ival), (yyvsp[(1) - (2)].ival)); ;}
     break;
 
   case 42:
-#line 192 "parseholiday.y"
+#line 193 "parseholiday.y"
     { (yyval.ival) = day_from_monthday
 								 ((yyvsp[(1) - (2)].ival), (yyvsp[(2) - (2)].ival)); ;}
     break;
 
   case 43:
-#line 194 "parseholiday.y"
+#line 195 "parseholiday.y"
     { (yyval.ival) = day_from_wday((yyvsp[(3) - (3)].ival), (yyvsp[(1) - (3)].ival),
 							 (yyvsp[(2) - (3)].ival) == -1 ? -1 : 0); ;}
     break;
 
   case 44:
-#line 196 "parseholiday.y"
+#line 197 "parseholiday.y"
     { int day=day_from_monthday((yyvsp[(4) - (4)].ival),1);
 						   (yyval.ival) = (yyvsp[(1) - (4)].ival) == 999
 						    ? day_from_wday(day+1,(yyvsp[(2) - (4)].ival),-1)
@@ -1824,118 +1825,118 @@ yyreduce:
     break;
 
   case 47:
-#line 204 "parseholiday.y"
+#line 205 "parseholiday.y"
     { (yyval.ival) = (yyvsp[(1) - (1)].ival); ;}
     break;
 
   case 48:
-#line 205 "parseholiday.y"
+#line 206 "parseholiday.y"
     { (yyval.ival) = (yyvsp[(1) - (3)].ival) || (yyvsp[(3) - (3)].ival); ;}
     break;
 
   case 49:
-#line 206 "parseholiday.y"
+#line 207 "parseholiday.y"
     { (yyval.ival) = (yyvsp[(1) - (3)].ival) && (yyvsp[(3) - (3)].ival); ;}
     break;
 
   case 50:
-#line 207 "parseholiday.y"
+#line 208 "parseholiday.y"
     { (yyval.ival) = (yyvsp[(1) - (3)].ival) == (yyvsp[(3) - (3)].ival); ;}
     break;
 
   case 51:
-#line 208 "parseholiday.y"
+#line 209 "parseholiday.y"
     { (yyval.ival) = (yyvsp[(1) - (3)].ival) != (yyvsp[(3) - (3)].ival); ;}
     break;
 
   case 52:
-#line 209 "parseholiday.y"
+#line 210 "parseholiday.y"
     { (yyval.ival) = (yyvsp[(1) - (3)].ival) <= (yyvsp[(3) - (3)].ival); ;}
     break;
 
   case 53:
-#line 210 "parseholiday.y"
+#line 211 "parseholiday.y"
     { (yyval.ival) = (yyvsp[(1) - (3)].ival) >= (yyvsp[(3) - (3)].ival); ;}
     break;
 
   case 54:
-#line 211 "parseholiday.y"
+#line 212 "parseholiday.y"
     { (yyval.ival) = (yyvsp[(1) - (3)].ival) <  (yyvsp[(3) - (3)].ival); ;}
     break;
 
   case 55:
-#line 212 "parseholiday.y"
+#line 213 "parseholiday.y"
     { (yyval.ival) = (yyvsp[(1) - (3)].ival) >  (yyvsp[(3) - (3)].ival); ;}
     break;
 
   case 56:
-#line 213 "parseholiday.y"
+#line 214 "parseholiday.y"
     { (yyval.ival) = (yyvsp[(1) - (3)].ival) +  (yyvsp[(3) - (3)].ival); ;}
     break;
 
   case 57:
-#line 214 "parseholiday.y"
+#line 215 "parseholiday.y"
     { (yyval.ival) = (yyvsp[(1) - (3)].ival) -  (yyvsp[(3) - (3)].ival); ;}
     break;
 
   case 58:
-#line 215 "parseholiday.y"
+#line 216 "parseholiday.y"
     { (yyval.ival) = (yyvsp[(1) - (3)].ival) *  (yyvsp[(3) - (3)].ival); ;}
     break;
 
   case 59:
-#line 216 "parseholiday.y"
+#line 217 "parseholiday.y"
     { (yyval.ival) = (yyvsp[(3) - (3)].ival) ?  (yyvsp[(1) - (3)].ival) / (yyvsp[(3) - (3)].ival) : 0; ;}
     break;
 
   case 60:
-#line 217 "parseholiday.y"
+#line 218 "parseholiday.y"
     { (yyval.ival) = (yyvsp[(3) - (3)].ival) ?  (yyvsp[(1) - (3)].ival) % (yyvsp[(3) - (3)].ival) : 0; ;}
     break;
 
   case 61:
-#line 218 "parseholiday.y"
+#line 219 "parseholiday.y"
     { (yyval.ival) = (yyvsp[(1) - (5)].ival) ?  (yyvsp[(3) - (5)].ival) : (yyvsp[(5) - (5)].ival); ;}
     break;
 
   case 62:
-#line 219 "parseholiday.y"
+#line 220 "parseholiday.y"
     { (yyval.ival) = !(yyvsp[(2) - (2)].ival); ;}
     break;
 
   case 63:
-#line 220 "parseholiday.y"
+#line 221 "parseholiday.y"
     { (yyval.ival) = (yyvsp[(2) - (3)].ival); ;}
     break;
 
   case 64:
-#line 223 "parseholiday.y"
+#line 224 "parseholiday.y"
     { (yyval.ival) = (yyvsp[(2) - (3)].ival); ;}
     break;
 
   case 65:
-#line 224 "parseholiday.y"
+#line 225 "parseholiday.y"
     { (yyval.ival) = (yyvsp[(1) - (1)].ival); ;}
     break;
 
   case 67:
-#line 228 "parseholiday.y"
+#line 229 "parseholiday.y"
     { (yyval.ival) = -(yyvsp[(2) - (2)].ival); ;}
     break;
 
   case 68:
-#line 229 "parseholiday.y"
+#line 230 "parseholiday.y"
     { (yyval.ival) = parse_year; ;}
     break;
 
   case 69:
-#line 230 "parseholiday.y"
+#line 231 "parseholiday.y"
     { (yyval.ival) = !(((yyvsp[(2) - (2)].ival)) & 3); ;}
     break;
 
 
 /* Line 1267 of yacc.c.  */
-#line 1939 "parseholiday.c"
+#line 1940 "parseholiday.c"
       default: break;
     }
   YY_SYMBOL_PRINT ("-> $$ =", yyr1[yyn], &yyval, &yyloc);
@@ -2149,7 +2150,7 @@ yyreturn:
 }
 
 
-#line 232 "parseholiday.y"
+#line 233 "parseholiday.y"
 
 	 
 /*** Private Yacc callbacks and helper functions ***/
@@ -2559,7 +2560,6 @@ static void initialize()
 
 char *parse_holidays(const char *holidayfile, int year, short force)
 {
-  FILE *kcalin;                  /* file currently being processed */
   register struct holiday *hp;
   register int		dy;
   short			piped = 0;

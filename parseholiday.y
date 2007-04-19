@@ -73,6 +73,7 @@ static void      setdoff(int wday, int rel, int month, int day,
 /*** Variables and structures ***/
 static int	 m, d, y;
 int              kcallineno;	       	/* current line # being parsed */
+FILE            *kcalin;                  /* file currently being processed */
 int	         yacc_small;		/* small string or on its own line? */
 int	         yacc_stringcolor;	/* color of holiday name text, 1..8 */
 char	        *yacc_string;		/* holiday name text */
@@ -638,7 +639,6 @@ static void initialize()
 
 char *parse_holidays(const char *holidayfile, int year, short force)
 {
-  FILE *kcalin;                  /* file currently being processed */
   register struct holiday *hp;
   register int		dy;
   short			piped = 0;
