@@ -25,7 +25,7 @@
 #include <QDateTime>
 #include <QList>
 
-#include <kdepim_export.h>
+#include "kholidays_export.h"
 
 struct KHoliday {
   QString text;
