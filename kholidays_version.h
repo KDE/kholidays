@@ -1,6 +1,6 @@
 /*
     This file is part of libkholidays.
-    Copyright (c) 2004 Allen Winter <winter@kde.org>
+    Copyright (c) 2004,2007 Allen Winter <winter@kde.org>
 
     This library is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License as
@@ -31,10 +31,10 @@
 #ifndef KHOLIDAYS_KHOLIDAYS_VERSION_H
 #define KHOLIDAYS_KHOLIDAYS_VERSION_H
 
-#define LIBKHOLIDAYS_VERSION_STRING "1.0.0"
+#define LIBKHOLIDAYS_VERSION_STRING "1.3.90"
 #define LIBKHOLIDAYS_VERSION_MAJOR 1
-#define LIBKHOLIDAYS_VERSION_MINOR 0
-#define LIBKHOLIDAYS_VERSION_RELEASE 0
+#define LIBKHOLIDAYS_VERSION_MINOR 3
+#define LIBKHOLIDAYS_VERSION_RELEASE 90
 
 #define LIBKHOLIDAYS_VERSION \
   KDE_MAKE_VERSION(LIBKHOLIDAYS_VERSION_MAJOR,\

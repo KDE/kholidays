@@ -1,5 +1,6 @@
 
 add_subdirectory( holidays )
+add_subdirectory( tests )
 
 check_include_files(malloc.h HAVE_MALLOC_H)
 check_include_files(err.h HAVE_ERR_H)
@@ -12,7 +13,10 @@ set(kholidays_LIB_SRCS
    scanholiday.c 
    parseholiday.h 
    parseholiday.c 
-   lunarphase.cpp )
+   astroseasons.cpp
+   lunarphase.cpp
+   zodiac.cpp
+)
 
 kde4_automoc(${kholidays_LIB_SRCS})
 
