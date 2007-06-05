@@ -64,7 +64,7 @@ class KHOLIDAYS_EXPORT LunarPhase
       phase @c None is used only as an error indicator, for instance
       in phase().
     */
-    enum Phase { New,  FirstQ, LastQ, Full, None };
+    enum Phase { NewMoon,  FirstQuarter, LastQuarter, FullMoon, None };
     /**
       Enum for the hemispheres of the Earth.
     */

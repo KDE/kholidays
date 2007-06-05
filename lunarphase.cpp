@@ -76,16 +76,16 @@ QString LunarPhase::phaseStr( const QDate &date ) const
 QString LunarPhase::phaseName( LunarPhase::Phase phase )
 {
   switch ( phase ) {
-  case New:
+  case NewMoon:
     return( i18n( "New Moon" ) );
     break;
-  case Full:
+  case FullMoon:
     return( i18n( "Full Moon" ) );
     break;
-  case FirstQ:
+  case FirstQuarter:
     return( i18n( "First Quarter Moon" ) );
     break;
-  case LastQ:
+  case LastQuarter:
     return( i18n( "Last Quarter Moon" ) );
     break;
   default:
@@ -107,9 +107,9 @@ LunarPhase::Phase LunarPhase::phase( const QDate &date ) const
   double yesterdayPer = percentFull( yesterday.toTime_t() );
 
   if ( ( todayPer < 0.50 ) && ( yesterdayPer > 0.50 ) ) {
-     retPhase = New;
+     retPhase = NewMoon;
   } else if ( ( todayPer > 99.50 ) && ( yesterdayPer < 99.50 ) ) {
-      retPhase = Full;
+      retPhase = FullMoon;
   } else {
     // compute percent-full for the start of today.
     QTime sqt( 0, 0, 0 );
@@ -122,16 +122,16 @@ LunarPhase::Phase LunarPhase::phase( const QDate &date ) const
 
     if ( ( startPer <= 50 ) && ( endPer > 50 ) ) {
       if ( mHemisphere == Northern ) {
-        retPhase = FirstQ;
+        retPhase = FirstQuarter;
       } else {
-        retPhase = LastQ;
+        retPhase = LastQuarter;
       }
     }
     if ( ( endPer <= 50 ) && ( startPer > 50 ) ) {
       if ( mHemisphere == Northern ) {
-        retPhase = LastQ;
+        retPhase = LastQuarter;
       } else {
-        retPhase = FirstQ;
+        retPhase = FirstQuarter;
       }
     }
     // Note: if you want to support crescent and gibbous phases then please
