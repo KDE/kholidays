@@ -1,28 +1,28 @@
 /*
-    This file is part of libkholidays.
-    Copyright (c) 2005-2006 Allen Winter <winter@kde.org>
+  This file is part of libkholidays.
+  Copyright (c) 2005-2007 Allen Winter <winter@kde.org>
 
-    This library is free software; you can redistribute it and/or
-    modify it under the terms of the GNU Library General Public
-    License as published by the Free Software Foundation; either
-    version 2 of the License, or (at your option) any later version.
+  This library is free software; you can redistribute it and/or
+  modify it under the terms of the GNU Library General Public
+  License as published by the Free Software Foundation; either
+  version 2 of the License, or (at your option) any later version.
 
-    This library is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-    Library General Public License for more details.
+  This library is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+  Library General Public License for more details.
 
-    You should have received a copy of the GNU Library General Public License
-    along with this library; see the file COPYING.LIB.  If not, write to
-    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
-    Boston, MA 02110-1301, USA.
+  You should have received a copy of the GNU Library General Public License
+  along with this library; see the file COPYING.LIB.  If not, write to
+  the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+  Boston, MA 02110-1301, USA.
 */
+
+#include "zodiac.h"
 
 #include <kglobal.h>
 #include <klocale.h>
 #include <kdebug.h>
-
-#include "zodiac.h"
 
 using namespace LibKHolidays;
 
@@ -44,44 +44,44 @@ QString Zodiac::signName( Zodiac::ZodiacSigns sign )
 {
   switch ( sign ) {
   case Aries:
-      return( i18n( "Aries" ) );
+      return i18n( "Aries" );
       break;
   case Taurus:
-      return( i18n( "Taurus" ) );
+      return i18n( "Taurus" );
       break;
   case Gemini:
-      return( i18n( "Gemini" ) );
+      return i18n( "Gemini" );
       break;
   case Cancer:
-      return( i18n( "Cancer" ) );
+      return i18n( "Cancer" );
       break;
   case Leo:
-      return( i18n( "Leo" ) );
+      return i18n( "Leo" );
       break;
   case Virgo:
-      return( i18n( "Virgo" ) );
+      return i18n( "Virgo" );
       break;
   case Libra:
-      return( i18n( "Libra" ) );
+      return i18n( "Libra" );
       break;
   case Scorpio:
-      return( i18n( "Scorpio" ) );
+      return i18n( "Scorpio" );
       break;
   case Sagittarius:
-      return( i18n( "Sagittarius" ) );
+      return i18n( "Sagittarius" );
       break;
   case Capricorn:
-      return( i18n( "Capricorn" ) );
+      return i18n( "Capricorn" );
       break;
   case Aquarius:
-      return( i18n( "Aquarius" ) );
+      return i18n( "Aquarius" );
       break;
   case Pisces:
-      return( i18n( "Pisces" ) );
+      return i18n( "Pisces" );
       break;
   default:
   case None:
-      return( QString::null );
+      return QString();
       break;
   }
 }
@@ -94,152 +94,200 @@ Zodiac::ZodiacSigns Zodiac::sign( const QDate &date ) const
     case Tropical:
         startdate = QDate( date.year(), 1, 1 );
         enddate = QDate( date.year(), 1, 19 );
-        if ( date >= startdate && date <= enddate )return( Capricorn );
+        if ( date >= startdate && date <= enddate ) {
+          return Capricorn;
+        }
 
         startdate = enddate.addDays( 1 );
         enddate = startdate.addDays( 29 );
-        if ( date >= startdate && date <= enddate )return( Aquarius );
+        if ( date >= startdate && date <= enddate ) {
+          return Aquarius;
+        }
 
         startdate = enddate.addDays( 1 );
         enddate = QDate( date.year(), 3, 20 );
-        if ( date >= startdate && date <= enddate )return( Pisces );
+        if ( date >= startdate && date <= enddate ) {
+          return Pisces;
+        }
 
         startdate = enddate.addDays( 1 );  // March 21
         enddate = startdate.addDays( 29 );
-        if ( date >= startdate && date <= enddate )return( Aries );
+        if ( date >= startdate && date <= enddate ) {
+          return Aries;
+        }
 
         startdate = enddate.addDays( 1 );
         enddate = startdate.addDays( 30 );
-        if ( date >= startdate && date <= enddate )return( Taurus );
+        if ( date >= startdate && date <= enddate ) {
+          return Taurus;
+        }
 
         startdate = enddate.addDays( 1 );
         enddate = startdate.addDays( 30 );
-        if ( date >= startdate && date <= enddate )return( Gemini );
+        if ( date >= startdate && date <= enddate ) {
+          return Gemini;
+        }
 
         startdate = enddate.addDays( 1 );
         enddate = startdate.addDays( 31 );
-        if ( date >= startdate && date <= enddate )return( Cancer );
+        if ( date >= startdate && date <= enddate ) {
+          return Cancer;
+        }
 
         startdate = enddate.addDays( 1 );
         enddate = startdate.addDays( 30 );
-        if ( date >= startdate && date <= enddate )return( Leo );
+        if ( date >= startdate && date <= enddate ) {
+          return Leo;
+        }
 
         startdate = enddate.addDays( 1 );
         enddate = startdate.addDays( 30 );
-        if ( date >= startdate && date <= enddate )return( Virgo );
+        if ( date >= startdate && date <= enddate ) {
+          return Virgo;
+        }
 
         startdate = enddate.addDays( 1 );
         enddate = startdate.addDays( 29 );
-        if ( date >= startdate && date <= enddate )return( Libra );
+        if ( date >= startdate && date <= enddate ) {
+          return Libra;
+        }
 
         startdate = enddate.addDays( 1 );
         enddate = startdate.addDays( 29 );
-        if ( date >= startdate && date <= enddate )return( Scorpio );
+        if ( date >= startdate && date <= enddate ) {
+          return Scorpio;
+        }
 
         startdate = enddate.addDays( 1 );
         enddate = startdate.addDays( 29 );
-        if ( date >= startdate && date <= enddate )return( Sagittarius );
+        if ( date >= startdate && date <= enddate ) {
+          return Sagittarius;
+        }
 
-        return( Capricorn );
+        return Capricorn;
         break;
 
     case Sidereal:
         startdate = QDate( date.year(), 1, 1 );
         enddate = QDate( date.year(), 1, 14 );
-        if ( date >= startdate && date <= enddate )return( Sagittarius );
+        if ( date >= startdate && date <= enddate ) {
+          return Sagittarius;
+        }
 
         startdate = enddate.addDays( 1 );
         enddate = startdate.addDays( 28 );
-        if ( date >= startdate && date <= enddate )return( Capricorn );
+        if ( date >= startdate && date <= enddate ) {
+          return Capricorn;
+        }
 
         startdate = enddate.addDays( 1 );
         enddate = QDate( date.year(), 3, 14 );
-        if ( date >= startdate && date <= enddate )return( Aquarius );
+        if ( date >= startdate && date <= enddate ) {
+          return Aquarius;
+        }
 
         startdate = enddate.addDays( 1 );
         enddate = QDate( date.year(), 4, 13 );
-        if ( date >= startdate && date <= enddate )return( Pisces );
+        if ( date >= startdate && date <= enddate ) {
+          return Pisces;
+        }
 
         startdate = QDate( date.year(), 4, 14 );  // April 14
         enddate = startdate.addDays( 30 );
-        if ( date >= startdate && date <= enddate )return( Aries );
+        if ( date >= startdate && date <= enddate ) {
+          return Aries;
+        }
 
         startdate = enddate.addDays( 1 );
         enddate = startdate.addDays( 30 );
-        if ( date >= startdate && date <= enddate )return( Taurus );
+        if ( date >= startdate && date <= enddate ) {
+          return Taurus;
+        }
 
         startdate = enddate.addDays( 1 );
         enddate = startdate.addDays( 31 );
-        if ( date >= startdate && date <= enddate )return( Gemini );
+        if ( date >= startdate && date <= enddate ) {
+          return Gemini;
+        }
 
         startdate = enddate.addDays( 1 );
         enddate = startdate.addDays( 30 );
-        if ( date >= startdate && date <= enddate )return( Cancer );
+        if ( date >= startdate && date <= enddate ) {
+          return Cancer;
+        }
 
         startdate = enddate.addDays( 1 );
         enddate = startdate.addDays( 30 );
-        if ( date >= startdate && date <= enddate )return( Leo );
+        if ( date >= startdate && date <= enddate ) {
+          return Leo;
+        }
 
         startdate = enddate.addDays( 1 );
         enddate = startdate.addDays( 30 );
-        if ( date >= startdate && date <= enddate )return( Virgo );
+        if ( date >= startdate && date <= enddate ) {
+          return Virgo;
+        }
 
         startdate = enddate.addDays( 1 );
         enddate = startdate.addDays( 29 );
-        if ( date >= startdate && date <= enddate )return( Libra );
+        if ( date >= startdate && date <= enddate ) {
+          return Libra;
+        }
 
         startdate = enddate.addDays( 1 );
         enddate = startdate.addDays( 28 );
-        if ( date >= startdate && date <= enddate )return( Scorpio );
+        if ( date >= startdate && date <= enddate ) {
+          return Scorpio;
+        }
 
-        return( Sagittarius );
+        return Sagittarius;
         break;
     }
-    return( None );
+    return None;
 }
 
 QString Zodiac::signSymbol( Zodiac::ZodiacSigns sign )
 {
     switch( sign ) {
   case Aries:
-      return( i18n( "ram" ) );
+      return i18n( "ram" );
       break;
   case Taurus:
-      return( i18n( "bull" ) );
+      return i18n( "bull" );
       break;
   case Gemini:
-      return( i18n( "twins" ) );
+      return i18n( "twins" );
       break;
   case Cancer:
-      return( i18n( "crab" ) );
+      return i18n( "crab" );
       break;
   case Leo:
-      return( i18n( "lion" ) );
+      return i18n( "lion" );
       break;
   case Virgo:
-      return( i18n( "virgin" ) );
+      return i18n( "virgin" );
       break;
   case Libra:
-      return( i18n( "scales" ) );
+      return i18n( "scales" );
       break;
   case Scorpio:
-      return( i18n( "scorpion" ) );
+      return i18n( "scorpion" );
       break;
   case Sagittarius:
-      return( i18n( "archer" ) );
+      return i18n( "archer" );
       break;
   case Capricorn:
-      return( i18n( "goat" ) );
+      return i18n( "goat" );
       break;
   case Aquarius:
-      return( i18n( "water" ) );
+      return i18n( "water" );
       break;
   case Pisces:
-      return( i18n( "fish" ) );
+      return i18n( "fish" );
       break;
   default:
   case None:
-      return( QString::null );
+      return QString();
       break;
   }
 }
