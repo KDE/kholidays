@@ -4,6 +4,7 @@ add_subdirectory( tests )
 
 check_include_files(malloc.h HAVE_MALLOC_H)
 check_include_files(err.h HAVE_ERR_H)
+check_include_files(sys/cdefs.h HAVE_SYS_CDEFS_H)
 configure_file (config-libkholidays.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-libkholidays.h )
 
 ########### next target ###############

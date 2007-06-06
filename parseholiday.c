@@ -154,7 +154,7 @@
  * Reinhold Kainhofer <reinhold@kainhofer.com>
  */
 
-#include <config.h>
+#include <config-libkholidays.h>
 
 #include <stdio.h>
 #include <unistd.h>

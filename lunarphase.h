@@ -64,11 +64,21 @@ class KHOLIDAYS_EXPORT LunarPhase
       phase @c None is used only as an error indicator, for instance
       in phase().
     */
-    enum Phase { NewMoon,  FirstQuarter, LastQuarter, FullMoon, None };
+    enum Phase {
+      NewMoon,
+      FirstQuarter,
+      LastQuarter,
+      FullMoon,
+      None
+    };
+
     /**
-      Enum for the hemispheres of the Earth.
+      Earth hemispheres.
     */
-    enum Hemisphere { Northern,  Southern };
+    enum Hemisphere {
+      Northern,
+      Southern
+    };
 
     /**
       Constructor. Sets the hemisphere for phase calculations
@@ -77,7 +87,9 @@ class KHOLIDAYS_EXPORT LunarPhase
       @param hemisphere Hemisphere of the earth for which the phase
                          should be computed.
     */
+
     LunarPhase( Hemisphere hemisphere = Northern );
+
     /** Destructor. */
     ~LunarPhase();
 
@@ -99,11 +111,11 @@ class KHOLIDAYS_EXPORT LunarPhase
     */
     QString phaseStr( const QDate &date ) const;
 
-   /**
+    /**
       Set the hemisphere.
 
       @param hemisphere Hemisphere
-   */
+    */
     void setHemisphere( Hemisphere hemisphere = Northern );
 
     /**
@@ -139,6 +151,7 @@ private:
        @return the percent fullness [0,100] of the moon.
     */
     double percentFull( uint t ) const;
+
     /**
        Convert degrees to radians.
 
@@ -147,6 +160,7 @@ private:
        @return degrees in radians.
     */
     double degreesToRadians( double degree ) const;
+
     /**
        Adjust value so that 0 <= degree <= 360.
 

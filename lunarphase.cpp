@@ -2,7 +2,7 @@
   This file is part of libkholidays.
   Copyright (c) 2004,2007 Allen Winter <winter@kde.org>
 
-  Copyright (c) 1989, 1993
+  Copyright (c) 1989, 1993  //krazy:exclude=copyright
   The Regents of the University of California.  All rights reserved.
 
   This library is free software; you can redistribute it and/or
@@ -20,14 +20,13 @@
   Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
   Boston, MA 02110-1301, USA.
 */
+#include "lunarphase.h"
+
 #include <config-libkholidays.h>
-#include "config.h"
 
 #include <kglobal.h>
 #include <klocale.h>
 #include <kdebug.h>
-
-#include "lunarphase.h"
 
 using namespace LibKHolidays;
 
@@ -175,7 +174,7 @@ LunarPhase::Phase LunarPhase::phase( const QDate &date ) const
  * SUCH DAMAGE.
  */
 
-#if HAVE_SYS_CDEFS_H
+#ifdef HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
 
@@ -191,9 +190,8 @@ LunarPhase::Phase LunarPhase::phase( const QDate &date ) const
  *
  */
 
-
 #include <ctype.h>
-#if HAVE_ERR_H
+#ifdef HAVE_ERR_H
 #include <err.h>
 #endif
 #include <math.h>
@@ -232,30 +230,31 @@ double LunarPhase::percentFull( uint tmpt ) const
   double days;
   days = ( tmpt - EPOCH_MINUS_1970 * 86400 ) / 86400.0;
 
-  N = 360 * days / 365.242191;                                  /* sec 46 #3 */
-  adj360(&N);
-  Msol = N + EPSILONg - RHOg;                                   /* sec 46 #4 */
-  adj360(&Msol);
-  Ec = 360 / PI * ECCEN * sin(degreesToRadians(Msol));          /* sec 46 #5 */
-  LambdaSol = N + Ec + EPSILONg;                                /* sec 46 #6 */
-  adj360(&LambdaSol);
-  l = 13.1763966 * days + lzero;                                /* sec 65 #4 */
-  adj360(&l);
-  Mm = l - (0.1114041 * days) - Pzero;                          /* sec 65 #5 */
-  adj360(&Mm);
-  Nm = Nzero - (0.0529539 * days);                              /* sec 65 #6 */
-  adj360(&Nm);
-  Ev = 1.2739 * sin(degreesToRadians(2*(l - LambdaSol) - Mm));  /* sec 65 #7 */
-  Ac = 0.1858 * sin(degreesToRadians(Msol));                    /* sec 65 #8 */
-  A3 = 0.37 * sin(degreesToRadians(Msol));
-  Mmprime = Mm + Ev - Ac - A3;                                  /* sec 65 #9 */
-  Ec = 6.2886 * sin(degreesToRadians(Mmprime));                 /* sec 65 #10 */
-  A4 = 0.214 * sin(degreesToRadians(2 * Mmprime));              /* sec 65 #11 */
-  lprime = l + Ev + Ec - Ac + A4;                               /* sec 65 #12 */
-  V = 0.6583 * sin(degreesToRadians(2 * (lprime - LambdaSol))); /* sec 65 #13 */
-  ldprime = lprime + V;                                         /* sec 65 #14 */
-  D = ldprime - LambdaSol;                                      /* sec 67 #2 */
-  return(50.0 * (1 - cos(degreesToRadians(D))));                /* sec 67 #3 */
+  N = 360 * days / 365.242191;                                 /* sec 46 #3 */
+  adj360( &N );
+  Msol = N + EPSILONg - RHOg;                                  /* sec 46 #4 */
+  adj360( &Msol );
+  Ec = 360 / PI * ECCEN * sin( degreesToRadians( Msol ) );     /* sec 46 #5 */
+  LambdaSol = N + Ec + EPSILONg;                               /* sec 46 #6 */
+  adj360( &LambdaSol );
+  l = 13.1763966 * days + lzero;                               /* sec 65 #4 */
+  adj360( &l );
+  Mm = l - ( 0.1114041 * days ) - Pzero;                       /* sec 65 #5 */
+  adj360( &Mm );
+  Nm = Nzero - ( 0.0529539 * days );                           /* sec 65 #6 */
+  adj360( &Nm );
+  Ev = 1.2739 * sin( degreesToRadians( 2 * ( l - LambdaSol ) - Mm ) ); /* sec 65 #7 */
+  Ac = 0.1858 * sin( degreesToRadians( Msol ) );               /* sec 65 #8 */
+  A3 = 0.37 * sin( degreesToRadians( Msol ) );
+  Mmprime = Mm + Ev - Ac - A3;                                 /* sec 65 #9 */
+  Ec = 6.2886 * sin( degreesToRadians( Mmprime ) );            /* sec 65 #10 */
+  A4 = 0.214 * sin( degreesToRadians( 2 * Mmprime ) );         /* sec 65 #11 */
+  lprime = l + Ev + Ec - Ac + A4;                              /* sec 65 #12 */
+  V = 0.6583 * sin( degreesToRadians( 2 * ( lprime - LambdaSol ) ) );/* sec 65 #13 */
+  ldprime = lprime + V;                                        /* sec 65 #14 */
+  D = ldprime - LambdaSol;                                     /* sec 67 #2 */
+  D = 50.0 * ( 1 - cos( degreesToRadians( D ) ) );             /* sec 67 #3 */
+  return D;
 }
 
 /*
@@ -273,11 +272,13 @@ double LunarPhase::degreesToRadians( double degree ) const
  */
 void LunarPhase::adj360( double *degree ) const
 {
-  for( ;; )
-    if( *degree < 0 )
+  for ( ;; ) {
+    if ( *degree < 0 ) {
       *degree += 360;
-    else if( *degree > 360 )
+    } else if ( *degree > 360 ) {
       *degree -= 360;
-    else
+    } else {
       break;
+    }
+  }
 }
