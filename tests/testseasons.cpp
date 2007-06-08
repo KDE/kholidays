@@ -1,6 +1,6 @@
 /*
     This file is part of libkholidays.
-    Copyright (c) 2004,2006 Allen Winter <winter@kde.org>
+    Copyright (c) 2004,2006-2007 Allen Winter <winter@kde.org>
 
     This library is free software; you can redistribute it and/or
     modify it under the terms of the GNU Library General Public
@@ -18,41 +18,35 @@
     Boston, MA 02110-1301, USA.
 */
 
-#include <stdlib.h>
-#include <iostream>
-#include <kaboutdata.h>
-#include <kdebug.h>
+#include <qtest_kde.h>
 #include <klocale.h>
-#include <kcmdlineargs.h>
-#include <QCoreApplication>
 
-#include "astroseasons.h"
+#include "testseasons.h"
+#include "testseasons.moc"
 
+QTEST_KDEMAIN( SeasonsTest, NoGUI )
+
+#include "libkholidays/astroseasons.h"
 using namespace LibKHolidays;
-using namespace std;
 
-static const KCmdLineOptions options[] =
+void SeasonsTest::test2005()
 {
-  {"verbose", "Verbose output", 0},
-  KCmdLineLastOption
-};
-
-int main(int argc,char **argv)
-{
-  KAboutData aboutData("testseasons","Test Astronomical Seasons","0.1");
-  QCoreApplication app( argc, argv );
-
   AstroSeasons as;
-  QString pStr;
+  QVERIFY( as.season( QDate( 2005, 3, 22 ) ) == AstroSeasons::MarchEquinox );
+  QVERIFY( as.season( QDate( 2005, 6, 22 ) ) == AstroSeasons::JuneSolstice );
+  QVERIFY( as.season( QDate( 2005, 9, 22 ) ) == AstroSeasons::SeptemberEquinox );
+  QVERIFY( as.season( QDate( 2005,12, 22 ) ) == AstroSeasons::DecemberSolstice );
+  QVERIFY( as.season( QDate( 2005, 1, 22 ) ) == AstroSeasons::None );
+  QVERIFY( as.season( QDate( 2005,12, 31 ) ) == AstroSeasons::None );
+}
 
-  QDate qd( 2004, 11, 1 );
-  for ( int i=0; i<=2500; ++i ) {
-    qd = qd.addDays( 1 );
-    pStr = as.seasonStr( qd );
-    if ( !pStr.isNull() ) {
-      cout << qd.toString( Qt::TextDate ).toLocal8Bit().constData() << ": "
-           << pStr.toLocal8Bit().constData()
-           << endl;
-    }
-  }
+void SeasonsTest::test2007()
+{
+  AstroSeasons as;
+  QVERIFY( as.season( QDate( 2007, 3, 22 ) ) == AstroSeasons::MarchEquinox );
+  QVERIFY( as.season( QDate( 2007, 6, 22 ) ) == AstroSeasons::JuneSolstice );
+  QVERIFY( as.season( QDate( 2007, 9, 22 ) ) == AstroSeasons::SeptemberEquinox );
+  QVERIFY( as.season( QDate( 2007,12, 22 ) ) == AstroSeasons::DecemberSolstice );
+  QVERIFY( as.season( QDate( 2007, 1,  2 ) ) == AstroSeasons::None );
+  QVERIFY( as.season( QDate( 2007,11, 30 ) ) == AstroSeasons::None );
 }
