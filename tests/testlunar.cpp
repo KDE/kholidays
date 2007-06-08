@@ -41,44 +41,44 @@ void LunarTest::test2005()
   QList<QDate> fQ2005, fM2005, lQ2005, nM2005;
   //2005 first quarter moons
   fQ2005.append( QDate( 2005,  1, 17 ) );
-  fQ2005.append( QDate( 2005,  2, 15 ) );
+  fQ2005.append( QDate( 2005,  2, 16 ) );
   fQ2005.append( QDate( 2005,  3, 17 ) );
   fQ2005.append( QDate( 2005,  4, 16 ) );
   fQ2005.append( QDate( 2005,  5, 16 ) );
-  fQ2005.append( QDate( 2005,  6, 14 ) );
+  fQ2005.append( QDate( 2005,  6, 15 ) );
   fQ2005.append( QDate( 2005,  7, 14 ) );
-  fQ2005.append( QDate( 2005,  8, 12 ) );
+  fQ2005.append( QDate( 2005,  8, 13 ) );
   fQ2005.append( QDate( 2005,  9, 11 ) );
   fQ2005.append( QDate( 2005, 10, 10 ) );
-  fQ2005.append( QDate( 2005, 11,  8 ) );
+  fQ2005.append( QDate( 2005, 11,  9 ) );
   fQ2005.append( QDate( 2005, 12,  8 ) );
 
   //2005 full moons
-  fM2005.append( QDate( 2005,  1, 24 ) );
-  fM2005.append( QDate( 2005,  2, 23 ) );
+  fM2005.append( QDate( 2005,  1, 25 ) );
+  fM2005.append( QDate( 2005,  2, 24 ) );
   fM2005.append( QDate( 2005,  3, 25 ) );
   fM2005.append( QDate( 2005,  4, 24 ) );
   fM2005.append( QDate( 2005,  5, 23 ) );
-  fM2005.append( QDate( 2005,  6, 21 ) );
+  fM2005.append( QDate( 2005,  6, 22 ) );
   fM2005.append( QDate( 2005,  7, 21 ) );
   fM2005.append( QDate( 2005,  8, 19 ) );
-  fM2005.append( QDate( 2005,  9, 17 ) );
+  fM2005.append( QDate( 2005,  9, 18 ) );
   fM2005.append( QDate( 2005, 10, 17 ) );
-  fM2005.append( QDate( 2005, 11, 15 ) );
+  fM2005.append( QDate( 2005, 11, 16 ) );
   fM2005.append( QDate( 2005, 12, 15 ) );
 
   //2005 last quarter moons
   lQ2005.append( QDate( 2005,  1,  3 ) );
   lQ2005.append( QDate( 2005,  2,  2 ) );
   lQ2005.append( QDate( 2005,  3,  3 ) );
-  lQ2005.append( QDate( 2005,  4,  1 ) );
+  lQ2005.append( QDate( 2005,  4,  2 ) );
   lQ2005.append( QDate( 2005,  5,  1 ) );
   lQ2005.append( QDate( 2005,  5, 30 ) );
   lQ2005.append( QDate( 2005,  6, 28 ) );
-  lQ2005.append( QDate( 2005,  7, 27 ) );
+  lQ2005.append( QDate( 2005,  7, 28 ) );
   lQ2005.append( QDate( 2005,  8, 26 ) );
   lQ2005.append( QDate( 2005,  9, 25 ) );
-  lQ2005.append( QDate( 2005, 10, 24 ) );
+  lQ2005.append( QDate( 2005, 10, 25 ) );
   lQ2005.append( QDate( 2005, 11, 23 ) );
   lQ2005.append( QDate( 2005, 12, 23 ) );
 
@@ -90,12 +90,12 @@ void LunarTest::test2005()
   nM2005.append( QDate( 2005,  5,  8 ) );
   nM2005.append( QDate( 2005,  6,  6 ) );
   nM2005.append( QDate( 2005,  7,  6 ) );
-  nM2005.append( QDate( 2005,  8,  4 ) );
+  nM2005.append( QDate( 2005,  8,  5 ) );
   nM2005.append( QDate( 2005,  9,  3 ) );
   nM2005.append( QDate( 2005, 10,  3 ) );
-  nM2005.append( QDate( 2005, 11,  1 ) );
+  nM2005.append( QDate( 2005, 11,  2 ) );
   nM2005.append( QDate( 2005, 12,  1 ) );
-  nM2005.append( QDate( 2005, 12, 30 ) );
+  nM2005.append( QDate( 2005, 12, 31 ) );
 
   LunarPhase lp;
   QDate qd( 2004, 12, 31 );
@@ -145,45 +145,45 @@ void LunarTest::test2007()
 
   //2007 full moons
   fM2007.append( QDate( 2007,  1,  3 ) );
-  fM2007.append( QDate( 2007,  2,  1 ) );
+  fM2007.append( QDate( 2007,  2,  2 ) );
   fM2007.append( QDate( 2007,  3,  3 ) );
   fM2007.append( QDate( 2007,  4,  2 ) );
   fM2007.append( QDate( 2007,  5,  2 ) );
-  fM2007.append( QDate( 2007,  5, 31 ) );
+  fM2007.append( QDate( 2007,  6,  1 ) );
   fM2007.append( QDate( 2007,  6, 30 ) );
-  fM2007.append( QDate( 2007,  7, 29 ) );
+  fM2007.append( QDate( 2007,  7, 30 ) );
   fM2007.append( QDate( 2007,  8, 28 ) );
   fM2007.append( QDate( 2007,  9, 26 ) );
-  fM2007.append( QDate( 2007, 10, 25 ) );
+  fM2007.append( QDate( 2007, 10, 26 ) );
   fM2007.append( QDate( 2007, 11, 24 ) );
-  fM2007.append( QDate( 2007, 12, 23 ) );
+  fM2007.append( QDate( 2007, 12, 24 ) );
 
   //2007 last quarter moons
   lQ2007.append( QDate( 2007,  1, 11 ) );
   lQ2007.append( QDate( 2007,  2, 10 ) );
-  lQ2007.append( QDate( 2007,  3, 11 ) );
+  lQ2007.append( QDate( 2007,  3, 12 ) );
   lQ2007.append( QDate( 2007,  4, 10 ) );
   lQ2007.append( QDate( 2007,  5, 10 ) );
   lQ2007.append( QDate( 2007,  6,  8 ) );
   lQ2007.append( QDate( 2007,  7,  7 ) );
   lQ2007.append( QDate( 2007,  8,  5 ) );
-  lQ2007.append( QDate( 2007,  9,  3 ) );
+  lQ2007.append( QDate( 2007,  9,  4 ) );
   lQ2007.append( QDate( 2007, 10,  3 ) );
   lQ2007.append( QDate( 2007, 11,  1 ) );
   lQ2007.append( QDate( 2007, 12,  1 ) );
   lQ2007.append( QDate( 2007, 12, 31 ) );
 
   //2007 new moons
-  nM2007.append( QDate( 2007,  1, 18 ) );
+  nM2007.append( QDate( 2007,  1, 19 ) );
   nM2007.append( QDate( 2007,  2, 17 ) );
-  nM2007.append( QDate( 2007,  3, 18 ) );
+  nM2007.append( QDate( 2007,  3, 19 ) );
   nM2007.append( QDate( 2007,  4, 17 ) );
   nM2007.append( QDate( 2007,  5, 16 ) );
-  nM2007.append( QDate( 2007,  6, 14 ) );
+  nM2007.append( QDate( 2007,  6, 15 ) );
   nM2007.append( QDate( 2007,  7, 14 ) );
   nM2007.append( QDate( 2007,  8, 12 ) );
   nM2007.append( QDate( 2007,  9, 11 ) );
-  nM2007.append( QDate( 2007, 10, 10 ) );
+  nM2007.append( QDate( 2007, 10, 11 ) );
   nM2007.append( QDate( 2007, 11,  9 ) );
   nM2007.append( QDate( 2007, 12,  9 ) );
 
