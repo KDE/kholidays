@@ -30,41 +30,12 @@
 
 using namespace LibKHolidays;
 
-LunarPhase::LunarPhase( Hemisphere hemisphere )
+LunarPhase::LunarPhase()
 {
-  mHemisphere = hemisphere;
 }
 
 LunarPhase::~LunarPhase()
 {
-}
-
-void LunarPhase::setHemisphere( Hemisphere hemisphere )
-{
-  mHemisphere = hemisphere;
-}
-
-LunarPhase::Hemisphere LunarPhase::hemisphere() const
-{
-  return( mHemisphere );
-}
-
-QString LunarPhase::hemisphereStr() const
-{
-  return hemisphereName( mHemisphere );
-}
-
-QString LunarPhase::hemisphereName( LunarPhase::Hemisphere hemisphere )
-{
-  switch( hemisphere ) {
-  case Northern:
-  default:
-    return( i18n( "Northern" ) );
-    break;
-  case Southern:
-    return( i18n( "Southern" ) );
-    break;
-  }
 }
 
 QString LunarPhase::phaseStr( const QDate &date ) const
@@ -120,18 +91,10 @@ LunarPhase::Phase LunarPhase::phase( const QDate &date ) const
     double endPer = percentFull( end.toTime_t() );
 
     if ( ( startPer <= 50 ) && ( endPer > 50 ) ) {
-      if ( mHemisphere == Northern ) {
-        retPhase = FirstQuarter;
-      } else {
-        retPhase = LastQuarter;
-      }
+      retPhase = FirstQuarter;
     }
     if ( ( endPer <= 50 ) && ( startPer > 50 ) ) {
-      if ( mHemisphere == Northern ) {
-        retPhase = LastQuarter;
-      } else {
-        retPhase = FirstQuarter;
-      }
+      retPhase = LastQuarter;
     }
     // Note: if you want to support crescent and gibbous phases then please
     //  read the source for the original BSD 'pom' program.

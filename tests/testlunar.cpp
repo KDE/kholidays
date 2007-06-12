@@ -32,7 +32,6 @@ using namespace LibKHolidays;
 void LunarTest::testValidity()
 {
   LunarPhase lp;
-  QVERIFY( lp.hemisphereStr() == i18n( "Northern" ) );
 }
 
 void LunarTest::test2005()

@@ -41,9 +41,6 @@
    A very good description of the lunar phases can be read at the Wikipedia,
      http://en.wikipedia.org/wiki/Lunar_phase
 
-   In the southern hemisphere the order of the phases is reversed.
-   So, to be accurate we need to know the hemisphere.
-
    Note that crescent and gibbous phases are not currently supported.
 */
 
@@ -73,24 +70,14 @@ class KHOLIDAYS_EXPORT LunarPhase
     };
 
     /**
-      Earth hemispheres.
+      Constructor.
     */
-    enum Hemisphere {
-      Northern,
-      Southern
-    };
+
+    LunarPhase();
 
     /**
-      Constructor. Sets the hemisphere for phase calculations
-      to @p hemisphere.
-
-      @param hemisphere Hemisphere of the earth for which the phase
-                         should be computed.
+      Destructor.
     */
-
-    LunarPhase( Hemisphere hemisphere = Northern );
-
-    /** Destructor. */
     ~LunarPhase();
 
     /**
@@ -110,30 +97,6 @@ class KHOLIDAYS_EXPORT LunarPhase
        @param date compute the lunar phase for the specified Gregorian date.
     */
     QString phaseStr( const QDate &date ) const;
-
-    /**
-      Set the hemisphere.
-
-      @param hemisphere Hemisphere
-    */
-    void setHemisphere( Hemisphere hemisphere = Northern );
-
-    /**
-       Return the hemisphere.
-    */
-    Hemisphere hemisphere() const;
-
-    /**
-       Return hemisphere as a clear text string.
-    */
-    QString hemisphereStr() const;
-
-    /**
-       Return the string representation of @p hemisphere.
-       This is already translated with 18n, and used as an adjective.
-       @param hemisphere Which hemisphere to name.
-    */
-    static QString hemisphereName( Hemisphere hemisphere );
 
     /**
        Return the string representation of phase.
@@ -167,8 +130,6 @@ private:
        @param degree a pointer to the degree value.
     */
     void adj360( double *degree ) const;
-
-    Hemisphere mHemisphere;
 };
 
 }
