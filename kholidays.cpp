@@ -74,16 +74,6 @@ QString KHolidays::location() const
   return mLocation;
 }
 
-QString KHolidays::shortText( const QDate &date )
-{
-  QList<KHoliday> lst = getHolidays( date );
-  if ( !lst.isEmpty() ) {
-    return lst.first().text;
-  } else {
-    return QString();
-  }
-}
-
 bool KHolidays::parseFile( const QDate &date )
 {
 // kDebug()<<"KHolidays::parseFile( date=" << date << ")"<<endl;
@@ -101,16 +91,6 @@ bool KHolidays::parseFile( const QDate &date )
   }
 
   return true;
-}
-
-QString KHolidays::getHoliday( const QDate &date )
-{
-  QList<KHoliday> lst = getHolidays( date );
-  if ( !lst.isEmpty() ) {
-    return lst.first().text;
-  } else {
-    return QString();
-  }
 }
 
 QList<KHoliday> KHolidays::getHolidays( const QDate &date )
@@ -132,15 +112,4 @@ QList<KHoliday> KHolidays::getHolidays( const QDate &date )
     hd = hd->next;
   }
   return list;
-}
-
-int KHolidays::category( const QDate &date )
-{
-  if ( !parseFile( date ) ) {
-    return WORKDAY;
-  }
-
-  return
-    (holidays[date.dayOfYear()-1].color == 2/*red*/) ||
-    (holidays[date.dayOfYear()-1].color == 9/*weekend*/) ? HOLIDAY : WORKDAY;
 }

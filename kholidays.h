@@ -49,19 +49,17 @@ class KHOLIDAYS_EXPORT KHolidays
     KHolidays( const QString &location );
     ~KHolidays();
 
-    /// return the location with which this object was constructed
+    /**
+      Returns the holiday location.
+    */
     QString location() const;
 
     QList<KHoliday> getHolidays( const QDate &qd );
-
-    KDE_DEPRECATED QString shortText( const QDate &qd );
-    KDE_DEPRECATED QString getHoliday( const QDate &qd );
 
     enum {
       WORKDAY,
       HOLIDAY
     };
-    KDE_DEPRECATED int category( const QDate &qd );
 
   private:
     bool parseFile( const QDate &qd );
