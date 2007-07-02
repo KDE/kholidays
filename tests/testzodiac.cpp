@@ -31,15 +31,12 @@
 using namespace LibKHolidays;
 using namespace std;
 
-static const KCmdLineOptions options[] =
-{
-  {"verbose", "Verbose output", 0},
-  KCmdLineLastOption
-};
-
 int main(int argc,char **argv)
 {
-  KAboutData aboutData("testzodiac","Test Zodiac Calendar","0.1");
+
+  KCmdLineOptions options;
+  options.add("verbose", ki18n("Verbose output"));
+  KAboutData aboutData("testzodiac", 0,ki18n("Test Zodiac Calendar"),"0.1");
   QCoreApplication app( argc, argv );
 
   Zodiac::ZodiacSigns sign;
