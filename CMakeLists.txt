@@ -10,6 +10,7 @@ configure_file (config-libkholidays.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-l
 ########### next target ###############
 
 set(kholidays_LIB_SRCS 
+   holiday.cpp
    kholidays.cpp 
    scanholiday.c 
    parseholiday.h 
@@ -17,9 +18,9 @@ set(kholidays_LIB_SRCS
    astroseasons.cpp
    lunarphase.cpp
    zodiac.cpp
+   us.cpp
 )
 
-kde4_automoc(${kholidays_LIB_SRCS})
 
 kde4_add_library(kholidays SHARED ${kholidays_LIB_SRCS})
 
