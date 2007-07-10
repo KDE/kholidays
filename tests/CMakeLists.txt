@@ -28,21 +28,3 @@ set(testzodiac_SRCS testzodiac.cpp )
 kde4_add_unit_test(testzodiac TESTNAME kcal-testzodiac ${testzodiac_SRCS})
 
 target_link_libraries(testzodiac ${KDE4_KDECORE_LIBS} kholidays ${QT_QTTEST_LIBRARY})
-
-########### next target ###############
-
-set(testholiday_SRCS testholiday.cpp )
-
-
-kde4_add_unit_test(testholiday TESTNAME kcal-testholiday ${testholiday_SRCS})
-
-target_link_libraries(testholiday ${KDE4_KDECORE_LIBS} kholidays ${QT_QTTEST_LIBRARY})
-
-########### next target ###############
-
-set(testus_SRCS testus.cpp )
-
-
-kde4_add_unit_test(testus TESTNAME kcal-testus ${testus_SRCS})
-
-target_link_libraries(testus ${KDE4_KDECORE_LIBS} kholidays ${QT_QTTEST_LIBRARY})
