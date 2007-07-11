@@ -79,7 +79,7 @@
      WDAY = 260,
      COLOR = 261,
      STRING = 262,
-     IN = 263,
+     HOLIDAY_IN = 263,
      PLUS = 264,
      MINUS = 265,
      SMALL = 266,
@@ -107,7 +107,7 @@
 #define WDAY 260
 #define COLOR 261
 #define STRING 262
-#define IN 263
+#define HOLIDAY_IN 263
 #define PLUS 264
 #define MINUS 265
 #define SMALL 266

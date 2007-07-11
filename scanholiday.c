@@ -1001,7 +1001,7 @@ YY_RULE_SETUP
 case 40:
 YY_RULE_SETUP
 #line 63 "scanholiday.lex"
-{ return(IN);    }
+{ return(HOLIDAY_IN);    }
 	YY_BREAK
 case 41:
 YY_RULE_SETUP

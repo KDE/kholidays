@@ -60,7 +60,7 @@ day				;
 days				;
 on				;
 to				;
-in				{ return(IN);    }
+in				{ return(HOLIDAY_IN);    }
 if				{ return(IF); }
 plus				{ return(PLUS);  }
 minus				{ return(MINUS); }
