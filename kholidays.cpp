@@ -76,7 +76,7 @@ QString KHolidays::location() const
 
 bool KHolidays::parseFile( const QDate &date )
 {
-// kDebug()<<"KHolidays::parseFile( date=" << date << ")"<<endl;
+// kDebug()<<"KHolidays::parseFile( date=" << date <<")";
   int lastYear = 0; //current year less 1900
 
   if ( mHolidayFile.isNull() || mHolidayFile.isEmpty() || date.isNull() || !date.isValid() ) {

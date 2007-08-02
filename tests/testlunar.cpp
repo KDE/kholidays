@@ -99,19 +99,19 @@ void LunarTest::test2005()
     LunarPhase::Phase phase = lp.phase( qd );
     if ( phase == LunarPhase::FirstQuarter ) {
       firstQuarter.append( qd );
-      kDebug() << "first quarter " << qd << endl;
+      kDebug() <<"first quarter" << qd;
     }
     else if ( phase == LunarPhase::FullMoon ) {
       fullMoon.append( qd );
-      kDebug() << "full moon " << qd << endl;
+      kDebug() <<"full moon" << qd;
     }
     else if ( phase == LunarPhase::LastQuarter ) {
       lastQuarter.append( qd );
-      kDebug() << "last quarter " << qd << endl;
+      kDebug() <<"last quarter" << qd;
     }
     else if ( phase == LunarPhase::NewMoon ) {
       newMoon.append( qd );
-      kDebug() << "new moon " << qd << endl;
+      kDebug() <<"new moon" << qd;
     }
   }
   QVERIFY( fQ2005 == firstQuarter );
@@ -189,19 +189,19 @@ void LunarTest::test2007()
     LunarPhase::Phase phase = lp.phase( qd );
     if ( phase == LunarPhase::FirstQuarter ) {
       firstQuarter.append( qd );
-      kDebug() << "first quarter " << qd << endl;
+      kDebug() <<"first quarter" << qd;
     }
     else if ( phase == LunarPhase::FullMoon ) {
       fullMoon.append( qd );
-      kDebug() << "full moon " << qd << endl;
+      kDebug() <<"full moon" << qd;
     }
     else if ( phase == LunarPhase::LastQuarter ) {
       lastQuarter.append( qd );
-      kDebug() << "last quarter " << qd << endl;
+      kDebug() <<"last quarter" << qd;
     }
     else if ( phase == LunarPhase::NewMoon ) {
       newMoon.append( qd );
-      kDebug() << "new moon " << qd << endl;
+      kDebug() <<"new moon" << qd;
     }
   }
   QVERIFY( fQ2007 == firstQuarter );
