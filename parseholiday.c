@@ -167,10 +167,6 @@
 
 #include <limits.h>
 
-#ifdef HAVE_MALLOC_H
-#include <malloc.h>
-#endif
-
 /*** Macro definitions and constants ***/
 /*
  * Before you mail and complain that the following macro is incorrect,
