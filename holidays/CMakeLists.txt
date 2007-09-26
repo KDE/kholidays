@@ -1,5 +1,6 @@
 
 install( FILES
+         holiday_ar
          holiday_at
          holiday_au
          holiday_bavarian
