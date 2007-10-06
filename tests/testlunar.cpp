@@ -20,6 +20,7 @@
 
 #include <qtest_kde.h>
 #include <klocale.h>
+#include <kdebug.h>
 
 #include "testlunar.h"
 #include "testlunar.moc"
