@@ -558,6 +558,7 @@ char *yytext;
 #define INITIAL 0
 #line 2 "scanholiday.lex"
 #include <string.h>
+#include <stdlib.h>
 #include "parseholiday.h"
 #define YY_NO_UNPUT
 #define YY_MAIN 0

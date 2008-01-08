@@ -1,5 +1,6 @@
 %{
 #include <string.h>
+#include <stdlib.h>
 #include "parseholiday.h"
 #define YY_NO_UNPUT
 %}

@@ -23,6 +23,9 @@
 
 #include <stdio.h>
 #include <unistd.h>
+#ifdef HAVE_MALLOC_H
+# include <malloc.h>
+#endif
 #include <time.h>
 #include <stdlib.h>
 #include <pwd.h>
