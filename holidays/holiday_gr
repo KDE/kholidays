@@ -279,30 +279,30 @@ small black "Εξέγερση του Πολυτεχνείου (Σχολική Α
 
 : Κινητές εορτές
 
-small black "Τελώνου και Φαρισαίου - Αρχή Τριωδίου" on easter minus 70 days
-small black "Του Ασώτου" on easter minus 63 days
-small black "Τσικνοπέμπτη" on easter minus 59 days
-small black "Κυριακή των Απόκρεω" on easter minus 56 days
-small black "Τυροφάγου" on easter minus 49 days
-small black "Καθαρή Δευτέρα (Αργία)" on easter minus 48 days
-small black "Θεόδωρος, Θεοδώρα, Δώρα, Θώδης, Θώδος, Δώρης" on easter minus 43 days
-small black "Κυριακή της Ορθοδοξίας" on easter minus 42 days
-small black "Σάββατο του Λαζάρου" on easter minus 8 days
-small black "Κυριακή των Βαΐων" on easter minus 7 days
-small black "Μεγάλη Δευτέρα" on easter minus 6 days
-small black "Μεγάλη Τρίτη" on easter minus 5 days
-small black "Μεγάλη Τετάρτη" on easter minus 4 days
-small black "Μεγάλη Πέμπτη" on easter minus 3 days
-weekend "Μεγάλη Παρασκευή (Αργία)" on easter minus 2 days
-weekend "Μεγάλο Σάββατο" on easter minus 1 days
-weekend "Το Άγιον Πάσχα" on easter
-weekend "Δευτέρα του Πάσχα (Αργία)" on easter plus 1 days
-small black "Πηγή, Ζήσης, Ζησούλα, Ζήσιμος, Ζωή, Ζώης" on easter plus 5 days
-small black "Του Θωμά" on easter plus 7 days
-small black "Ανάληψη του Χριστού" on easter plus 39 days
-small black "Πεντηκοστή" on easter plus 49 days
-small black "Αγ. Πνεύματος" on easter plus 50 days
-small black "Αγ. Πάντων" on easter plus 56 days
+small black "Τελώνου και Φαρισαίου - Αρχή Τριωδίου" on pascha minus 70 days
+small black "Του Ασώτου" on pascha minus 63 days
+small black "Τσικνοπέμπτη" on pascha minus 59 days
+small black "Κυριακή των Απόκρεω" on pascha minus 56 days
+small black "Τυροφάγου" on pascha minus 49 days
+small black "Καθαρή Δευτέρα (Αργία)" on pascha minus 48 days
+small black "Θεόδωρος, Θεοδώρα, Δώρα, Θώδης, Θώδος, Δώρης" on pascha minus 43 days
+small black "Κυριακή της Ορθοδοξίας" on pascha minus 42 days
+small black "Σάββατο του Λαζάρου" on pascha minus 8 days
+small black "Κυριακή των Βαΐων" on pascha minus 7 days
+small black "Μεγάλη Δευτέρα" on pascha minus 6 days
+small black "Μεγάλη Τρίτη" on pascha minus 5 days
+small black "Μεγάλη Τετάρτη" on pascha minus 4 days
+small black "Μεγάλη Πέμπτη" on pascha minus 3 days
+weekend "Μεγάλη Παρασκευή (Αργία)" on pascha minus 2 days
+weekend "Μεγάλο Σάββατο" on pascha minus 1 days
+weekend "Το Άγιον Πάσχα" on pascha
+weekend "Δευτέρα του Πάσχα (Αργία)" on pascha plus 1 days
+small black "Πηγή, Ζήσης, Ζησούλα, Ζήσιμος, Ζωή, Ζώης" on pascha plus 5 days
+small black "Του Θωμά" on pascha plus 7 days
+small black "Ανάληψη του Χριστού" on pascha plus 39 days
+small black "Πεντηκοστή" on pascha plus 49 days
+small black "Αγ. Πνεύματος" on pascha plus 50 days
+small black "Αγ. Πάντων" on pascha plus 56 days
 
 : Αλλαγή ώρας
 small black "Αλλαγή ώρας (1 ώρα πίσω)" on last sunday in october
