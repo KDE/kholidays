@@ -4,6 +4,7 @@
 : Author: Miles Leonard-Taylor (m.leonardtaylor@irl.cri.nz)
 : 13 September 2000 (first version)
 : 24 September 2004 (update with spelling corrections)
+: 11 February  2008 (change to daylight-savings rules by government)
 : Thanks to various people for pointing out all my spelling mistakes...
 
 : Holidays as defined by the government's "Holidays Acts, 1981-1991"
@@ -35,8 +36,9 @@ small "Guy Fawkes" on november 5
 small "Melbourne Cup" on first tuesday in november
 
 : Daylight Savings Reminders, defined by Internal Affairs
-small "Clocks Forward" on first sunday in october
-small "Clocks Back" on third sunday in march
+: see http://www.dia.govt.nz/diawebsite.nsf/wpg_URL/Services-Daylight-Saving-Index?OpenDocument
+small "Clocks Forward" on last sunday in september
+small "Clocks Back" on first sunday in april
 
 : Additional Easter dates and other Solemneties, defined by Catholic Church
 :small "Epiphany on sunday after january 2
