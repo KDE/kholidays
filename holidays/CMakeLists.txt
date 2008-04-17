@@ -4,7 +4,9 @@ install( FILES
          holiday_at
          holiday_au
          holiday_bavarian
-         holiday_be
+         holiday_BelgiumDutch
+         holiday_BelgiumFrench
+         holiday_BelgiumWalloon
          holiday_br
          holiday_ca
          holiday_catalan
