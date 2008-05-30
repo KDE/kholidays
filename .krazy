@@ -1,0 +1,2 @@
+EXTRA kdebug,null,style,defines,qenums
+SKIP /scanholiday\|/parseholiday
