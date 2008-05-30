@@ -1,5 +1,6 @@
 /*
-  This file is part of libkholidays.
+  This file is part of the kholidays library.
+
   Copyright (c) 2001 Cornelius Schumacher <schumacher@kde.org>
   Copyright (c) 2004 Allen Winter <winter@kde.org>
 
@@ -21,12 +22,13 @@
 #ifndef KHOLIDAYS_HOLIDAYS_H
 #define KHOLIDAYS_HOLIDAYS_H
 
+#include "kholidays_export.h"
+
+#include <QList>
 #include <QString>
 #include <QStringList>
-#include <QDateTime>
-#include <QList>
 
-#include "kholidays_export.h"
+class QDate;
 
 namespace LibKHolidays {
 

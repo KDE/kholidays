@@ -1,5 +1,6 @@
 /*
-  This file is part of libkholidays.
+  This file is part of the kholidays library.
+
   Copyright (c) 2001 Cornelius Schumacher <schumacher@kde.org>
   Copyright (c) 2004 Allen Winter <winter@kde.org>
 
@@ -22,10 +23,10 @@
 #include "kholidays.h"
 #include "kholidays_version.h"
 
+#include <KStandardDirs>
+
+#include <QDateTime>
 #include <QFile>
-#include <kapplication.h>
-#include <kstandarddirs.h>
-#include <kdebug.h>
 
 using namespace LibKHolidays;
 
@@ -51,7 +52,7 @@ QStringList KHolidays::locations()
 
   QStringList::ConstIterator it;
   for ( it = files.begin(); it != files.end(); ++it ) {
-    locs.append( (*it).mid((*it).lastIndexOf('_') + 1) );
+    locs.append( (*it).mid( (*it).lastIndexOf( '_' ) + 1 ) );
   }
 
   return locs;
@@ -76,7 +77,6 @@ QString KHolidays::location() const
 
 bool KHolidays::parseFile( const QDate &date )
 {
-// kDebug()<<"KHolidays::parseFile( date=" << date <<")";
   int lastYear = 0; //current year less 1900
 
   if ( mHolidayFile.isNull() || mHolidayFile.isEmpty() || date.isNull() || !date.isValid() ) {
@@ -84,7 +84,6 @@ bool KHolidays::parseFile( const QDate &date )
   }
 
   if ( ( date.year() != mYearLast ) || ( mYearLast == 0 ) ) {
-// kDebug()<<kdBacktrace();
     mYearLast = date.year();
     lastYear = date.year() - 1900; // silly parse_year takes 2 digit year...
     parse_holidays( QFile::encodeName( mHolidayFile ), lastYear, 1 );

@@ -1,5 +1,6 @@
 /*
-  This file is part of libkholidays.
+  This file is part of the kholidays library.
+
   Copyright (c) 2004,2007 Allen Winter <winter@kde.org>
 
   This library is free software; you can redistribute it and/or
@@ -20,6 +21,13 @@
 
 #ifndef KHOLIDAYS_LUNARPHASE_H
 #define KHOLIDAYS_LUNARPHASE_H
+
+#include "kholidays_export.h"
+#include <QString>
+
+class QDate;
+
+namespace LibKHolidays {
 
 /**
   Represents and manages a Lunar Phase
@@ -43,16 +51,6 @@
 
    Note that crescent and gibbous phases are not currently supported.
 */
-
-#include "kholidays_export.h"
-
-#include <QString>
-#include <QDateTime>
-
-#include <time.h>
-
-namespace LibKHolidays {
-
 class KHOLIDAYS_EXPORT LunarPhase
 {
   public:
@@ -105,7 +103,7 @@ class KHOLIDAYS_EXPORT LunarPhase
     */
     static QString phaseName( Phase phase );
 
-private:
+  private:
     /**
        Return the phase of the moon as a percentage of full
 

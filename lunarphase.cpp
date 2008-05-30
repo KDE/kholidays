@@ -1,5 +1,6 @@
 /*
-  This file is part of libkholidays.
+  This file is part of the kholidays library.
+
   Copyright (c) 2004,2007 Allen Winter <winter@kde.org>
 
   Copyright (c) 1989, 1993  //krazy:exclude=copyright
@@ -20,13 +21,13 @@
   Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
   Boston, MA 02110-1301, USA.
 */
-#include "lunarphase.h"
 
+#include "lunarphase.h"
 #include <config-libkholidays.h>
 
-#include <kglobal.h>
-#include <klocale.h>
-#include <kdebug.h>
+#include <QDateTime>
+#include <KLocale>
+#include <KGlobal>
 
 using namespace LibKHolidays;
 
@@ -48,20 +49,15 @@ QString LunarPhase::phaseName( LunarPhase::Phase phase )
   switch ( phase ) {
   case NewMoon:
     return( i18n( "New Moon" ) );
-    break;
   case FullMoon:
     return( i18n( "Full Moon" ) );
-    break;
   case FirstQuarter:
     return( i18n( "First Quarter Moon" ) );
-    break;
   case LastQuarter:
     return( i18n( "Last Quarter Moon" ) );
-    break;
   default:
   case None:
     return QString();
-    break;
   }
 }
 

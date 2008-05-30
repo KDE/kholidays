@@ -1,5 +1,6 @@
 /*
   This file is part of the kholidays library.
+
   Copyright (c) 2007 Allen Winter <winter@kde.org>
 
   This library is free software; you can redistribute it and/or
@@ -18,8 +19,8 @@
   Boston, MA 02110-1301, USA.
 */
 
-#ifndef SEASONSTEST_H
-#define SEASONSTEST_H
+#ifndef TESTSEASONS_H
+#define TESTSEASONS_H
 
 #include <QtCore/QObject>
 

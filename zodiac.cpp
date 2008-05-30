@@ -1,5 +1,6 @@
 /*
-  This file is part of libkholidays.
+  This file is part of the kholidays library.
+
   Copyright (c) 2005-2007 Allen Winter <winter@kde.org>
 
   This library is free software; you can redistribute it and/or
@@ -19,16 +20,14 @@
 */
 
 #include "zodiac.h"
-
-#include <kglobal.h>
-#include <klocale.h>
-#include <kdebug.h>
+#include <QDateTime>
+#include <KLocale>
 
 using namespace LibKHolidays;
 
 Zodiac::Zodiac( ZodiacType type )
 {
-    mType = type;
+  mType = type;
 }
 
 Zodiac::~Zodiac()
@@ -44,45 +43,32 @@ QString Zodiac::signName( Zodiac::ZodiacSigns sign )
 {
   switch ( sign ) {
   case Aries:
-      return i18n( "Aries" );
-      break;
+    return i18n( "Aries" );
   case Taurus:
-      return i18n( "Taurus" );
-      break;
+    return i18n( "Taurus" );
   case Gemini:
-      return i18n( "Gemini" );
-      break;
+    return i18n( "Gemini" );
   case Cancer:
-      return i18n( "Cancer" );
-      break;
+    return i18n( "Cancer" );
   case Leo:
-      return i18n( "Leo" );
-      break;
+    return i18n( "Leo" );
   case Virgo:
-      return i18n( "Virgo" );
-      break;
+    return i18n( "Virgo" );
   case Libra:
-      return i18n( "Libra" );
-      break;
+    return i18n( "Libra" );
   case Scorpio:
-      return i18n( "Scorpio" );
-      break;
+    return i18n( "Scorpio" );
   case Sagittarius:
-      return i18n( "Sagittarius" );
-      break;
+    return i18n( "Sagittarius" );
   case Capricorn:
-      return i18n( "Capricorn" );
-      break;
+    return i18n( "Capricorn" );
   case Aquarius:
-      return i18n( "Aquarius" );
-      break;
+    return i18n( "Aquarius" );
   case Pisces:
-      return i18n( "Pisces" );
-      break;
+    return i18n( "Pisces" );
   default:
   case None:
-      return QString();
-      break;
+    return QString();
   }
 }
 
@@ -248,46 +234,33 @@ Zodiac::ZodiacSigns Zodiac::sign( const QDate &date ) const
 
 QString Zodiac::signSymbol( Zodiac::ZodiacSigns sign )
 {
-    switch( sign ) {
+  switch( sign ) {
   case Aries:
-      return i18n( "ram" );
-      break;
+    return i18n( "ram" );
   case Taurus:
-      return i18n( "bull" );
-      break;
+    return i18n( "bull" );
   case Gemini:
-      return i18n( "twins" );
-      break;
+    return i18n( "twins" );
   case Cancer:
-      return i18n( "crab" );
-      break;
+    return i18n( "crab" );
   case Leo:
-      return i18n( "lion" );
-      break;
+    return i18n( "lion" );
   case Virgo:
-      return i18n( "virgin" );
-      break;
+    return i18n( "virgin" );
   case Libra:
-      return i18n( "scales" );
-      break;
+    return i18n( "scales" );
   case Scorpio:
-      return i18n( "scorpion" );
-      break;
+    return i18n( "scorpion" );
   case Sagittarius:
-      return i18n( "archer" );
-      break;
+    return i18n( "archer" );
   case Capricorn:
-      return i18n( "goat" );
-      break;
+    return i18n( "goat" );
   case Aquarius:
-      return i18n( "water" );
-      break;
+    return i18n( "water" );
   case Pisces:
-      return i18n( "fish" );
-      break;
+    return i18n( "fish" );
   default:
   case None:
-      return QString();
-      break;
+    return QString();
   }
 }

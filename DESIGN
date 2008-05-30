@@ -176,7 +176,7 @@ V. Functionality
       * "Dedupe" a list of Holidays.
 
       * Determine if a date lands on a new moon, first quarter moon,
-        last quarter moon, or full moon (hemisphere will be required).
+        last quarter moon, or full moon.
 
       * Determine if a date lands on a solstice or equinox.
 

@@ -1,42 +1,46 @@
 /*
-    This file is part of libkholidays.
-    Copyright (c) 2005,2006 Allen Winter <winter@kde.org>
+  This file is part of kholidays library.
 
-    This library is free software; you can redistribute it and/or
-    modify it under the terms of the GNU Library General Public
-    License as published by the Free Software Foundation; either
-    version 2 of the License, or (at your option) any later version.
+  Copyright (c) 2005,2006 Allen Winter <winter@kde.org>
 
-    This library is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-    Library General Public License for more details.
+  This library is free software; you can redistribute it and/or
+  modify it under the terms of the GNU Library General Public
+  License as published by the Free Software Foundation; either
+  version 2 of the License, or (at your option) any later version.
 
-    You should have received a copy of the GNU Library General Public License
-    along with this library; see the file COPYING.LIB.  If not, write to
-    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
-    Boston, MA 02110-1301, USA.
+  This library is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+  Library General Public License for more details.
+
+  You should have received a copy of the GNU Library General Public License
+  along with this library; see the file COPYING.LIB.  If not, write to
+  the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+  Boston, MA 02110-1301, USA.
 */
 
-#include <stdlib.h>
-#include <iostream>
+#include "zodiac.h"
+
 #include <kaboutdata.h>
 #include <kdebug.h>
 #include <klocale.h>
 #include <kcmdlineargs.h>
+
+#include <QDateTime>
 #include <QCoreApplication>
 
-#include "zodiac.h"
+#include <stdlib.h>
+#include <iostream>
 
 using namespace LibKHolidays;
 using namespace std;
 
-int main(int argc,char **argv)
+int main( int argc, char **argv )
 {
 
   KCmdLineOptions options;
-  options.add("verbose", ki18n("Verbose output"));
-  KAboutData aboutData("testzodiac", 0,ki18n("Test Zodiac Calendar"),"0.1");
+  options.add( "verbose", ki18n( "Verbose output" ) );
+  KAboutData aboutData( "testzodiac", 0, ki18n( "Test Zodiac Calendar" ), "0.1" );
   QCoreApplication app( argc, argv );
 
   Zodiac::ZodiacSigns sign;

@@ -1,5 +1,6 @@
 /*
-  This file is part of libkholidays.
+  This file is part of the kholidays library.
+
   Copyright (c) 2004,2006-2007 Allen Winter <winter@kde.org>
 
   This library is free software; you can redistribute it and/or
@@ -19,10 +20,7 @@
 */
 
 #include "astroseasons.h"
-
-#include <kglobal.h>
-#include <klocale.h>
-#include <kdebug.h>
+#include <KLocale>
 
 using namespace LibKHolidays;
 
@@ -44,20 +42,15 @@ QString AstroSeasons::seasonName( AstroSeasons::Season season )
   switch ( season ) {
   case JuneSolstice:
     return i18n( "June Solstice" );
-    break;
   case DecemberSolstice:
     return i18n( "December Solstice" );
-    break;
   case MarchEquinox:
     return i18n( "March Equinox" );
-    break;
   case SeptemberEquinox:
     return i18n( "September Equinox" );
-    break;
   default:
   case None:
     return QString();
-    break;
   }
 }
 

@@ -1,5 +1,6 @@
 /*
-  This file is part of libkholidays.
+  This file is part of the kholidays library.
+
   Copyright (c) 2004,2006-2007 Allen Winter <winter@kde.org>
 
   This library is free software; you can redistribute it and/or
@@ -44,8 +45,6 @@
 #include <QString>
 #include <QDateTime>
 
-#include <time.h>
-
 #include "kholidays_export.h"
 
 namespace LibKHolidays {
@@ -89,7 +88,7 @@ class KHOLIDAYS_EXPORT AstroSeasons
     */
     static QString seasonName( Season season );
 
-private:
+  private:
     /**
        Return the approximate time of a solstice or equinox event.
        The year must be in the range -1000...3000.  Within that range the

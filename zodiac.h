@@ -1,5 +1,6 @@
 /*
-  This file is part of libkholidays.
+  This file is part of the kholidays library.
+
   Copyright (c) 2005-2007 Allen Winter <winter@kde.org>
 
   This library is free software; you can redistribute it and/or
@@ -50,12 +51,10 @@
 
 */
 
-#include <QString>
-#include <QDateTime>
-
-#include <time.h>
-
 #include "kholidays_export.h"
+#include <QString>
+
+class QDate;
 
 namespace LibKHolidays {
 
