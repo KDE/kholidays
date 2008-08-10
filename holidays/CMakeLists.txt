@@ -27,7 +27,7 @@ install( FILES
          holiday_is
          holiday_il
          holiday_it
-         holiday_ja
+         holiday_jp
          holiday_lt
          holiday_mx
          holiday_nl
