@@ -3,6 +3,7 @@
 
   Copyright (c) 2001 Cornelius Schumacher <schumacher@kde.org>
   Copyright (c) 2004 Allen Winter <winter@kde.org>
+  Copyright (c) 2008 David Jarvie <djarvie@kde.org>
 
   This library is free software; you can redistribute it and/or
   modify it under the terms of the GNU Library General Public
@@ -42,21 +43,39 @@ class KHOLIDAYS_EXPORT KHolidays
 {
   public:
     /**
-       Return a list of all available locations which have a holiday definition.
+       Return a list of all available location codes which have a holiday definition.
        One of these can then be passed to the constructor for a new KHolidays
        object.
     */
     static QStringList locations();
 
-    KHolidays( const QString &location );
+    /**
+       Constructor.
+       @param location the code for the country or region. If null
+              or unknown, an empty instance will be created.
+     */
+    explicit KHolidays( const QString &location = QString() );
     ~KHolidays();
 
     /**
       Returns the holiday location.
+      This is a code representing the country or region.
+      @return region code, or null if the instance was constructed with
+              an unknown region
     */
     QString location() const;
 
-    QList<KHoliday> getHolidays( const QDate &qd );
+    QList<KHoliday> getHolidays( const QDate &date ) const;
+
+    /**
+       Checks whether there is any holiday defined for a date.
+     */
+    bool isHoliday( const QDate &date ) const;
+
+    /**
+       Returns whether the instance contains any holiday data.
+     */
+    bool isValid() const;
 
     enum {
       WORKDAY,
@@ -64,11 +83,15 @@ class KHOLIDAYS_EXPORT KHolidays
     };
 
   private:
-    bool parseFile( const QDate &qd );
+    // Prohibit copying
+    KHolidays(const KHolidays& );
+    KHolidays &operator=(const KHolidays& );
+
+    bool parseFile( const QDate &date ) const;
 
     QString mLocation;    // location string used to determine holidays file
-    QString mHolidayFile; // name of file containing holiday data
-    int mYearLast;        // save off the last year we have seen
+    QString mHolidayFile; // full path of file containing holiday data, or null
+    mutable int mYearLast;// save of the last year we have seen
 };
 
 }

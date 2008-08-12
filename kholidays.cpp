@@ -3,6 +3,7 @@
 
   Copyright (c) 2001 Cornelius Schumacher <schumacher@kde.org>
   Copyright (c) 2004 Allen Winter <winter@kde.org>
+  Copyright (c) 2008 David Jarvie <djarvie@kde.org>
 
   This library is free software; you can redistribute it and/or
   modify it under the terms of the GNU Library General Public
@@ -59,11 +60,15 @@ QStringList KHolidays::locations()
 }
 
 KHolidays::KHolidays( const QString &location )
-  : mLocation( location )
+  : mLocation( location ),
+    mYearLast( 0 )
 {
-  mHolidayFile = KStandardDirs::locate( "data", "libkholidays/holiday_" + location );
-
-  mYearLast = 0;
+  if ( !location.isEmpty() ) {
+    mHolidayFile = KStandardDirs::locate( "data", "libkholidays/holiday_" + location );
+    if ( mHolidayFile.isEmpty() ) {
+      mLocation.clear();
+    }
+  }
 }
 
 KHolidays::~KHolidays()
@@ -75,11 +80,16 @@ QString KHolidays::location() const
   return mLocation;
 }
 
-bool KHolidays::parseFile( const QDate &date )
+bool KHolidays::isValid() const
+{
+  return !mHolidayFile.isEmpty();
+}
+
+bool KHolidays::parseFile( const QDate &date ) const
 {
   int lastYear = 0; //current year less 1900
 
-  if ( mHolidayFile.isNull() || mHolidayFile.isEmpty() || date.isNull() || !date.isValid() ) {
+  if ( mHolidayFile.isEmpty() || !date.isValid() ) {
     return false;
   }
 
@@ -92,7 +102,7 @@ bool KHolidays::parseFile( const QDate &date )
   return true;
 }
 
-QList<KHoliday> KHolidays::getHolidays( const QDate &date )
+QList<KHoliday> KHolidays::getHolidays( const QDate &date ) const
 {
   QList<KHoliday> list;
   if ( !parseFile( date ) ) {
@@ -111,4 +121,19 @@ QList<KHoliday> KHolidays::getHolidays( const QDate &date )
     hd = hd->next;
   }
   return list;
+}
+
+bool KHolidays::isHoliday( const QDate &date ) const
+{
+  if ( !parseFile( date ) ) {
+    return false;
+  }
+  struct holiday *hd = &holidays[date.dayOfYear()-1];
+  while ( hd ) {
+    if ( hd->string && ( hd->color == 2/*red*/ || hd->color == 9/*weekend*/ ) ) {
+      return true;
+    }
+    hd = hd->next;
+  }
+  return false;
 }
