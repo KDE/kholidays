@@ -7,6 +7,7 @@
 : Related national laws
 : http://www.uncu.edu.ar/contenido/skins/unc/download/Ley%2023555.pdf
 : http://www.uncu.edu.ar/contenido/skins/unc/download/Ley%2024445.pdf
+: http://www.puntoprofesional.com/P/0650/LEY_26416.HTM
 :
 : Author: Daniel Vega <dv5a@dc.uba.ar>
 
@@ -22,9 +23,8 @@ small "Primer Gobierno Patrio" weekend on 5/25
 small "Día de Manuel Belgrano" weekend on third monday in june
 small "Día de la Independencia" weekend on 7/9
 small "Día de San Martín" weekend on third monday in august
-small "Día de la Raza" weekend on (([10/12] == [friday  after ([10/11])] || [10/12] == [thursday  after ([10/11])]) ? [monday after  ([10/12])] : 
-                                  (([10/12] == [tuesday after ([10/11])] || [10/12] == [wednesday after ([10/11])]) ? [monday before ([10/12])] :
-                                    [10/12]))
+small "Día de la Raza" weekend on  (([10/12] == [tuesday after ([10/11])] || [10/12] == [wednesday after ([10/11])]) ? [monday before ([10/12])] :
+                                    [monday after  ([10/11])])
 small "Inmaculada Concepción de María" weekend on 12/8
 small "Navidad" weekend on 12/25
 
