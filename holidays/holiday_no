@@ -1,32 +1,70 @@
 :
-: Norwegian holiday file. Copy to ~/.holiday for private changes or tip
-: geiri@stud.cs.uit.no if things are missing.
+: Holiday file for Norway, written in Norwegian Bokmål.
+: Original version by geiri@stud.cs.uit.no.
+: Corrected, reorganized and expanded version by
+: Karl Ove Hufthammer <karl@huftis.org>.
 :
-weekend "1. Nyttårsdag" weekend on 1.1
-black "2. Nyttårsdag" on 2.1
-black "Morsdag" on second sunday in february
-weekend "Søn. før faste" weekend on easter minus 49
-blue "Sommertid" on last sunday in march
+: Offisielle helligdager 
+weekend "Nyttårsdag" weekend on 1.1
+weekend "Palmesøndag" weekend on easter minus 7
 weekend "Skjærtorsdag" weekend on easter minus 3
 weekend "Langfredag" weekend on easter minus 2
-black "Påskeaften" on easter minus 1
-weekend "1. Påskedag" weekend on easter
-weekend "2. Påskedag" weekend on easter plus 1
-black "Pinseaften" on easter plus 48 days
-weekend "1. Pinsedag" weekend on easter plus 49 days
-weekend "2. Pinsedag" weekend on easter plus 50 days
-weekend "Kristi Him.f.dag" weekend on easter plus 39 days
-weekend "Off. høytidsdag" weekend on 1.5
-weekend "Grunnlovsdag" weekend on 17.5
-black "St. Hans" on 23.6
-blue "Vintertid" on last sunday in september
-weekend "Bots & bededag" on last sunday in october
-black "Farsdag" on second sunday in november
-black "1. Advent" on sunday before 23.12 minus 21 days
-black "2. Advent" on sunday before 23.12 minus 14 days
-black "3. Advent" on sunday before 23.12 minus 7 days
-black "4. Advent" on sunday before 23.12
-black "Julaften" on 24.12
-weekend "1. Juledag" weekend on 25.12
-weekend "2. Juledag" weekend on 26.12
-black "Nyttårsaften" on 31.12 
+weekend "Første påskedag" weekend on easter
+weekend "Andre påskedag" weekend on easter plus 1
+weekend "Arbeidernes internasjonale kampdag" weekend on 1.5
+weekend "Grunnlovsdagen" weekend on 17.5
+weekend "Kristi himmelfartsdag" weekend on easter plus 39 days
+weekend "Første pinsedag" weekend on easter plus 49 days
+weekend "Andre pinsedag" weekend on easter plus 50 days
+weekend "Første juledag" weekend on 25.12
+weekend "Andre juledag" weekend on 26.12
+
+: Påske og pinse
+"Fastelavnssøndag" on easter minus 49
+"Askeonsdag" on easter minus 46
+"Påskeaften" on easter minus 1
+"Pinseaften" on easter plus 48 days
+"Bots- og bededag" on last sunday in october
+
+: Sommer- og vintertid
+"Sommertid" on last sunday in march
+"Vintertid" on last sunday in october
+
+: Mors- og farsdag
+"Morsdag" on second sunday in february
+"Farsdag" on second sunday in november
+
+: Jul
+"Første søndag i advent" on sunday before 24.12 minus 21 days
+"Andre søndag i advent" on sunday before 24.12 minus 14 days
+"Tredje søndag i advent" on sunday before 24.12 minus 7 days
+"Fjerde søndag i advent" on sunday before 24.12
+"Luciadagen" on 13.12
+"Lille julaften" on 23.12
+"Julaften" on 24.12
+
+: Nyttår
+"Nyttårsaften" on 31.12 
+
+: Offisielle flaggdager som ikke er høytidssager
+"H.K.H. Prinsesse Ingrid Alexandras fødselsdag" on 21.1
+"Samefolkets dag" on 6.2
+"H.M. Kong Harald Vs fødselsdag" on 21.2
+"Frigjøringsdagen 1945" on 8.5
+"H.M. Dronning Sonjas fødselsdag" on 4.7
+"H.K.H. Kronprins Haakon Magnus’ fødselsdag" on 20.7
+"Olsokdagen" on 29.7
+"H.K.H. Kronprinsesse Mette-Marits fødselsdag " on 19.8
+
+: Andre
+"Valentinsdagen" on 14.2
+"Skuddårsdagen" on 29.2
+"Den internasjonale kvinnedagen" on 8.3
+"Aprilsnarr" on 1.4
+"Unionsoppløsningen 1905" on 7.6
+"Sankthansaften" on 23.6
+"Sankthansdagen" on 24.6
+"Mikkelsmesse" on 29.9
+"Allehelgensaften" on 31.10
+"Allehelgensdag" on first sunday in november
+
