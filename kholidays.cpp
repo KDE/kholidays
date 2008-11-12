@@ -46,13 +46,13 @@ extern "C" {
 
 QStringList KHolidays::locations()
 {
-  QStringList files =
+  const QStringList files =
     KGlobal::dirs()->findAllResources( "data", "libkholidays/holiday_*",
                                        KStandardDirs::NoDuplicates );
   QStringList locs;
 
   QStringList::ConstIterator it;
-  for ( it = files.begin(); it != files.end(); ++it ) {
+  for ( it = files.constBegin(); it != files.constEnd(); ++it ) {
     locs.append( (*it).mid( (*it).lastIndexOf( '_' ) + 1 ) );
   }
 
