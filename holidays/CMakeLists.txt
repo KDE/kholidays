@@ -10,6 +10,7 @@ install( FILES
          holiday_br
          holiday_ca
          holiday_catalan
+         holiday_cl
          holiday_co
          holiday_ch
          holiday_cz
