@@ -28,6 +28,7 @@ install( FILES
          holiday_is
          holiday_il
          holiday_it
+         holiday_jm
          holiday_jp
          holiday_lt
          holiday_mx
