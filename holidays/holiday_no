@@ -21,14 +21,15 @@ weekend "Andre juledag" weekend on 26.12
 
 : Påske og pinse
 "Fastelavnssøndag" on easter minus 49
+"Fetetirsdag" on easter minus 47
 "Askeonsdag" on easter minus 46
 "Påskeaften" on easter minus 1
 "Pinseaften" on easter plus 48 days
 "Bots- og bededag" on last sunday in october
 
 : Sommer- og vintertid
-"Sommertid" on last sunday in march
-"Vintertid" on last sunday in october
+"Sommertid starter" on last sunday in march
+"Vintertid starter" on last sunday in october
 
 : Mors- og farsdag
 "Morsdag" on second sunday in february
