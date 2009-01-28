@@ -1,3 +1,18 @@
+/*
+ * Taken from plan by Thomas Driemeyer <thomas@bitrot.de>
+ * Adapted for use in KOrganizer by Preston Brown <pbrown@kde.org> and
+ * Reinhold Kainhofer <reinhold@kainhofer.com>
+ *
+ * This is free software; you can redistribute it and/or modify it under the
+ * terms of the GNU Library General Public License as published by the Free
+ * Software Foundation; either version 2 of the License, or (at your option)
+ * any later version. This software is distributed in the hope that it will
+ * be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Library
+ * General Public License for more details.
+ * 
+ * For more licensing information, please read LICENSE.plan in this directory.
+ */
 %{
 #include <string.h>
 #include <stdlib.h>
