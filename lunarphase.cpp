@@ -25,9 +25,11 @@
 #include "lunarphase.h"
 #include <config-libkholidays.h>
 
-#include <QDateTime>
-#include <KLocale>
+#include <KDebug>
 #include <KGlobal>
+#include <KLocale>
+
+#include <QDateTime>
 
 using namespace LibKHolidays;
 
@@ -66,35 +68,36 @@ LunarPhase::Phase LunarPhase::phase( const QDate &date ) const
   Phase retPhase = None;
 
   // compute percent-full for the middle of today and yesterday.
-  QTime noontime( 12, 0, 0 );
-  QDateTime today( date, noontime );
-  double todayPer = percentFull( today.toTime_t() );
-  QDateTime yesterday( date.addDays(-1), noontime );
-  double yesterdayPer = percentFull( yesterday.toTime_t() );
+  QTime anytime( 0, 0, 0 );
+  QDateTime today( date, anytime, Qt::UTC );
+  double todayPer = percentFull( today.toTime_t() ) + 0.5;
 
-  if ( ( todayPer < 0.50 ) && ( yesterdayPer > 0.50 ) ) {
-     retPhase = NewMoon;
-  } else if ( ( todayPer > 99.50 ) && ( yesterdayPer < 99.50 ) ) {
-      retPhase = FullMoon;
+  if ( static_cast<int>( todayPer ) == 100 ) {
+    retPhase = FullMoon;
+    //kDebug() << date << " todayPer: " << todayPer << " " << phaseName( retPhase );
+  } else if ( static_cast<int>( todayPer ) == 0 ) {
+    retPhase = NewMoon;
+    //kDebug() << date << " todayPer: " << todayPer << " " << phaseName( retPhase );
   } else {
-    // compute percent-full for the start of today.
-    QTime sqt( 0, 0, 0 );
-    QDateTime start( date, sqt );
-    double startPer = percentFull( start.toTime_t() );
-    // compute percent-full for the end of today.
-    QTime eqt( 23, 59, 59 );
-    QDateTime end( date, eqt );
-    double endPer = percentFull( end.toTime_t() );
+    QDateTime tomorrow( date.addDays( 1 ), anytime, Qt::UTC );
+    double tomorrowPer = percentFull( tomorrow.toTime_t() );
 
-    if ( ( startPer <= 50 ) && ( endPer > 50 ) ) {
-      retPhase = FirstQuarter;
+    if ( static_cast<int>( todayPer ) == 50 ) {
+      retPhase = ( tomorrowPer > todayPer ) ? FirstQuarter : LastQuarter;
+      //kDebug() << date
+      //         << " tomorrowPer: " << tomorrowPer
+      //         << " " << phaseName( retPhase );
+    } else {
+      //kDebug() << date
+      //         << " todayPer: " << todayPer
+      //         << " tomorrowPer: " << tomorrowPer
+      //         << " " << phaseName( None );
     }
-    if ( ( endPer <= 50 ) && ( startPer > 50 ) ) {
-      retPhase = LastQuarter;
-    }
+
     // Note: if you want to support crescent and gibbous phases then please
     //  read the source for the original BSD 'pom' program.
   }
+
   return( retPhase );
 }
 
@@ -193,7 +196,7 @@ double LunarPhase::percentFull( uint tmpt ) const
   adj360( &N );
   Msol = N + EPSILONg - RHOg;                                  /* sec 46 #4 */
   adj360( &Msol );
-  Ec = 360 / PI * ECCEN * sin( degreesToRadians( Msol ) );     /* sec 46 #5 */
+  Ec = 360 / PI * ECCEN * sinl( degreesToRadians( Msol ) );    /* sec 46 #5 */
   LambdaSol = N + Ec + EPSILONg;                               /* sec 46 #6 */
   adj360( &LambdaSol );
   l = 13.1763966 * days + lzero;                               /* sec 65 #4 */
@@ -202,17 +205,17 @@ double LunarPhase::percentFull( uint tmpt ) const
   adj360( &Mm );
   Nm = Nzero - ( 0.0529539 * days );                           /* sec 65 #6 */
   adj360( &Nm );
-  Ev = 1.2739 * sin( degreesToRadians( 2 * ( l - LambdaSol ) - Mm ) ); /* sec 65 #7 */
-  Ac = 0.1858 * sin( degreesToRadians( Msol ) );               /* sec 65 #8 */
-  A3 = 0.37 * sin( degreesToRadians( Msol ) );
+  Ev = 1.2739 * sinl( degreesToRadians( 2 * ( l - LambdaSol ) - Mm ) ); /* sec 65 #7 */
+  Ac = 0.1858 * sinl( degreesToRadians( Msol ) );              /* sec 65 #8 */
+  A3 = 0.37 * sinl( degreesToRadians( Msol ) );
   Mmprime = Mm + Ev - Ac - A3;                                 /* sec 65 #9 */
-  Ec = 6.2886 * sin( degreesToRadians( Mmprime ) );            /* sec 65 #10 */
-  A4 = 0.214 * sin( degreesToRadians( 2 * Mmprime ) );         /* sec 65 #11 */
+  Ec = 6.2886 * sinl( degreesToRadians( Mmprime ) );           /* sec 65 #10 */
+  A4 = 0.214 * sinl( degreesToRadians( 2 * Mmprime ) );        /* sec 65 #11 */
   lprime = l + Ev + Ec - Ac + A4;                              /* sec 65 #12 */
-  V = 0.6583 * sin( degreesToRadians( 2 * ( lprime - LambdaSol ) ) );/* sec 65 #13 */
+  V = 0.6583 * sinl( degreesToRadians( 2 * ( lprime - LambdaSol ) ) );/* sec 65 #13 */
   ldprime = lprime + V;                                        /* sec 65 #14 */
   D = ldprime - LambdaSol;                                     /* sec 67 #2 */
-  D = 50.0 * ( 1 - cos( degreesToRadians( D ) ) );             /* sec 67 #3 */
+  D = 50.0 * ( 1 - cosl( degreesToRadians( D ) ) );            /* sec 67 #3 */
   return D;
 }
 
@@ -222,7 +225,7 @@ double LunarPhase::percentFull( uint tmpt ) const
  */
 double LunarPhase::degreesToRadians( double degree ) const
 {
-  return( degree * PI / 180 );
+  return ( degree * PI ) / 180.00;
 }
 
 /*
