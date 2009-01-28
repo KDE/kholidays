@@ -22,7 +22,6 @@
 */
 
 #include "kholidays.h"
-#include "kholidays_version.h"
 
 #include <KStandardDirs>
 

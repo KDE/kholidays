@@ -84,8 +84,8 @@ class KHOLIDAYS_EXPORT KHolidays
 
   private:
     // Prohibit copying
-    KHolidays(const KHolidays& );
-    KHolidays &operator=(const KHolidays& );
+    KHolidays( const KHolidays & );
+    KHolidays &operator=( const KHolidays & );
 
     bool parseFile( const QDate &date ) const;
 
