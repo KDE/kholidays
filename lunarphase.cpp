@@ -31,7 +31,7 @@
 
 #include <QDateTime>
 
-using namespace KHolidays;
+using namespace LibKHolidays;
 
 LunarPhase::LunarPhase()
 {

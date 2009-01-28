@@ -22,7 +22,7 @@
 #include "astroseasons.h"
 #include <KLocale>
 
-using namespace KHolidays;
+using namespace LibKHolidays;
 
 AstroSeasons::AstroSeasons()
 {

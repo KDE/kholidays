@@ -56,7 +56,7 @@
 
 class QDate;
 
-namespace KHolidays {
+namespace LibKHolidays {
 
 class KHOLIDAYS_EXPORT Zodiac
 {

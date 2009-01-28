@@ -27,7 +27,7 @@
 
 class QDate;
 
-namespace KHolidays {
+namespace LibKHolidays {
 
 /**
   Represents and manages a Lunar Phase

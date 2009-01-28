@@ -23,7 +23,7 @@
 #include <QDateTime>
 #include <KLocale>
 
-using namespace KHolidays;
+using namespace LibKHolidays;
 
 Zodiac::Zodiac( ZodiacType type )
 {

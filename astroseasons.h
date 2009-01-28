@@ -47,7 +47,7 @@
 
 #include "kholidays_export.h"
 
-namespace KHolidays {
+namespace LibKHolidays {
 
 class KHOLIDAYS_EXPORT AstroSeasons
 {
