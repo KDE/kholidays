@@ -32,7 +32,7 @@
 #include <stdlib.h>
 #include <iostream>
 
-using namespace LibKHolidays;
+using namespace KHolidays;
 using namespace std;
 
 int main( int argc, char **argv )

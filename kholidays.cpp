@@ -29,7 +29,7 @@
 #include <QDateTime>
 #include <QFile>
 
-using namespace LibKHolidays;
+using namespace KHolidays;
 
 extern "C" {
   char *parse_holidays( const char *, int year, short force );

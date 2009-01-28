@@ -31,7 +31,7 @@
 
 class QDate;
 
-namespace LibKHolidays {
+namespace KHolidays {
 
 struct KHoliday {
   QString text;

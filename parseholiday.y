@@ -19,7 +19,7 @@
  * Reinhold Kainhofer <reinhold@kainhofer.com>
  */
 
-#include <config-libkholidays.h>
+#include <config-kholidays.h>
 
 #include <stdio.h>
 #include <unistd.h>

@@ -1,4 +1,4 @@
-What:       A New libkholiday
+What:       A New kholiday library
 Author:     Allen Winter <winter@kde.org>
 Version:    0.92 2006-04-02
 
@@ -8,7 +8,7 @@ about religious holidays, please let me know about it. --Allen
 
 I. Introduction
 
-   The current libkholidays code was borrowed from the 'plan' project
+   The current kholidays library code was borrowed from the 'plan' project
    many years ago and, has been discussed often on the KDE-PIM mailing list,
    we need to replace it with a modern library with a friendly license.
 
@@ -16,10 +16,10 @@ I. Introduction
 
 II. Goals
 
-   We hope that the new libkholidays will:
+   We hope that the new kholidays library will:
 
    A. allow KOrganizer to replace the holidays plugin with a KOCore
-      implementation that links to libkholidays.  
+      implementation that links to the kholidays library.  
 
    B. allow KOrganizer to support the holidays of many religions (through
       plugins if desired)

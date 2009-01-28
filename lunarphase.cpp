@@ -23,7 +23,7 @@
 */
 
 #include "lunarphase.h"
-#include <config-libkholidays.h>
+#include <config-kholidays.h>
 
 #include <KDebug>
 #include <KGlobal>
@@ -31,7 +31,7 @@
 
 #include <QDateTime>
 
-using namespace LibKHolidays;
+using namespace KHolidays;
 
 LunarPhase::LunarPhase()
 {
