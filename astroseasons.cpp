@@ -20,21 +20,16 @@
 */
 
 #include "astroseasons.h"
+
 #include <KLocale>
+
+#include <QtCore/QDate>
 
 using namespace LibKHolidays;
 
-AstroSeasons::AstroSeasons()
+QString AstroSeasons::seasonNameAtDate( const QDate &date )
 {
-}
-
-AstroSeasons::~AstroSeasons()
-{
-}
-
-QString AstroSeasons::seasonStr( const QDate &date ) const
-{
-  return seasonName( season( date ) );
+  return seasonName( seasonAtDate( date ) );
 }
 
 QString AstroSeasons::seasonName( AstroSeasons::Season season )
@@ -54,12 +49,12 @@ QString AstroSeasons::seasonName( AstroSeasons::Season season )
   }
 }
 
-AstroSeasons::Season AstroSeasons::season( const QDate &date ) const
+AstroSeasons::Season AstroSeasons::seasonAtDate( const QDate &date )
 {
-// see http://www.hermetic.ch/cal_sw/ve/ve.php
+  // see http://www.hermetic.ch/cal_sw/ve/ve.php
   Season retSeason = None;
 
-  int year = date.year();
+  const int year = date.year();
   //Use dumb method for now
   if ( date == QDate( year, 6, 22 ) ) {
     return JuneSolstice;

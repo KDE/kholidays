@@ -20,23 +20,61 @@
 */
 
 #include "zodiac.h"
-#include <QDateTime>
+
 #include <KLocale>
+
+#include <QtCore/QDateTime>
+#include <QtCore/QSharedData>
 
 using namespace LibKHolidays;
 
-Zodiac::Zodiac( ZodiacType type )
+namespace LibKHolidays
 {
-  mType = type;
+
+class ZodiacPrivate : public QSharedData
+{
+  public:
+    ZodiacPrivate( Zodiac::ZodiacType type )
+      : mType( type )
+    {
+    }
+
+    ZodiacPrivate( const ZodiacPrivate &other )
+      : QSharedData( other )
+    {
+      mType = other.mType;
+    }
+
+    Zodiac::ZodiacType mType;
+};
+
+}
+
+Zodiac::Zodiac( ZodiacType type )
+  : d( new ZodiacPrivate( type ) )
+{
+}
+
+Zodiac::Zodiac( const Zodiac &other )
+  : d( other.d )
+{
 }
 
 Zodiac::~Zodiac()
 {
 }
 
-QString Zodiac::signStr( const QDate &date ) const
+Zodiac& Zodiac::operator=( const Zodiac &other )
 {
-  return signName( sign( date ) );
+  if ( &other != this )
+    d = other.d;
+
+  return *this;
+}
+
+QString Zodiac::signNameAtDate( const QDate &date ) const
+{
+  return signName( signAtDate( date ) );
 }
 
 QString Zodiac::signName( Zodiac::ZodiacSigns sign )
@@ -72,11 +110,11 @@ QString Zodiac::signName( Zodiac::ZodiacSigns sign )
   }
 }
 
-Zodiac::ZodiacSigns Zodiac::sign( const QDate &date ) const
+Zodiac::ZodiacSigns Zodiac::signAtDate( const QDate &date ) const
 {
     QDate startdate, enddate;
 
-    switch( mType ) {
+    switch( d->mType ) {
     case Tropical:
         startdate = QDate( date.year(), 1, 1 );
         enddate = QDate( date.year(), 1, 19 );

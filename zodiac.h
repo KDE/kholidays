@@ -52,11 +52,15 @@
 */
 
 #include "kholidays_export.h"
-#include <QtCore/QString>
+
+#include <QtCore/QSharedDataPointer>
 
 class QDate;
+class QString;
 
 namespace LibKHolidays {
+
+class ZodiacPrivate;
 
 class KHOLIDAYS_EXPORT Zodiac
 {
@@ -83,25 +87,28 @@ class KHOLIDAYS_EXPORT Zodiac
     };
 
     Zodiac( ZodiacType type );
+    Zodiac( const Zodiac &other );
     ~Zodiac();
 
+    Zodiac& operator=( const Zodiac &other );
+
     /**
-       Return the Zodaic sign for the specified Gregorian date.
+       Return the Zodiac sign for the specified Gregorian date.
        The enum 'None' is returned if one of the supported signs
        does not occur on the date.
 
        @param date compute the Zodiac sign for the specified Gregorian date.
     */
-    ZodiacSigns sign( const QDate &date ) const;
+    ZodiacSigns signAtDate( const QDate &date ) const;
 
     /**
        Return the Zodiac sign as a text string for the specified date.
-       A null string is returned if one of the supported Zodiac signss does
+       A null string is returned if one of the supported Zodiac signs does
        not occur on the date.
 
        @param date compute the Zodiac sign for the specified Gregorian date.
     */
-    QString signStr( const QDate &date ) const;
+    QString signNameAtDate( const QDate &date ) const;
 
     /**
        Return the string representation of Zodiac sign.
@@ -116,7 +123,7 @@ class KHOLIDAYS_EXPORT Zodiac
     static QString signSymbol( ZodiacSigns sign );
 
   private:
-    ZodiacType mType;
+    QSharedDataPointer<ZodiacPrivate> d;
 };
 
 }

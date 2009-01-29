@@ -32,21 +32,21 @@ using namespace LibKHolidays;
 void SeasonsTest::test2005()
 {
   AstroSeasons as;
-  QVERIFY( as.season( QDate( 2005, 3, 22 ) ) == AstroSeasons::MarchEquinox );
-  QVERIFY( as.season( QDate( 2005, 6, 22 ) ) == AstroSeasons::JuneSolstice );
-  QVERIFY( as.season( QDate( 2005, 9, 22 ) ) == AstroSeasons::SeptemberEquinox );
-  QVERIFY( as.season( QDate( 2005, 12, 22 ) ) == AstroSeasons::DecemberSolstice );
-  QVERIFY( as.season( QDate( 2005, 1, 22 ) ) == AstroSeasons::None );
-  QVERIFY( as.season( QDate( 2005, 12, 31 ) ) == AstroSeasons::None );
+  QVERIFY( as.seasonAtDate( QDate( 2005, 3, 22 ) ) == AstroSeasons::MarchEquinox );
+  QVERIFY( as.seasonAtDate( QDate( 2005, 6, 22 ) ) == AstroSeasons::JuneSolstice );
+  QVERIFY( as.seasonAtDate( QDate( 2005, 9, 22 ) ) == AstroSeasons::SeptemberEquinox );
+  QVERIFY( as.seasonAtDate( QDate( 2005, 12, 22 ) ) == AstroSeasons::DecemberSolstice );
+  QVERIFY( as.seasonAtDate( QDate( 2005, 1, 22 ) ) == AstroSeasons::None );
+  QVERIFY( as.seasonAtDate( QDate( 2005, 12, 31 ) ) == AstroSeasons::None );
 }
 
 void SeasonsTest::test2007()
 {
   AstroSeasons as;
-  QVERIFY( as.season( QDate( 2007, 3, 22 ) ) == AstroSeasons::MarchEquinox );
-  QVERIFY( as.season( QDate( 2007, 6, 22 ) ) == AstroSeasons::JuneSolstice );
-  QVERIFY( as.season( QDate( 2007, 9, 22 ) ) == AstroSeasons::SeptemberEquinox );
-  QVERIFY( as.season( QDate( 2007, 12, 22 ) ) == AstroSeasons::DecemberSolstice );
-  QVERIFY( as.season( QDate( 2007, 1, 2 ) ) == AstroSeasons::None );
-  QVERIFY( as.season( QDate( 2007, 11, 30 ) ) == AstroSeasons::None );
+  QVERIFY( as.seasonAtDate( QDate( 2007, 3, 22 ) ) == AstroSeasons::MarchEquinox );
+  QVERIFY( as.seasonAtDate( QDate( 2007, 6, 22 ) ) == AstroSeasons::JuneSolstice );
+  QVERIFY( as.seasonAtDate( QDate( 2007, 9, 22 ) ) == AstroSeasons::SeptemberEquinox );
+  QVERIFY( as.seasonAtDate( QDate( 2007, 12, 22 ) ) == AstroSeasons::DecemberSolstice );
+  QVERIFY( as.seasonAtDate( QDate( 2007, 1, 2 ) ) == AstroSeasons::None );
+  QVERIFY( as.seasonAtDate( QDate( 2007, 11, 30 ) ) == AstroSeasons::None );
 }

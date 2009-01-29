@@ -23,11 +23,13 @@
 #define KHOLIDAYS_LUNARPHASE_H
 
 #include "kholidays_export.h"
-#include <QtCore/QString>
 
 class QDate;
+class QString;
 
 namespace LibKHolidays {
+
+class LunarPhasePrivate;
 
 /**
   Represents and manages a Lunar Phase
@@ -60,23 +62,12 @@ class KHOLIDAYS_EXPORT LunarPhase
       in phase().
     */
     enum Phase {
-      NewMoon,
-      FirstQuarter,
-      LastQuarter,
-      FullMoon,
-      None
+      NewMoon,      ///< New moon phase
+      FirstQuarter, ///< First quarter of moon phase
+      LastQuarter,  ///< Last quarter of moon phase
+      FullMoon,     ///< Full moon phase
+      None          ///< Indication for error
     };
-
-    /**
-      Constructor.
-    */
-
-    LunarPhase();
-
-    /**
-      Destructor.
-    */
-    ~LunarPhase();
 
     /**
        Return the lunar phase for the specified Gregorian date.
@@ -85,7 +76,7 @@ class KHOLIDAYS_EXPORT LunarPhase
 
        @param date compute the lunar phase for the specified Gregorian date.
     */
-    Phase phase( const QDate &date ) const;
+    static Phase phaseAtDate( const QDate &date );
 
     /**
        Return the lunar phase as a text string for the specified date.
@@ -94,7 +85,7 @@ class KHOLIDAYS_EXPORT LunarPhase
 
        @param date compute the lunar phase for the specified Gregorian date.
     */
-    QString phaseStr( const QDate &date ) const;
+    static QString phaseNameAtDate( const QDate &date );
 
     /**
        Return the string representation of phase.
@@ -102,32 +93,6 @@ class KHOLIDAYS_EXPORT LunarPhase
        @param phase the lunar phase.
     */
     static QString phaseName( Phase phase );
-
-  private:
-    /**
-       Return the phase of the moon as a percentage of full
-
-       @param t is the time since the Epoch, measured in seconds.
-
-       @return the percent fullness [0,100] of the moon.
-    */
-    double percentFull( uint t ) const;
-
-    /**
-       Convert degrees to radians.
-
-       @param degree degrees to convert.
-
-       @return degrees in radians.
-    */
-    double degreesToRadians( double degree ) const;
-
-    /**
-       Adjust value so that 0 <= degree <= 360.
-
-       @param degree a pointer to the degree value.
-    */
-    void adj360( double *degree ) const;
 };
 
 }

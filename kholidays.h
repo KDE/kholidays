@@ -26,72 +26,128 @@
 #include "kholidays_export.h"
 
 #include <QtCore/QList>
+#include <QtCore/QSharedDataPointer>
 #include <QtCore/QString>
-#include <QtCore/QStringList>
 
 class QDate;
+class QStringList;
 
 namespace LibKHolidays {
 
-struct KHoliday {
-  QString text;
-  QString shortText;
-  int Category;
+class KHolidayPrivate;
+
+class KHOLIDAYS_EXPORT KHoliday
+{
+  friend class KHolidays;
+
+  public:
+    /**
+     * A list of holiday descriptions.
+     */
+    typedef QList<KHoliday> List;
+
+    /**
+     * Describes the date type of the holiday.
+     */
+    enum DayType
+    {
+      Workday,  ///< The holiday is a workday
+      Holiday   ///< The holiday is a real holiday
+    };
+
+    /**
+     * Creates an empty holiday.
+     */
+    KHoliday();
+
+    /**
+     * Creates a holiday from an @p other holiday.
+     */
+    KHoliday( const KHoliday &other );
+
+    /**
+     * Destroys the holiday object.
+     */
+    ~KHoliday();
+
+    /**
+     *
+     */
+    KHoliday& operator=( const KHoliday &other );
+
+    /**
+     * Returns the long description of the holiday.
+     */
+    QString text() const;
+
+    /**
+     * Returns the short description of the holiday.
+     */
+    QString shortText() const;
+
+    /**
+     * Returns the day type of the holiday.
+     */
+    DayType dayType() const;
+
+  private:
+    QSharedDataPointer<KHolidayPrivate> d;
 };
 
 class KHOLIDAYS_EXPORT KHolidays
 {
   public:
     /**
-       Return a list of all available location codes which have a holiday definition.
-       One of these can then be passed to the constructor for a new KHolidays
-       object.
-    */
-    static QStringList locations();
-
-    /**
-       Constructor.
-       @param location the code for the country or region. If null
-              or unknown, an empty instance will be created.
+     * Creates a new holidays object.
+     *
+     * @param location The code for the country or region.
+     *                 If null or unknown, an empty instance will be created.
      */
     explicit KHolidays( const QString &location = QString() );
+
+    /**
+     * Destroys the holidays object.
+     */
     ~KHolidays();
 
     /**
-      Returns the holiday location.
-      This is a code representing the country or region.
-      @return region code, or null if the instance was constructed with
-              an unknown region
-    */
-    QString location() const;
-
-    QList<KHoliday> getHolidays( const QDate &date ) const;
+     *  Return a list of all available location codes which have a holiday definition.
+     *
+     *  One of these can then be passed to the constructor for a new KHolidays
+     *  object.
+     */
+    static QStringList locations();
 
     /**
-       Checks whether there is any holiday defined for a date.
+     * Returns the holiday location.
+     *
+     * The holiday location is a code representing the country or region.
+     *
+     * @return region code, or null if the instance was constructed with
+     *         an unknown region
+     */
+    QString location() const;
+
+    /**
+     * Returns the list of holidays that occur on a @p date.
+     */
+    KHoliday::List holidays( const QDate &date ) const;
+
+    /**
+     * Checks whether there is any holiday defined for a @p date.
      */
     bool isHoliday( const QDate &date ) const;
 
     /**
-       Returns whether the instance contains any holiday data.
+     * Returns whether the instance contains any holiday data.
      */
     bool isValid() const;
 
-    enum {
-      WORKDAY,
-      HOLIDAY
-    };
-
   private:
-    // Prohibit copying
-    KHolidays( const KHolidays & );
-    KHolidays &operator=( const KHolidays & );
+    Q_DISABLE_COPY( KHolidays )
 
-    bool parseFile( const QDate &date ) const;
-
-    QString mLocation;    // location string used to determine holidays file
-    QString mHolidayFile; // full path of file containing holiday data, or null
-    mutable int mYearLast;// save of the last year we have seen
+    class Private;
+    Private* const d;
 };
 
 }

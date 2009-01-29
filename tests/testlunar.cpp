@@ -97,7 +97,7 @@ void LunarTest::test2005()
   QList<QDate> firstQuarter, fullMoon, lastQuarter, newMoon;
   for ( int i=1; i<=365; ++i ) {
     qd = qd.addDays( 1 );
-    LunarPhase::Phase phase = lp.phase( qd );
+    LunarPhase::Phase phase = lp.phaseAtDate( qd );
     if ( phase == LunarPhase::FirstQuarter ) {
       firstQuarter.append( qd );
       kDebug() <<"first quarter" << qd;
@@ -187,7 +187,7 @@ void LunarTest::test2007()
   QList<QDate> firstQuarter, fullMoon, lastQuarter, newMoon;
   for ( int i=1; i<=365; ++i ) {
     qd = qd.addDays( 1 );
-    LunarPhase::Phase phase = lp.phase( qd );
+    LunarPhase::Phase phase = lp.phaseAtDate( qd );
     if ( phase == LunarPhase::FirstQuarter ) {
       firstQuarter.append( qd );
       kDebug() <<"first quarter" << qd;

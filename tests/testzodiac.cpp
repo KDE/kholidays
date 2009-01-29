@@ -52,7 +52,7 @@ int main( int argc, char **argv )
   Zodiac zd( Zodiac::Tropical );
   QDate qd( year, 1, 1 );
   for ( int i=1; i<=days; ++i ) {
-      sign = zd.sign( qd );
+      sign = zd.signAtDate( qd );
       pStr = zd.signName( sign );
       if ( !pStr.isNull() ) {
           cout << qd.toString( Qt::TextDate ).toLocal8Bit().constData() << ": "
@@ -66,7 +66,7 @@ int main( int argc, char **argv )
   Zodiac zd2( Zodiac::Sidereal );
   QDate qd2( year, 1, 1 );
   for ( int i=1; i<=days; ++i ) {
-      sign = zd2.sign( qd2 );
+      sign = zd2.signAtDate( qd2 );
       pStr = zd2.signName( sign );
       if ( !pStr.isNull() ) {
           cout << qd2.toString( Qt::TextDate ).toLocal8Bit().constData() << ": "

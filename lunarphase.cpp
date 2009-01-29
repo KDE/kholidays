@@ -29,21 +29,17 @@
 #include <KGlobal>
 #include <KLocale>
 
-#include <QDateTime>
+#include <QtCore/QDateTime>
 
 using namespace LibKHolidays;
 
-LunarPhase::LunarPhase()
-{
-}
+static double percentFull( uint tmpt );
+static double degreesToRadians( double degree );
+static void adj360( double *degree );
 
-LunarPhase::~LunarPhase()
+QString LunarPhase::phaseNameAtDate( const QDate &date )
 {
-}
-
-QString LunarPhase::phaseStr( const QDate &date ) const
-{
-  return phaseName( phase( date ) );
+  return phaseName( phaseAtDate( date ) );
 }
 
 QString LunarPhase::phaseName( LunarPhase::Phase phase )
@@ -63,14 +59,14 @@ QString LunarPhase::phaseName( LunarPhase::Phase phase )
   }
 }
 
-LunarPhase::Phase LunarPhase::phase( const QDate &date ) const
+LunarPhase::Phase LunarPhase::phaseAtDate( const QDate &date )
 {
   Phase retPhase = None;
 
   // compute percent-full for the middle of today and yesterday.
-  QTime anytime( 0, 0, 0 );
-  QDateTime today( date, anytime, Qt::UTC );
-  double todayPer = percentFull( today.toTime_t() ) + 0.5;
+  const QTime anytime( 0, 0, 0 );
+  const QDateTime today( date, anytime, Qt::UTC );
+  const double todayPer = percentFull( today.toTime_t() ) + 0.5;
 
   if ( static_cast<int>( todayPer ) == 100 ) {
     retPhase = FullMoon;
@@ -79,8 +75,8 @@ LunarPhase::Phase LunarPhase::phase( const QDate &date ) const
     retPhase = NewMoon;
     //kDebug() << date << " todayPer: " << todayPer << " " << phaseName( retPhase );
   } else {
-    QDateTime tomorrow( date.addDays( 1 ), anytime, Qt::UTC );
-    double tomorrowPer = percentFull( tomorrow.toTime_t() );
+    const QDateTime tomorrow( date.addDays( 1 ), anytime, Qt::UTC );
+    const double tomorrowPer = percentFull( tomorrow.toTime_t() );
 
     if ( static_cast<int>( todayPer ) == 50 ) {
       retPhase = ( tomorrowPer > todayPer ) ? FirstQuarter : LastQuarter;
@@ -184,7 +180,7 @@ LunarPhase::Phase LunarPhase::phase( const QDate &date ) const
  * percentFull --
  *	return phase of the moon as a percentage of full
  */
-double LunarPhase::percentFull( uint tmpt ) const
+static double percentFull( uint tmpt )
 {
   double N, Msol, Ec, LambdaSol, l, Mm, Ev, Ac, A3, Mmprime;
   double A4, lprime, V, ldprime, D, Nm;
@@ -223,7 +219,7 @@ double LunarPhase::percentFull( uint tmpt ) const
  * degreesToRadians --
  *	convert degrees to radians
  */
-double LunarPhase::degreesToRadians( double degree ) const
+static double degreesToRadians( double degree )
 {
   return ( degree * PI ) / 180.00;
 }
@@ -232,7 +228,7 @@ double LunarPhase::degreesToRadians( double degree ) const
  * adj360 --
  *	adjust value so 0 <= degree <= 360
  */
-void LunarPhase::adj360( double *degree ) const
+static void adj360( double *degree )
 {
   for ( ;; ) {
     if ( *degree < 0 ) {

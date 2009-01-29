@@ -42,16 +42,17 @@
    the traditional "Seasons" which vary widely by culture.
 */
 
-#include <QtCore/QString>
-#include <QtCore/QDateTime>
-
 #include "kholidays_export.h"
+
+class QDate;
+class QString;
 
 namespace LibKHolidays {
 
 class KHOLIDAYS_EXPORT AstroSeasons
 {
   public:
+
     enum Season {
       JuneSolstice,
       DecemberSolstice,
@@ -60,9 +61,6 @@ class KHOLIDAYS_EXPORT AstroSeasons
       None
     };
 
-    AstroSeasons();
-    ~AstroSeasons();
-
     /**
        Return the season for the specified Gregorian date.
        The enum 'None' is returned if one of the supported seasons
@@ -70,7 +68,7 @@ class KHOLIDAYS_EXPORT AstroSeasons
 
        @param date compute the season for the specified Gregorian date.
     */
-    Season season( const QDate &date ) const;
+    static Season seasonAtDate( const QDate &date );
 
     /**
        Return the season as a text string for the specified date.
@@ -79,7 +77,7 @@ class KHOLIDAYS_EXPORT AstroSeasons
 
        @param date compute the season for the specified Gregorian date.
     */
-    QString seasonStr( const QDate &date ) const;
+    static QString seasonNameAtDate( const QDate &date );
 
     /**
        Return the string representation of season.
@@ -87,19 +85,6 @@ class KHOLIDAYS_EXPORT AstroSeasons
        @param season astronomical season.
     */
     static QString seasonName( Season season );
-
-  private:
-    /**
-       Return the approximate time of a solstice or equinox event.
-       The year must be in the range -1000...3000.  Within that range the
-       the error from the precise instant is at most 2.16 minutes.
-
-       @param year year.
-       @param Season astronomical season.
-
-       @return the Julian Day of the event in dynamical time.
-    */
-    double approxEquinox( int year, Season season );
 };
 
 }
