@@ -30,6 +30,4 @@ install(TARGETS kholidays EXPORT kdepimlibsLibraryTargets ${INSTALL_TARGETS_DEFA
 
 ########### install files ###############
 
-install( FILES kimap_export.h rfccodecs.h DESTINATION ${INCLUDE_INSTALL_DIR}/kimap  COMPONENT Devel)
-~
-
+install(FILES kholidays_export.h astroseasons.h kholidays.h lunarphase.h zodiac.h DESTINATION ${INCLUDE_INSTALL_DIR}/kholidays COMPONENT Devel)
