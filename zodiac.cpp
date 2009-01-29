@@ -236,29 +236,29 @@ QString Zodiac::signSymbol( Zodiac::ZodiacSigns sign )
 {
   switch( sign ) {
   case Aries:
-    return i18n( "ram" );
+    return i18nc( "zodiac symbol for Aries", "ram" );
   case Taurus:
-    return i18n( "bull" );
+    return i18nc( "zodiac symbol for Taurus", "bull" );
   case Gemini:
-    return i18n( "twins" );
+    return i18nc( "zodiac symbol for Gemini", "twins" );
   case Cancer:
-    return i18n( "crab" );
+    return i18nc( "zodiac symbol for Cancer", "crab" );
   case Leo:
-    return i18n( "lion" );
+    return i18nc( "zodiac symbol for Leo", "lion" );
   case Virgo:
-    return i18n( "virgin" );
+    return i18nc( "zodiac symbol for Virgo", "virgin" );
   case Libra:
-    return i18n( "scales" );
+    return i18nc( "zodiac symbol for Libra", "scales" );
   case Scorpio:
-    return i18n( "scorpion" );
+    return i18nc( "zodiac symbol for Scorpion", "scorpion" );
   case Sagittarius:
-    return i18n( "archer" );
+    return i18nc( "zodiac symbol for Sagittarius", "archer" );
   case Capricorn:
-    return i18n( "goat" );
+    return i18nc( "zodiac symbol for Capricorn", "goat" );
   case Aquarius:
-    return i18n( "water" );
+    return i18nc( "zodiac symbol for Aquarius", "water" );
   case Pisces:
-    return i18n( "fish" );
+    return i18nc( "zodiac symbol for Pices", "fish" );
   default:
   case None:
     return QString();
