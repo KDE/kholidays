@@ -42,8 +42,8 @@
    the traditional "Seasons" which vary widely by culture.
 */
 
-#include <QString>
-#include <QDateTime>
+#include <QtCore/QString>
+#include <QtCore/QDateTime>
 
 #include "kholidays_export.h"
 

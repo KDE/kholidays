@@ -25,9 +25,9 @@
 
 #include "kholidays_export.h"
 
-#include <QList>
-#include <QString>
-#include <QStringList>
+#include <QtCore/QList>
+#include <QtCore/QString>
+#include <QtCore/QStringList>
 
 class QDate;
 

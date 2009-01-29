@@ -52,7 +52,7 @@
 */
 
 #include "kholidays_export.h"
-#include <QString>
+#include <QtCore/QString>
 
 class QDate;
 
