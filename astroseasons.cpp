@@ -25,7 +25,7 @@
 
 #include <QtCore/QDate>
 
-using namespace LibKHolidays;
+using namespace KHolidays;
 
 QString AstroSeasons::seasonNameAtDate( const QDate &date )
 {

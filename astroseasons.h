@@ -47,7 +47,7 @@
 class QDate;
 class QString;
 
-namespace LibKHolidays {
+namespace KHolidays {
 
 class KHOLIDAYS_EXPORT AstroSeasons
 {

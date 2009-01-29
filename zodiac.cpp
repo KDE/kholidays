@@ -26,9 +26,9 @@
 #include <QtCore/QDateTime>
 #include <QtCore/QSharedData>
 
-using namespace LibKHolidays;
+using namespace KHolidays;
 
-namespace LibKHolidays
+namespace KHolidays
 {
 
 class ZodiacPrivate : public QSharedData
@@ -64,10 +64,11 @@ Zodiac::~Zodiac()
 {
 }
 
-Zodiac& Zodiac::operator=( const Zodiac &other )
+Zodiac &Zodiac::operator=( const Zodiac &other )
 {
-  if ( &other != this )
+  if ( &other != this ) {
     d = other.d;
+  }
 
   return *this;
 }

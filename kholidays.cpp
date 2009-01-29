@@ -29,7 +29,7 @@
 #include <QtCore/QFile>
 #include <QtCore/QSharedData>
 
-using namespace LibKHolidays;
+using namespace KHolidays;
 
 extern "C" {
   char *parse_holidays( const char *, int year, short force );
@@ -44,7 +44,7 @@ extern "C" {
   extern struct holiday holidays[366];
 }
 
-namespace LibKHolidays {
+namespace KHolidays {
 
 class KHolidayPrivate : public QSharedData
 {
@@ -82,10 +82,11 @@ KHoliday::~KHoliday()
 {
 }
 
-KHoliday& KHoliday::operator=( const KHoliday &other )
+KHoliday &KHoliday::operator=( const KHoliday &other )
 {
-  if ( &other != this )
+  if ( &other != this ) {
     d = other.d;
+  }
 
   return *this;
 }
@@ -105,8 +106,7 @@ KHoliday::DayType KHoliday::dayType() const
   return d->mDayType;
 }
 
-
-class KHolidays::Private
+class KHolidayRegion::Private
 {
   public:
     Private( const QString &location )
@@ -138,23 +138,22 @@ class KHolidays::Private
       return true;
     }
 
-
     QString mLocation;     // location string used to determine holidays file
     QString mHolidayFile;  // full path of file containing holiday data, or null
     mutable int mYearLast; // save of the last year we have seen
 };
 
-KHolidays::KHolidays( const QString &location )
+KHolidayRegion::KHolidayRegion( const QString &location )
   : d( new Private( location ) )
 {
 }
 
-KHolidays::~KHolidays()
+KHolidayRegion::~KHolidayRegion()
 {
   delete d;
 }
 
-QStringList KHolidays::locations()
+QStringList KHolidayRegion::locations()
 {
   const QStringList files =
     KGlobal::dirs()->findAllResources( "data", "libkholidays/holiday_*",
@@ -169,17 +168,17 @@ QStringList KHolidays::locations()
   return locs;
 }
 
-QString KHolidays::location() const
+QString KHolidayRegion::location() const
 {
   return d->mLocation;
 }
 
-bool KHolidays::isValid() const
+bool KHolidayRegion::isValid() const
 {
   return !d->mHolidayFile.isEmpty();
 }
 
-KHoliday::List KHolidays::holidays( const QDate &date ) const
+KHoliday::List KHolidayRegion::holidays( const QDate &date ) const
 {
   KHoliday::List list;
   if ( !d->parseFile( date ) ) {
@@ -201,7 +200,7 @@ KHoliday::List KHolidays::holidays( const QDate &date ) const
   return list;
 }
 
-bool KHolidays::isHoliday( const QDate &date ) const
+bool KHolidayRegion::isHoliday( const QDate &date ) const
 {
   if ( !d->parseFile( date ) ) {
     return false;

@@ -27,7 +27,7 @@
 QTEST_KDEMAIN( SeasonsTest, NoGUI )
 
 #include "kholidays/astroseasons.h"
-using namespace LibKHolidays;
+using namespace KHolidays;
 
 void SeasonsTest::test2005()
 {

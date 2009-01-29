@@ -58,7 +58,7 @@
 class QDate;
 class QString;
 
-namespace LibKHolidays {
+namespace KHolidays {
 
 class ZodiacPrivate;
 
@@ -90,7 +90,7 @@ class KHOLIDAYS_EXPORT Zodiac
     Zodiac( const Zodiac &other );
     ~Zodiac();
 
-    Zodiac& operator=( const Zodiac &other );
+    Zodiac &operator=( const Zodiac &other );
 
     /**
        Return the Zodiac sign for the specified Gregorian date.

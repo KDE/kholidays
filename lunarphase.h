@@ -27,7 +27,7 @@
 class QDate;
 class QString;
 
-namespace LibKHolidays {
+namespace KHolidays {
 
 class LunarPhasePrivate;
 

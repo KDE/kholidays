@@ -31,7 +31,7 @@
 
 #include <QtCore/QDateTime>
 
-using namespace LibKHolidays;
+using namespace KHolidays;
 
 static double percentFull( uint tmpt );
 static double degreesToRadians( double degree );
