@@ -28,10 +28,7 @@
 
 using namespace KHolidays;
 
-namespace KHolidays
-{
-
-class ZodiacPrivate : public QSharedData
+class KHolidays::ZodiacPrivate : public QSharedData
 {
   public:
     ZodiacPrivate( Zodiac::ZodiacType type )
@@ -47,8 +44,6 @@ class ZodiacPrivate : public QSharedData
 
     Zodiac::ZodiacType mType;
 };
-
-}
 
 Zodiac::Zodiac( ZodiacType type )
   : d( new ZodiacPrivate( type ) )
