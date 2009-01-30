@@ -49,7 +49,7 @@ class QString;
 
 namespace KHolidays {
 
-class KHOLIDAYS_EXPORT AstroSeasons
+class KHOLIDAYS_EXPORT AstroSeasons //krazy:exclude=dpointer
 {
   public:
 

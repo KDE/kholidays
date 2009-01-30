@@ -29,8 +29,6 @@ class QString;
 
 namespace KHolidays {
 
-class LunarPhasePrivate;
-
 /**
   Represents and manages a Lunar Phase
 
@@ -53,7 +51,7 @@ class LunarPhasePrivate;
 
    Note that crescent and gibbous phases are not currently supported.
 */
-class KHOLIDAYS_EXPORT LunarPhase
+class KHOLIDAYS_EXPORT LunarPhase //krazy:exclude=dpointer
 {
   public:
     /**
