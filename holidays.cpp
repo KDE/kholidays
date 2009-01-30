@@ -21,7 +21,7 @@
   Boston, MA 02110-1301, USA.
 */
 
-#include "kholidays.h"
+#include "holidays.h"
 
 #include <KStandardDirs>
 
@@ -44,16 +44,14 @@ extern "C" {
   extern struct holiday holidays[366];
 }
 
-namespace KHolidays {
-
-class KHolidayPrivate : public QSharedData
+class KHolidays::HolidayPrivate : public QSharedData
 {
   public:
-    KHolidayPrivate()
+    HolidayPrivate()
     {
     }
 
-    KHolidayPrivate( const KHolidayPrivate &other )
+    HolidayPrivate( const HolidayPrivate &other )
       : QSharedData( other )
     {
       mText = other.mText;
@@ -63,26 +61,24 @@ class KHolidayPrivate : public QSharedData
 
     QString mText;
     QString mShortText;
-    KHoliday::DayType mDayType;
+    Holiday::DayType mDayType;
 };
 
-}
-
-KHoliday::KHoliday()
-  : d( new KHolidayPrivate )
+Holiday::Holiday()
+  : d( new HolidayPrivate )
 {
 }
 
-KHoliday::KHoliday( const KHoliday &other )
+Holiday::Holiday( const Holiday &other )
   : d( other.d )
 {
 }
 
-KHoliday::~KHoliday()
+Holiday::~Holiday()
 {
 }
 
-KHoliday &KHoliday::operator=( const KHoliday &other )
+Holiday &Holiday::operator=( const Holiday &other )
 {
   if ( &other != this ) {
     d = other.d;
@@ -91,22 +87,22 @@ KHoliday &KHoliday::operator=( const KHoliday &other )
   return *this;
 }
 
-QString KHoliday::text() const
+QString Holiday::text() const
 {
   return d->mText;
 }
 
-QString KHoliday::shortText() const
+QString Holiday::shortText() const
 {
   return d->mShortText;
 }
 
-KHoliday::DayType KHoliday::dayType() const
+Holiday::DayType Holiday::dayType() const
 {
   return d->mDayType;
 }
 
-class KHolidayRegion::Private
+class HolidayRegion::Private
 {
   public:
     Private( const QString &location )
@@ -143,17 +139,17 @@ class KHolidayRegion::Private
     mutable int mYearLast; // save of the last year we have seen
 };
 
-KHolidayRegion::KHolidayRegion( const QString &location )
+HolidayRegion::HolidayRegion( const QString &location )
   : d( new Private( location ) )
 {
 }
 
-KHolidayRegion::~KHolidayRegion()
+HolidayRegion::~HolidayRegion()
 {
   delete d;
 }
 
-QStringList KHolidayRegion::locations()
+QStringList HolidayRegion::locations()
 {
   const QStringList files =
     KGlobal::dirs()->findAllResources( "data", "libkholidays/holiday_*",
@@ -168,19 +164,19 @@ QStringList KHolidayRegion::locations()
   return locs;
 }
 
-QString KHolidayRegion::location() const
+QString HolidayRegion::location() const
 {
   return d->mLocation;
 }
 
-bool KHolidayRegion::isValid() const
+bool HolidayRegion::isValid() const
 {
   return !d->mHolidayFile.isEmpty();
 }
 
-KHoliday::List KHolidayRegion::holidays( const QDate &date ) const
+Holiday::List HolidayRegion::holidays( const QDate &date ) const
 {
-  KHoliday::List list;
+  Holiday::List list;
   if ( !d->parseFile( date ) ) {
     return list;
   }
@@ -188,11 +184,11 @@ KHoliday::List KHolidayRegion::holidays( const QDate &date ) const
   struct holiday *hd = &::holidays[date.dayOfYear()-1];
   while ( hd ) {
     if ( hd->string ) {
-      KHoliday holiday;
+      Holiday holiday;
       holiday.d->mText = QString::fromUtf8( hd->string );
       holiday.d->mShortText = holiday.d->mText;
       holiday.d->mDayType = ( hd->color == 2/*red*/ ) || ( hd->color == 9/*weekend*/ ) ?
-                              KHoliday::Holiday : KHoliday::Workday;
+                              Holiday::NonWorkday : Holiday::Workday;
       list.append( holiday );
     }
     hd = hd->next;
@@ -200,7 +196,7 @@ KHoliday::List KHolidayRegion::holidays( const QDate &date ) const
   return list;
 }
 
-bool KHolidayRegion::isHoliday( const QDate &date ) const
+bool HolidayRegion::isHoliday( const QDate &date ) const
 {
   if ( !d->parseFile( date ) ) {
     return false;

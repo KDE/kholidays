@@ -34,45 +34,45 @@ class QStringList;
 
 namespace KHolidays {
 
-class KHolidayPrivate;
+class HolidayPrivate;
 
-class KHOLIDAYS_EXPORT KHoliday
+class KHOLIDAYS_EXPORT Holiday
 {
-  friend class KHolidayRegion;
+  friend class HolidayRegion;
 
   public:
     /**
      * A list of holiday descriptions.
      */
-    typedef QList<KHoliday> List;
+    typedef QList<Holiday> List;
 
     /**
      * Describes the date type of the holiday.
      */
     enum DayType {
-      Workday,  ///< The holiday is a workday
-      Holiday   ///< The holiday is a real holiday
+      Workday,   ///< The holiday is a workday
+      NonWorkday ///< The holiday is a real holiday
     };
 
     /**
      * Creates an empty holiday.
      */
-    KHoliday();
+    Holiday();
 
     /**
      * Creates a holiday from an @p other holiday.
      */
-    KHoliday( const KHoliday &other );
+    Holiday( const Holiday &other );
 
     /**
      * Destroys the holiday object.
      */
-    ~KHoliday();
+    ~Holiday();
 
     /**
      *
      */
-    KHoliday &operator=( const KHoliday &other );
+    Holiday &operator=( const Holiday &other );
 
     /**
      * Returns the long description of the holiday.
@@ -90,10 +90,10 @@ class KHOLIDAYS_EXPORT KHoliday
     DayType dayType() const;
 
   private:
-    QSharedDataPointer<KHolidayPrivate> d;
+    QSharedDataPointer<HolidayPrivate> d;
 };
 
-class KHOLIDAYS_EXPORT KHolidayRegion
+class KHOLIDAYS_EXPORT HolidayRegion
 {
   public:
     /**
@@ -102,17 +102,17 @@ class KHOLIDAYS_EXPORT KHolidayRegion
      * @param location The code for the country or region.
      *                 If null or unknown, an empty instance will be created.
      */
-    explicit KHolidayRegion( const QString &location = QString() );
+    explicit HolidayRegion( const QString &location = QString() );
 
     /**
      * Destroys the holidays object.
      */
-    ~KHolidayRegion();
+    ~HolidayRegion();
 
     /**
      *  Return a list of all available location codes which have a holiday definition.
      *
-     *  One of these can then be passed to the constructor for a new KHolidayRegion
+     *  One of these can then be passed to the constructor for a new HolidayRegion
      *  object.
      */
     static QStringList locations();
@@ -130,7 +130,7 @@ class KHOLIDAYS_EXPORT KHolidayRegion
     /**
      * Returns the list of holidays that occur on a @p date.
      */
-    KHoliday::List holidays( const QDate &date ) const;
+    Holiday::List holidays( const QDate &date ) const;
 
     /**
      * Checks whether there is any holiday defined for a @p date.
@@ -143,7 +143,7 @@ class KHOLIDAYS_EXPORT KHolidayRegion
     bool isValid() const;
 
   private:
-    Q_DISABLE_COPY( KHolidayRegion )
+    Q_DISABLE_COPY( HolidayRegion )
 
     class Private;
     Private *const d;

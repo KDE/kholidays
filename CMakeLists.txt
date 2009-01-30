@@ -12,7 +12,7 @@ configure_file(config-kholidays.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kholi
 ########### next target ###############
 
 set(kholidays_LIB_SRCS 
-  kholidays.cpp 
+  holidays.cpp 
   scanholiday.c 
   parseholiday.h 
   parseholiday.c 
@@ -30,4 +30,4 @@ install(TARGETS kholidays EXPORT kdepimlibsLibraryTargets ${INSTALL_TARGETS_DEFA
 
 ########### install files ###############
 
-install(FILES kholidays_export.h astroseasons.h kholidays.h lunarphase.h zodiac.h DESTINATION ${INCLUDE_INSTALL_DIR}/kholidays COMPONENT Devel)
+install(FILES kholidays_export.h astroseasons.h holidays.h lunarphase.h zodiac.h DESTINATION ${INCLUDE_INSTALL_DIR}/kholidays COMPONENT Devel)
