@@ -10,9 +10,9 @@ install( FILES
          holiday_br
          holiday_ca
          holiday_catalan
+         holiday_ch
          holiday_cl
          holiday_co
-         holiday_ch
          holiday_cz
          holiday_de
          holiday_dk
@@ -25,8 +25,9 @@ install( FILES
          holiday_gr
          holiday_gt
          holiday_hu
-         holiday_is
+         holiday_ie
          holiday_il
+         holiday_is
          holiday_it
          holiday_jm
          holiday_jp
@@ -43,13 +44,12 @@ install( FILES
          holiday_ru
          holiday_se
          holiday_si
+         holiday_sk
+         holiday_Suedtirol
          holiday_th
          holiday_ua
          holiday_us
          holiday_uy
-         holiday_ie
-         holiday_Suedtirol
          holiday_za
          DESTINATION ${DATA_INSTALL_DIR}/libkholidays)
-
 
