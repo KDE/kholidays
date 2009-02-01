@@ -4,6 +4,7 @@
 :
 : Helligdage
 "Hellig tre Konger" on 6.1
+"Kyndelmisse" on 2.2
 weekend "Fastelavn" weekend on easter minus 49 days
 weekend "Palme søndag" weekend on easter minus 7 days
 weekend "Skærtorsdag" weekend on easter minus 3 days
@@ -30,13 +31,15 @@ weekend "Grundlovsdag/Fars dag" weekend on 5.6
 :
 : Nationale mærkedage
 "Kampen ved Myslunde 1864" on 2.2
-"Stormen på København 1659" on second tuesday in february
-"Slaget på reden 1801" on 2.4
+"Stormen på København 1659" on 11.2
+"Slaget på Reden 1801" on 2.4
 "Danmarks Besættelse 1940" on 9.4
 "Slaget ved Dybbøl 1864" on 18.4
 "Danmarks befrielse 1945" on 5.5
 "Kampen ved Helgoland 1864" on 9.5
-"Valdemarsdag/Genforeningsdag" on 15.6
+"Europadagen" on 9.5
+"Valdemarsdag/Genforeningsdagen 1920" on 15.6
+"Slaget i Køge Bugt" on 1.6
 "Slaget ved Fredericia 1849" on 6.7
 "Slaget ved Isted 1850" on 25.7
 "Stormen på Frederiksstad 1850" on 4.10
@@ -44,16 +47,18 @@ weekend "Grundlovsdag/Fars dag" weekend on 5.6
 :
 : Royale fødselsdage
 "Kronprinsesse Mary" on 5.2
+"Prinsesse Marie" on 6.2
 "Dronning Margrete II" on 16.4
+"Prinsesse Isabella" on 21.4
 "Prinsesse Benedikte" on 29.4
 "Kronprins Frederik" on 26.5
 "Prins Joachim" on 7.6
 "Prins Henrik" on 11.6
-"Prinsesse Alexandra" on 30.6
 "Prins Felix" on 22.7
 "Prins Nikolai" on 28.8
+"Prins Christian" on 15.10
 :
 : Andet
-small blue "Sommertid" on last sunday in march
-small blue "Vintertid" on last sunday in october
+small blue "Sommertid begynder" on last sunday in march
+small blue "Sommertid ender" on last sunday in october
 "Mors dag" on second sunday in may
