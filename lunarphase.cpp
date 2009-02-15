@@ -192,7 +192,7 @@ static double percentFull( uint tmpt )
   adj360( &N );
   Msol = N + EPSILONg - RHOg;                                  /* sec 46 #4 */
   adj360( &Msol );
-  Ec = 360 / PI * ECCEN * sinl( degreesToRadians( Msol ) );    /* sec 46 #5 */
+  Ec = 360 / PI * ECCEN * sin( degreesToRadians( Msol ) );     /* sec 46 #5 */
   LambdaSol = N + Ec + EPSILONg;                               /* sec 46 #6 */
   adj360( &LambdaSol );
   l = 13.1763966 * days + lzero;                               /* sec 65 #4 */
@@ -201,17 +201,17 @@ static double percentFull( uint tmpt )
   adj360( &Mm );
   Nm = Nzero - ( 0.0529539 * days );                           /* sec 65 #6 */
   adj360( &Nm );
-  Ev = 1.2739 * sinl( degreesToRadians( 2 * ( l - LambdaSol ) - Mm ) ); /* sec 65 #7 */
-  Ac = 0.1858 * sinl( degreesToRadians( Msol ) );              /* sec 65 #8 */
-  A3 = 0.37 * sinl( degreesToRadians( Msol ) );
+  Ev = 1.2739 * sin( degreesToRadians( 2 * ( l - LambdaSol ) - Mm ) ); /* sec 65 #7 */
+  Ac = 0.1858 * sin( degreesToRadians( Msol ) );               /* sec 65 #8 */
+  A3 = 0.37 * sin( degreesToRadians( Msol ) );
   Mmprime = Mm + Ev - Ac - A3;                                 /* sec 65 #9 */
-  Ec = 6.2886 * sinl( degreesToRadians( Mmprime ) );           /* sec 65 #10 */
-  A4 = 0.214 * sinl( degreesToRadians( 2 * Mmprime ) );        /* sec 65 #11 */
+  Ec = 6.2886 * sin( degreesToRadians( Mmprime ) );            /* sec 65 #10 */
+  A4 = 0.214 * sin( degreesToRadians( 2 * Mmprime ) );         /* sec 65 #11 */
   lprime = l + Ev + Ec - Ac + A4;                              /* sec 65 #12 */
-  V = 0.6583 * sinl( degreesToRadians( 2 * ( lprime - LambdaSol ) ) );/* sec 65 #13 */
+  V = 0.6583 * sin( degreesToRadians( 2 * ( lprime - LambdaSol ) ) );/* sec 65 #13 */
   ldprime = lprime + V;                                        /* sec 65 #14 */
   D = ldprime - LambdaSol;                                     /* sec 67 #2 */
-  D = 50.0 * ( 1 - cosl( degreesToRadians( D ) ) );            /* sec 67 #3 */
+  D = 50.0 * ( 1 - cos( degreesToRadians( D ) ) );             /* sec 67 #3 */
   return D;
 }
 
