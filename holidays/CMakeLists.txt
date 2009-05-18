@@ -7,6 +7,7 @@ install( FILES
          holiday_BelgiumDutch
          holiday_BelgiumFrench
          holiday_BelgiumWalloon
+         holiday_bg
          holiday_br
          holiday_ca
          holiday_catalan
