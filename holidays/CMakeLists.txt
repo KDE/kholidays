@@ -28,6 +28,7 @@ install( FILES
          holiday_hu
          holiday_ie
          holiday_il
+         holiday_in
          holiday_is
          holiday_it
          holiday_jm
