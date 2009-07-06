@@ -1,0 +1,36 @@
+:
+: IN holiday file. Copy to ~/.holiday
+: These were taken from supremecourtofindia webpage, 
+: and Indian Embassy london page
+: Since different states have small changes it is very difficult to 
+: be accurate and cover everything.
+:
+: Author: Karthik. If you need any clarification please contact me
+:         molecularbiophysics@yahoo.com
+:
+: Most of these are Federal holidays
+: Note: Only the fixed holidays are available. Some celebrations depend on
+: special events, eg: Eid al-Fitr which depend on the ramadan end date,
+: Holi, Divali and  Raksh Bandan which depend on the moon phase (not handled
+: in kholidays)
+
+small "New Year holiday" on january 1
+small "Muharram" on january 10
+small "Republic Day" on january 26
+: small "Milad-un-Nabi" on march 9
+: small "Holi -Festival of Colours" on march 14
+: small "Ram navami" on april 3
+: small "Mahavir Jayanthi" on april 7
+: small "Good Friday" on april 10
+: small "Buddha Purnima" on may 9
+: small "Raksha Bandhan" on august 5
+: small "Janmashtami" on august 14
+small "Independence Day" on august 15
+: small "Idu'l Fitr" on september 21
+: small "Dussehra(Vijaya Dashami)" on september 28
+small "Mahatma Gandhi's Birthday" on october 2
+: small "Diwali" on October 17
+: small "Guru Nanak's Birthday" November 2
+: small "Bakrid" November 28
+small "Christmas" December 25
+: small "Muharram" December 28
