@@ -9,7 +9,7 @@ include_directories(
 set(testlunar_SRCS testlunar.cpp )
 
 
-kde4_add_unit_test(testlunar TESTNAME kcal-testlunar ${testlunar_SRCS})
+kde4_add_unit_test(testlunar TESTNAME kholidays-testlunar ${testlunar_SRCS})
 
 target_link_libraries(testlunar ${KDE4_KDECORE_LIBS} kholidays ${QT_QTTEST_LIBRARY} ${QT_QTGUI_LIBRARY})
 
@@ -18,7 +18,7 @@ target_link_libraries(testlunar ${KDE4_KDECORE_LIBS} kholidays ${QT_QTTEST_LIBRA
 set(testseasons_SRCS testseasons.cpp )
 
 
-kde4_add_unit_test(testseasons TESTNAME kcal-testseasons ${testseasons_SRCS})
+kde4_add_unit_test(testseasons TESTNAME kholidays-testseasons ${testseasons_SRCS})
 
 target_link_libraries(testseasons ${KDE4_KDECORE_LIBS} kholidays ${QT_QTTEST_LIBRARY} ${QT_QTGUI_LIBRARY})
 
@@ -27,7 +27,7 @@ target_link_libraries(testseasons ${KDE4_KDECORE_LIBS} kholidays ${QT_QTTEST_LIB
 set(testzodiac_SRCS testzodiac.cpp )
 
 
-kde4_add_unit_test(testzodiac TESTNAME kcal-testzodiac ${testzodiac_SRCS})
+kde4_add_unit_test(testzodiac TESTNAME kholidays-testzodiac ${testzodiac_SRCS})
 
 target_link_libraries(testzodiac ${KDE4_KDECORE_LIBS} kholidays ${QT_QTTEST_LIBRARY})
 
