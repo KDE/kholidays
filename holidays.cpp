@@ -177,6 +177,10 @@ bool HolidayRegion::isValid() const
 Holiday::List HolidayRegion::holidays( const QDate &date ) const
 {
   Holiday::List list;
+  if ( !date.isValid() ) {
+    return list;
+  }
+
   if ( !d->parseFile( date ) ) {
     return list;
   }
