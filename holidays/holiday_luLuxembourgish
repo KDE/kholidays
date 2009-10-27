@@ -1,0 +1,18 @@
+:
+: Luxembourg holiday file. Copy to ~/.holiday
+:
+: Author: Georges Toth, <gtoth@trypill.org>
+: Adapted from Belgium (French) holiday by Guido van Rossum, CWI, Amsterdam <Guido.van.Rossum@cwi.nl>
+:
+small    "Neijoerschdag"        weekend on 1.1
+small    "Ouschteren"           weekend on easter
+small    "Ouschterméindeg"      weekend on easter plus 1 day
+small    "Éischte Mee"          weekend on 1.5
+small    "Christihimmelfahrt"   weekend on easter plus 39 days
+small    "Péngschten"           weekend on easter plus 49 days
+small    "Päischtméindeg"       weekend on easter plus 50 days
+small    "Nationale Feierdag"   weekend on 23.6
+small    "Maria Himmelfahrt"    weekend on 15.8
+small    "Allerhellegen"        weekend on 1.11
+small    "Chrëschtdag"          weekend on 25.12
+small    "Stiefesdag"           weekend on 26.12

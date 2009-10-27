@@ -35,6 +35,8 @@ install( FILES
          holiday_jm
          holiday_jp
          holiday_lt
+         holiday_luFrench
+         holiday_luLuxembourgish
          holiday_mx
          holiday_nl
          holiday_no

@@ -1,0 +1,18 @@
+:
+: Luxembourg holiday file. Copy to ~/.holiday
+:
+: Author: Georges Toth, <gtoth@trypill.org>
+: Adapted from Belgium (French) holiday by Guido van Rossum, CWI, Amsterdam <Guido.van.Rossum@cwi.nl>
+:
+small    "Nouvel an"           weekend on 1.1
+small    "Pâques"              weekend on easter
+small    "Lundi de Pâques"     weekend on easter plus 1 day
+small    "Fête du travail"     weekend on 1.5
+small    "Ascension"           weekend on easter plus 39 days
+small    "Pentecôte"           weekend on easter plus 49 days
+small    "Lundi de Pentecôte"  weekend on easter plus 50 days
+small    "Fête nationale"      weekend on 23.6
+small    "Assomption"          weekend on 15.8
+small    "Toussaint"           weekend on 1.11
+small    "Noël"                weekend on 25.12
+small    "Saint-Étienne"      weekend on 26.12
