@@ -1,27 +1,38 @@
 :
-: Archivo holiday_colombia. Cópialo a  ~/.holiday
-: Modifica este archivo borrando y añadiendo lo que te parezca.
+: Colombia holiday file
 :
-: Festivos 
-: 
-red "Año nuevo" red on january 1
-red "Reyes magos" red on monday after january 6
-red "San José" red on march 24
-red "Día del Trabajo" red on may 1
-red "Dia de la ascención" red on june 2
-red "Día del Corpus" red on monday after june 23
-red "San Pedro y San Pablo" red on monday after june 30
-red "Sagrado Corazón" red on monday after june 30
-red "Día de la Independencia" red on july 20
-red "Fiesta de la Batalla de Boyaca" red on august 7
-red "Asunción" red on monday after august 18
-red "Día de la Raza" red on october 13
-red "Todos los Santos" red on monday after november 3
-red "Independencia de Cartagena" red on november 17
-red "La Inmaculada" red on december 8
-red "Día de Navidad" red on december  25
+: See more
+: http://es.wikipedia.org/wiki/Fiestas_de_Colombia
 :
-: Relacionados con la pascua
 :
-small "Jueves Santo" weekend on easter minus 3 days
-small "Viernes Santo" weekend on easter minus 2 days
+: Author: Xavier Corredor Llano <xavier.corredor.llano <a> gmail.com>
+
+
+: National holidays (fijas)
+
+small "Año nuevo" weekend on 1/1
+small "Inmaculada Concepción" weekend on 12/8
+small "Día del Trabajo" weekend on 5/1
+small "Navidad" weekend on 12/25
+small "Grito de la Independencia" weekend on 7/20
+small "Batalla de Boyacá" weekend on 8/7
+
+: National holidays (primer lunes despues de fecha base)
+
+small "Epifanía" on monday after 1/6
+small "San José" weekend on monday after 3/19
+small "San Pedro y San Pablo" weekend on monday after 6/29
+small "Asunción de la Virgen" weekend on monday after 8/15
+small "Todos los Santos" weekend on monday after 11/1
+small "Día de la Raza" weekend on monday after 10/12
+small "Independencia de Cartagena" weekend on monday after 11/11
+
+: Pascua
+
+:small "Domingo de Ramos" weekend on easter minus 7
+small "Jueves Santo" weekend on easter minus 3
+small "Viernes Santo" weekend on easter minus 2
+:small "Domingo de Pascua" weekend on easter
+small "Ascensión de Jesús" weekend on easter plus 43
+small "Corpus Christi" weekend on easter plus 64
+small "Sagrado Corazón" weekend on easter plus 71
