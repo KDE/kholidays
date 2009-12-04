@@ -158,9 +158,7 @@ LunarPhase::Phase LunarPhase::phaseAtDate( const QDate &date )
 #include <time.h>
 #include <unistd.h>
 
-#ifndef PI
-#define	PI	  3.14159265358979323846
-#endif
+static double PI = 3.14159265358979323846;
 
 /*
  * The EPOCH in the third edition of the book is 1990 Jan 0.0 TDT.
@@ -168,13 +166,13 @@ LunarPhase::Phase LunarPhase::phaseAtDate( const QDate &date )
  * between UTC (as shown by the UNIX clock) and TDT.  (TDT = TAI + 32.184s;
  * TAI-UTC = 32s in Jan 1999.)
  */
-#define EPOCH_MINUS_1970        (20 * 365 + 5 - 1) /* 20 years, 5 leaps, back 1 day to Jan 0 */
-#define EPSILONg  279.403303    /* solar ecliptic long at EPOCH */
-#define RHOg      282.768422    /* solar ecliptic long of perigee at EPOCH */
-#define ECCEN     0.016713      /* solar orbit eccentricity */
-#define lzero     318.351648    /* lunar mean long at EPOCH */
-#define Pzero     36.340410     /* lunar mean long of perigee at EPOCH */
-#define Nzero     318.510107    /* lunar mean long of node at EPOCH */
+static int EPOCH_MINUS_1970 = (20 * 365 + 5 - 1); /* 20 years, 5 leaps, back 1 day to Jan 0 */
+static double EPSILONg = 279.403303;    /* solar ecliptic long at EPOCH */
+static double RHOg     = 282.768422;    /* solar ecliptic long of perigee at EPOCH */
+static double ECCEN    = 0.016713;      /* solar orbit eccentricity */
+static double lzero    = 318.351648;    /* lunar mean long at EPOCH */
+static double Pzero    = 36.340410;     /* lunar mean long of perigee at EPOCH */
+static double Nzero    = 318.510107;    /* lunar mean long of node at EPOCH */
 
 /*
  * percentFull --
