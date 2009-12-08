@@ -6,24 +6,25 @@
 :
 : Author: Jean-Claude Giese <giese@loria.fr>
 :
-blue "Jour de l'An" weekend on 1.1.
-cyan "Epiphanie" on first sunday in january
-blue "Pâques" weekend on easter length 2 days
-blue "Pentecôte" weekend on easter plus 49 days length 2 days
-blue "Ascension" weekend on easter plus 39 days
-blue "Fête du travail" weekend on 1.5.
-blue "Armistice 1945" weekend on 8.5.
-blue "Fête Nationale" weekend on 14.7.
-blue "Assomption" weekend on 15.8.
-cyan "Fête des mères" on last sunday in may
-cyan "Fête des pères" on third sunday in june
-blue "Toussaint" weekend on 1.11.
-blue "Armistice 1918" weekend on 11.11.
-blue "Noël" weekend on 25.12.
-cyan "St Sylvestre" on 31.12.
+red "Jour de l'An" weekend on 1.1.
+red "Pâques" weekend on easter length 2 days
+red "Pentecôte" weekend on easter plus 49 days length 2 days
+red "Ascension" weekend on easter plus 39 days
+red "Fête du travail" weekend on 1.5.
+red "Armistice 1945" weekend on 8.5.
+red "Fête Nationale" weekend on 14.7.
+red "Assomption" weekend on 15.8.
+red "Toussaint" weekend on 1.11.
+red "Armistice 1918" weekend on 11.11.
+red "Noël" weekend on 25.12.
+
+blue "Epiphanie" blue on first sunday in january
+cyan "Fête des mères" blue  on last sunday in may
+cyan "Fête des pères" blue on third sunday in june
+blue "St Sylvestre" blue on 31.12.
 
 : Seasons
-green "Printemps" on 20.3.
-green "Eté" on 21.6.
-green "Automne" on 23.9.
-green "Hiver" on 21.12.
+green "Printemps" green on 20.3.
+green "Eté" green on 21.6.
+green "Automne" green on 23.9.
+green "Hiver" green on 21.12.
