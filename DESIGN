@@ -6,6 +6,8 @@ This is a draft.  Please send constructive comments to the author.
 I'm trying hard not to offend anybody.  If I make a mistake, particularly
 about religious holidays, please let me know about it. --Allen
 
+[JPL 2009-12-13 Added a few comments.  John Layt <john@layt.net>]
+
 I. Introduction
 
    The current kholidays library code was borrowed from the 'plan' project
@@ -39,7 +41,7 @@ III. Definitions
 
    Public Holiday: a day-off from work or school (typically) to commemorate
         a historical event, or to honor people.  Public holidays are always
-        bounded to a political region.
+        bounded to a political region at national, regional or local level.
 
    Cultural Holiday : a special day in the culture and therefore usually
         bounded to a political region.  A day where people "celebrate"
@@ -72,6 +74,21 @@ IV. Requirements
      Gregorian calendar.  To use another calendar, one will need to convert
      their date to Gregorian first.
 
+   [JPL: No.  In Iran for instance if the rule for a public holiday is defined
+         as the 1st occurance of the 3rd weekday of the 9th month of the Jalali
+         calendar (first Chahar Shanbe of Azar) it would not be valid to
+         convert that into the first Wednesday of September in the Gregorian
+         calendar, there could be no formulation that would always work other
+         than expressing the rule in the Calendar System that it applies to.
+         This means all holiday recurrance rules not defined in the Gregorian
+         default must define the Calendar System used to calculate them.  This
+         may also mean the recurrence rules must always use month and weekday
+         numbers rather than names, except that some calendar systems such as
+         the Hebrew add leap months in the middle of the year which change the
+         month numbering but are not counted when calculating recurrances. Use
+         either the existing calendarType e.g. "jalali" or a new short code
+         "JA" or a new standard agreed on FDO?]
+
    * Religious holidays will be computed on the appropriate calendar.
      i.e. Jewish holidays on the Hebrew calendar.  The calling application
      can then convert the date to Gregorian, if desired.
@@ -82,7 +99,13 @@ IV. Requirements
    * Holidays of political regions will be specified in in files in a
      heirarchy similar to how timezones are stored in /usr/share/zoneinfo.
       eg. holidays/Canada/<Province>, holidays/US/<State>,
-          holidays/Europe/Germany/<Province>, holidays/Australia/<Province>, ...
+          holidays/Europe/Germany/<Province>, holidays/Australia/<State>, ...
+
+   [JPL: Political regions could be incorporated into KLocale and the Region
+         KCM to allow users to set a global default.  The ISO standard is
+         for-pay at this level, but Wikipedia has a fairly complete set so it
+         may still be legal to use.  We could also then tie regions and
+         timezones together for better timezone defaults.]
 
    * Religious holidays will be specified in files separate from the
      political region files, by religion name:
@@ -90,6 +113,13 @@ IV. Requirements
 
    * Be able to specify where to move public, day-off holidays if they
      land on a weekend.  This occurs for holidays with a fixed date.
+
+   [JPL
+   * Be able to specify where to move holidays if they reccur on a day that
+     doesn't exist, e.g. whether holiday on 29th February should only ever
+     occur on 29th Feb or should be moved to the 28th Feb or 1st March.  This
+     particularly applies to religious holidays in calendar systems where the
+     number of months and days in  months can vary more than in Gregorian. ]
 
    * Be able to specify holidays with compound dates; i.e, be able to 
      combine specifications.  For example: "First Monday after May 1"
@@ -128,6 +158,10 @@ IV. Requirements
    * Each Holiday can have any combination of Holiday type.
 
    * Each Holiday can have its own icon.
+
+   [JPL: Each Holiday Type could also have a default icon and colour, e.g.
+         national work day-off marked in red, regional day off in blue,
+         financial in green, etc.  Perhaps able to be user or locale modified?]
 
    * For the most part, keep religious holidays out of public holidays
      and in their own specific holiday files.  The exception is when
@@ -278,3 +312,17 @@ See Reinhold's XML DTD (holiday.dtd)
 A good starting point [..for parsing Reinhold's XML..] would be to use some code
 from the kconfig_compiler in kdelibs/kdecore/kconfig_compiler, which parses
 the XML file.
+
+-----------------
+
+JPL  Pre-requisite steps?:
+
+KLocale & KCM:   Add political regions to countries, allow kcm to set up
+                 Add users lat/lon for use in lunar calculations, allow KCM to set up
+
+KCalendarSystem: Proper astronomical (lunar/solar) calendar support
+                 Additional calendar systems as required (e.g. Julian, Chinese, etc)
+                 Add standard short code for each calendar system?
+
+freedesktop.org: Common XML format and location for holiday files to save duplication?
+                 Common definitions for calendar system names and formulas?
