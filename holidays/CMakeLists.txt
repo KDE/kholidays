@@ -38,6 +38,7 @@ install( FILES
          holiday_luFrench
          holiday_luLuxembourgish
          holiday_mx
+         holiday_na
          holiday_nl
          holiday_no
          holiday_nz
