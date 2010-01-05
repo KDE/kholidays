@@ -1,7 +1,7 @@
 /*
   This file is part of the kholidays library.
 
-  Copyright (c) 2004,2007 Allen Winter <winter@kde.org>
+  Copyright (c) 2004,2007,2009 Allen Winter <winter@kde.org>
 
   Copyright (c) 1989, 1993  //krazy:exclude=copyright
   The Regents of the University of California.  All rights reserved.
@@ -64,30 +64,25 @@ LunarPhase::Phase LunarPhase::phaseAtDate( const QDate &date )
   Phase retPhase = None;
 
   // compute percent-full for the middle of today and yesterday.
-  const QTime anytime( 0, 0, 0 );
+  const QTime anytime( 12, 0, 0 );
   const QDateTime today( date, anytime, Qt::UTC );
   const double todayPer = percentFull( today.toTime_t() ) + 0.5;
 
-  if ( static_cast<int>( todayPer ) == 100 ) {
-    retPhase = FullMoon;
-    //kDebug() << date << " todayPer: " << todayPer << " " << phaseName( retPhase );
-  } else if ( static_cast<int>( todayPer ) == 0 ) {
-    retPhase = NewMoon;
-    //kDebug() << date << " todayPer: " << todayPer << " " << phaseName( retPhase );
-  } else {
-    const QDateTime tomorrow( date.addDays( 1 ), anytime, Qt::UTC );
-    const double tomorrowPer = percentFull( tomorrow.toTime_t() );
+  const QDateTime tomorrow( date.addDays( 1 ), anytime, Qt::UTC );
+  const double tomorrowPer = percentFull( tomorrow.toTime_t() ) + 0.5;
 
-    if ( static_cast<int>( todayPer ) == 50 ) {
-      retPhase = ( tomorrowPer > todayPer ) ? FirstQuarter : LastQuarter;
-      //kDebug() << date
-      //         << " tomorrowPer: " << tomorrowPer
-      //         << " " << phaseName( retPhase );
-    } else {
-      //kDebug() << date
-      //         << " todayPer: " << todayPer
-      //         << " tomorrowPer: " << tomorrowPer
-      //         << " " << phaseName( None );
+  if ( static_cast<int>( todayPer ) == 100 &&
+       static_cast<int>( tomorrowPer ) != 100 ) {
+    retPhase = FullMoon;
+  } else if ( static_cast<int>( todayPer ) == 0 &&
+              static_cast<int>( tomorrowPer ) != 0 ) {
+    retPhase = NewMoon;
+  } else {
+    if ( todayPer > 50 && tomorrowPer < 50 ) {
+      retPhase = LastQuarter;
+    }
+    if ( todayPer < 50 && tomorrowPer > 50 ) {
+      retPhase = FirstQuarter;
     }
 
     // Note: if you want to support crescent and gibbous phases then please
