@@ -169,7 +169,7 @@ entry	: EASTER offset length			{ seteaster($2, $3, 0); }
 	 ;
 
  conditionaloffset :      { $$ = 0; }
-	 | SHIFT wdaycondition IF wdaycondition    { $$ = ($2<<8) | $4;printf("Shift to %i if %i\n", $2, $4); }
+	 | SHIFT wdaycondition IF wdaycondition    { $$ = ($2<<8) | $4; }
 	 ;
 
  wdaycondition : 	 	 	 { $$ = 0; }
