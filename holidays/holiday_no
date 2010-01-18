@@ -59,7 +59,9 @@ weekend "Andre juledag" weekend on 26.12
 
 : Andre
 "Valentinsdagen" on 14.2
-"Skuddårsdagen" on 29.2
+:Original version was "on 29.2" but appears every year in error due to no validity checking
+:Re-enable when parser has NOOP ability
+:"Skuddårsdagen" on ((leapyear year) ? [29.2] : NOOP)
 "Den internasjonale kvinnedagen" on 8.3
 "Aprilsnarr" on 1.4
 "Unionsoppløsningen 1905" on 7.6
