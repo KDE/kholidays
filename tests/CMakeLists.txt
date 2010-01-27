@@ -37,7 +37,7 @@ set(testholidayregion_SRCS testholidayregion.cpp )
 
 kde4_add_unit_test(testholidayregion TESTNAME kholidays-testholidayregion ${testholidayregion_SRCS})
 
-target_link_libraries(testholidayregion ${KDE4_KDECORE_LIBS} kholidays ${QT_QTTEST_LIBRARY})
+target_link_libraries(testholidayregion ${KDE4_KDECORE_LIBS} ${QT_QTGUI_LIBRARY} kholidays ${QT_QTTEST_LIBRARY})
 
 ########### next target ###############
 
