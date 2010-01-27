@@ -1,0 +1,44 @@
+:
+: England & Wales holiday file. Copy to ~/.holiday
+:
+: Author: Peter Lord <plord@uel.co.uk>
+:
+
+: Country Code for file if for a country, optional
+country "gb"
+: Language Code for language holiday names are in, optional
+language "en_GB"
+: Short name for holiday file to override country name for display to users, optional
+shortname "England and Wales"
+
+
+"New Years Day" red on 1/1
+"New Years Day Bank Holiday" weekend on january 1 shift to monday if saturday || sunday
+"Easter Sunday" red on easter
+"Good Friday" red on easter minus 2
+"Easter Monday" red on easter plus 1
+"May Day" red on first monday in may
+"Spring Bank Holiday" red ((year == 2012) ? [6/4] : [last monday in may])
+"Diamond Jubilee Holiday" red 6/5/2012
+"Summer Bank Holiday" red on last monday in august
+"Christmas Day" red on 12/25
+"Boxing Day" red on 12/26
+"Boxing Day Bank Holiday" red on (([12/26] == [saturday after ([12/25])] ) ? [monday after ([12/25])] : (([12/26] == [sunday after ([12/25])] || [12/26] == [monday after ([12/25])]) ? [tuesday after ([12/25])]:[12/26]))
+
+"Muharram" blue hijri on muharram 1 length 2
+"Ashura" blue hijri on 1/9 length 2
+"Laylat ul Isra and Miraj" blue hijri on rajab 27
+"Eid ul-Fitr" blue hijri on shawwal 1 length 3
+"Eid al-Adha" blue hijri thualhijjah 10 length 4
+
+"Julian New Year" red julian january 1
+"Iranian New Year" red jalali farvardin 1
+"Ethiopian New Year" red ethiopian meskerem 1
+"Coptic New Year" red coptic thoout 1
+"Indian National New Year" red indiannational chaitra 1
+"Rosh Hashana" red hebrew tishrey 1
+"Lag BaOmer" red hebrew iyar 18
+"Purim Katan" red hebrew adari 14
+"Purim" red hebrew adar 14
+"Purim" red hebrew adarii 14
+

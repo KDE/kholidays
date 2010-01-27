@@ -22,14 +22,38 @@
   Boston, MA 02110-1301, USA.
 */
 
-// Retain for API backwards compatability
-
-#ifndef KHOLIDAYS_HOLIDAYS_H
-#define KHOLIDAYS_HOLIDAYS_H
-
-#include "kholidays_export.h"
+#ifndef KHOLIDAYS_HOLIDAY_P_H
+#define KHOLIDAYS_HOLIDAY_P_H
 
 #include "holiday.h"
-#include "holidayregion.h"
 
-#endif // KHOLIDAYS_HOLIDAYS_H
+#include <QtCore/QDateTime>
+#include <QtCore/QFile>
+#include <QtCore/QSharedData>
+
+namespace KHolidays {
+
+class HolidayPrivate : public QSharedData
+{
+public:
+    HolidayPrivate()
+    {
+    }
+
+    HolidayPrivate( const HolidayPrivate &other ) : QSharedData( other )
+    {
+        mDate = other.mDate;
+        mText = other.mText;
+        mShortText = other.mShortText;
+        mDayType = other.mDayType;
+    }
+
+    QDate mDate;
+    QString mText;
+    QString mShortText;
+    Holiday::DayType mDayType;
+};
+
+}
+
+#endif // KHOLIDAYS_HOLIDAY_P_H

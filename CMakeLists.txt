@@ -11,14 +11,16 @@ configure_file(config-kholidays.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kholi
 
 ########### next target ###############
 
-set(kholidays_LIB_SRCS 
-  holidays.cpp 
-  scanholiday.c 
-  parseholiday.h 
-  parseholiday.c 
+set(kholidays_LIB_SRCS
   astroseasons.cpp
+  holiday.cpp
+  holidayregion.cpp
   lunarphase.cpp
   zodiac.cpp
+  parsers/holidayparserdriver.cpp
+  parsers/plan1/holidayparserdriverplanold.cpp
+  parsers/plan1/scanholiday.c
+  parsers/plan1/parseholiday.c
 )
 
 kde4_add_library(kholidays SHARED ${kholidays_LIB_SRCS})
@@ -30,4 +32,4 @@ install(TARGETS kholidays EXPORT kdepimlibsLibraryTargets ${INSTALL_TARGETS_DEFA
 
 ########### install files ###############
 
-install(FILES kholidays_export.h astroseasons.h holidays.h lunarphase.h zodiac.h DESTINATION ${INCLUDE_INSTALL_DIR}/kholidays COMPONENT Devel)
+install(FILES kholidays_export.h astroseasons.h holiday.h holidayregion.h holidays.h lunarphase.h zodiac.h DESTINATION ${INCLUDE_INSTALL_DIR}/kholidays COMPONENT Devel)
