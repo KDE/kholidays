@@ -39,13 +39,12 @@ class HolidayRegion::Private
 {
   public:
     Private( const QString &location )
-      : mLocation( location )
+      : mDriver( 0 ), mLocation( location )
     {
       if ( !mLocation.isEmpty() ) {
         mHolidayFile = KStandardDirs::locate( "data", "libkholidays/holiday_" + mLocation );
         if ( mHolidayFile.isEmpty() ) {
           mLocation.clear();
-          mDriver = 0;
         } else {
           mDriver = new HolidayParserDriverPlanOld( mHolidayFile );
         }
@@ -54,7 +53,7 @@ class HolidayRegion::Private
 
     ~Private()
     {
-        delete mDriver;
+      delete mDriver;
     }
 
     HolidayParserDriver  *mDriver;
@@ -94,7 +93,7 @@ QString HolidayRegion::location() const
 
 bool HolidayRegion::isValid() const
 {
-  return !d->mHolidayFile.isEmpty();
+  return !d->mHolidayFile.isEmpty() && d->mDriver;
 }
 
 Holiday::List HolidayRegion::holidays( const QDate &startDate, const QDate &endDate ) const
