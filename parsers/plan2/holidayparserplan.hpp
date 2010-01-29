@@ -110,6 +110,10 @@ do {							\
 } while (false)
 #endif
 
+#ifdef IN
+  #undef IN
+#endif
+
 namespace KHolidays
 {
 
