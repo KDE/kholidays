@@ -155,6 +155,7 @@
  */
 
 #include <config-kholidays.h>
+#include "kholidays_export.h"
 
 #include <stdio.h>
 #include <unistd.h>
@@ -184,7 +185,7 @@
 #define	BEFORE		-1
 #define AFTER		-2
 /**** Public forward declarations  ****/
-char *parse_holidays(const char *holidays, int year, short force);
+KHOLIDAYS_EXPORT char *parse_holidays(const char *holidays, int year, short force);
 
 /**** Private forward declarations ****/
 extern int       kcallex(void);          /* external lexical analyzer */
@@ -235,7 +236,7 @@ struct holiday {
   struct holiday         *next;
 };
 
-struct holiday	 holidays[366];		/* info for each day, separate for */
+KHOLIDAYS_EXPORT struct holiday	 holidays[366];		/* info for each day, separate for */
 /*struct holiday   sm_holiday[366];*/	/* full-line texts under, and small */
 					/* texts next to day number */
 static int	initialized=0;

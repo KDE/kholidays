@@ -45,7 +45,6 @@ target_link_libraries(testholidayregion ${KDE4_KDECORE_LIBS} ${QT_QTGUI_LIBRARY}
 
 set(testparseholiday_SRCS
     testparseholiday.cpp
-    ../holiday.cpp
     ../parsers/holidayparserdriver.cpp
     ../parsers/plan1/holidayparserdriverplanold.cpp
     ../parsers/plan2/holidayparserplan.cpp
