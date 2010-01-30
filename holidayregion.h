@@ -73,7 +73,59 @@ class KHOLIDAYS_EXPORT HolidayRegion
     QString location() const;
 
     /**
-     * Returns the list of holidays that occur on a @p date.
+     * @warning Experimental, API may change before 4.5
+     * @since 4.5
+     *
+     * Return the ISO 3166 country-region code of the file
+     *
+     * May be either just a country code ("US" = USA) or may include a regional
+     * identifier ("US-CA" = California).  Returns "XX" if not a country.
+     *
+     * See http://en.wikipedia.org/wiki/ISO_3166-2
+     *
+     * @return the full region code of the file
+     */
+    QString regionCode() const;
+
+    /**
+     * @warning Experimental, API may change before 4.5
+     * @since 4.5
+     *
+     * Return the ISO 639-1 language code of the file
+     *
+     * May be either just a language code ("en" = US English) or may include a country
+     * identifier ("en_GB" = British English).
+     *
+     * @return the language code of the file
+     */
+    QString languageCode() const;
+
+    /**
+     * @warning Experimental, API may change before 4.5
+     * @since 4.5
+     *
+     * Return the short name of the Holiday Region
+     * (Usually just the region name)
+     *
+     * @return the short name code of the file
+     */
+    QString shortName() const;
+
+    /**
+     * @warning Experimental, API may change before 4.5
+     * @since 4.5
+     *
+     * Return the long name of the Holiday Region
+     * (Usually the region name and language name)
+     *
+     * @return the short name code of the file
+     */
+    QString longName() const;
+
+    /**
+     * @since 4.5
+     *
+     * Returns the list of holidays that occur between @p startDate and @p endDate.
      */
     Holiday::List holidays( const QDate &startDate, const QDate &endDate ) const;
 
@@ -83,6 +135,8 @@ class KHOLIDAYS_EXPORT HolidayRegion
     Holiday::List holidays( const QDate &date ) const;
 
     /**
+     * @since 4.5
+     *
      * Returns the list of holidays that occur in a calendar year @p calendarYear.
      */
     Holiday::List holidays( int calendarYear, const QString &calendarType ) const;

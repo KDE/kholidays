@@ -37,6 +37,21 @@ HolidayParserDriver::~HolidayParserDriver()
     delete m_parseCalendar;
 }
 
+QString HolidayParserDriver::fileRegionCode() const
+{
+    return m_fileRegionCode;
+}
+
+QString HolidayParserDriver::fileLanguageCode() const
+{
+    return m_fileLanguageCode;
+}
+
+QString HolidayParserDriver::fileShortName() const
+{
+    return m_fileShortName;
+}
+
 Holiday::List HolidayParserDriver::parseHolidays( const QDate &startDate, const QDate &endDate )
 {
     m_resultList.clear();
@@ -76,6 +91,10 @@ void HolidayParserDriver::error( const QString &errorMessage )
 }
 
 void HolidayParserDriver::parse()
+{
+}
+
+void HolidayParserDriver::parseMetadata()
 {
 }
 

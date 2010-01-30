@@ -4,11 +4,11 @@
 : Author: Peter Lord <plord@uel.co.uk>
 :
 
-: Country Code for file if for a country, optional
-country "gb"
+: Region Code for file if for a country, blank otherwise
+region "GB-EAW"
 : Language Code for language holiday names are in, optional
 language "en_GB"
-: Short name for holiday file to override country name for display to users, optional
+: Short name for holiday file to override region name for display to users, optional
 shortname "England and Wales"
 
 

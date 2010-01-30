@@ -30,6 +30,19 @@
 
 QTEST_KDEMAIN( HolidayRegionTest, NoGUI )
 
+void HolidayRegionTest::printMetadata( const QString &location )
+{
+    KHolidays::HolidayRegion region( location );
+
+    kDebug() << "This location = " << region.location();
+    kDebug() << "Is valid? = " << region.isValid();
+    kDebug() << "Region code = " << region.regionCode();
+    kDebug() << "Language code = " << region.languageCode();
+    kDebug() << "Short name = " << region.shortName();
+    kDebug() << "Long name = " << region.longName();
+    kDebug() << "";
+}
+
 void HolidayRegionTest::printHolidays( KHolidays::Holiday::List holidays )
 {
     if ( holidays.count() > 0 ) {
@@ -41,11 +54,11 @@ void HolidayRegionTest::printHolidays( KHolidays::Holiday::List holidays )
     }
 }
 
-void HolidayRegionTest::parseRegionCalendarYear( const QString &regionCode, int year, const QString &calendarType )
+void HolidayRegionTest::parseRegionCalendarYear( const QString &location, int year, const QString &calendarType )
 {
-    kDebug() << "Parsing  region = " << regionCode << " year = " << year << " calendar = " << calendarType;
+    kDebug() << "Parsing location = " << location << " year = " << year << " calendar = " << calendarType;
 
-    KHolidays::HolidayRegion region( regionCode );
+    KHolidays::HolidayRegion region( location );
     KHolidays::Holiday::List holidays = region.holidays( year, "gregorian" );
 
     printHolidays( holidays );
@@ -53,13 +66,13 @@ void HolidayRegionTest::parseRegionCalendarYear( const QString &regionCode, int 
     kDebug() << "";
 }
 
-void HolidayRegionTest::parseRegionDateRange( const QString &regionCode, const QDate &startDate, const QDate &endDate )
+void HolidayRegionTest::parseRegionDateRange( const QString &location, const QDate &startDate, const QDate &endDate )
 {
-    kDebug() << "Parsing  region = " << regionCode <<
+    kDebug() << "Parsing location = " << location <<
                 " start date = " << startDate.toString( Qt::ISODate ) <<
                 " end date = " << endDate.toString( Qt::ISODate );
 
-    KHolidays::HolidayRegion region( regionCode );
+    KHolidays::HolidayRegion region( location );
     KHolidays::Holiday::List holidays = region.holidays( startDate, endDate );
 
     printHolidays( holidays );
@@ -67,11 +80,11 @@ void HolidayRegionTest::parseRegionDateRange( const QString &regionCode, const Q
     kDebug() << "";
 }
 
-void HolidayRegionTest::parseRegionDate( const QString &regionCode, const QDate &date )
+void HolidayRegionTest::parseRegionDate( const QString &location, const QDate &date )
 {
-    kDebug() << "Parsing  region = " << regionCode << " date = " << date.toString( Qt::ISODate );
+    kDebug() << "Parsing location = " << location << " date = " << date.toString( Qt::ISODate );
 
-    KHolidays::HolidayRegion region( regionCode );
+    KHolidays::HolidayRegion region( location );
     KHolidays::Holiday::List holidays = region.holidays( date );
 
     printHolidays( holidays );
@@ -81,9 +94,21 @@ void HolidayRegionTest::parseRegionDate( const QString &regionCode, const QDate 
 
 void HolidayRegionTest::testGb()
 {
-    parseRegionDateRange( "gb", QDate( 2010, 7, 1), QDate( 2011, 6, 30 ) );
-    parseRegionDateRange( "gb", QDate( 2010, 1, 1), QDate( 2012, 12, 31 ) );
-    parseRegionDateRange( "gb", QDate( 2010, 1, 1), QDate( 2010, 12, 31 ) );
-    parseRegionCalendarYear( "gb", 2010, "gregorian" );
-    parseRegionDate( "gb", QDate( 2010, 1, 1 ) );
+    printMetadata( "gb-eaw_en-gb" );
+    parseRegionDateRange( "gb-eaw_en-gb", QDate( 2010, 7, 1), QDate( 2011, 6, 30 ) );
+    parseRegionDateRange( "gb-eaw_en-gb", QDate( 2010, 1, 1), QDate( 2012, 12, 31 ) );
+    parseRegionDateRange( "gb-eaw_en-gb", QDate( 2010, 1, 1), QDate( 2010, 12, 31 ) );
+    parseRegionCalendarYear( "gb-eaw_en-gb", 2010, "gregorian" );
+    parseRegionDate( "gb-eaw_en-gb", QDate( 2010, 1, 1 ) );
 }
+
+void HolidayRegionTest::testLocations()
+{
+    kDebug() << "Available locations:";
+    QStringList locations = KHolidays::HolidayRegion::locations();
+    foreach ( const QString &location, locations ) {
+        kDebug() << location;
+    }
+    kDebug() << "";
+}
+

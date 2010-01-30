@@ -87,6 +87,11 @@ protected:
      */
     void parse();
 
+    /**
+     * Parse the file for metadata only and populate the metadata variables
+     */
+    void parseMetadata();
+
     // Bison C++ skeleton required friend for Bison parser class implementation
     friend class HolidayParserPlan;
 
@@ -108,7 +113,7 @@ protected:
     int   julianDayFromWeekdayInMonth( int occurrence, int weekday, int month );
 
     // Utilities for parser to set variables during parsing
-    void  setFileCountryCode( const QString &countryCode );
+    void  setFileRegionCode( const QString &regionCode );
     void  setFileLanguageCode( const QString &languageCode );
     void  setFileShortName( const QString &shortName );
     void  setEventName( const QString &eventName );

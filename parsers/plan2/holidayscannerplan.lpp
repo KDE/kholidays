@@ -60,7 +60,7 @@
 [\n]+               { yylloc->lines( yyleng ); yylloc->step(); }
 [-+*/%.!?:()\[\]]   { return KHolidays::HolidayParserPlan::token_type( *yytext ); }
 
-country             { return token::COUNTRY; }
+region              { return token::REGION; }
 language            { return token::LANGUAGE; }
 shortname           { return token::SHORTNAME; }
 [0-9]+              { yylval->ival = atoi( yytext ); return token::NUMBER; }

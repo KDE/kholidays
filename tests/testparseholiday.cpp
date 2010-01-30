@@ -43,6 +43,11 @@ void ParseHolidayTest::parseFileOld( const QString &filePath, int year )
     kDebug() << "Loading v1, year = " << year;
 
     KHolidays::HolidayParserDriverPlanOld driverOld( testFile.filePath() );
+
+    kDebug() << "Region code = " << driverOld.fileRegionCode();
+    kDebug() << "Language code = " << driverOld.fileLanguageCode();
+    kDebug() << "Short name = " << driverOld.fileShortName();
+
     KHolidays::Holiday::List holidaysOld = driverOld.parseHolidays( year, "gregorian" );
 
     if ( holidaysOld.count() > 0 ) {
@@ -64,6 +69,11 @@ void ParseHolidayTest::parseFileNew( const QString &filePath, int year )
     kDebug() << "Loading v2, year = " << year;
 
     KHolidays::HolidayParserDriverPlan driver( testFile.filePath() );
+
+    kDebug() << "Region code = " << driver.fileRegionCode();
+    kDebug() << "Language code = " << driver.fileLanguageCode();
+    kDebug() << "Short name = " << driver.fileShortName();
+
     KHolidays::Holiday::List holidays = driver.parseHolidays( year, "gregorian" );
 
     if ( holidays.count() > 0 ) {
@@ -81,13 +91,13 @@ void ParseHolidayTest::testCalendar()
 {
     for ( int y = 1980; y <= 2040; ++y ) {
         //TODO Assumes running from tests/ directory, is there a better way to do this?
-        parseFileNew( "./holiday_test", y );
+        parseFileNew( "./holiday_gb-eaw_en-gb_Test", y );
     }
 }
 
 void ParseHolidayTest::testGb()
 {
-    QString testFile( KGlobal::dirs()->findResource( "data", "libkholidays/holiday_gb" ) );
+    QString testFile( KGlobal::dirs()->findResource( "data", "libkholidays/plan1/holiday_gb-eaw_en-gb" ) );
     parseFileOld( testFile, 2010 );
     parseFileNew( testFile, 2010 );
     parseFileOld( testFile, 2012 );
@@ -96,7 +106,7 @@ void ParseHolidayTest::testGb()
 
 void ParseHolidayTest::testCompare()
 {
-    QStringList allFiles = KGlobal::dirs()->findAllResources( "data", "libkholidays/holiday_*", KStandardDirs::NoDuplicates );
+    QStringList allFiles = KGlobal::dirs()->findAllResources( "data", "libkholidays/plan1/holiday_*", KStandardDirs::NoDuplicates );
 
     foreach( QString holidayFile, allFiles ) {
 

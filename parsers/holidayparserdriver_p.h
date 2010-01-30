@@ -59,6 +59,33 @@ public:
     virtual ~HolidayParserDriver();
 
     /**
+     * Return the ISO 3166 country-region code of the file
+     *
+     * May be either just a country code ("US" = USA) or may include a regional
+     * identifier ("US-CA" = California).  Returns "XX" if not a country.
+     *
+     * @return the full country code of the file
+     */
+    virtual QString fileRegionCode() const;
+
+    /**
+     * Return the ISO 639-1 language code of the file
+     *
+     * May be either just a language code ("en" = US English) or may include a country
+     * identifier ("en_GB" = British English).
+     *
+     * @return the language code of the file
+     */
+    virtual QString fileLanguageCode() const;
+
+    /**
+     * Return the untranslated short name of the file
+     *
+     * @return the untranslated short name code of the file
+     */
+    virtual QString fileShortName() const;
+
+    /**
      * Return a list of holidays falling between any two dates
      *
      * @param startDate start date of the holiday parse range
@@ -104,6 +131,11 @@ protected:
     virtual void parse();
 
     /**
+     * Parse the file for metadata only and populate the metadata variables
+     */
+    virtual void parseMetadata();
+
+    /**
      * Set the calendar system to use
      *
      * @param calendarType standard KDE calendar type, see KCalendarSystem
@@ -117,7 +149,7 @@ protected:
 
     QString          m_filePath;           // File to be parsed
 
-    QString          m_fileCountryCode;    // File country
+    QString          m_fileRegionCode;     // File region code in ISO 3166 standard
     QString          m_fileLanguageCode;   // File language
     QString          m_fileShortName;      // File short name
 

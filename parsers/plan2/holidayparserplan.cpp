@@ -400,12 +400,12 @@ namespace KHolidays
       {
 	  case 4:
 #line 101 "holidayparserplan.ypp"
-    { driver.setFileCountryCode( QString() ); ;}
+    { driver.setFileRegionCode( QString() ); ;}
     break;
 
   case 5:
 #line 102 "holidayparserplan.ypp"
-    { driver.setFileCountryCode( QString::fromUtf8( (yysemantic_stack_[(2) - (2)].sval) ) ); ;}
+    { driver.setFileRegionCode( QString::fromUtf8( (yysemantic_stack_[(2) - (2)].sval) ) ); ;}
     break;
 
   case 6:
@@ -1192,9 +1192,9 @@ namespace KHolidays
     "END", "error", "$undefined", "NUMBER", "MONTH", "WDAY", "COLOR",
   "STRING", "CALENDAR", "IN", "PLUS", "MINUS", "SMALL", "YEAR", "LEAPYEAR",
   "SHIFT", "IF", "LENGTH", "EASTER", "EQ", "NE", "LE", "GE", "LT", "GT",
-  "PASCHA", "COUNTRY", "LANGUAGE", "SHORTNAME", "OR", "AND", "'-'", "'+'",
+  "PASCHA", "REGION", "LANGUAGE", "SHORTNAME", "OR", "AND", "'-'", "'+'",
   "'*'", "'/'", "'%'", "'!'", "UMINUS", "'?'", "':'", "'.'", "'['", "']'",
-  "'('", "')'", "$accept", "planfile", "metadata", "countrycode",
+  "'('", "')'", "$accept", "planfile", "metadata", "regioncode",
   "languagecode", "shortname", "list", "small", "stringcolor", "daycolor",
   "eventname", "calendar", "eventrule", "offset", "conditionaloffset",
   "wdaycondition", "length", "date", "reldate", "month", "monthnumber",

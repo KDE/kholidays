@@ -24,11 +24,13 @@
 
 #include "holidayregion.h"
 
-#include <KStandardDirs>
-
 #include <QtCore/QDateTime>
 #include <QtCore/QFile>
 #include <QtCore/QSharedData>
+
+#include <KStandardDirs>
+#include <KGlobal>
+#include <KLocale>
 
 #include "holiday_p.h"
 #include "parsers/plan1/holidayparserdriverplanold_p.h"
@@ -42,7 +44,7 @@ class HolidayRegion::Private
       : mDriver( 0 ), mLocation( location )
     {
       if ( !mLocation.isEmpty() ) {
-        mHolidayFile = KStandardDirs::locate( "data", "libkholidays/holiday_" + mLocation );
+        mHolidayFile = KStandardDirs::locate( "data", "libkholidays/plan1/holiday_" + mLocation );
         if ( mHolidayFile.isEmpty() ) {
           mLocation.clear();
         } else {
@@ -73,22 +75,54 @@ HolidayRegion::~HolidayRegion()
 
 QStringList HolidayRegion::locations()
 {
-  const QStringList files =
-    KGlobal::dirs()->findAllResources( "data", "libkholidays/holiday_*",
-                                       KStandardDirs::NoDuplicates );
-  QStringList locs;
+  const QStringList files = KGlobal::dirs()->findAllResources( "data", "libkholidays/plan1/holiday_*",
+                                                               KStandardDirs::NoDuplicates );
 
-  QStringList::ConstIterator it;
-  for ( it = files.constBegin(); it != files.constEnd(); ++it ) {
-    locs.append( (*it).mid( (*it).lastIndexOf( '_' ) + 1 ) );
+  QStringList locations;
+  foreach ( const QString &filename, files ) {
+    locations.append( filename.mid( filename.lastIndexOf("holiday_") + 8 ) );
   }
 
-  return locs;
+  qSort( locations );
+  return locations;
 }
 
 QString HolidayRegion::location() const
 {
   return d->mLocation;
+}
+
+QString HolidayRegion::regionCode() const
+{
+  return d->mDriver->fileRegionCode();
+}
+
+QString HolidayRegion::languageCode() const
+{
+  return d->mDriver->fileLanguageCode();
+}
+
+// TODO Translation
+QString HolidayRegion::shortName() const
+{
+  QString tempName = d->mDriver->fileShortName();
+  if ( tempName.isEmpty() ) {
+    tempName = KGlobal::locale()->countryCodeToName( regionCode().left( 2 ) );
+    if ( tempName.isEmpty() ) {
+      tempName = "Unknown";
+    }
+  }
+  return tempName;
+}
+
+// TODO Translation
+QString HolidayRegion::longName() const
+{
+  QString tempName = KGlobal::locale()->languageCodeToName( languageCode() );
+  if ( tempName.isEmpty() ) {
+    tempName = "Unknown";
+  }
+  return shortName() + " (" + tempName + ")";
 }
 
 bool HolidayRegion::isValid() const

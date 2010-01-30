@@ -78,7 +78,7 @@ class HolidayParserDriverPlan;
 %token  <ival> NUMBER MONTH WDAY COLOR
 %token  <sval> STRING CALENDAR
 %token  IN PLUS MINUS SMALL YEAR LEAPYEAR SHIFT IF
-%token  LENGTH EASTER EQ NE LE GE LT GT PASCHA COUNTRY LANGUAGE SHORTNAME
+%token  LENGTH EASTER EQ NE LE GE LT GT PASCHA REGION LANGUAGE SHORTNAME
 
 %left OR
 %left AND
@@ -95,11 +95,11 @@ class HolidayParserDriverPlan;
 planfile : metadata list
 ;
 
-metadata : countrycode languagecode shortname
+metadata : regioncode languagecode shortname
 ;
 
-countrycode :                { driver.setFileCountryCode( QString() ); }
-            | COUNTRY STRING { driver.setFileCountryCode( QString::fromUtf8( $2 ) ); }
+regioncode :               { driver.setFileRegionCode( QString() ); }
+           | REGION STRING { driver.setFileRegionCode( QString::fromUtf8( $2 ) ); }
 ;
 
 languagecode :                 { driver.setFileLanguageCode( QString() ); }

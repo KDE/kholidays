@@ -163,7 +163,7 @@ namespace KHolidays
      LT = 278,
      GT = 279,
      PASCHA = 280,
-     COUNTRY = 281,
+     REGION = 281,
      LANGUAGE = 282,
      SHORTNAME = 283,
      OR = 284,

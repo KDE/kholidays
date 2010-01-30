@@ -55,7 +55,7 @@ kde4_add_unit_test(testparseholiday TESTNAME kholidays-testparseholiday ${testpa
 
 target_link_libraries(testparseholiday ${KDE4_KDECORE_LIBS} kholidays ${QT_QTTEST_LIBRARY} ${QT_QTGUI_LIBRARY})
 
-install(FILES holiday_test DESTINATION ${EXECUTABLE_OUTPUT_PATH})
+install(FILES holiday_gb-eaw_en-gb_Test DESTINATION ${EXECUTABLE_OUTPUT_PATH})
 
 ########### next target ###############
 

@@ -63,6 +63,11 @@ protected:
      * Actually parse the file, old plan format implementation
      */
     void parse();
+
+    /**
+     * Parse the file for metadata only and populate the metadata variables
+     */
+    void parseMetadata();
 };
 
 }
