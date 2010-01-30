@@ -1793,7 +1793,7 @@ YY_RULE_SETUP
 case 16:
 YY_RULE_SETUP
 #line 77 "holidayscannerplan.lpp"
-{ return token::IN; }
+{ return token::INOP; }
 	YY_BREAK
 case 17:
 YY_RULE_SETUP

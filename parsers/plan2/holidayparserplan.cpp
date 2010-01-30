@@ -1190,15 +1190,15 @@ namespace KHolidays
   const HolidayParserPlan::yytname_[] =
   {
     "END", "error", "$undefined", "NUMBER", "MONTH", "WDAY", "COLOR",
-  "STRING", "CALENDAR", "IN", "PLUS", "MINUS", "SMALL", "YEAR", "LEAPYEAR",
-  "SHIFT", "IF", "LENGTH", "EASTER", "EQ", "NE", "LE", "GE", "LT", "GT",
-  "PASCHA", "REGION", "LANGUAGE", "SHORTNAME", "OR", "AND", "'-'", "'+'",
-  "'*'", "'/'", "'%'", "'!'", "UMINUS", "'?'", "':'", "'.'", "'['", "']'",
-  "'('", "')'", "$accept", "planfile", "metadata", "regioncode",
-  "languagecode", "shortname", "list", "small", "stringcolor", "daycolor",
-  "eventname", "calendar", "eventrule", "offset", "conditionaloffset",
-  "wdaycondition", "length", "date", "reldate", "month", "monthnumber",
-  "expr", "pexpr", "number", 0
+  "STRING", "CALENDAR", "INOP", "PLUS", "MINUS", "SMALL", "YEAR",
+  "LEAPYEAR", "SHIFT", "IF", "LENGTH", "EASTER", "EQ", "NE", "LE", "GE",
+  "LT", "GT", "PASCHA", "REGION", "LANGUAGE", "SHORTNAME", "OR", "AND",
+  "'-'", "'+'", "'*'", "'/'", "'%'", "'!'", "UMINUS", "'?'", "':'", "'.'",
+  "'['", "']'", "'('", "')'", "$accept", "planfile", "metadata",
+  "regioncode", "languagecode", "shortname", "list", "small",
+  "stringcolor", "daycolor", "eventname", "calendar", "eventrule",
+  "offset", "conditionaloffset", "wdaycondition", "length", "date",
+  "reldate", "month", "monthnumber", "expr", "pexpr", "number", 0
   };
 #endif
 

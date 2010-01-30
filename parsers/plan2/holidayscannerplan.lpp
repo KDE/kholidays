@@ -74,7 +74,7 @@ day                 ;
 days                ;
 on                  ;
 to                  ;
-in                  { return token::IN; }
+in                  { return token::INOP; }
 if                  { return token::IF; }
 plus                { return token::PLUS; }
 minus               { return token::MINUS; }

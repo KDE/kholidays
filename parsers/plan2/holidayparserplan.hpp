@@ -110,10 +110,6 @@ do {							\
 } while (false)
 #endif
 
-#ifdef IN
-  #undef IN
-#endif
-
 namespace KHolidays
 {
 
@@ -146,7 +142,7 @@ namespace KHolidays
      COLOR = 261,
      STRING = 262,
      CALENDAR = 263,
-     IN = 264,
+     INOP = 264,
      PLUS = 265,
      MINUS = 266,
      SMALL = 267,
