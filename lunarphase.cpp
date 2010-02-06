@@ -161,7 +161,7 @@ static double PI = 3.14159265358979323846;
  * between UTC (as shown by the UNIX clock) and TDT.  (TDT = TAI + 32.184s;
  * TAI-UTC = 32s in Jan 1999.)
  */
-static int EPOCH_MINUS_1970 = (20 * 365 + 5 - 1); /* 20 years, 5 leaps, back 1 day to Jan 0 */
+static int EPOCH_MINUS_1970 = ( 20 * 365 + 5 - 1 ); /* 20 years, 5 leaps, back 1 day to Jan 0 */
 static double EPSILONg = 279.403303;    /* solar ecliptic long at EPOCH */
 static double RHOg     = 282.768422;    /* solar ecliptic long of perigee at EPOCH */
 static double ECCEN    = 0.016713;      /* solar orbit eccentricity */

@@ -22,7 +22,7 @@
   Boston, MA 02110-1301, USA.
 */
 
-// Retain for API backwards compatability
+// Retain for API backwards compatibility
 
 #ifndef KHOLIDAYS_HOLIDAYS_H
 #define KHOLIDAYS_HOLIDAYS_H

@@ -75,12 +75,13 @@ HolidayRegion::~HolidayRegion()
 
 QStringList HolidayRegion::locations()
 {
-  const QStringList files = KGlobal::dirs()->findAllResources( "data", "libkholidays/plan1/holiday_*",
-                                                               KStandardDirs::NoDuplicates );
+  const QStringList files =
+    KGlobal::dirs()->findAllResources( "data", "libkholidays/plan1/holiday_*",
+                                       KStandardDirs::NoDuplicates );
 
   QStringList locations;
   foreach ( const QString &filename, files ) {
-    locations.append( filename.mid( filename.lastIndexOf("holiday_") + 8 ) );
+    locations.append( filename.mid( filename.lastIndexOf( "holiday_" ) + 8 ) );
   }
 
   qSort( locations );
@@ -122,7 +123,7 @@ QString HolidayRegion::longName() const
   if ( tempName.isEmpty() ) {
     tempName = "Unknown";
   }
-  return shortName() + " (" + tempName + ")";
+  return shortName() + " (" + tempName + ')';
 }
 
 bool HolidayRegion::isValid() const

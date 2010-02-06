@@ -35,7 +35,7 @@ namespace KHolidays {
 
 class HolidayPrivate : public QSharedData
 {
-public:
+  public:
     HolidayPrivate()
     {
     }
