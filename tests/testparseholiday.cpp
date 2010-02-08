@@ -90,8 +90,7 @@ void ParseHolidayTest::parseFileNew( const QString &filePath, int year )
 void ParseHolidayTest::testCalendar()
 {
     for ( int y = 1980; y <= 2040; ++y ) {
-        //TODO Assumes running from tests/ directory, is there a better way to do this?
-        parseFileNew( "./holiday_gb-eaw_en-gb_Test", y );
+        parseFileNew( KDESRCDIR "/holiday_gb-eaw_en-gb_Test", y );
     }
 }
 
