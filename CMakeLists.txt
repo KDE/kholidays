@@ -5,6 +5,8 @@ add_definitions(-DKDE_DEFAULT_DEBUG_AREA=5350)
 add_subdirectory(holidays)
 add_subdirectory(tests)
 
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/parsers/plan1)
+
 check_include_files(err.h HAVE_ERR_H)
 check_include_files(sys/cdefs.h HAVE_SYS_CDEFS_H)
 configure_file(config-kholidays.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kholidays.h)
