@@ -103,25 +103,23 @@ QString HolidayRegion::languageCode() const
   return d->mDriver->fileLanguageCode();
 }
 
-// TODO Translation
 QString HolidayRegion::shortName() const
 {
   QString tempName = d->mDriver->fileShortName();
   if ( tempName.isEmpty() ) {
     tempName = KGlobal::locale()->countryCodeToName( regionCode().left( 2 ) );
     if ( tempName.isEmpty() ) {
-      tempName = "Unknown";
+      tempName = i18n( "Unknown" );
     }
   }
   return tempName;
 }
 
-// TODO Translation
 QString HolidayRegion::longName() const
 {
   QString tempName = KGlobal::locale()->languageCodeToName( languageCode() );
   if ( tempName.isEmpty() ) {
-    tempName = "Unknown";
+    tempName = i18n( "Unknown" );
   }
   return shortName() + " (" + tempName + ')';
 }
