@@ -43,6 +43,10 @@ III. Definitions
         a historical event, or to honor people.  Public holidays are always
         bounded to a political region at national, regional or local level.
 
+   Public/Civil Service Holiday: a day-off from work for government workers
+        but not a day off for private sector workers. (name Government Holiday,
+        or is that different?)
+
    Cultural Holiday : a special day in the culture and therefore usually
         bounded to a political region.  A day where people "celebrate"
         in some fashion.  eg. Halloween, St. Valentines, ...
@@ -59,6 +63,12 @@ III. Definitions
         always bounded to a political region.  Not sure if financial holidays
         move from weekends; eg. if Christmas lands on a weekend is it moved
         to a nearby business day?
+
+   School Holiday:a day-off from school, either as a one-off Public Holiday or
+        extended periods between school terms.  Ths can vary widely depending
+        on school level, type, location.  The differing holidays can be held in
+        separate files, e.g. State Primary, State Secondary, State University,
+        local religious school, etc.
 
    Name Day Holiday: (See Bug #92919) In some countries each day is assigned
         a first name and persons with that name celebrate that day as their
@@ -221,7 +231,7 @@ V. Functionality
       * Returns a QStringList of all political regions supported,
         (possibly/probably) extracted from the holiday file names.
         The region names will need to be translated into all languages.
-       
+
       * Returns a QStringList of all religions supported,
         (possibly/probably) extracted from the holiday file names.
         The religion names will need to be translated into all languages.

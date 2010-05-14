@@ -59,14 +59,14 @@ class HolidayParserDriver
     virtual ~HolidayParserDriver();
 
     /**
-     * Return the ISO 3166 country-region code of the file
+     * Return the ISO 3166 country/region code of the file
      *
      * May be either just a country code ("US" = USA) or may include a regional
      * identifier ("US-CA" = California).  Returns "XX" if not a country.
      *
      * @return the full country code of the file
      */
-    virtual QString fileRegionCode() const;
+    virtual QString fileCountryCode() const;
 
     /**
      * Return the ISO 639-1 language code of the file
@@ -79,11 +79,18 @@ class HolidayParserDriver
     virtual QString fileLanguageCode() const;
 
     /**
-     * Return the untranslated short name of the file
+     * Return the untranslated name of the file
      *
-     * @return the untranslated short name code of the file
+     * @return the untranslated name code of the file
      */
-    virtual QString fileShortName() const;
+    virtual QString fileName() const;
+
+    /**
+     * Return the untranslated description of the file if available
+     *
+     * @return the untranslated description of the file
+     */
+    virtual QString fileDescription() const;
 
     /**
      * Return a list of holidays falling between any two dates
@@ -149,9 +156,10 @@ class HolidayParserDriver
 
     QString          m_filePath;           // File to be parsed
 
-    QString          m_fileRegionCode;     // File region code in ISO 3166 standard
+    QString          m_fileCountryCode;    // File country code in ISO 3166-2 standard
     QString          m_fileLanguageCode;   // File language
-    QString          m_fileShortName;      // File short name
+    QString          m_fileName;           // File name
+    QString          m_fileDescription;    // File description
 
     QDate            m_requestStart;       // First day of period being requested
     QDate            m_requestEnd;         // Last day of period being requested

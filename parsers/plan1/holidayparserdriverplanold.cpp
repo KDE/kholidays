@@ -114,24 +114,25 @@ void HolidayParserDriverPlanOld::parse()
 
 void HolidayParserDriverPlanOld::parseMetadata()
 {
-    // metadata is encoded in filename in form holiday_<region>_<language>_<shortname>
-    // with region and language sub groups separated by -, and with shortname optional
-    m_fileRegionCode.clear();
+    // metadata is encoded in filename in form holiday_<region>_<type>_<language>_<name>
+    // with region, type and language sub groups separated by -, and with name optional
+    m_fileCountryCode.clear();
     m_fileLanguageCode.clear();
-    m_fileShortName.clear();
+    m_fileName.clear();
+    m_fileDescription.clear();
 
     QFileInfo file( m_filePath );
     if ( file.exists() ) {
         QStringList metadata = file.fileName().split('_');
         if ( metadata[0] == "holiday" && metadata.count() > 2 ) {
-            m_fileRegionCode = metadata[1].toUpper();
+            m_fileCountryCode = metadata[1].toUpper();
             QStringList language = metadata[2].split('-');
             m_fileLanguageCode = language[0];
             if ( language.count() > 1 ) {
                 m_fileLanguageCode.append( '_' ).append( language[1].toUpper() );
             }
             if ( metadata.count() > 3 ) {
-                m_fileShortName = metadata[3];
+                m_fileName = metadata[3];
             }
         }
     }

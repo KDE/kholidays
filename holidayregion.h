@@ -42,12 +42,16 @@ class KHOLIDAYS_EXPORT HolidayRegion
 {
   public:
     /**
-     * Creates a new holidays object.
+     * Creates a new Holiday Region object.
      *
-     * @param location The code for the country or region.
-     *                 If null or unknown, an empty instance will be created.
+     * From 4.5 onwards this constructor requires the new Region Code not the
+     * deprecated Location Code.  If a Location Code is provided the first
+     * match will be created.
+     *
+     * @param regionCode The code for the Holiday Region.
+     *                   If null or unknown, an empty instance will be created.
      */
-    explicit HolidayRegion( const QString &location = QString() );
+    explicit HolidayRegion( const QString &regionCode = QString() );
 
     /**
      * Destroys the holidays object.
@@ -55,28 +59,61 @@ class KHOLIDAYS_EXPORT HolidayRegion
     ~HolidayRegion();
 
     /**
+     * @deprecated use regions() instead
+     *
      *  Return a list of all available location codes which have a holiday definition.
      *
      *  One of these can then be passed to the constructor for a new HolidayRegion
      *  object.
+     *
+     * @see regions()
      */
     static QStringList locations();
 
     /**
+     * @deprecated use regionCode() or countryCode() instead
+     *
      * Returns the holiday location.
      *
-     * The holiday location is a code representing the country or region.
+     * The holiday location is a code representing the holiday region.
      *
      * @return region code, or null if the instance was constructed with
      *         an unknown region
+     *
+     * @see regionCode()
+     * @see languageCode()
      */
     QString location() const;
 
     /**
-     * @warning Experimental, API may change before 4.5
      * @since 4.5
      *
-     * Return the ISO 3166 country-region code of the file
+     *  Return a list of all available Holiday Region codes.
+     *
+     *  One of these can then be passed to the constructor for a new HolidayRegion
+     *  object, or to name() or language() to obtain the name and language of the region.
+     *
+     * @see name()
+     * @see languageCode()
+     */
+    static QStringList regions();
+
+    /**
+     * @since 4.5
+     *
+     * Returns the unique Holiday Region code.
+     *
+     * Clients should not infer any meaning from the format of the code.
+     *
+     * @return region code, or null if the instance was constructed with
+     *         an unknown region
+     */
+    QString regionCode() const;
+
+    /**
+     * @since 4.5
+     *
+     * Return the ISO 3166 country code of the file
      *
      * May be either just a country code ("US" = USA) or may include a regional
      * identifier ("US-CA" = California).  Returns "XX" if not a country.
@@ -85,10 +122,24 @@ class KHOLIDAYS_EXPORT HolidayRegion
      *
      * @return the full region code of the file
      */
-    QString regionCode() const;
+    QString countryCode() const;
 
     /**
-     * @warning Experimental, API may change before 4.5
+     * @since 4.5
+     *
+     * Return the ISO 3166 country code of a given Holiday Region
+     *
+     * May be either just a country code ("US" = USA) or may include a regional
+     * identifier ("US-CA" = California).  Returns "XX" if not a country.
+     *
+     * See http://en.wikipedia.org/wiki/ISO_3166-2
+     *
+     * @param regionCode The code for the Holiday Region.
+     * @return the full region code of the file
+     */
+    static QString countryCode( const QString &regionCode );
+
+    /**
      * @since 4.5
      *
      * Return the ISO 639-1 language code of the file
@@ -101,26 +152,55 @@ class KHOLIDAYS_EXPORT HolidayRegion
     QString languageCode() const;
 
     /**
-     * @warning Experimental, API may change before 4.5
      * @since 4.5
      *
-     * Return the short name of the Holiday Region
-     * (Usually just the region name)
+     * Return the ISO 639-1 language code of a given Holiday Region
      *
-     * @return the short name code of the file
+     * May be either just a language code ("en" = US English) or may include a country
+     * identifier ("en_GB" = British English).
+     *
+     * @param regionCode The code for the Holiday Region.
+     * @return the language code of the file
      */
-    QString shortName() const;
+    static QString languageCode( const QString &regionCode );
 
     /**
-     * @warning Experimental, API may change before 4.5
      * @since 4.5
      *
-     * Return the long name of the Holiday Region
-     * (Usually the region name and language name)
+     * Return the name of the Holiday Region.
+     * This may be a country, region, or type.
      *
      * @return the short name code of the file
      */
-    QString longName() const;
+    QString name() const;
+
+    /**
+     * @since 4.5
+     *
+     * Return the name of a given Holiday Region
+     *
+     * @param regionCode The code for the Holiday Region.
+     * @return the name of the Holiday Region
+     */
+    static QString name( const QString &regionCode );
+
+    /**
+     * @since 4.5
+     *
+     * Return the description of the Holiday Region if available
+     *
+     * @return the description of the Holiday Region
+     */
+    QString description() const;
+
+    /**
+     * @since 4.5
+     *
+     * Return the description of a given Holiday Region if available
+     *
+     * @return the description of the Holiday Region
+     */
+    static QString description( const QString &regionCode );
 
     /**
      * @since 4.5
@@ -150,6 +230,13 @@ class KHOLIDAYS_EXPORT HolidayRegion
      * Returns whether the instance contains any holiday data.
      */
     bool isValid() const;
+
+    /**
+     * @since 4.5
+     *
+     * Returns whether the Region Code is valid.
+     */
+    static bool isValid( const QString &regionCode );
 
   private:
     Q_DISABLE_COPY( HolidayRegion )

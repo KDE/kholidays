@@ -113,9 +113,10 @@ protected:
     int   julianDayFromWeekdayInMonth( int occurrence, int weekday, int month );
 
     // Utilities for parser to set variables during parsing
-    void  setFileRegionCode( const QString &regionCode );
+    void  setFileCountryCode( const QString &countryCode );
     void  setFileLanguageCode( const QString &languageCode );
-    void  setFileShortName( const QString &shortName );
+    void  setFileName( const QString &ame );
+    void  setFileDescription( const QString &description );
     void  setEventName( const QString &eventName );
     void  setEventColorName( int nameColor );
     void  setEventColorDay( int dayColor );

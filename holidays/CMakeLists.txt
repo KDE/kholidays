@@ -34,7 +34,7 @@ install( FILES
           plan1/holiday_it-bz_de
           plan1/holiday_it_it
           plan1/holiday_jm_en-gb
-          plan1/holiday_jp-ja
+          plan1/holiday_jp_ja
           plan1/holiday_lt_lt
           plan1/holiday_lu_fr
           plan1/holiday_lu_lb

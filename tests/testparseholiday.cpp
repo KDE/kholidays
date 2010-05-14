@@ -44,9 +44,10 @@ void ParseHolidayTest::parseFileOld( const QString &filePath, int year )
 
     KHolidays::HolidayParserDriverPlanOld driverOld( testFile.filePath() );
 
-    kDebug() << "Region code = " << driverOld.fileRegionCode();
+    kDebug() << "Country code = " << driverOld.fileCountryCode();
     kDebug() << "Language code = " << driverOld.fileLanguageCode();
-    kDebug() << "Short name = " << driverOld.fileShortName();
+    kDebug() << "Name = " << driverOld.fileName();
+    kDebug() << "Description = " << driverOld.fileDescription();
 
     KHolidays::Holiday::List holidaysOld = driverOld.parseHolidays( year, "gregorian" );
 
@@ -70,9 +71,10 @@ void ParseHolidayTest::parseFileNew( const QString &filePath, int year )
 
     KHolidays::HolidayParserDriverPlan driver( testFile.filePath() );
 
-    kDebug() << "Region code = " << driver.fileRegionCode();
+    kDebug() << "Country code = " << driver.fileCountryCode();
     kDebug() << "Language code = " << driver.fileLanguageCode();
-    kDebug() << "Short name = " << driver.fileShortName();
+    kDebug() << "Name = " << driver.fileName();
+    kDebug() << "Description = " << driver.fileDescription();
 
     KHolidays::Holiday::List holidays = driver.parseHolidays( year, "gregorian" );
 

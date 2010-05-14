@@ -159,12 +159,13 @@ namespace KHolidays
      LT = 278,
      GT = 279,
      PASCHA = 280,
-     REGION = 281,
+     COUNTRY = 281,
      LANGUAGE = 282,
-     SHORTNAME = 283,
-     OR = 284,
-     AND = 285,
-     UMINUS = 286
+     NAME = 283,
+     DESCRIPTION = 284,
+     OR = 285,
+     AND = 286,
+     UMINUS = 287
    };
 
     };
@@ -241,14 +242,14 @@ namespace KHolidays
     /* Tables.  */
     /// For a state, the index in \a yytable_ of its portion.
     static const short int yypact_[];
-    static const signed char yypact_ninf_;
+    static const short int yypact_ninf_;
 
     /// For a state, default rule to reduce.
     /// Unless\a  yytable_ specifies something else to do.
     /// Zero means the default is an error.
     static const unsigned char yydefact_[];
 
-    static const signed char yypgoto_[];
+    static const short int yypgoto_[];
     static const signed char yydefgoto_[];
 
     /// What to do in a state.

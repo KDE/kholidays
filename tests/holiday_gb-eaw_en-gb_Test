@@ -1,16 +1,19 @@
 :
-: England & Wales holiday file. Copy to ~/.holiday
-:
-: Author: Peter Lord <plord@uel.co.uk>
+: England & Wales test holiday file.
 :
 
-: Region Code for file if for a country, blank otherwise
-region "GB-EAW"
+: Metadata Section
+
+: Country Code for file if for a country, blank otherwise
+country "GB-EAW"
 : Language Code for language holiday names are in, optional
 language "en_GB"
 : Short name for holiday file to override region name for display to users, optional
-shortname "England and Wales"
+name "England and Wales"
+: Description for holiday file for display to users, optional
+description "A test file for multiple calendar systems"
 
+: Holiday List Section
 
 "New Years Day" red on 1/1
 "New Years Day Bank Holiday" weekend on january 1 shift to monday if saturday || sunday
@@ -41,4 +44,3 @@ shortname "England and Wales"
 "Purim Katan" red hebrew adari 14
 "Purim" red hebrew adar 14
 "Purim" red hebrew adarii 14
-

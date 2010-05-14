@@ -35,13 +35,14 @@ Q_OBJECT
 private Q_SLOTS:
     void testGb();
     void testLocations();
+    void testRegions();
 
 private:
-    void printMetadata( const QString &location );
+    void printMetadata( const QString &regionCode );
     void printHolidays( KHolidays::Holiday::List holidays );
-    void parseRegionCalendarYear( const QString &location, int year, const QString &calendarType );
-    void parseRegionDateRange( const QString &location, const QDate &startDate, const QDate &endDate );
-    void parseRegionDate( const QString &location, const QDate &date );
+    void parseRegionCalendarYear( const QString &regionCode, int year, const QString &calendarType );
+    void parseRegionDateRange( const QString &regionCode, const QDate &startDate, const QDate &endDate );
+    void parseRegionDate( const QString &regionCode, const QDate &date );
 };
 
 #endif // TESTHOLIDAYREGION_H

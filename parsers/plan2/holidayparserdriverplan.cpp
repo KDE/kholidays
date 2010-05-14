@@ -105,9 +105,10 @@ void HolidayParserDriverPlan::parse()
 
 void HolidayParserDriverPlan::parseMetadata()
 {
-    m_fileRegionCode.clear();
+    m_fileCountryCode.clear();
     m_fileLanguageCode.clear();
-    m_fileShortName.clear();
+    m_fileName.clear();
+    m_fileDescription.clear();
 
     // Default to files internal metadata
     setParseCalendar( "gregorian" );
@@ -117,22 +118,26 @@ void HolidayParserDriverPlan::parseMetadata()
     m_resultList.clear();
 
     // If not populated, then use filename metadata, this may change later
+    // metadata is encoded in filename in form holiday_<region>_<type>_<language>_<name>
+    // with region, type and language sub groups separated by -, and with name optional
     QFileInfo file( m_filePath );
     if ( file.exists() ) {
         QStringList metadata = file.fileName().split('_');
         if ( metadata[0] == "holiday" && metadata.count() > 2 ) {
-            if ( m_fileRegionCode.isEmpty() ) {
-                m_fileRegionCode = metadata[1].toUpper();
+            if ( m_fileCountryCode.isEmpty() ) {
+                setFileCountryCode( metadata[1].toUpper() );
             }
             if ( m_fileLanguageCode.isEmpty() ) {
                 QStringList language = metadata[2].split('-');
                 m_fileLanguageCode = language[0];
                 if ( language.count() > 1 ) {
-                    m_fileLanguageCode.append( '_' ).append( language[1].toUpper() );
+                    setFileLanguageCode( language[0].append( '_' ).append( language[1].toUpper() ) );
+                } else {
+                  setFileLanguageCode( language[0] );
                 }
             }
             if ( m_fileLanguageCode.isEmpty() && metadata.count() > 3 ) {
-                m_fileShortName = metadata[3];
+                m_fileName = metadata[3];
             }
         }
     }
@@ -349,9 +354,9 @@ int HolidayParserDriverPlan::julianDayFromWeekdayInMonth( int occurrence, int we
  * Set parsed event variables convenience functions *
  ****************************************************/
 
-void  HolidayParserDriverPlan::setFileRegionCode( const QString &regionCode )
+void  HolidayParserDriverPlan::setFileCountryCode( const QString &countryCode )
 {
-    m_fileRegionCode = regionCode;
+    m_fileCountryCode = countryCode;
 }
 
 void  HolidayParserDriverPlan::setFileLanguageCode( const QString &languageCode )
@@ -359,9 +364,14 @@ void  HolidayParserDriverPlan::setFileLanguageCode( const QString &languageCode 
     m_fileLanguageCode = languageCode;
 }
 
-void  HolidayParserDriverPlan::setFileShortName( const QString &shortName )
+void  HolidayParserDriverPlan::setFileName( const QString &name )
 {
-    m_fileShortName = shortName;
+    m_fileName = name;
+}
+
+void  HolidayParserDriverPlan::setFileDescription( const QString &description )
+{
+    m_fileDescription = description;
 }
 
 void  HolidayParserDriverPlan::setEventName( const QString &eventName )

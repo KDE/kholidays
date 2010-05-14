@@ -30,16 +30,16 @@
 
 QTEST_KDEMAIN( HolidayRegionTest, NoGUI )
 
-void HolidayRegionTest::printMetadata( const QString &location )
+void HolidayRegionTest::printMetadata( const QString &regionCode )
 {
-    KHolidays::HolidayRegion region( location );
+    KHolidays::HolidayRegion region( regionCode );
 
-    kDebug() << "This location = " << region.location();
+    kDebug() << "This regionCode = " << region.regionCode();
     kDebug() << "Is valid? = " << region.isValid();
-    kDebug() << "Region code = " << region.regionCode();
+    kDebug() << "Country code = " << region.countryCode();
     kDebug() << "Language code = " << region.languageCode();
-    kDebug() << "Short name = " << region.shortName();
-    kDebug() << "Long name = " << region.longName();
+    kDebug() << "Name = " << region.name();
+    kDebug() << "Description = " << region.description();
     kDebug() << "";
 }
 
@@ -54,11 +54,11 @@ void HolidayRegionTest::printHolidays( KHolidays::Holiday::List holidays )
     }
 }
 
-void HolidayRegionTest::parseRegionCalendarYear( const QString &location, int year, const QString &calendarType )
+void HolidayRegionTest::parseRegionCalendarYear( const QString &regionCode, int year, const QString &calendarType )
 {
-    kDebug() << "Parsing location = " << location << " year = " << year << " calendar = " << calendarType;
+    kDebug() << "Parsing region = " << regionCode << " year = " << year << " calendar = " << calendarType;
 
-    KHolidays::HolidayRegion region( location );
+    KHolidays::HolidayRegion region( regionCode );
     KHolidays::Holiday::List holidays = region.holidays( year, "gregorian" );
 
     printHolidays( holidays );
@@ -66,13 +66,13 @@ void HolidayRegionTest::parseRegionCalendarYear( const QString &location, int ye
     kDebug() << "";
 }
 
-void HolidayRegionTest::parseRegionDateRange( const QString &location, const QDate &startDate, const QDate &endDate )
+void HolidayRegionTest::parseRegionDateRange( const QString &regionCode, const QDate &startDate, const QDate &endDate )
 {
-    kDebug() << "Parsing location = " << location <<
+    kDebug() << "Parsing regionCode = " << regionCode <<
                 " start date = " << startDate.toString( Qt::ISODate ) <<
                 " end date = " << endDate.toString( Qt::ISODate );
 
-    KHolidays::HolidayRegion region( location );
+    KHolidays::HolidayRegion region( regionCode );
     KHolidays::Holiday::List holidays = region.holidays( startDate, endDate );
 
     printHolidays( holidays );
@@ -80,11 +80,11 @@ void HolidayRegionTest::parseRegionDateRange( const QString &location, const QDa
     kDebug() << "";
 }
 
-void HolidayRegionTest::parseRegionDate( const QString &location, const QDate &date )
+void HolidayRegionTest::parseRegionDate( const QString &regionCode, const QDate &date )
 {
-    kDebug() << "Parsing location = " << location << " date = " << date.toString( Qt::ISODate );
+    kDebug() << "Parsing regionCode = " << regionCode << " date = " << date.toString( Qt::ISODate );
 
-    KHolidays::HolidayRegion region( location );
+    KHolidays::HolidayRegion region( regionCode );
     KHolidays::Holiday::List holidays = region.holidays( date );
 
     printHolidays( holidays );
@@ -102,13 +102,25 @@ void HolidayRegionTest::testGb()
     parseRegionDate( "gb-eaw_en-gb", QDate( 2010, 1, 1 ) );
 }
 
+void HolidayRegionTest::testRegions()
+{
+  kDebug() << "Available regions:";
+  QStringList regions = KHolidays::HolidayRegion::regions();
+  foreach ( const QString &regionCode, regions ) {
+    KHolidays::HolidayRegion testRegion( regionCode );
+    kDebug() << regionCode << " = " << testRegion.name();
+  }
+  kDebug() << "";
+}
+
 void HolidayRegionTest::testLocations()
 {
-    kDebug() << "Available locations:";
-    QStringList locations = KHolidays::HolidayRegion::locations();
-    foreach ( const QString &location, locations ) {
-        kDebug() << location;
-    }
-    kDebug() << "";
+  kDebug() << "Available locations:";
+  QStringList locations = KHolidays::HolidayRegion::locations();
+  foreach ( const QString &location, locations ) {
+    KHolidays::HolidayRegion testRegion( location );
+    kDebug() << location << " = " << testRegion.regionCode() << testRegion.name();
+  }
+  kDebug() << "";
 }
 
