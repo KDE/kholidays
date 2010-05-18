@@ -161,6 +161,7 @@ QString HolidayRegion::languageCode( const QString &regionCode )
 QString HolidayRegion::name() const
 {
   QString tempName = d->mDriver->fileName();
+
   if ( tempName.isEmpty() ) {
     QString country = countryCode().left( 2 ).toLower();
     QString regionName, typeName;;
@@ -173,7 +174,7 @@ QString HolidayRegion::name() const
         if ( country == "ca" && subdivision == "qc" ) {
           regionName = i18nc( "Canadian region", "Quebec" );
         } else if ( country == "de" && subdivision == "by" ) {
-          regionName = i18nc( "German region", "Baveria" );
+          regionName = i18nc( "German region", "Bavaria" );
         } else if ( country == "es" && subdivision == "ct" ) {
           regionName = i18nc( "Spanish region", "Catalonia" );
         } else if ( country == "gb" && subdivision == "eaw" ) {
@@ -226,7 +227,11 @@ QString HolidayRegion::name() const
       typeName = i18nc( "Holiday type", "Islamic" );
     }
 
-    if ( tempName.isEmpty() ) {
+    if ( !regionName.isEmpty() ) {
+      tempName = regionName;
+    } else if ( !typeName.isEmpty() ) {
+      tempName = typeName;
+    } else {
       tempName = i18nc( "Unknown holiday region", "Unknown" );
     }
   }
