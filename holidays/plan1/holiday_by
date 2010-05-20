@@ -1,0 +1,98 @@
+:
+: Belarus holiday file. Copy to ~/.holiday
+:
+: Author: Andrey Yurkovsky <anyr@tut.by>, May 2010.
+:
+
+: Weekends
+small "Новый год" weekend on 1.1
+small "Рождество Христово (православное)" weekend on 7.1
+small "День женщин" weekend on 8.3
+small "Радуница" weekend on easter plus 9
+small "Праздник труда" weekend on 1.5
+small "День Победы" weekend on 9.5
+small "День Независимости Республики Беларусь" weekend on 3.7
+small "День Октябрьской революции" weekend on 7.11
+small "Рождество Христово (католическое)" weekend on 25.12
+
+: Other
+small "Старый Новый год" on 14.1
+small "День студентов (Татьянин день)" on 25.1
+small "День Святого Валентина (День всех влюбленных)" on 14.2
+small "День молодёжи в Беларуси" on last sunday in june
+small "День памяти" on 2.11
+small "День работников социальной защиты" on 5.1
+small "День банковских и финансовых работников" on first sunday in january
+small "День спасателя" on 19.1
+small "День инженерных войск" on 21.1
+small "День белорусской науки" on last sunday in january
+small "День памяти воинов-интернационалистов" on 15.2
+small "День работников землеустроительной и картографо-геодезической службы" on 21.2
+small "День защитников Отечества и Вооруженных Сил" on 23.2
+small "День милиции" on 4.3
+small "День Конституции" on 15.3
+small "День потребителя" on 15.3
+small "День внутренних войск" on 18.3
+small "День работников бытового обслуживания населения и жилищно-коммунального хозяйства" on fourth sunday in march
+small "Пасха" on easter
+small "День единения народов Беларуси и России" on 2.4
+small "День геолога" on first sunday in april
+small "День войск противовоздушной обороны" on second sunday in april
+small "День чернобыльской трагедии" on 26.4
+small "День печати" on 5.5
+small "День работников радио, телевидения и связи" on 7.5
+small "День семьи" on 15.5
+small "День Государственного флага и герба" on second sunday in may
+small "День работников физической культуры и спорта" on third saturday in may
+small "День пограничника" on 28.5
+small "День химика" on last sunday in may
+small "День охраны окружающей среды" on 5.6
+small "День мелиоратора" on first sunday in june
+small "День работников легкой промышленности" on second sunday in june
+small "День медицинских работников" on third sunday in june
+small "День всенародной памяти жертв ВОВ" on 22.6
+small "День работников прокуратуры" on 26.6
+small "День изобретателя и рационализатора" on last saturday in june
+small "День молодёжи" on last sunday in june
+small "День экономиста" on 30.6
+small "День кооперации" on first saturady in july
+small "Купалье" on 7.7
+small "День работников водного транспорта" on first sunday in july
+small "День работников налоговых органов" on second sunday in july
+small "День металлурга" on third sunday in july
+small "День пожарной службы" on 25.7
+small "День работников торговли" on last sunday in july
+small "День десантников" on 2.8
+small "День железнодорожных войск" on 6.8
+small "День железнодорожника" on first sunday in august
+small "День строителя" on second sunday in august
+small "День военно-воздушных сил" on third sunday in august
+small "День работников государственной статистики" on 23.8
+small "День шахтера" on last sunday in august
+small "День знаний" on 1.9
+small "День белорусской письменности" on first sunday in september
+small "День работников нефтяной, газовой и топливной промышленности" on first sunday in september
+small "День танкистов" on second sunday in september
+small "День мира" on third tuesday in september
+small "День библиотек" on 15.9
+small "День таможенника" on 20.9
+small "День работников леса" on third sunday in september
+small "День машиностроителя" on last sunday in september
+small "День пожилых людей" on 1.10
+small "День архивиста" on 6.10
+small "День учителя" on first sunday in october
+small "День работников культуры" on second sunday in october
+small "День матери" on 14.10
+small "День стандартизации" on 14.10
+small "День работников фармацевтической и микробиологической промышленности" on 15.10
+small "День автомобилиста и дорожника" on last sunday in october
+small "День работников гражданской авиации" on first sunday in november
+small "День ракетных войск и артиллерии" on 19.11
+small "День работников сельского хозяйства и перерабатывающей промышленности агропромышленного комплекса" on third sunday in november
+small "День инвалидов Республики Беларусь" on 3.12
+small "День страховых работников" on first suturday in december
+small "День юриста" on first sunday in december
+small "День прав человека" on 10.12
+small "День белорусского кино" on 17.12
+small "День сотрудника органов государственной безопасности" on 20.12
+small "День энергетика" on 22.12
