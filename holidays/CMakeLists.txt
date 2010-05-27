@@ -32,6 +32,8 @@ install( FILES
           plan1/holiday_fi_fi
           plan1/holiday_fr_fr
           plan1/holiday_gb-eaw_en-gb
+          plan1/holiday_gb-nir_en-gb
+          plan1/holiday_gb-sct_en-gb
           plan1/holiday_gr_el
           plan1/holiday_gt_es
           plan1/holiday_hu_hu
