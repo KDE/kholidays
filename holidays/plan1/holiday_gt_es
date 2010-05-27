@@ -1,35 +1,50 @@
-:
-: Fichero holiday_guatemala. Cópialo a  ~/.holiday
-: Modifica este fichero borrando y añadiendo lo que te parezca.
-:
-: Fiestas
-:
-red "Año nuevo" red on january 1
-red "Reyes" red on january 6
-red "Trabajo" red on march 19
-red "Ejército" red on may 1
-red "Virgen de la Asunción" red on august 15
-red "Independencia" red on september 15
-red "Revolucion de 1944" red on october 20
-red "Todos los Santos" red on november 1
-red "Nochebuena" red on december 24
-red "Navidad" red on december 25
-red "Fin de año" red on december 31
-:
-: Relacionados con la pascua
-:
-small "Jueves Santo" weekend on easter minus 3 days
-small "Viernes Santo" weekend on easter minus 2 days
-small "Pascua" weekend on easter
-small "Miércoles de ceniza" on easter minus 46 days
-small "Pentecostes" weekend on easter plus 49 days
-small "Ascension" on easter plus 39 days
-small "Trinidad" on easter plus 46 days
-small "Corpus Christi" on easter plus 60 days
-:
-: Estaciones
-:
-"Llega la Primavera" on march 20
-"Llega el Verano" on june 21
-"Llega el Otoño" on september 23
-"Llega el Invierno" on december 22
+::
+:: Country:  Guatemala
+::
+:: Language: Spanish
+::
+:: Author:
+::
+:: Updated:
+::
+:: Source:
+::
+
+:: Public Holidays
+"Año nuevo"              weekend on january 1
+"Reyes"                  weekend on january 6
+"Trabajo"                weekend on march 19
+"Jueves Santo"           weekend on easter minus 3 days
+"Viernes Santo"          weekend on easter minus 2 days
+"Pentecostes"            weekend on easter plus 49 days
+"Ejército"               weekend on may 1
+"Virgen de la Asunción"  weekend on august 15
+"Independencia"          weekend on september 15
+"Revolucion de 1944"     weekend on october 20
+"Todos los Santos"       weekend on november 1
+"Nochebuena"             weekend on december 24
+"Navidad"                weekend on december 25
+"Fin de año"             weekend on december 31
+
+:: Religious
+"Pascua"                 on easter
+"Miércoles de ceniza"    on easter minus 46 days
+"Ascension"              on easter plus 39 days
+"Trinidad"               on easter plus 46 days
+"Corpus Christi"         on easter plus 60 days
+
+:: Financial
+
+:: Cultural
+
+:: School
+
+:: Daylight Saving
+
+:: Seasons
+"Llega la Primavera"     on march 20
+"Llega el Verano"        on june 21
+"Llega el Otoño"         on september 23
+"Llega el Invierno"      on december 22
+
+:: Name Days

@@ -1,34 +1,60 @@
-:
-: Belgian (in french) holiday file. Copy to ~/.holiday
-:
-: Author: Guido van Rossum, CWI, Amsterdam <Guido.van.Rossum@cwi.nl>
-: Adapted from Dutch holiday by Danny Backx <u27113@kb.be> and Jean Cayron <jean.cayron@gmail.com>
-:
-small	"Jour de l'an"		weekend on 1.1.
-small	"Épiphanie"		on 6.1
-small	"Chandeleur"		on 2.2
-small	"Mardi-gras"		on easter minus 47 days
-small	"Mercredi des cendres"	on easter minus 46 days
-small	"Dimanche des rameaux"	on easter minus 7 days
-small	"Jeudi saint"		on easter minus 3 days
-small	"Vendredi saint"		on easter minus 2 days
-small	"Pâques"			weekend on easter
-small	"Lundi de Pâques"	weekend on easter plus 1 day
-small	"Fête du travail" 	weekend on 1.5
-small	"Ascencion"		weekend on easter plus 39 days
-small	"Fête des mères"		on every second sunday in may
-small	"Pentecôte"		weekend on easter plus 49 days
-small	"Lundi de Pentecôte"	weekend on easter plus 50 days
-small	"Fête des pères"		on every third sunday in june
-small	"Fête de la Communauté flamande"	on 11.7
-small	"Fête nationale - Férié"	weekend on 21.7
-small	"Assomption"		weekend on 15.8
-small	"Fête de la Communauté française de Belgique"	on 27.9
-small	"Fêtes de Wallonie"	on every third sunday in september
-small	"Toussaint"		weekend on 1.11
-small	"Jour des morts"		on 2.11
-small	"Armistice"		weekend on 11.11
-small	"Fête de la Communauté germanophone de Belgique"	on 15.11
-small	"Saint Nicolas"		on 06.12
-small	"Noël"			weekend on 25.12.
-small	"Saint-Sylvestre"	on 31.12
+::
+:: Country:  Belgium
+::
+:: Language: French
+::
+:: Author:   Guido van Rossum, CWI, Amsterdam <Guido.van.Rossum@cwi.nl>
+::           Danny Backx <u27113@kb.be>
+::           Jean Cayron <jean.cayron@gmail.com>
+::
+:: Updated:
+::
+:: Source:
+::
+
+:: Public Holidays
+"Jour de l'an"                                    weekend on january 1
+"Pâques"                                          weekend on easter
+"Lundi de Pâques"                                 weekend on easter plus 1 day
+"Fête du travail"                                 weekend on may 1
+"Ascencion"                                       weekend on easter plus 39 days
+"Pentecôte"                                       weekend on easter plus 49 days
+"Lundi de Pentecôte"                              weekend on easter plus 50 days
+"Fête nationale - Férié"                          weekend on july 21
+"Assomption"                                      weekend on august 15
+"Toussaint"                                       weekend on november 1
+"Armistice"                                       weekend on november 11
+"Noël"                                            weekend on december 25
+
+:: Religious
+"Épiphanie"                                       on january 6
+"Mardi-gras"                                      on easter minus 47 days
+"Mercredi des cendres"                            on easter minus 46 days
+"Dimanche des rameaux"                            on easter minus 7 days
+"Jeudi saint"                                     on easter minus 3 days
+"Vendredi saint"                                  on easter minus 2 days
+"Saint Nicolas"                                   on december 06
+"Saint-Sylvestre"                                 on december 31
+
+:: Financial
+
+:: Cultural
+"Fête des mères"                                  on every second sunday in may
+"Fête des pères"                                  on every third sunday in june
+"Fête de la Communauté flamande"                  on july 11
+"Fête de la Communauté française de Belgique"     on september 27
+"Fêtes de Wallonie"                               on every third sunday in september
+"Fête de la Communauté germanophone de Belgique"  on november 15
+
+:: School
+
+:: Daylight Saving
+
+:: Seasons
+
+:: Name Days
+
+
+:: To be sorted
+"Chandeleur"                                      on february 2
+"Jour des morts"                                  on november 2

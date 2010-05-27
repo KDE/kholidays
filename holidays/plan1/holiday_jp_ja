@@ -1,80 +1,83 @@
-:
-: Japanese holiday file. Copy to ~/.holiday
-: Author: Toyohiro Asukai <toyohiro@ksmplus.com>
-: Last modified on Nov 16 2004
-:
-: National Holidays. (English Messages)
-:small "New Year's Day" weekend on 1/1
-:small "Coming of Age" weekend on second monday in january
-:small "National Foundation Day" weekend on 2/11
-:small "Vernal Equinox Day" weekend on 3/20/2005
-:small "Vernal Equinox Day" weekend on 3/21/2006
-:small "Vernal Equinox Day" weekend on 3/21/2007
-:small "Vernal Equinox Day" weekend on 3/20/2008
-:small "Vernal Equinox Day" weekend on 3/20/2009
-:small "Vernal Equinox Day" weekend on 3/21/2010
-:small "Greenery Day" weekend on 4/29
-:small "Constitution Day" weekend on 5/3
-:small "Holiday" weekend on 5/4
-:small "Children's Day" weekend on 5/5
-:small "Oceans' Day" weekend on third monday in july
-:small "Respect for Senior Citizens Day" weekend on third monday in september
-:small "Autumnal Equinox Day" weekend on 9/23
-:small "Sports Day" weekend on second monday in october
-:small "Culture Day" weekend on 11/3
-:small "Labor Thanksgiving Day" weekend on 11/23
-:small "The Emperor's Birthday" weekend on 12/23
+::
+:: Country:  Japan
+::
+:: Author:   Toyohiro Asukai <toyohiro@ksmplus.com>
+::
+:: Language: Japanese
+::
+:: Updated:  2004-11-16
+::
+:: Source:
+::
 
-: National Holidays. (Japanese and English messages)
-small "元旦(New Year's Day)" weekend on 1/1
-small "成人の日(Coming of Age)" weekend on second monday in january
-small "建国記念日(National Foundation Day)" weekend on 2/11
-small "春分の日(Vernal Equinox Day)" weekend on 3/20/2005
-small "春分の日(Vernal Equinox Day)" weekend on 3/21/2006
-small "春分の日(Vernal Equinox Day)" weekend on 3/21/2007
-small "春分の日(Vernal Equinox Day)" weekend on 3/20/2008
-small "春分の日(Vernal Equinox Day)" weekend on 3/20/2009
-small "春分の日(Vernal Equinox Day)" weekend on 3/21/2010
-small "みどりの日(Greenery Day)" weekend on 4/29
-small "憲法記念日(Constitution Day)" weekend on 5/3
-small "休日(Holiday)" weekend on 5/4
-small "こどもの日(Children's Day)" weekend on 5/5
-small "海の日(Oceans' Day)" weekend on third monday in july
-small "敬老の日(Respect for Senior Citizens Day)" weekend on third monday in september
-small "秋分の日(Autumnal Equinox Day)" weekend on 9/23
-small "体育の日(Sports Day)" weekend on second monday in october
-small "文化の日(Culture Day)" weekend on 11/3
-small "勤労感謝の日(Labor Thanksgiving Day)" weekend on 11/23
-small "天皇誕生日(The Emperor's Birthday)" weekend on 12/23
+:: Public Holidays
+:"New Year's Day"
+"元旦"                               weekend on january 1
+:"Coming of Age"
+"成人の日"                            weekend on second monday in january
+:"National Foundation Day"
+"建国記念日"                          weekend on february 11
+:"Vernal Equinox Day"
+"春分の日"                            weekend on 20.3.2005
+"春分の日"                            weekend on 21.3.2006
+"春分の日"                            weekend on 21.3.2007
+"春分の日"                            weekend on 21.3.2008
+"春分の日"                            weekend on 21.3.2009
+"春分の日"                            weekend on 21.3.2010
+:"Greenery Day"
+"みどりの日"                          weekend on april 29
+:"Constitution Day"
+"憲法記念日"                          weekend on may 3
+:"Holiday"
+"休日"                               weekend on may 4
+:"Children's Day"
+"こどもの日"                          weekend on may 5
+:"Oceans' Day"
+"海の日"                             weekend on third monday in july
+:"Respect for Senior Citizens Day"
+"敬老の日"                            weekend on third monday in september
+:"Autumnal Equinox Day"
+"秋分の日"                            weekend on september 23
+:"Sports Day"
+"体育の日"                            weekend on second monday in october
+:"Culture Day"
+"文化の日"                            weekend on november 3
+:"Labor Thanksgiving Day"
+"勤労感謝の日"                         weekend on november 23
+:"The Emperor's Birthday"
+"天皇誕生日"                          weekend on december 23
 
-: If a "National Holiday" is on Sunday,the following day
-: shall be a substitute holiday.
-:small "Substitute holiday" weekend on 3/21/2005
-:small "Substitute holiday" weekend on 1/2/2006
-:small "Substitute holiday" weekend on 2/12/2007
-:small "Substitute holiday" weekend on 4/30/2007
-:small "Substitute holiday" weekend on 9/24/2007
-:small "Substitute holiday" weekend on 12/24/2007
-:small "Substitute holiday" weekend on 11/24/2008
-:small "Substitute holiday" weekend on 3/22/2010
+:: If a "National Holiday" is on Sunday,the following day
+:: shall be a substitute holiday.
+:"Substitute holiday"
+"振替休日"                            weekend on 21.3.2005
+"振替休日"                            weekend on 2.1.2006
+"振替休日"                            weekend on 12.2.2007
+"振替休日"                            weekend on 30.4.2007
+"振替休日"                            weekend on 24.9.2007
+"振替休日"                            weekend on 24.12.2007
+"振替休日"                            weekend on 24.11.2008
+"振替休日"                            weekend on 22.3.2010
 
-small "振替休日(Substitute holiday)" weekend on 3/21/2005
-small "振替休日(Substitute holiday)" weekend on 1/2/2006
-small "振替休日(Substitute holiday)" weekend on 2/12/2007
-small "振替休日(Substitute holiday)" weekend on 4/30/2007
-small "振替休日(Substitute holiday)" weekend on 9/24/2007
-small "振替休日(Substitute holiday)" weekend on 12/24/2007
-small "振替休日(Substitute holiday)" weekend on 11/24/2008
-small "振替休日(Substitute holiday)" weekend on 3/22/2010
+:: Religious
 
+:: Financial
 
-: Japanese Events , not National Holidays.
-:small "St. Valentine's Day" on february 14
-:small "Girls' Festival" on march 3
-:small "Buddha's Birthday" on april 8
-:small "May Day" on may 1
-:small "Boys' Festival" on may 5
-:small "Mother's Day" on second sunday in may
-:small "Father's Day" on third sunday in june
-:small "Festival of the Weaver Star" on july 7
-:small "Christmas" on december 25
+:: Cultural
+:"St. Valentine's Day"              on february 14
+:"Girls' Festival"                  on march 3
+:"Buddha's Birthday"                on april 8
+:"May Day"                          on may 1
+:"Boys' Festival"                   on may 5
+:"Mother's Day"                     on second sunday in may
+:"Father's Day"                     on third sunday in june
+:"Festival of the Weaver Star"      on july 7
+:"Christmas"                        on december 25
+
+:: School
+
+:: Daylight Saving
+
+:: Seasons
+
+:: Name Days

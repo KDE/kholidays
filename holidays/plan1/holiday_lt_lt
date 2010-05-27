@@ -1,42 +1,53 @@
-:
-: Lithuanian holiday file. Copy to ~/.holiday
-:
-: Author: Donatas Glodenis <dgvirtual@akl.lt>
-: 12 July 2005 (first version)
-:
-: Valstybinės šventės / National holidays
-: based on the Work Code of the Republic of Lithuania, article no. 162. 
-: List accessible at http://lt.wikipedia.org/wiki/Lietuvos_%C5%A1vent%C4%97s
+::
+:: Country:  Lithuania
+::
+:: Language: Lithuanian
+::
+:: Author:   Donatas Glodenis <dgvirtual@akl.lt>
+::
+:: Updated:  2005-07-12
+::
+:: Source:   Based on the Work Code of the Republic of Lithuania, article no. 162.
+::           List accessible at http://lt.wikipedia.org/wiki/Lietuvos_%C5%A1vent%C4%97s
+::
 
-small red "Naujieji metai" weekend on 1/1
-small red "Lietuvos valstybės atkūrimo diena" weekend on 2/16
-small red "Lietuvos nepriklausomybės atkūrimo diena" weekend on 3/11
-small red "Velykos" weekend on easter length 2 days
-small red "Tarptautinė darbo diena" weekend on 5/1
-small red "Motinos diena"  on first sunday in may
-small red "Rasos (Joninės)" weekend on 6/24
-small red "Valstybės (Lietuvos karaliaus Mindaugo karūnavimo) diena" weekend on 7/6
-small red "Žolinė (Švč. Mergelės Marijos ėmimo į dangų diena)" weekend on 8/15
-small red "Visų Šventųjų diena" weekend on 11/1
-small red "Kalėdos" weekend  on  12/25 length 2 days
+:: Public Holidays
+"Naujieji metai"                                            weekend on january 1
+"Lietuvos valstybės atkūrimo diena"                         weekend on february 16
+"Lietuvos nepriklausomybės atkūrimo diena"                  weekend on march 11
+"Velykos"                                                   weekend on easter length 2 days
+"Tarptautinė darbo diena"                                   weekend on may 1
+"Motinos diena"                                             weekend on first sunday in may
+"Rasos (Joninės)"                                           weekend on june 24
+"Valstybės (Lietuvos karaliaus Mindaugo karūnavimo) diena"  weekend on july 6
+"Žolinė (Švč. Mergelės Marijos ėmimo į dangų diena)"        weekend on august 15
+"Visų Šventųjų diena"                                       weekend on november 1
+"Kalėdos"                                                   weekend on december 25 length 2 days
 
-: Tautinės bei religinės šventės / folk (green) and religious (cyan) holidays
-: NOT public holidays
-: Sources various
-small cyan "Trys karaliai" cyan on 1/6
-small green "Šv. Valentino diena" green on 2/14
-small green "Užgavėnės" green on easter minus 47 days
-small cyan "Pelenų diena" cyan on easter minus 46 days
-small green "Melagio diena" green on 4/1
-small cyan "Verbų sekmadienis" weekend on easter minus 7 days
-small cyan "Didysis penktadienis" cyan on easter minus 2 days
-small cyan "Sekminės" weekend on easter plus 49 days
-small cyan "Kūčios" cyan on 12/24
+:: Religious
+"Trys karaliai"                                             on january 6
+"Pelenų diena"                                              on easter minus 46 days
+"Verbų sekmadienis"                                         on easter minus 7 days
+"Didysis penktadienis"                                      on easter minus 2 days
+"Sekminės"                                                  on easter plus 49 days
+"Kūčios"                                                    on december 24
+:"Gavėnia"                                                  on easter minus 45 days length 44 days
+:"Adventas"                                                 on november 28 length 27 days
 
-: Religiniai sezonai / Religious holiday seasons
-: next is Lent season:
-: small white "Gavėnia"  white on easter minus 45 days length 44 days 
+:: Financial
 
-: next is advent season
-: small white "Adventas" 11/28 length 27 days  
+:: Cultural
+"Šv. Valentino diena"                                       on february 14
+"Užgavėnės"                                                 on easter minus 47 days
+"Melagio diena"                                             on april 1
+
+:: School
+
+:: Daylight Saving
+
+:: Seasons
+
+:: Name Days
+
+
 

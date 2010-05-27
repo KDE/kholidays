@@ -1,34 +1,60 @@
-:
-: Belgian (in walloon) holiday file. Copy to ~/.holiday
-:
-: Author: Guido van Rossum, CWI, Amsterdam <Guido.van.Rossum@cwi.nl>
-: Adapted from Dutch holiday by Danny Backx <u27113@kb.be> and Djan Cayron <jean.cayron@gmail.com>
-:
-small	"Novelan"		weekend on 1.1.
-small	"Fiesse des Rwès"	on 6.1
-small	"Tchandleuse"		on 2.2
-small	"Crås mårdi"		on easter minus 47 days
-small	"Mierkidi des cindes"	on easter minus 46 days
-small	"Floreye Påke"		on easter minus 7 days
-small	"Djudi sint"		on easter minus 3 days
-small	"Bon vénrdi"		on easter minus 2 days
-small	"Påke"			weekend on easter
-small	"Londi d' Påke"		weekend on easter plus 1 day
-small	"Fiesse do boutaedje"	weekend on 1.5
-small	"Assincion"		weekend on easter plus 39 days
-small	"Fiesse des méres"	on every second sunday in may
-small	"Céncweme (Pintcosse)"	weekend on easter plus 49 days
-small	"Londi d' Céncweme"	weekend on easter plus 50 days
-small	"Fiesse des péres"	on every third sunday in june
-small	"Fiesse del Cominålté flaminde"	on 11.7
-small	"Fiesse nacionåle"	weekend on 21.7
-small	"Grande Notru Dame"	weekend on 15.8
-small	"Fiesse del Cominålté francesse di Beldjike"	on 27.9
-small	"Fiesses di Walonreye"	on every third sunday in september
-small	"Tossint"		weekend on 1.11
-small	"Djoû des åmes"		on 2.11
-small	"Årmistice"		weekend on 11.11
-small	"Fiesse del Cominålté Tîxhon-cåzante di Belgjike"	on 15.11
-small	"Sint Nicolai"		on 06.12
-small	"Noyé"			weekend on 25.12.
-small	"Sint Silvesse"		on 31.12
+::
+:: Country:  Belgium
+::
+:: Language: Walloon
+::
+:: Author:   Guido van Rossum, CWI, Amsterdam <Guido.van.Rossum@cwi.nl>
+::           Danny Backx <u27113@kb.be>
+::           Jean Cayron <jean.cayron@gmail.com>
+::
+:: Updated:
+::
+:: Source:
+::
+
+:: Public Holidays
+"Novelan"                                          weekend on january 1
+"Påke"                                             weekend on easter
+"Londi d' Påke"                                    weekend on easter plus 1 day
+"Fiesse do boutaedje"                              weekend on january 1
+"Assincion"                                        weekend on easter plus 39 days
+"Céncweme (Pintcosse)"                             weekend on easter plus 49 days
+"Londi d' Céncweme"                                weekend on easter plus 50 days
+"Fiesse nacionåle"                                 weekend on july 21
+"Grande Notru Dame"                                weekend on august 15
+"Tossint"                                          weekend on november 1
+"Årmistice"                                        weekend on november 11
+"Noyé"                                             weekend on december 25
+
+:: Religious
+"Fiesse des Rwès"                                  on january 6
+"Crås mårdi"                                       on easter minus 47 days
+"Mierkidi des cindes"                              on easter minus 46 days
+"Floreye Påke"                                     on easter minus 7 days
+"Djudi sint"                                       on easter minus 3 days
+"Bon vénrdi"                                       on easter minus 2 days
+"Sint Nicolai"                                     on december 06
+"Sint Silvesse"                                    on december 31
+
+:: Financial
+
+:: Cultural
+"Fiesse des méres"                                 on every second sunday in may
+"Fiesse des péres"                                 on every third sunday in june
+"Fiesse del Cominålté flaminde"                    on july 11
+"Fiesse del Cominålté francesse di Beldjike"       on september 27
+"Fiesses di Walonreye"                             on every third sunday in september
+"Fiesse del Cominålté Tîxhon-cåzante di Belgjike"  on november 15
+
+:: School
+
+:: Daylight Saving
+
+:: Seasons
+
+:: Name Days
+
+
+:: To be sorted
+"Tchandleuse"                                      on february 2
+"Djoû des åmes"                                    on november 2

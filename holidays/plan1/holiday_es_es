@@ -1,88 +1,73 @@
-:
-: holiday_es -- Defines spanish holidays
-:
-: For corrections, comments, etc., write to kde-es@kybs.de
-: Para correcciones, comentarios, etc., escriba a kde-es@kybs.de
+::
+:: Country:  Spain
+::
+:: Language: Spanish
+::
+:: Author:   <kde-es@kybs.de>
+::
+:: Updated:
+::
+:: Source:   : http://www.mtas.es/infpuntual/Fiestas2005/caracteristicas.htm
+::             http://www.mtas.es/infpuntual/Fiestas2005/RES061004.htm
+::             http://www.mtas.es/infpuntual/Fiestas2005/RES061004.htm
+::             http://en.wikipedia.org/wiki/Public_holidays_in_Spain
 
 ::
-:: Holidays in all parts of Spain
-::
-: http://www.mtas.es/infpuntual/Fiestas2005/caracteristicas.htm
-: «se respetarán como fiestas de ámbito nacional las de
-: la Natividad del Señor,
-: Año Nuevo,
-: 1 de Mayo como fiesta del Trabajo,
-: y 12 de Octubre como fiesta Nacional de España.»
-"Año nuevo" weekend on january 1
-"Fiesta del Trabajo" weekend on may 1
-"Fiesta Nacional de España" weekend on october 12
-"Natividad del Señor" weekend on december 25
 
-: http://www.mtas.es/infpuntual/Fiestas2005/RES061004.htm
-: «Fiesta Nacional no sustituible»
-"Asunción de la Virgen" weekend on august 15
-"Todos los Santos" weekend on november 1
-"Día de la Constitución Española" weekend on december 6
-"La Inmaculada Concepción" weekend on december 8
+:: Public Holidays
+"Año nuevo"                                  weekend on january 1
+"Viernes Santo"                              weekend on easter minus 2 days
+"Fiesta del Trabajo"                         weekend on may 1
+"Asunción de la Virgen"                      weekend on august 15
+"Fiesta Nacional de España"                  weekend on october 12
+"Todos los Santos"                           weekend on november 1
+"Día de la Constitución Española"            weekend on december 6
+"La Inmaculada Concepción"                   weekend on december 8
+"Natividad del Señor"                        weekend on december 25
 
-: http://www.mtas.es/infpuntual/Fiestas2005/RES061004.htm
-: «Fiesta Nacional respecto de la que no se ha ejercido la facultad
-:  de sustitución.»
-"Epifanía del Señor" weekend on january 6
-small "San Esteban" on december 26
+:: Regional Holidays of the autonomous communities
+"Día de Andalucía"                           on february 28
+"Día de las Islas Baleares"                  on march 1
+"San José"                                   on march 19
+"Sant Jordi"                                 on april 23
+"Fiesta de la Comunidad de Castilla y León"  on april 23
+"Día de Aragón"                              on april 23
+"Fiesta de la Comunidad de Madrid"           on may 3
+"Día de las Letras Gallegas"                 on may 17
+"Día de Canarias"                            on may 30
+"Día de la Región de Castilla y la Mancha"   on may 31
+"Día de la Región de Murcia"                 on june 9
+"Día de la Rioja"                            on june 9
+"San Juan"                                   on june 24
+"Santiago Apóstol"                           on july 25
+"Día de las Instituciones"                   on july 28
+"Día de la Ciudad Autónoma de Ceuta"         on september 2
+"Día de Asturias"                            on september 8
+"Día de Extremadura"                         on september 8
+"Diada de Cataluña"                          on september 11
+"Ntra. Sra. de la Bien Aparecida"            on september 15
 
+:: Religious Holidays
+"Epifanía del Señor"                         weekend on january 6
+"Jueves Santo"                               on easter minus 3 days
+"Lunes de Pascua"                            on easter plus 1 day
+"Pentecostes / 2º Pascua"                    on easter plus 50 days
+"San Esteban"                                on december 26
 
-::
-:: Easter related
-::
-small "Jueves Santo" on easter minus 3 days
-"Viernes Santo" weekend on easter minus 2 days
-small "Lunes de Pascua" on easter plus 1 day
-small "Pentecostes / 2º Pascua" on easter plus 50 days
+:: Financial
 
+:: Cultural
 
-::
-:: Holidays of the autonomic communities
-::
-small "Día de Andalucía" on february 28
+:; School
 
-small "Día de las Islas Baleares" on march 1
-small "San José" on march 19
+:: Daylight Saving
+"Adelanto horario"                           on last sunday in march
+"Retraso horario"                            on last sunday in october
 
-small "Sant Jordi" on april 23
-small "Fiesta de la Comunidad de Castilla y León" on april 23
-small "Día de Aragón" on april 23
-
-small "Fiesta de la Comunidad de Madrid" on may 3
-small "Día de las Letras Gallegas" on may 17
-small "Día de Canarias" on may 30
-small "Día de la Región de Castilla y la Mancha" on may 31
-
-small "Día de la Región de Murcia" on june 9
-small "Día de la Rioja" on june 9
-small "San Juan" on june 24
-
-small "Santiago Apóstol" on july 25
-small "Día de las Instituciones" on july 28
-
-small "Día de la Ciudad Autónoma de Ceuta" on september 2
-small "Día de Asturias" on september 8
-small "Día de Extremadura" on september 8
-small "Diada de Cataluña" on september 11
-small "Ntra. Sra. de la Bien Aparecida" on september 15
-
-
-::
-:: Daylight saving time
-::
-small "Adelanto horario" on last sunday in march
-small "Retraso horario" on last sunday in october
-
-
-::
 :: Seasons
-::
-small "Equinoccio e inicio de primavera" on march 21
-small "Solsticio e inicio de verano" on june 21
-small "Equinoccio e inicio de otoño" on september 23
-small "Solsticio e inicio de invierno" on december 21
+"Equinoccio e inicio de primavera"           on march 21
+"Solsticio e inicio de verano"               on june 21
+"Equinoccio e inicio de otoño"               on september 23
+"Solsticio e inicio de invierno"             on december 21
+
+:: Name Days

@@ -1,10 +1,34 @@
-:
-: Israeli holidays file for Korganizer
-: Author: Jonathan Singer (jsinger@leeta.net), 13/01/02
-: Author: Lior Chen <sliorc@t2.technion.ac.il>, 21/03/01
-:
-: (Note that these holidays are only relevant for the current year).
-:
+::
+:: Country:  Israel
+::
+:: Language: US English
+::
+:: Author:   Jonathan Singer <jsinger@leeta.net>
+::           Lior Chen <sliorc@t2.technion.ac.il>
+::
+:: Updated:  2002-01-13
+::
+:: Source:
+::
+
+:: Public Holidays
+
+:: Religious Holidays
+
+:: Financial
+
+:: Cultural
+
+:: School
+
+:: Daylight Saving
+
+:: Seasons
+
+:: Name Days
+
+
+:: All the following will be re-written once switch to new parser with alternative calendar support
 
  "Fast: 10th of Tevet" on 5.1.2001
  "Tu BiShvat" on 8.02.2001

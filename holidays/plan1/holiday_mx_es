@@ -1,32 +1,54 @@
-:
-: Mexican holiday file
-:
-: Author: edscott <edscott@imp.mx>
+::
+:: Country:  Mexico
+::
+:: Language: Spanish
+::
+:: Author:   Ed Scott <edscott@imp.mx>
+::
+:: Updated:
+::
+:: Source:
+::
 
-small "Año Nuevo" weekend on 1/1
-small "Batalla de Puebla" on may 5
-small "Día de la Revolución" on november 20
-small "Día de los Santos Inocentes" on december 28
-small "Día de Vírgen de Guadalupe" on december 12
-small "Día de la Raza" on october 12
-small "Navidad" on december 25
-small "Día de los Reyes" on january 6
-small "Natalicio de Benito Juárez" on march 21
-small "Día de la expropiación petrolera" on march 18
-small "Día del trabajo" on may 1
-small "Día de la Independencia" on september 16
-small "Domingo de Pascua" on easter
-small "Sábado de Gloria" on easter minus 1
-small "Viérnes Santo" on easter minus 2
-small "Jueves Santo" on easter minus 3
-small "Día de Todos los Santos" on november 1
-small "Día de los Fieles Difuntos" on november 2
-small "Día de la Constitución" on february 5
-small "Día de la Madre" on may 10
+:: Public Holidays
+"Año Nuevo"                         weekend on january 1
+"Día de la Constitución"            weekend on february 5
+"Día del trabajo"                   weekend on may 1
+"Día de la Independencia"           weekend on september 16
+"Natalicio de Benito Juárez"        weekend on march 21
+"Navidad"                           weekend on december 25
+"Día de la Revolución"              weekend on november 20
 
-: Seasons
-"Equinoxio de primavera" on march 21
-"Solsticio de verano" on june 21
-"Equinoxio de otoño" on september 21
-"Solsticio de invierno" on december 21
+:: Religious
+"Día de los Reyes"                  on january 6
+"Domingo de Pascua"                 on easter
+"Sábado de Gloria"                  on easter minus 1
+"Viérnes Santo"                     on easter minus 2
+"Jueves Santo"                      on easter minus 3
+"Día de Todos los Santos"           on november 1
+"Día de los Fieles Difuntos"        on november 2
+"Día de Vírgen de Guadalupe"        on december 12
 
+:: Financial
+
+:: Cultural
+
+:: School
+
+:: Daylight Saving
+
+:: Seasons
+"Equinoxio de primavera"            on march 21
+"Solsticio de verano"               on june 21
+"Equinoxio de otoño"                on september 21
+"Solsticio de invierno"             on december 21
+
+:: Name Days
+
+
+:: To be sorted
+"Día de la expropiación petrolera"  on march 18
+"Batalla de Puebla"                 on may 5
+"Día de la Madre"                   on may 10
+"Día de la Raza"                    on october 12
+"Día de los Santos Inocentes"       on december 28

@@ -1,25 +1,38 @@
-:
-: Fichero holiday_paraguay.
-: Creado por Carlos Raúl Perasso <carlosrp@pla.net.py>
-:
-: Feriados Inamovibles
-: 
-red "Año nuevo" red on january 1
-red "Independencia" red on may 15
-red "Virgen de Caacupé" red on december 8
-red "Navidad" red on december 25
-:
-: Feriados que tendrían que pasar al siguiente lunes si caen entre martes y viernes
-: (No se como establecerlo para korganizer)
-:
-red "Día de los Heroes" red on march 1
-red "Trabajo" red on may 1
-red "Paz del Chaco" red on june 12
-red "Asunción" red on august 15
-red "Batalla de Boquerón" red on september 29
-:
-: Feriados relacionados a la Pascua
-:
-red "Jueves Santo" red on easter minus 3 days
-red "Viernes Santo" red on easter minus 2 days
-:
+::
+:: Country:  Paraguay
+::
+:: Language: Spanish
+::
+:: Author:   Carlos Raúl Perasso <carlosrp@pla.net.py>
+::
+:: Updated:
+::
+:: Source:
+::
+
+:: Public Holidays
+"Año nuevo"            weekend on january 1
+"Día de los Heroes"    weekend on march 1
+"Jueves Santo"         weekend on easter minus 3 days
+"Viernes Santo"        weekend on easter minus 2 days
+"Trabajo"              weekend on may 1
+"Independencia"        weekend on may 15
+"Paz del Chaco"        weekend on june 12
+"Asunción"             weekend on august 15
+"Batalla de Boquerón"  weekend on september 29
+"Virgen de Caacupé"    weekend on december 8
+"Navidad"              weekend on december 25
+
+:: Religious
+
+:: Financial
+
+:: Cultural
+
+:: School
+
+:: Daylight Saving
+
+:: Seasons
+
+:: Name Days

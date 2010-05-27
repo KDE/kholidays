@@ -1,8 +1,31 @@
-: Finnish holiday file. Copy to ~/.holiday
-:
-: Author: Steven Wahlberg <stegu@iki.fi>
-: 
-: $Id$
+::
+:: Country:  Finland
+::
+:: Language: Finnish
+::
+:: Author:   Steven Wahlberg <stegu@iki.fi>
+::
+:: Updated:
+::
+:: Source:
+::
+
+:: Public Holidays
+
+:: Religious Holidays
+
+:: Financial
+
+:: Cultural
+
+:: School
+
+:: Daylight Saving
+
+:: Seasons
+
+:: Name Days
+
 
 : pääsiäisen määräämät
 red "Laskiaissunnuntai" on easter minus 49 days

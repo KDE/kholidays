@@ -1,38 +1,58 @@
-: Estonian holiday file. Copy to ~/.holiday
-:
-: Author: Hasso Tepper <hasso@estpak.ee>
+::
+:: Country:  Estonia
+::
+:: Language: Estonian
+::
+:: Author:   Hasso Tepper <hasso@estpak.ee>
+::
+:: Updated:
+::
+:: Source:
+::
 
-: Rahvuslik püha
-red "Iseseisvuspäev" on 24 february
+:: Public Holidays
+:: Rahvuslik püha
+"Iseseisvuspäev"               weekend on february 24
+:: Riigipühad
+"Uusaasta"                     weekend on january 1
+"Kevadpüha"                    weekend on may 1
+"Võidupüha"                    weekend on june 23
+"Jaanipäev"                    weekend on june 24
+"Taasiseseisvumispäev"         weekend on august 20
+"Esimene jõulupüha"            weekend on december 25
+"Teine jõulupüha"              weekend on december 26
+"Suur reede"                   weekend on easter minus 2 days
+"Ülestõusmispühade 1. püha"    weekend on easter
+"Nelipühade 1. püha"           weekend on easter plus 49 days
+"1. advent"                    weekend on sunday before december 24 minus 21 days
+"2. advent"                    weekend on sunday before december 24 minus 14 days
+"3. advent"                    weekend on sunday before december 24 minus 7 days
+"4. advent"                    weekend on sunday before december 24
 
-: Riigipühad
-red "Uusaasta" on 1 january
-red "Kevadpüha" on 1 may
-red "Võidupüha" on 23 june
-red "Jaanipäev" on 24 june
-red "Taasiseseisvumispäev" on 20 august
-red "Esimene jõulupüha" on 25 december
-red "Teine jõulupüha" on 26 december
+:: Religious
 
-red "Suur reede" on easter minus 2 days
-red "Ülestõusmispühade 1. püha" on easter
-red "Nelipühade 1. püha" on easter plus 49 days
+:: Financial
 
-: Riiklikud tähtpäevad
-blue "Kolmekuningapäev" on 6 january
-blue "Tartu rahulepingu aastapäev" on 2 february
-blue "Emakeelepäev" on 14 march
-blue "Emadepäev" on second sunday in may
-blue "Leinapäev" on 14 june
-blue "Hingedepäev" on 2 november
-blue "Isadepäev" on second sunday in november
-blue "Taassünnipäev" on 16 november
+:: Cultural
 
-: Muud tähtpäevad
-blue "Naistepäev" on 8 march
+:: School
 
-red "1. advent" on sunday before 24 december minus 21 days
-red "2. advent" on sunday before 24 december minus 14 days
-red "3. advent" on sunday before 24 december minus 7 days
-red "4. advent" on sunday before 24 december
+:: Daylight Saving
 
+:: Seasons
+
+:: Name Days
+
+
+:: To be sorted
+:: Riiklikud tähtpäevad
+"Kolmekuningapäev"             on january 6
+"Tartu rahulepingu aastapäev"  on february 2
+"Emakeelepäev"                 on march 14
+"Emadepäev"                    on second sunday in may
+"Leinapäev"                    on june 14
+"Hingedepäev"                  on november 2
+"Isadepäev"                    on second sunday in november
+"Taassünnipäev"                on november 16
+:: Muud tähtpäevad
+"Naistepäev"                   on march 8

@@ -1,30 +1,55 @@
-:
-: en vert les saisons
-: en bleu (texte) et rouge (jour) les jours feriés
-: en cyan d'autres fetes non feriées ou dimanche
-: Je suis pas sûr pour les fetes des peres et des meres
-:
-: Author: Jean-Claude Giese <giese@loria.fr>
-:
-red "Jour de l'An" weekend on 1.1.
-red "Pâques" weekend on easter length 2 days
-red "Pentecôte" weekend on easter plus 49 days length 2 days
-red "Ascension" weekend on easter plus 39 days
-red "Fête du travail" weekend on 1.5.
-red "Armistice 1945" weekend on 8.5.
-red "Fête Nationale" weekend on 14.7.
-red "Assomption" weekend on 15.8.
-red "Toussaint" weekend on 1.11.
-red "Armistice 1918" weekend on 11.11.
-red "Noël" weekend on 25.12.
+::
+:: Country:  France
+::
+:: Language: French
+::
+:: Author:   Jean-Claude Giese <giese@loria.fr>
+::
+:: Updated:
+::
+:: Source:
+::
+::
+:: France holiday file.
+::
+:: Author: 
+::
+:: Language:
+::
+:: Updated:
+::
 
-blue "Epiphanie" blue on first sunday in january
-cyan "Fête des mères" blue  on last sunday in may
-cyan "Fête des pères" blue on third sunday in june
-blue "St Sylvestre" blue on 31.12.
+:: Public Holidays
+"Jour de l'An"     weekend on january 1
+"Pâques"           weekend on easter length 2 days
+"Pentecôte"        weekend on easter plus 49 days length 2 days
+"Ascension"        weekend on easter plus 39 days
+"Fête du travail"  weekend on may 1
+"Armistice 1945"   weekend on may 8
+"Fête Nationale"   weekend on july 14
+"Assomption"       weekend on august 15
+"Toussaint"        weekend on november 1
+"Armistice 1918"   weekend on november 11
+"Noël"             weekend on december 25
 
-: Seasons
-green "Printemps" green on 20.3.
-green "Eté" green on 21.6.
-green "Automne" green on 23.9.
-green "Hiver" green on 21.12.
+:: Religious
+"Epiphanie"        on first sunday in january
+"St Sylvestre"     on december 31
+
+:: Financial
+
+:: Cultural
+"Fête des mères"   on last sunday in may
+"Fête des pères"   on third sunday in june
+
+:: School
+
+:: Daylight Saving
+
+:: Seasons
+"Printemps"        on march 20
+"Eté"              on june 21
+"Automne"          on september 23
+"Hiver"            on december 21
+
+:: Name Days

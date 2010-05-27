@@ -1,32 +1,57 @@
-:
-: Südtirol holiday file.
-: by Roland Reiterer (roland_reiterer2001@gmx.net)
-:
-"Neujahr" weekend on 1.1
-"Hl. 3 Könige" weekend on 6.1
-small "Tag der Frau" on 8.3
-small "Hl. Joseph" on 19.3
-small "Vatertag" on 19.3
-small "Unnsinger Donnerstag" on easter minus 52 days
-small "Faschingsdienstag" on easter minus 47 days
-small "Aschermittwoch" on easter minus 46 days
-"Ostersonntag" weekend on easter
-"Ostermontag" weekend on easter plus 1 day
-small "Pfingstsonntag" on easter plus 49 days
-small "Pfingstmontag" on easter plus 50 days
-small "Christi Himmelfahrt" on easter plus 39 days
-"Tag der Freiheit" weekend on 25.4
-"Tag der Arbeit" weekend on 1.5
-small "Muttertag" on second sunday in may
-small "Tag der Republik" on 2.6
-small "Hl. Peter und Paul" on 29.6
-"Maria Himmelfahrt" weekend on 15.8
-small "Ferragosto" on 15.8
-small "Hl. Franziskus" on 4.10
-"Allerheiligen" weekend on 1.11
-small "Allerseelen" on 2.11
-small "Nationalfeiertag" on 4.11
-"Maria Empfängnis" weekend on 8.12
-"Christtag" weekend on 25.12
-"Stephanstag" weekend on 26.12
-small "Silvester" on 31.12
+::
+:: Country:  Italy, South Tyrol
+::
+:: Language: German
+::
+:: Author:   Roland Reiterer <roland_reiterer2001@gmx.net>
+::
+:: Updated:
+::
+:: Source:
+::
+
+:: Public Holidays
+"Neujahr"               weekend on january 1
+"Hl. 3 Könige"          weekend on january 6
+"Ostersonntag"          weekend on easter
+"Ostermontag"           weekend on easter plus 1 day
+"Tag der Freiheit"      weekend on april 25
+"Tag der Arbeit"        weekend on may 1
+"Maria Himmelfahrt"     weekend on august 15
+"Allerheiligen"         weekend on november 1
+"Maria Empfängnis"      weekend on december 8
+"Christtag"             weekend on december 25
+"Stephanstag"           weekend on december 26
+
+:: Religious
+"Hl. Joseph"            on march 19
+"Unnsinger Donnerstag"  on easter minus 52 days
+"Faschingsdienstag"     on easter minus 47 days
+"Aschermittwoch"        on easter minus 46 days
+"Pfingstsonntag"        on easter plus 49 days
+"Pfingstmontag"         on easter plus 50 days
+"Christi Himmelfahrt"   on easter plus 39 days
+"Hl. Peter und Paul"    on june 29
+"Hl. Franziskus"        on october 4
+"Allerseelen"           on november 2
+"Silvester"             on december 31
+
+:: Financial
+
+:: Cultural
+"Tag der Frau"          on march 8
+"Vatertag"              on march 19
+"Muttertag"             on second sunday in may
+"Tag der Republik"      on june 2
+"Nationalfeiertag"      on november 4
+
+:: School
+
+:: Daylight Saving
+
+:: Seasons
+
+:: Name Days
+
+
+

@@ -1,11 +1,31 @@
-:
-: Brazilian holiday file.
-:
-: Author: Juliano F. Ravasi <dev@juliano.info>
-: Version: 2 - 22 Dec 2009
-:
-: Released under the General Public License
-:
+::
+:: Country:  Brazil
+::
+:: Language: Brazilian Portugese
+::
+:: Author:   Juliano F. Ravasi <dev@juliano.info>
+::
+:: Updated:  2009-12-22
+::
+:: Source:
+::
+
+: Public Holidays
+
+: Religious Holidays
+
+: Financial
+
+: Cultural
+
+: School
+
+:: Daylight Saving
+
+: Seasons
+
+: Name Days
+
 
 : Feriados nacionais (Fedaral holidays)
 :::
