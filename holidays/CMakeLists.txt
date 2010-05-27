@@ -2,12 +2,20 @@
 install( FILES
           plan1/holiday_ar_es
           plan1/holiday_at_de
-          plan1/holiday_au_en-gb
+          plan1/holiday_au-act_en-gb
+          plan1/holiday_au-nsw_en-gb
+          plan1/holiday_au-nt_en-gb
+          plan1/holiday_au-qld_en-gb
+          plan1/holiday_au-sa_en-gb
+          plan1/holiday_au-tas_en-gb
+          plan1/holiday_au-vic_en-gb
+          plan1/holiday_au-wa_en-gb
           plan1/holiday_be_fr
           plan1/holiday_be_nl
           plan1/holiday_be_wa
           plan1/holiday_bg_bg
           plan1/holiday_br_pt-br
+          plan1/holiday_by
           plan1/holiday_ca_en-gb
           plan1/holiday_ca-qc_fr
           plan1/holiday_ch_fr
@@ -28,12 +36,13 @@ install( FILES
           plan1/holiday_gt_es
           plan1/holiday_hu_hu
           plan1/holiday_ie_en-gb
-          plan1/holiday_il_en
+          plan1/holiday_il_en-us
           plan1/holiday_in_en-gb
           plan1/holiday_is_is
           plan1/holiday_it-bz_de
           plan1/holiday_it_it
           plan1/holiday_jm_en-gb
+          plan1/holiday_jp_en-us
           plan1/holiday_jp_ja
           plan1/holiday_lt_lt
           plan1/holiday_lu_fr
@@ -41,7 +50,7 @@ install( FILES
           plan1/holiday_mx_es
           plan1/holiday_na_en-gb
           plan1/holiday_nl_nl
-          plan1/holiday_no_no
+          plan1/holiday_no_nb
           plan1/holiday_nz_en-gb
           plan1/holiday_pl_pl
           plan1/holiday_pt_pt
@@ -53,7 +62,7 @@ install( FILES
           plan1/holiday_sk_sk
           plan1/holiday_th_en-gb
           plan1/holiday_ua_uk
-          plan1/holiday_us_en
+          plan1/holiday_us_en-us
           plan1/holiday_uy_es
           plan1/holiday_za_en-gb
          DESTINATION ${DATA_INSTALL_DIR}/libkholidays/plan1)
