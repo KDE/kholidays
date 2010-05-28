@@ -163,14 +163,15 @@ QString HolidayRegion::name() const
   QString tempName = d->mDriver->fileName();
 
   if ( tempName.isEmpty() ) {
-    QString country = countryCode().left( 2 ).toLower();
+    QStringList countryParts = countryCode().toLower().split( '-' );
+    QString country = countryParts.at( 0 );
     QString regionName, typeName;;
 
     if ( country != "xx" ) {
-      if ( countryCode().length() > 2 ) {
+      if ( countryParts.count() == 2 ) {
         // Temporary measure to get regions translated, only those files that already exist
         // In 4.6 hope to have isocodes project integration for translations via KLocale
-        QString subdivision = countryCode().right( 2 ).toLower();
+        QString subdivision = countryParts.at( 1 );
         if ( country == "ca" && subdivision == "qc" ) {
           regionName = i18nc( "Canadian region", "Quebec" );
         } else if ( country == "de" && subdivision == "by" ) {
