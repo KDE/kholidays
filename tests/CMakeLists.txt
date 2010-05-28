@@ -41,22 +41,6 @@ target_link_libraries(testholidayregion ${KDE4_KDECORE_LIBS} ${QT_QTGUI_LIBRARY}
 
 ########### next target ###############
 
-#set( EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR}/tests/ )
-
-set(testparseholiday_SRCS
-    testparseholiday.cpp
-    ../parsers/holidayparserdriver.cpp
-    ../parsers/plan1/holidayparserdriverplanold.cpp
-    ../parsers/plan2/holidayparserplan.cpp
-    ../parsers/plan2/holidayscannerplan.cpp
-    ../parsers/plan2/holidayparserdriverplan.cpp)
-
-kde4_add_unit_test(testparseholiday TESTNAME kholidays-testparseholiday ${testparseholiday_SRCS})
-
-target_link_libraries(testparseholiday ${KDE4_KDECORE_LIBS} kholidays ${QT_QTTEST_LIBRARY} ${QT_QTGUI_LIBRARY})
-
-########### next target ###############
-
 #set(testholiday_SRCS testholiday.cpp )
 
 

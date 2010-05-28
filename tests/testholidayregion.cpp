@@ -34,12 +34,16 @@ void HolidayRegionTest::printMetadata( const QString &regionCode )
 {
     KHolidays::HolidayRegion region( regionCode );
 
-    kDebug() << "This regionCode = " << region.regionCode();
-    kDebug() << "Is valid? = " << region.isValid();
-    kDebug() << "Country code = " << region.countryCode();
-    kDebug() << "Language code = " << region.languageCode();
-    kDebug() << "Name = " << region.name();
-    kDebug() << "Description = " << region.description();
+    if ( region.isValid() ) {
+      kDebug() << "This regionCode = " << region.regionCode();
+      kDebug() << "Is valid? = " << region.isValid();
+      kDebug() << "Country code = " << region.countryCode();
+      kDebug() << "Language code = " << region.languageCode();
+      kDebug() << "Name = " << region.name();
+      kDebug() << "Description = " << region.description();
+    } else {
+      kDebug() << "Not Valid!";
+    }
     kDebug() << "";
 }
 

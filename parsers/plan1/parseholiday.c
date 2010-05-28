@@ -155,7 +155,6 @@
  */
 
 #include <config-kholidays.h>
-#include "kholidays_export.h"
 
 #include <stdio.h>
 #include <unistd.h>
@@ -185,7 +184,7 @@
 #define	BEFORE		-1
 #define AFTER		-2
 /**** Public forward declarations  ****/
-KHOLIDAYS_EXPORT char *parse_holidays(const char *holidays, int year, short force);
+char *parse_holidays(const char *holidays, int year, short force);
 
 /**** Private forward declarations ****/
 extern int       kcallex(void);          /* external lexical analyzer */

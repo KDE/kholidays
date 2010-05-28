@@ -5,7 +5,7 @@ add_definitions(-DKDE_DEFAULT_DEBUG_AREA=5350)
 add_subdirectory(holidays)
 add_subdirectory(tests)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/parsers/plan1)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/parsers/plan2)
 
 check_include_files(err.h HAVE_ERR_H)
 check_include_files(sys/cdefs.h HAVE_SYS_CDEFS_H)
@@ -20,9 +20,9 @@ set(kholidays_LIB_SRCS
   lunarphase.cpp
   zodiac.cpp
   parsers/holidayparserdriver.cpp
-  parsers/plan1/holidayparserdriverplanold.cpp
-  parsers/plan1/scanholiday.c
-  parsers/plan1/parseholiday.c
+  parsers/plan2/holidayparserdriverplan.cpp
+  parsers/plan2/holidayparserplan.cpp
+  parsers/plan2/holidayscannerplan.cpp
 )
 
 kde4_add_library(kholidays SHARED ${kholidays_LIB_SRCS})

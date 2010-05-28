@@ -34,7 +34,7 @@
 #include <KDebug>
 
 #include "holiday_p.h"
-#include "parsers/plan1/holidayparserdriverplanold_p.h"
+#include "parsers/plan2/holidayparserdriverplan_p.h"
 
 using namespace KHolidays;
 
@@ -48,7 +48,7 @@ class HolidayRegion::Private
         if ( mRegionCode.length() == 2 ) { //Backwards compatible mode for old location code
           mLocation = mRegionCode;
           QStringList locationFiles = KGlobal::dirs()->findAllResources( "data",
-                                                                         "libkholidays/plan1/holiday_" + mLocation + "*",
+                                                                         "libkholidays/plan2/holiday_" + mLocation + "*",
                                                                          KStandardDirs::NoDuplicates );
           if ( locationFiles.count() > 0 ) {
             mRegionCode = locationFiles.at( 0 ).mid( locationFiles.at( 0 ).lastIndexOf( "holiday_" ) + 8 );
@@ -56,12 +56,12 @@ class HolidayRegion::Private
         } else {
           mLocation = mRegionCode.left( 2 );
         }
-        mHolidayFile = KStandardDirs::locate( "data", "libkholidays/plan1/holiday_" + mRegionCode );
+        mHolidayFile = KStandardDirs::locate( "data", "libkholidays/plan2/holiday_" + mRegionCode );
         if ( mHolidayFile.isEmpty() ) {
           mRegionCode.clear();
           mLocation.clear();
         } else {
-          mDriver = new HolidayParserDriverPlanOld( mHolidayFile );
+          mDriver = new HolidayParserDriverPlan( mHolidayFile );
         }
       }
     }
@@ -90,7 +90,7 @@ HolidayRegion::~HolidayRegion()
 QStringList HolidayRegion::locations()
 {
   const QStringList files =
-    KGlobal::dirs()->findAllResources( "data", "libkholidays/plan1/holiday_*",
+    KGlobal::dirs()->findAllResources( "data", "libkholidays/plan2/holiday_*",
                                        KStandardDirs::NoDuplicates );
 
   QStringList locations;
@@ -111,7 +111,7 @@ QString HolidayRegion::location() const
 QStringList HolidayRegion::regions()
 {
   const QStringList files =
-    KGlobal::dirs()->findAllResources( "data", "libkholidays/plan1/holiday_*",
+    KGlobal::dirs()->findAllResources( "data", "libkholidays/plan2/holiday_*",
                                        KStandardDirs::NoDuplicates );
 
   QStringList regions;
