@@ -1,0 +1,56 @@
+::
+:: Country:  Iran
+::
+:: Language: US English
+::
+:: Author:   John Layt <john@layt.net>
+::
+:: Updated:  2010-05-28
+::
+:: Source:   Copy-and-paste from Wikipedia, please correct any errors!
+::           http://en.wikipedia.org/wiki/Public_holidays_in_Iran
+::
+
+:: Metadata
+country     "IR"
+language    "en_US"
+:name        "optional - defaults to country name"
+description "National holiday file for Iran"
+
+:: Public Holidays
+"Nowrouz"                                                               weekend on jalali farvardin 1 length 4
+"Islamic Republic Day"                                                  weekend on jalali farvardin 12
+"Nature Day"                                                            weekend on jalali farvardin 13
+"Khomeini's Death"                                                      weekend on jalali khordad 14
+"Revolt of Khordad 15"                                                  weekend on jalali khordad 15
+"Victory of the Revolution"                                             weekend on jalali bahman 22
+"Nationalization of Oil Industry"                                       weekend on jalali esfand 29
+"Tasu'a of Imam Hussain"                                                weekend on hijri muharram 9
+"Ashura of Imam Hussain"                                                weekend on hijri muharram 10
+"Arba'een of Imam Hussain"                                              weekend on hijri safar 20
+"Demise of prophet Muhammad and Martyrdom of Imam Hassan (Mujtaba)"     weekend on hijri safar 28
+"Martyrdom of Imam Reza"                                                weekend on hijri safar 29
+"Birth of Muhammad and Imam Jafar"                                      weekend on hijri rabialawal 17
+"Martyrdom of Fatima"                                                   weekend on hijri jumaadaalthaani 3
+"Birth of Imam Ali"                                                     weekend on hijri rajab 13
+"Mission of Muhammad"                                                   weekend on hijri rajab 27
+"Birth of Imam Mahdi"                                                   weekend on hijri shaban 15
+"Martyrdom of Imam Ali"                                                 weekend on hijri ramadan 21
+"Eid ul-Fitr"                                                           weekend on hijri shawwal 1
+"Martyrdom of Imam Jafar"                                               weekend on hijri shawwal 25
+"Eid ul-Adha"                                                           weekend on hijri thualhijjah 10
+"Eid al-Ghadeer"                                                        weekend on hijri thualhijjah 18
+
+:: Religious
+
+:: Financial
+
+:: Cultural
+
+:: School
+
+:: Daylight Saving
+
+:: Seasons
+
+:: Name Days

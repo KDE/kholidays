@@ -34,13 +34,14 @@ class HolidayRegionTest : public QObject
 Q_OBJECT
 private Q_SLOTS:
     void testGb();
+    void testIran();
     void testLocations();
     void testRegions();
 
 private:
     void printMetadata( const QString &regionCode );
     void printHolidays( KHolidays::Holiday::List holidays );
-    void parseRegionCalendarYear( const QString &regionCode, int year, const QString &calendarType );
+    void parseRegionCalendarYear( const QString &regionCode, int year, const QString &calendarType = "gregorian" );
     void parseRegionDateRange( const QString &regionCode, const QDate &startDate, const QDate &endDate );
     void parseRegionDate( const QString &regionCode, const QDate &date );
 };
