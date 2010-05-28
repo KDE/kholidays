@@ -114,6 +114,7 @@ weekend             { yylval->ival = 9; return token::COLOR; }
 5th|fifth           { yylval->ival =      5; return token::NUMBER; }
 last                { yylval->ival =  99999; return token::NUMBER; }
 any                 { yylval->ival = -99999; return token::NUMBER; }
+noop                { yylval->ival =      0; return token::NUMBER; }
 
 before              { yylval->ival =  -1; return token::NUMBER; }
 after               { yylval->ival =   1; return token::NUMBER; }
