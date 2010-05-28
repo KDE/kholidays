@@ -11,6 +11,12 @@
 ::
 
 
+:: Metadata
+country     "CO"
+language    "es"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Colombia"
+
 :: Public Holidays
 "Año nuevo"                   weekend on january 1
 "Epifanía"                    weekend on monday after january 6

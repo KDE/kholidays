@@ -14,6 +14,12 @@
 ::           unicamente las fechas originales (sin correr).
 ::
 
+:: Metadata
+country     "UY"
+language    "es"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Uruguay"
+
 :: Public Holidays
 "Año nuevo"                      weekend on january 1
 "Jura de la constituación"       weekend on july 18

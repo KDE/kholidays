@@ -11,6 +11,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "UA"
+language    "uk"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Ukraine"
+
 :: Public Holidays
 "Новий Рік"                             weekend on january 1
 "Різдво Христове"                       weekend on january 7

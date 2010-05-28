@@ -10,6 +10,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "LU"
+language    "lb"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Luxembourg"
+
 :: Public Holidays
 "Neijoerschdag"        weekend on january 1
 "Ouschteren"           weekend on easter

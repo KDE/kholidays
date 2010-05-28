@@ -10,6 +10,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "MX"
+language    "es"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Mexico"
+
 :: Public Holidays
 "Año Nuevo"                         weekend on january 1
 "Día de la Constitución"            weekend on february 5

@@ -10,6 +10,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "CA"
+language    "en_GB"
+:name        "optional - defaults to country name"
+description "National holiday file for Canada"
+
 :: Public Holidays
 "New Year's Day"    weekend on january 1
 "Good Friday"       weekend on easter minus 2 days

@@ -12,6 +12,12 @@
 ::           http://en.wikipedia.org/wiki/Public_holidays_in_Australia
 ::
 
+:: Metadata
+country     "AU-TAS"
+language    "en_GB"
+:name        "optional - defaults to country name"
+description "State holiday file for Tasmania"
+
 :: Public Holidays
 :: State Holidays - Tasmania
 "New Year's Day"                    weekend on january 1

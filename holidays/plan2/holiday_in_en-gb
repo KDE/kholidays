@@ -16,6 +16,12 @@
 ::           in kholidays)
 ::
 
+:: Metadata
+country     "IN"
+language    "en_GB"
+:name        "optional - defaults to country name"
+description "National holiday file for India"
+
 :: Public Holidays
 "New Year holiday"            weekend on january 1
 "Muharram"                    weekend on january 10

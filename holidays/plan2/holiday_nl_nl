@@ -16,6 +16,12 @@
 ::           categories it varies.  Check with your employer!
 ::
 
+:: Metadata
+country     "NL"
+language    "nl"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Netherlands"
+
 :: Public Holidays
 "Nieuwjaar"                                              weekend on january 1
 "Pasen"                                                  weekend on easter length 2 days

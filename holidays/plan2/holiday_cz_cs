@@ -10,6 +10,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "CZ"
+language    "cs"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Czech Republic"
+
 :: Public Holidays
 "Nový rok"                                                       weekend on january 1
 "Velikonoce"                                                     weekend on easter
@@ -26,7 +32,7 @@
 "2. svátek vánoční"                                              weekend on december 26
 
 :: Religious
-"Silvestr"          on december 31
+"Silvestr"                                                       on december 31
 
 :: Financial
 

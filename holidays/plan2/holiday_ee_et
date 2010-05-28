@@ -10,6 +10,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "EE"
+language    "et"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Estonia"
+
 :: Public Holidays
 :: Rahvuslik püha
 "Iseseisvuspäev"               weekend on february 24

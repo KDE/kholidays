@@ -24,6 +24,12 @@
 ::  Wenns ans SIEBENSCHLÄFER regnet, so regnet's sieben Wochen.
 ::
 
+:: Metadata
+country     "DE-BY"
+language    "de"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Bavaria"
+
 :: Public Holidays
 "Neujahr"                     weekend on january 1
 "Hl. 3 Könige"                weekend on january 6

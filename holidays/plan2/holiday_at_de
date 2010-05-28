@@ -10,6 +10,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "AT"
+language    "de"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Austria"
+
 :: Public Holidays
 "Neujahr"              weekend on january 1
 "Hl. 3 Könige"         weekend on january 6

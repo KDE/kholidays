@@ -10,6 +10,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "NO"
+language    "nb"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Norway"
+
 :: Public Holidays
 "Nyttårsdag"                                     weekend on january 1
 "Palmesøndag"                                    weekend on easter minus 7

@@ -11,6 +11,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "IL"
+language    "en_US"
+:name        "optional - defaults to country name"
+description "National holiday file for Israel"
+
 :: Public Holidays
 
 :: Religious Holidays

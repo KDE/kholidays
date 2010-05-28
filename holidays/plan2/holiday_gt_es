@@ -10,6 +10,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "GT"
+language    "es"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Guatemala"
+
 :: Public Holidays
 "Año nuevo"              weekend on january 1
 "Reyes"                  weekend on january 6

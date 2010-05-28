@@ -11,6 +11,12 @@
 ::           List accessible at http://lt.wikipedia.org/wiki/Lietuvos_%C5%A1vent%C4%97s
 ::
 
+:: Metadata
+country     "LT"
+language    "lt"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Lithuania"
+
 :: Public Holidays
 "Naujieji metai"                                            weekend on january 1
 "Lietuvos valstybės atkūrimo diena"                         weekend on february 16

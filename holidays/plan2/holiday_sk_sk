@@ -10,6 +10,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "SK"
+language    "sk"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Slovak Republic"
+
 :: Public Holidays
 "Nový rok"                          weekend on january 1
 "Deň vzniku SR"                     weekend on january 1

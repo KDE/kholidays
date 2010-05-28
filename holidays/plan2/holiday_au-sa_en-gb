@@ -12,6 +12,12 @@
 ::           http://en.wikipedia.org/wiki/Public_holidays_in_Australia
 ::
 
+:: Metadata
+country     "AU-SA"
+language    "en_GB"
+:name        "optional - defaults to country name"
+description "State holiday file for South Australia"
+
 :: Public Holidays
 :: State Holidays - SA
 "New Year's Day"                    weekend on january 1

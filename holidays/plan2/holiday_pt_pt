@@ -10,6 +10,12 @@
 :: Source:   http://www.infocid.pt/infocid/0_116.htm
 ::
 
+:: Metadata
+country     "PT"
+language    "pt"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Portugal"
+
 :: Public Holidays
 "Ano Novo"              on january 1
 "6ª feira santa"        on easter minus 2 days

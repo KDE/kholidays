@@ -14,6 +14,12 @@
 ::           http://www.dia.govt.nz/diawebsite.nsf/wpg_URL/Services-Daylight-Saving-Index?OpenDocument
 ::
 
+:: Metadata
+country     "NZ"
+language    "en_GB"
+:name        "optional - defaults to country name"
+description "National holiday file for New Zealand"
+
 :: Public Holidays
 "New Years Day"            weekend on january 1
 "Day after New Years Day"  weekend on january 2

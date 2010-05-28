@@ -12,6 +12,12 @@
 ::           http://en.wikipedia.org/wiki/Public_holidays_in_Australia
 ::
 
+:: Metadata
+country     "AU-WA"
+language    "en_GB"
+:name        "optional - defaults to country name"
+description "(please add description in source language) State holiday file for Western Australia"
+
 :: Public Holidays
 :: State Holidays - WA
 "New Year's Day"                    weekend on january 1

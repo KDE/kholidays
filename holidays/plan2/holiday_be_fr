@@ -12,6 +12,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "BE"
+language    "fr"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Belgium"
+
 :: Public Holidays
 "Jour de l'an"                                    weekend on january 1
 "Pâques"                                          weekend on easter

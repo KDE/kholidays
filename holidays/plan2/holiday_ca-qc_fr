@@ -10,6 +10,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "CA-QC"
+language    "fr"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) Provincial holiday file for Quebec"
+
 :: Public Holidays
 "Jour de l'An"                        weekend on january 1
 "Vendredi Saint"                      weekend on easter minus 2 days

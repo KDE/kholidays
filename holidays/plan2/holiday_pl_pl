@@ -10,6 +10,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "PL"
+language    "pl"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Poland"
+
 :: Public Holidays
 "Nowy Rok"               weekend on january 1
 "Wielkanoc"              weekend on easter length 2 days

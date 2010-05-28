@@ -10,6 +10,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "PY"
+language    "es"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Paraguay"
+
 :: Public Holidays
 "Año nuevo"            weekend on january 1
 "Día de los Heroes"    weekend on march 1

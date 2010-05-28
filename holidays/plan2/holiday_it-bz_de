@@ -10,6 +10,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "IT-BZ"
+language    "de"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) Regional holiday file for South Tyrol"
+
 :: Public Holidays
 "Neujahr"               weekend on january 1
 "Hl. 3 Könige"          weekend on january 6

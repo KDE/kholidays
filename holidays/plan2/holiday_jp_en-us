@@ -10,6 +10,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "JP"
+language    "en_US"
+:name        "optional - defaults to country name"
+description "National holiday file for Japan"
+
 :: Public Holidays
 "New Year's Day"                   weekend on january 1
 "Coming of Age"                    weekend on second monday in january

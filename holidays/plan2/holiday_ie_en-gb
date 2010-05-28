@@ -10,6 +10,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "IE"
+language    "en_GB"
+:name        "optional - defaults to country name"
+description "National holiday file for Ireland"
+
 :: Public Holidays
 "New Years Day"         weekend january 1
 "St Patricks Day"       weekend march 17

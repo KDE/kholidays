@@ -1,7 +1,7 @@
 ::
 :: Country:  Belarus
 ::
-:: Language:
+:: Language: Belarusian?
 ::
 :: Author:   Andrey Yurkovsky <anyr@tut.by>
 ::
@@ -9,6 +9,12 @@
 ::
 :: Source:
 ::
+
+:: Metadata
+country     "BY"
+language    "be"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Belarus"
 
 :: Public Holidays
 "Новый год"                               weekend on january 1

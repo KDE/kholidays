@@ -10,6 +10,12 @@
 :: Source:   http://en.wikipedia.org/w/index.php?title=Public_holidays_in_the_People%27s_Republic_of_China&oldid=297123230
 ::
 
+:: Metadata
+country     "CN"
+language    "zh_CN"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for PR China"
+
 :: Public Holidays
 : New Year
 "元旦"                       weekend on january 1

@@ -10,6 +10,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "RU"
+language    "ru"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Russia"
+
 :: Public Holidays
 "Новогодние каникулы"          weekend on january 1 length 5 days
 "Рождество Христово"           weekend on january 7

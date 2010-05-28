@@ -19,6 +19,12 @@
 :: Updated:
 ::
 
+:: Metadata
+country     "FR"
+language    "fr"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for France"
+
 :: Public Holidays
 "Jour de l'An"     weekend on january 1
 "Pâques"           weekend on easter length 2 days

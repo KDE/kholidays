@@ -11,6 +11,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "US"
+language    "en_US"
+:name        "optional - defaults to country name"
+description "National holiday file for USA"
+
 :: Public Holidays
 :: Federal Holidays
 "New Year's Day"                 weekend on january 1

@@ -10,6 +10,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "DK"
+language    "da"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Denmark"
+
 :: Public Holidays
 "Nytårsdag"                            weekend on january 1
 "Fastelavn"                            weekend on easter minus 49 days

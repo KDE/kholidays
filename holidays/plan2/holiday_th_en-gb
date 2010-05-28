@@ -10,17 +10,23 @@
 :: Source:
 ::
 
+:: Metadata
+country     "TH"
+language    "en_GB"
+:name        "optional - defaults to country name"
+description "National holiday file for Thailand"
+
 :: Public Holidays
 "New Years Day"                 weekend on January 1
-::"Makha Bucha Day"               weekend on February 11
+:"Makha Bucha Day"               weekend on February 11
 "Chakri Memorial Day"           weekend on April 6
 "Songkran Festival"             weekend on April 13 length 3 days
 "Coranation Day"                weekend on May 5
-::"Royal Ploughing Ceremony Day"  weekend on May 8
-::"Visakha Bucha Day"             weekend on May 10
-::"Mid Year Day"                  weekend on July 1
-::"Asarnha Bucha Day"             weekend on July 8
-::"Khao Phansa Day"               weekend on July 9
+:"Royal Ploughing Ceremony Day"  weekend on May 8
+:"Visakha Bucha Day"             weekend on May 10
+:"Mid Year Day"                  weekend on July 1
+:"Asarnha Bucha Day"             weekend on July 8
+:"Khao Phansa Day"               weekend on July 9
 "HMThe Queens Birthday"         weekend on August 12
 "Chulalongkorn Day"             weekend on October 23
 "HM The King's Birthdayday"     weekend on December 5

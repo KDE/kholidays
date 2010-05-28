@@ -11,6 +11,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "IT"
+language    "it"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Italy"
+
 :: Public Holidays
 "Capodanno"                       weekend on january 1
 "Epifania"                        weekend on january 6

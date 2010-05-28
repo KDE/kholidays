@@ -10,6 +10,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "FI"
+language    "fi"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Finland"
+
 :: Public Holidays
 
 :: Religious Holidays

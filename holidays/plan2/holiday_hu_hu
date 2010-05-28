@@ -10,6 +10,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "HU"
+language    "hu"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Hungrey"
+
 :: Public Holidays
 "Újév"                                  weekend on january 1
 "Nemzeti ünnep"                         weekend on march 15

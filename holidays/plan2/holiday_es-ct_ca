@@ -10,6 +10,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "ES-CT"
+language    "ca"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) Regional holiday file for Catalonia"
+
 :: Public Holidays
 "Any nou"               weekend on january 1
 "Divendres Sant"        weekend on easter minus 2 days

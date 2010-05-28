@@ -10,6 +10,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "JM"
+language    "en_GB"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Jamaica"
+
 :: Public Holidays
 "New Year's Day"       weekend on january 1
 "Ash Wednesday"        weekend on february 25

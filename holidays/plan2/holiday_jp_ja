@@ -10,6 +10,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "JP"
+language    "ja"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Japan"
+
 :: Public Holidays
 :"New Year's Day"
 "元旦"                               weekend on january 1

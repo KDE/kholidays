@@ -12,6 +12,12 @@
 ::           http://www.nidirect.gov.uk/index/government-citizens-and-rights/living-in-northern-ireland/bank-holidays.htm
 ::
 
+:: Metadata
+country     "UK-NIR"
+language    "en_GB"
+:name        "optional - defaults to country name"
+description "National holiday file for Northern Ireland"
+
 :: Public Holidays
 "New Years Day"                             weekend on january 1
 "St Patrick's Day"                          weekend on march 17

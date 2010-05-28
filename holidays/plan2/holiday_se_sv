@@ -10,6 +10,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "SE"
+language    "sv"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Sweden"
+
 :: Public Holidays
 "Nyårsdagen"         weekend on january 1
 "Trett.d. Jul"       weekend on january 6

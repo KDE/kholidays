@@ -12,6 +12,12 @@
 ::           http://www.scotland.gov.uk/Topics/People/bank-holidays/
 ::
 
+:: Metadata
+country     "UK-SCT"
+language    "en_GB"
+:name        "optional - defaults to country name"
+description "National holiday file for Scotland"
+
 :: Public Holidays
 "New Years Day"                 weekend on january 1
 "2nd January"                   weekend on january 2

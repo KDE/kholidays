@@ -11,8 +11,13 @@
 ::             http://www.mtas.es/infpuntual/Fiestas2005/RES061004.htm
 ::             http://www.mtas.es/infpuntual/Fiestas2005/RES061004.htm
 ::             http://en.wikipedia.org/wiki/Public_holidays_in_Spain
-
 ::
+
+:: Metadata
+country     "ES"
+language    "es"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Spain"
 
 :: Public Holidays
 "Año nuevo"                                  weekend on january 1

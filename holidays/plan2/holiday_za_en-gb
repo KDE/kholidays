@@ -10,6 +10,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "ZA"
+language    "en_GB"
+:name        "optional - defaults to country name"
+description "National holiday file for South African"
+
 :: Public Holidays
 "New Year's Day"         weekend on january 1    shift to monday if sunday
 "Human Rights Day"       weekend on march 21     shift to monday if sunday
@@ -20,7 +26,7 @@
 "Youth Day"              weekend on june 16      shift to monday if sunday
 "National Women's Day"   weekend on august 9     shift to monday if sunday
 "Heritage Day"           weekend on september 24 shift to monday if sunday
-"Day of Reconsiliation"  weekend on december 16  shift to monday if sunday
+"Day of Reconciliation"  weekend on december 16  shift to monday if sunday
 "Christmas Day"          weekend on december 25  shift to monday if sunday
 "Day of Goodwill"        weekend on december 26  shift to monday if sunday
 

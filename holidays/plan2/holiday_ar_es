@@ -12,6 +12,12 @@
 ::           http://www.uncu.edu.ar/contenido/skins/unc/download/Ley%2024445.pdf
 ::           http://www.puntoprofesional.com/P/0650/LEY_26416.HTM
 
+:: Metadata
+country     "AR"
+language    "es"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Argentina"
+
 :: Public Holidays
 "Año Nuevo"                      weekend on january 1
 "Día Nacional de la Memoria"     weekend on march 24
@@ -22,9 +28,9 @@
 "Día de Manuel Belgrano"         weekend on third monday in june
 "Día de la Independencia"        weekend on july 9
 "Día de San Martín"              weekend on third monday in august
-"Día de la Raza"                 weekend on ( ([10/12] == [tuesday after ([10/11])] || [10/12] == [wednesday after ([10/11])]) ?
-                                              [monday before ([10/12])] :
-                                              [monday after  ([10/11])] )
+"Día de la Raza"                 weekend on ( ([october 12] == [tuesday after ([october 12])] || [october 12] == [wednesday after ([october 12])]) ?
+                                              [monday before ([october 12])] :
+                                              [monday after  ([october 12])] )
 "Inmaculada Concepción de María" weekend on december 8
 "Navidad"                        weekend on december 25
 

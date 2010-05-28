@@ -10,6 +10,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "RO"
+language    "ro"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Romania"
+
 :: Public Holidays
 "Anul nou"                   weekend on january 1 length 2 days
 "Paştele"                    weekend on pascha length 2 days

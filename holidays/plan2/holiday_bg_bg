@@ -10,6 +10,12 @@
 :: Source:
 ::
 
+:: Metadata
+country     "BG"
+language    "bg"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Bulgaria"
+
 :: Public Holidays
 "Нова година"                                                           weekend on january 1
 "Ден на Освобождението на България от османско иго"                     weekend on march 3
