@@ -35,6 +35,7 @@ Q_OBJECT
 private Q_SLOTS:
     void testGb();
     void testIran();
+    void testIsrael();
     void testLocations();
     void testRegions();
 

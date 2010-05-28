@@ -3,12 +3,12 @@
 ::
 :: Language: US English
 ::
-:: Author:   Jonathan Singer <jsinger@leeta.net>
-::           Lior Chen <sliorc@t2.technion.ac.il>
+:: Author:   John Layt <john@layt.net>
 ::
-:: Updated:  2002-01-13
+:: Updated:  2010-05-28
 ::
-:: Source:
+:: Source:   Copy-and-paste from Wikipedia, please correct any errors!
+::           http://en.wikipedia.org/wiki/Public_holidays_in_Israel
 ::
 
 :: Metadata
@@ -18,12 +18,37 @@ language    "en_US"
 description "National holiday file for Israel"
 
 :: Public Holidays
+"Rosh Hashanah (New Year)"                                                  weekend on hebrew tishrey 1 length 2 days
+"Yom Kippur (Day of Atonement)"                                             weekend on hebrew tishrey 10
+"Sukkot (Feast of Tabernacles)"                                             weekend on hebrew tishrey 15
+"Simchat Torah (Assembly of the Eighth Day)"                                weekend on hebrew tishrey 22
+"Pesach (Passover)"                                                         weekend on hebrew nisan 15
+"Shvi'i shel Pesach (Seventh day of Passover)"                              weekend on hebrew nisan 21
+"Yom Ha-Atzmaut (Independence Day)"                                         weekend on hebrew iyar 5
+"Shavuot (Pentecost)"                                                       weekend on hebrew sivan 6
 
 :: Religious Holidays
+"Tsom Gedalyah ben Ahikam (Fast Day of Gedaliah ben Ahikam)"                on hebrew tishrey 3
+"Chol HaMoed (Feast of Tabernacles)"                                        on hebrew tishrey 16 length 6 days
+"Hanukkah (Feast of Rededication)"                                          on hebrew kislev 25 length 8 days
+"Tsom Asarah b-Tevet (Tenth of Tevet Fast)"                                 on hebrew tevet 10
+"Tu Bishvat (Fifteenth of Shvat)"                                           on hebrew shvat 15
+"Ta`anit Ester (Fast of Esther)"                                            on hebrew adar 13
+"Purim (Feast of Esther)"                                                   on hebrew adar 14
+"Chol HaMoed Pesach (Passover)"                                             on hebrew nisan 16 length 5 days
+"Lag Ba'omer (33rd day of the `Omer)"                                       on hebrew iyar 18
+"Tsom Shiva` Asar b-Tamuz (Seventeenth of Tamuz fast)"                      on hebrew tamuz 17
+"Tisha B'Av (Ninth of Av fast/Destruction of the 1st and 2nd Temples)"      on hebrew av 9
+"Tu B'Av (Fifteenth of Av/Festival of Love)"                                on hebrew av 15
 
 :: Financial
 
 :: Cultural
+"Yitzhak Rabin's Remembrance Day"                                           on hebrew heshvan 12
+"Holocaust Remembrance Day"                                                 on hebrew nisan 27
+"Victory Day"                                                               on gregorian may 9
+"Fallen Soldiers Remembrance Day"                                           on hebrew iyar 4
+"Jerusalem Day"                                                             on hebrew iyar 28
 
 :: School
 
@@ -32,71 +57,3 @@ description "National holiday file for Israel"
 :: Seasons
 
 :: Name Days
-
-
-:: All the following will be re-written once switch to new parser with alternative calendar support
-
- "Fast: 10th of Tevet" on 5.1.2001
- "Tu BiShvat" on 8.02.2001
- "Fast: Ester" on 8.03.2001
- "Purim" on 9.3.2001
- "Passover" on 8.4.2001
- "Chol Hamoed" on 9.4.2001 length 5
- "2nd Passover" on 14.4.2001
- "Holocaust Rememberance day" on 19.4.2001
- "Memorial day for the IDF Soldiers" on 25.4.2001
- "Independence day" on 26.4.2001
- "Lag BaOmer" on 11.5.2001
- "Jerusalem day" on 21.5.2001
- "Shavuot" on 28.5.2001
- "Fast: 17th of Tamuz" on 08.07.2001
- "Fast: 9th of Av" on 29.07.2001
- "Rosh Hashana" on 18.9.2001 length 2
- "Fast: Gdalya" on 20.9.2001
- "Yom Kippur" on 27.9.2001
- "Succot" on 2.10.2001
- "Chol Hamoed Succot" on 3.10.2001 length 6
- "Simchat Torah" on 9.10.2001
-
- "Tu B'Shvat" on 28.01.2002
- "Fast: Esther" on 25.2.2002
- "Purim" on 26.2.2002
- "Passover" on 28.3.2002
- "Chol Hamoed" on 29.3.2002 length 5
- "2nd Passover" on 3.4.2002
- "Holocaust Remembrance day" on 9.4.2002
- "Memorial day for the IDF Soldiers" on 16.4.2002
- "Independence Day" on 17.4.2002
- "Lag BaOmer" on 30.4.2002
- "Jerusalem Day" on 10.5.2002
- "Shavuot" on 17.5.2002
- "Fast: 17th of Tamuz" on 27.6.2002
- "Fast: 9th of Av" on 18.07.2002
- "Rosh Hashana" on 7.9.2002 length 2
- "Fast: Gedalia" on 9.9.2002
- "Yom Kippur" on 16.9.2002
- "Succot" on 21.9.2002
- "Chol Hamoed Succot" on 22.9.2002 length 6
- "Simchat Torah" on 28.9.2002
- "Fast: 10th of Tevet" on 15.12.2002
-
- "Tu B'Shvat" on 18.01.2003
- "Fast: Esther" on 17.03.2003
- "Purim" on 18.3.2003
- "Passover" on 17.4.2003
- "Chol Hamoed" on 18.4.2003 length 5
- "2nd Passover" on 23.4.2003
- "Holocaust Remembrance day" on 29.4.2003
- "Memorial day for the IDF Soldiers" on 6.5.2003
- "Independence Day" on 7.5.2003
- "Lag BaOmer" on 20.5.2003
- "Jerusalem Day" on 30.5.2003
- "Shavuot" on 6.6.2003
- "Fast: 17th of Tamuz" on 17.07.2003
- "Fast: 9th of Av" on 7.08.2003
- "Rosh Hashana" on 27.9.2003 length 2
- "Fast: Gedalia" on 29.9.2003
- "Yom Kippur" on 6.10.2003
- "Succot" on 11.10.2003
- "Chol Hamoed Succot" on 12.10.2003 length 6
- "Simchat Torah" on 18.10.2003

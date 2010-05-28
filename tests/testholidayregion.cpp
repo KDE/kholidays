@@ -117,6 +117,18 @@ void HolidayRegionTest::testIran()
   parseRegionCalendarYear( "ir_en-us", 2015 );
 }
 
+void HolidayRegionTest::testIsrael()
+{
+  printMetadata( "il_en-us" );
+  parseRegionCalendarYear( "il_en-us", 2010 );
+  parseRegionCalendarYear( "il_en-us", 2011 );
+  parseRegionCalendarYear( "il_en-us", 2012 );
+  parseRegionCalendarYear( "il_en-us", 2013 );
+  parseRegionCalendarYear( "il_en-us", 2014 );
+  parseRegionCalendarYear( "il_en-us", 2015 );
+
+}
+
 void HolidayRegionTest::testRegions()
 {
   kDebug() << "Available regions:";
