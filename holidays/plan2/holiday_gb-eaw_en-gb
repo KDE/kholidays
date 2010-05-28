@@ -13,20 +13,32 @@
 ::
 
 :: Metadata
-country     "UK-EAW"
+country     "GB-EAW"
 language    "en_GB"
 :name        "optional - defaults to country name"
 description "National holiday file for England and Wales"
 
 :: Public Holidays
-"New Years Day"             weekend on january 1
-"Good Friday"               weekend on easter minus 2
-"Easter Monday"             weekend on easter plus 1
-"Early May Bank Holiday"    weekend on first monday in may
-"Spring Bank Holiday"       weekend on last monday in may
-"Summer Bank Holiday"       weekend on last monday in august
-"Christmas Day"             weekend on december 25
-"Boxing Day"                weekend on december 26
+"New Years Day"                 weekend on january 1
+"New Years Day Bank Holiday"    weekend on ( (([january 1] == [saturday after ([january 1])]) || ([january 1] == [sunday after ([january 1])])) ?
+                                             [monday after ([january 1])] :
+                                             noop )
+"Good Friday"                   weekend on easter minus 2
+"Easter Monday"                 weekend on easter plus 1
+"Early May Bank Holiday"        weekend on first monday in may
+"Spring Bank Holiday"           weekend on ((year == 2012) ? [june 4] : [last monday in may])
+"Diamond Jubilee Holiday"       weekend on 5.6.2012
+"Summer Bank Holiday"           weekend on last monday in august
+"Christmas Day"                 weekend on december 25
+"Christmas Day Bank Holiday"    weekend on ( (([december 25] == [saturday after ([december 25])]) || ([december 25] == [sunday after ([december 25])])) ?
+                                             [monday after ([december 25])] :
+                                             noop )
+"Boxing Day"                    weekend on december 26
+"Boxing Day Bank Holiday"       weekend on ( ([december 26] == [saturday after ([december 25])] ) ?
+                                             [monday after ([december 25])] :
+                                             (([december 26] == [sunday after ([december 25])] || [december 26] == [monday after ([december 25])]) ?
+                                             [tuesday after ([december 25])] :
+                                             noop ) )
 
 :: Religious
 

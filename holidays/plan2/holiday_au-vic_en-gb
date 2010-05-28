@@ -1,5 +1,5 @@
 ::
-:: Country:  Australia, Tasmania
+:: Country:  Australia, Victoria
 ::
 :: Language: UK English
 ::
@@ -13,10 +13,10 @@
 ::
 
 :: Metadata
-country     "AU-TAS"
+country     "AU-VIC"
 language    "en_GB"
 :name        "optional - defaults to country name"
-description "State holiday file for Tasmania"
+description "State holiday file for Victoria"
 
 :: Public Holidays
 :: State Holidays - Victoria
