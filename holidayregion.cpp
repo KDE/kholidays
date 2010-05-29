@@ -27,6 +27,7 @@
 #include <QtCore/QDateTime>
 #include <QtCore/QFile>
 #include <QtCore/QSharedData>
+#include <QtCore/QFileInfo>
 
 #include <KStandardDirs>
 #include <KGlobal>
@@ -41,10 +42,11 @@ using namespace KHolidays;
 class HolidayRegion::Private
 {
   public:
-    Private( const QString &regionCode )
-      : mDriver( 0 ), mRegionCode( regionCode )
+    Private( const QString &regionCode ) : mDriver( 0 ),
+                                           mRegionCode( regionCode )
     {
       if ( !mRegionCode.isEmpty() ) {
+
         if ( mRegionCode.length() == 2 ) { //Backwards compatible mode for old location code
           mLocation = mRegionCode;
           QStringList locationFiles = KGlobal::dirs()->findAllResources( "data",
@@ -53,17 +55,18 @@ class HolidayRegion::Private
           if ( locationFiles.count() > 0 ) {
             mRegionCode = locationFiles.at( 0 ).mid( locationFiles.at( 0 ).lastIndexOf( "holiday_" ) + 8 );
           }
-        } else {
-          mLocation = mRegionCode.left( 2 );
         }
-        mHolidayFile = KStandardDirs::locate( "data", "libkholidays/plan2/holiday_" + mRegionCode );
-        if ( mHolidayFile.isEmpty() ) {
-          mRegionCode.clear();
-          mLocation.clear();
-        } else {
-          mDriver = new HolidayParserDriverPlan( mHolidayFile );
-        }
+
+        mHolidayFile.setFile( KStandardDirs::locate( "data", "libkholidays/plan2/holiday_" + mRegionCode ) );
       }
+
+      init();
+    }
+
+    Private( const QFileInfo &regionFile ) : mDriver( 0 ),
+                                             mHolidayFile( regionFile )
+    {
+      init();
     }
 
     ~Private()
@@ -71,14 +74,47 @@ class HolidayRegion::Private
       delete mDriver;
     }
 
+    void init()
+    {
+      if ( mHolidayFile.exists() ) {
+        mDriver = new HolidayParserDriverPlan( mHolidayFile.absoluteFilePath() );
+        if ( mDriver ) {
+
+          if ( mLocation.isEmpty() ) {
+            mLocation = mDriver->fileCountryCode().left( 2 );
+          }
+
+          if ( mRegionCode.isEmpty() ) {
+            if ( mHolidayFile.fileName().startsWith( QLatin1String( "holiday_" ) ) ) {
+              mRegionCode = mHolidayFile.fileName().mid( 8 );
+            } else {
+              mRegionCode = mHolidayFile.fileName();
+            }
+          }
+
+        } else {
+          mRegionCode.clear();
+          mLocation.clear();
+        }
+      } else {
+        mRegionCode.clear();
+        mLocation.clear();
+      }
+    }
+
     HolidayParserDriver  *mDriver;  // The parser driver for the holiday file
     QString mRegionCode;            // region code of holiday region
     QString mLocation;              // old location code, use now deprecated
-    QString mHolidayFile;           // full path of file containing holiday data, or null
+    QFileInfo mHolidayFile;         // file containing holiday data, or null
 };
 
 HolidayRegion::HolidayRegion( const QString &regionCode )
   : d( new Private( regionCode ) )
+{
+}
+
+HolidayRegion::HolidayRegion( const QFileInfo &regionFile )
+             : d( new Private( regionFile ) )
 {
 }
 
@@ -266,7 +302,7 @@ QString HolidayRegion::description( const QString &regionCode )
 
 bool HolidayRegion::isValid() const
 {
-  return !d->mHolidayFile.isEmpty() && d->mDriver;
+  return d->mHolidayFile.exists() && d->mDriver;
 }
 
 bool HolidayRegion::isValid( const QString &regionCode )

@@ -35,6 +35,7 @@
 
 class QDate;
 class QStringList;
+class QFileInfo;
 
 namespace KHolidays {
 
@@ -42,7 +43,7 @@ class KHOLIDAYS_EXPORT HolidayRegion
 {
   public:
     /**
-     * Creates a new Holiday Region object.
+     * Creates a new Holiday Region object for a given standard Region Code.
      *
      * From 4.5 onwards this constructor requires the new Region Code not the
      * deprecated Location Code.  If a Location Code is provided the first
@@ -52,6 +53,14 @@ class KHOLIDAYS_EXPORT HolidayRegion
      *                   If null or unknown, an empty instance will be created.
      */
     explicit HolidayRegion( const QString &regionCode = QString() );
+
+    /**
+     * Creates a new Holiday Region object from a given holiday file.
+     * If file doesn't exist, an empty instance will be created.
+     *
+     * @param regionFile The code for the Holiday Region.
+     */
+    explicit HolidayRegion( const QFileInfo &regionFile );
 
     /**
      * Destroys the holidays object.
