@@ -46,3 +46,7 @@ description "A test file for multiple calendar systems"
 "Purim"                         red hebrew adarii 14
 
 "Leap Day"                      on ((leapyear year) ? [february 29] : noop)
+
+"Fête des mères"                ( ( [last sunday in may] == ([easter] + 49 days) ) ? [first sunday in june] : [last sunday in may] )
+"Vendredi saint"                on friday before ([easter])
+

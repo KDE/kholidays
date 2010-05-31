@@ -1,5 +1,5 @@
 ::
-:: Country:  France
+:: Country:  Guadeloupe
 ::
 :: Language: French
 ::
@@ -25,11 +25,11 @@
 ::
 
 :: Metadata
-country     "FR"
+country     "GP"
 language    "fr"
 :name        "optional - defaults to country name"
-:           "National holiday file for France"
-description "Fêtes et jours fériés en France"
+:           "National holiday file for Guadeloupe"
+description "Fêtes et jours fériés en Guadeloupe"
 
 :: Public Holidays - Fêtes civiles et jours fériés
 : New Year's Day
@@ -54,16 +54,12 @@ description "Fêtes et jours fériés en France"
 "Noël"                      weekend on december 25
 
 :: Territorial and Regional holidays
-
-: Alsace
 : Good Friday
-:"Vendredi saint"            weekend on easter minus 2 days
-:"St Étienne"                weekend on december 26
-
-: Moselle
-: Good Friday
-:"Vendredi saint"            weekend on easter minus 2 days
-:"St Étienne"                weekend on december 26
+"Vendredi saint"            weekend on easter minus 2 days
+: Abolition of Slavery
+"Abolition de l'esclavage"  weekend on may 27
+"Fête Victor Schoelcher"    weekend on july 21
+"St Étienne"                weekend on december 26
 
 :: Religious - Fêtes religieuses
 "Épiphanie"                 on first sunday in january
@@ -72,11 +68,8 @@ description "Fêtes et jours fériés en France"
 "Mardi Gras"                on easter minus 47 days
 : Ash Wednesday
 "Mercredi des Cendres"      on easter minus 46 days
-: Good Friday
-"Vendredi saint"            on easter minus 2 days
 : Day of the dead
 "Fête des morts"            on november 2
-"St Étienne"                on december 26
 
 :: Financial
 

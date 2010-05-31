@@ -1,5 +1,5 @@
 ::
-:: Country:  France
+:: Country:  Réunion
 ::
 :: Language: French
 ::
@@ -25,11 +25,11 @@
 ::
 
 :: Metadata
-country     "FR"
+country     "RE"
 language    "fr"
 :name        "optional - defaults to country name"
-:           "National holiday file for France"
-description "Fêtes et jours fériés en France"
+:           "National holiday file for Réunion"
+description "Fêtes et jours fériés en La Réunion"
 
 :: Public Holidays - Fêtes civiles et jours fériés
 : New Year's Day
@@ -54,16 +54,8 @@ description "Fêtes et jours fériés en France"
 "Noël"                      weekend on december 25
 
 :: Territorial and Regional holidays
-
-: Alsace
-: Good Friday
-:"Vendredi saint"            weekend on easter minus 2 days
-:"St Étienne"                weekend on december 26
-
-: Moselle
-: Good Friday
-:"Vendredi saint"            weekend on easter minus 2 days
-:"St Étienne"                weekend on december 26
+: Abolition of Slavery
+"Abolition de l'esclavage"  weekend on december 20
 
 :: Religious - Fêtes religieuses
 "Épiphanie"                 on first sunday in january
@@ -119,12 +111,12 @@ description "Fêtes et jours fériés en France"
 
 :: Seasons
 : Spring
-"Printemps"                 on march 20
+"Printemps"                 on september 23
 : Summer
-"Été"                       on june 21
+"Été"                       on december 21
 : Fall
-"Automne"                   on september 23
+"Automne"                   on march 20
 : Winter
-"Hiver"                     on december 21
+"Hiver"                     on june 21
 
 :: Name Days
