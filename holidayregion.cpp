@@ -238,6 +238,10 @@ QString HolidayRegion::name() const
           regionName = i18nc( "Australian Region", "Northern Territory" );
         } else if ( country == "au" && subdivision == "act" ) {
           regionName = i18nc( "Australian Region", "Australian Capital Territory" );
+        } else if ( country == "au" && subdivision == "wa" ) {
+          regionName = i18nc( "Australian Region", "Western Australia" );
+        } else if ( country == "au" && subdivision == "tas" ) {
+          regionName = i18nc( "Australian Region", "Tasmania" );
         } else {
           regionName = KGlobal::locale()->countryCodeToName( country );
         }
