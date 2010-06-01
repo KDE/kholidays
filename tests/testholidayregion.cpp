@@ -135,19 +135,19 @@ void HolidayRegionTest::testIsrael()
 
 void HolidayRegionTest::testRegions()
 {
-  kDebug() << "Available regions:";
-  QStringList regions = KHolidays::HolidayRegion::regions();
-  foreach ( const QString &regionCode, regions ) {
+  kDebug() << "Available region codes:";
+  QStringList regionCodes = KHolidays::HolidayRegion::regionCodes();
+  foreach ( const QString &regionCode, regionCodes ) {
     KHolidays::HolidayRegion testRegion( regionCode );
     kDebug() << regionCode << " = " << testRegion.name();
   }
   kDebug() << "";
 
   kDebug() << "This years holidays:";
-  foreach ( const QString &regionCode, regions ) {
-    KHolidays::HolidayRegion region( regionCode );
-    printMetadata( region );
-    parseRegionCalendarYear( region, QDate::currentDate().year() );
+  foreach ( const QString &regionCode, regionCodes ) {
+    KHolidays::HolidayRegion testRegion( regionCode );
+    printMetadata( testRegion );
+    parseRegionCalendarYear( testRegion, QDate::currentDate().year() );
     kDebug() << "";
   }
   kDebug() << "";

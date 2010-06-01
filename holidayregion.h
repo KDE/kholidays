@@ -105,7 +105,7 @@ class KHOLIDAYS_EXPORT HolidayRegion
      * @see name()
      * @see languageCode()
      */
-    static QStringList regions();
+    static QStringList regionCodes();
 
     /**
      * @since 4.5

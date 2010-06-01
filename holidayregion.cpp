@@ -144,19 +144,19 @@ QString HolidayRegion::location() const
   return d->mLocation;
 }
 
-QStringList HolidayRegion::regions()
+QStringList HolidayRegion::regionCodes()
 {
   const QStringList files =
     KGlobal::dirs()->findAllResources( "data", "libkholidays/plan2/holiday_*",
                                        KStandardDirs::NoDuplicates );
 
-  QStringList regions;
+  QStringList regionCodesList;
   foreach ( const QString &filename, files ) {
-    regions.append( filename.mid( filename.lastIndexOf( "holiday_" ) + 8 ) );
+    regionCodesList.append( filename.mid( filename.lastIndexOf( "holiday_" ) + 8 ) );
   }
 
-  qSort( regions );
-  return regions;
+  qSort( regionCodesList );
+  return regionCodesList;
 }
 
 QString HolidayRegion::regionCode() const
