@@ -1,0 +1,76 @@
+::
+:: Country:  Ireland
+::
+:: Language: Irish
+::
+:: Author:   Kevin Scannell <kscanne@gmail.com>
+::
+:: Updated:  2010-06-01
+::
+:: Source:   Various
+::
+
+:: Metadata
+country     "IE"
+language    "ga"
+:name        "optional - defaults to country name"
+description "Laethanta Saoire in Éirinn"
+
+:: Public Holidays
+: New Year's Day
+"Lá Caille"                      weekend january 1
+: St Patrick's Day
+"Lá Fhéile Pádraig"              weekend march 17
+: Good Friday
+"Aoine an Chéasta"               weekend easter minus 2
+: Easter
+"Domhnach Cásca"                 weekend easter
+: Easter Monday
+"Luan Cásca"                     weekend easter plus 1
+: May Day
+"Lá Bealtaine"                   weekend first monday in may
+: SPring Bank Holiday
+"Lá Saoire Bainc an Earraigh"    weekend first monday in june
+: Summer Bank Holiday
+"Lá Saoire Bainc an tSamhraidh"  weekend first monday in august
+" October Bank Holiday
+"Lá Saoire Bainc an Fhómhair"    weekend last monday in october
+: Christmas Day
+"Lá Nollag"                      weekend december 25
+:St Stephan's Day
+"Lá an Dreoilín"                 weekend december 26
+
+:: Religious
+"Oíche Chinn an Dá Lá Dhéag"     on january 5
+"Lá Nollag Beag"                 on january 6
+"Lá Fhéile Muire na gCoinneal"   on february 2
+"Máirt na hInide"                on easter minus 47 days
+"Céadaoin an Luaithrigh"         on easter minus 46 days
+"Domhnach na hImrime"            on easter minus 7 days
+"Céadaoin an Bhraith"            on easter minus 4 days
+"Déardaoin Mandála"              on easter minus 3 days
+"Déardaoin Deascabhála"          on easter plus 39 days
+"An Chincís"                     on easter plus 49 days
+"Luan Cincíse"                   on easter plus 50 days
+"Déardaoin Choirp Chríost"       on easter plus 53 days
+"Domhnach na Tríonóide"          on easter plus 56 days
+"Lá San Svaítín"                 on july 15
+
+:: Financial
+
+:: Cultural
+"Lá na nAmadán"                  on april 1
+"Lá Samhna"                      on november 1
+
+:: School
+
+:: Daylight Saving
+
+:: Seasons
+
+:: Name Days
+"Lá Fhéile Bríde"                on february 1
+"Lá Fhéile Vailintín"            on february 14
+"Lá Fhéile Eoin"                 on june 24
+"Lá Fhéile Michíl"               on september 29
+"Lá Fhéile Mártain"              on november 11
