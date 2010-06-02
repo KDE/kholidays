@@ -30,8 +30,14 @@ language    "he"
 "פסח"                                                   weekend on hebrew nisan 15
 : Shvi'i shel Pesach (Seventh day of Passover)
 "שביעי של פסח"                                          weekend on hebrew nisan 21
-: Yom Ha-Atzmaut (Independence Day)
-"יום העצמאות"                                           weekend on hebrew iyar 5
+: Yom Ha'atzmaut (Independence Day)
+: If falls on a Friday or Saturday, move to preceeding Thursday, if falls on a Monday move to Tuesday
+"יום העצמאות"                                           weekend on hebrew ( (([iyar 5] == [friday after ([iyar 5])]) ||
+                                                                             ([iyar 5] == [saturday after ([iyar 5])])) ?
+                                                                                 [thursday before ([iyar 5])] :
+                                                                             (([iyar 5] == [monday after ([iyar 5])]) ?
+                                                                                 [tuesday after ([iyar 5])] :
+                                                                             [iyar 5] ) )
 : Shavuot (Pentecost)
 "שבועות"                                                weekend on hebrew sivan 6
 
@@ -66,13 +72,19 @@ language    "he"
 :: Cultural
 : Yom Hazikaron le Yitzhak Rabin (Yitzhak Rabin's Remembrance Day)
 "יום הזיכרון ליצחק רבין"                                   on hebrew heshvan 12
-: Yom HaZikaron LaShoah VeLaGevurah (Holocaust Remembrance Day)
+: Yom Hazikaron LaShoah VeLaGevurah (Holocaust Remembrance Day)
 "יום הזיכרון לשואה ולגבורה"                                on hebrew nisan 27
 : Victory Day
 "יום הניצחון על גרמניה הנאצית"                             on may 9
-: Yom Hazikaron (Fallen Soldiers Remembrance Day)
-"יום הזיכרון לחללי מערכות ישראל ונפגעי פעולות האיבה"       on hebrew iyar 4
-: Yom Herut Yerushalayim (Jerusalem Day)
+: Yom Hazikaron (Israeli Fallen Soldiers and Victims of Terrorism Remembrance Day)
+: Is always the day before Yom Ha'atzmaut
+"יום הזיכרון לחללי מערכות ישראל ונפגעי פעולות האיבה"       on hebrew ( (([iyar 5] == [friday after ([iyar 5])]) ||
+                                                                        ([iyar 5] == [saturday after ([iyar 5])])) ?
+                                                                            [wednesday before ([iyar 5])] :
+                                                                        (([iyar 5] == [monday after ([iyar 5])]) ?
+                                                                            [iyar 5] :
+                                                                        [iyar 4] ) )
+: Yom Yerushalayim (Jerusalem Day)
 "יום ירושלים"                                              on hebrew iyar 28
 
 :: School
