@@ -290,7 +290,7 @@ QString Zodiac::signSymbol( Zodiac::ZodiacSigns sign )
   case Capricorn:
     return i18nc( "zodiac symbol for Capricorn", "goat" );
   case Aquarius:
-    return i18nc( "zodiac symbol for Aquarius", "water" );
+    return i18nc( "zodiac symbol for Aquarius", "water carrier" );
   case Pisces:
     return i18nc( "zodiac symbol for Pices", "fish" );
   default:
