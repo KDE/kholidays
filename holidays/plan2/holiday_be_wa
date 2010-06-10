@@ -14,7 +14,7 @@
 
 :: Metadata
 country     "BE"
-language    "nl"
+language    "wa"
 :name        "optional - defaults to country name"
 :description "(please add description in source language) National holiday file for Belgium"
 
