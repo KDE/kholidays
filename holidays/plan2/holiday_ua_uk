@@ -3,143 +3,332 @@
 ::
 :: Language: Ukrainian
 ::
-:: Authors:   Andriy Gapon <avg@icyb.net.ua>
+:: Authors:   Andriy Gapon     <avg@icyb.net.ua>
 ::            Oleg Ivashchenko <ol_iva@i.ua>
+::            Yuri Chornoivan  <yurchor@ukr.net>
 ::
-:: Updated:   2007-04-01
+:: Updated:   2010-06-06
 ::
-:: Source:
+:: Source:   http://en.wikipedia.org/wiki/Public_holidays_in_Ukraine
+::           http://uk.wikipedia.org/wiki/Свята_та_пам'ятні_дні_в_Україні
 ::
 
 :: Metadata
 country     "UA"
 language    "uk"
-:name        "optional - defaults to country name"
-:description "(please add description in source language) National holiday file for Ukraine"
+:name        "Україна"
+:description "National holiday file for Ukraine"
+description "Файл списку святкових днів України"
 
 :: Public Holidays
-"Новий Рік"                             weekend on january 1
-"Різдво Христове"                       weekend on january 7
-"8 Березня - Міжнародний Жіночий День"  weekend on march 8
-"Великдень"                             weekend on pascha
-"1 Травня - День Праці"                 weekend on may 1 length 2 days
-"День Перемоги"                         weekend on may 9
-"Трійця"                                weekend on pascha plus 49 days
-"День Конституції України"              weekend on june 28
-"День Незалежності України"             weekend on august 24
+: New Year's Day
+"Новий Рік"                                                         weekend on january 1
+: New Year's Day Substitute Holiday
+"Новий Рік"                                                         weekend on ( (([january 1] == [saturday after ([january 1])]) ||
+                                                                                  ([january 1] == [sunday after ([january 1])])) ?
+                                                                                      [monday after ([january 1])] :
+                                                                                  noop )
+: Orthodox Christmas, could use "weekend on julian december 25"
+"Різдво Христове"                                                   weekend on january 7 
+: Orthodox Christmas Substitute Holiday
+"Різдво Христове"                                                   weekend on ( (([january 7] == [saturday after ([january 7])]) ||
+                                                                                  ([january 7] == [sunday after ([january 7])])) ?
+                                                                                      [monday after ([january 7])] :
+                                                                                  noop )
+: International Women's Day
+"Міжнародний жіночий день"                                          weekend on march 8
+: International Women's Day Substitute Holiday
+"Міжнародний жіночий день"                                          weekend on ( (([march 8] == [saturday after ([march 8])]) ||
+                                                                                  ([march 8] == [sunday after ([march 8])])) ?
+                                                                                      [monday after ([march 8])] :
+                                                                                  noop )
+: Orthodox Easter
+"Великдень"                                                         weekend on pascha
+: Orthodox Easter Substitute Holiday
+"Великдень"                                                         weekend on monday after ([pascha])
+: International Workers' Day
+"День міжнародної солідарності трудящих"                            weekend on may 1 length 2 days
+: International Workers' Day Substitute Holiday
+"День міжнародної солідарності трудящих"                            weekend on ( (([may 1] == [saturday after ([may 1])])) ?
+                                                                                      [monday after ([may 1])] :
+                                                                                  ((([may 1] == [sunday after ([may 1])])) ?
+                                                                                      [tuesday after ([may 1])] :
+                                                                                  noop ) )
+"День міжнародної солідарності трудящих"                            weekend on ( (([may 2] == [saturday after ([may 2])])) ?
+                                                                                      [monday after ([may 2])] :
+                                                                                  ((([may 2] == [sunday after ([may 2])])) ?
+                                                                                      [tuesday after ([may 2])] :
+                                                                                  noop ) )
+: Victory Day
+"День Перемоги"                                                     weekend on may 9
+: Victory Day Substitute Holiday
+"День Перемоги"                                                     weekend on ( (([may 9] == [saturday after ([may 9])]) ||
+                                                                                  ([may 9] == [sunday after ([may 9])])) ?
+                                                                                      [monday after ([may 9])] :
+                                                                                  noop )
+: Orthodox Pentecost / Holy Trinity Day (Triytsya)
+"Трійця"                                                            weekend on pascha plus 49 days
+: Orthodox Pentecost / Holy Trinity Day (Triytsya) Substitute Holiday
+"Трійця"                                                            weekend on pascha plus 50 days
+: Constitution Day
+"День Конституції України"                                          weekend on june 28
+: Constitution Day Substitute Holiday
+"День Конституції України"                                          weekend on ( (([june 28] == [saturday after ([june 28])]) ||
+                                                                                  ([june 28] == [sunday after ([june 28])])) ?
+                                                                                      [monday after ([june 28])] :
+                                                                                  noop )
+: Independence Day
+"День Незалежності України"                                         weekend on august 24
+: Independence Day Substitute Holiday
+"День Незалежності України"                                         weekend on ( (([august 24] == [saturday after ([august 24])]) ||
+                                                                                  ([august 24] == [sunday after ([august 24])])) ?
+                                                                                      [monday after ([august 24])] :
+                                                                                  noop )
 
 :: Religious
+: Old New Year Eve, could use "on julian december 31"
+"Щедрий вечір"                                                      on january 13
+: Old New Year, could use "on julian january 1"
+"День Василія Великого"                                             on january 14
+: Epiphany
+"Водохреща"                                                         on january 19
+: The Purification of St. Mary
+"Стрітення"                                                         on february 15
+: Feast of St. John the Baptist
+"Різдво Івана Хрестителя (Івана Купала)"                            on july 7
+: Merciful Saviour and the Blessed Virgin Mary
+"Маковея"                                                           on august 14
+: Assumption of Mary
+"Успіння Пресвятої Богородиці"                                      on august 28
+: The Protection of the Mother of God
+"Покрова Пресвятої Богородиці"                                      on october 14
 
 :: Financial
 
 :: Cultural
+: Unity Day of Ukraine
+"День соборності України"                                           on january 22
+: Battle of Kruty Memorial Day
+"День пам’яті героїв Крут"                                          on january 29
+: Valentine's Day
+"День святого Валентина (День всіх закоханих)"                      on february 14
+: International Mother Language Day
+"Міжнародний день рідної мови"                                      on february 21
+: International Day for Monuments and Sites
+"День пам'яток історії та культури"                                 on april 18
+: Environment Day
+"День довкілля"                                                     on third saturday in april
+: Mother's Day
+"День матері"                                                       on second sunday in may
+: Europe Day
+"День Європи"                                                       on third saturday in may
+: Saints Cyril and Methodius Day
+"День слов'янської писемності і культури"                           on may 24
+: Children's Day
+"День захисту дітей"                                                on june 1
+: Memorial Day of War Victim's Mourning in Ukraine
+"День скорботи і вшанування пам'яті жертв війни в Україні"          on june 22
+: International Youth Day
+"День молоді"                                                       on last sunday in june
+: Ukrainian Flag Day
+"День Державного Прапора України"                                   on august 23
+: Ukrainian Library Day
+"Всеукраїнський день бібліотек"                                     on september 30
+: Day of Ukrainian Cossacks
+"День Українського козацтва"                                        on october 14
+: Day of Ukrainian Script and Language
+"День української писемності та мови"                               on november 9
+: Freedom Day
+"День Свободи"                                                      on november 22
+: Holodomor Memorial Day
+"День пам'яті жертв голодоморів"                                    on fourth saturday in november
 
 :: School
 
 :: Daylight Saving
+: DST forward
+"Перехід на літній час"                                             on last sunday in march
+: DST back
+"Перехід на зимовий час"                                            on last sunday in october
 
 :: Seasons
+: Spring
+"Початок весни"                                                     on march 1
+: Summer
+"Початок літа"                                                      on june 1
+: Autumn
+"Початок осені"                                                     on september 1
+: Winter
+"Початок зими"                                                      on december 1
 
 :: Name Days
 
-
-:: To be sorted
-"Хрещення"                                                                                  on january 19
-"День соборності України"                                                                   on january 22
-"День пам’яті Крутів"                                                                       on january 29
+:: Professions
+: Customs Official Day
+"Міжнародний день митника"                                                                  on january 26
+: Firefighter's Day
 "День працівників пожежної охорони"                                                         on january 29
+: Soviet Troop Withdrawal from Afghanistan Day
 "День вшанування учасників бойових дій на території інших держав"                           on february 15
+: Defender of the Fatherland Day
 "День захисника Вітчизни"                                                                   on february 23
+: Land Surveyor's Day
 "День землевпорядника"                                                                      on second saturday in march
+: Day of the Housing and Consumer Services
 "День працівників житлово-комунального господарства і побутового обслуговування населення"  on third sunday in march
+: Day of Ukrainian Culture and Folk Art
 "Всеукраїнський день працівників культури та аматорів народного мистецтва"                  on march 23
+: Ukrainian Day Against TB
 "Всеукраїнський день боротьби із захворюванням на туберкульоз"                              on march 24
+: Day of Security Service of Ukraine
 "День Служби безпеки України"                                                               on march 25
+: Day of the Interior Troops of the Ministry of Internal Affairs of Ukraine
 "День внутрішніх військ Міністерства внутрішніх справ України"                              on march 26
+: Geologist's Day
 "День геолога"                                                                              on first sunday in april
+: Day of Rocket-space Industry of Ukraine
 "День працівників ракетно-космічної галузі України"                                         on april 12
-"День пам'яток історії та культури"                                                         on april 18
-"День довкілля"                                                                             on third saturday in april
+: Day of Labor
 "День охорони праці"                                                                        on april 28
-"День матері"                                                                               on second sunday in may
+: Bank's Day
 "День банківських працівників"                                                              on may 20
+: Scientist's Day
 "День науки"                                                                                on third saturday in may
-"День Європи"                                                                               on third saturday in may
+: Polygraphist's Day
 "День працівників видавництв, поліграфії і книгорозповсюдження"                             on last saturday in may
+: Chemist's Day
 "День хіміка"                                                                               on last sunday in may
+: Peacekeeper's Day
 "Міжнародний день миротворців Організації Об'єднаних Націй"                                 on may 29
-"День слов'янської писемності і культури"                                                   on may 24
+: Frontier-guard Day
 "День прикордонника"                                                                        on may 28
-"День захисту дітей"                                                                        on june 1
+: Journalist's Day
 "День журналіста"                                                                           on june 6
+: Local Industry Day
 "День працівників місцевої промисловості"                                                   on first sunday in june
+: Water Industry Day
 "День працівників водного господарства"                                                     on first sunday in june
+: Light Industry Day
 "День працівників легкої промисловості"                                                     on second sunday in june
+: Medical Day
 "День медичного працівника"                                                                 on third sunday in june
-"День скорботи і вшанування пам'яті жертв війни в Україні"                                  on june 22
+: Authorities Day
 "День державної служби"                                                                     on june 23
+: Ukrainian Custom Official Day
 "День митної служби України"                                                                on june 25
-"День молоді"                                                                               on last sunday in june
+: Architecture Day
 "День архітектури України"                                                                  on july 1
+: Taxman's Day
 "День працівника державної податкової служби України"                                       on july 2
+: Antiaircraft Defence Day
 "День Військ Протиповітряної оборони"                                                       on first sunday in july
+: Navy Day
 "День Військово-Морських Сил"                                                               on first sunday in july
+: Sailor's Day
 "День працівників морського та річкового флоту"                                             on first sunday in july
+: Fishman's Day
 "День рибалки"                                                                              on second sunday in july
+: Bookkeeper's Day
 "День бухгалтера"                                                                           on july 16
+: Metallurgical and Miner's Day
 "День працівників металургійної та гірничодобувної промисловості"                           on third sunday in july
+: Tradesman's Day
 "День працівників торгівлі"                                                                 on last sunday in july
+: Airborne Day
 "День аеромобільних військ"                                                                 on august 2
+: Military Operator's Day
 "День військ зв'язку"                                                                       on august 8
+: Builder's Day
 "День будівельника"                                                                         on second sunday in august
+: Veterenary Day
 "День працівників ветеринарної медицини"                                                    on second sunday in august
+: Beekeeper's Day
 "День пасічника"                                                                            on august 19
-"День Державного Прапора України"                                                           on august 23
+: Aviation Day
 "День авіації"                                                                              on last saturday in august
+: Miner's Day
 "День шахтаря"                                                                              on last sunday in august
+: Businessman's Day
 "День підприємця"                                                                           on first sunday in september
+:Sport Day
 "День фізичної культури і спорту"                                                           on second saturday in september
+: Tankman's Day
 "День танкістів"                                                                            on second sunday in september
+: Oil and Gas Industry Day
 "День працівників нафтової, газової та нафтопереробної промисловості"                       on second sunday in september
+: Ukrainian Cinema Day
 "День українського кіно"                                                                    on second saturday in september
+: Civil Defence Day
 "День працівників цивільного захисту"                                                       on september 17
+: Peace Day
 "День миру"                                                                                 on september 21
+: Partizan's Day
 "День партизанської слави"                                                                  on september 22
+: Pharmacist's Day
 "День фармацевтичного працівника"                                                           on third saturday in september
+: Inventor's Day
 "День винахідника і раціоналізатора"                                                        on third saturday in september
+: Forest Guard Day
 "День працівника лісу"                                                                      on third sunday in september
+: Machine Building Day
 "День машинобудівника"                                                                      on fourth sunday in september
+: Knowledge Day
+"День знань"                                                                                on september 1
+: Tourist's Day
 "День туризму"                                                                              on september 27
-"Всеукраїнський день бібліотек"                                                             on september 30
+: Education Day
 "День працівників освіти"                                                                   on first sunday in october
+: Lawyer's Day
 "День юриста"                                                                               on october 8
+: Standartization Day
 "День працівників стандартизації та метрології"                                             on october 10
+: Epidemiologist's Day
 "День працівників державної санітарно-епідеміологічної служби"                              on second sunday in october
+: Artist's Day
 "День художника"                                                                            on second sunday in october
-"День Українського козацтва"                                                                on october 14
+: Food Industry Day
 "День працівників харчової промисловості"                                                   on third sunday in october
+: Automobilist's Day
 "День автомобіліста і дорожника"                                                            on last sunday in october
+: Miltary Engineering Day
 "День інженерних військ"                                                                    on november 3
+: Artillery Day
 "День ракетних військ і артилерії"                                                          on november 3
+: Railroad Day
 "День залізничника"                                                                         on november 4
+: Social Woker's Day
 "День працівника соціальної сфери"                                                          on first sunday in november
-"День української писемності та мови"                                                       on november 9
+: Telecommunication Day
 "День працівників радіо, телебачення та зв'язку"                                            on november 16
+: Student's Day
 "День студента"                                                                             on november 17
+: Meteorology Day
 "День працівників гідрометеорологічної служби"                                              on november 19
+: Glass Worker's Day
 "День скловиробника"                                                                        on november 19
-"День Свободи"                                                                              on november 22
+: Farmer's Day
 "День працівників сільського господарства"                                                  on third sunday in november
-"День пам'яті жертв голодоморів та політичних репресій"                                     on fourth saturday in november
+: Procuracy Day
 "День працівників прокуратури"                                                              on december 1
+: Statistics Day
 "День працівників статистики"                                                               on december 5
+: Army Day
 "День Збройних Сил України"                                                                 on december 6
+: Local Authorities Day
 "День місцевого самоврядування"                                                             on december 7
+: Infantry Day
 "День Сухопутних військ  України"                                                           on december 12
-"День вшанування учасників ліквідації  наслідків аварії на Чорнобильській АЕС"              on december 14
+: Chornobyl Worker's Day
+"День вшанування учасників ліквідації наслідків аварії на Чорнобильській АЕС"               on december 14
+: Court Worker's Day
 "День працівників суду"                                                                     on december 15
+: Advocasy Day
 "День адвокатури"                                                                           on december 19
+: Militia Day
 "День міліції"                                                                              on december 20
+: Diplomatist's Day
 "День працівників дипломатичної служби"                                                     on december 22
+: Power Engineering Day
 "День енергетика"                                                                           on december 22
+: Archivist's Day
 "День працівників архівних установ"                                                         on december 24
