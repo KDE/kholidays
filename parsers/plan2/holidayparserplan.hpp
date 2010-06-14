@@ -48,10 +48,10 @@ namespace KHolidays
 }
 
 /* First part of user declarations.  */
-#line 36 "holidayparserplan.ypp"
+#line 30 "holidayparserplan.ypp"
+ /*** C/C++ Declarations ***/
 
 #include <stdio.h>
-#include <unistd.h>
 #include <stdlib.h>
 #include <pwd.h>
 #include <sys/types.h>
@@ -63,13 +63,10 @@ namespace KHolidays
 
 #include <KCalendarSystem>
 
-namespace KHolidays {
-class HolidayParserDriverPlan;
-}
 
 
 /* Line 35 of lalr1.cc.  */
-#line 73 "holidayparserplan.hpp"
+#line 70 "holidayparserplan.hpp"
 
 #include "location.hh"
 
@@ -120,10 +117,10 @@ namespace KHolidays
     /// Symbol semantic values.
 #ifndef YYSTYPE
     union semantic_type
-#line 68 "holidayparserplan.ypp"
+#line 86 "holidayparserplan.ypp"
 { int  ival; char *sval; }
 /* Line 35 of lalr1.cc.  */
-#line 127 "holidayparserplan.hpp"
+#line 124 "holidayparserplan.hpp"
 	;
 #else
     typedef YYSTYPE semantic_type;
@@ -173,7 +170,7 @@ namespace KHolidays
     typedef token::yytokentype token_type;
 
     /// Build a parser object.
-    HolidayParserPlan (HolidayParserDriverPlan &driver_yyarg);
+    HolidayParserPlan (class HolidayParserDriverPlan& driver_yyarg);
     virtual ~HolidayParserPlan ();
 
     /// Parse.
@@ -332,7 +329,7 @@ namespace KHolidays
 
 
     /* User arguments.  */
-    HolidayParserDriverPlan &driver;
+    class HolidayParserDriverPlan& driver;
   };
 }
 

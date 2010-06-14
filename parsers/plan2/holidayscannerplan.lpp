@@ -24,34 +24,66 @@
     Boston, MA 02110-1301, USA.
 */
 
-%{
+%{ /*** C/C++ Declarations ***/
 # include <cstdlib>
 # include <errno.h>
 # include <limits.h>
 # include <string>
+
+# include <kdebug.h>
+
+# include "holidayscannerplan_p.h"
 # include "holidayparserdriverplan_p.h"
 # include "holidayparserplan.hpp"
 
-# undef yywrap
-# define yywrap() 1
+/* import the parser's token type into a local typedef */
+typedef KHolidays::HolidayParserPlan::token token;
+typedef KHolidays::HolidayParserPlan::token_type token_type;
 
-#define yyterminate() return token::END
+/* By default yylex returns int, we use token_type. Unfortunately yyterminate
+ * by default returns 0, which is not of token_type. */
+# define yyterminate() return token::END
+
+/* This disables inclusion of unistd.h, which is not available under Visual C++
+ * on Win32. The C++ scanner uses STL streams instead. */
+# define YY_NO_UNISTD_H
 %}
 
-%option noyywrap
-%option nounput
+/*** Flex Declarations and Options ***/
+
+/* enable c++ scanner class generation */
+%option c++
+
+/* change the name of the scanner class. results in "HolidayScannerFlexLexer" */
+%option prefix="HolidayScanner"
+
+/* the manual says "somewhat more optimized" */
 %option batch
+
+/* enable scanner to generate debug output. disable this for release
+ * versions. */
 %option debug
 
+/* no support for include files is planned */
+%option yywrap nounput
+
+/* enables the use of start condition stacks */
+%option stack
+
+%option 8bit
+
+/* The following paragraph suffices to track locations accurately. Each time
+ * yylex is invoked, the begin position is moved onto the end position. */
 %{
 # define YY_USER_ACTION  yylloc->columns( yyleng );
 %}
 
-%%
+%% /*** Regular Expressions Part ***/
 
 %{
+    /* code to place at the beginning of yylex() */
+    // reset location
     yylloc->step();
-    typedef KHolidays::HolidayParserPlan::token token;
 %}
 
 #.*\n               { yylloc->lines( yyleng ); yylloc->step(); }
@@ -285,27 +317,49 @@ jumee               { yylval->ival =   5; return token::WDAY; }
 shanbe              { yylval->ival =   6; return token::WDAY; }
 yekshanbe           { yylval->ival =   7; return token::WDAY; }
 
-.                   { driver.error( *yylloc, QString("Holiday Scanner Plan: Invalid Character: %1").arg( yytext ) ); }
+.                   { LexerError( yytext ); }
 
-%%
+%% /*** Additional Code ***/
 
-// Skeleton says is easier to implement here to have access to yy variables.
+namespace KHolidays {
 
-void KHolidays::HolidayParserDriverPlan::scannerInitialise()
+HolidayScannerPlan::HolidayScannerPlan(std::istream* in, std::ostream* out)
+                  : HolidayScannerFlexLexer(in, out)
 {
-    yy_flex_debug = m_traceScanning;
-    if ( !( yyin = fopen( m_filePath.toLocal8Bit(), "r" ) ) ) {
-        error( "cannot open " + m_filePath );
-    }
 }
 
-void KHolidays::HolidayParserDriverPlan::scannerReset()
+HolidayScannerPlan::~HolidayScannerPlan()
 {
-    //TODO rest counters???
-    rewind( yyin );
 }
 
-void KHolidays::HolidayParserDriverPlan::scannerTerminate()
+void HolidayScannerPlan::set_debug(bool b)
 {
-    fclose( yyin );
+    yy_flex_debug = b;
+}
+
+} // namespace KHolidays
+
+/* This implementation of HolidayScannerFlexLexer::yylex() is required to fill the
+ * vtable of the class HolidayScannerFlexLexer. We define the scanner's main yylex
+ * function via YY_DECL to reside in the HolidayScannerPlan class instead. */
+
+#ifdef yylex
+#undef yylex
+#endif
+
+int HolidayScannerFlexLexer::yylex()
+{
+    kDebug() << "in HolidayScannerFlexLexer::yylex() !";
+    return 0;
+}
+
+/* When the scanner receives an end-of-file indication from YY_INPUT, it then
+ * checks the yywrap() function. If yywrap() returns false (zero), then it is
+ * assumed that the function has gone ahead and set up `yyin' to point to
+ * another input file, and scanning continues. If it returns true (non-zero),
+ * then the scanner terminates, returning 0 to its caller. */
+
+int HolidayScannerFlexLexer::yywrap()
+{
+    return 1;
 }

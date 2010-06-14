@@ -22,20 +22,17 @@
 #ifndef KHOLIDAYS_HOLIDAYPARSERDRIVERPLAN_P_H
 #define KHOLIDAYS_HOLIDAYPARSERDRIVERPLAN_P_H
 
+#include <fstream>
+
+#include <QByteArray>
+
 #include "../holidayparserdriver_p.h"
 
-// Bison C++ skeleton required include of Bison parser class implementation
-#include "holidayparserplan.hpp"
-
-// Bison C++ skeleton required declaration
-# define YY_DECL                                             \
-KHolidays::HolidayParserPlan::token_type                     \
-yylex( KHolidays::HolidayParserPlan::semantic_type* yylval,  \
-       KHolidays::HolidayParserPlan::location_type* yylloc,  \
-       KHolidays::HolidayParserDriverPlan &driver )
-YY_DECL;
-
 namespace KHolidays {
+
+class HolidayScannerPlan;
+class HolidayParserPlan;
+class location;
 
 /**
  * HolidayParserDriverPlan implementation class
@@ -96,7 +93,6 @@ protected:
     friend class HolidayParserPlan;
 
     // Accessor methods for parser to talk to driver
-
     QString filePath();
 
     // Calendar and date calculation utilities
@@ -133,11 +129,6 @@ protected:
     void  setEvent( int event_jd, int observe_offset, int duration );
 
 private:
-    // Utilites to control Flex scanner class
-    void  scannerInitialise();
-    void  scannerReset();
-    void  scannerTerminate();
-
     // Calendar and date calculation utilities
     int   monthsInYear( int year );
     int   daysInMonth( int year, int month );
@@ -148,21 +139,25 @@ private:
 
     int   conditionalOffset( int year, int month, int day, int condition );
 
-    bool               m_traceScanning;            // Bison C++ skeleton enable tracing in Flex scanner class
-    bool               m_traceParsing;             // Bison C++ skeleton enable tracing in Bison parser class
-    HolidayParserPlan *m_parser;                   // Bison C++ skeleton Bison parser class implementation
+    QByteArray          m_scanData;                 // Holiday file stored as a string
 
-    QDate              m_parseYearStart;           // First day of year being parsed
-    QDate              m_parseYearEaster;          // Easter in the parse year, Gregorian only
-    QDate              m_parseYearPascha;          // Orthodox Easter in the parse year, Gregorian only
+    bool                m_traceParsing;             // Bison C++ skeleton enable tracing in Bison parser class
+    HolidayParserPlan  *m_parser;                   // Bison C++ skeleton Bison parser class implementation
 
-    QString            m_eventCalendarType;        // Calendar System for event rule
-    QString            m_eventName;                // Event name text
-    int                m_eventYear;                // Event date fields
-    int                m_eventMonth;               // Event date fields
-    int                m_eventDay;                 // Event date fields
-    int                m_eventColorName;           // Color of event name text
-    int                m_eventColorDay;            // Color of event day number
+    bool                m_traceScanning;            // Flex C++ enable tracing in Flex scanner class
+    HolidayScannerPlan *m_scanner;                  // Flex C++ scanner class implementation
+
+    QDate               m_parseYearStart;           // First day of year being parsed
+    QDate               m_parseYearEaster;          // Easter in the parse year, Gregorian only
+    QDate               m_parseYearPascha;          // Orthodox Easter in the parse year, Gregorian only
+
+    QString             m_eventCalendarType;        // Calendar System for event rule
+    QString             m_eventName;                // Event name text
+    int                 m_eventYear;                // Event date fields
+    int                 m_eventMonth;               // Event date fields
+    int                 m_eventDay;                 // Event date fields
+    int                 m_eventColorName;           // Color of event name text
+    int                 m_eventColorDay;            // Color of event day number
 };
 
 }

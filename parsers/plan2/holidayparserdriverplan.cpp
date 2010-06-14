@@ -31,6 +31,10 @@
 */
 
 #include "holidayparserdriverplan_p.h"
+#include "holidayscannerplan_p.h"
+#include "holidayparserplan.hpp"
+
+#include <sstream>
 
 #include <QFileInfo>
 
@@ -46,20 +50,26 @@
 using namespace KHolidays;
 
 HolidayParserDriverPlan::HolidayParserDriverPlan( const QString &planFilePath )
-                        :HolidayParserDriver( planFilePath )
+                        :HolidayParserDriver( planFilePath ),
+                        m_traceScanning( false ),
+                        m_traceParsing( false )
 {
-    m_traceScanning = false;
-    m_traceParsing = false;
+    QFile holidayFile( filePath() );
+    if ( holidayFile.open( QIODevice::ReadOnly ) ) {
+        m_scanData = holidayFile.readAll();
+        holidayFile.close();
+    }
+    m_scanner = new HolidayScannerPlan();
+    m_scanner->set_debug( m_traceScanning );
     m_parser = new HolidayParserPlan( *this );
     m_parser->set_debug_level( m_traceParsing );
-    scannerInitialise();
     parseMetadata();
 }
 
 HolidayParserDriverPlan::~HolidayParserDriverPlan()
 {
-    scannerTerminate();
     delete m_parser;
+    delete m_scanner;
 }
 
 //TODO Figure why it doesn't compile
@@ -96,7 +106,9 @@ void HolidayParserDriverPlan::parse()
             m_parseYearEaster = easter( m_parseYear );
             m_parseYearPascha = pascha( m_parseYear );
 
-            scannerReset();
+            std::istringstream iss2( std::string( m_scanData.data() ) );
+            m_scanner->yyrestart( &iss2 );
+
             m_parser->parse();
         }
 
@@ -113,7 +125,8 @@ void HolidayParserDriverPlan::parseMetadata()
     // Default to files internal metadata
     setParseCalendar( "gregorian" );
     m_parseYear = QDate::currentDate().year();
-    scannerReset();
+    std::istringstream iss2( std::string( m_scanData.data() ) );
+    m_scanner->yyrestart( &iss2 );
     m_parser->parse();
     m_resultList.clear();
 

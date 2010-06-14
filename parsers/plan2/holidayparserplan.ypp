@@ -27,15 +27,9 @@
     Boston, MA 02110-1301, USA.
 */
 
-%skeleton "lalr1.cc"
-%require "2.1a"
-%defines
-%name-prefix="KHolidays"
-%define "parser_class_name" "HolidayParserPlan"
+%{ /*** C/C++ Declarations ***/
 
-%{
 #include <stdio.h>
-#include <unistd.h>
 #include <stdlib.h>
 #include <pwd.h>
 #include <sys/types.h>
@@ -47,31 +41,49 @@
 
 #include <KCalendarSystem>
 
-namespace KHolidays {
-class HolidayParserDriverPlan;
-}
 %}
 
-%parse-param { HolidayParserDriverPlan &driver }
-%lex-param   { HolidayParserDriverPlan &driver }
+/*** yacc/bison Declarations ***/
 
+/* Require bison 2.3 or later */
+%require "2.3"
+
+/* add debug output code to generated parser. disable this for release
+ * versions. */
+%debug
+
+/* write out a header file containing the token defines */
+%defines
+
+/* use newer C++ skeleton file */
+%skeleton "lalr1.cc"
+
+/* namespace to enclose parser in */
+%name-prefix="KHolidays"
+
+/* set the parser's class identifier */
+%define "parser_class_name" "HolidayParserPlan"
+
+/* keep track of the current position within the input */
 %locations
 %initial-action
 {
+    // initialize the initial location object
     @$.begin.filename = new std::string( driver.filePath().toLocal8Bit().data() );
     @$.end.filename = @$.begin.filename;
 };
 
-%debug
+/* The driver is passed by reference to the parser and to the scanner. This
+ * provides a simple but effective pure interface, not relying on global
+ * variables. */
+%parse-param { class HolidayParserDriverPlan& driver }
+
+/* verbose error messages */
 %error-verbose
 
-%union { int  ival; char *sval; }
+/*** Grammar Tokens ***/
 
-%{
-//Fix broken skeleton define of yylex as KHolidayslex
-#define yylex yylex
-#include "holidayparserdriverplan_p.h"
-%}
+%union { int  ival; char *sval; }
 
 %type   <ival> stringcolor daycolor offset conditionaloffset length expr pexpr number month reldate wdaycondition monthnumber
 %token  END 0
@@ -91,7 +103,23 @@ class HolidayParserDriverPlan;
 
 %start planfile
 
-%%
+/*** End Grammar Tokens ***/
+
+%{
+
+#include "holidayparserdriverplan_p.h"
+#include "holidayscannerplan_p.h"
+
+/* this "connects" the bison parser in the driver to the flex scanner class
+ * object. it defines the yylex() function call to pull the next token from the
+ * current lexer object of the driver context. */
+#undef yylex
+#define yylex driver.m_scanner->lex
+
+%}
+
+%% /*** Grammar Rules ***/
+
 planfile : metadata list
 ;
 
@@ -224,6 +252,7 @@ number : NUMBER
        | YEAR                     { $$ = driver.parseYear(); }
        | LEAPYEAR pexpr           { $$ = driver.isLeapYear( $2 ); }
 ;
+
 %%
 
 /*** Private Yacc callbacks and helper functions ***/

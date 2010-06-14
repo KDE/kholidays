@@ -38,15 +38,22 @@
 #include "holidayparserplan.hpp"
 
 /* User implementation prologue.  */
-#line 70 "holidayparserplan.ypp"
+#line 108 "holidayparserplan.ypp"
 
-//Fix broken skeleton define of yylex as KHolidayslex
-#define yylex yylex
+
 #include "holidayparserdriverplan_p.h"
+#include "holidayscannerplan_p.h"
+
+/* this "connects" the bison parser in the driver to the flex scanner class
+ * object. it defines the yylex() function call to pull the next token from the
+ * current lexer object of the driver context. */
+#undef yylex
+#define yylex driver.m_scanner->lex
+
 
 
 /* Line 317 of lalr1.cc.  */
-#line 50 "holidayparserplan.cpp"
+#line 57 "holidayparserplan.cpp"
 
 #ifndef YY_
 # if YYENABLE_NLS
@@ -149,7 +156,7 @@ namespace KHolidays
 #endif
 
   /// Build a parser object.
-  HolidayParserPlan::HolidayParserPlan (HolidayParserDriverPlan &driver_yyarg)
+  HolidayParserPlan::HolidayParserPlan (class HolidayParserDriverPlan& driver_yyarg)
     : yydebug_ (false),
       yycdebug_ (&std::cerr),
       driver (driver_yyarg)
@@ -277,13 +284,14 @@ namespace KHolidays
 
 
     /* User initialization code.  */
-    #line 60 "holidayparserplan.ypp"
+    #line 70 "holidayparserplan.ypp"
 {
+    // initialize the initial location object
     yylloc.begin.filename = new std::string( driver.filePath().toLocal8Bit().data() );
     yylloc.end.filename = yylloc.begin.filename;
 }
   /* Line 547 of yacc.c.  */
-#line 287 "holidayparserplan.cpp"
+#line 295 "holidayparserplan.cpp"
     /* Initialize the stacks.  The initial state will be pushed in
        yynewstate, since the latter expects the semantical and the
        location values to have been already stored, initialize these
@@ -312,7 +320,7 @@ namespace KHolidays
     if (yychar == yyempty_)
       {
 	YYCDEBUG << "Reading a token: ";
-	yychar = yylex (&yylval, &yylloc, driver);
+	yychar = yylex (&yylval, &yylloc);
       }
 
 
@@ -399,393 +407,393 @@ namespace KHolidays
     switch (yyn)
       {
 	  case 4:
-#line 101 "holidayparserplan.ypp"
+#line 129 "holidayparserplan.ypp"
     { driver.setFileCountryCode( QString() ); ;}
     break;
 
   case 5:
-#line 102 "holidayparserplan.ypp"
+#line 130 "holidayparserplan.ypp"
     { driver.setFileCountryCode( QString::fromUtf8( (yysemantic_stack_[(2) - (2)].sval) ) ); ;}
     break;
 
   case 6:
-#line 105 "holidayparserplan.ypp"
+#line 133 "holidayparserplan.ypp"
     { driver.setFileLanguageCode( QString() ); ;}
     break;
 
   case 7:
-#line 106 "holidayparserplan.ypp"
+#line 134 "holidayparserplan.ypp"
     { driver.setFileLanguageCode( QString::fromUtf8( (yysemantic_stack_[(2) - (2)].sval) ) ); ;}
     break;
 
   case 8:
-#line 109 "holidayparserplan.ypp"
+#line 137 "holidayparserplan.ypp"
     { driver.setFileName( QString() ); ;}
     break;
 
   case 9:
-#line 110 "holidayparserplan.ypp"
+#line 138 "holidayparserplan.ypp"
     { driver.setFileName( QString::fromUtf8( (yysemantic_stack_[(2) - (2)].sval) ) ); ;}
     break;
 
   case 10:
-#line 113 "holidayparserplan.ypp"
+#line 141 "holidayparserplan.ypp"
     { driver.setFileDescription( QString() ); ;}
     break;
 
   case 11:
-#line 114 "holidayparserplan.ypp"
+#line 142 "holidayparserplan.ypp"
     { driver.setFileDescription( QString::fromUtf8( (yysemantic_stack_[(2) - (2)].sval) ) ); ;}
     break;
 
   case 16:
-#line 125 "holidayparserplan.ypp"
+#line 153 "holidayparserplan.ypp"
     { driver.setEventColorName( 0 ); ;}
     break;
 
   case 17:
-#line 126 "holidayparserplan.ypp"
+#line 154 "holidayparserplan.ypp"
     { driver.setEventColorName( (yysemantic_stack_[(1) - (1)].ival) ); ;}
     break;
 
   case 18:
-#line 129 "holidayparserplan.ypp"
+#line 157 "holidayparserplan.ypp"
     { driver.setEventColorDay( 0 ); ;}
     break;
 
   case 19:
-#line 130 "holidayparserplan.ypp"
+#line 158 "holidayparserplan.ypp"
     { driver.setEventColorDay( (yysemantic_stack_[(1) - (1)].ival) ); ;}
     break;
 
   case 20:
-#line 133 "holidayparserplan.ypp"
+#line 161 "holidayparserplan.ypp"
     { driver.setEventName( QString::fromUtf8( (yysemantic_stack_[(1) - (1)].sval) ) ); ;}
     break;
 
   case 21:
-#line 136 "holidayparserplan.ypp"
+#line 164 "holidayparserplan.ypp"
     { driver.setEventCalendarType( "gregorian" ); ;}
     break;
 
   case 22:
-#line 137 "holidayparserplan.ypp"
+#line 165 "holidayparserplan.ypp"
     { driver.setEventCalendarType( QString::fromUtf8( (yysemantic_stack_[(1) - (1)].sval) ) ); ;}
     break;
 
   case 23:
-#line 140 "holidayparserplan.ypp"
+#line 168 "holidayparserplan.ypp"
     { driver.setFromEaster( (yysemantic_stack_[(3) - (2)].ival), (yysemantic_stack_[(3) - (3)].ival) ); ;}
     break;
 
   case 24:
-#line 141 "holidayparserplan.ypp"
+#line 169 "holidayparserplan.ypp"
     { driver.setFromPascha( (yysemantic_stack_[(3) - (2)].ival), (yysemantic_stack_[(3) - (3)].ival) ); ;}
     break;
 
   case 25:
-#line 142 "holidayparserplan.ypp"
+#line 170 "holidayparserplan.ypp"
     { driver.setFromDate( (yysemantic_stack_[(4) - (2)].ival), (yysemantic_stack_[(4) - (3)].ival), (yysemantic_stack_[(4) - (4)].ival) ); ;}
     break;
 
   case 26:
-#line 143 "holidayparserplan.ypp"
+#line 171 "holidayparserplan.ypp"
     { driver.setFromWeekdayInMonth( 1, (yysemantic_stack_[(3) - (1)].ival), 1, (yysemantic_stack_[(3) - (2)].ival), (yysemantic_stack_[(3) - (3)].ival) ); ;}
     break;
 
   case 27:
-#line 144 "holidayparserplan.ypp"
+#line 172 "holidayparserplan.ypp"
     { driver.setFromWeekdayInMonth( (yysemantic_stack_[(4) - (1)].ival), (yysemantic_stack_[(4) - (2)].ival), 1, (yysemantic_stack_[(4) - (3)].ival), (yysemantic_stack_[(4) - (4)].ival) ); ;}
     break;
 
   case 28:
-#line 145 "holidayparserplan.ypp"
+#line 173 "holidayparserplan.ypp"
     { driver.setFromWeekdayInMonth( (yysemantic_stack_[(6) - (1)].ival), (yysemantic_stack_[(6) - (2)].ival), (yysemantic_stack_[(6) - (4)].ival), (yysemantic_stack_[(6) - (5)].ival), (yysemantic_stack_[(6) - (6)].ival) ); ;}
     break;
 
   case 29:
-#line 146 "holidayparserplan.ypp"
+#line 174 "holidayparserplan.ypp"
     { driver.setFromRelativeWeekday( (yysemantic_stack_[(5) - (2)].ival), (yysemantic_stack_[(5) - (1)].ival), (yysemantic_stack_[(5) - (4)].ival), (yysemantic_stack_[(5) - (5)].ival) ); ;}
     break;
 
   case 30:
-#line 149 "holidayparserplan.ypp"
+#line 177 "holidayparserplan.ypp"
     { (yyval.ival) =   0; ;}
     break;
 
   case 31:
-#line 150 "holidayparserplan.ypp"
+#line 178 "holidayparserplan.ypp"
     { (yyval.ival) =  (yysemantic_stack_[(2) - (2)].ival); ;}
     break;
 
   case 32:
-#line 151 "holidayparserplan.ypp"
+#line 179 "holidayparserplan.ypp"
     { (yyval.ival) = -(yysemantic_stack_[(2) - (2)].ival); ;}
     break;
 
   case 33:
-#line 154 "holidayparserplan.ypp"
+#line 182 "holidayparserplan.ypp"
     { (yyval.ival) = 0; ;}
     break;
 
   case 34:
-#line 155 "holidayparserplan.ypp"
+#line 183 "holidayparserplan.ypp"
     { (yyval.ival) = ( (yysemantic_stack_[(4) - (2)].ival) << 8 ) | (yysemantic_stack_[(4) - (4)].ival); ;}
     break;
 
   case 35:
-#line 158 "holidayparserplan.ypp"
+#line 186 "holidayparserplan.ypp"
     { (yyval.ival) = 0; ;}
     break;
 
   case 36:
-#line 159 "holidayparserplan.ypp"
+#line 187 "holidayparserplan.ypp"
     { (yyval.ival) = ( 1 << (yysemantic_stack_[(1) - (1)].ival) ); ;}
     break;
 
   case 37:
-#line 160 "holidayparserplan.ypp"
+#line 188 "holidayparserplan.ypp"
     { (yyval.ival) = ( 1 << (yysemantic_stack_[(3) - (1)].ival) ) | (yysemantic_stack_[(3) - (3)].ival); ;}
     break;
 
   case 38:
-#line 163 "holidayparserplan.ypp"
+#line 191 "holidayparserplan.ypp"
     { (yyval.ival) =  1; ;}
     break;
 
   case 39:
-#line 164 "holidayparserplan.ypp"
+#line 192 "holidayparserplan.ypp"
     { (yyval.ival) = (yysemantic_stack_[(2) - (2)].ival); ;}
     break;
 
   case 40:
-#line 167 "holidayparserplan.ypp"
+#line 195 "holidayparserplan.ypp"
     { driver.setEventDate( -99999, (yysemantic_stack_[(3) - (3)].ival), (yysemantic_stack_[(3) - (1)].ival) ); ;}
     break;
 
   case 41:
-#line 168 "holidayparserplan.ypp"
+#line 196 "holidayparserplan.ypp"
     { driver.setEventDate( -99999, (yysemantic_stack_[(4) - (3)].ival), (yysemantic_stack_[(4) - (1)].ival) ); ;}
     break;
 
   case 42:
-#line 169 "holidayparserplan.ypp"
+#line 197 "holidayparserplan.ypp"
     { driver.setEventDate(     (yysemantic_stack_[(5) - (5)].ival), (yysemantic_stack_[(5) - (3)].ival), (yysemantic_stack_[(5) - (1)].ival) ); ;}
     break;
 
   case 43:
-#line 170 "holidayparserplan.ypp"
+#line 198 "holidayparserplan.ypp"
     { driver.setEventDate( -99999, (yysemantic_stack_[(3) - (1)].ival), (yysemantic_stack_[(3) - (3)].ival) ); ;}
     break;
 
   case 44:
-#line 171 "holidayparserplan.ypp"
+#line 199 "holidayparserplan.ypp"
     { driver.setEventDate(     (yysemantic_stack_[(5) - (5)].ival), (yysemantic_stack_[(5) - (1)].ival), (yysemantic_stack_[(5) - (3)].ival) ); ;}
     break;
 
   case 45:
-#line 172 "holidayparserplan.ypp"
+#line 200 "holidayparserplan.ypp"
     { driver.setEventDate( -99999, (yysemantic_stack_[(2) - (1)].ival), (yysemantic_stack_[(2) - (2)].ival) ); ;}
     break;
 
   case 46:
-#line 173 "holidayparserplan.ypp"
+#line 201 "holidayparserplan.ypp"
     { driver.setEventDate(     (yysemantic_stack_[(3) - (3)].ival), (yysemantic_stack_[(3) - (1)].ival), (yysemantic_stack_[(3) - (2)].ival) ); ;}
     break;
 
   case 47:
-#line 174 "holidayparserplan.ypp"
+#line 202 "holidayparserplan.ypp"
     { driver.setEventDate( -99999, (yysemantic_stack_[(2) - (2)].ival), (yysemantic_stack_[(2) - (1)].ival) ); ;}
     break;
 
   case 48:
-#line 175 "holidayparserplan.ypp"
+#line 203 "holidayparserplan.ypp"
     { driver.setEventDate(     (yysemantic_stack_[(3) - (3)].ival), (yysemantic_stack_[(3) - (2)].ival), (yysemantic_stack_[(3) - (1)].ival) ); ;}
     break;
 
   case 49:
-#line 176 "holidayparserplan.ypp"
+#line 204 "holidayparserplan.ypp"
     { driver.setEventDate(     (yysemantic_stack_[(4) - (4)].ival), (yysemantic_stack_[(4) - (3)].ival), (yysemantic_stack_[(4) - (1)].ival) ); ;}
     break;
 
   case 50:
-#line 177 "holidayparserplan.ypp"
+#line 205 "holidayparserplan.ypp"
     { driver.setEventDate( (yysemantic_stack_[(1) - (1)].ival) ); ;}
     break;
 
   case 51:
-#line 180 "holidayparserplan.ypp"
+#line 208 "holidayparserplan.ypp"
     { (yyval.ival) = driver.julianDayFromEventName( (yysemantic_stack_[(1) - (1)].sval) ); ;}
     break;
 
   case 52:
-#line 181 "holidayparserplan.ypp"
+#line 209 "holidayparserplan.ypp"
     { (yyval.ival) = driver.julianDayFromEaster(); ;}
     break;
 
   case 53:
-#line 182 "holidayparserplan.ypp"
+#line 210 "holidayparserplan.ypp"
     { (yyval.ival) = driver.julianDayFromPascha(); ;}
     break;
 
   case 54:
-#line 183 "holidayparserplan.ypp"
+#line 211 "holidayparserplan.ypp"
     { (yyval.ival) = driver.julianDayFromMonthDay( (yysemantic_stack_[(3) - (3)].ival), (yysemantic_stack_[(3) - (1)].ival) ); ;}
     break;
 
   case 55:
-#line 184 "holidayparserplan.ypp"
+#line 212 "holidayparserplan.ypp"
     { (yyval.ival) = driver.julianDayFromMonthDay( (yysemantic_stack_[(4) - (3)].ival), (yysemantic_stack_[(4) - (1)].ival) ); ;}
     break;
 
   case 56:
-#line 185 "holidayparserplan.ypp"
+#line 213 "holidayparserplan.ypp"
     { (yyval.ival) = driver.julianDayFromMonthDay( (yysemantic_stack_[(3) - (1)].ival), (yysemantic_stack_[(3) - (3)].ival) ); ;}
     break;
 
   case 57:
-#line 186 "holidayparserplan.ypp"
+#line 214 "holidayparserplan.ypp"
     { (yyval.ival) = driver.julianDayFromMonthDay( (yysemantic_stack_[(2) - (2)].ival), (yysemantic_stack_[(2) - (1)].ival) ); ;}
     break;
 
   case 58:
-#line 187 "holidayparserplan.ypp"
+#line 215 "holidayparserplan.ypp"
     { (yyval.ival) = driver.julianDayFromMonthDay( (yysemantic_stack_[(2) - (1)].ival), (yysemantic_stack_[(2) - (2)].ival) ); ;}
     break;
 
   case 59:
-#line 188 "holidayparserplan.ypp"
+#line 216 "holidayparserplan.ypp"
     { (yyval.ival) = driver.julianDayFromRelativeWeekday( (yysemantic_stack_[(3) - (2)].ival), (yysemantic_stack_[(3) - (1)].ival), (yysemantic_stack_[(3) - (3)].ival) ); ;}
     break;
 
   case 60:
-#line 189 "holidayparserplan.ypp"
+#line 217 "holidayparserplan.ypp"
     { (yyval.ival) = driver.julianDayFromWeekdayInMonth( (yysemantic_stack_[(4) - (1)].ival), (yysemantic_stack_[(4) - (2)].ival), (yysemantic_stack_[(4) - (4)].ival) ); ;}
     break;
 
   case 62:
-#line 193 "holidayparserplan.ypp"
+#line 221 "holidayparserplan.ypp"
     { (yyval.ival) = driver.adjustedMonthNumber( (yysemantic_stack_[(1) - (1)].ival) ); ;}
     break;
 
   case 63:
-#line 196 "holidayparserplan.ypp"
+#line 224 "holidayparserplan.ypp"
     { (yyval.ival) = driver.adjustedMonthNumber( (yysemantic_stack_[(1) - (1)].ival) ); ;}
     break;
 
   case 64:
-#line 199 "holidayparserplan.ypp"
+#line 227 "holidayparserplan.ypp"
     { (yyval.ival) = (yysemantic_stack_[(1) - (1)].ival); ;}
     break;
 
   case 65:
-#line 200 "holidayparserplan.ypp"
+#line 228 "holidayparserplan.ypp"
     { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) || (yysemantic_stack_[(3) - (3)].ival); ;}
     break;
 
   case 66:
-#line 201 "holidayparserplan.ypp"
+#line 229 "holidayparserplan.ypp"
     { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) && (yysemantic_stack_[(3) - (3)].ival); ;}
     break;
 
   case 67:
-#line 202 "holidayparserplan.ypp"
+#line 230 "holidayparserplan.ypp"
     { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) == (yysemantic_stack_[(3) - (3)].ival); ;}
     break;
 
   case 68:
-#line 203 "holidayparserplan.ypp"
+#line 231 "holidayparserplan.ypp"
     { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) != (yysemantic_stack_[(3) - (3)].ival); ;}
     break;
 
   case 69:
-#line 204 "holidayparserplan.ypp"
+#line 232 "holidayparserplan.ypp"
     { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) <= (yysemantic_stack_[(3) - (3)].ival); ;}
     break;
 
   case 70:
-#line 205 "holidayparserplan.ypp"
+#line 233 "holidayparserplan.ypp"
     { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) >= (yysemantic_stack_[(3) - (3)].ival); ;}
     break;
 
   case 71:
-#line 206 "holidayparserplan.ypp"
+#line 234 "holidayparserplan.ypp"
     { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) <  (yysemantic_stack_[(3) - (3)].ival); ;}
     break;
 
   case 72:
-#line 207 "holidayparserplan.ypp"
+#line 235 "holidayparserplan.ypp"
     { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) >  (yysemantic_stack_[(3) - (3)].ival); ;}
     break;
 
   case 73:
-#line 208 "holidayparserplan.ypp"
+#line 236 "holidayparserplan.ypp"
     { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) +  (yysemantic_stack_[(3) - (3)].ival); ;}
     break;
 
   case 74:
-#line 209 "holidayparserplan.ypp"
+#line 237 "holidayparserplan.ypp"
     { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) -  (yysemantic_stack_[(3) - (3)].ival); ;}
     break;
 
   case 75:
-#line 210 "holidayparserplan.ypp"
+#line 238 "holidayparserplan.ypp"
     { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) *  (yysemantic_stack_[(3) - (3)].ival); ;}
     break;
 
   case 76:
-#line 211 "holidayparserplan.ypp"
+#line 239 "holidayparserplan.ypp"
     { (yyval.ival) = (yysemantic_stack_[(3) - (3)].ival) ?  (yysemantic_stack_[(3) - (1)].ival) / (yysemantic_stack_[(3) - (3)].ival) : 0; ;}
     break;
 
   case 77:
-#line 212 "holidayparserplan.ypp"
+#line 240 "holidayparserplan.ypp"
     { (yyval.ival) = (yysemantic_stack_[(3) - (3)].ival) ?  (yysemantic_stack_[(3) - (1)].ival) % (yysemantic_stack_[(3) - (3)].ival) : 0; ;}
     break;
 
   case 78:
-#line 213 "holidayparserplan.ypp"
+#line 241 "holidayparserplan.ypp"
     { (yyval.ival) = (yysemantic_stack_[(5) - (1)].ival) ?  (yysemantic_stack_[(5) - (3)].ival) : (yysemantic_stack_[(5) - (5)].ival); ;}
     break;
 
   case 79:
-#line 214 "holidayparserplan.ypp"
+#line 242 "holidayparserplan.ypp"
     { (yyval.ival) = !(yysemantic_stack_[(2) - (2)].ival); ;}
     break;
 
   case 80:
-#line 215 "holidayparserplan.ypp"
+#line 243 "holidayparserplan.ypp"
     { (yyval.ival) = (yysemantic_stack_[(3) - (2)].ival); ;}
     break;
 
   case 81:
-#line 218 "holidayparserplan.ypp"
+#line 246 "holidayparserplan.ypp"
     { (yyval.ival) = (yysemantic_stack_[(3) - (2)].ival); ;}
     break;
 
   case 82:
-#line 219 "holidayparserplan.ypp"
+#line 247 "holidayparserplan.ypp"
     { (yyval.ival) = (yysemantic_stack_[(1) - (1)].ival); ;}
     break;
 
   case 84:
-#line 223 "holidayparserplan.ypp"
+#line 251 "holidayparserplan.ypp"
     { (yyval.ival) = -(yysemantic_stack_[(2) - (2)].ival); ;}
     break;
 
   case 85:
-#line 224 "holidayparserplan.ypp"
+#line 252 "holidayparserplan.ypp"
     { (yyval.ival) = driver.parseYear(); ;}
     break;
 
   case 86:
-#line 225 "holidayparserplan.ypp"
+#line 253 "holidayparserplan.ypp"
     { (yyval.ival) = driver.isLeapYear( (yysemantic_stack_[(2) - (2)].ival) ); ;}
     break;
 
 
     /* Line 675 of lalr1.cc.  */
-#line 789 "holidayparserplan.cpp"
+#line 797 "holidayparserplan.cpp"
 	default: break;
       }
     YY_SYMBOL_PRINT ("-> $$ =", yyr1_[yyn], &yyval, &yyloc);
@@ -1270,15 +1278,15 @@ namespace KHolidays
   const unsigned char
   HolidayParserPlan::yyrline_[] =
   {
-         0,    95,    95,    98,   101,   102,   105,   106,   109,   110,
-     113,   114,   117,   118,   121,   122,   125,   126,   129,   130,
-     133,   136,   137,   140,   141,   142,   143,   144,   145,   146,
-     149,   150,   151,   154,   155,   158,   159,   160,   163,   164,
-     167,   168,   169,   170,   171,   172,   173,   174,   175,   176,
-     177,   180,   181,   182,   183,   184,   185,   186,   187,   188,
-     189,   192,   193,   196,   199,   200,   201,   202,   203,   204,
-     205,   206,   207,   208,   209,   210,   211,   212,   213,   214,
-     215,   218,   219,   222,   223,   224,   225
+         0,   123,   123,   126,   129,   130,   133,   134,   137,   138,
+     141,   142,   145,   146,   149,   150,   153,   154,   157,   158,
+     161,   164,   165,   168,   169,   170,   171,   172,   173,   174,
+     177,   178,   179,   182,   183,   186,   187,   188,   191,   192,
+     195,   196,   197,   198,   199,   200,   201,   202,   203,   204,
+     205,   208,   209,   210,   211,   212,   213,   214,   215,   216,
+     217,   220,   221,   224,   227,   228,   229,   230,   231,   232,
+     233,   234,   235,   236,   237,   238,   239,   240,   241,   242,
+     243,   246,   247,   250,   251,   252,   253
   };
 
   // Print the state stack on the debug stream.
@@ -1368,7 +1376,7 @@ namespace KHolidays
 
 } // namespace KHolidays
 
-#line 227 "holidayparserplan.ypp"
+#line 256 "holidayparserplan.ypp"
 
 
 /*** Private Yacc callbacks and helper functions ***/

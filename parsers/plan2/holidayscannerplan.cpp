@@ -10,7 +10,6 @@
 
 /* %if-c-only */
 /* %if-not-reentrant */
-
 /* %endif */
 /* %endif */
 /* %ok-for-header */
@@ -24,24 +23,25 @@
 #endif
 
 /* %if-c++-only */
+    /* The c++ scanner is a mess. The FlexLexer.h header file relies on the
+     * following macro. This is required in order to pass the c++-multiple-scanners
+     * test in the regression suite. We get reports that it breaks inheritance.
+     * We will address this in a future release of flex, or omit the C++ scanner
+     * altogether.
+     */
+    #define yyFlexLexer HolidayScannerFlexLexer
 /* %endif */
 
 /* %if-c-only */
-    
 /* %endif */
 
 /* %if-c-only */
-
 /* %endif */
 
 /* First, we deal with  platform-specific or compiler-specific issues. */
 
 /* begin standard C headers. */
 /* %if-c-only */
-#include <stdio.h>
-#include <string.h>
-#include <errno.h>
-#include <stdlib.h>
 /* %endif */
 
 /* %if-tables-serialization */
@@ -115,6 +115,13 @@ typedef unsigned int flex_uint32_t;
 /* %endif */
 
 /* %if-c++-only */
+/* begin standard C++ headers. */
+#include <iostream> 
+#include <errno.h>
+#include <cstdlib>
+#include <cstring>
+#include <cstdio>
+/* end standard C++ headers. */
 /* %endif */
 
 #ifdef __cplusplus
@@ -178,7 +185,7 @@ typedef unsigned int flex_uint32_t;
 #define YY_STATE_EOF(state) (YY_END_OF_BUFFER + state + 1)
 
 /* Special action meaning "start processing a new file". */
-#define YY_NEW_FILE yyrestart(yyin  )
+#define YY_NEW_FILE yyrestart( yyin  )
 
 #define YY_END_OF_BUFFER_CHAR 0
 
@@ -202,7 +209,6 @@ extern int yyleng;
 
 /* %if-c-only */
 /* %if-not-reentrant */
-extern FILE *yyin, *yyout;
 /* %endif */
 /* %endif */
 
@@ -238,10 +244,10 @@ typedef size_t yy_size_t;
 struct yy_buffer_state
 	{
 /* %if-c-only */
-	FILE *yy_input_file;
 /* %endif */
 
 /* %if-c++-only */
+	std::istream* yy_input_file;
 /* %endif */
 
 	char *yy_ch_buf;		/* input buffer */
@@ -307,11 +313,6 @@ struct yy_buffer_state
 /* %not-for-header */
 
 /* %if-not-reentrant */
-
-/* Stack of input buffers. */
-static size_t yy_buffer_stack_top = 0; /**< index of top of stack. */
-static size_t yy_buffer_stack_max = 0; /**< capacity of stack. */
-static YY_BUFFER_STATE * yy_buffer_stack = 0; /**< Stack as an array. */
 /* %endif */
 /* %ok-for-header */
 
@@ -333,51 +334,17 @@ static YY_BUFFER_STATE * yy_buffer_stack = 0; /**< Stack as an array. */
 #define YY_CURRENT_BUFFER_LVALUE (yy_buffer_stack)[(yy_buffer_stack_top)]
 
 /* %if-c-only Standard (non-C++) definition */
-
 /* %if-not-reentrant */
 /* %not-for-header */
 
-/* yy_hold_char holds the character lost when yytext is formed. */
-static char yy_hold_char;
-static int yy_n_chars;		/* number of characters read into yy_ch_buf */
-int yyleng;
-
-/* Points to current character in buffer. */
-static char *yy_c_buf_p = (char *) 0;
-static int yy_init = 0;		/* whether we need to initialize */
-static int yy_start = 0;	/* start state number */
-
-/* Flag which is used to allow yywrap()'s to do buffer switches
- * instead of setting up a fresh yyin.  A bit of a hack ...
- */
-static int yy_did_buffer_switch_on_eof;
 /* %ok-for-header */
 
 /* %endif */
-
-void yyrestart (FILE *input_file  );
-void yy_switch_to_buffer (YY_BUFFER_STATE new_buffer  );
-YY_BUFFER_STATE yy_create_buffer (FILE *file,int size  );
-void yy_delete_buffer (YY_BUFFER_STATE b  );
-void yy_flush_buffer (YY_BUFFER_STATE b  );
-void yypush_buffer_state (YY_BUFFER_STATE new_buffer  );
-void yypop_buffer_state (void );
-
-static void yyensure_buffer_stack (void );
-static void yy_load_buffer_state (void );
-static void yy_init_buffer (YY_BUFFER_STATE b,FILE *file  );
-
-#define YY_FLUSH_BUFFER yy_flush_buffer(YY_CURRENT_BUFFER )
-
-YY_BUFFER_STATE yy_scan_buffer (char *base,yy_size_t size  );
-YY_BUFFER_STATE yy_scan_string (yyconst char *yy_str  );
-YY_BUFFER_STATE yy_scan_bytes (yyconst char *bytes,int len  );
-
 /* %endif */
 
-void *yyalloc (yy_size_t  );
-void *yyrealloc (void *,yy_size_t  );
-void yyfree (void *  );
+void *HolidayScanneralloc (yy_size_t  );
+void *HolidayScannerrealloc (void *,yy_size_t  );
+void HolidayScannerfree (void *  );
 
 #define yy_new_buffer yy_create_buffer
 
@@ -386,7 +353,7 @@ void yyfree (void *  );
 	if ( ! YY_CURRENT_BUFFER ){ \
         yyensure_buffer_stack (); \
 		YY_CURRENT_BUFFER_LVALUE =    \
-            yy_create_buffer(yyin,YY_BUF_SIZE ); \
+            yy_create_buffer( yyin, YY_BUF_SIZE ); \
 	} \
 	YY_CURRENT_BUFFER_LVALUE->yy_is_interactive = is_interactive; \
 	}
@@ -396,7 +363,7 @@ void yyfree (void *  );
 	if ( ! YY_CURRENT_BUFFER ){\
         yyensure_buffer_stack (); \
 		YY_CURRENT_BUFFER_LVALUE =    \
-            yy_create_buffer(yyin,YY_BUF_SIZE ); \
+            yy_create_buffer( yyin, YY_BUF_SIZE ); \
 	} \
 	YY_CURRENT_BUFFER_LVALUE->yy_at_bol = at_bol; \
 	}
@@ -406,31 +373,15 @@ void yyfree (void *  );
 /* %% [1.0] yytext/yyin/yyout/yy_state_type/yylineno etc. def's & init go here */
 /* Begin user sect3 */
 
-#define yywrap(n) 1
-#define YY_SKIP_YYWRAP
-
 #define FLEX_DEBUG
 
 typedef unsigned char YY_CHAR;
 
-FILE *yyin = (FILE *) 0, *yyout = (FILE *) 0;
-
-typedef int yy_state_type;
-
-extern int yylineno;
-
-int yylineno = 1;
-
-extern char *yytext;
 #define yytext_ptr yytext
 
+#include <FlexLexer.h>
+
 /* %if-c-only Standard (non-C++) definition */
-
-static yy_state_type yy_get_previous_state (void );
-static yy_state_type yy_try_NUL_trans (yy_state_type current_state  );
-static int yy_get_next_buffer (void );
-static void yy_fatal_error (yyconst char msg[]  );
-
 /* %endif */
 
 /* Done after the current pattern has been matched and before the
@@ -1274,35 +1225,29 @@ static yyconst flex_int16_t yy_chk[2014] =
       942,  942,  942
     } ;
 
-static yy_state_type yy_last_accepting_state;
-static char *yy_last_accepting_cpos;
-
-extern int yy_flex_debug;
-int yy_flex_debug = 1;
-
 static yyconst flex_int16_t yy_rule_linenum[201] =
     {   0,
-       57,   58,   59,   60,   61,   63,   64,   65,   66,   68,
-       70,   74,   75,   76,   77,   78,   79,   80,   81,   82,
-       83,   84,   85,   86,   87,   88,   89,   91,   92,   93,
-       94,   95,   96,   97,   98,   99,  101,  102,  103,  104,
-      105,  106,  107,  108,  110,  111,  112,  113,  114,  115,
-      116,  117,  119,  120,  122,  123,  125,  126,  127,  128,
-      129,  130,  131,  132,  133,  134,  135,  136,  138,  139,
-      140,  141,  142,  143,  144,  146,  148,  149,  150,  151,
-      152,  153,  154,  155,  156,  157,  158,  159,  160,  162,
-      163,  164,  165,  166,  167,  168,  170,  172,  173,  174,
+       89,   90,   91,   92,   93,   95,   96,   97,   98,  100,
+      102,  106,  107,  108,  109,  110,  111,  112,  113,  114,
+      115,  116,  117,  118,  119,  120,  121,  123,  124,  125,
+      126,  127,  128,  129,  130,  131,  133,  134,  135,  136,
+      137,  138,  139,  140,  142,  143,  144,  145,  146,  147,
+      148,  149,  151,  152,  154,  155,  157,  158,  159,  160,
+      161,  162,  163,  164,  165,  166,  167,  168,  170,  171,
+      172,  173,  174,  175,  176,  178,  180,  181,  182,  183,
+      184,  185,  186,  187,  188,  189,  190,  191,  192,  194,
+      195,  196,  197,  198,  199,  200,  202,  204,  205,  206,
 
-      175,  176,  177,  178,  179,  180,  181,  182,  183,  184,
-      186,  187,  188,  189,  190,  191,  192,  194,  196,  197,
-      198,  199,  200,  201,  202,  203,  204,  205,  206,  207,
-      208,  209,  211,  212,  213,  214,  215,  216,  217,  219,
-      221,  222,  223,  224,  225,  226,  227,  228,  229,  230,
-      231,  232,  234,  235,  236,  237,  238,  239,  240,  242,
-      244,  245,  246,  247,  248,  249,  250,  251,  252,  253,
-      254,  255,  257,  258,  259,  260,  261,  262,  263,  265,
-      267,  268,  269,  270,  271,  272,  273,  274,  275,  276,
-      277,  278,  280,  281,  282,  283,  284,  285,  286,  288
+      207,  208,  209,  210,  211,  212,  213,  214,  215,  216,
+      218,  219,  220,  221,  222,  223,  224,  226,  228,  229,
+      230,  231,  232,  233,  234,  235,  236,  237,  238,  239,
+      240,  241,  243,  244,  245,  246,  247,  248,  249,  251,
+      253,  254,  255,  256,  257,  258,  259,  260,  261,  262,
+      263,  264,  266,  267,  268,  269,  270,  271,  272,  274,
+      276,  277,  278,  279,  280,  281,  282,  283,  284,  285,
+      286,  287,  289,  290,  291,  292,  293,  294,  295,  297,
+      299,  300,  301,  302,  303,  304,  305,  306,  307,  308,
+      309,  310,  312,  313,  314,  315,  316,  317,  318,  320
 
     } ;
 
@@ -1313,7 +1258,6 @@ static yyconst flex_int16_t yy_rule_linenum[201] =
 #define yymore() yymore_used_but_not_detected
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
-char *yytext;
 #line 1 "holidayscannerplan.lpp"
 /*
     Original version from plan by Thomas Driemeyer <thomas@bitrot.de>
@@ -1345,16 +1289,37 @@ char *yytext;
 # include <errno.h>
 # include <limits.h>
 # include <string>
+
+# include <kdebug.h>
+
+# include "holidayscannerplan_p.h"
 # include "holidayparserdriverplan_p.h"
 # include "holidayparserplan.hpp"
 
-# undef yywrap
-# define yywrap() 1
+/* import the parser's token type into a local typedef */
+typedef KHolidays::HolidayParserPlan::token token;
+typedef KHolidays::HolidayParserPlan::token_type token_type;
 
-#define yyterminate() return token::END
-#line 47 "holidayscannerplan.lpp"
+/* By default yylex returns int, we use token_type. Unfortunately yyterminate
+ * by default returns 0, which is not of token_type. */
+# define yyterminate() return token::END
+
+/* This disables inclusion of unistd.h, which is not available under Visual C++
+ * on Win32. The C++ scanner uses STL streams instead. */
+# define YY_NO_UNISTD_H
+/*** Flex Declarations and Options ***/
+/* enable c++ scanner class generation */
+/* change the name of the scanner class. results in "HolidayScannerFlexLexer" */
+/* the manual says "somewhat more optimized" */
+/* enable scanner to generate debug output. disable this for release
+ * versions. */
+/* no support for include files is planned */
+/* enables the use of start condition stacks */
+/* The following paragraph suffices to track locations accurately. Each time
+ * yylex is invoked, the begin position is moved onto the end position. */
+#line 78 "holidayscannerplan.lpp"
 # define YY_USER_ACTION  yylloc->columns( yyleng );
-#line 1358 "holidayscannerplan.cpp"
+#line 1323 "holidayscannerplan.cpp"
 
 #define INITIAL 0
 
@@ -1364,9 +1329,9 @@ char *yytext;
  * The user has a chance to override it with an option.
  */
 /* %if-c-only */
-#include <unistd.h>
 /* %endif */
 /* %if-c++-only */
+#include <unistd.h>
 /* %endif */
 #endif
 
@@ -1377,58 +1342,12 @@ char *yytext;
 /* %if-c-only Reentrant structure and macros (non-C++). */
 /* %if-reentrant */
 /* %if-c-only */
-
-static int yy_init_globals (void );
-
 /* %endif */
 /* %if-reentrant */
 /* %endif */
 /* %endif End reentrant structures and macros. */
-
-/* Accessor methods to globals.
-   These are made visible to non-reentrant scanners for convenience. */
-
-int yylex_destroy (void );
-
-int yyget_debug (void );
-
-void yyset_debug (int debug_flag  );
-
-YY_EXTRA_TYPE yyget_extra (void );
-
-void yyset_extra (YY_EXTRA_TYPE user_defined  );
-
-FILE *yyget_in (void );
-
-void yyset_in  (FILE * in_str  );
-
-FILE *yyget_out (void );
-
-void yyset_out  (FILE * out_str  );
-
-int yyget_leng (void );
-
-char *yyget_text (void );
-
-int yyget_lineno (void );
-
-void yyset_lineno (int line_number  );
-
 /* %if-bison-bridge */
 /* %endif */
-
-/* Macros after this point can all be overridden by user definitions in
- * section 1.
- */
-
-#ifndef YY_SKIP_YYWRAP
-#ifdef __cplusplus
-extern "C" int yywrap (void );
-#else
-extern int yywrap (void );
-#endif
-#endif
-
 /* %not-for-header */
 
 /* %ok-for-header */
@@ -1447,18 +1366,12 @@ static int yy_flex_strlen (yyconst char * );
 /* %if-c-only Standard (non-C++) definition */
 /* %not-for-header */
 
-#ifdef __cplusplus
-static int yyinput (void );
-#else
-static int input (void );
-#endif
 /* %ok-for-header */
 
 /* %endif */
 #endif
 
 /* %if-c-only */
-
 /* %endif */
 
 /* Amount of stuff to slurp up with each read. */
@@ -1469,12 +1382,9 @@ static int input (void );
 /* Copy whatever the last rule matched to the standard output. */
 #ifndef ECHO
 /* %if-c-only Standard (non-C++) definition */
-/* This used to be an fputs(), but since the string might contain NUL's,
- * we now use fwrite().
- */
-#define ECHO fwrite( yytext, yyleng, 1, yyout )
 /* %endif */
 /* %if-c++-only C++ definition */
+#define ECHO LexerOutput( yytext, yyleng )
 /* %endif */
 #endif
 
@@ -1484,35 +1394,10 @@ static int input (void );
 #ifndef YY_INPUT
 #define YY_INPUT(buf,result,max_size) \
 /* %% [5.0] fread()/read() definition of YY_INPUT goes here unless we're doing C++ \ */\
-	if ( YY_CURRENT_BUFFER_LVALUE->yy_is_interactive ) \
-		{ \
-		int c = '*'; \
-		int n; \
-		for ( n = 0; n < max_size && \
-			     (c = getc( yyin )) != EOF && c != '\n'; ++n ) \
-			buf[n] = (char) c; \
-		if ( c == '\n' ) \
-			buf[n++] = (char) c; \
-		if ( c == EOF && ferror( yyin ) ) \
-			YY_FATAL_ERROR( "input in flex scanner failed" ); \
-		result = n; \
-		} \
-	else \
-		{ \
-		errno=0; \
-		while ( (result = fread(buf, 1, max_size, yyin))==0 && ferror(yyin)) \
-			{ \
-			if( errno != EINTR) \
-				{ \
-				YY_FATAL_ERROR( "input in flex scanner failed" ); \
-				break; \
-				} \
-			errno=0; \
-			clearerr(yyin); \
-			} \
-		}\
 \
 /* %if-c++-only C++ definition \ */\
+	if ( (result = LexerInput( (char *) buf, max_size )) < 0 ) \
+		YY_FATAL_ERROR( "input in flex scanner failed" );
 /* %endif */
 
 #endif
@@ -1533,9 +1418,9 @@ static int input (void );
 /* Report a fatal error. */
 #ifndef YY_FATAL_ERROR
 /* %if-c-only */
-#define YY_FATAL_ERROR(msg) yy_fatal_error( msg )
 /* %endif */
 /* %if-c++-only */
+#define YY_FATAL_ERROR(msg) LexerError( msg )
 /* %endif */
 #endif
 
@@ -1558,12 +1443,9 @@ static int input (void );
 #ifndef YY_DECL
 #define YY_DECL_IS_OURS 1
 /* %if-c-only Standard (non-C++) definition */
-
-extern int yylex (void);
-
-#define YY_DECL int yylex (void)
 /* %endif */
 /* %if-c++-only C++ definition */
+#define YY_DECL int yyFlexLexer::yylex()
 /* %endif */
 #endif /* !YY_DECL */
 
@@ -1597,15 +1479,16 @@ YY_DECL
 	register int yy_act;
     
 /* %% [7.0] user's declarations go here */
-#line 50 "holidayscannerplan.lpp"
+#line 81 "holidayscannerplan.lpp"
 
 
 
+    /* code to place at the beginning of yylex() */
+    // reset location
     yylloc->step();
-    typedef KHolidays::HolidayParserPlan::token token;
 
 
-#line 1609 "holidayscannerplan.cpp"
+#line 1492 "holidayscannerplan.cpp"
 
 	if ( !(yy_init) )
 		{
@@ -1620,25 +1503,25 @@ YY_DECL
 
 		if ( ! yyin )
 /* %if-c-only */
-			yyin = stdin;
 /* %endif */
 /* %if-c++-only */
+			yyin = & std::cin;
 /* %endif */
 
 		if ( ! yyout )
 /* %if-c-only */
-			yyout = stdout;
 /* %endif */
 /* %if-c++-only */
+			yyout = & std::cout;
 /* %endif */
 
 		if ( ! YY_CURRENT_BUFFER ) {
 			yyensure_buffer_stack ();
 			YY_CURRENT_BUFFER_LVALUE =
-				yy_create_buffer(yyin,YY_BUF_SIZE );
+				yy_create_buffer( yyin, YY_BUF_SIZE );
 		}
 
-		yy_load_buffer_state( );
+		yy_load_buffer_state(  );
 		}
 
 	while ( 1 )		/* loops until end-of-file is reached */
@@ -1693,17 +1576,16 @@ do_action:	/* This label is used only to access EOF actions. */
 		if ( yy_flex_debug )
 			{
 			if ( yy_act == 0 )
-				fprintf( stderr, "--scanner backing up\n" );
+				std::cerr << "--scanner backing up\n";
 			else if ( yy_act < 201 )
-				fprintf( stderr, "--accepting rule at line %ld (\"%s\")\n",
-				         (long)yy_rule_linenum[yy_act], yytext );
+				std::cerr << "--accepting rule at line " << yy_rule_linenum[yy_act] <<
+				         "(\"" << yytext << "\")\n";
 			else if ( yy_act == 201 )
-				fprintf( stderr, "--accepting default rule (\"%s\")\n",
-				         yytext );
+				std::cerr << "--accepting default rule (\"" << yytext << "\")\n";
 			else if ( yy_act == 202 )
-				fprintf( stderr, "--(end of buffer or a NUL)\n" );
+				std::cerr << "--(end of buffer or a NUL)\n";
 			else
-				fprintf( stderr, "--EOF (start condition %d)\n", YY_START );
+				std::cerr << "--EOF (start condition " << YY_START << ")\n";
 			}
 
 		switch ( yy_act )
@@ -1719,1015 +1601,1015 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 /* rule 1 can match eol */
 YY_RULE_SETUP
-#line 57 "holidayscannerplan.lpp"
+#line 89 "holidayscannerplan.lpp"
 { yylloc->lines( yyleng ); yylloc->step(); }
 	YY_BREAK
 case 2:
 /* rule 2 can match eol */
 YY_RULE_SETUP
-#line 58 "holidayscannerplan.lpp"
+#line 90 "holidayscannerplan.lpp"
 { yylloc->lines( yyleng ); yylloc->step(); }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 59 "holidayscannerplan.lpp"
+#line 91 "holidayscannerplan.lpp"
 { yylloc->step(); }
 	YY_BREAK
 case 4:
 /* rule 4 can match eol */
 YY_RULE_SETUP
-#line 60 "holidayscannerplan.lpp"
+#line 92 "holidayscannerplan.lpp"
 { yylloc->lines( yyleng ); yylloc->step(); }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 61 "holidayscannerplan.lpp"
+#line 93 "holidayscannerplan.lpp"
 { return KHolidays::HolidayParserPlan::token_type( *yytext ); }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 63 "holidayscannerplan.lpp"
+#line 95 "holidayscannerplan.lpp"
 { return token::COUNTRY; }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 64 "holidayscannerplan.lpp"
+#line 96 "holidayscannerplan.lpp"
 { return token::LANGUAGE; }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 65 "holidayscannerplan.lpp"
+#line 97 "holidayscannerplan.lpp"
 { return token::NAME; }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 66 "holidayscannerplan.lpp"
+#line 98 "holidayscannerplan.lpp"
 { return token::DESCRIPTION; }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 68 "holidayscannerplan.lpp"
+#line 100 "holidayscannerplan.lpp"
 { yylval->ival = atoi( yytext ); return token::NUMBER; }
 	YY_BREAK
 case 11:
 /* rule 11 can match eol */
 YY_RULE_SETUP
-#line 70 "holidayscannerplan.lpp"
+#line 102 "holidayscannerplan.lpp"
 { yylval->sval = strdup( yytext + 1 );
                       yylval->sval[ strlen( yylval->sval ) - 1 ] = 0;
                       return token::STRING; }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 74 "holidayscannerplan.lpp"
+#line 106 "holidayscannerplan.lpp"
 ;
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 75 "holidayscannerplan.lpp"
+#line 107 "holidayscannerplan.lpp"
 ;
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 76 "holidayscannerplan.lpp"
+#line 108 "holidayscannerplan.lpp"
 ;
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 77 "holidayscannerplan.lpp"
+#line 109 "holidayscannerplan.lpp"
 ;
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 78 "holidayscannerplan.lpp"
+#line 110 "holidayscannerplan.lpp"
 ;
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 79 "holidayscannerplan.lpp"
+#line 111 "holidayscannerplan.lpp"
 { return token::INOP; }
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 80 "holidayscannerplan.lpp"
+#line 112 "holidayscannerplan.lpp"
 { return token::IF; }
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 81 "holidayscannerplan.lpp"
+#line 113 "holidayscannerplan.lpp"
 { return token::PLUS; }
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 82 "holidayscannerplan.lpp"
+#line 114 "holidayscannerplan.lpp"
 { return token::MINUS; }
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 83 "holidayscannerplan.lpp"
+#line 115 "holidayscannerplan.lpp"
 { return token::SMALL; }
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 84 "holidayscannerplan.lpp"
+#line 116 "holidayscannerplan.lpp"
 { return token::YEAR; }
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 85 "holidayscannerplan.lpp"
+#line 117 "holidayscannerplan.lpp"
 { return token::LEAPYEAR; }
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 86 "holidayscannerplan.lpp"
+#line 118 "holidayscannerplan.lpp"
 { return token::EASTER; }
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 87 "holidayscannerplan.lpp"
+#line 119 "holidayscannerplan.lpp"
 { return token::PASCHA; }
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 88 "holidayscannerplan.lpp"
+#line 120 "holidayscannerplan.lpp"
 { return token::LENGTH; }
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 89 "holidayscannerplan.lpp"
+#line 121 "holidayscannerplan.lpp"
 { return token::SHIFT; }
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 91 "holidayscannerplan.lpp"
+#line 123 "holidayscannerplan.lpp"
 { yylval->ival = 1; return token::COLOR; }
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 92 "holidayscannerplan.lpp"
+#line 124 "holidayscannerplan.lpp"
 { yylval->ival = 2; return token::COLOR; }
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 93 "holidayscannerplan.lpp"
+#line 125 "holidayscannerplan.lpp"
 { yylval->ival = 3; return token::COLOR; }
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 94 "holidayscannerplan.lpp"
+#line 126 "holidayscannerplan.lpp"
 { yylval->ival = 4; return token::COLOR; }
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 95 "holidayscannerplan.lpp"
+#line 127 "holidayscannerplan.lpp"
 { yylval->ival = 5; return token::COLOR; }
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 96 "holidayscannerplan.lpp"
+#line 128 "holidayscannerplan.lpp"
 { yylval->ival = 6; return token::COLOR; }
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 97 "holidayscannerplan.lpp"
+#line 129 "holidayscannerplan.lpp"
 { yylval->ival = 7; return token::COLOR; }
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
-#line 98 "holidayscannerplan.lpp"
+#line 130 "holidayscannerplan.lpp"
 { yylval->ival = 8; return token::COLOR; }
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
-#line 99 "holidayscannerplan.lpp"
+#line 131 "holidayscannerplan.lpp"
 { yylval->ival = 9; return token::COLOR; }
 	YY_BREAK
 case 37:
 YY_RULE_SETUP
-#line 101 "holidayscannerplan.lpp"
+#line 133 "holidayscannerplan.lpp"
 { return token::EQ; }
 	YY_BREAK
 case 38:
 YY_RULE_SETUP
-#line 102 "holidayscannerplan.lpp"
+#line 134 "holidayscannerplan.lpp"
 { return token::NE; }
 	YY_BREAK
 case 39:
 YY_RULE_SETUP
-#line 103 "holidayscannerplan.lpp"
+#line 135 "holidayscannerplan.lpp"
 { return token::LE; }
 	YY_BREAK
 case 40:
 YY_RULE_SETUP
-#line 104 "holidayscannerplan.lpp"
+#line 136 "holidayscannerplan.lpp"
 { return token::GE; }
 	YY_BREAK
 case 41:
 YY_RULE_SETUP
-#line 105 "holidayscannerplan.lpp"
+#line 137 "holidayscannerplan.lpp"
 { return token::LT; }
 	YY_BREAK
 case 42:
 YY_RULE_SETUP
-#line 106 "holidayscannerplan.lpp"
+#line 138 "holidayscannerplan.lpp"
 { return token::GT; }
 	YY_BREAK
 case 43:
 YY_RULE_SETUP
-#line 107 "holidayscannerplan.lpp"
+#line 139 "holidayscannerplan.lpp"
 { return token::AND;}
 	YY_BREAK
 case 44:
 YY_RULE_SETUP
-#line 108 "holidayscannerplan.lpp"
+#line 140 "holidayscannerplan.lpp"
 { return token::OR; }
 	YY_BREAK
 case 45:
 YY_RULE_SETUP
-#line 110 "holidayscannerplan.lpp"
+#line 142 "holidayscannerplan.lpp"
 { yylval->ival =      1; return token::NUMBER; }
 	YY_BREAK
 case 46:
 YY_RULE_SETUP
-#line 111 "holidayscannerplan.lpp"
+#line 143 "holidayscannerplan.lpp"
 { yylval->ival =      2; return token::NUMBER; }
 	YY_BREAK
 case 47:
 YY_RULE_SETUP
-#line 112 "holidayscannerplan.lpp"
+#line 144 "holidayscannerplan.lpp"
 { yylval->ival =      3; return token::NUMBER; }
 	YY_BREAK
 case 48:
 YY_RULE_SETUP
-#line 113 "holidayscannerplan.lpp"
+#line 145 "holidayscannerplan.lpp"
 { yylval->ival =      4; return token::NUMBER; }
 	YY_BREAK
 case 49:
 YY_RULE_SETUP
-#line 114 "holidayscannerplan.lpp"
+#line 146 "holidayscannerplan.lpp"
 { yylval->ival =      5; return token::NUMBER; }
 	YY_BREAK
 case 50:
 YY_RULE_SETUP
-#line 115 "holidayscannerplan.lpp"
+#line 147 "holidayscannerplan.lpp"
 { yylval->ival =  99999; return token::NUMBER; }
 	YY_BREAK
 case 51:
 YY_RULE_SETUP
-#line 116 "holidayscannerplan.lpp"
+#line 148 "holidayscannerplan.lpp"
 { yylval->ival = -99999; return token::NUMBER; }
 	YY_BREAK
 case 52:
 YY_RULE_SETUP
-#line 117 "holidayscannerplan.lpp"
+#line 149 "holidayscannerplan.lpp"
 { yylval->ival =      0; return token::NUMBER; }
 	YY_BREAK
 case 53:
 YY_RULE_SETUP
-#line 119 "holidayscannerplan.lpp"
+#line 151 "holidayscannerplan.lpp"
 { yylval->ival =  -1; return token::NUMBER; }
 	YY_BREAK
 case 54:
 YY_RULE_SETUP
-#line 120 "holidayscannerplan.lpp"
+#line 152 "holidayscannerplan.lpp"
 { yylval->ival =   1; return token::NUMBER; }
 	YY_BREAK
 case 55:
 YY_RULE_SETUP
-#line 122 "holidayscannerplan.lpp"
+#line 154 "holidayscannerplan.lpp"
 { yylval->sval = "gregorian"; return token::CALENDAR; }
 	YY_BREAK
 case 56:
 YY_RULE_SETUP
-#line 123 "holidayscannerplan.lpp"
+#line 155 "holidayscannerplan.lpp"
 { yylval->sval = "julian"; return token::CALENDAR; }
 	YY_BREAK
 case 57:
 YY_RULE_SETUP
-#line 125 "holidayscannerplan.lpp"
+#line 157 "holidayscannerplan.lpp"
 { yylval->ival =   1; return token::MONTH; }
 	YY_BREAK
 case 58:
 YY_RULE_SETUP
-#line 126 "holidayscannerplan.lpp"
+#line 158 "holidayscannerplan.lpp"
 { yylval->ival =   2; return token::MONTH; }
 	YY_BREAK
 case 59:
 YY_RULE_SETUP
-#line 127 "holidayscannerplan.lpp"
+#line 159 "holidayscannerplan.lpp"
 { yylval->ival =   3; return token::MONTH; }
 	YY_BREAK
 case 60:
 YY_RULE_SETUP
-#line 128 "holidayscannerplan.lpp"
+#line 160 "holidayscannerplan.lpp"
 { yylval->ival =   4; return token::MONTH; }
 	YY_BREAK
 case 61:
 YY_RULE_SETUP
-#line 129 "holidayscannerplan.lpp"
+#line 161 "holidayscannerplan.lpp"
 { yylval->ival =   5; return token::MONTH; }
 	YY_BREAK
 case 62:
 YY_RULE_SETUP
-#line 130 "holidayscannerplan.lpp"
+#line 162 "holidayscannerplan.lpp"
 { yylval->ival =   6; return token::MONTH; }
 	YY_BREAK
 case 63:
 YY_RULE_SETUP
-#line 131 "holidayscannerplan.lpp"
+#line 163 "holidayscannerplan.lpp"
 { yylval->ival =   7; return token::MONTH; }
 	YY_BREAK
 case 64:
 YY_RULE_SETUP
-#line 132 "holidayscannerplan.lpp"
+#line 164 "holidayscannerplan.lpp"
 { yylval->ival =   8; return token::MONTH; }
 	YY_BREAK
 case 65:
 YY_RULE_SETUP
-#line 133 "holidayscannerplan.lpp"
+#line 165 "holidayscannerplan.lpp"
 { yylval->ival =   9; return token::MONTH; }
 	YY_BREAK
 case 66:
 YY_RULE_SETUP
-#line 134 "holidayscannerplan.lpp"
+#line 166 "holidayscannerplan.lpp"
 { yylval->ival =  10; return token::MONTH; }
 	YY_BREAK
 case 67:
 YY_RULE_SETUP
-#line 135 "holidayscannerplan.lpp"
+#line 167 "holidayscannerplan.lpp"
 { yylval->ival =  11; return token::MONTH; }
 	YY_BREAK
 case 68:
 YY_RULE_SETUP
-#line 136 "holidayscannerplan.lpp"
+#line 168 "holidayscannerplan.lpp"
 { yylval->ival =  12; return token::MONTH; }
 	YY_BREAK
 case 69:
 YY_RULE_SETUP
-#line 138 "holidayscannerplan.lpp"
+#line 170 "holidayscannerplan.lpp"
 { yylval->ival =   1; return token::WDAY; }
 	YY_BREAK
 case 70:
 YY_RULE_SETUP
-#line 139 "holidayscannerplan.lpp"
+#line 171 "holidayscannerplan.lpp"
 { yylval->ival =   2; return token::WDAY; }
 	YY_BREAK
 case 71:
 YY_RULE_SETUP
-#line 140 "holidayscannerplan.lpp"
+#line 172 "holidayscannerplan.lpp"
 { yylval->ival =   3; return token::WDAY; }
 	YY_BREAK
 case 72:
 YY_RULE_SETUP
-#line 141 "holidayscannerplan.lpp"
+#line 173 "holidayscannerplan.lpp"
 { yylval->ival =   4; return token::WDAY; }
 	YY_BREAK
 case 73:
 YY_RULE_SETUP
-#line 142 "holidayscannerplan.lpp"
+#line 174 "holidayscannerplan.lpp"
 { yylval->ival =   5; return token::WDAY; }
 	YY_BREAK
 case 74:
 YY_RULE_SETUP
-#line 143 "holidayscannerplan.lpp"
+#line 175 "holidayscannerplan.lpp"
 { yylval->ival =   6; return token::WDAY; }
 	YY_BREAK
 case 75:
 YY_RULE_SETUP
-#line 144 "holidayscannerplan.lpp"
+#line 176 "holidayscannerplan.lpp"
 { yylval->ival =   7; return token::WDAY; }
 	YY_BREAK
 case 76:
 YY_RULE_SETUP
-#line 146 "holidayscannerplan.lpp"
+#line 178 "holidayscannerplan.lpp"
 { yylval->sval = "coptic"; return token::CALENDAR; }
 	YY_BREAK
 case 77:
 YY_RULE_SETUP
-#line 148 "holidayscannerplan.lpp"
+#line 180 "holidayscannerplan.lpp"
 { yylval->ival =   1; return token::MONTH; }
 	YY_BREAK
 case 78:
 YY_RULE_SETUP
-#line 149 "holidayscannerplan.lpp"
+#line 181 "holidayscannerplan.lpp"
 { yylval->ival =   2; return token::MONTH; }
 	YY_BREAK
 case 79:
 YY_RULE_SETUP
-#line 150 "holidayscannerplan.lpp"
+#line 182 "holidayscannerplan.lpp"
 { yylval->ival =   3; return token::MONTH; }
 	YY_BREAK
 case 80:
 YY_RULE_SETUP
-#line 151 "holidayscannerplan.lpp"
+#line 183 "holidayscannerplan.lpp"
 { yylval->ival =   4; return token::MONTH; }
 	YY_BREAK
 case 81:
 YY_RULE_SETUP
-#line 152 "holidayscannerplan.lpp"
+#line 184 "holidayscannerplan.lpp"
 { yylval->ival =   5; return token::MONTH; }
 	YY_BREAK
 case 82:
 YY_RULE_SETUP
-#line 153 "holidayscannerplan.lpp"
+#line 185 "holidayscannerplan.lpp"
 { yylval->ival =   6; return token::MONTH; }
 	YY_BREAK
 case 83:
 YY_RULE_SETUP
-#line 154 "holidayscannerplan.lpp"
+#line 186 "holidayscannerplan.lpp"
 { yylval->ival =   7; return token::MONTH; }
 	YY_BREAK
 case 84:
 YY_RULE_SETUP
-#line 155 "holidayscannerplan.lpp"
+#line 187 "holidayscannerplan.lpp"
 { yylval->ival =   8; return token::MONTH; }
 	YY_BREAK
 case 85:
 YY_RULE_SETUP
-#line 156 "holidayscannerplan.lpp"
+#line 188 "holidayscannerplan.lpp"
 { yylval->ival =   9; return token::MONTH; }
 	YY_BREAK
 case 86:
 YY_RULE_SETUP
-#line 157 "holidayscannerplan.lpp"
+#line 189 "holidayscannerplan.lpp"
 { yylval->ival =  10; return token::MONTH; }
 	YY_BREAK
 case 87:
 YY_RULE_SETUP
-#line 158 "holidayscannerplan.lpp"
+#line 190 "holidayscannerplan.lpp"
 { yylval->ival =  11; return token::MONTH; }
 	YY_BREAK
 case 88:
 YY_RULE_SETUP
-#line 159 "holidayscannerplan.lpp"
+#line 191 "holidayscannerplan.lpp"
 { yylval->ival =  12; return token::MONTH; }
 	YY_BREAK
 case 89:
 YY_RULE_SETUP
-#line 160 "holidayscannerplan.lpp"
+#line 192 "holidayscannerplan.lpp"
 { yylval->ival =  13; return token::MONTH; }
 	YY_BREAK
 case 90:
 YY_RULE_SETUP
-#line 162 "holidayscannerplan.lpp"
+#line 194 "holidayscannerplan.lpp"
 { yylval->ival =   1; return token::WDAY; }
 	YY_BREAK
 case 91:
 YY_RULE_SETUP
-#line 163 "holidayscannerplan.lpp"
+#line 195 "holidayscannerplan.lpp"
 { yylval->ival =   2; return token::WDAY; }
 	YY_BREAK
 case 92:
 YY_RULE_SETUP
-#line 164 "holidayscannerplan.lpp"
+#line 196 "holidayscannerplan.lpp"
 { yylval->ival =   3; return token::WDAY; }
 	YY_BREAK
 case 93:
 YY_RULE_SETUP
-#line 165 "holidayscannerplan.lpp"
+#line 197 "holidayscannerplan.lpp"
 { yylval->ival =   4; return token::WDAY; }
 	YY_BREAK
 case 94:
 YY_RULE_SETUP
-#line 166 "holidayscannerplan.lpp"
+#line 198 "holidayscannerplan.lpp"
 { yylval->ival =   5; return token::WDAY; }
 	YY_BREAK
 case 95:
 YY_RULE_SETUP
-#line 167 "holidayscannerplan.lpp"
+#line 199 "holidayscannerplan.lpp"
 { yylval->ival =   6; return token::WDAY; }
 	YY_BREAK
 case 96:
 YY_RULE_SETUP
-#line 168 "holidayscannerplan.lpp"
+#line 200 "holidayscannerplan.lpp"
 { yylval->ival =   7; return token::WDAY; }
 	YY_BREAK
 case 97:
 YY_RULE_SETUP
-#line 170 "holidayscannerplan.lpp"
+#line 202 "holidayscannerplan.lpp"
 { yylval->sval = "ethiopian"; return token::CALENDAR; }
 	YY_BREAK
 case 98:
 YY_RULE_SETUP
-#line 172 "holidayscannerplan.lpp"
+#line 204 "holidayscannerplan.lpp"
 { yylval->ival =   1; return token::MONTH; }
 	YY_BREAK
 case 99:
 YY_RULE_SETUP
-#line 173 "holidayscannerplan.lpp"
+#line 205 "holidayscannerplan.lpp"
 { yylval->ival =   2; return token::MONTH; }
 	YY_BREAK
 case 100:
 YY_RULE_SETUP
-#line 174 "holidayscannerplan.lpp"
+#line 206 "holidayscannerplan.lpp"
 { yylval->ival =   3; return token::MONTH; }
 	YY_BREAK
 case 101:
 YY_RULE_SETUP
-#line 175 "holidayscannerplan.lpp"
+#line 207 "holidayscannerplan.lpp"
 { yylval->ival =   4; return token::MONTH; }
 	YY_BREAK
 case 102:
 YY_RULE_SETUP
-#line 176 "holidayscannerplan.lpp"
+#line 208 "holidayscannerplan.lpp"
 { yylval->ival =   5; return token::MONTH; }
 	YY_BREAK
 case 103:
 YY_RULE_SETUP
-#line 177 "holidayscannerplan.lpp"
+#line 209 "holidayscannerplan.lpp"
 { yylval->ival =   6; return token::MONTH; }
 	YY_BREAK
 case 104:
 YY_RULE_SETUP
-#line 178 "holidayscannerplan.lpp"
+#line 210 "holidayscannerplan.lpp"
 { yylval->ival =   7; return token::MONTH; }
 	YY_BREAK
 case 105:
 YY_RULE_SETUP
-#line 179 "holidayscannerplan.lpp"
+#line 211 "holidayscannerplan.lpp"
 { yylval->ival =   8; return token::MONTH; }
 	YY_BREAK
 case 106:
 YY_RULE_SETUP
-#line 180 "holidayscannerplan.lpp"
+#line 212 "holidayscannerplan.lpp"
 { yylval->ival =   9; return token::MONTH; }
 	YY_BREAK
 case 107:
 YY_RULE_SETUP
-#line 181 "holidayscannerplan.lpp"
+#line 213 "holidayscannerplan.lpp"
 { yylval->ival =  10; return token::MONTH; }
 	YY_BREAK
 case 108:
 YY_RULE_SETUP
-#line 182 "holidayscannerplan.lpp"
+#line 214 "holidayscannerplan.lpp"
 { yylval->ival =  11; return token::MONTH; }
 	YY_BREAK
 case 109:
 YY_RULE_SETUP
-#line 183 "holidayscannerplan.lpp"
+#line 215 "holidayscannerplan.lpp"
 { yylval->ival =  12; return token::MONTH; }
 	YY_BREAK
 case 110:
 YY_RULE_SETUP
-#line 184 "holidayscannerplan.lpp"
+#line 216 "holidayscannerplan.lpp"
 { yylval->ival =  13; return token::MONTH; }
 	YY_BREAK
 case 111:
 YY_RULE_SETUP
-#line 186 "holidayscannerplan.lpp"
+#line 218 "holidayscannerplan.lpp"
 { yylval->ival =   1; return token::WDAY; }
 	YY_BREAK
 case 112:
 YY_RULE_SETUP
-#line 187 "holidayscannerplan.lpp"
+#line 219 "holidayscannerplan.lpp"
 { yylval->ival =   2; return token::WDAY; }
 	YY_BREAK
 case 113:
 YY_RULE_SETUP
-#line 188 "holidayscannerplan.lpp"
+#line 220 "holidayscannerplan.lpp"
 { yylval->ival =   3; return token::WDAY; }
 	YY_BREAK
 case 114:
 YY_RULE_SETUP
-#line 189 "holidayscannerplan.lpp"
+#line 221 "holidayscannerplan.lpp"
 { yylval->ival =   4; return token::WDAY; }
 	YY_BREAK
 case 115:
 YY_RULE_SETUP
-#line 190 "holidayscannerplan.lpp"
+#line 222 "holidayscannerplan.lpp"
 { yylval->ival =   5; return token::WDAY; }
 	YY_BREAK
 case 116:
 YY_RULE_SETUP
-#line 191 "holidayscannerplan.lpp"
+#line 223 "holidayscannerplan.lpp"
 { yylval->ival =   6; return token::WDAY; }
 	YY_BREAK
 case 117:
 YY_RULE_SETUP
-#line 192 "holidayscannerplan.lpp"
+#line 224 "holidayscannerplan.lpp"
 { yylval->ival =   7; return token::WDAY; }
 	YY_BREAK
 case 118:
 YY_RULE_SETUP
-#line 194 "holidayscannerplan.lpp"
+#line 226 "holidayscannerplan.lpp"
 { yylval->sval = "hebrew"; return token::CALENDAR; }
 	YY_BREAK
 case 119:
 YY_RULE_SETUP
-#line 196 "holidayscannerplan.lpp"
+#line 228 "holidayscannerplan.lpp"
 { yylval->ival =   1; return token::MONTH; }
 	YY_BREAK
 case 120:
 YY_RULE_SETUP
-#line 197 "holidayscannerplan.lpp"
+#line 229 "holidayscannerplan.lpp"
 { yylval->ival =   2; return token::MONTH; }
 	YY_BREAK
 case 121:
 YY_RULE_SETUP
-#line 198 "holidayscannerplan.lpp"
+#line 230 "holidayscannerplan.lpp"
 { yylval->ival =   3; return token::MONTH; }
 	YY_BREAK
 case 122:
 YY_RULE_SETUP
-#line 199 "holidayscannerplan.lpp"
+#line 231 "holidayscannerplan.lpp"
 { yylval->ival =   4; return token::MONTH; }
 	YY_BREAK
 case 123:
 YY_RULE_SETUP
-#line 200 "holidayscannerplan.lpp"
+#line 232 "holidayscannerplan.lpp"
 { yylval->ival =   5; return token::MONTH; }
 	YY_BREAK
 case 124:
 YY_RULE_SETUP
-#line 201 "holidayscannerplan.lpp"
+#line 233 "holidayscannerplan.lpp"
 { yylval->ival =   6; return token::MONTH; }
 	YY_BREAK
 case 125:
 YY_RULE_SETUP
-#line 202 "holidayscannerplan.lpp"
+#line 234 "holidayscannerplan.lpp"
 { yylval->ival =   7; return token::MONTH; }
 	YY_BREAK
 case 126:
 YY_RULE_SETUP
-#line 203 "holidayscannerplan.lpp"
+#line 235 "holidayscannerplan.lpp"
 { yylval->ival =   8; return token::MONTH; }
 	YY_BREAK
 case 127:
 YY_RULE_SETUP
-#line 204 "holidayscannerplan.lpp"
+#line 236 "holidayscannerplan.lpp"
 { yylval->ival =   9; return token::MONTH; }
 	YY_BREAK
 case 128:
 YY_RULE_SETUP
-#line 205 "holidayscannerplan.lpp"
+#line 237 "holidayscannerplan.lpp"
 { yylval->ival =  10; return token::MONTH; }
 	YY_BREAK
 case 129:
 YY_RULE_SETUP
-#line 206 "holidayscannerplan.lpp"
+#line 238 "holidayscannerplan.lpp"
 { yylval->ival =  11; return token::MONTH; }
 	YY_BREAK
 case 130:
 YY_RULE_SETUP
-#line 207 "holidayscannerplan.lpp"
+#line 239 "holidayscannerplan.lpp"
 { yylval->ival =  12; return token::MONTH; }
 	YY_BREAK
 case 131:
 YY_RULE_SETUP
-#line 208 "holidayscannerplan.lpp"
+#line 240 "holidayscannerplan.lpp"
 { yylval->ival =  13; return token::MONTH; }
 	YY_BREAK
 case 132:
 YY_RULE_SETUP
-#line 209 "holidayscannerplan.lpp"
+#line 241 "holidayscannerplan.lpp"
 { yylval->ival =  14; return token::MONTH; }
 	YY_BREAK
 case 133:
 YY_RULE_SETUP
-#line 211 "holidayscannerplan.lpp"
+#line 243 "holidayscannerplan.lpp"
 { yylval->ival =   1; return token::WDAY; }
 	YY_BREAK
 case 134:
 YY_RULE_SETUP
-#line 212 "holidayscannerplan.lpp"
+#line 244 "holidayscannerplan.lpp"
 { yylval->ival =   2; return token::WDAY; }
 	YY_BREAK
 case 135:
 YY_RULE_SETUP
-#line 213 "holidayscannerplan.lpp"
+#line 245 "holidayscannerplan.lpp"
 { yylval->ival =   3; return token::WDAY; }
 	YY_BREAK
 case 136:
 YY_RULE_SETUP
-#line 214 "holidayscannerplan.lpp"
+#line 246 "holidayscannerplan.lpp"
 { yylval->ival =   4; return token::WDAY; }
 	YY_BREAK
 case 137:
 YY_RULE_SETUP
-#line 215 "holidayscannerplan.lpp"
+#line 247 "holidayscannerplan.lpp"
 { yylval->ival =   5; return token::WDAY; }
 	YY_BREAK
 case 138:
 YY_RULE_SETUP
-#line 216 "holidayscannerplan.lpp"
+#line 248 "holidayscannerplan.lpp"
 { yylval->ival =   6; return token::WDAY; }
 	YY_BREAK
 case 139:
 YY_RULE_SETUP
-#line 217 "holidayscannerplan.lpp"
+#line 249 "holidayscannerplan.lpp"
 { yylval->ival =   7; return token::WDAY; }
 	YY_BREAK
 case 140:
 YY_RULE_SETUP
-#line 219 "holidayscannerplan.lpp"
+#line 251 "holidayscannerplan.lpp"
 { yylval->sval = "hijri"; return token::CALENDAR; }
 	YY_BREAK
 case 141:
 YY_RULE_SETUP
-#line 221 "holidayscannerplan.lpp"
+#line 253 "holidayscannerplan.lpp"
 { yylval->ival =   1; return token::MONTH; }
 	YY_BREAK
 case 142:
 YY_RULE_SETUP
-#line 222 "holidayscannerplan.lpp"
+#line 254 "holidayscannerplan.lpp"
 { yylval->ival =   2; return token::MONTH; }
 	YY_BREAK
 case 143:
 YY_RULE_SETUP
-#line 223 "holidayscannerplan.lpp"
+#line 255 "holidayscannerplan.lpp"
 { yylval->ival =   3; return token::MONTH; }
 	YY_BREAK
 case 144:
 YY_RULE_SETUP
-#line 224 "holidayscannerplan.lpp"
+#line 256 "holidayscannerplan.lpp"
 { yylval->ival =   4; return token::MONTH; }
 	YY_BREAK
 case 145:
 YY_RULE_SETUP
-#line 225 "holidayscannerplan.lpp"
+#line 257 "holidayscannerplan.lpp"
 { yylval->ival =   5; return token::MONTH; }
 	YY_BREAK
 case 146:
 YY_RULE_SETUP
-#line 226 "holidayscannerplan.lpp"
+#line 258 "holidayscannerplan.lpp"
 { yylval->ival =   6; return token::MONTH; }
 	YY_BREAK
 case 147:
 YY_RULE_SETUP
-#line 227 "holidayscannerplan.lpp"
+#line 259 "holidayscannerplan.lpp"
 { yylval->ival =   7; return token::MONTH; }
 	YY_BREAK
 case 148:
 YY_RULE_SETUP
-#line 228 "holidayscannerplan.lpp"
+#line 260 "holidayscannerplan.lpp"
 { yylval->ival =   8; return token::MONTH; }
 	YY_BREAK
 case 149:
 YY_RULE_SETUP
-#line 229 "holidayscannerplan.lpp"
+#line 261 "holidayscannerplan.lpp"
 { yylval->ival =   9; return token::MONTH; }
 	YY_BREAK
 case 150:
 YY_RULE_SETUP
-#line 230 "holidayscannerplan.lpp"
+#line 262 "holidayscannerplan.lpp"
 { yylval->ival =  10; return token::MONTH; }
 	YY_BREAK
 case 151:
 YY_RULE_SETUP
-#line 231 "holidayscannerplan.lpp"
+#line 263 "holidayscannerplan.lpp"
 { yylval->ival =  11; return token::MONTH; }
 	YY_BREAK
 case 152:
 YY_RULE_SETUP
-#line 232 "holidayscannerplan.lpp"
+#line 264 "holidayscannerplan.lpp"
 { yylval->ival =  12; return token::MONTH; }
 	YY_BREAK
 case 153:
 YY_RULE_SETUP
-#line 234 "holidayscannerplan.lpp"
+#line 266 "holidayscannerplan.lpp"
 { yylval->ival =   1; return token::WDAY; }
 	YY_BREAK
 case 154:
 YY_RULE_SETUP
-#line 235 "holidayscannerplan.lpp"
+#line 267 "holidayscannerplan.lpp"
 { yylval->ival =   2; return token::WDAY; }
 	YY_BREAK
 case 155:
 YY_RULE_SETUP
-#line 236 "holidayscannerplan.lpp"
+#line 268 "holidayscannerplan.lpp"
 { yylval->ival =   3; return token::WDAY; }
 	YY_BREAK
 case 156:
 YY_RULE_SETUP
-#line 237 "holidayscannerplan.lpp"
+#line 269 "holidayscannerplan.lpp"
 { yylval->ival =   4; return token::WDAY; }
 	YY_BREAK
 case 157:
 YY_RULE_SETUP
-#line 238 "holidayscannerplan.lpp"
+#line 270 "holidayscannerplan.lpp"
 { yylval->ival =   5; return token::WDAY; }
 	YY_BREAK
 case 158:
 YY_RULE_SETUP
-#line 239 "holidayscannerplan.lpp"
+#line 271 "holidayscannerplan.lpp"
 { yylval->ival =   6; return token::WDAY; }
 	YY_BREAK
 case 159:
 YY_RULE_SETUP
-#line 240 "holidayscannerplan.lpp"
+#line 272 "holidayscannerplan.lpp"
 { yylval->ival =   7; return token::WDAY; }
 	YY_BREAK
 case 160:
 YY_RULE_SETUP
-#line 242 "holidayscannerplan.lpp"
+#line 274 "holidayscannerplan.lpp"
 { yylval->sval = "indian-national"; return token::CALENDAR; }
 	YY_BREAK
 case 161:
 YY_RULE_SETUP
-#line 244 "holidayscannerplan.lpp"
+#line 276 "holidayscannerplan.lpp"
 { yylval->ival =   1; return token::MONTH; }
 	YY_BREAK
 case 162:
 YY_RULE_SETUP
-#line 245 "holidayscannerplan.lpp"
+#line 277 "holidayscannerplan.lpp"
 { yylval->ival =   2; return token::MONTH; }
 	YY_BREAK
 case 163:
 YY_RULE_SETUP
-#line 246 "holidayscannerplan.lpp"
+#line 278 "holidayscannerplan.lpp"
 { yylval->ival =   3; return token::MONTH; }
 	YY_BREAK
 case 164:
 YY_RULE_SETUP
-#line 247 "holidayscannerplan.lpp"
+#line 279 "holidayscannerplan.lpp"
 { yylval->ival =   4; return token::MONTH; }
 	YY_BREAK
 case 165:
 YY_RULE_SETUP
-#line 248 "holidayscannerplan.lpp"
+#line 280 "holidayscannerplan.lpp"
 { yylval->ival =   5; return token::MONTH; }
 	YY_BREAK
 case 166:
 YY_RULE_SETUP
-#line 249 "holidayscannerplan.lpp"
+#line 281 "holidayscannerplan.lpp"
 { yylval->ival =   6; return token::MONTH; }
 	YY_BREAK
 case 167:
 YY_RULE_SETUP
-#line 250 "holidayscannerplan.lpp"
+#line 282 "holidayscannerplan.lpp"
 { yylval->ival =   7; return token::MONTH; }
 	YY_BREAK
 case 168:
 YY_RULE_SETUP
-#line 251 "holidayscannerplan.lpp"
+#line 283 "holidayscannerplan.lpp"
 { yylval->ival =   8; return token::MONTH; }
 	YY_BREAK
 case 169:
 YY_RULE_SETUP
-#line 252 "holidayscannerplan.lpp"
+#line 284 "holidayscannerplan.lpp"
 { yylval->ival =   9; return token::MONTH; }
 	YY_BREAK
 case 170:
 YY_RULE_SETUP
-#line 253 "holidayscannerplan.lpp"
+#line 285 "holidayscannerplan.lpp"
 { yylval->ival =  10; return token::MONTH; }
 	YY_BREAK
 case 171:
 YY_RULE_SETUP
-#line 254 "holidayscannerplan.lpp"
+#line 286 "holidayscannerplan.lpp"
 { yylval->ival =  11; return token::MONTH; }
 	YY_BREAK
 case 172:
 YY_RULE_SETUP
-#line 255 "holidayscannerplan.lpp"
+#line 287 "holidayscannerplan.lpp"
 { yylval->ival =  12; return token::MONTH; }
 	YY_BREAK
 case 173:
 YY_RULE_SETUP
-#line 257 "holidayscannerplan.lpp"
+#line 289 "holidayscannerplan.lpp"
 { yylval->ival =   1; return token::WDAY; }
 	YY_BREAK
 case 174:
 YY_RULE_SETUP
-#line 258 "holidayscannerplan.lpp"
+#line 290 "holidayscannerplan.lpp"
 { yylval->ival =   2; return token::WDAY; }
 	YY_BREAK
 case 175:
 YY_RULE_SETUP
-#line 259 "holidayscannerplan.lpp"
+#line 291 "holidayscannerplan.lpp"
 { yylval->ival =   3; return token::WDAY; }
 	YY_BREAK
 case 176:
 YY_RULE_SETUP
-#line 260 "holidayscannerplan.lpp"
+#line 292 "holidayscannerplan.lpp"
 { yylval->ival =   4; return token::WDAY; }
 	YY_BREAK
 case 177:
 YY_RULE_SETUP
-#line 261 "holidayscannerplan.lpp"
+#line 293 "holidayscannerplan.lpp"
 { yylval->ival =   5; return token::WDAY; }
 	YY_BREAK
 case 178:
 YY_RULE_SETUP
-#line 262 "holidayscannerplan.lpp"
+#line 294 "holidayscannerplan.lpp"
 { yylval->ival =   6; return token::WDAY; }
 	YY_BREAK
 case 179:
 YY_RULE_SETUP
-#line 263 "holidayscannerplan.lpp"
+#line 295 "holidayscannerplan.lpp"
 { yylval->ival =   7; return token::WDAY; }
 	YY_BREAK
 case 180:
 YY_RULE_SETUP
-#line 265 "holidayscannerplan.lpp"
+#line 297 "holidayscannerplan.lpp"
 { yylval->sval = "jalali"; return token::CALENDAR; }
 	YY_BREAK
 case 181:
 YY_RULE_SETUP
-#line 267 "holidayscannerplan.lpp"
+#line 299 "holidayscannerplan.lpp"
 { yylval->ival =   1; return token::MONTH; }
 	YY_BREAK
 case 182:
 YY_RULE_SETUP
-#line 268 "holidayscannerplan.lpp"
+#line 300 "holidayscannerplan.lpp"
 { yylval->ival =   2; return token::MONTH; }
 	YY_BREAK
 case 183:
 YY_RULE_SETUP
-#line 269 "holidayscannerplan.lpp"
+#line 301 "holidayscannerplan.lpp"
 { yylval->ival =   3; return token::MONTH; }
 	YY_BREAK
 case 184:
 YY_RULE_SETUP
-#line 270 "holidayscannerplan.lpp"
+#line 302 "holidayscannerplan.lpp"
 { yylval->ival =   4; return token::MONTH; }
 	YY_BREAK
 case 185:
 YY_RULE_SETUP
-#line 271 "holidayscannerplan.lpp"
+#line 303 "holidayscannerplan.lpp"
 { yylval->ival =   5; return token::MONTH; }
 	YY_BREAK
 case 186:
 YY_RULE_SETUP
-#line 272 "holidayscannerplan.lpp"
+#line 304 "holidayscannerplan.lpp"
 { yylval->ival =   6; return token::MONTH; }
 	YY_BREAK
 case 187:
 YY_RULE_SETUP
-#line 273 "holidayscannerplan.lpp"
+#line 305 "holidayscannerplan.lpp"
 { yylval->ival =   7; return token::MONTH; }
 	YY_BREAK
 case 188:
 YY_RULE_SETUP
-#line 274 "holidayscannerplan.lpp"
+#line 306 "holidayscannerplan.lpp"
 { yylval->ival =   8; return token::MONTH; }
 	YY_BREAK
 case 189:
 YY_RULE_SETUP
-#line 275 "holidayscannerplan.lpp"
+#line 307 "holidayscannerplan.lpp"
 { yylval->ival =   9; return token::MONTH; }
 	YY_BREAK
 case 190:
 YY_RULE_SETUP
-#line 276 "holidayscannerplan.lpp"
+#line 308 "holidayscannerplan.lpp"
 { yylval->ival =  10; return token::MONTH; }
 	YY_BREAK
 case 191:
 YY_RULE_SETUP
-#line 277 "holidayscannerplan.lpp"
+#line 309 "holidayscannerplan.lpp"
 { yylval->ival =  11; return token::MONTH; }
 	YY_BREAK
 case 192:
 YY_RULE_SETUP
-#line 278 "holidayscannerplan.lpp"
+#line 310 "holidayscannerplan.lpp"
 { yylval->ival =  12; return token::MONTH; }
 	YY_BREAK
 case 193:
 YY_RULE_SETUP
-#line 280 "holidayscannerplan.lpp"
+#line 312 "holidayscannerplan.lpp"
 { yylval->ival =   1; return token::WDAY; }
 	YY_BREAK
 case 194:
 YY_RULE_SETUP
-#line 281 "holidayscannerplan.lpp"
+#line 313 "holidayscannerplan.lpp"
 { yylval->ival =   2; return token::WDAY; }
 	YY_BREAK
 case 195:
 YY_RULE_SETUP
-#line 282 "holidayscannerplan.lpp"
+#line 314 "holidayscannerplan.lpp"
 { yylval->ival =   3; return token::WDAY; }
 	YY_BREAK
 case 196:
 YY_RULE_SETUP
-#line 283 "holidayscannerplan.lpp"
+#line 315 "holidayscannerplan.lpp"
 { yylval->ival =   4; return token::WDAY; }
 	YY_BREAK
 case 197:
 YY_RULE_SETUP
-#line 284 "holidayscannerplan.lpp"
+#line 316 "holidayscannerplan.lpp"
 { yylval->ival =   5; return token::WDAY; }
 	YY_BREAK
 case 198:
 YY_RULE_SETUP
-#line 285 "holidayscannerplan.lpp"
+#line 317 "holidayscannerplan.lpp"
 { yylval->ival =   6; return token::WDAY; }
 	YY_BREAK
 case 199:
 YY_RULE_SETUP
-#line 286 "holidayscannerplan.lpp"
+#line 318 "holidayscannerplan.lpp"
 { yylval->ival =   7; return token::WDAY; }
 	YY_BREAK
 case 200:
 YY_RULE_SETUP
-#line 288 "holidayscannerplan.lpp"
-{ driver.error( *yylloc, QString("Holiday Scanner Plan: Invalid Character: %1").arg( yytext ) ); }
+#line 320 "holidayscannerplan.lpp"
+{ LexerError( yytext ); }
 	YY_BREAK
 case 201:
 YY_RULE_SETUP
-#line 290 "holidayscannerplan.lpp"
+#line 322 "holidayscannerplan.lpp"
 ECHO;
 	YY_BREAK
-#line 2731 "holidayscannerplan.cpp"
+#line 2613 "holidayscannerplan.cpp"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -2807,7 +2689,7 @@ case YY_STATE_EOF(INITIAL):
 				{
 				(yy_did_buffer_switch_on_eof) = 0;
 
-				if ( yywrap( ) )
+				if ( yywrap(  ) )
 					{
 					/* Note: because we've taken care in
 					 * yy_get_next_buffer() to have set up
@@ -2866,6 +2748,94 @@ case YY_STATE_EOF(INITIAL):
 /* %if-c++-only */
 /* %not-for-header */
 
+/* The contents of this function are C++ specific, so the () macro is not used.
+ */
+yyFlexLexer::yyFlexLexer( std::istream* arg_yyin, std::ostream* arg_yyout )
+{
+	yyin = arg_yyin;
+	yyout = arg_yyout;
+	yy_c_buf_p = 0;
+	yy_init = 0;
+	yy_start = 0;
+	yy_flex_debug = 0;
+	yylineno = 1;	// this will only get updated if %option yylineno
+
+	yy_did_buffer_switch_on_eof = 0;
+
+	yy_looking_for_trail_begin = 0;
+	yy_more_flag = 0;
+	yy_more_len = 0;
+	yy_more_offset = yy_prev_more_offset = 0;
+
+	yy_start_stack_ptr = yy_start_stack_depth = 0;
+	yy_start_stack = NULL;
+
+	yy_buffer_stack = 0;
+	yy_buffer_stack_top = 0;
+	yy_buffer_stack_max = 0;
+
+	yy_state_buf = 0;
+
+}
+
+/* The contents of this function are C++ specific, so the () macro is not used.
+ */
+yyFlexLexer::~yyFlexLexer()
+{
+	delete [] yy_state_buf;
+	HolidayScannerfree(yy_start_stack  );
+	yy_delete_buffer( YY_CURRENT_BUFFER );
+	HolidayScannerfree(yy_buffer_stack  );
+}
+
+/* The contents of this function are C++ specific, so the () macro is not used.
+ */
+void yyFlexLexer::switch_streams( std::istream* new_in, std::ostream* new_out )
+{
+	if ( new_in )
+		{
+		yy_delete_buffer( YY_CURRENT_BUFFER );
+		yy_switch_to_buffer( yy_create_buffer( new_in, YY_BUF_SIZE  ) );
+		}
+
+	if ( new_out )
+		yyout = new_out;
+}
+
+#ifdef YY_INTERACTIVE
+int yyFlexLexer::LexerInput( char* buf, int /* max_size */ )
+#else
+int yyFlexLexer::LexerInput( char* buf, int max_size )
+#endif
+{
+	if ( yyin->eof() || yyin->fail() )
+		return 0;
+
+#ifdef YY_INTERACTIVE
+	yyin->get( buf[0] );
+
+	if ( yyin->eof() )
+		return 0;
+
+	if ( yyin->bad() )
+		return -1;
+
+	return 1;
+
+#else
+	(void) yyin->read( buf, max_size );
+
+	if ( yyin->bad() )
+		return -1;
+	else
+		return yyin->gcount();
+#endif
+}
+
+void yyFlexLexer::LexerOutput( const char* buf, int size )
+{
+	(void) yyout->write( buf, size );
+}
 /* %ok-for-header */
 
 /* %endif */
@@ -2878,9 +2848,9 @@ case YY_STATE_EOF(INITIAL):
  *	EOB_ACT_END_OF_FILE - end of file
  */
 /* %if-c-only */
-static int yy_get_next_buffer (void)
 /* %endif */
 /* %if-c++-only */
+int yyFlexLexer::yy_get_next_buffer()
 /* %endif */
 {
     	register char *dest = YY_CURRENT_BUFFER_LVALUE->yy_ch_buf;
@@ -2950,7 +2920,7 @@ static int yy_get_next_buffer (void)
 
 				b->yy_ch_buf = (char *)
 					/* Include room in for 2 EOB chars. */
-					yyrealloc((void *) b->yy_ch_buf,b->yy_buf_size + 2  );
+					HolidayScannerrealloc((void *) b->yy_ch_buf,b->yy_buf_size + 2  );
 				}
 			else
 				/* Can't grow it, we don't own it. */
@@ -2982,7 +2952,7 @@ static int yy_get_next_buffer (void)
 		if ( number_to_move == YY_MORE_ADJ )
 			{
 			ret_val = EOB_ACT_END_OF_FILE;
-			yyrestart(yyin  );
+			yyrestart( yyin  );
 			}
 
 		else
@@ -2999,7 +2969,7 @@ static int yy_get_next_buffer (void)
 	if ((yy_size_t) ((yy_n_chars) + number_to_move) > YY_CURRENT_BUFFER_LVALUE->yy_buf_size) {
 		/* Extend the array by 50%, plus the number we really need. */
 		yy_size_t new_size = (yy_n_chars) + number_to_move + ((yy_n_chars) >> 1);
-		YY_CURRENT_BUFFER_LVALUE->yy_ch_buf = (char *) yyrealloc((void *) YY_CURRENT_BUFFER_LVALUE->yy_ch_buf,new_size  );
+		YY_CURRENT_BUFFER_LVALUE->yy_ch_buf = (char *) HolidayScannerrealloc((void *) YY_CURRENT_BUFFER_LVALUE->yy_ch_buf,new_size  );
 		if ( ! YY_CURRENT_BUFFER_LVALUE->yy_ch_buf )
 			YY_FATAL_ERROR( "out of dynamic memory in yy_get_next_buffer()" );
 	}
@@ -3018,9 +2988,9 @@ static int yy_get_next_buffer (void)
 /* %if-c-only */
 /* %not-for-header */
 
-    static yy_state_type yy_get_previous_state (void)
 /* %endif */
 /* %if-c++-only */
+    yy_state_type yyFlexLexer::yy_get_previous_state()
 /* %endif */
 {
 	register yy_state_type yy_current_state;
@@ -3057,9 +3027,9 @@ static int yy_get_next_buffer (void)
  *	next_state = yy_try_NUL_trans( current_state );
  */
 /* %if-c-only */
-    static yy_state_type yy_try_NUL_trans  (yy_state_type yy_current_state )
 /* %endif */
 /* %if-c++-only */
+    yy_state_type yyFlexLexer::yy_try_NUL_trans( yy_state_type yy_current_state )
 /* %endif */
 {
 	register int yy_is_jam;
@@ -3085,19 +3055,54 @@ static int yy_get_next_buffer (void)
 }
 
 /* %if-c-only */
+/* %endif */
+/* %if-c++-only */
+    void yyFlexLexer::yyunput( int c, register char* yy_bp)
+/* %endif */
+{
+	register char *yy_cp;
+    
+    yy_cp = (yy_c_buf_p);
 
+	/* undo effects of setting up yytext */
+	*yy_cp = (yy_hold_char);
+
+	if ( yy_cp < YY_CURRENT_BUFFER_LVALUE->yy_ch_buf + 2 )
+		{ /* need to shift things up to make room */
+		/* +2 for EOB chars. */
+		register int number_to_move = (yy_n_chars) + 2;
+		register char *dest = &YY_CURRENT_BUFFER_LVALUE->yy_ch_buf[
+					YY_CURRENT_BUFFER_LVALUE->yy_buf_size + 2];
+		register char *source =
+				&YY_CURRENT_BUFFER_LVALUE->yy_ch_buf[number_to_move];
+
+		while ( source > YY_CURRENT_BUFFER_LVALUE->yy_ch_buf )
+			*--dest = *--source;
+
+		yy_cp += (int) (dest - source);
+		yy_bp += (int) (dest - source);
+		YY_CURRENT_BUFFER_LVALUE->yy_n_chars =
+			(yy_n_chars) = YY_CURRENT_BUFFER_LVALUE->yy_buf_size;
+
+		if ( yy_cp < YY_CURRENT_BUFFER_LVALUE->yy_ch_buf + 2 )
+			YY_FATAL_ERROR( "flex scanner push-back overflow" );
+		}
+
+	*--yy_cp = (char) c;
+
+/* %% [18.0] update yylineno here */
+
+	(yytext_ptr) = yy_bp;
+	(yy_hold_char) = *yy_cp;
+	(yy_c_buf_p) = yy_cp;
+}
+/* %if-c-only */
 /* %endif */
 
 /* %if-c-only */
-#ifndef YY_NO_INPUT
-#ifdef __cplusplus
-    static int yyinput (void)
-#else
-    static int input  (void)
-#endif
-
 /* %endif */
 /* %if-c++-only */
+    int yyFlexLexer::yyinput()
 /* %endif */
 {
 	int c;
@@ -3133,13 +3138,13 @@ static int yy_get_next_buffer (void)
 					 */
 
 					/* Reset buffer status. */
-					yyrestart(yyin );
+					yyrestart( yyin );
 
 					/*FALLTHROUGH*/
 
 				case EOB_ACT_END_OF_FILE:
 					{
-					if ( yywrap( ) )
+					if ( yywrap(  ) )
 						return EOF;
 
 					if ( ! (yy_did_buffer_switch_on_eof) )
@@ -3168,7 +3173,6 @@ static int yy_get_next_buffer (void)
 	return c;
 }
 /* %if-c-only */
-#endif	/* ifndef YY_NO_INPUT */
 /* %endif */
 
 /** Immediately switch to a different input stream.
@@ -3177,20 +3181,20 @@ static int yy_get_next_buffer (void)
  * @note This function does not reset the start condition to @c INITIAL .
  */
 /* %if-c-only */
-    void yyrestart  (FILE * input_file )
 /* %endif */
 /* %if-c++-only */
+    void yyFlexLexer::yyrestart( std::istream* input_file )
 /* %endif */
 {
     
 	if ( ! YY_CURRENT_BUFFER ){
         yyensure_buffer_stack ();
 		YY_CURRENT_BUFFER_LVALUE =
-            yy_create_buffer(yyin,YY_BUF_SIZE );
+            yy_create_buffer( yyin, YY_BUF_SIZE );
 	}
 
-	yy_init_buffer(YY_CURRENT_BUFFER,input_file );
-	yy_load_buffer_state( );
+	yy_init_buffer( YY_CURRENT_BUFFER, input_file );
+	yy_load_buffer_state(  );
 }
 
 /** Switch to a different input buffer.
@@ -3198,9 +3202,9 @@ static int yy_get_next_buffer (void)
  * 
  */
 /* %if-c-only */
-    void yy_switch_to_buffer  (YY_BUFFER_STATE  new_buffer )
 /* %endif */
 /* %if-c++-only */
+    void yyFlexLexer::yy_switch_to_buffer( YY_BUFFER_STATE new_buffer )
 /* %endif */
 {
     
@@ -3222,7 +3226,7 @@ static int yy_get_next_buffer (void)
 		}
 
 	YY_CURRENT_BUFFER_LVALUE = new_buffer;
-	yy_load_buffer_state( );
+	yy_load_buffer_state(  );
 
 	/* We don't actually know whether we did this switch during
 	 * EOF (yywrap()) processing, but the only time this flag
@@ -3233,9 +3237,9 @@ static int yy_get_next_buffer (void)
 }
 
 /* %if-c-only */
-static void yy_load_buffer_state  (void)
 /* %endif */
 /* %if-c++-only */
+    void yyFlexLexer::yy_load_buffer_state()
 /* %endif */
 {
     	(yy_n_chars) = YY_CURRENT_BUFFER_LVALUE->yy_n_chars;
@@ -3251,14 +3255,14 @@ static void yy_load_buffer_state  (void)
  * @return the allocated buffer state.
  */
 /* %if-c-only */
-    YY_BUFFER_STATE yy_create_buffer  (FILE * file, int  size )
 /* %endif */
 /* %if-c++-only */
+    YY_BUFFER_STATE yyFlexLexer::yy_create_buffer( std::istream* file, int size )
 /* %endif */
 {
 	YY_BUFFER_STATE b;
     
-	b = (YY_BUFFER_STATE) yyalloc(sizeof( struct yy_buffer_state )  );
+	b = (YY_BUFFER_STATE) HolidayScanneralloc(sizeof( struct yy_buffer_state )  );
 	if ( ! b )
 		YY_FATAL_ERROR( "out of dynamic memory in yy_create_buffer()" );
 
@@ -3267,13 +3271,13 @@ static void yy_load_buffer_state  (void)
 	/* yy_ch_buf has to be 2 characters longer than the size given because
 	 * we need to put in 2 end-of-buffer characters.
 	 */
-	b->yy_ch_buf = (char *) yyalloc(b->yy_buf_size + 2  );
+	b->yy_ch_buf = (char *) HolidayScanneralloc(b->yy_buf_size + 2  );
 	if ( ! b->yy_ch_buf )
 		YY_FATAL_ERROR( "out of dynamic memory in yy_create_buffer()" );
 
 	b->yy_is_our_buffer = 1;
 
-	yy_init_buffer(b,file );
+	yy_init_buffer( b, file );
 
 	return b;
 }
@@ -3283,9 +3287,9 @@ static void yy_load_buffer_state  (void)
  * 
  */
 /* %if-c-only */
-    void yy_delete_buffer (YY_BUFFER_STATE  b )
 /* %endif */
 /* %if-c++-only */
+    void yyFlexLexer::yy_delete_buffer( YY_BUFFER_STATE b )
 /* %endif */
 {
     
@@ -3296,20 +3300,18 @@ static void yy_load_buffer_state  (void)
 		YY_CURRENT_BUFFER_LVALUE = (YY_BUFFER_STATE) 0;
 
 	if ( b->yy_is_our_buffer )
-		yyfree((void *) b->yy_ch_buf  );
+		HolidayScannerfree((void *) b->yy_ch_buf  );
 
-	yyfree((void *) b  );
+	HolidayScannerfree((void *) b  );
 }
 
 /* %if-c-only */
-
-#ifndef __cplusplus
-extern int isatty (int );
-#endif /* __cplusplus */
-    
 /* %endif */
 
 /* %if-c++-only */
+
+extern "C" int isatty (int );
+
 /* %endif */
 
 /* Initializes or reinitializes a buffer.
@@ -3317,15 +3319,15 @@ extern int isatty (int );
  * such as during a yyrestart() or at EOF.
  */
 /* %if-c-only */
-    static void yy_init_buffer  (YY_BUFFER_STATE  b, FILE * file )
 /* %endif */
 /* %if-c++-only */
+    void yyFlexLexer::yy_init_buffer( YY_BUFFER_STATE b, std::istream* file )
 /* %endif */
 
 {
 	int oerrno = errno;
     
-	yy_flush_buffer(b );
+	yy_flush_buffer( b );
 
 	b->yy_input_file = file;
 	b->yy_fill_buffer = 1;
@@ -3340,11 +3342,9 @@ extern int isatty (int );
     }
 
 /* %if-c-only */
-
-        b->yy_is_interactive = file ? (isatty( fileno(file) ) > 0) : 0;
-    
 /* %endif */
 /* %if-c++-only */
+	b->yy_is_interactive = 0;
 /* %endif */
 	errno = oerrno;
 }
@@ -3354,9 +3354,9 @@ extern int isatty (int );
  * 
  */
 /* %if-c-only */
-    void yy_flush_buffer (YY_BUFFER_STATE  b )
 /* %endif */
 /* %if-c++-only */
+    void yyFlexLexer::yy_flush_buffer( YY_BUFFER_STATE b )
 /* %endif */
 {
     	if ( ! b )
@@ -3377,7 +3377,7 @@ extern int isatty (int );
 	b->yy_buffer_status = YY_BUFFER_NEW;
 
 	if ( b == YY_CURRENT_BUFFER )
-		yy_load_buffer_state( );
+		yy_load_buffer_state(  );
 }
 
 /* %if-c-or-c++ */
@@ -3388,9 +3388,9 @@ extern int isatty (int );
  *  
  */
 /* %if-c-only */
-void yypush_buffer_state (YY_BUFFER_STATE new_buffer )
 /* %endif */
 /* %if-c++-only */
+void yyFlexLexer::yypush_buffer_state (YY_BUFFER_STATE new_buffer)
 /* %endif */
 {
     	if (new_buffer == NULL)
@@ -3413,7 +3413,7 @@ void yypush_buffer_state (YY_BUFFER_STATE new_buffer )
 	YY_CURRENT_BUFFER_LVALUE = new_buffer;
 
 	/* copied from yy_switch_to_buffer. */
-	yy_load_buffer_state( );
+	yy_load_buffer_state(  );
 	(yy_did_buffer_switch_on_eof) = 1;
 }
 /* %endif */
@@ -3424,9 +3424,9 @@ void yypush_buffer_state (YY_BUFFER_STATE new_buffer )
  *  
  */
 /* %if-c-only */
-void yypop_buffer_state (void)
 /* %endif */
 /* %if-c++-only */
+void yyFlexLexer::yypop_buffer_state (void)
 /* %endif */
 {
     	if (!YY_CURRENT_BUFFER)
@@ -3438,7 +3438,7 @@ void yypop_buffer_state (void)
 		--(yy_buffer_stack_top);
 
 	if (YY_CURRENT_BUFFER) {
-		yy_load_buffer_state( );
+		yy_load_buffer_state(  );
 		(yy_did_buffer_switch_on_eof) = 1;
 	}
 }
@@ -3449,9 +3449,9 @@ void yypop_buffer_state (void)
  *  Guarantees space for at least one push.
  */
 /* %if-c-only */
-static void yyensure_buffer_stack (void)
 /* %endif */
 /* %if-c++-only */
+void yyFlexLexer::yyensure_buffer_stack(void)
 /* %endif */
 {
 	int num_to_alloc;
@@ -3463,7 +3463,7 @@ static void yyensure_buffer_stack (void)
 		 * immediate realloc on the next call.
          */
 		num_to_alloc = 1;
-		(yy_buffer_stack) = (struct yy_buffer_state**)yyalloc
+		(yy_buffer_stack) = (struct yy_buffer_state**)HolidayScanneralloc
 								(num_to_alloc * sizeof(struct yy_buffer_state*)
 								);
 		if ( ! (yy_buffer_stack) )
@@ -3482,7 +3482,7 @@ static void yyensure_buffer_stack (void)
 		int grow_size = 8 /* arbitrary grow size */;
 
 		num_to_alloc = (yy_buffer_stack_max) + grow_size;
-		(yy_buffer_stack) = (struct yy_buffer_state**)yyrealloc
+		(yy_buffer_stack) = (struct yy_buffer_state**)HolidayScannerrealloc
 								((yy_buffer_stack),
 								num_to_alloc * sizeof(struct yy_buffer_state*)
 								);
@@ -3497,109 +3497,75 @@ static void yyensure_buffer_stack (void)
 /* %endif */
 
 /* %if-c-only */
-/** Setup the input buffer state to scan directly from a user-specified character buffer.
- * @param base the character buffer
- * @param size the size in bytes of the character buffer
- * 
- * @return the newly allocated buffer state object. 
- */
-YY_BUFFER_STATE yy_scan_buffer  (char * base, yy_size_t  size )
-{
-	YY_BUFFER_STATE b;
-    
-	if ( size < 2 ||
-	     base[size-2] != YY_END_OF_BUFFER_CHAR ||
-	     base[size-1] != YY_END_OF_BUFFER_CHAR )
-		/* They forgot to leave room for the EOB's. */
-		return 0;
-
-	b = (YY_BUFFER_STATE) yyalloc(sizeof( struct yy_buffer_state )  );
-	if ( ! b )
-		YY_FATAL_ERROR( "out of dynamic memory in yy_scan_buffer()" );
-
-	b->yy_buf_size = size - 2;	/* "- 2" to take care of EOB's */
-	b->yy_buf_pos = b->yy_ch_buf = base;
-	b->yy_is_our_buffer = 0;
-	b->yy_input_file = 0;
-	b->yy_n_chars = b->yy_buf_size;
-	b->yy_is_interactive = 0;
-	b->yy_at_bol = 1;
-	b->yy_fill_buffer = 0;
-	b->yy_buffer_status = YY_BUFFER_NEW;
-
-	yy_switch_to_buffer(b  );
-
-	return b;
-}
 /* %endif */
 
 /* %if-c-only */
-/** Setup the input buffer state to scan a string. The next call to yylex() will
- * scan from a @e copy of @a str.
- * @param yystr a NUL-terminated string to scan
- * 
- * @return the newly allocated buffer state object.
- * @note If you want to scan bytes that may contain NUL values, then use
- *       yy_scan_bytes() instead.
- */
-YY_BUFFER_STATE yy_scan_string (yyconst char * yystr )
-{
-    
-	return yy_scan_bytes(yystr,strlen(yystr) );
-}
 /* %endif */
 
 /* %if-c-only */
-/** Setup the input buffer state to scan the given bytes. The next call to yylex() will
- * scan from a @e copy of @a bytes.
- * @param bytes the byte buffer to scan
- * @param len the number of bytes in the buffer pointed to by @a bytes.
- * 
- * @return the newly allocated buffer state object.
- */
-YY_BUFFER_STATE yy_scan_bytes  (yyconst char * yybytes, int  _yybytes_len )
-{
-	YY_BUFFER_STATE b;
-	char *buf;
-	yy_size_t n;
-	int i;
-    
-	/* Get memory for full buffer, including space for trailing EOB's. */
-	n = _yybytes_len + 2;
-	buf = (char *) yyalloc(n  );
-	if ( ! buf )
-		YY_FATAL_ERROR( "out of dynamic memory in yy_scan_bytes()" );
-
-	for ( i = 0; i < _yybytes_len; ++i )
-		buf[i] = yybytes[i];
-
-	buf[_yybytes_len] = buf[_yybytes_len+1] = YY_END_OF_BUFFER_CHAR;
-
-	b = yy_scan_buffer(buf,n );
-	if ( ! b )
-		YY_FATAL_ERROR( "bad buffer in yy_scan_bytes()" );
-
-	/* It's okay to grow etc. this buffer, and we should throw it
-	 * away when we're done.
-	 */
-	b->yy_is_our_buffer = 1;
-
-	return b;
-}
 /* %endif */
+
+/* %if-c-only */
+/* %endif */
+/* %if-c++-only */
+    void yyFlexLexer::yy_push_state( int new_state )
+/* %endif */
+{
+    	if ( (yy_start_stack_ptr) >= (yy_start_stack_depth) )
+		{
+		yy_size_t new_size;
+
+		(yy_start_stack_depth) += YY_START_STACK_INCR;
+		new_size = (yy_start_stack_depth) * sizeof( int );
+
+		if ( ! (yy_start_stack) )
+			(yy_start_stack) = (int *) HolidayScanneralloc(new_size  );
+
+		else
+			(yy_start_stack) = (int *) HolidayScannerrealloc((void *) (yy_start_stack),new_size  );
+
+		if ( ! (yy_start_stack) )
+			YY_FATAL_ERROR( "out of memory expanding start-condition stack" );
+		}
+
+	(yy_start_stack)[(yy_start_stack_ptr)++] = YY_START;
+
+	BEGIN(new_state);
+}
+
+/* %if-c-only */
+/* %endif */
+/* %if-c++-only */
+    void yyFlexLexer::yy_pop_state()
+/* %endif */
+{
+    	if ( --(yy_start_stack_ptr) < 0 )
+		YY_FATAL_ERROR( "start-condition stack underflow" );
+
+	BEGIN((yy_start_stack)[(yy_start_stack_ptr)]);
+}
+
+/* %if-c-only */
+/* %endif */
+/* %if-c++-only */
+    int yyFlexLexer::yy_top_state()
+/* %endif */
+{
+    	return (yy_start_stack)[(yy_start_stack_ptr) - 1];
+}
 
 #ifndef YY_EXIT_FAILURE
 #define YY_EXIT_FAILURE 2
 #endif
 
 /* %if-c-only */
-static void yy_fatal_error (yyconst char* msg )
-{
-    	(void) fprintf( stderr, "%s\n", msg );
-	exit( YY_EXIT_FAILURE );
-}
 /* %endif */
 /* %if-c++-only */
+void yyFlexLexer::LexerError( yyconst char msg[] )
+{
+    	std::cerr << msg << std::endl;
+	exit( YY_EXIT_FAILURE );
+}
 /* %endif */
 
 /* Redefine yyless() so it works in section 3 code. */
@@ -3624,88 +3590,8 @@ static void yy_fatal_error (yyconst char* msg )
 /* %if-c-only */
 /* %if-reentrant */
 /* %endif */
-
-/** Get the current line number.
- * 
- */
-int yyget_lineno  (void)
-{
-        
-    return yylineno;
-}
-
-/** Get the input stream.
- * 
- */
-FILE *yyget_in  (void)
-{
-        return yyin;
-}
-
-/** Get the output stream.
- * 
- */
-FILE *yyget_out  (void)
-{
-        return yyout;
-}
-
-/** Get the length of the current token.
- * 
- */
-int yyget_leng  (void)
-{
-        return yyleng;
-}
-
-/** Get the current token.
- * 
- */
-
-char *yyget_text  (void)
-{
-        return yytext;
-}
-
 /* %if-reentrant */
 /* %endif */
-
-/** Set the current line number.
- * @param line_number
- * 
- */
-void yyset_lineno (int  line_number )
-{
-    
-    yylineno = line_number;
-}
-
-/** Set the input stream. This does not discard the current
- * input buffer.
- * @param in_str A readable stream.
- * 
- * @see yy_switch_to_buffer
- */
-void yyset_in (FILE *  in_str )
-{
-        yyin = in_str ;
-}
-
-void yyset_out (FILE *  out_str )
-{
-        yyout = out_str ;
-}
-
-int yyget_debug  (void)
-{
-        return yy_flex_debug;
-}
-
-void yyset_debug (int  bdebug )
-{
-        yy_flex_debug = bdebug ;
-}
-
 /* %endif */
 
 /* %if-reentrant */
@@ -3714,59 +3600,11 @@ void yyset_debug (int  bdebug )
 /* %endif if-c-only */
 
 /* %if-c-only */
-static int yy_init_globals (void)
-{
-        /* Initialization is the same as for the non-reentrant scanner.
-     * This function is called from yylex_destroy(), so don't allocate here.
-     */
-
-    (yy_buffer_stack) = 0;
-    (yy_buffer_stack_top) = 0;
-    (yy_buffer_stack_max) = 0;
-    (yy_c_buf_p) = (char *) 0;
-    (yy_init) = 0;
-    (yy_start) = 0;
-
-/* Defined in main.c */
-#ifdef YY_STDINIT
-    yyin = stdin;
-    yyout = stdout;
-#else
-    yyin = (FILE *) 0;
-    yyout = (FILE *) 0;
-#endif
-
-    /* For future reference: Set errno on error, since we are called by
-     * yylex_init()
-     */
-    return 0;
-}
 /* %endif */
 
 /* %if-c-only SNIP! this currently causes conflicts with the c++ scanner */
-/* yylex_destroy is for both reentrant and non-reentrant scanners. */
-int yylex_destroy  (void)
-{
-    
-    /* Pop the buffer stack, destroying each element. */
-	while(YY_CURRENT_BUFFER){
-		yy_delete_buffer(YY_CURRENT_BUFFER  );
-		YY_CURRENT_BUFFER_LVALUE = NULL;
-		yypop_buffer_state();
-	}
-
-	/* Destroy the stack itself. */
-	yyfree((yy_buffer_stack) );
-	(yy_buffer_stack) = NULL;
-
-    /* Reset the globals. This is important in a non-reentrant scanner so the next time
-     * yylex() is called, initialization will occur. */
-    yy_init_globals( );
-
 /* %if-reentrant */
 /* %endif */
-    return 0;
-}
 /* %endif */
 
 /*
@@ -3793,12 +3631,12 @@ static int yy_flex_strlen (yyconst char * s )
 }
 #endif
 
-void *yyalloc (yy_size_t  size )
+void *HolidayScanneralloc (yy_size_t  size )
 {
 	return (void *) malloc( size );
 }
 
-void *yyrealloc  (void * ptr, yy_size_t  size )
+void *HolidayScannerrealloc  (void * ptr, yy_size_t  size )
 {
 	/* The cast to (char *) in the following accommodates both
 	 * implementations that use char* generic pointers, and those
@@ -3810,9 +3648,9 @@ void *yyrealloc  (void * ptr, yy_size_t  size )
 	return (void *) realloc( (char *) ptr, size );
 }
 
-void yyfree (void * ptr )
+void HolidayScannerfree (void * ptr )
 {
-	free( (char *) ptr );	/* see yyrealloc() for (char *) cast */
+	free( (char *) ptr );	/* see HolidayScannerrealloc() for (char *) cast */
 }
 
 /* %if-tables-serialization definitions */
@@ -3822,28 +3660,50 @@ void yyfree (void * ptr )
 
 /* %ok-for-header */
 
-#line 290 "holidayscannerplan.lpp"
+#line 322 "holidayscannerplan.lpp"
 
 
 
-// Skeleton says is easier to implement here to have access to yy variables.
+namespace KHolidays {
 
-void KHolidays::HolidayParserDriverPlan::scannerInitialise()
+HolidayScannerPlan::HolidayScannerPlan(std::istream* in, std::ostream* out)
+                  : HolidayScannerFlexLexer(in, out)
 {
-    yy_flex_debug = m_traceScanning;
-    if ( !( yyin = fopen( m_filePath.toLocal8Bit(), "r" ) ) ) {
-        error( "cannot open " + m_filePath );
-    }
 }
 
-void KHolidays::HolidayParserDriverPlan::scannerReset()
+HolidayScannerPlan::~HolidayScannerPlan()
 {
-    //TODO rest counters???
-    rewind( yyin );
 }
 
-void KHolidays::HolidayParserDriverPlan::scannerTerminate()
+void HolidayScannerPlan::set_debug(bool b)
 {
-    fclose( yyin );
+    yy_flex_debug = b;
+}
+
+} // namespace KHolidays
+
+/* This implementation of HolidayScannerFlexLexer::yylex() is required to fill the
+ * vtable of the class HolidayScannerFlexLexer. We define the scanner's main yylex
+ * function via YY_DECL to reside in the HolidayScannerPlan class instead. */
+
+#ifdef yylex
+#undef yylex
+#endif
+
+int HolidayScannerFlexLexer::yylex()
+{
+    kDebug() << "in HolidayScannerFlexLexer::yylex() !";
+    return 0;
+}
+
+/* When the scanner receives an end-of-file indication from YY_INPUT, it then
+ * checks the yywrap() function. If yywrap() returns false (zero), then it is
+ * assumed that the function has gone ahead and set up `yyin' to point to
+ * another input file, and scanning continues. If it returns true (non-zero),
+ * then the scanner terminates, returning 0 to its caller. */
+
+int HolidayScannerFlexLexer::yywrap()
+{
+    return 1;
 }
 
