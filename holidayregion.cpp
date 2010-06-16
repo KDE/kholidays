@@ -201,7 +201,7 @@ QString HolidayRegion::name() const
   if ( tempName.isEmpty() ) {
     QStringList countryParts = countryCode().toLower().split( '-' );
     QString country = countryParts.at( 0 );
-    QString regionName, typeName;;
+    QString regionName, typeName;
 
     if ( country != "xx" ) {
       if ( countryParts.count() == 2 ) {
@@ -250,26 +250,48 @@ QString HolidayRegion::name() const
       }
     }
 
-    if ( false ) { //TODO holiday types!
+    //Cheat on type for now,take direct from region code until API is introduced in SC 4.6
+    QStringList regionParts = regionCode().toLower().split( '_' );
+    if ( regionParts.count() == 3 ) {
+      QString type = regionParts.at( 2 );
       // Will create lots more in 4.6
-      typeName = i18nc( "Holiday type", "Public" );
-      typeName = i18nc( "Holiday type", "Religious" );
-      typeName = i18nc( "Holiday type", "Financial" );
-      typeName = i18nc( "Holiday type", "Cultural" );
-      typeName = i18nc( "Holiday type", "School" );
-      typeName = i18nc( "Holiday type", "Seasons" );
-      typeName = i18nc( "Holiday type", "Name Days" );
-      typeName = i18nc( "Holiday type", "Personal" );
       // Religious types, just simple for now
-      typeName = i18nc( "Holiday type", "Catholic" );
-      typeName = i18nc( "Holiday type", "Protestant" );
-      typeName = i18nc( "Holiday type", "Orthodox" );
-      typeName = i18nc( "Holiday type", "Jewish" );
-      typeName = i18nc( "Holiday type", "Islamic" );
+      if ( type == "public" ) {
+        typeName = i18nc( "Holiday type", "Public" );
+      } else if ( type == "religious" ) {
+        typeName = i18nc( "Holiday type", "Religious" );
+      } else if ( type == "financial" ) {
+        typeName = i18nc( "Holiday type", "Financial" );
+      } else if ( type == "cultural" ) {
+        typeName = i18nc( "Holiday type", "Cultural" );
+      } else if ( type == "school" ) {
+        typeName = i18nc( "Holiday type", "School" );
+      } else if ( type == "seasons" ) {
+        typeName = i18nc( "Holiday type", "Seasons" );
+      } else if ( type == "name" ) {
+        typeName = i18nc( "Holiday type", "Name Days" );
+      } else if ( type == "personal" ) {
+        typeName = i18nc( "Holiday type", "Personal" );
+      } else if ( type == "catholic" ) {
+        typeName = i18nc( "Holiday type", "Catholic" );
+      } else if ( type == "protestant" ) {
+        typeName = i18nc( "Holiday type", "Protestant" );
+      } else if ( type == "orthodox" ) {
+        typeName = i18nc( "Holiday type", "Orthodox" );
+      } else if ( type == "jewish" ) {
+        typeName = i18nc( "Holiday type", "Jewish" );
+      } else if ( type == "islamic" ) {
+        typeName = i18nc( "Holiday type", "Islamic" );
+      }
     }
 
     if ( !regionName.isEmpty() ) {
-      tempName = regionName;
+      if ( !typeName.isEmpty() ) {
+        //TODO translate when not frozen
+        tempName = QString( "%1 - %2" ).arg( regionName ).arg( typeName );
+      } else {
+        tempName = regionName;
+      }
     } else if ( !typeName.isEmpty() ) {
       tempName = typeName;
     } else {
