@@ -51,8 +51,8 @@ using namespace KHolidays;
 
 HolidayParserDriverPlan::HolidayParserDriverPlan( const QString &planFilePath )
                         :HolidayParserDriver( planFilePath ),
-                        m_traceScanning( false ),
-                        m_traceParsing( false )
+                        m_traceParsing( false ),
+                        m_traceScanning( false )
 {
     QFile holidayFile( filePath() );
     if ( holidayFile.open( QIODevice::ReadOnly ) ) {
