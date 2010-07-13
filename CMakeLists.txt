@@ -29,10 +29,6 @@ kde4_add_library(kholidays SHARED ${kholidays_LIB_SRCS})
 
 target_link_libraries(kholidays ${KDE4_KIO_LIBS})
 
-if(WINCE)
-target_link_libraries(kholidays ${WCECOMPAT_LIBRARIES})
-endif(WINCE)
-
 set_target_properties(kholidays PROPERTIES VERSION ${GENERIC_LIB_VERSION} SOVERSION ${GENERIC_LIB_SOVERSION})
 install(TARGETS kholidays EXPORT kdepimlibsLibraryTargets ${INSTALL_TARGETS_DEFAULT_ARGS})
 
