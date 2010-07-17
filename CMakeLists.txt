@@ -19,10 +19,10 @@ set(kholidays_LIB_SRCS
   holidayregion.cpp
   lunarphase.cpp
   zodiac.cpp
+  parsers/plan2/holidayscannerplan.cpp
   parsers/holidayparserdriver.cpp
   parsers/plan2/holidayparserdriverplan.cpp
   parsers/plan2/holidayparserplan.cpp
-  parsers/plan2/holidayscannerplan.cpp
 )
 
 kde4_add_library(kholidays SHARED ${kholidays_LIB_SRCS})
