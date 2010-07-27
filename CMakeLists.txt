@@ -25,7 +25,7 @@ set(kholidays_LIB_SRCS
   parsers/plan2/holidayparserplan.cpp
 )
 
-kde4_add_library(kholidays SHARED ${kholidays_LIB_SRCS})
+kde4_add_library(kholidays ${LIBRARY_TYPE} ${kholidays_LIB_SRCS})
 
 target_link_libraries(kholidays ${KDE4_KIO_LIBS})
 

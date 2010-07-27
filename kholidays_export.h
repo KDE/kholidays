@@ -26,7 +26,10 @@
 #include <kdemacros.h>
 
 #ifndef KHOLIDAYS_EXPORT
-# if defined(MAKE_KHOLIDAYS_LIB)
+# if defined(KDEPIM_STATIC_LIBS)
+   /* No export/import for static libraries */
+#  define KHOLIDAYS_EXPORT
+# elif defined(MAKE_KHOLIDAYS_LIB)
    /* We are building this library */
 #  define KHOLIDAYS_EXPORT KDE_EXPORT
 # else
