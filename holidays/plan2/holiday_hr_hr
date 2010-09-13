@@ -1,0 +1,86 @@
+::
+:: Country:  Croatia
+::
+:: Language: Croatian
+::
+:: Author:   Marko Dimjašević <marko@dimjasevic.net>
+::
+:: Updated:  2010-09-13
+::
+:: Source:   Hrvatski sabor: Zakon o blagdanima, spomendanima i neradnim danima
+::           u Republici Hrvatskoj
+::           http://narodne-novine.nn.hr/clanci/sluzbeni/309949.html
+::           Hrvatski sabor: Zakon o izmjenama i dopunama zakona o blagdanima,
+::           spomendanima i neradnim danima u Republici Hrvatskoj
+::           http://narodne-novine.nn.hr/clanci/sluzbeni/339400.html
+::
+
+:: Metadata
+country     "HR"
+language    "hr"
+:name        "optional - defaults to country name"
+:description "Datoteka s blagdanima, spomendanima i neradnim danima u Hrvatskoj"
+
+:: Public Holidays
+"Nova godina"                                                      weekend on january 1
+"Sveta tri kralja"                                                 weekend on january 6
+"Uskrsni ponedjeljak"                                              weekend on easter plus 1 day
+"Tijelovo"                                                         weekend on easter plus 60 days
+"Praznik rada"                                                     weekend on may 1
+"Dan antifašističke borbe"                                         weekend on june 22
+"Dan državnosti"                                                   weekend on june 25
+"Dan pobjede i domovinske zahvalnosti i Dan hrvatskih branitelja"  weekend on august 5
+"Velika Gospa"                                                     weekend on august 15
+"Dan neovisnosti"                                                  weekend on october 8
+"Svi sveti"                                                        weekend on november 1
+"Božić"                                                            weekend on december 25
+"Sveti Stjepan"                                                    weekend on december 26
+
+:: Religious Holidays
+"Uskrs"                                                            on easter
+"Pepelnica"                                                        on easter minus 46 days
+"Veliki četvrtak"                                                  on easter minus 3 days
+"Veliki petak"                                                     on easter minus 2 days
+"Velika subota"                                                    on easter minus 1 day
+"Duhovi"                                                           on easter plus 49 days
+"Presveto Trojstvo"                                                on easter plus 56 days
+
+:: Financial
+
+:: Cultural
+"Valentinovo"                                                      on february 14
+"Međunarodni dan žena"                                             on march 8
+"Svjetski dan kazališta"                                           on march 27
+"Dan slobode dokumenata"                                           on last wednesday in march
+"Prvotravanjska šala"                                              on april 1
+"Svjetski dan smijeha"                                             on first sunday in may
+"Majčin dan"                                                       on second sunday in may
+"Dan očeva"                                                        on third sunday in june
+"Međunarodni dan mladih"                                           on august 12
+"Dan slobodnog softvera"                                           on third saturday in september
+"Dan sjećanja na Vukovar"                                          on november 18
+"Dan hrvatskog kazališta"                                          on november 24
+"Međunarodni dan volontera"                                        on december 5
+"Sveti Nikola"                                                     on december 6
+
+:: School
+"Početak školske godine"                                           on september 1
+"Međunarodni dan pismenosti (UNESCO)"                              on september 8
+"Europski dan jezika"                                              on september 26
+"Međunarodni dan učitelja"                                         on october 5
+"Međunarodni dan školskih knjižnica"                               on october 24
+
+:: Daylight Saving
+"Ljetno računanje vremena"                                         on last sunday in march
+"Zimsko računanje vremena"                                         on last sunday in october
+
+:: Seasons
+"Proljetna ravnodnevica (ekvinocij)"                               on march 20
+"Ljetna dugodnevica (solsticij)"                                   on june 21
+"Jesenska ravnodnevica (ekvinocij)"                                on september 22
+"Zimska kratkodnevica (solsticij)"                                 on december 21
+
+:: Name Days
+
+:: To be sorted
+"Dan Hrvatskoga sabora"                                            on may 30
