@@ -25,6 +25,7 @@
 #include <fstream>
 
 #include <QByteArray>
+#include <QStringList>
 
 #include "../holidayparserdriver_p.h"
 
@@ -141,12 +142,15 @@ private:
 
     QByteArray          m_scanData;                 // Holiday file stored as a string
 
+    QStringList         m_fileCalendarTypes;        // List of all Calendar Systems used in file
+
     bool                m_traceParsing;             // Bison C++ skeleton enable tracing in Bison parser class
     HolidayParserPlan  *m_parser;                   // Bison C++ skeleton Bison parser class implementation
 
     bool                m_traceScanning;            // Flex C++ enable tracing in Flex scanner class
     HolidayScannerPlan *m_scanner;                  // Flex C++ scanner class implementation
 
+    bool                m_parseMetadataOnly;        // Only parse file for metadata
     QDate               m_parseYearStart;           // First day of year being parsed
     QDate               m_parseYearEaster;          // Easter in the parse year, Gregorian only
     QDate               m_parseYearPascha;          // Orthodox Easter in the parse year, Gregorian only

@@ -52,7 +52,8 @@ using namespace KHolidays;
 HolidayParserDriverPlan::HolidayParserDriverPlan( const QString &planFilePath )
                         :HolidayParserDriver( planFilePath ),
                         m_traceParsing( false ),
-                        m_traceScanning( false )
+                        m_traceScanning( false ),
+                        m_parseMetadataOnly( false )
 {
     QFile holidayFile( filePath() );
     if ( holidayFile.open( QIODevice::ReadOnly ) ) {
@@ -89,10 +90,8 @@ void HolidayParserDriverPlan::error( const QString &errorMessage )
 
 void HolidayParserDriverPlan::parse()
 {
-    // Parse the file using every available calendar system, even if not defined in file
-    // TODO this will not scale as more systems are added over time, either move to AST model
-    //      or have this driven via pre-scan or file metadata to determine requied calendar systems
-    foreach( QString calendar, KCalendarSystem::calendarSystems() ) {
+    // Parse the file using every calendar system in the file
+    foreach( QString calendar, m_fileCalendarTypes ) {
 
         // Cater for events defined in other Calendar Systems where request year could cover 2 or 3 event years
         // Perhaps also parse year before and year after to allow events to span years or shift to other year?
@@ -117,10 +116,13 @@ void HolidayParserDriverPlan::parse()
 
 void HolidayParserDriverPlan::parseMetadata()
 {
+    m_parseMetadataOnly = true;
     m_fileCountryCode.clear();
     m_fileLanguageCode.clear();
     m_fileName.clear();
     m_fileDescription.clear();
+    m_fileCalendarTypes.clear();
+    m_fileCalendarTypes.append( "gregorian" );
 
     // Default to files internal metadata
     setParseCalendar( "gregorian" );
@@ -155,7 +157,7 @@ void HolidayParserDriverPlan::parseMetadata()
         }
     }
 
-
+    m_parseMetadataOnly = false;
 }
 
 QString HolidayParserDriverPlan::filePath()
@@ -404,7 +406,10 @@ void  HolidayParserDriverPlan::setEventColorDay( int dayColor )
 
 void  HolidayParserDriverPlan::setEventCalendarType( const QString &calendarType )
 {
-  m_eventCalendarType = calendarType;
+    m_eventCalendarType = calendarType;
+    if ( m_parseMetadataOnly && !m_fileCalendarTypes.contains( calendarType ) ) {
+        m_fileCalendarTypes.append( calendarType );
+    }
 }
 
 void  HolidayParserDriverPlan::setEventDate( int eventYear, int eventMonth, int eventDay )
@@ -431,8 +436,8 @@ void  HolidayParserDriverPlan::setEventDate( int jd )
 
 void HolidayParserDriverPlan::setFromWeekdayInMonth( int occurrence, int weekday, int month, int offset, int duration )
 {
-    // Don't set if calendar for event rule is not the current parse calendar
-    if ( m_eventCalendarType != m_parseCalendar->calendarType() ) {
+    // Don't set if only parsing metadata or calendar for event rule is not the current parse calendar
+    if ( m_parseMetadataOnly || m_eventCalendarType != m_parseCalendar->calendarType() ) {
         return;
     }
 
@@ -484,8 +489,8 @@ void HolidayParserDriverPlan::setFromWeekdayInMonth( int occurrence, int weekday
 
 void HolidayParserDriverPlan::setFromRelativeWeekday( int occurrence, int weekday, int offset, int duration )
 {
-    // Don't set if calendar for event rule is not the current parse calendar
-    if ( m_eventCalendarType != m_parseCalendar->calendarType() ) {
+    // Don't set if only parsing metadata or calendar for event rule is not the current parse calendar
+    if ( m_parseMetadataOnly || m_eventCalendarType != m_parseCalendar->calendarType() ) {
         return;
     }
 
@@ -572,8 +577,8 @@ int HolidayParserDriverPlan::conditionalOffset( int year, int month, int day, in
 
 void HolidayParserDriverPlan::setFromDate( int offset, int condition, int duration )
 {
-    // Don't set if calendar for event rule is not the current parse calendar
-    if ( m_eventCalendarType != m_parseCalendar->calendarType() ) {
+    // Don't set if only parsing metadata or calendar for event rule is not the current parse calendar
+    if ( m_parseMetadataOnly || m_eventCalendarType != m_parseCalendar->calendarType() ) {
         return;
     }
 
@@ -632,8 +637,8 @@ void HolidayParserDriverPlan::setFromDate( int offset, int condition, int durati
 
 void HolidayParserDriverPlan::setFromEaster( int offset, int duration )
 {
-    // Don't set if calendar for event rule is not the current parse calendar
-    if ( m_eventCalendarType != m_parseCalendar->calendarType() ) {
+    // Don't set if only parsing metadata or calendar for event rule is not the current parse calendar
+    if ( m_parseMetadataOnly || m_eventCalendarType != m_parseCalendar->calendarType() ) {
         return;
     }
 
@@ -652,8 +657,8 @@ void HolidayParserDriverPlan::setFromEaster( int offset, int duration )
 
 void HolidayParserDriverPlan::setFromPascha( int offset, int duration )
 {
-    // Don't set if calendar for event rule is not the current parse calendar
-    if ( m_eventCalendarType != m_parseCalendar->calendarType() ) {
+    // Don't set if only parsing metadata or calendar for event rule is not the current parse calendar
+    if ( m_parseMetadataOnly || m_eventCalendarType != m_parseCalendar->calendarType() ) {
         return;
     }
 
@@ -667,8 +672,8 @@ void HolidayParserDriverPlan::setFromPascha( int offset, int duration )
 // Set the event if it falls inside the requested date range
 void HolidayParserDriverPlan::setEvent( int jd, int observeOffset, int duration )
 {
-    // Don't set if calendar for event rule is not the current parse calendar
-    if ( m_eventCalendarType != m_parseCalendar->calendarType() ) {
+    // Don't set if only parsing metadata or calendar for event rule is not the current parse calendar
+    if ( m_parseMetadataOnly || m_eventCalendarType != m_parseCalendar->calendarType() ) {
         return;
     }
 
