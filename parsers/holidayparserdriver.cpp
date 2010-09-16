@@ -57,8 +57,10 @@ QString HolidayParserDriver::fileDescription() const
   return m_fileDescription;
 }
 
-Holiday::List HolidayParserDriver::parseHolidays( const QDate &startDate, const QDate &endDate )
+Holiday::List HolidayParserDriver::parseHolidays( const QDate &startDate, const QDate &endDate,
+                                                  Holiday::MultidayMode multidayMode )
 {
+  m_multidayMode = multidayMode;
   m_resultList.clear();
   if ( startDate.isNull() || endDate.isNull() ) {
     return m_resultList;
@@ -70,12 +72,14 @@ Holiday::List HolidayParserDriver::parseHolidays( const QDate &startDate, const 
   return m_resultList;
 }
 
-Holiday::List HolidayParserDriver::parseHolidays( const QDate &requestDate )
+Holiday::List HolidayParserDriver::parseHolidays( const QDate &requestDate,
+                                                  Holiday::MultidayMode multidayMode )
 {
-  return parseHolidays( requestDate, requestDate );
+  return parseHolidays( requestDate, requestDate, multidayMode );
 }
 
-Holiday::List HolidayParserDriver::parseHolidays( int calendarYear, const QString &calendarType )
+Holiday::List HolidayParserDriver::parseHolidays( int calendarYear, const QString &calendarType,
+                                                  Holiday::MultidayMode multidayMode )
 {
   m_resultList.clear();
   setParseCalendar( calendarType );
@@ -87,7 +91,7 @@ Holiday::List HolidayParserDriver::parseHolidays( int calendarYear, const QStrin
   m_parseCalendar->setDate( startDate, calendarYear, 1, 1 );
   endDate = startDate.addDays( m_parseCalendar->daysInYear( startDate ) - 1 );
 
-  return parseHolidays( startDate, endDate );
+  return parseHolidays( startDate, endDate, multidayMode );
 }
 
 void HolidayParserDriver::error( const QString &errorMessage )

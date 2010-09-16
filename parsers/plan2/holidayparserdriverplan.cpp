@@ -680,27 +680,33 @@ void HolidayParserDriverPlan::setEvent( int jd, int observeOffset, int duration 
     // Date the holiday will be observed on
     int observeJd = jd + observeOffset;
 
-    // Create entries compatible with old parser for now
-    for ( int dd = 0; dd < duration; ++dd ) {
-
-        // Only set if event falls in requested date range
-        if ( m_parseCalendar->isValid( QDate::fromJulianDay( observeJd + dd ) ) &&
-             observeJd + dd >= m_requestStart.toJulianDay() &&
-             observeJd + dd <= m_requestEnd.toJulianDay() ) {
-
-            KHolidays::Holiday holiday;
-            holiday.d->mDate = QDate::fromJulianDay( observeJd + dd );
-            holiday.d->mText = m_eventName;
-            holiday.d->mShortText = m_eventName;
-            if ( m_eventColorName == 2 || m_eventColorName == 9 ||
-                m_eventColorDay == 2 || m_eventColorDay == 9 ) {
-                holiday.d->mDayType = KHolidays::Holiday::NonWorkday;
-            } else {
-                holiday.d->mDayType = KHolidays::Holiday::Workday;
-            }
-            m_resultList.append( holiday );
-
+    if ( m_multidayMode == Holiday::MultidayHolidaysAsSingleEvents ) {
+        addHoliday( QDate::fromJulianDay( observeJd ), duration );
+    } else { // KHolidays::MultidayHolidaysAsMultipleEvents
+        // Create backwards compatible holidays, one incidence per day
+        for ( int dd = 0; dd < duration; ++dd ) {
+            addHoliday( QDate::fromJulianDay( observeJd + dd ), 1 );
         }
+    }
+}
 
+void  HolidayParserDriverPlan::addHoliday( const QDate &observedDate, int duration )
+{
+    // Only set if event falls in requested date range
+    if ( m_parseCalendar->isValid( observedDate ) &&
+         observedDate <= m_requestEnd &&
+         observedDate.addDays( duration ) >= m_requestStart ) {
+        KHolidays::Holiday holiday;
+        holiday.d->mObservedDate = observedDate;
+        holiday.d->mDuration = duration;
+        holiday.d->mText = m_eventName;
+        holiday.d->mShortText = m_eventName;
+        if ( m_eventColorName == 2 || m_eventColorName == 9 ||
+             m_eventColorDay == 2 || m_eventColorDay == 9 ) {
+            holiday.d->mDayType = KHolidays::Holiday::NonWorkday;
+        } else {
+            holiday.d->mDayType = KHolidays::Holiday::Workday;
+        }
+        m_resultList.append( holiday );
     }
 }

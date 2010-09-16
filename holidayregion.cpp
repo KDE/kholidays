@@ -339,8 +339,14 @@ bool HolidayRegion::isValid( const QString &regionCode )
 
 Holiday::List HolidayRegion::holidays( const QDate &startDate, const QDate &endDate ) const
 {
+  return holidays( startDate, endDate, Holiday::MultidayHolidaysAsMultipleEvents );
+}
+
+Holiday::List HolidayRegion::holidays( const QDate &startDate, const QDate &endDate,
+                                       Holiday::MultidayMode multidayMode ) const
+{
   if ( isValid() ) {
-    return d->mDriver->parseHolidays( startDate, endDate );
+    return d->mDriver->parseHolidays( startDate, endDate, multidayMode );
   } else {
     return Holiday::List();
   }
@@ -348,8 +354,13 @@ Holiday::List HolidayRegion::holidays( const QDate &startDate, const QDate &endD
 
 Holiday::List HolidayRegion::holidays( const QDate &date ) const
 {
+  return holidays( date, Holiday::MultidayHolidaysAsMultipleEvents );
+}
+
+Holiday::List HolidayRegion::holidays( const QDate &date, Holiday::MultidayMode multidayMode ) const
+{
   if ( isValid() ) {
-    return d->mDriver->parseHolidays( date );
+    return d->mDriver->parseHolidays( date, multidayMode );
   } else {
     return Holiday::List();
   }
@@ -357,8 +368,14 @@ Holiday::List HolidayRegion::holidays( const QDate &date ) const
 
 Holiday::List HolidayRegion::holidays( int calendarYear, const QString &calendarType ) const
 {
+  return holidays( calendarYear, calendarType, Holiday::MultidayHolidaysAsMultipleEvents );
+}
+
+Holiday::List HolidayRegion::holidays( int calendarYear, const QString &calendarType,
+                                       Holiday::MultidayMode multidayMode ) const
+{
   if ( isValid() ) {
-    return d->mDriver->parseHolidays( calendarYear, calendarType );
+    return d->mDriver->parseHolidays( calendarYear, calendarType, multidayMode );
   } else {
     return Holiday::List();
   }
@@ -366,7 +383,7 @@ Holiday::List HolidayRegion::holidays( int calendarYear, const QString &calendar
 
 bool HolidayRegion::isHoliday( const QDate &date ) const
 {
-  Holiday::List holidayList = holidays( date );
+  Holiday::List holidayList = holidays( date, Holiday::MultidayHolidaysAsMultipleEvents );
   if ( holidayList.count() > 0 ) {
     foreach ( const KHolidays::Holiday &holiday, holidayList ) {
       if ( holiday.dayType() == Holiday::NonWorkday ) {

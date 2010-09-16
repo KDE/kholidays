@@ -95,7 +95,7 @@ void HolidayParserDriverPlanOld::parse()
                 while ( hd ) {
                     if ( hd->string ) {
                         Holiday holiday;
-                        holiday.d->mDate = thisDate;
+                        holiday.d->mObservedDate = thisDate;
                         holiday.d->mText = QString::fromUtf8( hd->string );
                         holiday.d->mShortText = holiday.d->mText;
                         if ( hd->color == 2 || hd->color == 9 ) {

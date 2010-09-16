@@ -59,6 +59,14 @@ class KHOLIDAYS_EXPORT Holiday
     };
 
     /**
+     * Describes how to return Multiday holidays
+     */
+    enum MultidayMode {
+      MultidayHolidaysAsMultipleEvents, ///< Return a Holiday instance for each day with duration = 1
+      MultidayHolidaysAsSingleEvents    ///< Return a single Holiday instance with duration set
+    };
+
+    /**
      * Creates an empty holiday.
      */
     Holiday();
@@ -89,9 +97,30 @@ class KHOLIDAYS_EXPORT Holiday
     bool operator>( const Holiday &rhs ) const;
 
     /**
-     * Returns the date of the holiday.
+     * Returns the observed date of the holiday.
      */
     QDate date() const;
+
+    /**
+     * @since 4.6
+     *
+     * Returns the observed start date of the holiday.
+     */
+    QDate observedStartDate() const;
+
+    /**
+     * @since 4.6
+     *
+     * Returns the observed end date of the holiday.
+     */
+    QDate observedEndDate() const;
+
+    /**
+     * @since 4.6
+     *
+     * Returns the duration of the holiday in days.
+     */
+    int duration() const;
 
     /**
      * Returns the long description of the holiday.

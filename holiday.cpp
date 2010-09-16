@@ -58,17 +58,32 @@ Holiday &Holiday::operator=( const Holiday &other )
 
 bool Holiday::operator<( const Holiday &rhs ) const
 {
-  return d->mDate < rhs.d->mDate;
+  return d->mObservedDate < rhs.d->mObservedDate;
 }
 
 bool Holiday::operator>( const Holiday &rhs ) const
 {
-  return d->mDate > rhs.d->mDate;
+  return d->mObservedDate > rhs.d->mObservedDate;
 }
 
 QDate Holiday::date() const
 {
-  return d->mDate;
+  return d->mObservedDate;
+}
+
+QDate Holiday::observedStartDate() const
+{
+  return d->mObservedDate;
+}
+
+QDate Holiday::observedEndDate() const
+{
+  return d->mObservedDate.addDays( d->mDuration );
+}
+
+int Holiday::duration() const
+{
+  return d->mDuration;
 }
 
 QString Holiday::text() const

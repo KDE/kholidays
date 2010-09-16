@@ -43,9 +43,13 @@ private Q_SLOTS:
 private:
     void printMetadata( const KHolidays::HolidayRegion &region );
     void printHolidays( KHolidays::Holiday::List holidays );
-    void parseRegionCalendarYear( const KHolidays::HolidayRegion &region, int year, const QString &calendarType = "gregorian" );
-    void parseRegionDateRange( const KHolidays::HolidayRegion &region, const QDate &startDate, const QDate &endDate );
-    void parseRegionDate( const KHolidays::HolidayRegion &region, const QDate &date );
+    void parseRegionCalendarYear( const KHolidays::HolidayRegion &region, int year,
+                                  const QString &calendarType = "gregorian",
+                                  KHolidays::Holiday::MultidayMode multidayMode = KHolidays::Holiday::MultidayHolidaysAsMultipleEvents );
+    void parseRegionDateRange( const KHolidays::HolidayRegion &region, const QDate &startDate, const QDate &endDate,
+                               KHolidays::Holiday::MultidayMode multidayMode = KHolidays::Holiday::MultidayHolidaysAsMultipleEvents );
+    void parseRegionDate( const KHolidays::HolidayRegion &region, const QDate &date,
+                          KHolidays::Holiday::MultidayMode multidayMode = KHolidays::Holiday::MultidayHolidaysAsMultipleEvents );
 };
 
 #endif // TESTHOLIDAYREGION_H

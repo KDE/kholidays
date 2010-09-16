@@ -140,6 +140,8 @@ private:
 
     int   conditionalOffset( int year, int month, int day, int condition );
 
+    void  addHoliday( const QDate &date, int duration );
+
     QByteArray          m_scanData;                 // Holiday file stored as a string
 
     QStringList         m_fileCalendarTypes;        // List of all Calendar Systems used in file
