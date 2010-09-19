@@ -167,3 +167,13 @@ void HolidayRegionTest::testLocations()
   kDebug() << "";
 }
 
+void HolidayRegionTest::testDefaultRegions()
+{
+  QCOMPARE( KHolidays::HolidayRegion::defaultRegionCode( "be", "nl" ), QString( "be_nl" ) );
+  QCOMPARE( KHolidays::HolidayRegion::defaultRegionCode( "be", "fr" ), QString( "be_fr" ) );
+  QCOMPARE( KHolidays::HolidayRegion::defaultRegionCode( "be", "xx" ), QString( "be_fr" ) );
+  QCOMPARE( KHolidays::HolidayRegion::defaultRegionCode( "xx", "fr_BE" ), QString( "be_fr" ) );
+  QCOMPARE( KHolidays::HolidayRegion::defaultRegionCode( "xx", "xx" ), QString() );
+  QCOMPARE( KHolidays::HolidayRegion::defaultRegionCode( "au", "en_GB" ), QString( "au-act_en-gb" ) );
+  QCOMPARE( KHolidays::HolidayRegion::defaultRegionCode( "au-VIC", "en_GB" ), QString( "au-vic_en-gb" ) );
+}

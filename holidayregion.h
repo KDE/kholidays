@@ -108,6 +108,20 @@ class KHOLIDAYS_EXPORT HolidayRegion
     static QStringList regionCodes();
 
     /**
+     * @since 4.6
+     *
+     * Return a reasonable default Holiday Region code
+     * 
+     * If a required country/language is not provided then the current KDE
+     * country/lanaguage is used.
+     *
+     * @param country The country to find a default Holiday Region for
+     * @param language The lanaguage to find a default Holiday Region for
+     * @return the full region code of the default file
+     */
+    static QString defaultRegionCode( const QString &country = QString(), const QString &language = QString() );
+
+    /**
      * @since 4.5
      *
      * Returns the unique Holiday Region code.

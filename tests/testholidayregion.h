@@ -39,6 +39,7 @@ private Q_SLOTS:
     void testIsrael();
     void testLocations();
     void testRegions();
+    void testDefaultRegions();
 
 private:
     void printMetadata( const KHolidays::HolidayRegion &region );
