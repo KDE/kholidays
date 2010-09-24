@@ -50,10 +50,11 @@ class HolidayRegion::Private
         if ( mRegionCode.length() == 2 ) { //Backwards compatible mode for old location code
           mLocation = mRegionCode;
           QStringList locationFiles = KGlobal::dirs()->findAllResources( "data",
-                                                                         "libkholidays/plan2/holiday_" + mLocation + "*",
-                                                                         KStandardDirs::NoDuplicates );
+                                      "libkholidays/plan2/holiday_" + mLocation + '*',
+                                      KStandardDirs::NoDuplicates );
           if ( locationFiles.count() > 0 ) {
-            mRegionCode = locationFiles.at( 0 ).mid( locationFiles.at( 0 ).lastIndexOf( "holiday_" ) + 8 );
+            mRegionCode = locationFiles.at( 0 )
+                                       .mid( locationFiles.at( 0 ).lastIndexOf( "holiday_" ) + 8 );
           }
         }
 
@@ -419,20 +420,20 @@ QString HolidayRegion::defaultRegionCode( const QString &country, const QString 
     localeLanguage = language.toLower();
   }
 
-  if (localeLanguage.split('_').count() > 1) {
-    localeLanguageCountry = localeLanguage.split('_').at(1);
+  if ( localeLanguage.split('_').count() > 1 ) {
+    localeLanguageCountry = localeLanguage.split( '_' ).at( 1 );
   }
 
   QStringList regionList = KHolidays::HolidayRegion::regionCodes();
 
-  QString countryAndLanguageMatch, countryOnlyMatch, subdivisionAndLanguageMatch, subdivisionOnlyMatch,
-          languageCountryAndLanguageMatch, languageCountryOnlyMatch, languageSubdivisionAndLanguageMatch,
-          languageSubdivisionOnlyMatch;
+  QString countryAndLanguageMatch, countryOnlyMatch, subdivisionAndLanguageMatch,
+          subdivisionOnlyMatch, languageCountryAndLanguageMatch, languageCountryOnlyMatch,
+          languageSubdivisionAndLanguageMatch, languageSubdivisionOnlyMatch;
 
   foreach ( const QString &regionCode, regionList ) {
     QString regionCountry = KHolidays::HolidayRegion::countryCode( regionCode ).toLower();
     QString regionSubdivisionCountry;
-    if (regionCountry.split( '-' ).count() > 1) {
+    if ( regionCountry.split( '-' ).count() > 1 ) {
       regionSubdivisionCountry = regionCountry.split( '-' ).at( 0 );
     }
     QString regionLanguage = KHolidays::HolidayRegion::languageCode( regionCode ).toLower();
@@ -467,14 +468,14 @@ QString HolidayRegion::defaultRegionCode( const QString &country, const QString 
     } else if ( !regionSubdivisionCountry.isEmpty() &&
                 !localeLanguageCountry.isEmpty() &&
                 regionSubdivisionCountry == localeLanguageCountry &&
-                regionLanguage == localeLanguage) {
+                regionLanguage == localeLanguage ) {
       if ( languageSubdivisionAndLanguageMatch.isEmpty() ) {
         languageSubdivisionAndLanguageMatch = regionCode;
       }
     } else if ( !regionSubdivisionCountry.isEmpty() &&
                 !localeLanguageCountry.isEmpty() &&
                 regionSubdivisionCountry == localeLanguageCountry ) {
-      if ( languageSubdivisionOnlyMatch.isEmpty()) {
+      if ( languageSubdivisionOnlyMatch.isEmpty() ) {
         languageSubdivisionOnlyMatch = regionCode;
       }
     }
