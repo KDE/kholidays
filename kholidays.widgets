@@ -1,0 +1,11 @@
+[Global]
+PluginName=KHolidaysWidgets
+Includes=kcomponentdata.h
+Init=new KComponentData("kholidayswidgets");
+
+[KHolidays::HolidayRegionSelector]
+ToolTip=Holiday Region Selector (KHolidays)
+WhatsThis=A widget to select Holiday Regions to use.
+IncludeFile=kholidays/holidayregionselector.h
+ConstructorArgs=(parent)
+Group=Input (KDE-PIM)
