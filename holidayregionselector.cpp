@@ -121,6 +121,11 @@ void HolidayRegionSelector::Private::initItem( QTreeWidgetItem *listItem, Holida
   listItem->setText( Private::DescriptionColumn, region->description() );
   listItem->setToolTip( Private::DescriptionColumn, region->description() );
   m_ui.regionTreeWidget->blockSignals( false );
+
+  QString comboText = i18nc("Combobox label, Holiday Region not used", "Not Used");
+  comboText = i18nc("Combobox label, use Holiday Region for information only", "Information");
+  comboText = i18nc("Combobox label, use Holiday Region for days off", "Days Off");
+  comboText = i18n("<p>You can choose to display the Holiday Region for information only, or to use the Holiday Region when displaying or calculating days off such as Public Holidays.  If you choose to use the Holiday Region for Days Off, then only those Holiday Events marked in the Holiday Region as Days Off will be used for non-work days, Holiday Events that are not marked in the Holiday Region as Days Off will continue to be work days.</p>");
 }
 
 QString HolidayRegionSelector::Private::itemRegion( QTreeWidgetItem *item )
