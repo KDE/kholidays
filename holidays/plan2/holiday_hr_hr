@@ -19,7 +19,7 @@
 country     "HR"
 language    "hr"
 :name        "optional - defaults to country name"
-:description "Datoteka s blagdanima, spomendanima i neradnim danima u Hrvatskoj"
+description "Datoteka s blagdanima, spomendanima i neradnim danima u Hrvatskoj"
 
 :: Public Holidays
 "Nova godina"                                                      weekend on january 1
