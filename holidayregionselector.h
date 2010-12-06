@@ -36,7 +36,8 @@ class HolidayRegion;
 class KHOLIDAYS_EXPORT HolidayRegionSelector : public QWidget
 {
   Q_OBJECT
-  Q_PROPERTY( QAbstractItemView::SelectionMode primarySelectionMode READ primarySelectionMode WRITE setSelectionMode )
+  Q_PROPERTY( QAbstractItemView::SelectionMode listSelectionMode READ selectionMode WRITE setSelectionMode )
+  Q_PROPERTY( bool enableRegionUseFlags READ regionUseFlagsEnabled WRITE setRegionUseFlagsEnabled )
   Q_PROPERTY( bool hideSearch READ searchHidden WRITE setSearchHidden )
   Q_PROPERTY( bool hideDescription READ descriptionHidden WRITE setDescriptionHidden )
   Q_PROPERTY( bool hideLanguage READ languageHidden WRITE setLanguageHidden )
@@ -44,15 +45,24 @@ class KHOLIDAYS_EXPORT HolidayRegionSelector : public QWidget
 
 public:
   /**
-   * Describes the Selection Status of the Holiday Region.
+   * Describes the Selection Status of a Holiday Region.
    */
   enum SelectionStatus {
     RegionHidden,             ///< The Holiday Region is not displayed
     RegionDisabled,           ///< The Holiday Region is not available for selection
-    RegionNotSelected,        ///< The Holiday Region is not selected
+    RegionAvailable,          ///< The Holiday Region is available for selection
     RegionSelected,           ///< The Holiday Region is selected
-    RegionSelectedSecondary   ///< The Holiday Region is selected for Days Off
   };
+
+  /**
+   * Describes the Usage of a Holiday Region.
+   */
+  enum RegionUseFlag {
+    NotUsed            = 0x00,    ///< The Holiday Region is not used
+    UseInformationOnly = 0x01,    ///< The Holiday Region is used for information only
+    UseDaysOff         = 0x02     ///< The Holiday Region is used for Days Off
+  };
+  Q_DECLARE_FLAGS(RegionUseFlags, RegionUseFlag)
 
   /**
    * Constructs a default Holiday Region selection widget.
@@ -63,10 +73,9 @@ public:
    * operate in single or no selection mode, then you must configure these after the widget is
    * created.
    *
-   * By default a Primary and Secondary selection are available to the user.  This is normally
-   * used with the Primary selection meaning a Holiday Region is to be used and the Secondary
-   * selection meaning to use the Holiday Region for Days Off.  These selection modes can be
-   * overridden or disabled, or the text displayed for them modifed if required.
+   * By default multiple Region Use selections are available to the user.  This is normally
+   * used to set if holidays are to be used for days off or information only.  These use options
+   * can be overridden or disabled, or the text displayed modifed if required.
    *
    * @param parent The parent widget.
    */
@@ -85,149 +94,135 @@ public:
   QStringList holidayRegions() const;
 
   /**
-   * Set what selection modes to use.
+   * Set what selection mode the Region list uses.
    *
-   * The Primary Selection mode determines how many Holiday Regions can be selected:
+   * The Selection Mode determines how many Holiday Regions can be selected in the list:
    *  - If NoSelection mode then the widget is display only and the user cannot select any
-   *    holiday region
-   *  - If SingleSelection mode then only a single Holiday Region can be chosen
-   *  - If MultiSelection mode then several Holiday Regions can be chosen
+   *    Holiday Region.
+   *  - If SingleSelection mode then only a single Holiday Region can be chosen.
+   *  - If MultiSelection mode then more than one Holiday Regions can be chosen.
    *
-   * The Secondary Selection mode determines if a secondary selection can be made when the Primary
-   * Selection mode is MultiSelection, this is normally used to select that a Holiday Region is to be
-   * used for Days Off or preferred to other Holiday Regions in some manner:
-   *  - If NoSelection then the Secondary Selection is disabled and not displayed
-   *  - If SingleSelection mode then only a single Holiday Region can be chosen
-   *  - If MultiSelection mode then several Holiday Regions can be chosen
-   *
-   * @param primarySelectionMode The Primary selection mode to use
-   * @param secondarySelectionMode The Secondary (Days Off) selection mode to use
+   * @see selectionMode
+   * @param selectionMode The selection mode to use
    */
-  void setSelectionMode( QAbstractItemView::SelectionMode primarySelectionMode,
-                         QAbstractItemView::SelectionMode secondarySelectionMode
-                         = QAbstractItemView::MultiSelection );
+  void setSelectionMode( QAbstractItemView::SelectionMode selectionMode );
 
   /**
-   * Returns the current Primary Selection mode
+   * Return what selection mode the Region list uses.
    *
    * @see setSelectionMode
-   * @return The current Primary Selection mode
+   * @return The selection mode used
    */
-  QAbstractItemView::SelectionMode primarySelectionMode() const;
+  QAbstractItemView::SelectionMode selectionMode() const;
 
   /**
-   * Returns the current Secondary Selection mode.
+   * Set if Region Use Flags are enabled
    *
+   * If Region Use Flags are disabled then the user can only select a Region with a binary on/off
+   * check box.  The selection status is set and returned using the holidayRegionStatus and
+   * setHolidayRegionStatus methods.
+   *
+   * If the Region Use Flags are enabled then the user can select from multiple options for how a
+   * Region can be used via a combo box.  The use flags are set and returned using the
+   * setRegionUseFlags and regionUseFlags methods.
+   * 
    * @see setSelectionMode
-   * @return The current Secondary Selection mode
+   * @param listSelectionMode The list selection mode to use
    */
-  QAbstractItemView::SelectionMode secondarySelectionMode() const;
+  void setRegionUseFlagsEnabled( bool enableRegionUseFlags );
 
   /**
-   * Set the text to display for the Primary Selection.
+   * Returns if Region Use Flags are enabled
    *
-   * By default the Primary Selection is displayed as "Select" but may be overridden if required.
-   *
-   * @see setSelectionMode
-   * @see primarySelectionMode
-   * @param headerText The text to display in the header
-   * @param headerToolTip The text to display in the header ToolTip
-   * @param headerWhatsThis The text to display in the header WhatsThis
-   * @param itemText The text to display in the item
-   * @param itemToolTip The text to display in the item ToolTip
-   * @param itemWhatsThis The text to display in the item WhatsThis
+   * @see setRegionUseFlagsEnabled
+   * @return if the Region Use Flags are enabled
    */
-  void setPrimarySelectionText( const QString &headerText,
-                                const QString &headerToolTip,
-                                const QString &headerWhatsThis,
-                                const QString &itemText,
-                                const QString &itemToolTip,
-                                const QString &itemWhatsThis );
-
-  /**
-   * Set the text to display for the Secondary Selection.
-   *
-   * By default the Secondary Selection is displayed as "Days Off" but may be overridden if
-   * required.
-   *
-   * @see setSelectionMode
-   * @see secondarySelectionMode
-   * @param headerText The text to display in the header
-   * @param headerToolTip The text to display in the header ToolTip
-   * @param headerWhatsThis The text to display in the header WhatsThis
-   * @param itemText The text to display in the item
-   * @param itemToolTip The text to display in the item ToolTip
-   * @param itemWhatsThis The text to display in the item WhatsThis
-   */
-  void setSecondarySelectionText( const QString &headerText,
-                                  const QString &headerToolTip,
-                                  const QString &headerWhatsThis,
-                                  const QString &itemText,
-                                  const QString &itemToolTip,
-                                  const QString &itemWhatsThis );
+  bool regionUseFlagsEnabled() const;
 
   /**
    * Set the Selection Status for a Holiday Region
    *
-   * @see holidayRegionStatus
+   * @see selectionStatus
    * @param holidayRegionCode The Holiday Region to set the Status for
    * @param status The Selection Status of the Holiday Region
    */
-  void setHolidayRegionStatus( const QString &holidayRegionCode,
-                               HolidayRegionSelector::SelectionStatus status = RegionSelected );
+  void setSelectionStatus( const QString &holidayRegionCode,
+                           HolidayRegionSelector::SelectionStatus status );
 
   /**
-   * Return the current Selection Status for a Holiday Region
+   * Returns the current Selection Status for a Holiday Region
    *
-   * @see setHolidayRegionStatus
-   * @see holidayRegionsStatus
+   * @see setSelectionStatus
    * @param holidayRegionCode The Holiday Region required
    * @return The current Selection Status for the Holiday Region
    */
-  HolidayRegionSelector::SelectionStatus holidayRegionStatus( const QString &holidayRegionCode ) const;
+  HolidayRegionSelector::SelectionStatus selectionStatus( const QString &holidayRegionCode ) const;
 
   /**
-   * Return the current Selection Status for all Holiday Regions
+   * Returns the current Selection Status for all Holiday Regions
    *
-   * @see setHolidayRegionStatus
-   * @see holidayRegionStatus
-   * @see selection
+   * @see setSelectionStatus
    * @return A QHash of all Holiday Regions and their current Selection Status
-   */
-  QHash<QString, HolidayRegionSelector::SelectionStatus> holidayRegionsStatus() const;
+  */
+  QHash<QString, HolidayRegionSelector::SelectionStatus> selectionStatus() const;
 
   /**
-   * Returns currently selected Holiday Regions with their Selection Status
+   * Returns the list of Holiday Regions with a required Selection Status,
+   * defults to returning all selected Regions.
    *
-   * @see holidayRegionsStatus
-   * @see primarySelection
-   * @see secondarySelection
-    * @return A QHash of selected Holiday Regions and their current Selection Status
+   * @see setSelectionStatus
+   * @see selectionStatus
+   * @param selectionStatus The selection status to match, defaults to RegionSelected
+   * @return A list of selected Holiday Regions
    */
-  QHash<QString, HolidayRegionSelector::SelectionStatus> selection() const;
+  QStringList selection( HolidayRegionSelector::SelectionStatus selectionStatus =
+                         HolidayRegionSelector::RegionSelected ) const;
 
   /**
-   * Returns all Holiday Regions with a Primary Selection Status
+   * Returns the list of Holiday Regions with a required Region Use Flag
    *
+   * @see setRegionUseFlags
+   * @see regionUseFlags
+   * @param regionUseFlags The Region Use flags to match
+   * @return A list of matching Holiday Regions
+   */
+  QStringList selection( HolidayRegionSelector::RegionUseFlags regionUseFlags ) const;
+
+  /**
+   * Clear the current Selection Status of all Holiday Regions including Region Use Flags
+   *
+   * @see setSelectionStatus
+   * @see selectionStatus
    * @see selection
-   * @see secondarySelection
-   * @return A QStringList of Primary Selection Holiday Regions
-   */
-  QStringList primarySelection() const;
-
-  /**
-   * Returns all Holiday Regions with a Secondary Selection Status
-   *
-   * @see selection
-   * @see primarySelection
-   * @return A QStringList of Secondary Selection Holiday Regions
-   */
-  QStringList secondarySelection() const;
-
-  /**
-   * Clear the currently selection status of all Holiday Regions
    */
   void clearSelection();
+
+  /**
+   * Set the Region Use Flags for a Holiday Region
+   *
+   * @see regionUseFlags
+   * @param holidayRegionCode The Holiday Region to set the Use Flags for
+   * @param regionUseFlags The Use Flags for the Holiday Region
+   */
+  void setRegionUseFlags( const QString &holidayRegionCode,
+                          HolidayRegionSelector::RegionUseFlags regionUseFlags );
+
+  /**
+   * Returns the current Region Use Flags for a Holiday Region
+   *
+   * @see setRegionUseFlags
+   * @param holidayRegionCode The Holiday Region required
+   * @return The current Use Flags for the Holiday Region
+   */
+  HolidayRegionSelector::RegionUseFlags regionUseFlags( const QString &holidayRegionCode ) const;
+
+  /**
+   * Returns the current Region Use Flags for all Holiday Regions
+   *
+   * @see setRegionUseFlags
+   * @return A QHash of Holiday Regions and their current Region Use Flags
+  */
+  QHash<QString, HolidayRegionSelector::RegionUseFlags> regionUseFlags() const;
 
   /**
    * Set a language filter on the Holiday Regions to be displayed.
@@ -301,12 +296,15 @@ public:
 private Q_SLOTS:
 
   void itemChanged( QTreeWidgetItem *item, int column );
+  void itemChanged( int index );
 
 private:
   class Private;
   Private* const d;
 };
 
-}
+} // namespace KHolidays
+
+Q_DECLARE_OPERATORS_FOR_FLAGS(KHolidays::HolidayRegionSelector::RegionUseFlags)
 
 #endif // KHOLIDAYS_HOLIDAYREGIONSELECTOR_H
