@@ -51,7 +51,7 @@ public:
     RegionHidden,             ///< The Holiday Region is not displayed
     RegionDisabled,           ///< The Holiday Region is not available for selection
     RegionAvailable,          ///< The Holiday Region is available for selection
-    RegionSelected,           ///< The Holiday Region is selected
+    RegionSelected            ///< The Holiday Region is selected
   };
 
   /**
