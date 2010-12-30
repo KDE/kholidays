@@ -91,7 +91,7 @@ void HolidayParserDriverPlan::error( const QString &errorMessage )
 void HolidayParserDriverPlan::parse()
 {
     // Parse the file using every calendar system in the file
-    foreach( QString calendar, m_fileCalendarTypes ) {
+    foreach( const QString &calendar, m_fileCalendarTypes ) {
 
         // Cater for events defined in other Calendar Systems where request year could cover 2 or 3 event years
         // Perhaps also parse year before and year after to allow events to span years or shift to other year?
