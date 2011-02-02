@@ -78,7 +78,7 @@ QDate Holiday::observedStartDate() const
 
 QDate Holiday::observedEndDate() const
 {
-  return d->mObservedDate.addDays( d->mDuration );
+  return d->mObservedDate.addDays( d->mDuration - 1 );
 }
 
 int Holiday::duration() const
