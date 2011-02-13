@@ -298,6 +298,9 @@ private Q_SLOTS:
   void itemChanged( QTreeWidgetItem *item, int column );
   void itemChanged( int index );
 
+Q_SIGNALS:
+  void selectionChanged();
+
 private:
   class Private;
   Private* const d;

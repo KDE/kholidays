@@ -444,6 +444,7 @@ void HolidayRegionSelector::itemChanged( QTreeWidgetItem *item, int column )
       d->setItemStatus( item, RegionSelected );
     }
   }
+  emit selectionChanged();
 }
 
 // The slot for the combo box when changed
