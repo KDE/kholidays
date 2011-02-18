@@ -41,10 +41,10 @@ language    "is"
 "Öskudagur"                    on easter minus 46 days
 "Trinity"                      on easter plus 46 day
 "Corpus Christi"               on easter plus 53 days
-"1. í Aðventu"                 on sunday before december 25 minus 21
-"2. í Aðventu"                 on sunday before december 25 minus 14
-"3. í Aðventu"                 on sunday before december 25 minus 7
-"4. í Aðventu"                 on sunday before december 25
+"1. í Aðventu"                 on sunday before december 24 minus 21
+"2. í Aðventu"                 on sunday before december 24 minus 14
+"3. í Aðventu"                 on sunday before december 24 minus 7
+"4. í Aðventu"                 on sunday before december 24
 "Þorláksmessa"                 on december 23
 
 :: Financial
