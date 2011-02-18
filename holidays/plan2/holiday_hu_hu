@@ -1,36 +1,61 @@
 ::
-:: Country:  Hungrey
+:: Country:  Hungary
 ::
 :: Language: Hungarian
 ::
 :: Author:   Kelemen Péter <fuji@heureka.inf.elte.hu>
+::           Szókovács Róbert <szo@szo.hu>
 ::
-:: Updated:  1997-07-21
+:: Updated:  2011-01-31
 ::
-:: Source:
+:: Source:   http://hu.wikipedia.org/wiki/Magyarorsz%C3%A1gi_%C3%BCnnepek_%C3%A9s_eml%C3%A9knapok_list%C3%A1ja
 ::
 
 :: Metadata
 country     "HU"
 language    "hu"
 :name        "optional - defaults to country name"
-:description "(please add description in source language) National holiday file for Hungrey"
+description "Nemzeti ünnepek és emléknapok magyarországon"
 
 :: Public Holidays
-"Újév"                                  weekend on january 1
-"Nemzeti ünnep"                         weekend on march 15
-"Húsvét"                                weekend on easter length 2 days
-"Pünkösd"                               weekend on easter plus 49 length 2 days
-"Munka ünnepe"                          weekend on may 1
-"Szt. István, az államalapítás ünnepe"  weekend on august 20
-"Nemzeti ünnep"                         weekend on october 23
-"Karácsony"                             weekend on december 25 length 2 days
+"Újév"                                              weekend on january 1
+"Nemzeti ünnep: az 1848-as forradalom ünnepe"       weekend on march 15
+"Húsvét"                                            weekend on easter length 2 days
+"Pünkösd"                                           weekend on easter plus 49 length 2 days
+"Munka ünnepe"                                      weekend on may 1
+"Szent István, az államalapítás ünnepe"             weekend on august 20
+"Nemzeti ünnep: Az 1956-os forradalom ünnepe, a 3. magyar köztársaság kikiáltásának napja"
+                                                    weekend on october 23
+"Karácsony"                                         weekend on december 25 length 2 days
 
 :: Religious
+"Vízkereszt"                                        on january 6
+"Nagypéntek"                                        on friday before ([easter])
+"A reformáció napja"                                on october 31
+"Mindenszentek napja"                               on november 1
+"Advent első vasárnapja"                            on sunday before december 24 minus 21
+"Advent második vasárnapja"                         on sunday before december 24 minus 14
+"Advent harmadik vasárnapja"                        on sunday before december 24 minus 7
+"Advent negyedik vasárnapja"                        on sunday before december 24
+"Szenteste"                                         on december 24
 
 :: Financial
 
 :: Cultural
+"A köztársaság napja"                               on february 1
+"Valentin"                                          on february 14
+"A kommunista diktatúrák áldozatainak emléknapja"   on february 25
+"Nőnap"                                             on march 8
+"A holokauszt áldozatainak emléknapja"              on april 16
+"Anyák napja"                                       on first sunday in may
+"Gyermeknap"                                        on last sunday in may
+"A nemzeti összetartozás napja"                     on june 4
+"A független Magyarország napja"                    on june 19
+"Szentivánéj"                                       on june 24
+"Az aradi vértanúk emléknapja"                      on october 6
+"Halottak napja"                                    on november 2
+"Mikulás"                                           on december 6
+"Szilveszter"                                       on december 31
 
 :: School
 
@@ -40,15 +65,4 @@ language    "hu"
 
 :: Name Days
 
-
 :: To be sorted
-"Vízkereszt"                            on january 6
-"Valentin"                              on february 14
-"Nônap"                                 on march 8
-"Anyák napja"                           on first sunday in may
-"Gyermeknap"                            on last sunday in may
-"Szentivánéj"                           on june 24
-"Mindenszentek napja"                   on november 1
-"Halottak napja"                        on november 2
-"Mikulás"                               on december 6
-"Szilveszter"                           on december 31
