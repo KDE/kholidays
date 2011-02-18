@@ -40,6 +40,7 @@ description "National holiday file for Scotland"
                                                    ([january 2] == [monday after ([january 1])])) ?
                                                      [tuesday after ([january 1])] :
                                                  noop ) )
+"Royal Wedding"                     weekend on 29.4.2011
 "Early May Bank Holiday"            weekend on first monday in may
 "Diamond Jubilee Holiday"           weekend on 5.6.2012
 "Christmas Day"                     weekend on december 25
