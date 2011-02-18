@@ -16,7 +16,7 @@
 country     "AU-WA"
 language    "en_GB"
 :name        "optional - defaults to country name"
-description "(please add description in source language) State holiday file for Western Australia"
+description "State holiday file for Western Australia"
 
 :: Public Holidays
 :: State Holidays - WA
