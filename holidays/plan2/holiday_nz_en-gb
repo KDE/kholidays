@@ -6,7 +6,7 @@
 :: Author:   Miles Leonard-Taylor <m.leonardtaylor@irl.cri.nz>
 ::           John Layt <john@layt.net>
 ::
-:: Updated:  2010-05-27
+:: Updated:  2011-01-01
 ::
 :: Source:   Holidays as defined by the government's "Holidays Acts, 1981-1991"
 ::           and the Visits and Ceremonial office of the Department of Internal Affairs
@@ -21,43 +21,63 @@ language    "en_GB"
 description "National holiday file for New Zealand"
 
 :: Public Holidays
-"New Years Day"            weekend on january 1
-"Day after New Years Day"  weekend on january 2
-"Good Friday"              weekend on easter minus 2 days
-"Easter Monday"            weekend on easter plus 1 days
-"Waitangi Day"             weekend on february 6
-"Anzac Day"                weekend on april 25
-"Queen's Birthday"         weekend on first monday in june
-"Labour Day"               weekend on fourth monday in october
-"Christmas"                weekend on december 25
-"Boxing Day"               weekend on december 26
+"New Year's Day"                    weekend on january 1
+"New Year's Day Holiday"            weekend on ( ( ( [january 1] == [saturday after ([january 1])] ) ||
+                                                   ( [january 1] == [sunday after ([january 1])] ) ) ?
+                                                  [ monday after ([january 1]) ] :
+                                                  noop )
+"Day after New Year's Day"          weekend on january 2
+"Day after New Year's Day Holiday"  weekend on ( ( [january 2] == [saturday after ([january 1])] ) ?
+                                                 [monday after ([december 25])] :
+                                                 ( ( [january 2] == [sunday after ([january 1])] ||
+                                                     [january 2] == [monday after ([january 1])] ) ?
+                                                 [tuesday after ([january 1])] :
+                                                 noop ) )
+"Good Friday"                        weekend on easter minus 2 days
+"Easter Monday"                      weekend on easter plus 1 days
+"Waitangi Day"                       weekend on february 6
+"Anzac Day"                          weekend on april 25
+"Queen's Birthday"                   weekend on first monday in june
+"Labour Day"                         weekend on fourth monday in october
+"Christmas Day"                      weekend on december 25
+"Christmas Day Holiday"              weekend on ( ( ( [december 25] == [saturday after ([december 25])] ) ||
+                                                    ( [december 25] == [sunday after ([december 25])] ) ) ?
+                                                  [ monday after ([december 25]) ] :
+                                                  noop )
+"Boxing Day"                         weekend on december 26
+"Boxing Day Holiday"                 weekend on ( ( [december 26] == [saturday after ([december 25])] ) ?
+                                                  [monday after ([december 25])] :
+                                                  ( ( [december 26] == [sunday after ([december 25])] ||
+                                                      [december 26] == [monday after ([december 25])] ) ?
+                                                  [tuesday after ([december 25])] :
+                                                  noop ) )
 
 :: Provincial Holidays
 :: All move to nearest Monday unless otherwise noted
 :: Auckland nominally 29 January
-"Auckland Day"             on monday after 26 january
+"Auckland Anniversary Day"           on monday after 26 january
 :: Taranaki nominally 31 March moves to 2nd Monday in March to miss Easter
-"Taranaki Day"             on second monday in march
+"Taranaki Anniversary Day"           on second monday in march
 :: Hawkes Bay nominally 1 November moves to Friday before Labour day
-"Hawkes Bay Day"           on fourth monday in october minus 3 days
+"Hawkes Bay Anniversary Day"         on fourth monday in october minus 3 days
 :: Wellington nominally 22 January
-"Wellington Day"           on monday after 19 january
+"Wellington Anniversary Day"         on monday after 19 january
 :: Marlborough nominally 1 November moves to Friday before Labour day
-"Marlborough Day"          on fourth monday in october plus 7 days
+"Marlborough Anniversary Day"        on fourth monday in october plus 7 days
 :: Nelson nominally 1 February moves to nearest monday
-"Nelson Day"              on monday after 29 january
+"Nelson Anniversary Day"             on monday after 29 january
 :: Canterbury nominally 16 December moves to 2nd Fri after 1st Tues in Nov
-"Canterbury Day" on friday after 11 november
+"Canterbury Anniversary Day"         on friday after 11 november
 :: South Canterbury nominally 16 December moves to 4th Monday in September
-"South Canterbury Day"     on fourth monday in september
+"South Canterbury Anniversary Day"   on fourth monday in september
 :: Westland nominally 1 December
-"Westland Day"             on monday after 28 november
+"Westland Anniversary Day"           on monday after 28 november
 :: Otago nominally 23 March
-"Otago Day"                on monday after 20 march
+"Otago Anniversary Day"              on monday after 20 march
 :: Southland nominally 17 January
-"Southland Day"            on monday after 14 march
+"Southland Anniversary Day"          on monday after 14 march
 :: Chatham Islands nominally 30 November
-"Chatham's Day"            on monday after 27 november
+"Chatham Islands Anniversary Day"    on monday after 27 november
 
 :: Religious Holidays
 :"Epiphany                 on sunday after january 2
