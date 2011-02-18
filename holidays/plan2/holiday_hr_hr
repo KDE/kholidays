@@ -5,7 +5,7 @@
 ::
 :: Author:   Marko Dimjašević <marko@dimjasevic.net>
 ::
-:: Updated:  2010-09-13
+:: Updated:  2011-02-13
 ::
 :: Source:   Hrvatski sabor: Zakon o blagdanima, spomendanima i neradnim danima
 ::           u Republici Hrvatskoj
@@ -51,13 +51,15 @@ description "Datoteka s blagdanima, spomendanima i neradnim danima u Hrvatskoj"
 "Valentinovo"                                                      on february 14
 "Međunarodni dan žena"                                             on march 8
 "Svjetski dan kazališta"                                           on march 27
-"Dan slobode dokumenata"                                           on last wednesday in march
+"Dan slobodnih dokumenata"                                         on last wednesday in march
 "Prvotravanjska šala"                                              on april 1
 "Svjetski dan smijeha"                                             on first sunday in may
 "Majčin dan"                                                       on second sunday in may
+"Svjetski dan informacijskog društva"                              on may 17
 "Dan očeva"                                                        on third sunday in june
 "Međunarodni dan mladih"                                           on august 12
 "Dan slobodnog softvera"                                           on third saturday in september
+"Međunarodni dan mira"                                             on september 21
 "Dan sjećanja na Vukovar"                                          on november 18
 "Dan hrvatskog kazališta"                                          on november 24
 "Međunarodni dan volontera"                                        on december 5
