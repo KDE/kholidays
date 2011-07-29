@@ -131,8 +131,8 @@ void HolidayRegionSelector::Private::initItem( QTreeWidgetItem *listItem, Holida
   combo->setCurrentIndex( 0 );
   listItem->setData( Private::ComboColumn, Qt::UserRole, NotUsed );
   m_ui.regionTreeWidget->setItemWidget( listItem, ComboColumn, combo );
-  connect( combo, SIGNAL( currentIndexChanged( int ) ),
-           q,     SLOT(   itemChanged( int ) ) );
+  connect( combo, SIGNAL(currentIndexChanged(int)),
+           q,     SLOT(itemChanged(int)) );
   m_ui.regionTreeWidget->blockSignals( false );
 }
 
@@ -255,8 +255,8 @@ HolidayRegionSelector::HolidayRegionSelector( QWidget *parent )
   d->m_ui.regionTreeWidget->setItemsExpandable( false );
   d->m_ui.regionTreeWidget->setUniformRowHeights( true );
   d->m_ui.regionTreeWidget->setAllColumnsShowFocus( true );
-  connect( d->m_ui.regionTreeWidget, SIGNAL( itemChanged( QTreeWidgetItem*, int ) ),
-           this,                     SLOT(   itemChanged( QTreeWidgetItem*, int ) ) );
+  connect( d->m_ui.regionTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*,int)),
+           this,                     SLOT(itemChanged(QTreeWidgetItem*,int)) );
 
   QMap<QString, QStringList> regionCodeMap;
   QMap<QString, HolidayRegion*> regionMap;
