@@ -32,42 +32,42 @@ using namespace KHolidays;
 
 class HolidayRegionSelector::Private
 {
-public:
-  Private( HolidayRegionSelector *q_ptr )
-  {
-    q = q_ptr;
-  }
+  public:
+    Private( HolidayRegionSelector *q_ptr )
+    {
+      q = q_ptr;
+    }
 
-  ~Private()
-  {
-  }
+    ~Private()
+    {
+    }
 
-  // Reorder this to change column order
-  enum Column {
-    RegionColumn = 0,
-    LanguageColumn,
-    DescriptionColumn,
-    SelectColumn,
-    ComboColumn
-  };
+    // Reorder this to change column order
+    enum Column {
+      RegionColumn = 0,
+      LanguageColumn,
+      DescriptionColumn,
+      SelectColumn,
+      ComboColumn
+    };
 
-  void clearSelection();
-  QTreeWidgetItem *findItem( const QString &holidayRegionCode );
-  void initItem( QTreeWidgetItem *listItem, HolidayRegion *region );
-  QString itemRegion( QTreeWidgetItem *item );
-  QString itemLanguage( QTreeWidgetItem *item );
-  SelectionStatus itemSelectionStatus( QTreeWidgetItem *item );
-  void setItemStatus( QTreeWidgetItem *item, SelectionStatus status );
-  KComboBox *itemCombo( QTreeWidgetItem *item );
-  void setItemRegionUseFlags( QTreeWidgetItem *item, RegionUseFlags regionUseFlags );
-  HolidayRegionSelector::RegionUseFlags itemRegionUseFlags( QTreeWidgetItem *item );
+    void clearSelection();
+    QTreeWidgetItem *findItem( const QString &holidayRegionCode );
+    void initItem( QTreeWidgetItem *listItem, HolidayRegion *region );
+    QString itemRegion( QTreeWidgetItem *item );
+    QString itemLanguage( QTreeWidgetItem *item );
+    SelectionStatus itemSelectionStatus( QTreeWidgetItem *item );
+    void setItemStatus( QTreeWidgetItem *item, SelectionStatus status );
+    KComboBox *itemCombo( QTreeWidgetItem *item );
+    void setItemRegionUseFlags( QTreeWidgetItem *item, RegionUseFlags regionUseFlags );
+    HolidayRegionSelector::RegionUseFlags itemRegionUseFlags( QTreeWidgetItem *item );
 
-  QAbstractItemView::SelectionMode m_selectionMode;
-  bool m_enableRegionUseFlags;
-  QStringList m_languageFilter;
-  QStringList m_holidayRegionCodes;
-  Ui::holidayRegionSelector m_ui;
-  HolidayRegionSelector *q;
+    QAbstractItemView::SelectionMode m_selectionMode;
+    bool m_enableRegionUseFlags;
+    QStringList m_languageFilter;
+    QStringList m_holidayRegionCodes;
+    Ui::holidayRegionSelector m_ui;
+    HolidayRegionSelector *q;
 };
 
 void HolidayRegionSelector::Private::clearSelection()
@@ -88,7 +88,8 @@ QTreeWidgetItem *HolidayRegionSelector::Private::findItem( const QString &holida
 {
   QTreeWidgetItemIterator it( m_ui.regionTreeWidget );
   while ( *it ) {
-    if ( (*it)->data( HolidayRegionSelector::Private::RegionColumn, Qt::UserRole ) == holidayRegionCode ) {
+    if ( (*it)->data( HolidayRegionSelector::Private::RegionColumn, Qt::UserRole ) ==
+         holidayRegionCode ) {
       return (*it);
     }
     ++it;
@@ -101,17 +102,17 @@ void HolidayRegionSelector::Private::initItem( QTreeWidgetItem *listItem, Holida
   m_ui.regionTreeWidget->blockSignals( true );
   QString languageName = KGlobal::locale()->languageCodeToName( region->languageCode() );
   listItem->setCheckState( Private::SelectColumn, Qt::Unchecked );
-  QString text = i18n("<p>Select to use Holiday Region</p>");
+  QString text = i18n( "<p>Select to use Holiday Region</p>" );
   listItem->setToolTip( Private::SelectColumn, text );
   listItem->setToolTip( Private::ComboColumn, text );
-  text = i18n("<p>Select to use Holiday Region</p>");
+  text = i18n( "<p>Select to use Holiday Region</p>" );
   listItem->setToolTip( Private::SelectColumn, text );
   listItem->setToolTip( Private::ComboColumn, text );
   listItem->setText( Private::RegionColumn, region->name() );
-  QString toolTip = i18n("<p><b>Region:</b> %1<br/>"
-                         "<b>Language:</b> %2<br/>"
-                         "<b>Description:</b> %3</p>",
-                         region->name(), languageName, region->description() );
+  QString toolTip = i18n( "<p><b>Region:</b> %1<br/>"
+                          "<b>Language:</b> %2<br/>"
+                          "<b>Description:</b> %3</p>",
+                          region->name(), languageName, region->description() );
   listItem->setToolTip( Private::RegionColumn, toolTip );
   listItem->setData( Private::RegionColumn, Qt::UserRole, region->regionCode() );
   listItem->setText( Private::LanguageColumn, languageName );
@@ -120,19 +121,25 @@ void HolidayRegionSelector::Private::initItem( QTreeWidgetItem *listItem, Holida
   listItem->setToolTip( Private::DescriptionColumn, region->description() );
   KComboBox *combo = new KComboBox();
   combo->setAutoFillBackground( true );
-  QString comboText = i18n("<p>You can choose to display the Holiday Region for information only, or to use the Holiday Region when displaying or calculating days off such as Public Holidays.  If you choose to use the Holiday Region for Days Off, then only those Holiday Events marked in the Holiday Region as Days Off will be used for non-work days, Holiday Events that are not marked in the Holiday Region as Days Off will continue to be work days.</p>");
+  QString comboText = i18n( "<p>You can choose to display the Holiday Region for information only, "
+                            "or to use the Holiday Region when displaying or calculating days off "
+                            "such as Public Holidays.  If you choose to use the Holiday Region for "
+                            "Days Off, then only those Holiday Events marked in the Holiday Region "
+                            "as Days Off will be used for non-work days, Holiday Events that are "
+                            "not marked in the Holiday Region as Days Off will continue to be "
+                            "work days.</p>" );
   combo->setToolTip( comboText );
-  comboText = i18nc("Combobox label, Holiday Region not used", "Not Used");
+  comboText = i18nc( "Combobox label, Holiday Region not used", "Not Used" );
   combo->addItem( comboText, QVariant( NotUsed ) );
-  comboText = i18nc("Combobox label, use Holiday Region for information only", "Information");
+  comboText = i18nc( "Combobox label, use Holiday Region for information only", "Information" );
   combo->addItem( comboText, QVariant( UseInformationOnly ) );
-  comboText = i18nc("Combobox label, use Holiday Region for days off", "Days Off");
+  comboText = i18nc( "Combobox label, use Holiday Region for days off", "Days Off" );
   combo->addItem( comboText, QVariant( UseDaysOff ) );
   combo->setCurrentIndex( 0 );
   listItem->setData( Private::ComboColumn, Qt::UserRole, NotUsed );
   m_ui.regionTreeWidget->setItemWidget( listItem, ComboColumn, combo );
   connect( combo, SIGNAL(currentIndexChanged(int)),
-           q,     SLOT(itemChanged(int)) );
+           q, SLOT(itemChanged(int)) );
   m_ui.regionTreeWidget->blockSignals( false );
 }
 
@@ -146,13 +153,16 @@ QString HolidayRegionSelector::Private::itemLanguage( QTreeWidgetItem *item )
   return item->data( Private::LanguageColumn, Qt::UserRole ).toString();
 }
 
-HolidayRegionSelector::SelectionStatus HolidayRegionSelector::Private::itemSelectionStatus( QTreeWidgetItem *item )
+HolidayRegionSelector::SelectionStatus
+HolidayRegionSelector::Private::itemSelectionStatus( QTreeWidgetItem *item )
 {
-  return (HolidayRegionSelector::SelectionStatus)
-         item->data( Private::SelectColumn, Qt::UserRole ).toInt();
+  return
+    ( HolidayRegionSelector::SelectionStatus )
+    item->data( Private::SelectColumn, Qt::UserRole ).toInt();
 }
 
-void HolidayRegionSelector::Private::setItemRegionUseFlags( QTreeWidgetItem *item, RegionUseFlags regionUseFlags )
+void HolidayRegionSelector::Private::setItemRegionUseFlags( QTreeWidgetItem *item,
+                                                            RegionUseFlags regionUseFlags )
 {
   // Just do simple flags for now, cheat on the index
   item->setData( ComboColumn, Qt::UserRole, QVariant( regionUseFlags ) );
@@ -168,14 +178,15 @@ void HolidayRegionSelector::Private::setItemRegionUseFlags( QTreeWidgetItem *ite
   }
 }
 
-HolidayRegionSelector::RegionUseFlags HolidayRegionSelector::Private::itemRegionUseFlags( QTreeWidgetItem *item )
+HolidayRegionSelector::RegionUseFlags
+HolidayRegionSelector::Private::itemRegionUseFlags( QTreeWidgetItem *item )
 {
   return (RegionUseFlags) item->data( ComboColumn, Qt::UserRole ).toInt();
 }
 
 KComboBox *HolidayRegionSelector::Private::itemCombo( QTreeWidgetItem *item )
 {
-  return static_cast<KComboBox*> (m_ui.regionTreeWidget->itemWidget( item, ComboColumn ) );
+  return static_cast<KComboBox*>( m_ui.regionTreeWidget->itemWidget( item, ComboColumn ) );
 }
 
 void HolidayRegionSelector::Private::setItemStatus( QTreeWidgetItem *item, SelectionStatus status )
@@ -218,9 +229,8 @@ void HolidayRegionSelector::Private::setItemStatus( QTreeWidgetItem *item, Selec
   m_ui.regionTreeWidget->blockSignals( false );
 }
 
-HolidayRegionSelector::HolidayRegionSelector( QWidget *parent )
-                     : QWidget( parent ),
-                       d( new Private( this ) )
+HolidayRegionSelector::HolidayRegionSelector( QWidget *parent ) :
+  QWidget( parent ), d( new Private( this ) )
 {
   d->m_ui.setupUi( this );
 
@@ -228,7 +238,7 @@ HolidayRegionSelector::HolidayRegionSelector( QWidget *parent )
   d->m_ui.regionTreeWidget->setColumnCount( 5 );
   QTreeWidgetItem *headerItem = d->m_ui.regionTreeWidget->headerItem();
   QString header = i18nc( "Header for Select column", "Select" );
-  QString text = i18n("<p>This column selects to use the Holiday Region</p>");
+  QString text = i18n( "<p>This column selects to use the Holiday Region</p>" );
   headerItem->setText( Private::SelectColumn, header );
   headerItem->setToolTip( Private::SelectColumn, text );
   headerItem->setWhatsThis( Private::SelectColumn, text );
@@ -236,17 +246,17 @@ HolidayRegionSelector::HolidayRegionSelector( QWidget *parent )
   headerItem->setToolTip( Private::ComboColumn, text );
   headerItem->setWhatsThis( Private::ComboColumn, text );
   header = i18nc( "Header for Holiday Region column", "Region" );
-  text = i18n("<p>This column displays the name of the Holiday Region</p>");
+  text = i18n( "<p>This column displays the name of the Holiday Region</p>" );
   headerItem->setText( Private::RegionColumn, header );
   headerItem->setToolTip( Private::RegionColumn, text );
   headerItem->setWhatsThis( Private::RegionColumn, text );
   header = i18nc( "Header for Language column", "Language" );
-  text = i18n("<p>This column displays the language of the Holiday Region</p>");
+  text = i18n( "<p>This column displays the language of the Holiday Region</p>" );
   headerItem->setText( Private::LanguageColumn, header );
   headerItem->setToolTip( Private::LanguageColumn, text );
   headerItem->setWhatsThis( Private::LanguageColumn, text );
   header = i18nc( "Header for Description column", "Description" );
-  text = i18n("<p>This column displays the description of the Holiday Region</p>");
+  text = i18n( "<p>This column displays the description of the Holiday Region</p>" );
   headerItem->setText( Private::DescriptionColumn, header );
   headerItem->setToolTip( Private::DescriptionColumn, text );
   headerItem->setWhatsThis( Private::DescriptionColumn, text );
@@ -256,13 +266,13 @@ HolidayRegionSelector::HolidayRegionSelector( QWidget *parent )
   d->m_ui.regionTreeWidget->setUniformRowHeights( true );
   d->m_ui.regionTreeWidget->setAllColumnsShowFocus( true );
   connect( d->m_ui.regionTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*,int)),
-           this,                     SLOT(itemChanged(QTreeWidgetItem*,int)) );
+           this, SLOT(itemChanged(QTreeWidgetItem*,int)) );
 
   QMap<QString, QStringList> regionCodeMap;
   QMap<QString, HolidayRegion*> regionMap;
   foreach ( const QString &regionCode, HolidayRegion::regionCodes() ) {
     regionMap[regionCode] = new HolidayRegion( regionCode );
-    QString country = regionMap[regionCode]->countryCode().split('-').at(0);
+    QString country = regionMap[regionCode]->countryCode().split( '-' ).at(0);
     regionCodeMap[country].append( regionCode );
   }
 
@@ -352,7 +362,8 @@ void HolidayRegionSelector::setSelectionStatus( const QString &holidayRegionCode
   }
 }
 
-HolidayRegionSelector::SelectionStatus HolidayRegionSelector::selectionStatus( const QString &holidayRegionCode ) const
+HolidayRegionSelector::SelectionStatus
+HolidayRegionSelector::selectionStatus( const QString &holidayRegionCode ) const
 {
   QTreeWidgetItem *item = d->findItem( holidayRegionCode );
   if ( item ) {
@@ -361,7 +372,8 @@ HolidayRegionSelector::SelectionStatus HolidayRegionSelector::selectionStatus( c
   return HolidayRegionSelector::RegionHidden;
 }
 
-QHash<QString, HolidayRegionSelector::SelectionStatus> HolidayRegionSelector::selectionStatus() const
+QHash<QString, HolidayRegionSelector::SelectionStatus>
+HolidayRegionSelector::selectionStatus() const
 {
   QHash<QString, HolidayRegionSelector::SelectionStatus> selection;
   QTreeWidgetItemIterator it( d->m_ui.regionTreeWidget );
@@ -372,7 +384,8 @@ QHash<QString, HolidayRegionSelector::SelectionStatus> HolidayRegionSelector::se
   return selection;
 }
 
-QStringList HolidayRegionSelector::selection( HolidayRegionSelector::SelectionStatus selectionStatus ) const
+QStringList
+HolidayRegionSelector::selection( HolidayRegionSelector::SelectionStatus selectionStatus ) const
 {
   if ( selectionMode() == QAbstractItemView::NoSelection ) {
     return QStringList();
@@ -389,7 +402,8 @@ QStringList HolidayRegionSelector::selection( HolidayRegionSelector::SelectionSt
   return selection;
 }
 
-QStringList HolidayRegionSelector::selection( HolidayRegionSelector::RegionUseFlags regionUseFlags ) const
+QStringList
+HolidayRegionSelector::selection( HolidayRegionSelector::RegionUseFlags regionUseFlags ) const
 {
   if ( selectionMode() == QAbstractItemView::NoSelection ) {
     return QStringList();
@@ -406,8 +420,9 @@ QStringList HolidayRegionSelector::selection( HolidayRegionSelector::RegionUseFl
   return selection;
 }
 
-void HolidayRegionSelector::setRegionUseFlags( const QString &holidayRegionCode,
-                                               HolidayRegionSelector::RegionUseFlags regionUseFlags )
+void
+HolidayRegionSelector::setRegionUseFlags( const QString &holidayRegionCode,
+                                          HolidayRegionSelector::RegionUseFlags regionUseFlags )
 {
   QTreeWidgetItem *item = d->findItem( holidayRegionCode );
   if ( item ) {
@@ -415,7 +430,8 @@ void HolidayRegionSelector::setRegionUseFlags( const QString &holidayRegionCode,
   }
 }
 
-HolidayRegionSelector::RegionUseFlags HolidayRegionSelector::regionUseFlags( const QString &holidayRegionCode ) const
+HolidayRegionSelector::RegionUseFlags
+HolidayRegionSelector::regionUseFlags( const QString &holidayRegionCode ) const
 {
   QTreeWidgetItem *item = d->findItem( holidayRegionCode );
   if ( item ) {
@@ -450,12 +466,13 @@ void HolidayRegionSelector::itemChanged( QTreeWidgetItem *item, int column )
 // The slot for the combo box when changed
 void HolidayRegionSelector::itemChanged( int index )
 {
-  KComboBox *combo = static_cast<KComboBox*> (sender());
+  KComboBox *combo = static_cast<KComboBox*>( sender() );
   QTreeWidgetItemIterator it( d->m_ui.regionTreeWidget );
   bool found = false;
   while ( *it && !found ) {
     if ( d->itemCombo( (*it) ) == combo ) {
-      (*it)->setData( Private::ComboColumn, Qt::UserRole, d->itemCombo( (*it) )->itemData( index ) );
+      (*it)->setData(
+        Private::ComboColumn, Qt::UserRole, d->itemCombo( (*it) )->itemData( index ) );
       if ( d->itemRegionUseFlags( (*it) ) == NotUsed )  {
         d->setItemStatus( (*it), RegionAvailable );
       } else {
@@ -477,7 +494,8 @@ void HolidayRegionSelector::setLanguageFilter( const QStringList &languages )
   // First reset to visible those languages previously hidden
   QTreeWidgetItemIterator it( d->m_ui.regionTreeWidget );
   while ( *it ) {
-    if ( !d->m_languageFilter.contains( (*it)->data( Private::LanguageColumn, Qt::UserRole ).toString() ) ) {
+    if ( !d->m_languageFilter.contains(
+           (*it)->data( Private::LanguageColumn, Qt::UserRole ).toString() ) ) {
       d->setItemStatus( (*it), RegionAvailable );
     }
     ++it;

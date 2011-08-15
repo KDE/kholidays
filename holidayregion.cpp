@@ -53,12 +53,13 @@ class HolidayRegion::Private
                                       "libkholidays/plan2/holiday_" + mLocation + '*',
                                       KStandardDirs::NoDuplicates );
           if ( locationFiles.count() > 0 ) {
-            mRegionCode = locationFiles.at( 0 )
-                                       .mid( locationFiles.at( 0 ).lastIndexOf( "holiday_" ) + 8 );
+            mRegionCode = locationFiles.at( 0 ).
+                          mid( locationFiles.at( 0 ).lastIndexOf( "holiday_" ) + 8 );
           }
         }
 
-        mHolidayFile.setFile( KStandardDirs::locate( "data", "libkholidays/plan2/holiday_" + mRegionCode ) );
+        mHolidayFile.setFile(
+          KStandardDirs::locate( "data", "libkholidays/plan2/holiday_" + mRegionCode ) );
       }
 
       init();
@@ -420,7 +421,7 @@ QString HolidayRegion::defaultRegionCode( const QString &country, const QString 
     localeLanguage = language.toLower();
   }
 
-  if ( localeLanguage.split('_').count() > 1 ) {
+  if ( localeLanguage.split( '_' ).count() > 1 ) {
     localeLanguageCountry = localeLanguage.split( '_' ).at( 1 );
   }
 
