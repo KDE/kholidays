@@ -1,0 +1,49 @@
+::
+:: Country:  Singapore
+::
+:: Language: UK English
+::
+:: Author:   M. Keller <keller1976@gmail.com>
+::
+:: Updated:  2012-01-27
+::
+:: Source:   http://www.mom.gov.sg/employment-practices/employment-rights-conditions/leave-and-holiday/Pages/PublicHolidays2012.aspx
+::           http://www.officeholidays.com/countries/singapore/2013.asp       
+
+:: Metadata
+country     "SG"
+language    "en_GB"
+:name        "optional - defaults to country name"
+description "National holiday file for Singapore"
+
+:: Public Holidays
+"New Year's Day"                 weekend on january 1
+"Chinese New Year"               weekend on january 23 2012 length 2 days
+"Chinese New Year"               weekend on february 10 2013 length 2 days
+"Good Friday"                    weekend on easter minus 2
+"Labour Day"                     weekend on may 1
+"Vesak Day"                      weekend on may 5 2012
+"Vesak Day"                      weekend on may 25 2013
+"National Day"                   weekend on august 9
+"Hari Raya Puasa"                weekend on august 19 2012
+"Hari Raya Puasa"                weekend on august 8 2013
+"Hari Raya Haji"                 weekend on october 26 2012
+"Hari Raya Haji"                 weekend on october 15 2013
+"Deepavali"                      weekend on november 13 2012
+"Deepavali"                      weekend on november 3 2013
+"Christmas Day"                  weekend on december 25
+
+:: Religious Holidays
+
+:: Financial
+
+:: Cultural
+
+:: School
+
+:: Daylight Saving
+
+:: Seasons
+
+:: Name Days
+
