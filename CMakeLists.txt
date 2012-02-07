@@ -51,7 +51,7 @@ if (QT_QTDESIGNER_FOUND)
   target_link_libraries(kholidayswidgets  ${KDE4_KIO_LIBS} kholidays)
 
   install(TARGETS kholidayswidgets  DESTINATION ${PLUGIN_INSTALL_DIR}/plugins/designer)
-endif (QT_QTDESIGNER_FOUND)
+endif()
 
 ########### install files ###############
 
