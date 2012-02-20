@@ -58,7 +58,7 @@ description "Public Holidays for Hong Kong"
 "Lunar New Year"                                      weekend on 16 february 2018 length 3 days
 "Lunar New Year"                                      weekend on 5 february 2019 length 3 days
 "Lunar New Year's Eve Holiday"                        weekend on 24 january
-"Lunar New Year"                                      weekend on 25 january 2018 length 3 days
+"Lunar New Year"                                      weekend on 25 january 2020 length 3 days
 : Ching Ming Festival 5 April or 4 April in leap years (or if that day is a Sunday, then the following day)
 "Ching Ming Festival"                                 weekend on ((leapyear year) ? [april 4] : [april 5])
 "Ching Ming Festival Holiday"                         weekend on ((leapyear year) ?
