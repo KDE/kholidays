@@ -244,6 +244,8 @@ QString HolidayRegion::name() const
           regionName = i18nc( "Australian Region", "Western Australia" );
         } else if ( country == "au" && subdivision == "tas" ) {
           regionName = i18nc( "Australian Region", "Tasmania" );
+        } else if ( country == "ba" && subdivision == "srp" ) {
+          regionName = i18nc( "Bosnian and Herzegovinian Region", "Republic of Srpska" );
         } else {
           regionName = KGlobal::locale()->countryCodeToName( country );
         }
