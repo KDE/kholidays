@@ -36,21 +36,24 @@ kde4_add_library(kholidays ${LIBRARY_TYPE} ${kholidays_LIB_SRCS})
 
 target_link_libraries(kholidays ${KDE4_KDEUI_LIBS} ${QT_QTGUI_LIBRARY})
 
-set_target_properties(kholidays PROPERTIES VERSION ${GENERIC_LIB_VERSION} SOVERSION ${GENERIC_LIB_SOVERSION})
+set_target_properties(kholidays PROPERTIES
+  VERSION ${GENERIC_LIB_VERSION}
+  SOVERSION ${GENERIC_LIB_SOVERSION}
+)
+
 install(TARGETS kholidays EXPORT kdepimlibsLibraryTargets ${INSTALL_TARGETS_DEFAULT_ARGS})
 
 ########### next target ###############
 
-if (QT_QTDESIGNER_FOUND)
+if(QT_QTDESIGNER_FOUND)
   set(kholidayswidgets_PART_SRCS)
   kde4_add_widget_files(kholidayswidgets_PART_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/kholidays.widgets)
 
   kde4_add_plugin(kholidayswidgets ${kholidayswidgets_PART_SRCS})
 
+  target_link_libraries(kholidayswidgets ${KDE4_KIO_LIBS} kholidays)
 
-  target_link_libraries(kholidayswidgets  ${KDE4_KIO_LIBS} kholidays)
-
-  install(TARGETS kholidayswidgets  DESTINATION ${PLUGIN_INSTALL_DIR}/plugins/designer)
+  install(TARGETS kholidayswidgets DESTINATION ${PLUGIN_INSTALL_DIR}/plugins/designer)
 endif()
 
 ########### install files ###############
