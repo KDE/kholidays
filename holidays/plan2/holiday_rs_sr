@@ -1,0 +1,182 @@
+::
+:: Country:   Serbia
+::
+:: Language:  Serbian
+::
+:: Author:    Саша Јовановић <sjova83@gmail.com>
+::            Слободан Терзић <githzerai06@gmail.com>
+::            Далибор Ђурић <daliborddjuric@gmail.com>
+::
+:: Updated:   2012-06-27
+::
+:: Source:    http://www.minrzs.gov.rs/cms/pocetna/index.php?option=com_content&view=article&id=336
+::            http://en.wikipedia.org/wiki/Public_holidays_in_Serbia
+::            http://www.veronauka.org.rs/kalendar/
+::            http://www.pravoslavnikalendar.iz.rs/
+::            http://sr.wikipedia.org/wiki/Покретни_празници_код_православаца
+::            http://sr.wikipedia.org/wiki/Српски_народни_календар
+::
+
+:: Metadata
+country       "RS"
+language      "sr"
+:name         "Србија"
+description   "Фајл са празницима у Републици Србији"
+
+:: Public Holidays
+"Нова година"                                                                              weekend on january 1 length 2 days
+"Нова година (нерадни дан)"                                                                weekend on ( ( ( [january 2] == [sunday after ([january 2])] ) ) ?
+                                                                                                            [ monday after ([january 2]) ] : noop )
+"Православни Божић"                                                                        weekend on january 7
+"Српска Нова Година (Васиљевдан)"                                                          weekend on january 14
+"Свети Сава (Савиндан)"                                                                    weekend on january 27
+"Дан државности"                                                                           weekend on february 15 length 2 days
+"Дан државности (нерадни дан)"                                                             weekend on ( ( ( [february 16] == [sunday after ([february 16])] ) ) ?
+                                                                                                            [ monday after ([february 16]) ] : noop )
+"Дан жена"                                                                                 weekend on march 8
+"Велики петак"                                                                             weekend on pascha minus 2 days
+"Васкрс"                                                                                   weekend on pascha
+"Васкрсни понедељак"                                                                       weekend on pascha plus 1 days
+"Празник рада"                                                                             weekend on may 1 length 2 days
+"Празник рада (нерадни дан)"                                                               weekend on ( ( ( [may 2] == [sunday after ([may 2])] ) ) ?
+                                                                                                             [ monday after ([may 2]) ] : noop )
+"Дан сећања на жртве холокауста, геноцида и других жртава фашизма у Другом светском рату"  weekend on april 22
+"Дан победе"                                                                               weekend on may 9
+"Видовдан"                                                                                 weekend on june 28
+"Дан примирја у Првом светском рату"                                                       weekend on ( ( ( [november 11] == [sunday after ([november 11])] ) ) ?
+                                                                                                            [ monday after ([november 11]) ] : noop )
+"Дан сећања на српске жртве у Другом светском рату"                                        weekend on october 21
+
+:: Religious Holidays
+"Св. Игњатије Богоносац"                                                                   on julian december 20
+"Туциндан"                                                                                 on julian december 23
+"Бадњи дан"                                                                                on julian december 24
+"Сабор Пресвете Богородице"                                                                on julian december 26
+"Свети Првомученик и Архиђакон Стефан (Стевањдан)"                                         on julian december 27
+"Крстовдан"                                                                                on julian january 5
+"Богојављење"                                                                              on julian january 6
+"Јовањдан"                                                                                 on julian january 7
+"Часне вериге Светог апостола Петра (Верижњаци)"                                           on julian january 16
+"Свети Атанасије Велики"                                                                   on julian january 18
+"Света Три Јерарха"                                                                        on julian january 30
+"Свети мученик Трифун (Тривундан)"                                                         on julian february 1
+"Сретење Господње"                                                                         on julian february 2
+"Свети Симеон и Ана"                                                                       on julian february 3
+"Свети свештеномученик Харалампије"                                                        on julian february 10
+"Велике (зимске) задушнице"                                                                weekend on saturday before ([pascha]) minus 56 days
+"Свети великомученик Теодор Тирон"                                                         on julian february 17
+"Прво и друго обретење главе светог Јована Крститеља"                                      on julian february 24
+"Теодорова субота"                                                                         weekend on saturday after ([pascha]) minus 49 days
+"Младенци"                                                                                 on julian march 9
+"Свети Алексије Човек Божји"                                                               on julian march 17
+"Прво бденије"                                                                             weekend on pascha minus 18 days
+"Благовести"                                                                               on julian march 25
+"Сабор светог архангела Гаврила"                                                           on julian march 26
+"Друго бденије"                                                                            weekend on pascha minus 16 days
+"Лазарева субота (Врбица)"                                                                 weekend on pascha minus 8 days
+"Цвети"                                                                                    weekend on pascha minus 7 days
+"Велики Четвртак"                                                                          weekend on pascha minus 3 days
+"Велика Субота"                                                                            weekend on pascha minus 1 days
+"Васкрсни уторак"                                                                          weekend on pascha plus 2 days
+"Ђурђевдан"                                                                                on julian april 23
+"Марковдан"                                                                                on julian april 25
+"Свети Василије Острошки Чудотворац"                                                       on julian april 29
+"Свети пророк Јеремија (Јеремијиндан)"                                                     on julian may 1
+"Свети апостол и јеванђелист Јован Богослов"                                               on julian may 8
+"Пренос моштију светог оца Николаја (Летњи Никола)"                                        on julian may 9
+"Свети Ћирило и Методије"                                                                  on julian may 11
+"Спасовдан"                                                                                on pascha plus 39 days
+"Свети Цар Константин и Царица Јелена"                                                     on julian may 21
+"Треће обретење главе светог Јована Крститеља"                                             on julian may 25
+"Летње (духовске) задушнице"                                                               weekend on pascha plus 48 days
+"Тројице (Духови)"                                                                         weekend on pascha plus 49 days
+"Духовски понедељак"                                                                       weekend on pascha plus 50 days
+"Духовски уторак"                                                                          weekend on pascha plus 51 days
+"Свети апостоли Вартоломеј и Варнава"                                                      on julian june 11
+"Свети пророк Јелисеј"                                                                     on julian june 14
+"Ивањдан"                                                                                  on julian june 24
+"Петровдан"                                                                                on julian june 29
+"Павловдан"                                                                                on julian june 30
+"Свети мученици и бесребреници Козма и Дамјан"                                             on julian july 1
+"Свети великомученик Прокопије"                                                            on julian july 8
+"Сабор светог архангела Гаврила (Летњи Гаврило)"                                           on julian july 13
+"Свети мученици Кирик и Јулита (Ћириловдан)"                                               on julian july 15
+"Огњена Марија"                                                                            on julian july 17
+"Илиндан"                                                                                  on julian july 20
+"Блага Марија"                                                                             on julian july 22
+"Петка (Трнова Петка)"                                                                     on julian july 26
+"Свети великомученик Пантелејмон (Пантелијевдан)"                                          on julian july 27
+"Св. мученици Макавеји"                                                                    on julian august 1
+"Преображење Господње"                                                                     on julian august 6
+"Велика Госпојина"                                                                         on julian august 15
+"Свети мученик Агатоник"                                                                   on julian august 22
+"Свети мученици Адријан и Наталија"                                                        on julian august 26
+"Усековање Главе Светог Јована Крститеља"                                                  on julian august 29
+"Пренос моштију светог Александра Невског"                                                 on julian august 30
+"Црквена Нова Година"                                                                      on julian september 1
+"Мала Госпојина"                                                                           on julian september 8
+"Свети праведни Јоаким и Ана"                                                              on julian september 9
+"Крстовдан јесењи"                                                                         on julian september 14
+"Свете мученице Вера, Нада и Љубав и мајка им Софија"                                      on julian september 17
+"Свети великомученик Јевстатије"                                                           on julian september 20
+"Зачеће светог Јована Претече и Крститеља"                                                 on julian september 23
+"Михољске задушнице"                                                                       on julian saturday before september 29
+"Свети апостол и јеванђелист Јован Богослов"                                               on julian september 26
+"Михољдан"                                                                                 on julian september 29
+"Покров Пресвете Богородице"                                                               on julian october 1
+"Томиндан"                                                                                 on julian october 6
+"Срђевдан"                                                                                 on julian october 7
+"Света Петка (Петковача)"                                                                  on julian october 14
+"Свети Петар Цетињски"                                                                     on julian october 18
+"Митровске (затворене) задушнице"                                                          on julian saturday before october 26
+"Митровдан"                                                                                on julian october 26
+"Свети Аврамије Затворник"                                                                 on julian october 29
+"Свети Петар Цетињски (Лучиндан)"                                                          on julian october 31
+"Vračevi"                                                                                  on julian november 1
+"Đurđic"                                                                                   on julian november 3
+"Aranđelovdan"                                                                             on julian november 8
+"Sveti mučenik Mina (Mratindan)"                                                           on julian november 11
+"Sveti Jovan Milostivi"                                                                    on julian november 12
+"Sveti Jovan Zlatousti"                                                                    on julian november 13
+"Sveti apostol Filip"                                                                      on julian november 14
+"Sveti apostol i jevanđelist Matej"                                                        on julian november 16
+"Vavedenje Presvete Bogorodice"                                                            on julian november 21
+"Sveta velikomučenica Ekaterina"                                                           on julian november 24
+"Sveti sveštenomučenik Kliment (Odanije Vavedenja)"                                        on julian november 25
+"Prepodobni Alimpije Stolpnik (Alimpijevdan)"                                              on julian november 26
+"Sveti apostol Andrej Prvozvani"                                                           on julian november 30
+"Sveta velikomučenica Varvara"                                                             on julian december 4
+"Prepodobni Sava Osvećeni (Savica)"                                                        on julian december 5
+"Nikoljdan"                                                                                on julian december 6
+"Detinjci"                                                                                 weekend on sunday before january 7 minus 14 days
+"Materice"                                                                                 weekend on sunday before january 7 minus 7 days
+"Oci"                                                                                      weekend on sunday before january 7
+
+:: Financial
+
+:: Cultural
+"Дан слободних докумената"                                                                 on last wednesday in march
+"Светски дан шале"                                                                         on april 1
+"Дан систем администратора"                                                                on last friday in july
+"Дан програмера"                                                                           on ( (leapyear year) ? [september 12] : [september 13] )
+"Дан слободног софтвера"                                                                   on third saturday in september
+
+:: School
+
+:: Daylight Saving
+"Летње рачунање времена (ГМТ+2)"                                                           on last sunday in march
+"Зимско рачунање времена (ГМТ+1)"                                                          on last sunday in october
+
+:: Seasons
+"Први дан пролећа"                                                                         on march 20
+"Први дан лета"                                                                            on june 21
+"Први дан јесени"                                                                          on september 23
+"Први дан зиме"                                                                            on december 22
+
+:: Name Days
+"Кокошији Божић"                                                                           weekend on january 2
+"Чумин дан"                                                                                weekend on january 31
+"Летник"                                                                                   weekend on march 14
+"Свети Стеван Ветровити"                                                                   weekend on august 15
+"Лесендрован"                                                                              weekend on september 12
+"Мечкин дан"                                                                               weekend on december 13
