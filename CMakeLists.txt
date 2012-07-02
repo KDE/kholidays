@@ -19,6 +19,7 @@ set(kholidays_LIB_SRCS
   holidayregion.cpp
   holidayregionselector.cpp
   lunarphase.cpp
+  sunriseset.cpp
   zodiac.cpp
   parsers/plan2/holidayscannerplan.cpp
   parsers/holidayparserdriver.cpp
