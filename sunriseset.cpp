@@ -169,8 +169,8 @@ static double calcHourAngleSunrise( double latitude, double solarDec )
 
 QTime KHolidays::SunRiseSet::utcSunrise( const QDate &date, double latitude, double longitude )
 {
-  latitude = qMax( qMin( 89.99d, latitude ), -89.99d );
-  longitude = qMax( qMin( 179.99d, longitude ), -179.99d );
+  latitude = qMax( qMin( 89.99, latitude ), -89.99 );
+  longitude = qMax( qMin( 179.99, longitude ), -179.99 );
 
   double t = calcTimeJulianCent( date.toJulianDay() );
   double eqTime = calcEquationOfTime( t );
@@ -186,8 +186,8 @@ QTime KHolidays::SunRiseSet::utcSunrise( const QDate &date, double latitude, dou
 
 QTime KHolidays::SunRiseSet::utcSunset( const QDate &date, double latitude, double longitude )
 {
-  latitude = qMax( qMin( 89.99d, latitude ), -89.99d );
-  longitude = qMax( qMin( 179.99d, longitude ), -179.99d );
+  latitude = qMax( qMin( 89.99, latitude ), -89.99 );
+  longitude = qMax( qMin( 179.99, longitude ), -179.99 );
 
   double t = calcTimeJulianCent( date.toJulianDay() );
   double eqTime = calcEquationOfTime( t );
