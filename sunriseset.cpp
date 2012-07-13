@@ -24,9 +24,9 @@
 
 #include "sunriseset.h"
 #include <cmath>
-
+#ifndef KDE_USE_FINAL
 static double PI = 3.14159265358979323846;
-
+#endif
 using namespace KHolidays;
 using namespace SunRiseSet;
 
