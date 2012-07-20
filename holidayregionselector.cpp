@@ -262,7 +262,7 @@ HolidayRegionSelector::HolidayRegionSelector( QWidget *parent ) :
   headerItem->setWhatsThis( Private::DescriptionColumn, text );
 
   d->m_ui.regionTreeWidget->setSelectionMode( QAbstractItemView::NoSelection );
-  d->m_ui.regionTreeWidget->setItemsExpandable( false );
+  d->m_ui.regionTreeWidget->setItemsExpandable( true ); //per bug 271628
   d->m_ui.regionTreeWidget->setUniformRowHeights( true );
   d->m_ui.regionTreeWidget->setAllColumnsShowFocus( true );
   connect( d->m_ui.regionTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*,int)),
