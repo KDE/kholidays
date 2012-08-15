@@ -110,7 +110,7 @@ Zodiac::ZodiacSigns Zodiac::signAtDate( const QDate &date ) const
 {
     QDate startdate, enddate;
 
-    switch( d->mType ) {
+    switch ( d->mType ) {
     case Tropical:
         startdate = QDate( date.year(), 1, 1 );
         enddate = QDate( date.year(), 1, 19 );
@@ -268,7 +268,7 @@ Zodiac::ZodiacSigns Zodiac::signAtDate( const QDate &date ) const
 
 QString Zodiac::signSymbol( Zodiac::ZodiacSigns sign )
 {
-  switch( sign ) {
+  switch ( sign ) {
   case Aries:
     return i18nc( "zodiac symbol for Aries", "ram" );
   case Taurus:

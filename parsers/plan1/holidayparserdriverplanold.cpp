@@ -89,7 +89,7 @@ void HolidayParserDriverPlanOld::parse()
         // Add this years holidays to holiday list
         for ( int i = 0; i < 366; ++i ) {
             struct holiday *hd = &::holidays[i];
-            thisDate = parseYearStart.addDays(i);
+            thisDate = parseYearStart.addDays( i );
             // Only add holidays if they fall inside requested range
             if ( thisDate >= m_requestStart && thisDate <= m_requestEnd ) {
                 while ( hd ) {
@@ -123,10 +123,10 @@ void HolidayParserDriverPlanOld::parseMetadata()
 
     QFileInfo file( m_filePath );
     if ( file.exists() ) {
-        QStringList metadata = file.fileName().split('_');
+        QStringList metadata = file.fileName().split( '_' );
         if ( metadata[0] == "holiday" && metadata.count() > 2 ) {
             m_fileCountryCode = metadata[1].toUpper();
-            QStringList language = metadata[2].split('-');
+            QStringList language = metadata[2].split( '-' );
             m_fileLanguageCode = language[0];
             if ( language.count() > 1 ) {
                 m_fileLanguageCode.append( '_' ).append( language[1].toUpper() );

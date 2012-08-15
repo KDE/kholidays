@@ -67,9 +67,9 @@ void HolidayRegionTest::parseRegionCalendarYear( const KHolidays::HolidayRegion 
 void HolidayRegionTest::parseRegionDateRange( const KHolidays::HolidayRegion &region, const QDate &startDate,
                                               const QDate &endDate, KHolidays::Holiday::MultidayMode multidayMode )
 {
-    kDebug() << "Parsing regionCode = " << region.regionCode() <<
-                " start date = " << startDate.toString( Qt::ISODate ) <<
-                " end date = " << endDate.toString( Qt::ISODate );
+    kDebug() << "Parsing regionCode = " << region.regionCode()
+             << " start date = " << startDate.toString( Qt::ISODate )
+             << " end date = " << endDate.toString( Qt::ISODate );
     printHolidays( region.holidays( startDate, endDate, multidayMode ) );
     kDebug() << "";
 }
@@ -100,9 +100,9 @@ void HolidayRegionTest::testGb()
 {
     KHolidays::HolidayRegion region( "gb-eaw_en-gb" );
     printMetadata( region );
-    parseRegionDateRange( region, QDate( 2010, 7, 1), QDate( 2011, 6, 30 ) );
-    parseRegionDateRange( region, QDate( 2010, 1, 1), QDate( 2012, 12, 31 ) );
-    parseRegionDateRange( region, QDate( 2010, 1, 1), QDate( 2010, 12, 31 ) );
+    parseRegionDateRange( region, QDate( 2010, 7, 1 ), QDate( 2011, 6, 30 ) );
+    parseRegionDateRange( region, QDate( 2010, 1, 1 ), QDate( 2012, 12, 31 ) );
+    parseRegionDateRange( region, QDate( 2010, 1, 1 ), QDate( 2010, 12, 31 ) );
     parseRegionDate( region, QDate( 2010, 1, 1 ) );
     parseRegionCalendarYear( region, 2010 );
     parseRegionCalendarYear( region, 2011 );

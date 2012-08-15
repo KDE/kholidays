@@ -75,10 +75,10 @@ void HolidayRegionSelector::Private::clearSelection()
   m_ui.regionTreeWidget->blockSignals( true );
   QTreeWidgetItemIterator it( m_ui.regionTreeWidget, QTreeWidgetItemIterator::Checked );
   while ( *it ) {
-    (*it)->setCheckState( Private::SelectColumn, Qt::Unchecked );
-    (*it)->setData( Private::SelectColumn, Qt::UserRole, RegionAvailable );
-    itemCombo( (*it) )->setCurrentIndex( 0 );
-    (*it)->setData( Private::ComboColumn, Qt::UserRole, NotUsed );
+    ( *it )->setCheckState( Private::SelectColumn, Qt::Unchecked );
+    ( *it )->setData( Private::SelectColumn, Qt::UserRole, RegionAvailable );
+    itemCombo( ( *it ) )->setCurrentIndex( 0 );
+    ( *it )->setData( Private::ComboColumn, Qt::UserRole, NotUsed );
     ++it;
   }
   m_ui.regionTreeWidget->blockSignals( false );
@@ -88,9 +88,9 @@ QTreeWidgetItem *HolidayRegionSelector::Private::findItem( const QString &holida
 {
   QTreeWidgetItemIterator it( m_ui.regionTreeWidget );
   while ( *it ) {
-    if ( (*it)->data( HolidayRegionSelector::Private::RegionColumn, Qt::UserRole ) ==
+    if ( ( *it )->data( HolidayRegionSelector::Private::RegionColumn, Qt::UserRole ) ==
          holidayRegionCode ) {
-      return (*it);
+      return ( *it );
     }
     ++it;
   }
@@ -166,7 +166,7 @@ void HolidayRegionSelector::Private::setItemRegionUseFlags( QTreeWidgetItem *ite
 {
   // Just do simple flags for now, cheat on the index
   item->setData( ComboColumn, Qt::UserRole, QVariant( regionUseFlags ) );
-  if ( regionUseFlags & UseDaysOff ){
+  if ( regionUseFlags & UseDaysOff ) {
     setItemStatus( item, RegionSelected );
     itemCombo( item )->setCurrentIndex( 2 );
   } else if ( regionUseFlags & UseInformationOnly ) {
@@ -272,7 +272,7 @@ HolidayRegionSelector::HolidayRegionSelector( QWidget *parent ) :
   QMap<QString, HolidayRegion*> regionMap;
   foreach ( const QString &regionCode, HolidayRegion::regionCodes() ) {
     regionMap[regionCode] = new HolidayRegion( regionCode );
-    QString country = regionMap[regionCode]->countryCode().split( '-' ).at(0);
+    QString country = regionMap[regionCode]->countryCode().split( '-' ).at( 0 );
     regionCodeMap[country].append( regionCode );
   }
 
@@ -378,7 +378,7 @@ HolidayRegionSelector::selectionStatus() const
   QHash<QString, HolidayRegionSelector::SelectionStatus> selection;
   QTreeWidgetItemIterator it( d->m_ui.regionTreeWidget );
   while ( *it ) {
-    selection.insert( d->itemRegion( (*it) ), d->itemSelectionStatus( (*it) ) );
+    selection.insert( d->itemRegion( ( *it ) ), d->itemSelectionStatus( ( *it ) ) );
     ++it;
   }
   return selection;
@@ -394,8 +394,8 @@ HolidayRegionSelector::selection( HolidayRegionSelector::SelectionStatus selecti
   QStringList selection;
   QTreeWidgetItemIterator it( d->m_ui.regionTreeWidget );
   while ( *it ) {
-    if ( d->itemSelectionStatus( (*it) ) == selectionStatus ) {
-      selection.append( d->itemRegion( (*it) ) );
+    if ( d->itemSelectionStatus( ( *it ) ) == selectionStatus ) {
+      selection.append( d->itemRegion( ( *it ) ) );
     }
     ++it;
   }
@@ -412,8 +412,8 @@ HolidayRegionSelector::selection( HolidayRegionSelector::RegionUseFlags regionUs
   QStringList selection;
   QTreeWidgetItemIterator it( d->m_ui.regionTreeWidget );
   while ( *it ) {
-    if ( d->itemRegionUseFlags( (*it) ) & regionUseFlags ) {
-      selection.append( d->itemRegion( (*it) ) );
+    if ( d->itemRegionUseFlags( ( *it ) ) & regionUseFlags ) {
+      selection.append( d->itemRegion( ( *it ) ) );
     }
     ++it;
   }
@@ -445,7 +445,7 @@ QHash<QString, HolidayRegionSelector::RegionUseFlags> HolidayRegionSelector::reg
   QHash<QString, HolidayRegionSelector::RegionUseFlags> selection;
   QTreeWidgetItemIterator it( d->m_ui.regionTreeWidget );
   while ( *it ) {
-    selection.insert( d->itemRegion( (*it) ), d->itemRegionUseFlags( (*it) ) );
+    selection.insert( d->itemRegion( ( *it ) ), d->itemRegionUseFlags( ( *it ) ) );
     ++it;
   }
   return selection;
@@ -470,13 +470,13 @@ void HolidayRegionSelector::itemChanged( int index )
   QTreeWidgetItemIterator it( d->m_ui.regionTreeWidget );
   bool found = false;
   while ( *it && !found ) {
-    if ( d->itemCombo( (*it) ) == combo ) {
-      (*it)->setData(
-        Private::ComboColumn, Qt::UserRole, d->itemCombo( (*it) )->itemData( index ) );
-      if ( d->itemRegionUseFlags( (*it) ) == NotUsed )  {
-        d->setItemStatus( (*it), RegionAvailable );
+    if ( d->itemCombo( ( *it ) ) == combo ) {
+      ( *it )->setData(
+        Private::ComboColumn, Qt::UserRole, d->itemCombo( ( *it ) )->itemData( index ) );
+      if ( d->itemRegionUseFlags( ( *it ) ) == NotUsed )  {
+        d->setItemStatus( ( *it ), RegionAvailable );
       } else {
-        d->setItemStatus( (*it), RegionSelected );
+        d->setItemStatus( ( *it ), RegionSelected );
       }
       found = true;
     }
@@ -495,8 +495,8 @@ void HolidayRegionSelector::setLanguageFilter( const QStringList &languages )
   QTreeWidgetItemIterator it( d->m_ui.regionTreeWidget );
   while ( *it ) {
     if ( !d->m_languageFilter.contains(
-           (*it)->data( Private::LanguageColumn, Qt::UserRole ).toString() ) ) {
-      d->setItemStatus( (*it), RegionAvailable );
+           ( *it )->data( Private::LanguageColumn, Qt::UserRole ).toString() ) ) {
+      d->setItemStatus( ( *it ), RegionAvailable );
     }
     ++it;
   }
@@ -504,14 +504,15 @@ void HolidayRegionSelector::setLanguageFilter( const QStringList &languages )
   d->m_languageFilter = languages;
   QTreeWidgetItemIterator it2( d->m_ui.regionTreeWidget );
   while ( *it2 ) {
-    QString language = (*it2)->data( Private::LanguageColumn, Qt::UserRole ).toString();
+    QString language = ( *it2 )->data( Private::LanguageColumn, Qt::UserRole ).toString();
     if ( d->m_languageFilter.contains( language ) ) {
       // Make sure the parent is always visible, otherwise the child is not visible
-      if ( (*it2)->parent() && (*it2)->parent() != d->m_ui.regionTreeWidget->invisibleRootItem() ) {
-        d->setItemStatus( (*it2)->parent(), RegionAvailable );
+      if ( ( *it2 )->parent() &&
+           ( *it2 )->parent() != d->m_ui.regionTreeWidget->invisibleRootItem() ) {
+        d->setItemStatus( ( *it2 )->parent(), RegionAvailable );
       }
     } else {
-      d->setItemStatus( (*it2), RegionHidden );
+      d->setItemStatus( ( *it2 ), RegionHidden );
     }
     ++it2;
   }

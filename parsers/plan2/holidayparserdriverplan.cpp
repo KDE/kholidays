@@ -91,7 +91,7 @@ void HolidayParserDriverPlan::error( const QString &errorMessage )
 void HolidayParserDriverPlan::parse()
 {
     // Parse the file using every calendar system in the file
-    foreach( const QString &calendar, m_fileCalendarTypes ) {
+    foreach ( const QString &calendar, m_fileCalendarTypes ) {
 
         // Cater for events defined in other Calendar Systems where request year could cover 2 or 3 event years
         // Perhaps also parse year before and year after to allow events to span years or shift to other year?
@@ -137,13 +137,13 @@ void HolidayParserDriverPlan::parseMetadata()
     // with region, type and language sub groups separated by -, and with name optional
     QFileInfo file( m_filePath );
     if ( file.exists() ) {
-        QStringList metadata = file.fileName().split('_');
+        QStringList metadata = file.fileName().split( '_' );
         if ( metadata[0] == "holiday" && metadata.count() > 2 ) {
             if ( m_fileCountryCode.isEmpty() ) {
                 setFileCountryCode( metadata[1].toUpper() );
             }
             if ( m_fileLanguageCode.isEmpty() ) {
-                QStringList language = metadata[2].split('-');
+                QStringList language = metadata[2].split( '-' );
                 m_fileLanguageCode = language[0];
                 if ( language.count() > 1 ) {
                     setFileLanguageCode( language[0].append( '_' ).append( language[1].toUpper() ) );
