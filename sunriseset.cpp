@@ -27,6 +27,9 @@
 #ifndef KDE_USE_FINAL
 static double PI = 3.14159265358979323846;
 #endif
+static double MaxLat = 89.99;
+static double MaxLong = 179.99;
+
 using namespace KHolidays;
 using namespace SunRiseSet;
 
@@ -169,8 +172,8 @@ static double calcHourAngleSunrise( double latitude, double solarDec )
 
 QTime KHolidays::SunRiseSet::utcSunrise( const QDate &date, double latitude, double longitude )
 {
-  latitude = qMax( qMin( 89.99, latitude ), -89.99 );
-  longitude = qMax( qMin( 179.99, longitude ), -179.99 );
+  latitude = qMax( qMin( MaxLat, latitude ), -MaxLat );
+  longitude = qMax( qMin( MaxLong, longitude ), -MaxLong );
 
   double t = calcTimeJulianCent( date.toJulianDay() );
   double eqTime = calcEquationOfTime( t );
@@ -186,8 +189,8 @@ QTime KHolidays::SunRiseSet::utcSunrise( const QDate &date, double latitude, dou
 
 QTime KHolidays::SunRiseSet::utcSunset( const QDate &date, double latitude, double longitude )
 {
-  latitude = qMax( qMin( 89.99, latitude ), -89.99 );
-  longitude = qMax( qMin( 179.99, longitude ), -179.99 );
+  latitude = qMax( qMin( MaxLat, latitude ), -MaxLat );
+  longitude = qMax( qMin( MaxLong, longitude ), -MaxLong );
 
   double t = calcTimeJulianCent( date.toJulianDay() );
   double eqTime = calcEquationOfTime( t );
