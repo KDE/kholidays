@@ -36,12 +36,23 @@ class HolidayRegion;
 class KHOLIDAYS_EXPORT HolidayRegionSelector : public QWidget
 {
   Q_OBJECT
-  Q_PROPERTY( QAbstractItemView::SelectionMode listSelectionMode READ selectionMode WRITE setSelectionMode )
-  Q_PROPERTY( bool enableRegionUseFlags READ regionUseFlagsEnabled WRITE setRegionUseFlagsEnabled )
-  Q_PROPERTY( bool hideSearch READ searchHidden WRITE setSearchHidden )
-  Q_PROPERTY( bool hideDescription READ descriptionHidden WRITE setDescriptionHidden )
-  Q_PROPERTY( bool hideLanguage READ languageHidden WRITE setLanguageHidden )
-  Q_PROPERTY( QStringList languageFilter READ languageFilter WRITE setLanguageFilter )
+  Q_PROPERTY( QAbstractItemView::SelectionMode listSelectionMode
+              READ selectionMode WRITE setSelectionMode )
+
+  Q_PROPERTY( bool enableRegionUseFlags
+              READ regionUseFlagsEnabled WRITE setRegionUseFlagsEnabled )
+
+  Q_PROPERTY( bool hideSearch
+              READ searchHidden WRITE setSearchHidden )
+
+  Q_PROPERTY( bool hideDescription
+              READ descriptionHidden WRITE setDescriptionHidden )
+
+  Q_PROPERTY( bool hideLanguage
+              READ languageHidden WRITE setLanguageHidden )
+
+  Q_PROPERTY( QStringList languageFilter
+              READ languageFilter WRITE setLanguageFilter )
 
   public:
     /**
@@ -67,15 +78,16 @@ class KHOLIDAYS_EXPORT HolidayRegionSelector : public QWidget
     /**
      * Constructs a default Holiday Region selection widget.
      *
-     * This widget will automatically be populated with all available Holiday Regions, will
-     * display all available features including a serach bar and various details columns, and will
-     * operate in Multi Selection mode.  If you require fewer details or regions displayed or to
-     * operate in single or no selection mode, then you must configure these after the widget is
-     * created.
+     * This widget will automatically be populated with all available Holiday Regions,
+     * will display all available features including a serach bar and various details
+     * columns, and will operate in Multi Selection mode.  If you require fewer details
+     * or regions displayed or to operate in single or no selection mode, then you must
+     * configure these after the widget is created.
      *
-     * By default multiple Region Use selections are available to the user.  This is normally
-     * used to set if holidays are to be used for days off or information only.  These use options
-     * can be overridden or disabled, or the text displayed modifed if required.
+     * By default multiple Region Use selections are available to the user.  This is
+     * normally used to set if holidays are to be used for days off or information only.
+     * These Use options can be overridden or disabled, or the text displayed modifed
+     * as required.
      *
      * @param parent The parent widget.
      */
@@ -118,13 +130,13 @@ class KHOLIDAYS_EXPORT HolidayRegionSelector : public QWidget
     /**
      * Set if Region Use Flags are enabled
      *
-     * If Region Use Flags are disabled then the user can only select a Region with a binary on/off
-     * check box.  The selection status is set and returned using the holidayRegionStatus and
-     * setHolidayRegionStatus methods.
+     * If Region Use Flags are disabled then the user can only select a Region
+     * with a binary on/off check box.  The selection status is set and returned
+     * using the holidayRegionStatus and setHolidayRegionStatus methods.
      *
-     * If the Region Use Flags are enabled then the user can select from multiple options for how a
-     * Region can be used via a combo box.  The use flags are set and returned using the
-     * setRegionUseFlags and regionUseFlags methods.
+     * If the Region Use Flags are enabled then the user can select from multiple
+     * options for how a Region can be used via a combo box.  The use flags are
+     * set and returned using the setRegionUseFlags and regionUseFlags methods.
      *
      * @see setSelectionMode
      * @param listSelectionMode The list selection mode to use
@@ -228,10 +240,12 @@ class KHOLIDAYS_EXPORT HolidayRegionSelector : public QWidget
     /**
      * Set a language filter on the Holiday Regions to be displayed.
      *
-     * Only Holiday Regions in a language included in the filter will be displayed in the widget,
-     * i.e. all other Holiday Regions will have a SelectionStatus of RegionHidden.
+     * Only Holiday Regions in a language included in the filter will be
+     * displayed in the widget, i.e. all other Holiday Regions will have
+     * a SelectionStatus of RegionHidden.
      *
-     * Setting a null list disables the display filter, i.e. all Holiday Regions are displayed.
+     * Setting a null list disables the display filter, i.e. all Holiday
+     * Regions are displayed.
      *
      * @see languageFilter
      * @param languages A list of languages to filter for
