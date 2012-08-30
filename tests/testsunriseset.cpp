@@ -31,6 +31,11 @@ using namespace SunRiseSet;
 
 void SunriseTest::TestSunrise()
 {
+  //test bogus latitudes and longitudes
+  QVERIFY( utcSunrise( QDate( 2012, 1, 1 ), 1000.0, 1000.0 ) == QTime( 0, 0 ) );
+  QVERIFY( utcSunrise( QDate( 2012, 7, 1 ), -1000.0, -1000.0 ) == QTime( 0, 0 ) );
+  QVERIFY( utcSunrise( QDate( 2012, 12, 31 ), 1000.0, -1000.0 ) == QTime( 0, 0 ) );
+
   //NYC
   QVERIFY( utcSunrise( QDate( 2012, 1, 1 ), 40.72, -74.02 ) == QTime( 12, 20 ) );
   QVERIFY( utcSunrise( QDate( 2012, 7, 1 ), 40.72, -74.02 ) == QTime( 9, 29 ) );
