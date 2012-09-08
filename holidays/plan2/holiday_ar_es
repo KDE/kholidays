@@ -5,7 +5,7 @@
 ::
 :: Author:   Daniel Vega <dv5a@dc.uba.ar>
 ::
-:: Updated:  05-JAN-2012
+:: Updated:  05-SEP-2012
 ::
 :: Source:   Decretos 1584/2010 , 1585/2010 , 67/2010 y 521/2011
 ::           http://www.boletinoficial.gov.ar/DisplayPdf.aspx?f=20101103&s=01&pd=1&pa=3
@@ -19,33 +19,34 @@ language    "es"
 description "Feriados Nacionales de Argentina"
 
 :: Public Holidays
-"Año Nuevo"                      weekend on january 1
-"Lunes de Carnaval"              weekend on easter minus 48
-"Martes de Carnaval"             weekend on easter minus 47
-"Día Nacional de la Memoria"     weekend on march 24
-"Viernes Santo"                  weekend on easter minus 2
-"Día de los Caídos en Malvinas"  weekend on april 2
-"Día del Trabajo"                weekend on may 1
-"Revolución de Mayo"             weekend on may 25
-"Día de Manuel Belgrano"         weekend on june 20
-"Día de la Independencia"        weekend on july 9
-"Día de San Martín"              weekend on (third + (year == 2011)) monday in august
-"Día de la Raza"                 weekend on second monday in october
-"Día de la Soberanía"            weekend on fourth monday in november
-"Inmaculada Concepción de María" weekend on december 8
-"Navidad"                        weekend on december 25
+"Año Nuevo"                       weekend on january 1
+"Lunes de Carnaval"               weekend on easter minus 48
+"Martes de Carnaval"              weekend on easter minus 47
+"Día Nacional de la Memoria"      weekend on march 24
+"Viernes Santo"                   weekend on easter minus 2
+"Día de los Caídos en Malvinas"   weekend on april 2
+"Día del Trabajo"                 weekend on may 1
+"Revolución de Mayo"              weekend on may 25
+"Día de Manuel Belgrano"          weekend on june 20
+"Día de la Independencia"         weekend on july 9
+"Día de San Martín"               weekend on (third + (year == 2011)) monday in august
+"Día de la Raza"                  weekend on second monday in october
+"Día de la Soberanía"             weekend on fourth monday in november
+"Inmaculada Concepción de María"  weekend on december 8
+"Navidad"                         weekend on december 25
 
-"Censo Nacional"                 weekend on 27.10.2010
+"Censo Nacional"                  weekend on 27.10.2010
 
-"Feriado Turístico"              weekend on 25.03.2011
-"Feriado Turístico"              weekend on 09.12.2011
+"Feriado Turístico"               weekend on 25.03.2011
+"Feriado Turístico"               weekend on 09.12.2011
 
-"Bicentenario de la Bandera"     weekend on 27.02.2012
-"Feriado Turístico"              weekend on 30.04.2012
-"Feriado Turístico"              weekend on 24.12.2012
+"Bicentenario de la Bandera"      weekend on 27.02.2012
+"Feriado Turístico"               weekend on 30.04.2012
+"Bicentenario Batalla de Tucumán" weekend on 24.09.2012
+"Feriado Turístico"               weekend on 24.12.2012
 
-"Feriado Turístico"              weekend on 01.04.2013
-"Feriado Turístico"              weekend on 21.06.2013
+"Feriado Turístico"               weekend on 01.04.2013
+"Feriado Turístico"               weekend on 21.06.2013
 
 
 :: Religious
