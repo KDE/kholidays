@@ -24,7 +24,7 @@
 
 #include "kholidays_export.h"
 
-#include <QtGui/QTreeWidget>
+#include <QTreeWidget>
 
 class QString;
 class QStringList;
