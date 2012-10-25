@@ -21,7 +21,6 @@
 
 #include "testsunriseset.h"
 #include <qtest_kde.h>
-#include "testsunriseset.moc"
 
 QTEST_KDEMAIN( SunriseTest, NoGUI )
 

@@ -23,7 +23,6 @@
 #include <qtest_kde.h>
 #include <klocale.h>
 #include <kdebug.h>
-#include "testlunar.moc"
 
 QTEST_KDEMAIN( LunarTest, NoGUI )
 

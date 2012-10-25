@@ -553,4 +553,3 @@ bool HolidayRegionSelector::descriptionHidden() const
   return d->m_ui.regionTreeWidget->isColumnHidden( Private::DescriptionColumn );
 }
 
-#include "holidayregionselector.moc"
