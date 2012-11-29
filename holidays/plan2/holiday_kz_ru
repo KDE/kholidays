@@ -1,0 +1,131 @@
+::
+:: Country:  Kazakhstan
+::
+:: Language: Russian
+::
+:: Author:   Timur Birsh <taem@linukz.org>
+::
+:: Updated:  2011-04-05
+::
+:: Source:   http://e.gov.kz/wps/portal/Content?contentPath=/library2/1_kazakhstan/kr/article/prazdniki&lang=ru
+:: 	     http://e.gov.kz/wps/portal/Content?contentPath=/library2/1_kazakhstan/kr/article/prazdniki/addInfo/prof%20prazd&lang=ru
+::
+
+:: Metadata
+country     "KZ"
+language    "ru"
+:name        "optional - defaults to country name"
+description "Праздники Республики Казахстан"
+
+:: Public Holidays
+:: New Year
+"Новый год"                                      weekend on january 1 length 2 days
+:: International Women’s Day
+"Международный женский день"                     weekend on march 8
+:: Nauryz
+"Наурыз мейрамы"                                 weekend on march 22
+:: Kazakhstan Peoples Solidarity Holiday
+"Праздник единства народа Казахстана"            weekend on may 1
+:: Victory Day
+"День Победы"                                    weekend on may 9
+:: Capital City Day
+"День Столицы"                                   weekend on july 6
+:: The Republic of Kazakhstan Constitution Day
+"День Конституции Республики Казахстан"          weekend on august 30
+:: Independence Day
+"День Независимости"                             weekend on december 16 length 2 days
+
+:: Religious
+
+:: Financial
+
+:: Cultural
+
+:: School
+
+:: Daylight Saving
+
+:: Seasons
+
+:: Name Days
+
+:: Professional Holidays
+"День инженерных войск"                                                 on january 21
+"День секретаря"                                                        on february 27
+"День республиканской гвардии"                                          on march 16
+"День торговли"                                                         on march 18
+"День театра"                                                           on march 27
+"День геолога"                                                          on april 1
+"День смеха"                                                            on april 1
+"День образования военно-морских сил РК"                                on april 2
+"День следствия"                                                        on april 6
+"День космонавтики"                                                     on april 12
+"День войск противовоздушной обороны"                                   on april 15
+"День науки"                                                            on april 16
+"День работников пожарной охраны"                                       on april 17
+"Всемирный день охраны труда"                                           on april 28
+"Международный день танца"                                              on april 29
+"День радио"                                                            on may 5
+:: Fatherland Defender’s Day
+"День защитника Отечества"                                              on may 7
+"День химика"                                                           on may 27
+:: Political Repression Victims Memory Day
+"День памяти жертв политических репрессий"                              on may 31
+"День защиты детей"                                                     on june 1
+:: The Republic of Kazakhstan National Symbols’ Day
+"День государственных символов Республики Казахстан"                    on june 4
+"День охраны окружающей среды"                                          on june 5
+"Всемирный день донора крови"                                           on june 14
+:: Police Day
+"День полиции"                                                          on june 23
+:: Health Professionals’ Day
+"День медицинского работника"                                           on third sunday in june
+:: Press, TV and Radio Day
+"День печати, телевидения и радио"                                      on last sunday in june
+:: Diplomatic service Day
+"День дипломатической службы"                                           on july 2
+"Всемирный день поцелуя"                                                on july 6
+"День комитета Национальной Безопасности. День прокуратуры"             on july 13
+"День морского и речного флота"                                         on first sunday in july
+:: Metal-Maker’s Day
+"День металлурга"                                                       on third sunday in july
+"День системного администратора"                                        on last sunday in july
+"День воздушно-десантных войск"                                         on august 2
+"День образования пограничных войск"                                    on august 18
+"День воздушного флота"                                                 on august 19
+:: Transport and Communication Workers’ Day
+"День работников транспорта и связи"                                    on first sunday in august
+:: Builder’s Day
+"День строителя"                                                        on second sunday in august
+:: Sports Day
+"День спорта"                                                           on third sunday in august
+:: Miner’s day
+"День шахтера"                                                          on last sunday in august
+:: Knowledge day
+"День знаний"                                                           on september 1
+:: Oil and Gas Complex Workers’ Day
+"День работников нефтегазового комплекса"                               on first sunday in september
+"День танкистов"                                                        on second sunday in september
+:: The Republic of Kazakhstan Languages Day
+"День языков народов Республики Казахстан"                              on third sunday in september
+:: Nuclear Industry Workers’ Day
+"День работников атомной отрасли"                                       on september 28
+"День архитектора"                                                      on october 5
+"День бухгалтеров и аудиторов"                                          on october 6
+"Всемирный день почты"                                                  on october 9
+"День библиотекаря"                                                     on october 15
+"День работников связи"                                                 on october 20
+"День работников автомобильного транспорта"                             on october 28
+:: Teacher’s Day
+"День учителя"                                                          on first sunday in october
+:: National Currency Day
+"День национальной валюты. День финансистов"                            on november 15
+"День студентов"                                                        on november 17
+"День ракетных войск и артиллерии"                                      on november 17
+"День сотрудников дорожной полиции"                                     on november 23
+:: Agriculture Workers’ Day
+"День работников сельского хозяйства"                                   on third sunday in november
+"День образования таможенной службы РК"                                 on december 12
+"День экономистов"                                                      on december 25
+:: Power Engineer’s Day
+"День энергетика"                                                       on third sunday in december

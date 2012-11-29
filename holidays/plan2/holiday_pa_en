@@ -1,0 +1,68 @@
+::
+:: Country:  Panama
+::
+:: Language: English
+::
+:: Author:   Webmaster FLOSS-PA <comunidad <at> floss-pa.org>
+::
+:: Updated:
+::
+:: Sources:  http://en.wikipedia.org/wiki/Public_holidays_in_Panama             http://www.timeanddate.com/holidays/panama/2013
+::
+
+
+:: Metadata
+country     "PA"
+language    "en"
+:name       "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Panama"
+
+:: Public Holidays
+"New Year's Day"                weekend on january 1
+"Martyr´s Day"	     	        weekend on january 9
+"Carnival/Shrove Tuesday"       weekend on easter minus 47
+"Good Friday"                   weekend on easter minus 2
+"Labor Day / May Day"           weekend on may 1
+"Old Panama Foundation"         on august 15
+"Separation Day from Colombia"  weekend on november 3
+"Colon Day"     	        weekend on november 5
+"Shout in La Villa de los Santos"  weekend on november 10
+"Independence from Spain"       weekend on november 28
+"Mother Day / Inmaculate Conception"       weekend on december 8
+"Christmas Day"                 weekend on december 25
+
+:: Religious
+"Epiphany"	                on january 6
+"Saint Joseph"                  on march 19
+"Ash Wednesday"			weekend on easter minus 46
+"Maundy Thursday"               on easter minus 3
+"Palm Sunday"                   on easter minus 7
+"Easter Day"          	        on easter
+"Ascension"                     on easter plus 39
+"Pentecost Monday"	        on easter plus 50
+"Holy Tinity"			on easter plus 56
+"Corpus Christi"                on easter plus 60
+"Sacred Heart"                  on easter plus 71
+"St. Peter and St. Paul Day"    on june 29
+"The Assumption"                on august 15
+"St. Francis of Assisi"		on october 4
+"All Saints"                    on november 1
+
+:: Financial
+
+:: Cultural
+"Columbus Day/Dia de la Raza"   on october 12
+"Internet International Day"	on may 17
+"Christmas Eve"			on december 24
+
+:: School
+
+:: Daylight Saving
+
+:: Seasons
+"March Equinox"	                on march 20
+"June Solstice"	                on june 21
+"September Equinox"             on september 22
+"December Solstice"             on december 21
+
+:: Name Days

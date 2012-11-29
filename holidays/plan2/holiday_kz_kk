@@ -1,0 +1,129 @@
+::
+:: Country:  Kazakhstan
+::
+:: Language: Kazakh
+::
+:: Author:   Timur Birsh <taem@linukz.org>
+::
+:: Updated:  2011-04-05
+::
+:: Source:   http://e.gov.kz/wps/portal/!ut/p/c1/04_SB8K8xLLM9MSSzPy8xBz9CP0os3h_D0M3d1NLYwN_FwtXA08LU2M_Nx8PI3dvI6B8JE55A6A8ft3hIPvw6wfJG-AAjgb6fh75uan6BbkRBlkmjooA63RsuQ!!/dl2/d1/L0lDUmlTUSEhL3dHa0FKRnNBL1lCUlp3QSEhL2tr/
+::
+
+:: Metadata
+country     "KZ"
+language    "kk"
+:name        "optional - defaults to country name"
+description "Қазақстан Республикасының мейрамдары"
+
+:: Public Holidays
+:: New Year
+"Жаңа жыл"                                       weekend on january 1 length 2 days
+:: International Women’s Day
+"Халықаралық әйелдер күні"                       weekend on march 8
+:: Nauryz
+"Наурыз мейрамы"                                 weekend on march 22
+:: Kazakhstan Peoples Solidarity Holiday
+"Қазақстан халқының бірлігі мерекесі"            weekend on may 1
+:: Victory Day
+"Жеңіс күні"                                     weekend on may 9
+:: Capital City Day
+"Астана күні"                                    weekend on july 6
+:: The Republic of Kazakhstan Constitution Day
+"Қазақстан Республикасының Конституциясы күні"   weekend on august 30
+:: Independence Day
+"Тәуелсіздік күні"                               weekend on december 16 length 2 days
+
+:: Religious
+
+:: Financial
+
+:: Cultural
+
+:: School
+
+:: Daylight Saving
+
+:: Seasons
+
+:: Name Days
+
+:: Professional Holidays
+"Инженерлiк әскерлер күнi"                                              on january 21
+"Хатшылар күнi"                                                         on february 27
+"Республикалық ұлан күнi"                                               on march 16
+"Сауда күнi"                                                            on march 18
+"Театр күнi"                                                            on march 27
+"Геолог күнi"                                                           on april 1
+"Күлкi күнi"                                                            on april 1
+"Қазақстан Республикасы әскери-теңiз күштерi күнi"                      on april 2
+"Тергеуші күні"                                                         on april 6
+"Ғарышкер күні"                                                         on april 12
+"Әуе қорғаныс әскерлерiнiң күнi"                                        on april 15
+"Ғылым күнi"                                                            on april 16
+"Өртке қарсы қызмет қызметкерлерiнiң күнi"                              on april 17
+"Бүкiләлемдiк еңбек қорғау күні"                                        on april 28
+"Халықаралық би күнi"                                                   on april 29
+"Радио күні"                                                            on may 5
+:: Fatherland Defender’s Day
+"Отан қорғаушы күні"                                                    on may 7
+"Химиктер күнi"                                                         on may 27
+:: Political Repression Victims Memory Day
+"Саяси қуғын-сүргіндер құрбандарын еске"                                on may 31
+"Балаларды қорғау күнi"                                                 on june 1
+:: The Republic of Kazakhstan National Symbols’ Day
+"Қазақстан Республикасының мемлекеттік"                                 on june 4
+"Айналадағы ортаны қорғау күні"                                         on june 5
+"Бүкiләлемдiк донор күнi"                                               on june 14
+:: Police Day
+"Полиция күні"                                                          on june 23
+:: Health Professionals’ Day
+"Медицина қызметкері күні"                                              on third sunday in june
+:: Press, TV and Radio Day
+"Баспасөз, теледидар және радио күнi"                                   on last sunday in june
+:: Diplomatic service Day
+"Дипломатиялық қызмет күні"                                             on july 2
+"Бүкiләлемдiк сүйісу күні"                                              on july 6
+"Ұлттық қауiпсiздiк комитетiнiң күнi. Прокуратура күнi"                 on july 13
+"Теңіз және өзен флоты күні"                                            on first sunday in july
+:: Metal-Maker’s Day
+"Металлург күні"                                                        on third sunday in july
+"Жүйелік администратор күні"                                            on last sunday in july
+"Әуе-десант әскерлерінің күні"                                          on august 2
+"Шекаралық әскерлер күнi"                                               on august 18
+"Әуе флоты күнi"                                                        on august 19
+"Көлік және байланыс қызметкерлері күні"                                on first sunday in august
+:: Builder’s Day
+"Құрылысшы күні"                                                        on second sunday in august
+:: Sports Day
+"Спорт күні"                                                            on third sunday in august
+:: Miner’s day
+"Шахтер күні"                                                           on last sunday in august
+:: Knowledge day
+"Бiлiм күнi"                                                            on september 1
+:: Oil and Gas Complex Workers’ Day
+"Мұнай-газ кешені қызметкерлерінің күні"                                on first sunday in september
+"Танкистер күні"                                                        on second sunday in september
+:: The Republic of Kazakhstan Languages Day
+"Қазақстан Республикасының халықтары"                                   on third sunday in september
+:: Nuclear Industry Workers’ Day
+"Атом саласының қызметкерлері күні"                                     on september 28
+"Сәулетшi күнi"                                                         on october 5
+"Есепшiлер және тексерушiлер күнi"                                      on october 6
+"Бүкіләлемдік пошта күні"                                               on october 9
+"Кiтапханашы күнi"                                                      on october 15
+"Байланыс қызметкерлерiнiң күнi"                                        on october 20
+"Автомобиль көлiгi қызметкерлерiнiң күнi"                               on october 28
+:: Teacher’s Day
+"Мұғалiм күнi"                                                          on first sunday in october
+:: National Currency Day
+"Ұлттық валюта күні"                                                    on november 15
+"Студенттер күнi"                                                       on november 17
+"Ракета әскерлері және артиллерия күнi"                                 on november 17
+"Жол полициясы қызметкерлерiнiң күнi"                                   on november 23
+:: Agriculture Workers’ Day
+"Ауыл шаруашылығы қызметкерлерінің күні"                                on third sunday in november
+"Қазақстан Республикасы кеден қызметiнiң күнi"                          on december 12
+"Экономист күнi"                                                        on december 25
+:: Power Engineer’s Day
+"Энергетик күні"                                                        on third sunday in december
