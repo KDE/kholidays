@@ -5,7 +5,7 @@
 ::
 :: Author:   Daniel Vega <dv5a@dc.uba.ar>
 ::
-:: Updated:  05-SEP-2012
+:: Updated:  18-JAN-2013
 ::
 :: Source:   Decretos 1584/2010 , 1585/2010 , 67/2010 y 521/2011
 ::           http://www.boletinoficial.gov.ar/DisplayPdf.aspx?f=20101103&s=01&pd=1&pa=3
@@ -45,11 +45,24 @@ description "Feriados Nacionales de Argentina"
 "Bicentenario Batalla de Tucumán" weekend on 24.09.2012
 "Feriado Turístico"               weekend on 24.12.2012
 
+"Bicentenario Asamblea Año XIII"  weekend on 31.01.2013
+"Bicentenario Batalla de Salta"   weekend on 20.02.2013
 "Feriado Turístico"               weekend on 01.04.2013
 "Feriado Turístico"               weekend on 21.06.2013
 
 
 :: Religious
+
+:: Holidays for Jewish people
+"Pésaj (Pascuas Judías)"                  on hebrew nisan 15 length 2 days
+"Chol HaMoed Pésaj (Pascuas Judías)"      on hebrew nisan 21 length 2 days
+"Rosh Hashana (Año Nuevo Judío)"          on hebrew tishrey 1 length 2 days
+"Iom Kipur (Día del Perdón Judío)"        on hebrew tishrey 10
+
+:: Holidays for Islamic people
+"Hégira (Año Nuevo Musulmán)"             on hijri muharram 1
+"Id Al-Fitr (Fin Ayuno Musulmán)"         on hijri shawwal 1
+"Eid al-Adha (Sacrificio Musulmán)"       on hijri thualhijjah 10
 
 :: Financial
 
