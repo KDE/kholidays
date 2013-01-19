@@ -1,0 +1,44 @@
+::
+:: Country:  Switzerland
+::
+:: Language: German
+::
+:: Author:
+::
+:: Updated:
+::
+:: Source:  http://de.wikipedia.org/wiki/Feiertage_in_der_Schweiz
+::
+
+:: Metadata
+country     "CH"
+language    "de"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Switzerland"
+
+:: Public Holidays
+
+"Neujahr"          weekend on january 1
+"Karfreitag"       weekend on easter minus 2 days
+"Ostern"           weekend on easter
+"Auffahrt"         weekend on easter plus 39 days
+"Pfingsten"        weekend on easter plus 49 days
+"Pfingstmontag"    weekend on easter plus 50 days
+"Bundesfeier"      weekend on august 1
+"Bettag"           weekend on third sunday in september
+"Bettagmontag"     weekend on third sunday in september plus 1 day
+"Weihnachten"      weekend on december 25
+
+:: Religious Holidays
+
+:: Financial
+
+:: Cultural
+
+:: School
+
+:: Daylight Saving
+
+:: Seasons
+
+:: Name Days
