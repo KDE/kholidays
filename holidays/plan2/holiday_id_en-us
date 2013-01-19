@@ -6,7 +6,7 @@
 ::
 :: Author:   Ronggo Radityo <radityo3000@yahoo.com>
 ::
-:: Updated:  2012-02-19
+:: Updated:  2012-03-13
 ::
 :: Source:   http://en.wikipedia.org/wiki/Public_holidays_in_Indonesia
 :: Source:   http://www.officeholidays.com/countries/indonesia/2012.asp
@@ -49,7 +49,7 @@ description "National Holiday file for Indonesia"
 "Vesak"                                  weekend on may 25 2013
 
 : Kenaikan Yesus Kristus
-"Ascension Day"                          weekend on easter plus 40 days
+"Ascension Day"                          weekend on easter plus 39 days
 
 : Isra Mi'raj Nabi Muhammad SAW (hijri cal)
 "Isra and Mi'raj"                       weekend on hijri rajab 27

@@ -7,7 +7,7 @@
 :: Author:   Christophe Giboudeaux <cgiboudeaux@gmx.com>
 :: Author:   Ronggo Radityo <radityo3000@yahoo.com>
 ::
-:: Updated:  2012-02-19
+:: Updated:  2012-03-13
 ::
 :: Source:   http://en.wikipedia.org/wiki/Public_holidays_in_Indonesia
 :: Source:   http://www.officeholidays.com/countries/indonesia/2012.asp
@@ -51,7 +51,7 @@ description "File Hari Libur Nasional Indonesia"
 "Waisak"                                 weekend on may 25 2013
 
 : Ascension Day
-"Kenaikan Yesus Kristus"                 weekend on easter plus 40 days
+"Kenaikan Yesus Kristus"                 weekend on easter plus 39 days
 
 : Ascension of the Prophet (hijri cal)
 "Isra Mi'raj Nabi Muhammad SAW"          weekend on hijri rajab 27
