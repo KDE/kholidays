@@ -1,0 +1,50 @@
+::
+:: Country:  Switzerland
+::
+:: Language: Italian
+::
+:: Author:
+::
+:: Updated:
+::
+:: Source:  http://de.wikipedia.org/wiki/Feiertage_in_der_Schweiz
+:: http://www.ejpd.admin.ch/content/dam/data/staat_buerger/zivilprozessrecht/kant-feiertage.pdf
+::
+
+:: Metadata
+country     "CH"
+language    "it"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Switzerland"
+
+:: Public Holidays
+
+"Capo d'anno"      weekend on january 1
+"Epifania"         weekend on january 6
+"San Giuseppe"     weekend on march 19
+"Pasqua"           weekend on easter
+"Lunedi di Pasqua" weekend on easter plus 1 day
+"Festa dei lavoratori" weekend on may 1
+"Ascensione"       weekend on easter plus 39 days
+"Pentecoste"       weekend on easter plus 49 days
+"Lunedi di Pentecoste" weekend on easter plus 50 days
+"Festa nazionale"  weekend on august 1
+"Assunzione"       weekend on august 15
+"Ognissanti"       weekend on november 1
+"Immacolata"       weekend on december 8
+"Natale"           weekend on december 25
+"Santo Stefano"    weekend on december 26
+
+:: Religious Holidays
+
+:: Financial
+
+:: Cultural
+
+:: School
+
+:: Daylight Saving
+
+:: Seasons
+
+:: Name Days

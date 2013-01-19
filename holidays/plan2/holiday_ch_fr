@@ -15,6 +15,7 @@ country     "CH"
 language    "fr"
 :name        "optional - defaults to country name"
 :description "(please add description in source language) National holiday file for Switzerland"
+description "Fêtes et jours fériés en Suisse"
 
 :: Public Holidays
 
@@ -28,6 +29,7 @@ language    "fr"
 "Jeune Federal"    weekend on third sunday in september
 "Lundi du Jeune"   weekend on third sunday in september plus 1 day
 "Noel"             weekend on december 25
+"Saint-Etienne"    weekend on december 26
 
 :: Religious Holidays
 
