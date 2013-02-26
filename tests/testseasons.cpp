@@ -21,7 +21,7 @@
 
 #include "testseasons.h"
 #include <qtest_kde.h>
-#include <klocale.h>
+#include <klocalizedstring.h>
 
 QTEST_KDEMAIN( SeasonsTest, NoGUI )
 

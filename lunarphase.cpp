@@ -27,7 +27,7 @@
 
 #include <KDebug>
 #include <KGlobal>
-#include <KLocale>
+#include <KLocalizedString>
 
 #include <QtCore/QDateTime>
 

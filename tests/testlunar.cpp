@@ -21,7 +21,7 @@
 
 #include "testlunar.h"
 #include <qtest_kde.h>
-#include <klocale.h>
+#include <klocalizedstring.h>
 #include <kdebug.h>
 
 QTEST_KDEMAIN( LunarTest, NoGUI )

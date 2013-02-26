@@ -25,7 +25,7 @@
 #include <QFile>
 
 #include <qtest_kde.h>
-#include <KLocale>
+#include <KLocalizedString>
 #include <KDebug>
 
 QTEST_KDEMAIN( HolidayRegionTest, NoGUI )

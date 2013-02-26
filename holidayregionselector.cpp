@@ -26,6 +26,7 @@
 
 #include <KDebug>
 #include <KLocale>
+#include <KLocalizedString>
 #include <KComboBox>
 
 using namespace KHolidays;

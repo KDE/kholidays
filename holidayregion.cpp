@@ -32,6 +32,7 @@
 #include <KStandardDirs>
 #include <KGlobal>
 #include <KLocale>
+#include <KLocalizedString>
 #include <KDebug>
 
 #include "holiday_p.h"

@@ -21,7 +21,7 @@
 
 #include "zodiac.h"
 
-#include <KLocale>
+#include <KLocalizedString>
 
 #include <QtCore/QDateTime>
 #include <QtCore/QSharedData>

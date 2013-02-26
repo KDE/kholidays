@@ -21,7 +21,7 @@
 
 #include "astroseasons.h"
 
-#include <KLocale>
+#include <KLocalizedString>
 
 #include <QtCore/QDate>
 
