@@ -17,18 +17,14 @@ language    "pt"
 :description "(please add description in source language) National holiday file for Portugal"
 
 :: Public Holidays
-"Ano Novo"              on january 1
-"6ª feira santa"        on easter minus 2 days
-"25 de Abril"           on april 25
-"1º de Maio"            on may 1
-"Corpo de Deus"         on easter plus 60 days
-"10 de Junho"           on june 10
-"Assunção"              on august 15
-"República"             on october 5
-"Todos os Santos"       on november 1
-"Restauração"           on december 1
-"Nª Senhora Conceição"  on december 8
-"Natal"                 on december 25
+"Ano Novo"              weekend on january 1
+"6ª feira santa"        weekend on easter minus 2 days
+"25 de Abril"           weekend on april 25
+"1º de Maio"            weekend on may 1
+"10 de Junho"           weekend on june 10
+"Assunção"              weekend on august 15
+"Nª Senhora Conceição"  weekend on december 8
+"Natal"                 weekend on december 25
 
 :: Religious
 "Carnaval"              on easter minus 50 days length 4 days
@@ -51,6 +47,14 @@ language    "pt"
 "Verão"                on june 22
 "Outono"               on september 22
 "Inverno"              on december 22
+
+
+:: Removed holidays
+:: "Corpo de Deus"         weekend on easter plus 60 days
+:: "República"             weekend on october 5
+:: "Todos os Santos"       weekend on november 1
+:: "Restauração"           weekend on december 1
+
 
 :: Name Days
 
