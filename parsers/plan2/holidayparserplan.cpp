@@ -210,7 +210,9 @@ namespace KHolidays
 
     switch (yytype)
       {
-  
+    case 7: /* STRING */
+      { free( ((*yyvaluep).sval) ); };
+      break;
 	default:
 	  break;
       }
@@ -287,7 +289,7 @@ namespace KHolidays
     #line 70 "holidayparserplan.ypp"
 {
     // initialize the initial location object
-    yylloc.begin.filename = new std::string( driver.filePath().toLocal8Bit().data() );
+    yylloc.begin.filename = driver.fileToParse();
     yylloc.end.filename = yylloc.begin.filename;
 }
   /* Line 547 of yacc.c.  */
@@ -413,7 +415,12 @@ namespace KHolidays
 
   case 5:
 #line 130 "holidayparserplan.ypp"
-    { driver.setFileCountryCode( QString::fromUtf8( (yysemantic_stack_[(2) - (2)].sval) ) ); ;}
+    {
+      char *s = yysemantic_stack_[(2) - (2)].sval;
+      driver.setFileCountryCode( QString::fromUtf8( s ) );
+      free( s );
+      yysemantic_stack_[(2) - (2)].sval = NULL;
+    }
     break;
 
   case 6:
@@ -423,7 +430,12 @@ namespace KHolidays
 
   case 7:
 #line 134 "holidayparserplan.ypp"
-    { driver.setFileLanguageCode( QString::fromUtf8( (yysemantic_stack_[(2) - (2)].sval) ) ); ;}
+    {
+      char *s = yysemantic_stack_[(2) - (2)].sval;
+      driver.setFileLanguageCode( QString::fromUtf8( s ) );
+      free( s );
+      yysemantic_stack_[(2) - (2)].sval = NULL;
+    }
     break;
 
   case 8:
@@ -433,7 +445,12 @@ namespace KHolidays
 
   case 9:
 #line 138 "holidayparserplan.ypp"
-    { driver.setFileName( QString::fromUtf8( (yysemantic_stack_[(2) - (2)].sval) ) ); ;}
+    {
+      char *s = yysemantic_stack_[(2) - (2)].sval;
+      driver.setFileName( QString::fromUtf8( s ) );
+      free( s );
+      yysemantic_stack_[(2) - (2)].sval = NULL;
+    }
     break;
 
   case 10:
@@ -443,7 +460,12 @@ namespace KHolidays
 
   case 11:
 #line 142 "holidayparserplan.ypp"
-    { driver.setFileDescription( QString::fromUtf8( (yysemantic_stack_[(2) - (2)].sval) ) ); ;}
+    {
+      char *s = yysemantic_stack_[(2) - (2)].sval;
+      driver.setFileDescription( QString::fromUtf8( s ) );
+      free( s );
+      yysemantic_stack_[(2) - (2)].sval = NULL;
+    }
     break;
 
   case 16:
@@ -468,7 +490,12 @@ namespace KHolidays
 
   case 20:
 #line 161 "holidayparserplan.ypp"
-    { driver.setEventName( QString::fromUtf8( (yysemantic_stack_[(1) - (1)].sval) ) ); ;}
+    {
+      char *s = yysemantic_stack_[(1) - (1)].sval;
+      driver.setEventName( QString::fromUtf8( s ) );
+      free( s );
+      yysemantic_stack_[(1) - (1)].sval = NULL;
+    }
     break;
 
   case 21:
@@ -623,7 +650,12 @@ namespace KHolidays
 
   case 51:
 #line 208 "holidayparserplan.ypp"
-    { (yyval.ival) = driver.julianDayFromEventName( (yysemantic_stack_[(1) - (1)].sval) ); ;}
+    {
+      char *s = yysemantic_stack_[(1) - (1)].sval;
+      (yyval.ival) = driver.julianDayFromEventName( s );
+      free( s );
+      yysemantic_stack_[(1) - (1)].sval = NULL;
+    }
     break;
 
   case 52:

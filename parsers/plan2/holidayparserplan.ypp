@@ -69,7 +69,7 @@
 %initial-action
 {
     // initialize the initial location object
-    @$.begin.filename = new std::string( driver.filePath().toLocal8Bit().data() );
+    @$.begin.filename = driver.fileToParse();
     @$.end.filename = @$.begin.filename;
 };
 
@@ -91,6 +91,8 @@
 %token  <sval> STRING CALENDAR
 %token  INOP PLUS MINUS SMALL YEAR LEAPYEAR SHIFT IF
 %token  LENGTH EASTER EQ NE LE GE LT GT PASCHA COUNTRY LANGUAGE NAME DESCRIPTION
+
+%destructor { free( $$ ); } STRING
 
 %left OR
 %left AND
@@ -127,19 +129,19 @@ metadata : countrycode languagecode name description
 ;
 
 countrycode :                { driver.setFileCountryCode( QString() ); }
-            | COUNTRY STRING { driver.setFileCountryCode( QString::fromUtf8( $2 ) ); }
+            | COUNTRY STRING { char *s = $2; driver.setFileCountryCode( QString::fromUtf8( s ) ); free( s ); $2 = NULL; }
 ;
 
 languagecode :                 { driver.setFileLanguageCode( QString() ); }
-             | LANGUAGE STRING { driver.setFileLanguageCode( QString::fromUtf8( $2 ) ); }
+             | LANGUAGE STRING { char *s = $2; driver.setFileLanguageCode( QString::fromUtf8( s ) ); free( s ); $2 = NULL; }
 ;
 
 name :             { driver.setFileName( QString() ); }
-     | NAME STRING { driver.setFileName( QString::fromUtf8( $2 ) ); }
+     | NAME STRING { char *s = $2; driver.setFileName( QString::fromUtf8( s ) ); free( s ); $2 = NULL; }
 ;
 
 description :                    { driver.setFileDescription( QString() ); }
-            | DESCRIPTION STRING { driver.setFileDescription( QString::fromUtf8( $2 ) ); }
+            | DESCRIPTION STRING { char *s = $2; driver.setFileDescription( QString::fromUtf8( s ) ); free( s ); $2 = NULL; }
 ;
 
 list :
@@ -158,7 +160,7 @@ daycolor :        { driver.setEventColorDay( 0 ); }
          | COLOR  { driver.setEventColorDay( $1 ); }
 ;
 
-eventname : STRING { driver.setEventName( QString::fromUtf8( $1 ) ); }
+eventname : STRING { driver.setEventName( char *s = $1; QString::fromUtf8( s ) ); free( s ); $1 = NULL; }
 ;
 
 calendar :           { driver.setEventCalendarType( "gregorian" ); }
@@ -205,7 +207,7 @@ date : pexpr '.' month            { driver.setEventDate( -99999, $3, $1 ); }
      | pexpr                      { driver.setEventDate( $1 ); }
 ;
 
-reldate : STRING                 { $$ = driver.julianDayFromEventName( $1 ); }
+reldate : STRING                 { char *s = $1; $$ = driver.julianDayFromEventName( s ); free( s ); $1 = NULL}
         | EASTER                 { $$ = driver.julianDayFromEaster(); }
         | PASCHA                 { $$ = driver.julianDayFromPascha(); }
         | pexpr '.' month        { $$ = driver.julianDayFromMonthDay( $3, $1 ); }

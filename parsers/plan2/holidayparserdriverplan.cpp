@@ -64,6 +64,7 @@ HolidayParserDriverPlan::HolidayParserDriverPlan( const QString &planFilePath )
     m_scanner->set_debug( m_traceScanning );
     m_parser = new HolidayParserPlan( *this );
     m_parser->set_debug_level( m_traceParsing );
+    m_fileToParse = new std::string( filePath().toLocal8Bit().data() );
     parseMetadata();
 }
 
@@ -71,6 +72,7 @@ HolidayParserDriverPlan::~HolidayParserDriverPlan()
 {
     delete m_parser;
     delete m_scanner;
+    delete m_fileToParse;
 }
 
 //TODO Figure why it doesn't compile
@@ -165,6 +167,10 @@ QString HolidayParserDriverPlan::filePath()
     return m_filePath;
 }
 
+std::string *HolidayParserDriverPlan::fileToParse() const
+{
+    return m_fileToParse;
+}
 
 /*****************************************
   Calendar and Date convenience routines
