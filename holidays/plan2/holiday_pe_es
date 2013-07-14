@@ -1,0 +1,46 @@
+::
+:: Country:  Peru
+::
+:: Language: Spanish
+::
+:: Author:
+::
+:: Updated:  12-APR-2013
+::
+:: Source:   http://www.mintra.gob.pe/contenidos/archivos/prodlab/D.Leg.%20713%20-%2008-11-91.pdf
+::           http://en.wikipedia.org/wiki/Public_holidays_in_Peru
+
+:: Metadata
+country     "PE"
+language    "es"
+:name        "optional - defaults to country name"
+description "Feriados Nacionales de Peru"
+
+:: Public Holidays
+"Año Nuevo"                       weekend on january 1
+"Día del Trabajo"                 weekend on may 1
+"Día de la Independencia"         weekend on july 28
+"Fiestas Patrias"                 weekend on july 29
+"Combate de Angamos"              weekend on October 8
+
+:: Religious
+"Jueves Santo"                    weekend on easter minus 3
+"Viernes Santo"                   weekend on easter minus 2
+"Pascua"                          weekend on easter
+"Día de San Pedro y San Pablo"    weekend on june 29
+"Día de Todos los Santos"         weekend on November 1
+"Día de Santa Rosa de Lima"       weekend on August 30
+"Inmaculada Concepción"           weekend on december 8
+"Navidad"                         weekend on december 25
+
+:: Financial
+
+:: Cultural
+
+:: School
+
+:: Daylight Saving
+
+:: Seasons
+
+:: Name Days

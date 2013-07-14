@@ -7,7 +7,7 @@
 ::           Michael Tsang
 ::           John Layt
 ::
-:: Updated:  2011-02-25
+:: Updated:  2013-04-17
 ::
 :: Source:   http://www.gov.hk/en/about/abouthk/holiday/
 ::           http://www.labour.gov.hk/eng/faq/cap57f_whole.htm
@@ -59,17 +59,18 @@ description "Public Holidays for Hong Kong"
 "農曆年初"                                              weekend on 5 february 2019 length 3 days
 "農曆年初"                                              weekend on 24 january
 "農曆年初"                                              weekend on 25 january 2018 length 3 days
-: Ching Ming Festival 5 April or 4 April in leap years (or if that day is a Sunday, then the following day)
-"清明節"                                               weekend on ((leapyear year) ? [april 4] : [april 5])
-"清明節"                                               weekend on ((leapyear year) ?
-                                                        ( ( [april 4] == [sunday after ([april 4])]) ?
-                                                        [monday after ([april 4])] :
-                                                        noop )
-                                                      :
-                                                        ( ( [april 5] == [sunday after ([april 5])]) ?
-                                                        [monday after ([april 5])] :
-                                                        noop )
-                                                      )
+: Ching Ming Festival. See https://bugs.kde.org/show_bug.cgi?id=317834#c4
+"清明節"                                                weekend on 5 april 2010
+"清明節"                                                weekend on 5 april 2011
+"清明節"                                                weekend on 4 april 2012
+"清明節"                                                weekend on 4 april 2013
+"清明節"                                                weekend on 5 april 2014
+"清明節"                                                weekend on 5 april 2015
+"清明節"                                                weekend on 4 april 2016
+"清明節"                                                weekend on 4 april 2017
+"清明節"                                                weekend on 5 april 2018
+"清明節"                                                weekend on 5 april 2019
+"清明節"                                                weekend on 4 april 2020
 : Labour Day (or if that day is a Sunday, then the following day)
 "勞動節"                                               weekend on may 1
 "勞動節"                                               weekend on ( ( [may 1] == [sunday after ([may 1])]) ?

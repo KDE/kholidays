@@ -23,6 +23,7 @@
 #define KHOLIDAYS_HOLIDAYPARSERDRIVERPLAN_P_H
 
 #include <fstream>
+#include <string>
 
 #include <QByteArray>
 #include <QStringList>
@@ -95,6 +96,7 @@ protected:
 
     // Accessor methods for parser to talk to driver
     QString filePath();
+    std::string *fileToParse() const;
 
     // Calendar and date calculation utilities
     int   adjustedMonthNumber( int month );
@@ -164,6 +166,8 @@ private:
     int                 m_eventDay;                 // Event date fields
     int                 m_eventColorName;           // Color of event name text
     int                 m_eventColorDay;            // Color of event day number
+
+    std::string        *m_fileToParse;
 };
 
 }

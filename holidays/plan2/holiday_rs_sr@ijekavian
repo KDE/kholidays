@@ -1,7 +1,7 @@
 ::
 :: Country:  Serbia
 ::
-:: Language: Serbian
+:: Language: Serbian (Ijekavian)
 ::
 :: Author:   Slobodan Terzić <githzerai06@gmail.com>
 ::           Saša Jovanović <sjova83@gmail.com>
@@ -19,7 +19,7 @@
 
 :: Metadata
 country      "RS"
-language     "sr"
+language     "sr@ijekavian"
 :name         ""
 :description  ""
 
@@ -34,7 +34,7 @@ language     "sr"
 "Међународни празник рада"                                         weekend on may 1 length 2 days
 "Међународни празник рада (нерадни дан)"                           weekend on ( ( ( [may 2] == [sunday after ([may 2])] ) ) ?
                                                                                     [ monday after ([may 2]) ] : noop )
-"Дан победе"                                                     weekend on may 9
+"Дан побједе"                                                     weekend on may 9
 "Видовдан"                                                         weekend on june 28
 
 :: Religious Holidays
@@ -53,18 +53,18 @@ language     "sr"
 
 :: Cultural
 "Српска Нова Година"                                               on january 14
-"Дан сећања на жртве холокауста"                                 on january 27
+"Дан сјећања на жртве холокауста"                                 on january 27
 
 :: School
 "Свети Сава"                                                       weekend on january 27
 
 :: Daylight Saving
-"Летње рачунање времена (ГМТ+2)"                                  on last sunday in march
+"Љетње рачунање времена (ГМТ+2)"                                  on last sunday in march
 "Зимско рачунање времена (ГМТ+1)"                                  on last sunday in october
 
 :: Seasons
-"Први дан пролећа"                                                on march 20
-"Први дан лета"                                                   on june 21
+"Први дан прољећа"                                                on march 20
+"Први дан љета"                                                   on june 21
 "Први дан јесени"                                                  on september 23
 "Први дан зиме"                                                    on december 22
 

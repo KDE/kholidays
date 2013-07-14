@@ -1,0 +1,71 @@
+::
+:: Country:  Serbia
+::
+:: Language: Serbian (Latin)
+::
+:: Author:   Slobodan Terzić <githzerai06@gmail.com>
+::           Saša Jovanović <sjova83@gmail.com>
+::           Dalibor Đurić <daliborddjuric@gmail.com>
+::
+:: Updated:  2013-05-25
+::
+:: Source:   http://www.minrzs.gov.rs/drzavni-i-verski-praznici-republike-srbije.php
+::           http://en.wikipedia.org/wiki/Public_holidays_in_Serbia
+::           http://www.veronauka.org.rs/kalendar/
+::           http://www.pravoslavnikalendar.iz.rs/
+::           http://sr.wikipedia.org/wiki/Pokretni_praznici_kod_pravoslavaca
+::           http://sr.wikipedia.org/wiki/Srpski_narodni_kalendar
+::
+
+:: Metadata
+country      "RS"
+language     "sr@latin"
+:name         ""
+:description  ""
+
+:: Public Holidays
+"Nova Godina"                                                      weekend on january 1 length 2 days
+"Nova Godina (neradni dan)"                                        weekend on ( ( ( [january 2] == [sunday after ([january 2])] ) ) ?
+                                                                                    [ monday after ([january 2]) ] : noop )
+"Pravoslavni Božić"                                                weekend on january 7
+"Dan državnosti"                                                   weekend on february 15
+"Dan državnosti (neradni dan)"                                     weekend on ( ( ( [february 15] == [sunday after ([february 15])] ) ) ?
+                                                                                    [ monday after ([february 15]) ] : noop )
+"Međunarodni praznik rada"                                         weekend on may 1 length 2 days
+"Međunarodni praznik rada (neradni dan)"                           weekend on ( ( ( [may 2] == [sunday after ([may 2])] ) ) ?
+                                                                                    [ monday after ([may 2]) ] : noop )
+"Dan pobede"                                                     weekend on may 9
+"Vidovdan"                                                         weekend on june 28
+
+:: Religious Holidays
+"Pravoslavni Veliki petak"                                         weekend on pascha minus 2 days
+"Pravoslavna Velika subota"                                        weekend on pascha minus 1 days
+"Pravoslavni Vaskrs"                                               weekend on pascha length 2 days
+"Rimokatolički Veliki petak"                                       weekend on easter minus 2 days
+"Rimokatolička Velika subota"                                      on easter minus 1 days
+"Rimokatolički Uskrs"                                              on easter length 2 days
+"Rimokatolički Božić"                                              on december 25
+"Ramazanski bajram"                                                on hijri shawwal 1
+"Kurban-bajram"                                                    on hijri thualhijjah 10
+"Jom Kipur"                                                        on hebrew tishrey 10
+
+:: Financial
+
+:: Cultural
+"Srpska Nova Godina"                                               on january 14
+"Dan sećanja na žrtve holokausta"                                 on january 27
+
+:: School
+"Sveti Sava"                                                       weekend on january 27
+
+:: Daylight Saving
+"Letnje računanje vremena (GMT+2)"                                  on last sunday in march
+"Zimsko računanje vremena (GMT+1)"                                  on last sunday in october
+
+:: Seasons
+"Prvi dan proleća"                                                on march 20
+"Prvi dan leta"                                                   on june 21
+"Prvi dan jeseni"                                                  on september 23
+"Prvi dan zime"                                                    on december 22
+
+:: Name Days

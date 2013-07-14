@@ -21,7 +21,6 @@ language    "ca"
 "Divendres Sant"        weekend on easter minus 2 days
 "Primer de Maig"        weekend on may 1
 "Mare de Déu d'Agost"   weekend on august 15
-"Diada Nacional"        weekend on september 11
 "Pilar"                 weekend on october 12
 "Tots Sants"            weekend on november 1
 "Constitució"           weekend on december 6
@@ -34,8 +33,13 @@ language    "ca"
 "Dimecres de cendra"    on easter minus 46 days
 "Dijous Sant"           on easter minus 3 days
 "Pasqua"                on easter
+"Dilluns de Pasqua"     weekend on easter plus 1 day
 "Pentecosta"            on easter plus 49 days
 "Sant Joan"             on june 24
+"Sant Esteve"           weekend on december 26
+
+:: Regional Holidays of the autonomous communities
+"Diada Nacional"        weekend on september 11
 
 :: Financial
 
