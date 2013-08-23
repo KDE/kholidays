@@ -163,7 +163,7 @@ daycolor :        { driver.setEventColorDay( 0 ); }
 eventname : STRING { driver.setEventName( char *s = $1; QString::fromUtf8( s ) ); free( s ); $1 = NULL; }
 ;
 
-calendar :           { driver.setEventCalendarType( "gregorian" ); }
+calendar :           { driver.setEventCalendarType( QLatin1String("gregorian") ); }
          | CALENDAR  { driver.setEventCalendarType( QString::fromUtf8( $1 ) ); }
 ;
 
