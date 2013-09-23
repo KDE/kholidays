@@ -36,7 +36,7 @@ set(kholidays_UI
 
 kde4_add_ui_files(kholidays_LIB_SRCS ${kholidays_UI})
 
-kde4_add_library(kholidays ${LIBRARY_TYPE} ${kholidays_LIB_SRCS})
+add_library(kholidays ${LIBRARY_TYPE} ${kholidays_LIB_SRCS})
 generate_export_header(kholidays)
 
 target_link_libraries(kholidays ${KDE4_KDEUI_LIBS} ${QT_QTGUI_LIBRARY})
