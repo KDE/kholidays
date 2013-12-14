@@ -174,7 +174,7 @@ QString HolidayRegion::countryCode() const
 
 QString HolidayRegion::countryCode( const QString &regionCode )
 {
-  HolidayRegion temp = HolidayRegion( regionCode );
+  HolidayRegion temp( regionCode );
   if ( temp.isValid() ) {
     return temp.countryCode();
   } else {
@@ -189,7 +189,7 @@ QString HolidayRegion::languageCode() const
 
 QString HolidayRegion::languageCode( const QString &regionCode )
 {
-  HolidayRegion temp = HolidayRegion( regionCode );
+  HolidayRegion temp( regionCode );
   if ( temp.isValid() ) {
     return temp.languageCode();
   } else {
@@ -308,7 +308,7 @@ QString HolidayRegion::name() const
 
 QString HolidayRegion::name( const QString &regionCode )
 {
-  HolidayRegion temp = HolidayRegion( regionCode );
+  HolidayRegion temp( regionCode );
   if ( temp.isValid() ) {
     return temp.name();
   } else {
@@ -323,7 +323,7 @@ QString HolidayRegion::description() const
 
 QString HolidayRegion::description( const QString &regionCode )
 {
-  HolidayRegion temp = HolidayRegion( regionCode );
+  HolidayRegion temp( regionCode );
   if ( temp.isValid() ) {
     return temp.description();
   } else {
@@ -338,7 +338,7 @@ bool HolidayRegion::isValid() const
 
 bool HolidayRegion::isValid( const QString &regionCode )
 {
-  HolidayRegion temp = HolidayRegion( regionCode );
+  HolidayRegion temp( regionCode );
   return temp.isValid();
 }
 
