@@ -1,11 +1,13 @@
 project(kholidays)
 
+find_package(KF5 NO_MODULE REQUIRED COMPONENTS ItemViews KDE4Support)
+
 add_definitions(-DKDE_DEFAULT_DEBUG_AREA=5350)
 
 add_subdirectory(holidays)
 add_subdirectory(tests)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/parsers/plan2)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/parsers/plan2 ${CMAKE_CURRENT_BINARY_DIR})
 
 check_include_files(err.h HAVE_ERR_H)
 check_include_files(sys/cdefs.h HAVE_SYS_CDEFS_H)
@@ -35,7 +37,7 @@ kde4_add_ui_files(kholidays_LIB_SRCS ${kholidays_UI})
 
 kde4_add_library(kholidays ${LIBRARY_TYPE} ${kholidays_LIB_SRCS})
 
-target_link_libraries(kholidays ${KDE4_KDEUI_LIBS} ${QT_QTGUI_LIBRARY})
+target_link_libraries(kholidays KF5::ItemViews KF5::KDE4Support)
 
 set_target_properties(kholidays PROPERTIES
   VERSION ${GENERIC_LIB_VERSION}
