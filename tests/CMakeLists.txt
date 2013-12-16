@@ -1,6 +1,9 @@
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR})
 
-include_directories(${CMAKE_SOURCE_DIR}/kholidays)
+include_directories(
+  ${CMAKE_SOURCE_DIR}/kholidays
+  ${CMAKE_BINARY_DIR}/kholidays
+)
 
 ########### next target ###############
 

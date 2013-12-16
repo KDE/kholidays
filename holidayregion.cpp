@@ -51,16 +51,16 @@ class HolidayRegion::Private
         if ( mRegionCode.length() == 2 ) { //Backwards compatible mode for old location code
           mLocation = mRegionCode;
           QStringList locationFiles = KGlobal::dirs()->findAllResources( "data",
-                                      "libkholidays/plan2/holiday_" + mLocation + '*',
+                                      QLatin1String("libkholidays/plan2/holiday_") + mLocation + QLatin1Char('*'),
                                       KStandardDirs::NoDuplicates );
           if ( locationFiles.count() > 0 ) {
             mRegionCode = locationFiles.at( 0 ).
-                          mid( locationFiles.at( 0 ).lastIndexOf( "holiday_" ) + 8 );
+                          mid( locationFiles.at( 0 ).lastIndexOf( QLatin1String("holiday_") ) + 8 );
           }
         }
 
         mHolidayFile.setFile(
-          KStandardDirs::locate( "data", "libkholidays/plan2/holiday_" + mRegionCode ) );
+          KStandardDirs::locate( "data", QLatin1String("libkholidays/plan2/holiday_") + mRegionCode ) );
       }
 
       init();
@@ -117,7 +117,7 @@ HolidayRegion::HolidayRegion( const QString &regionCode )
 }
 
 HolidayRegion::HolidayRegion( const QFileInfo &regionFile )
-             : d( new Private( regionFile ) )
+    : d( new Private( regionFile ) )
 {
 }
 
@@ -129,12 +129,12 @@ HolidayRegion::~HolidayRegion()
 QStringList HolidayRegion::locations()
 {
   const QStringList files =
-    KGlobal::dirs()->findAllResources( "data", "libkholidays/plan2/holiday_*",
+    KGlobal::dirs()->findAllResources( "data", QLatin1String("libkholidays/plan2/holiday_*"),
                                        KStandardDirs::NoDuplicates );
 
   QStringList locations;
   foreach ( const QString &filename, files ) {
-    locations.append( filename.mid( filename.lastIndexOf( "holiday_" ) + 8, 2 ) );
+    locations.append( filename.mid( filename.lastIndexOf( QLatin1String("holiday_") ) + 8, 2 ) );
   }
 
   locations.removeDuplicates();
@@ -150,12 +150,12 @@ QString HolidayRegion::location() const
 QStringList HolidayRegion::regionCodes()
 {
   const QStringList files =
-    KGlobal::dirs()->findAllResources( "data", "libkholidays/plan2/holiday_*",
+    KGlobal::dirs()->findAllResources( "data", QLatin1String("libkholidays/plan2/holiday_*"),
                                        KStandardDirs::NoDuplicates );
 
   QStringList regionCodesList;
   foreach ( const QString &filename, files ) {
-    regionCodesList.append( filename.mid( filename.lastIndexOf( "holiday_" ) + 8 ) );
+    regionCodesList.append( filename.mid( filename.lastIndexOf( QLatin1String("holiday_") ) + 8 ) );
   }
 
   qSort( regionCodesList );
@@ -202,50 +202,50 @@ QString HolidayRegion::name() const
   QString tempName = d->mDriver->fileName();
 
   if ( tempName.isEmpty() ) {
-    QStringList countryParts = countryCode().toLower().split( '-' );
+    QStringList countryParts = countryCode().toLower().split( QLatin1Char('-') );
     QString country = countryParts.at( 0 );
     QString regionName, typeName;
 
-    if ( country != "xx" ) {
+    if ( country != QLatin1String("xx") ) {
       if ( countryParts.count() == 2 ) {
         // Temporary measure to get regions translated, only those files that already exist
         // In 4.6 hope to have isocodes project integration for translations via KLocale
         QString subdivision = countryParts.at( 1 );
-        if ( country == "ca" && subdivision == "qc" ) {
+        if ( country == QLatin1String("ca") && subdivision == QLatin1String("qc") ) {
           regionName = i18nc( "Canadian region", "Quebec" );
-        } else if ( country == "de" && subdivision == "by" ) {
+        } else if ( country == QLatin1String("de") && subdivision == QLatin1String("by") ) {
           regionName = i18nc( "German region", "Bavaria" );
-        } else if ( country == "es" && subdivision == "ct" ) {
+        } else if ( country == QLatin1String("es") && subdivision == QLatin1String("ct") ) {
           regionName = i18nc( "Spanish region", "Catalonia" );
-        } else if ( country == "gb" && subdivision == "eaw" ) {
+        } else if ( country == QLatin1String("gb") && subdivision == QLatin1String("eaw") ) {
           regionName = i18nc( "UK Region", "England and Wales" );
-        } else if ( country == "gb" && subdivision == "eng" ) {
+        } else if ( country == QLatin1String("gb") && subdivision == QLatin1String("eng") ) {
           regionName = i18nc( "UK Region", "England" );
-        } else if ( country == "gb" && subdivision == "wls" ) {
+        } else if ( country == QLatin1String("gb") && subdivision == QLatin1String("wls") ) {
           regionName = i18nc( "UK Region", "Wales" );
-        } else if ( country == "gb" && subdivision == "sct" ) {
+        } else if ( country == QLatin1String("gb") && subdivision == QLatin1String("sct") ) {
           regionName = i18nc( "UK Region", "Scotland" );
-        } else if ( country == "gb" && subdivision == "nir" ) {
+        } else if ( country == QLatin1String("gb") && subdivision == QLatin1String("nir") ) {
           regionName = i18nc( "UK Region", "Northern Ireland" );
-        } else if ( country == "it" && subdivision == "bz" ) {
+        } else if ( country == QLatin1String("it") && subdivision == QLatin1String("bz") ) {
           regionName = i18nc( "Italian Region", "South Tyrol" );
-        } else if ( country == "au" && subdivision == "nsw" ) {
+        } else if ( country == QLatin1String("au") && subdivision == QLatin1String("nsw") ) {
           regionName = i18nc( "Australian Region", "New South Wales" );
-        } else if ( country == "au" && subdivision == "qld" ) {
+        } else if ( country == QLatin1String("au") && subdivision == QLatin1String("qld") ) {
           regionName = i18nc( "Australian Region", "Queensland" );
-        } else if ( country == "au" && subdivision == "vic" ) {
+        } else if ( country == QLatin1String("au") && subdivision == QLatin1String("vic") ) {
           regionName = i18nc( "Australian Region", "Victoria" );
-        } else if ( country == "au" && subdivision == "sa" ) {
+        } else if ( country == QLatin1String("au") && subdivision == QLatin1String("sa") ) {
           regionName = i18nc( "Australian Region", "South Australia" );
-        } else if ( country == "au" && subdivision == "nt" ) {
+        } else if ( country == QLatin1String("au") && subdivision == QLatin1String("nt") ) {
           regionName = i18nc( "Australian Region", "Northern Territory" );
-        } else if ( country == "au" && subdivision == "act" ) {
+        } else if ( country == QLatin1String("au") && subdivision == QLatin1String("act") ) {
           regionName = i18nc( "Australian Region", "Australian Capital Territory" );
-        } else if ( country == "au" && subdivision == "wa" ) {
+        } else if ( country == QLatin1String("au") && subdivision == QLatin1String("wa") ) {
           regionName = i18nc( "Australian Region", "Western Australia" );
-        } else if ( country == "au" && subdivision == "tas" ) {
+        } else if ( country == QLatin1String("au") && subdivision == QLatin1String("tas") ) {
           regionName = i18nc( "Australian Region", "Tasmania" );
-        } else if ( country == "ba" && subdivision == "srp" ) {
+        } else if ( country == QLatin1String("ba") && subdivision == QLatin1String("srp") ) {
           regionName = i18nc( "Bosnian and Herzegovinian Region", "Republic of Srpska" );
         } else {
           regionName = KGlobal::locale()->countryCodeToName( country );
@@ -256,36 +256,36 @@ QString HolidayRegion::name() const
     }
 
     //Cheat on type for now,take direct from region code until API is introduced in SC 4.6
-    QStringList regionParts = regionCode().toLower().split( '_' );
+    QStringList regionParts = regionCode().toLower().split( QLatin1Char('_') );
     if ( regionParts.count() == 3 ) {
       QString type = regionParts.at( 2 );
       // Will create lots more in 4.6
       // Religious types, just simple for now
-      if ( type == "public" ) {
+      if ( type == QLatin1String("public") ) {
         typeName = i18nc( "Holiday type", "Public" );
-      } else if ( type == "religious" ) {
+      } else if ( type == QLatin1String("religious") ) {
         typeName = i18nc( "Holiday type", "Religious" );
-      } else if ( type == "financial" ) {
+      } else if ( type == QLatin1String("financial") ) {
         typeName = i18nc( "Holiday type", "Financial" );
-      } else if ( type == "cultural" ) {
+      } else if ( type == QLatin1String("cultural") ) {
         typeName = i18nc( "Holiday type", "Cultural" );
-      } else if ( type == "school" ) {
+      } else if ( type == QLatin1String("school") ) {
         typeName = i18nc( "Holiday type", "School" );
-      } else if ( type == "seasons" ) {
+      } else if ( type == QLatin1String("seasons") ) {
         typeName = i18nc( "Holiday type", "Seasons" );
-      } else if ( type == "name" ) {
+      } else if ( type == QLatin1String("name") ) {
         typeName = i18nc( "Holiday type", "Name Days" );
-      } else if ( type == "personal" ) {
+      } else if ( type == QLatin1String("personal") ) {
         typeName = i18nc( "Holiday type", "Personal" );
-      } else if ( type == "catholic" ) {
+      } else if ( type == QLatin1String("catholic") ) {
         typeName = i18nc( "Holiday type", "Catholic" );
-      } else if ( type == "protestant" ) {
+      } else if ( type == QLatin1String("protestant") ) {
         typeName = i18nc( "Holiday type", "Protestant" );
-      } else if ( type == "orthodox" ) {
+      } else if ( type == QLatin1String("orthodox") ) {
         typeName = i18nc( "Holiday type", "Orthodox" );
-      } else if ( type == "jewish" ) {
+      } else if ( type == QLatin1String("jewish") ) {
         typeName = i18nc( "Holiday type", "Jewish" );
-      } else if ( type == "islamic" ) {
+      } else if ( type == QLatin1String("islamic") ) {
         typeName = i18nc( "Holiday type", "Islamic" );
       }
     }
@@ -293,7 +293,7 @@ QString HolidayRegion::name() const
     if ( !regionName.isEmpty() ) {
       if ( !typeName.isEmpty() ) {
         //TODO translate when not frozen
-        tempName = QString( "%1 - %2" ).arg( regionName ).arg( typeName );
+        tempName = QString::fromLatin1( "%1 - %2" ).arg( regionName ).arg( typeName );
       } else {
         tempName = regionName;
       }
@@ -424,8 +424,8 @@ QString HolidayRegion::defaultRegionCode( const QString &country, const QString 
     localeLanguage = language.toLower();
   }
 
-  if ( localeLanguage.split( '_' ).count() > 1 ) {
-    localeLanguageCountry = localeLanguage.split( '_' ).at( 1 );
+  if ( localeLanguage.split( QLatin1Char('_') ).count() > 1 ) {
+    localeLanguageCountry = localeLanguage.split( QLatin1Char('_') ).at( 1 );
   }
 
   QStringList regionList = KHolidays::HolidayRegion::regionCodes();
@@ -437,8 +437,8 @@ QString HolidayRegion::defaultRegionCode( const QString &country, const QString 
   foreach ( const QString &regionCode, regionList ) {
     QString regionCountry = KHolidays::HolidayRegion::countryCode( regionCode ).toLower();
     QString regionSubdivisionCountry;
-    if ( regionCountry.split( '-' ).count() > 1 ) {
-      regionSubdivisionCountry = regionCountry.split( '-' ).at( 0 );
+    if ( regionCountry.split( QLatin1Char('-') ).count() > 1 ) {
+      regionSubdivisionCountry = regionCountry.split( QLatin1Char('-') ).at( 0 );
     }
     QString regionLanguage = KHolidays::HolidayRegion::languageCode( regionCode ).toLower();
 

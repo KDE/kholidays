@@ -3,6 +3,9 @@ project(kholidays)
 find_package(KF5 NO_MODULE REQUIRED COMPONENTS ItemViews KDE4Support)
 
 add_definitions(-DKDE_DEFAULT_DEBUG_AREA=5350)
+#add_definitions( -DQT_NO_CAST_FROM_ASCII )
+#add_definitions( -DQT_NO_CAST_TO_ASCII )
+
 
 add_subdirectory(holidays)
 add_subdirectory(tests)
@@ -35,7 +38,8 @@ set(kholidays_UI
 
 kde4_add_ui_files(kholidays_LIB_SRCS ${kholidays_UI})
 
-kde4_add_library(kholidays ${LIBRARY_TYPE} ${kholidays_LIB_SRCS})
+add_library(kholidays ${LIBRARY_TYPE} ${kholidays_LIB_SRCS})
+generate_export_header(kholidays)
 
 target_link_libraries(kholidays KF5::ItemViews KF5::KDE4Support)
 
@@ -62,7 +66,7 @@ endif()
 ########### install files ###############
 
 install(FILES
-  kholidays_export.h
+  ${CMAKE_CURRENT_BINARY_DIR}/kholidays_export.h
   astroseasons.h
   holiday.h
   holidayregion.h

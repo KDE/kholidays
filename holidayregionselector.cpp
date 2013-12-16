@@ -274,7 +274,7 @@ HolidayRegionSelector::HolidayRegionSelector( QWidget *parent ) :
   QMap<QString, HolidayRegion*> regionMap;
   foreach ( const QString &regionCode, HolidayRegion::regionCodes() ) {
     regionMap[regionCode] = new HolidayRegion( regionCode );
-    QString country = regionMap[regionCode]->countryCode().split( '-' ).at( 0 );
+    QString country = regionMap[regionCode]->countryCode().split( QLatin1Char('-') ).at( 0 );
     regionCodeMap[country].append( regionCode );
   }
 
