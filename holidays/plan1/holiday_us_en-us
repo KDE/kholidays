@@ -28,8 +28,8 @@
 "Easter"                         on easter
 "Ash Wednesday"                  on easter minus 46 days
 "Pentecost"                      on easter plus 49 days
-"Ascension"                      on easter plus 40 days
-"Trinity"                        on easter plus 46 days
+"Ascension"                      on easter plus 39 days
+"Trinity"                        on easter plus 56 days
 "Corpus Christi"                 on easter plus 53 days
 
 :: Financial

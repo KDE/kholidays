@@ -36,7 +36,7 @@ language    "es"
 "Pascua"                 on easter
 "Miércoles de ceniza"    on easter minus 46 days
 "Ascension"              on easter plus 39 days
-"Trinidad"               on easter plus 46 days
+"Trinidad"               on easter plus 56 days
 "Corpus Christi"         on easter plus 60 days
 
 :: Financial
