@@ -394,7 +394,7 @@ red "Коледа, Рождество Христово" on 26.12.
 : Released under the General Public License
 :
 
-: Feriados nacionais (Fedaral holidays)
+: Feriados nacionais (Fedaral holidays)
 :::
 
 small weekend "Confraternização Universal"		on january 1
@@ -1630,7 +1630,7 @@ small "Pascua" weekend on easter
 small "Miércoles de ceniza" on easter minus 46 days
 small "Pentecostes" weekend on easter plus 49 days
 small "Ascension" on easter plus 39 days
-small "Trinidad" on easter plus 46 days
+small "Trinidad" on easter plus 56 days
 small "Corpus Christi" on easter plus 60 days
 :
 : Estaciones
@@ -1913,7 +1913,7 @@ small "Öskudagur" on easter minus 46 days
 small "Hvítasunna" weekend on easter plus 49 days
 
 :small "Uppstigningardagur" on easter plus 40 days
-:small "Trinity" on easter plus 46 day
+:small "Trinity" on easter plus 56 day
 :small "Corpus Christi" on easter plus 53 days
 
 : Seasons
@@ -1948,7 +1948,7 @@ small black "Quinta di Quaresima" on easter minus 14 days
 small black "Domenica delle Palme" on easter minus 7 days
 weekend "Pasqua" on easter
 weekend "Lunedì dell'Angelo" on easter plus 1 day
-small black "Ascensione" on easter plus 42 days
+small black "Ascensione" on easter plus 39 days
 small black "Pentecoste" on easter plus 49 days
 small black "Santissima Trinità" on easter plus 56 days
 small black "Corpus Domini" on easter plus 63 days
@@ -2203,7 +2203,7 @@ red "New Year's Day" on january 1 shift to monday if sunday
 red "Independence Day" on march 21 shift to monday if sunday
 red "Good Friday" on easter minus 2 day
 red "Easter Monday" on easter plus 1 day
-red "Ascension Day" on easter plus 40 day
+red "Ascension Day" on easter plus 39 day
 red "Workers Day" on may 1 shift to monday if sunday
 red "Cassinga Day" on may 4 shift to monday if sunday
 red "Africa Day" on may 25 shift to monday if sunday
@@ -2479,7 +2479,7 @@ small "Clocks Back" on first sunday in april
 :small "Presentation" on february 2
 small "Ash Wednesday" on easter minus 46 days
 :small "Palm Sunday" on easter minus 7 days
-small "Ascension" on easter plus 42 days
+small "Ascension" on easter plus 39 days
 small "Pentecost" weekend on easter plus 49 days
 small "Trinity" on easter plus 56 days
 small "Corpus Christi" on easter plus 63 days
@@ -2599,8 +2599,8 @@ small black  "Św. Mikołaj"         on 6.12.
 "4ª feira de cinzas" on easter minus 46 days
 "Páscoa" on easter
 "Pentecostes" weekend on easter plus 49 days
-:"Ascension" on easter plus 40 days
-:"Trinity" on easter plus 46 days
+:"Ascension" on easter plus 39 days
+:"Trinity" on easter plus 56 days
 :
 : Estações
 :
@@ -3414,8 +3414,8 @@ small "Wright Brothers' Day" on december 17
 small "Easter" weekend on easter
 small "Ash Wednesday" on easter minus 46 days
 small "Pentecost" weekend on easter plus 49 days
-small "Ascension" on easter plus 40 days
-small "Trinity" on easter plus 46 days
+small "Ascension" on easter plus 39 days
+small "Trinity" on easter plus 56 days
 small "Corpus Christi" on easter plus 53 days
 
 : Seasons (are these really hardcoded or calculated?)

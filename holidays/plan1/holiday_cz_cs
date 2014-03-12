@@ -12,15 +12,16 @@
 
 :: Public Holidays
 "Nový rok"                                                       weekend on january 1
+"Státní svátek - Den vzniku samostatného českého státu"          weekend on january 1
 "Velikonoce"                                                     weekend on easter
 "Velikonoční pondělí"                                            weekend on easter plus 1 days
 "Svátek práce"                                                   weekend on may 1
 "Státní svátek - Den osvobození"                                 weekend on may 8
 "Státní svátek - Den slovanských věrozvěstů Cyrila a Metoděje"   weekend on july 5
-"Statní svátek - Mistr Jan Hus"                                  weekend on july 6
+"Statní svátek - Den upálení mistra Jana Husa"                   weekend on july 6
 "Státní svátek - Den České státnosti"                            weekend on september 28
 "Státní svátek - Den vzniku samostatného Československa (1918)"  weekend on october 28
-"Státní svátek - Den boje studentů za svobodu a demokracii"      weekend on november 17
+"Státní svátek - Den boje za svobodu a demokracii"               weekend on november 17
 "Štědrý den"                                                     weekend on december 24
 "1. svátek vánoční"                                              weekend on december 25
 "2. svátek vánoční"                                              weekend on december 26
@@ -31,6 +32,7 @@
 :: Financial
 
 :: Cultural
+"Mezinárodní den žen"                                            on march 8
 
 :: School
 
