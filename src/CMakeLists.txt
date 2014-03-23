@@ -24,7 +24,7 @@ set(kholidays_UI
   holidayregionselector.ui
 )
 
-kde4_add_ui_files(kholidays_SRCS ${kholidays_UI})
+qt5_wrap_ui(kholidays_SRCS ${kholidays_UI})
 
 add_library(KF5Holidays ${kholidays_SRCS})
 generate_export_header(KF5Holidays BASE_NAME kholidays)
