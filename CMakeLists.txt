@@ -1,78 +1,61 @@
-project(kholidays)
+cmake_minimum_required(VERSION 2.8.12)
 
-find_package(KF5 NO_MODULE REQUIRED COMPONENTS ItemViews KDE4Support)
+project(KHolidays)
 
-add_definitions(-DKDE_DEFAULT_DEBUG_AREA=5350)
-#add_definitions( -DQT_NO_CAST_FROM_ASCII )
-#add_definitions( -DQT_NO_CAST_TO_ASCII )
+# ECM setup
+find_package(ECM 0.0.11 CONFIG REQUIRED)
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
+
+include(ECMGenerateHeaders)
+include(ECMGeneratePriFile)
+include(ECMPackageConfigHelpers)
+include(ECMSetupVersion)
+include(FeatureSummary)
+include(KDEInstallDirs)
+include(KDECMakeSettings)
+include(KDEFrameworkCompilerSettings)
 
 
+# FIXME: Do we want the same versions in kdepimlibs and kf5?
+set(KF5_VERSION "4.97.0")
+
+ecm_setup_version(${KF5_VERSION} VARIABLE_PREFIX KHOLIDAYS
+                        VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kholidays_version.h"
+                        PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5HolidaysConfigVersion.cmake"
+                        SOVERSION 5
+)
+
+########### Find packages ###########
+find_package(KF5 ${KF5_VERSION} CONFIG REQUIRED COMPONENTS ItemViews KDE4Support)
+
+########### Targets ###########
+add_subdirectory(src)
+#add_subdirectory(autotests)
 add_subdirectory(holidays)
-add_subdirectory(tests)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/parsers/plan2 ${CMAKE_CURRENT_BINARY_DIR})
+########### CMake Config Files ###########
+set(CMAKECONFIG_INSTALL_DIR "${CMAKECONFIG_INSTALL_PREFIX}/KF5Holidays")
 
-check_include_files(err.h HAVE_ERR_H)
-check_include_files(sys/cdefs.h HAVE_SYS_CDEFS_H)
-configure_file(config-kholidays.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kholidays.h)
-
-########### next target ###############
-
-set(kholidays_LIB_SRCS
-  astroseasons.cpp
-  holiday.cpp
-  holidayregion.cpp
-  holidayregionselector.cpp
-  lunarphase.cpp
-  sunriseset.cpp
-  zodiac.cpp
-  parsers/plan2/holidayscannerplan.cpp
-  parsers/holidayparserdriver.cpp
-  parsers/plan2/holidayparserdriverplan.cpp
-  parsers/plan2/holidayparserplan.cpp
+ecm_configure_package_config_file(
+  "${CMAKE_CURRENT_SOURCE_DIR}/KF5HolidaysConfig.cmake.in"
+  "${CMAKE_CURRENT_BINARY_DIR}/KF5HolidaysConfig.cmake"
+  INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
 )
-
-set(kholidays_UI
-  holidayregionselector.ui
-)
-
-kde4_add_ui_files(kholidays_LIB_SRCS ${kholidays_UI})
-
-add_library(kholidays ${LIBRARY_TYPE} ${kholidays_LIB_SRCS})
-generate_export_header(kholidays)
-
-target_link_libraries(kholidays KF5::ItemViews KF5::KDE4Support)
-
-set_target_properties(kholidays PROPERTIES
-  VERSION ${GENERIC_LIB_VERSION}
-  SOVERSION ${GENERIC_LIB_SOVERSION}
-)
-
-install(TARGETS kholidays EXPORT kdepimlibsLibraryTargets ${INSTALL_TARGETS_DEFAULT_ARGS})
-
-########### next target ###############
-
-if(QT_QTDESIGNER_FOUND)
-  set(kholidayswidgets_PART_SRCS)
-  kde4_add_widget_files(kholidayswidgets_PART_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/kholidays.widgets)
-
-  kde4_add_plugin(kholidayswidgets ${kholidayswidgets_PART_SRCS})
-
-  target_link_libraries(kholidayswidgets ${KDE4_KIO_LIBS} kholidays)
-
-  install(TARGETS kholidayswidgets DESTINATION ${PLUGIN_INSTALL_DIR}/plugins/designer)
-endif()
-
-########### install files ###############
 
 install(FILES
-  ${CMAKE_CURRENT_BINARY_DIR}/kholidays_export.h
-  astroseasons.h
-  holiday.h
-  holidayregion.h
-  holidays.h
-  lunarphase.h
-  zodiac.h
-  holidayregionselector.h
-  DESTINATION ${INCLUDE_INSTALL_DIR}/kholidays COMPONENT Devel
+  "${CMAKE_CURRENT_BINARY_DIR}/KF5HolidaysConfig.cmake"
+  "${CMAKE_CURRENT_BINARY_DIR}/KF5HolidaysConfigVersion.cmake"
+  DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+  COMPONENT Devel
 )
+
+install(EXPORT KF5HolidaysTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5HolidaysTargets.cmake NAMESPACE KF5::)
+
+install(FILES
+   ${CMAKE_CURRENT_BINARY_DIR}/kholidays_version.h
+  DESTINATION ${INCLUDE_INSTALL_DIR} COMPONENT Devel
+)
+
+if ("${CMAKE_BINARY_DIR}" STREQUAL "${KHolidays_BINARY_DIR}")
+  feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
+endif()
