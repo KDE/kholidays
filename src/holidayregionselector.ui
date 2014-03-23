@@ -36,7 +36,7 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>KTreeWidgetSearchLineWidget</class>
+   <class>KTreeWidgetSearchLine</class>
    <extends>QWidget</extends>
    <header>ktreewidgetsearchline.h</header>
   </customwidget>

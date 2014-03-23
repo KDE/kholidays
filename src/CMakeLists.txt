@@ -20,11 +20,11 @@ set(kholidays_SRCS
   parsers/plan2/holidayparserplan.cpp
 )
 
-#set(kholidays_UI
-#  holidayregionselector.ui
-#)
+set(kholidays_UI
+  holidayregionselector.ui
+)
 
-#kde4_add_ui_files(kholidays_SRCS ${kholidays_UI})
+kde4_add_ui_files(kholidays_SRCS ${kholidays_UI})
 
 add_library(KF5Holidays ${kholidays_SRCS})
 generate_export_header(KF5Holidays BASE_NAME kholidays)
