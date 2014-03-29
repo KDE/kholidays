@@ -31,6 +31,7 @@ generate_export_header(KF5Holidays BASE_NAME kholidays)
 
 add_library(KF5::Holidays ALIAS KF5Holidays)
 
+target_include_directories(KF5Holidays INTERFACE "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/kholidays>")
 target_include_directories(KF5Holidays PUBLIC "$<BUILD_INTERFACE:${KHolidays_SOURCE_DIR}/src;${KHolidays_BINARY_DIR}/src>")
 target_include_directories(KF5Holidays PUBLIC "$<BUILD_INTERFACE:${KHolidays_SOURCE_DIR}/src/parsers/plan2>")
 
