@@ -96,7 +96,7 @@ Holiday::List HolidayParserDriver::parseHolidays( int calendarYear, const QStrin
 
 void HolidayParserDriver::error( const QString &errorMessage )
 {
-  kDebug() << errorMessage;
+  qDebug() << errorMessage;
 }
 
 void HolidayParserDriver::parse()

@@ -80,13 +80,13 @@ void HolidayParserDriverPlan::error( const KHolidays::location &errorLocation, c
 {
   Q_UNUSED( errorLocation );
   //std::cerr << errorLocation << " : " << errorMessage;  //Doesn't work???
-  //kDebug() << errorLocation << " : " << errorMessage;  //Doesn't work???
-  kDebug() << errorMessage;
+  //qDebug() << errorLocation << " : " << errorMessage;  //Doesn't work???
+  qDebug() << errorMessage;
 }
 
 void HolidayParserDriverPlan::error( const QString &errorMessage )
 {
-    kDebug() << errorMessage;
+    qDebug() << errorMessage;
 }
 
 

@@ -3692,7 +3692,7 @@ void HolidayScannerPlan::set_debug(bool b)
 
 int HolidayScannerFlexLexer::yylex()
 {
-    kDebug() << "in HolidayScannerFlexLexer::yylex() !";
+    qDebug() << "in HolidayScannerFlexLexer::yylex() !";
     return 0;
 }
 

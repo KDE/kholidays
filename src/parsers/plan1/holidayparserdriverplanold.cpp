@@ -65,7 +65,7 @@ HolidayParserDriverPlanOld::~HolidayParserDriverPlanOld()
 
 void HolidayParserDriverPlanOld::error( const QString &errorMessage )
 {
-    kDebug() << errorMessage;
+    qDebug() << errorMessage;
 }
 
 void HolidayParserDriverPlanOld::parse()

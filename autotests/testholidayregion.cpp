@@ -33,53 +33,53 @@ QTEST_KDEMAIN( HolidayRegionTest, NoGUI )
 void HolidayRegionTest::printMetadata( const KHolidays::HolidayRegion &region )
 {
     if ( region.isValid() ) {
-      kDebug() << "This regionCode = " << region.regionCode();
-      kDebug() << "Is valid? = " << region.isValid();
-      kDebug() << "Country code = " << region.countryCode();
-      kDebug() << "Language code = " << region.languageCode();
-      kDebug() << "Name = " << region.name();
-      kDebug() << "Description = " << region.description();
+      qDebug() << "This regionCode = " << region.regionCode();
+      qDebug() << "Is valid? = " << region.isValid();
+      qDebug() << "Country code = " << region.countryCode();
+      qDebug() << "Language code = " << region.languageCode();
+      qDebug() << "Name = " << region.name();
+      qDebug() << "Description = " << region.description();
     } else {
-      kDebug() << "Not Valid!";
+      qDebug() << "Not Valid!";
     }
-    kDebug() << "";
+    qDebug() << "";
 }
 
 void HolidayRegionTest::printHolidays( KHolidays::Holiday::List holidays )
 {
     if ( holidays.count() > 0 ) {
         foreach ( const KHolidays::Holiday &holiday, holidays ) {
-            kDebug() << "Date = " << holiday.date().toString( Qt::ISODate ) << " Duration = " << holiday.duration() << " Name = " << holiday.text();
+            qDebug() << "Date = " << holiday.date().toString( Qt::ISODate ) << " Duration = " << holiday.duration() << " Name = " << holiday.text();
         }
     } else {
-        kDebug() << "No holidays";
+        qDebug() << "No holidays";
     }
 }
 
 void HolidayRegionTest::parseRegionCalendarYear( const KHolidays::HolidayRegion &region, int year,
                                                  const QString &calendarType, KHolidays::Holiday::MultidayMode multidayMode )
 {
-    kDebug() << "Parsing region = " << region.regionCode() << " year = " << year << " calendar = " << calendarType;
+    qDebug() << "Parsing region = " << region.regionCode() << " year = " << year << " calendar = " << calendarType;
     printHolidays( region.holidays( year, calendarType, multidayMode ) );
-    kDebug() << "";
+    qDebug() << "";
 }
 
 void HolidayRegionTest::parseRegionDateRange( const KHolidays::HolidayRegion &region, const QDate &startDate,
                                               const QDate &endDate, KHolidays::Holiday::MultidayMode multidayMode )
 {
-    kDebug() << "Parsing regionCode = " << region.regionCode()
+    qDebug() << "Parsing regionCode = " << region.regionCode()
              << " start date = " << startDate.toString( Qt::ISODate )
              << " end date = " << endDate.toString( Qt::ISODate );
     printHolidays( region.holidays( startDate, endDate, multidayMode ) );
-    kDebug() << "";
+    qDebug() << "";
 }
 
 void HolidayRegionTest::parseRegionDate( const KHolidays::HolidayRegion &region, const QDate &date,
                                          KHolidays::Holiday::MultidayMode multidayMode )
 {
-    kDebug() << "Parsing regionCode = " << region.regionCode() << " date = " << date.toString( Qt::ISODate );
+    qDebug() << "Parsing regionCode = " << region.regionCode() << " date = " << date.toString( Qt::ISODate );
     printHolidays( region.holidays( date, multidayMode ) );
-    kDebug() << "";
+    qDebug() << "";
 }
 
 void HolidayRegionTest::testLoadFile()
@@ -93,7 +93,7 @@ void HolidayRegionTest::testLoadFile()
     parseRegionCalendarYear( region, 2013 );
     parseRegionCalendarYear( region, 2014 );
     parseRegionCalendarYear( region, 2015 );
-    kDebug() << "";
+    qDebug() << "";
 }
 
 void HolidayRegionTest::testGb()
@@ -138,33 +138,33 @@ void HolidayRegionTest::testIsrael()
 
 void HolidayRegionTest::testRegions()
 {
-  kDebug() << "Available region codes:";
+  qDebug() << "Available region codes:";
   QStringList regionCodes = KHolidays::HolidayRegion::regionCodes();
   foreach ( const QString &regionCode, regionCodes ) {
     KHolidays::HolidayRegion testRegion( regionCode );
-    kDebug() << regionCode << " = " << testRegion.name();
+    qDebug() << regionCode << " = " << testRegion.name();
   }
-  kDebug() << "";
+  qDebug() << "";
 
-  kDebug() << "This years holidays:";
+  qDebug() << "This years holidays:";
   foreach ( const QString &regionCode, regionCodes ) {
     KHolidays::HolidayRegion testRegion( regionCode );
     printMetadata( testRegion );
     parseRegionCalendarYear( testRegion, QDate::currentDate().year() );
-    kDebug() << "";
+    qDebug() << "";
   }
-  kDebug() << "";
+  qDebug() << "";
 }
 
 void HolidayRegionTest::testLocations()
 {
-  kDebug() << "Available locations:";
+  qDebug() << "Available locations:";
   QStringList locations = KHolidays::HolidayRegion::locations();
   foreach ( const QString &location, locations ) {
     KHolidays::HolidayRegion testRegion( location );
-    kDebug() << location << " = " << testRegion.regionCode() << testRegion.name();
+    qDebug() << location << " = " << testRegion.regionCode() << testRegion.name();
   }
-  kDebug() << "";
+  qDebug() << "";
 }
 
 void HolidayRegionTest::testDefaultRegions()
