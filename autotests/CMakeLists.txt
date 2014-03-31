@@ -1,70 +1,50 @@
-set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR})
+include(ECMMarkAsTest)
 
-include_directories(
-  ${CMAKE_SOURCE_DIR}/kholidays
-  ${CMAKE_BINARY_DIR}/kholidays
-)
+find_package(Qt5Test CONFIG REQUIRED)
 
 ########### next target ###############
 
 set(testlunar_SRCS testlunar.cpp)
 
-kde4_add_unit_test(testlunar TESTNAME kholidays-testlunar ${testlunar_SRCS})
-
-target_link_libraries(testlunar
-  kholidays
-  ${KDE4_KDECORE_LIBS}
-  ${QT_QTGUI_LIBRARY}
-  ${QT_QTTEST_LIBRARY}
-)
+add_executable(testlunar ${testlunar_SRCS})
+add_test(testlunar testlunar)
+ecm_mark_as_test(testlunar)
+target_link_libraries(testlunar KF5Holidays Qt5::Test)
 
 ########### next target ###############
 
 set(testseasons_SRCS testseasons.cpp)
 
-kde4_add_unit_test(testseasons TESTNAME kholidays-testseasons ${testseasons_SRCS})
-
-target_link_libraries(testseasons
-  kholidays
-  ${KDE4_KDECORE_LIBS}
-  ${QT_QTGUI_LIBRARY}
-  ${QT_QTTEST_LIBRARY}
-)
+add_executable(testseasons ${testseasons_SRCS})
+add_test(testseasons testseasons)
+ecm_mark_as_test(testseasons)
+target_link_libraries(testseasons KF5Holidays Qt5::Test)
 
 ########### next target ###############
 
 set(testsunriseset_SRCS testsunriseset.cpp)
 
-kde4_add_unit_test(testsunriseset TESTNAME kholidays-testsunriseset ${testsunriseset_SRCS})
-
-target_link_libraries(testsunriseset
-  kholidays
-  ${KDE4_KDECORE_LIBS}
-  ${QT_QTGUI_LIBRARY}
-  ${QT_QTTEST_LIBRARY}
-)
+add_executable(testsunriseset ${testsunriseset_SRCS})
+add_test(testsunriseset testsunriseset)
+ecm_mark_as_test(testsunriseset)
+target_link_libraries(testsunriseset KF5Holidays Qt5::Test)
 
 ########### next target ###############
 
 set(testzodiac_SRCS testzodiac.cpp)
 
-kde4_add_unit_test(testzodiac TESTNAME kholidays-testzodiac ${testzodiac_SRCS})
-
-target_link_libraries(testzodiac
-  kholidays
-  ${KDE4_KDECORE_LIBS}
-  ${QT_QTTEST_LIBRARY}
-)
+add_executable(testzodiac ${testzodiac_SRCS})
+add_test(testzodiac testzodiac)
+ecm_mark_as_test(testzodiac)
+target_link_libraries(testzodiac KF5Holidays Qt5::Test)
 
 ########### next target ###############
 
 set(testholidayregion_SRCS testholidayregion.cpp)
 
-kde4_add_unit_test(testholidayregion TESTNAME kholidays-testholidayregion ${testholidayregion_SRCS})
+add_executable(testholidayregion ${testholidayregion_SRCS})
+add_test(testholidayregion testholidayregion)
+set_target_properties(testholidayregion PROPERTIES COMPILE_FLAGS -DKDESRCDIR="\\"${CMAKE_CURRENT_SOURCE_DIR}/\\"")
 
-target_link_libraries(testholidayregion
-  kholidays
-  ${KDE4_KDECORE_LIBS}
-  ${QT_QTGUI_LIBRARY}
-  ${QT_QTTEST_LIBRARY}
-)
+ecm_mark_as_test(testholidayregion)
+target_link_libraries(testholidayregion KF5Holidays Qt5::Test)

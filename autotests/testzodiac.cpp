@@ -21,7 +21,7 @@
 
 #include "zodiac.h"
 
-#include <kaboutdata.h>
+#include <k4aboutdata.h>
 #include <kdebug.h>
 #include <klocalizedstring.h>
 #include <kcmdlineargs.h>
@@ -40,7 +40,7 @@ int main( int argc, char **argv )
 
   KCmdLineOptions options;
   options.add( "verbose", ki18n( "Verbose output" ) );
-  KAboutData aboutData( "testzodiac", 0, ki18n( "Test Zodiac Calendar" ), "0.1" );
+  K4AboutData aboutData( "testzodiac", 0, ki18n( "Test Zodiac Calendar" ), "0.1" );
   QCoreApplication app( argc, argv );
 
   Zodiac::ZodiacSigns sign;

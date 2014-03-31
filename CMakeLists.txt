@@ -31,7 +31,7 @@ find_package(KF5 ${KF5_VERSION} CONFIG REQUIRED COMPONENTS ItemViews KDE4Support
 
 ########### Targets ###########
 add_subdirectory(src)
-#add_subdirectory(autotests)
+add_subdirectory(autotests)
 add_subdirectory(holidays)
 
 ########### CMake Config Files ###########

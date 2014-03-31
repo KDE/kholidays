@@ -24,7 +24,7 @@
 
 QTEST_KDEMAIN( SunriseTest, NoGUI )
 
-#include "kholidays/sunriseset.h"
+#include "sunriseset.h"
 using namespace KHolidays;
 using namespace SunRiseSet;
 
