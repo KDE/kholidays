@@ -25,7 +25,7 @@
 #include <QFileInfo>
 
 #include <KCalendarSystem>
-#include <kdebug.h>
+#include <qdebug.h>
 
 #include "holiday_p.h"
 

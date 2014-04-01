@@ -22,7 +22,7 @@
 #include "zodiac.h"
 
 #include <k4aboutdata.h>
-#include <kdebug.h>
+#include <qdebug.h>
 #include <klocalizedstring.h>
 #include <kcmdlineargs.h>
 
