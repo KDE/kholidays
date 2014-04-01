@@ -22,7 +22,7 @@
 #include "zodiac.h"
 
 #include <k4aboutdata.h>
-#include <qdebug.h>
+#include <kdebug.h>
 #include <klocalizedstring.h>
 #include <kcmdlineargs.h>
 
@@ -58,7 +58,7 @@ int main( int argc, char **argv )
           cout << qd.toString( Qt::TextDate ).toLocal8Bit().constData() << ": "
                << pStr.toLocal8Bit().constData()
                << " [" << qPrintable( zd.signSymbol( sign ) ) << "]"
-               ;
+               << endl;
       }
       qd = qd.addDays( 1 );
   }
@@ -72,7 +72,7 @@ int main( int argc, char **argv )
           cout << qd2.toString( Qt::TextDate ).toLocal8Bit().constData() << ": "
                << pStr.toLocal8Bit().constData()
                << " [" << qPrintable( zd2.signSymbol( sign ) ) << "]"
-               ;
+               << endl;
       }
       qd2 = qd2.addDays( 1 );
   }

@@ -38,7 +38,7 @@
 
 #include <QFileInfo>
 
-#include <qdebug.h>
+#include <kdebug.h>
 
 #include "holiday_p.h"
 
