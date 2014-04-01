@@ -1290,7 +1290,7 @@ static yyconst flex_int16_t yy_rule_linenum[201] =
 # include <limits.h>
 # include <string>
 
-# include <kdebug.h>
+# include <qdebug.h>
 
 # include "holidayscannerplan_p.h"
 # include "holidayparserdriverplan_p.h"

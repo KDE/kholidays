@@ -22,7 +22,7 @@
 #include "testlunar.h"
 #include <qtest_kde.h>
 #include <klocalizedstring.h>
-#include <kdebug.h>
+#include <qdebug.h>
 
 QTEST_KDEMAIN( LunarTest, NoGUI )
 
