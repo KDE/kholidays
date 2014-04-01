@@ -27,7 +27,8 @@ ecm_setup_version(${KF5_VERSION} VARIABLE_PREFIX KHOLIDAYS
 )
 
 ########### Find packages ###########
-find_package(KF5 ${KF5_VERSION} CONFIG REQUIRED COMPONENTS ItemViews KDE4Support)
+find_package(KF5ItemViews ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5KDE4Support ${KF5_VERSION} CONFIG REQUIRED)
 
 ########### Targets ###########
 add_subdirectory(src)
