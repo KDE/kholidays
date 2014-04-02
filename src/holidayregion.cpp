@@ -34,6 +34,7 @@
 #include <KLocale>
 #include <KLocalizedString>
 #include <KDebug>
+#include <QStandardPaths>
 
 #include "holiday_p.h"
 #include "parsers/plan2/holidayparserdriverplan_p.h"
@@ -60,7 +61,7 @@ class HolidayRegion::Private
         }
 
         mHolidayFile.setFile(
-          KStandardDirs::locate( "data", QLatin1String("libkholidays/plan2/holiday_") + mRegionCode ) );
+          QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("libkholidays/plan2/holiday_") + mRegionCode ) );
       }
 
       init();
