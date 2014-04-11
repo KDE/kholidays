@@ -37,7 +37,7 @@ target_include_directories(KF5Holidays PUBLIC "$<BUILD_INTERFACE:${KHolidays_SOU
 
 target_link_libraries(KF5Holidays
     KF5::ItemViews
-    KF5::KDE4Support
+    KF5::KDELibs4Support
 )
 
 set_target_properties(KF5Holidays PROPERTIES
