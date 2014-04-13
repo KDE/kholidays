@@ -43,7 +43,7 @@ target_link_libraries(KF5Holidays
 set_target_properties(KF5Holidays PROPERTIES
     VERSION ${KHOLIDAYS_VERSION_STRING}
     SOVERSION ${KHOLIDAYS_SOVERSION}
-    EXPORT_NAME KHolidays
+    EXPORT_NAME Holidays
 )
 
 ecm_generate_headers(KHolidays_CamelCase_HEADERS
