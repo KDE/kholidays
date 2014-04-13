@@ -25,7 +25,7 @@
 #include "lunarphase.h"
 #include <config-kholidays.h>
 
-#include <KDebug>
+#include <QDebug>
 #include <KGlobal>
 #include <KLocalizedString>
 

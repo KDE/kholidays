@@ -22,7 +22,7 @@
 #include "holidayparserdriver_p.h"
 
 #include <KCalendarSystem>
-#include <KDebug>
+#include <QDebug>
 
 using namespace KHolidays;
 

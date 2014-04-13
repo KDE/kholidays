@@ -24,7 +24,7 @@
 
 #include "holidayregion.h"
 
-#include <KDebug>
+#include <QDebug>
 #include <KLocale>
 #include <KLocalizedString>
 #include <KGlobal>
