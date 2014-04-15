@@ -25,8 +25,6 @@
 #include "holiday.h"
 #include "holiday_p.h"
 
-#include <KStandardDirs>
-
 #include <QtCore/QDateTime>
 #include <QtCore/QFile>
 #include <QtCore/QSharedData>
