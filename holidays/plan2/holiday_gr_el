@@ -4,60 +4,64 @@
 :: Language: Greek
 ::
 :: Author:   capthookb <praktoreio2002@yahoo.gr>
+::           Dimitrios Glentadakis <dglent@gmail.com>
+::           Marios Andreopoulos <opensource@andmarios.com>
+:: Updated:  2014-04-25
 ::
-:: Updated:
-::
-:: Source:
-::
+:: Source:   http://www.eortologio.gr/index_uk.php
+::           http://www.argies.gr/
 
 :: Metadata
 country     "GR"
 language    "el"
-:name        "optional - defaults to country name"
-:description "(please add description in source language) National holiday file for Greece"
+:            "National holiday file for Greece"
+:description "Εορτές και αργίες στην Ελλάδα"
 
-:: Public Holidays
-"Πρωτοχρονιά (Αργία)"                                                           weekend on january 1
-"Πρωτομαγιά (Αργία)"                                                            weekend on may 1
-"Επέτειος του ΟΧΙ (Αργία)"                                                      weekend on october 28
-"Επέτειος της επανάστασης του 1821 (Αργία)"                                     weekend on march 25
-"Μεγάλη Παρασκευή (Αργία)"                                                      weekend on pascha minus 2 days
+:: Public Holidays - Δημόσιες αργίες
+"Πρωτοχρονιά"                                                                   weekend on january 1
+"Άγια Θεοφάνεια"                                                                weekend on january 6
+"Πρωτομαγιά"                                                                    weekend on may 1
+"Επέτειος του ΟΧΙ"                                                              weekend on october 28
+"Επέτειος της επανάστασης του 1821"                                             weekend on march 25
+"Καθαρή Δευτέρα"                                                                weekend on pascha minus 48 days
+"Μεγάλη Παρασκευή"                                                              weekend on pascha minus 2 days
 "Μεγάλο Σάββατο"                                                                weekend on pascha minus 1 days
 "Το Άγιον Πάσχα"                                                                weekend on pascha
-"Δευτέρα του Πάσχα (Αργία)"                                                     weekend on pascha plus 1 days
-"Ιερεμίας"                                                                      weekend on may 1
-"Κοίμηση της Θεοτόκου (Αργία)"                                                  weekend on august 15
+"Δευτέρα του Πάσχα"                                                             weekend on pascha plus 1 days
+"Αγίου Πνεύματος"                                                               weekend on pascha plus 50 days
+"Κοίμηση της Θεοτόκου"                                                          weekend on august 15
 "Μαρία, Μάριος, Παναγιώτης, Παναγιώτα, Δέσποινα, Θεοτόκης"                      weekend on august 15
-"Σύναξις Θεοτόκου (Αργία)"                                                      weekend on december 26
-"Μανώλης, Εμμανουέλα, Δαβίδ"                                                    weekend on december 26
-"Χριστούγεννα (Αργία)"                                                          weekend on december 25
+"Χριστούγεννα"                                                                  weekend on december 25
+"Σύναξις Θεοτόκου"                                                              weekend on december 26
 
-:: Religious
+:: Religious - Θρησκευτικές
 
 :: Financial
 
 :: Cultural
+: Mothers' day,
+"Γιορτή της μητέρας"                                                            on second sunday in may
+: Fathers' day
+"Γιορτή του πατέρα"                                                             on third sunday in june
 
-:: School
+:: School - Σχολικές Αργίες
+"Εξέγερση του Πολυτεχνείου (Σχολική Αργία)"                                     on november 17
 
 :: Daylight Saving
-"Αλλαγή ώρας (1 ώρα μπροστά) "                                                  on last sunday in march
-"Αλλαγή ώρας (1 ώρα πίσω)"                                                      on last sunday in october
+: summer
+"Θερινή ώρα (1 ώρα μπροστά)"                                                    on last sunday in march
+:winter
+"Χειμερινή ώρα (1 ώρα πίσω)"                                                    on last sunday in october
 
 :: Seasons
 
-:: Name Days
-
-
-
 :: To be sorted, it's all Greek to me :-)
 
-:: Ονομαστικές εορτές
+:: Name Days - Ονομαστικές εορτές
 
 "Βασίλης, Βασιλική, Βασιλεία, Βίβιαν"                                           on january 1
 "Συλβέστρος"                                                                    on january 2
 "Θεώνη"                                                                         on january 5
-"Άγια Θεοφάνεια (Αργία)"                                                        on january 6
 "Φώτης, Φωτεινή, Θεοφάνης, Θεοφανία, Φανή, Ιορδάνης, Θεανώ, Ουρανία, Θεοπούλα"  on january 6
 "Ιωάννης, Ιωάννα, Πρόδρομος"                                                    on january 7
 "Αγάθων, Δομινίκη, Παρθένα, Κύρος"                                              on january 8
@@ -89,11 +93,12 @@ language    "el"
 "Βλάσης, Βλασία, Θοδωρής, Θοδώρα, Αυγή "                                        on february 11
 "Μελέτης, Πλωτίνος"                                                             on february 12
 "Πρίσκιλλα"                                                                     on february 13
-"Βαλεντίνος, Βαλεντίνη, Παγκόσμια Ημέρα Ερωτευμένων"                            on february 14
+"Χλόη"                                                                          on sunday after ([february 13])
+"Βαλεντίνος, Βαλεντίνη, ημέρα των ερωτευμένων"                                  on february 14
 "Ευσέβιος, Ευσεβία"                                                             on february 15
 "Πάμφιλος, Παμφίλη, Σέλευκος, Σελεύκη"                                          on february 16
 "Λέων, Αγαπητός"                                                                on february 18
-"Φιλοθέη, Χλόη"                                                                 on february 19
+"Φιλοθέη"                                                                       on february 19
 "Ανθούσα"                                                                       on february 22
 "Πολύκαρπος"                                                                    on february 23
 "Πορφύρης, Φωτεινή"                                                             on february 26
@@ -128,14 +133,16 @@ language    "el"
 "Λεωνίδας, Λάζαρος"                                                             on april 15
 "Βάϊος, Βάϊα, Δάφνη, Γαλήνη, Χιονία"                                            on april 16
 "Ναθαναήλ, Νέαρχος, Νιάρχος"                                                    on april 22
-"Αναστάσιος, Αναστασία, Λάμπρος, Λαμπρινή, Πασχάλης "                           on april 23
-"Γεώργιος, Γεωργία, Ελισάβετ, Αχιλλέας"                                         on april 24
-"Μάρκος, Νίκη, Ραφαήλ"                                                          on april 25
+"Γεώργιος, Γεωργία"                                                             on ( ( ([april 23]) >= ([pascha]) ) ?  ([april 23]) : ([pascha] + 1) )
+"Ελισάβετ, Αχιλλέας"                                                            on april 24
+"Μάρκος, Νίκη, Ραφαήλ"                                                          on ( ( ([april 23]) >= ([pascha]) ) ?  ([april 25]) : ([pascha] + 2) )
+"Νίκη"                                                                          on april 25
 "Ζωή, Πηγή"                                                                     on april 28
 "Ιάσωνας"                                                                       on april 29
 "Ιάκωβος, Θωμάς, Θωμαή, Ασημίνα"                                                on april 30
+"Ιερεμίας"                                                                      on may 1
 "Έσπερος, Εσπέρια"                                                              on may 2
-"Ροδόπη"                                                                        on may 3
+"Ροδόπη, Ξενία"                                                                 on may 3
 "Ειρήνη, Eιρηναίος, Ευφραίμ"                                                    on may 5
 "Μυροφόρα"                                                                      on may 7
 "Θεολόγος"                                                                      on may 8
@@ -162,7 +169,7 @@ language    "el"
 "Καλλιόπη"                                                                      on june 8
 "Ροδάνθη"                                                                       on june 9
 "Βαρθολομαίος, Βαρνάβας"                                                        on june 11
-"Ονούφριος, Ζήνων,Κορίνα, Αγίου Πνεύματος"                                      on june 12
+"Ονούφριος"                                                                     on june 12
 "Ελισαίος"                                                                      on june 14
 "Αυγουστίνος, Αυγούστα, Ιερώνυμος, Μόνικα, Ορτανσία"                            on june 15
 "Γιορτή του πατέρα"                                                             on june 16
@@ -286,10 +293,10 @@ language    "el"
 "Θεόκλητος, Ιακώβ"                                                              on december 1
 "Βαρβάρα, Δαμασκηνός"                                                           on december 4
 "Σάββας, Σαββούλα, Διογένης"                                                    on december 5
-"Νίκος, Νικολέττα"                                                              on december 6
+"Νίκος, Νικολέτα"                                                               on december 6
 "Αμβρόσιος"                                                                     on december 7
 "Άννα"                                                                          on december 9
-"Ααρών, Αδάμ, Δαυίδ, Δανάη, Εύα, Ισαάκ, Ιώβ, Ραχήλ, Ρουμπίνη"                   on december 11
+"Ααρών, Αδάμ, Δαυίδ, Δανάη, Εύα, Ισαάκ, Ιώβ, Ραχήλ, Ρουμπίνη"                   on sunday after ([december 11])
 "Σπύρος, Σπυριδούλα"                                                            on december 12
 "Ευστράτιος, Λουκάς, Λουκία, Άρης"                                              on december 13
 "Ελευθέριος, Ελευθερία, Ανθή, Σύλβια"                                           on december 15
@@ -301,13 +308,11 @@ language    "el"
 "Αναστασία"                                                                     on december 22
 "Ευγένιος, Ευγενία"                                                             on december 24
 "Χρήστος, Χριστίνα, Χρύσα"                                                      on december 25
+"Μανώλης, Εμμανουέλα"                                                           on december 26
 "Στέφανος, Στεφανία"                                                            on december 27
 "Δόμνα"                                                                         on december 28
 "Ιωσήφ"                                                                         on december 30
 
-
-:: Αργίες - Επέτειοι
-"Εξέγερση του Πολυτεχνείου (Σχολική Αργία)"                                     on november 17
 
 :: Κινητές εορτές
 "Τελώνου και Φαρισαίου - Αρχή Τριωδίου"                                         on pascha minus 70 days
@@ -315,7 +320,6 @@ language    "el"
 "Τσικνοπέμπτη"                                                                  on pascha minus 59 days
 "Κυριακή των Απόκρεω"                                                           on pascha minus 56 days
 "Τυροφάγου"                                                                     on pascha minus 49 days
-"Καθαρή Δευτέρα (Αργία)"                                                        on pascha minus 48 days
 "Θεόδωρος, Θεοδώρα, Δώρα, Θώδης, Θώδος, Δώρης"                                  on pascha minus 43 days
 "Κυριακή της Ορθοδοξίας"                                                        on pascha minus 42 days
 "Σάββατο του Λαζάρου"                                                           on pascha minus 8 days
@@ -324,9 +328,10 @@ language    "el"
 "Μεγάλη Τρίτη"                                                                  on pascha minus 5 days
 "Μεγάλη Τετάρτη"                                                                on pascha minus 4 days
 "Μεγάλη Πέμπτη"                                                                 on pascha minus 3 days
+"Αναστάσιος, Αναστασία, Λάμπρος, Λαμπρινή, Πασχάλης "                           on pascha
+"Ραφαήλ, Ειρήνη"                                                                on pascha plus 2 days
 "Πηγή, Ζήσης, Ζησούλα, Ζήσιμος, Ζωή, Ζώης"                                      on pascha plus 5 days
 "Του Θωμά"                                                                      on pascha plus 7 days
 "Ανάληψη του Χριστού"                                                           on pascha plus 39 days
 "Πεντηκοστή"                                                                    on pascha plus 49 days
-"Αγ. Πνεύματος"                                                                 on pascha plus 50 days
 "Αγ. Πάντων"                                                                    on pascha plus 56 days
