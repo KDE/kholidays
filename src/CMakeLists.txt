@@ -58,7 +58,6 @@ ecm_generate_headers(KHolidays_CamelCase_HEADERS
   Zodiac
 
   REQUIRED_HEADERS KHolidays_HEADERS
-  PREFIX KHolidays
 )
 
 install(TARGETS KF5Holidays EXPORT KF5HolidaysTargets ${INSTALL_TARGETS_DEFAULT_ARGS})
