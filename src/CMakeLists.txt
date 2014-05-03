@@ -64,16 +64,43 @@ install(TARGETS KF5Holidays EXPORT KF5HolidaysTargets ${KF5_INSTALL_TARGETS_DEFA
 
 ########### next target ###############
 
-if(QT_QTDESIGNER_FOUND)
-  set(kholidayswidgets_PART_SRCS)
-  kde4_add_widget_files(kholidayswidgets_PART_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/kholidays.widgets)
 
-  kde4_add_plugin(kholidayswidgets ${kholidayswidgets_PART_SRCS})
+if (Qt5Designer_FOUND)
+    include_directories(${Qt5Designer_INCLUDE_DIRS})
 
-  target_link_libraries(kholidayswidgets ${KDE4_KIO_LIBS} kholidays)
+    add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/holidayswidgets.cpp
+        COMMAND kgendesignerplugin -o ${CMAKE_CURRENT_BINARY_DIR}/holidayswidgets.cpp ${CMAKE_CURRENT_SOURCE_DIR}/holidays.widgets
+        MAIN_DEPENDENCY holidays.widgets)
 
-  install(TARGETS kholidayswidgets DESTINATION ${PLUGIN_INSTALL_DIR}/plugins/designer)
+    set(akonadiwidgets_SRCS
+        ${CMAKE_CURRENT_BINARY_DIR}/holidayswidgets.cpp
+        ${CMAKE_CURRENT_BINARY_DIR}/holidayswidgets.moc
+    )
+
+    qt5_generate_moc(${CMAKE_CURRENT_BINARY_DIR}/holidayswidgets.cpp
+        ${CMAKE_CURRENT_BINARY_DIR}/holidayswidgets.moc
+    )
+
+    add_library(holidayswidgets MODULE ${holidayswidgets_SRCS})
+    target_link_libraries(holidayswidgets
+        KF5::Holidays
+    )
+
+    if(NOT WIN32)
+        set_target_properties(holidayswidgets PROPERTIES
+            INSTALL_RPATH_USE_LINK_PATH TRUE
+            SKIP_BUILD_RPATH TRUE
+            BUILD_WITH_INSTALL_RPATH TRUE
+            INSTALL_RPATH ${LIB_INSTALL_DIR}
+        )
+    endif()
+
+    install(TARGETS
+        holidayswidgets
+        DESTINATION ${QT_PLUGIN_INSTALL_DIR}/designer
+    )
 endif()
+
 
 ########### install files ###############
 install(FILES

@@ -30,6 +30,13 @@ ecm_setup_version(${KF5_VERSION} VARIABLE_PREFIX KHOLIDAYS
 find_package(KF5ItemViews ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5KDELibs4Support ${KF5_VERSION} CONFIG REQUIRED)
 
+find_package(Qt5Designer NO_MODULE)
+set_package_properties(Qt5Designer PROPERTIES
+   PURPOSE "Required to build the Qt Designer plugins"
+   TYPE OPTIONAL
+)
+
+
 ########### Targets ###########
 add_subdirectory(src)
 add_subdirectory(autotests)
