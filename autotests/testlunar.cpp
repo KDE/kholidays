@@ -26,7 +26,7 @@
 
 QTEST_KDEMAIN( LunarTest, NoGUI )
 
-#include "kholidays/lunarphase.h"
+#include "lunarphase.h"
 using namespace KHolidays;
 
 void LunarTest::test2005()
