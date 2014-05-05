@@ -111,6 +111,13 @@ install(FILES
     COMPONENT Devel
 )
 
+install(FILES
+    ${KHolidays_CamelCase_HEADERS}
+    DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/KHolidays/KHolidays
+    COMPONENT Devel
+)
+
+
 ecm_generate_pri_file(BASE_NAME KHolidays LIB_NAME KF5KHolidays DEPS "KDELibs4Support I18n ItemViews" FILENAME_VAR PRI_FILENAME  INCLUDE_INSTALL_DIR ${KF5_INCLUDE_INSTALL_DIR}/KHolidays)
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
 
