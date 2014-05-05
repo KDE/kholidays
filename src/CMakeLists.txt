@@ -56,7 +56,7 @@ ecm_generate_headers(KHolidays_CamelCase_HEADERS
   Holidays
   LunarPhase
   Zodiac
-
+  PREFIX KHolidays
   REQUIRED_HEADERS KHolidays_HEADERS
 )
 
@@ -107,7 +107,7 @@ install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/kholidays_export.h
     ${KHolidays_HEADERS}
     ${KHolidays_CamelCase_HEADERS}
-    DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/KHolidays
+    DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/KHolidays/kholidays
     COMPONENT Devel
 )
 
