@@ -249,10 +249,10 @@ QString HolidayRegion::name() const
         } else if ( country == QLatin1String("ba") && subdivision == QLatin1String("srp") ) {
           regionName = i18nc( "Bosnian and Herzegovinian Region", "Republic of Srpska" );
         } else {
-          regionName = KGlobal::locale()->countryCodeToName( country );
+          regionName = KLocale::global()->countryCodeToName( country );
         }
       } else {
-          regionName = KGlobal::locale()->countryCodeToName( country );
+          regionName = KLocale::global()->countryCodeToName( country );
       }
     }
 
@@ -414,13 +414,13 @@ QString HolidayRegion::defaultRegionCode( const QString &country, const QString 
   QString localeCountry, localeLanguage, localeLanguageCountry;
 
   if ( country.isEmpty() ) {
-    localeCountry = KGlobal::locale()->country().toLower();
+    localeCountry = KLocale::global()->country().toLower();
   } else {
     localeCountry = country.toLower();
   }
 
   if ( language.isEmpty() ) {
-    localeLanguage = KGlobal::locale()->language().toLower();
+    localeLanguage = KLocale::global()->language().toLower();
   } else {
     localeLanguage = language.toLower();
   }

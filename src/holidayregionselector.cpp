@@ -102,7 +102,7 @@ QTreeWidgetItem *HolidayRegionSelector::Private::findItem( const QString &holida
 void HolidayRegionSelector::Private::initItem( QTreeWidgetItem *listItem, HolidayRegion *region )
 {
   m_ui.regionTreeWidget->blockSignals( true );
-  QString languageName = KGlobal::locale()->languageCodeToName( region->languageCode() );
+  QString languageName = KLocale::global()->languageCodeToName( region->languageCode() );
   listItem->setCheckState( Private::SelectColumn, Qt::Unchecked );
   QString text = i18n( "<p>Select to use Holiday Region</p>" );
   listItem->setToolTip( Private::SelectColumn, text );
@@ -289,7 +289,7 @@ HolidayRegionSelector::HolidayRegionSelector( QWidget *parent ) :
       d->initItem( rootItem, regionMap[ it.value().at( 0 ) ] );
     } else {
       rootItem->setText( Private::RegionColumn,
-                         KGlobal::locale()->countryCodeToName( country ) );
+                         KLocale::global()->countryCodeToName( country ) );
       d->m_ui.regionTreeWidget->setFirstItemColumnSpanned ( rootItem, true );
       foreach ( const QString &regionCode, it.value() ) {
         QTreeWidgetItem *childItem = new QTreeWidgetItem( rootItem );
