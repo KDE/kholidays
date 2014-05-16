@@ -343,11 +343,6 @@ bool HolidayRegion::isValid( const QString &regionCode )
   return temp.isValid();
 }
 
-Holiday::List HolidayRegion::holidays( const QDate &startDate, const QDate &endDate ) const
-{
-  return holidays( startDate, endDate, Holiday::MultidayHolidaysAsMultipleEvents );
-}
-
 Holiday::List HolidayRegion::holidays( const QDate &startDate, const QDate &endDate,
                                        Holiday::MultidayMode multidayMode ) const
 {
@@ -358,11 +353,6 @@ Holiday::List HolidayRegion::holidays( const QDate &startDate, const QDate &endD
   }
 }
 
-Holiday::List HolidayRegion::holidays( const QDate &date ) const
-{
-  return holidays( date, Holiday::MultidayHolidaysAsMultipleEvents );
-}
-
 Holiday::List HolidayRegion::holidays( const QDate &date, Holiday::MultidayMode multidayMode ) const
 {
   if ( isValid() ) {
@@ -370,11 +360,6 @@ Holiday::List HolidayRegion::holidays( const QDate &date, Holiday::MultidayMode 
   } else {
     return Holiday::List();
   }
-}
-
-Holiday::List HolidayRegion::holidays( int calendarYear, const QString &calendarType ) const
-{
-  return holidays( calendarYear, calendarType, Holiday::MultidayHolidaysAsMultipleEvents );
 }
 
 Holiday::List HolidayRegion::holidays( int calendarYear, const QString &calendarType,

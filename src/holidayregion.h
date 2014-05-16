@@ -227,49 +227,26 @@ class KHOLIDAYS_EXPORT HolidayRegion
     static QString description( const QString &regionCode );
 
     /**
-     * @since 4.5
-     *
-     * Returns the list of holidays that occur between @p startDate and @p endDate.
-     */
-    Holiday::List holidays( const QDate &startDate, const QDate &endDate ) const;
-
-    //KDE5: merge with default multidayMode
-    /**
      * @since 4.6
      *
      * Returns the list of holidays that occur between @p startDate and @p endDate.
      */
-    Holiday::List holidays( const QDate &startDate, const QDate &endDate,
-                            Holiday::MultidayMode multidayMode ) const;
+    Holiday::List holidays( const QDate &startDate, const QDate &endDate, Holiday::MultidayMode multidayMode = Holiday::MultidayHolidaysAsMultipleEvents ) const;
 
-    /**
-     * Returns the list of holidays that occur on a @p date.
-     */
-    Holiday::List holidays( const QDate &date ) const;
-
-    //KDE5: merge with default multidayMode
     /**
      * @since 4.6
      *
      * Returns the list of holidays that occur on a @p date.
      */
-    Holiday::List holidays( const QDate &date, Holiday::MultidayMode multidayMode ) const;
+    Holiday::List holidays( const QDate &date, Holiday::MultidayMode multidayMode = Holiday::MultidayHolidaysAsMultipleEvents ) const;
 
-    /**
-     * @since 4.5
-     *
-     * Returns the list of holidays that occur in a calendar year @p calendarYear.
-     */
-    Holiday::List holidays( int calendarYear, const QString &calendarType ) const;
-
-    //KDE5: merge with default multidayMode
     /**
      * @since 4.6
      *
      * Returns the list of holidays that occur in a calendar year @p calendarYear.
      */
     Holiday::List holidays( int calendarYear, const QString &calendarType,
-                            Holiday::MultidayMode multidayMode ) const;
+                            Holiday::MultidayMode multidayMode = Holiday::MultidayHolidaysAsMultipleEvents) const;
 
     /**
      * Checks whether there is any holiday defined for a @p date.
