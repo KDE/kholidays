@@ -6,7 +6,7 @@
 :: Author:   Steven Wahlberg <stegu@iki.fi>
 ::           Lasse Liehu <lasse.liehu@gmail.com>
 ::
-:: Updated:  2011-10-19
+:: Updated:  2014-05-18
 ::
 :: Source:   University of Helsinki Almanac office (http://almanakka.helsinki.fi)
 ::
@@ -56,7 +56,7 @@ description  "Suomen valtakunnalliset juhla- ja liputuspäivät"
 : Easter Monday
 "2. pääsiäispäivä"                                 weekend on easter plus 1 days
 : Rogation Sunday
-"Rukoussunnnuntai"                                 weekend on easter plus 35 days
+"Rukoussunnuntai"                                  weekend on easter plus 35 days
 : Ascension
 "Helatorstai"                                      weekend on easter plus 39 days
 : : Whitsunday
