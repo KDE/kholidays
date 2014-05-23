@@ -35,7 +35,7 @@ red "Palmusunnuntai" on easter minus 7 days
 red "Pitkäperjantai" weekend on easter minus 2 days
 red "Pääsiäinen" weekend on easter
 red "2. pääsiäispäivä" weekend on easter plus 1 days
-red "Rukoussunnnuntai" weekend on easter plus 35 days
+red "Rukoussunnuntai" weekend on easter plus 35 days
 red "Helatorstai" weekend on easter plus 39 days
 red "Helluntaipäivä" on easter plus 49 days
 
