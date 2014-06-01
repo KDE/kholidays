@@ -1,2 +1,2 @@
 #! /bin/sh
-$XGETTEXT *.cpp -o $podir/libkholidays.pot
+$XGETTEXT *.cpp -o $podir/libkholidays5.pot

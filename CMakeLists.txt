@@ -35,7 +35,7 @@ set_package_properties(Qt5Designer PROPERTIES
    PURPOSE "Required to build the Qt Designer plugins"
    TYPE OPTIONAL
 )
-add_definitions(-DTRANSLATION_DOMAIN=\"libkholidays\")
+add_definitions(-DTRANSLATION_DOMAIN=\"libkholidays5\")
 
 ########### Targets ###########
 add_subdirectory(src)
