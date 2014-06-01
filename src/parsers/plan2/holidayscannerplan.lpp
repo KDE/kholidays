@@ -30,7 +30,7 @@
 # include <limits.h>
 # include <string>
 
-# include <kdebug.h>
+# include <qdebug.h>
 
 # include "holidayscannerplan_p.h"
 # include "holidayparserdriverplan_p.h"
@@ -349,7 +349,7 @@ void HolidayScannerPlan::set_debug(bool b)
 
 int HolidayScannerFlexLexer::yylex()
 {
-    kDebug() << "in HolidayScannerFlexLexer::yylex() !";
+    qDebug() << "in HolidayScannerFlexLexer::yylex() !";
     return 0;
 }
 
