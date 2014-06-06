@@ -36,9 +36,10 @@ target_include_directories(KF5Holidays PUBLIC "$<BUILD_INTERFACE:${KHolidays_SOU
 target_include_directories(KF5Holidays PUBLIC "$<BUILD_INTERFACE:${KHolidays_SOURCE_DIR}/src/parsers/plan2>")
 
 target_link_libraries(KF5Holidays
-    KF5::ItemViews
-    KF5::I18n
+PUBLIC
     KF5::KDELibs4Support
+PRIVATE
+    KF5::I18n
 )
 
 set_target_properties(KF5Holidays PROPERTIES
@@ -107,6 +108,6 @@ install(FILES
 )
 
 
-ecm_generate_pri_file(BASE_NAME KHolidays LIB_NAME KF5KHolidays DEPS "KDELibs4Support I18n ItemViews" FILENAME_VAR PRI_FILENAME  INCLUDE_INSTALL_DIR ${KF5_INCLUDE_INSTALL_DIR}/KHolidays)
+ecm_generate_pri_file(BASE_NAME KHolidays LIB_NAME KF5KHolidays DEPS "KDELibs4Support" FILENAME_VAR PRI_FILENAME  INCLUDE_INSTALL_DIR ${KF5_INCLUDE_INSTALL_DIR}/KHolidays)
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
 
