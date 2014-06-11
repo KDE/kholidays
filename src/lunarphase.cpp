@@ -26,7 +26,6 @@
 #include <config-kholidays.h>
 
 #include <QDebug>
-#include <KGlobal>
 #include <KLocalizedString>
 
 #include <QtCore/QDateTime>
