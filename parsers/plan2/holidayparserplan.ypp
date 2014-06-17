@@ -89,7 +89,7 @@
 %token  END 0
 %token  <ival> NUMBER MONTH WDAY COLOR
 %token  <sval> STRING CALENDAR
-%token  INOP PLUS MINUS SMALL YEAR LEAPYEAR SHIFT IF
+%token  INOP PLUS MINUS YEAR LEAPYEAR SHIFT IF
 %token  LENGTH EASTER EQ NE LE GE LT GT PASCHA COUNTRY LANGUAGE NAME DESCRIPTION
 
 %destructor { free( $$ ); } STRING
@@ -145,11 +145,7 @@ description :                    { driver.setFileDescription( QString() ); }
 ;
 
 list :
-     | list small stringcolor eventname daycolor calendar eventrule
-;
-
-small :
-      | SMALL
+     | list stringcolor eventname daycolor calendar eventrule
 ;
 
 stringcolor :        { driver.setEventColorName( 0 ); }

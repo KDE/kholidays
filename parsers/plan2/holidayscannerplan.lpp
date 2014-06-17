@@ -112,7 +112,6 @@ in                  { return token::INOP; }
 if                  { return token::IF; }
 plus                { return token::PLUS; }
 minus               { return token::MINUS; }
-small               { return token::SMALL; }
 year                { return token::YEAR; }
 leapyear            { return token::LEAPYEAR; }
 easter              { return token::EASTER; }
