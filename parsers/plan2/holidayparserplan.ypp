@@ -85,9 +85,9 @@
 
 %union { int  ival; char *sval; }
 
-%type   <ival> stringcolor daycolor offset conditionaloffset length expr pexpr number month reldate wdaycondition monthnumber
+%type   <ival> offset conditionaloffset length expr pexpr number month reldate wdaycondition monthnumber
 %token  END 0
-%token  <ival> NUMBER MONTH WDAY COLOR
+%token  <ival> NUMBER MONTH WDAY
 %token  <sval> STRING CALENDAR
 %token  INOP PLUS MINUS YEAR LEAPYEAR SHIFT IF
 %token  LENGTH EASTER EQ NE LE GE LT GT PASCHA COUNTRY LANGUAGE NAME DESCRIPTION
@@ -145,15 +145,7 @@ description :                    { driver.setFileDescription( QString() ); }
 ;
 
 list :
-     | list stringcolor eventname daycolor calendar eventrule
-;
-
-stringcolor :        { driver.setEventColorName( 0 ); }
-            | COLOR  { driver.setEventColorName( $1 ); }
-;
-
-daycolor :        { driver.setEventColorDay( 0 ); }
-         | COLOR  { driver.setEventColorDay( $1 ); }
+     | list eventname calendar eventrule
 ;
 
 eventname : STRING { driver.setEventName( char *s = $1; QString::fromUtf8( s ) ); free( s ); $1 = NULL; }

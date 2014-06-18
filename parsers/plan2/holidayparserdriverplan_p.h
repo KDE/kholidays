@@ -117,8 +117,6 @@ protected:
     void  setFileName( const QString &ame );
     void  setFileDescription( const QString &description );
     void  setEventName( const QString &eventName );
-    void  setEventColorName( int nameColor );
-    void  setEventColorDay( int dayColor );
     void  setEventCalendarType( const QString &calendarType = "gregorian" );
     void  setEventDate( int eventYear, int eventMonth, int eventDay );
     void  setEventDate( int jd );
@@ -164,8 +162,6 @@ private:
     int                 m_eventYear;                // Event date fields
     int                 m_eventMonth;               // Event date fields
     int                 m_eventDay;                 // Event date fields
-    int                 m_eventColorName;           // Color of event name text
-    int                 m_eventColorDay;            // Color of event day number
 
     std::string        *m_fileToParse;
 };

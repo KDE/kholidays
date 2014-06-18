@@ -119,16 +119,6 @@ pascha              { return token::PASCHA; }
 length              { return token::LENGTH; }
 shift               { return token::SHIFT; }
 
-black               { yylval->ival = 1; return token::COLOR; }
-red                 { yylval->ival = 2; return token::COLOR; }
-green               { yylval->ival = 3; return token::COLOR; }
-yellow              { yylval->ival = 4; return token::COLOR; }
-blue                { yylval->ival = 5; return token::COLOR; }
-magenta             { yylval->ival = 6; return token::COLOR; }
-cyan                { yylval->ival = 7; return token::COLOR; }
-white               { yylval->ival = 8; return token::COLOR; }
-weekend             { yylval->ival = 9; return token::COLOR; }
-
 "=="                { return token::EQ; }
 "!="                { return token::NE; }
 "<="                { return token::LE; }

@@ -400,16 +400,6 @@ void  HolidayParserDriverPlan::setEventName( const QString &eventName )
     m_eventName = eventName;
 }
 
-void  HolidayParserDriverPlan::setEventColorName( int nameColor )
-{
-    m_eventColorName = nameColor;
-}
-
-void  HolidayParserDriverPlan::setEventColorDay( int dayColor )
-{
-    m_eventColorDay = dayColor;
-}
-
 void  HolidayParserDriverPlan::setEventCalendarType( const QString &calendarType )
 {
     m_eventCalendarType = calendarType;
@@ -707,8 +697,8 @@ void  HolidayParserDriverPlan::addHoliday( const QDate &observedDate, int durati
         holiday.d->mDuration = duration;
         holiday.d->mText = m_eventName;
         holiday.d->mShortText = m_eventName;
-        if ( m_eventColorName == 2 || m_eventColorName == 9 ||
-             m_eventColorDay == 2 || m_eventColorDay == 9 ) {
+        // TODO If category == "public" then NonWorkday
+        if ( false ) {
             holiday.d->mDayType = KHolidays::Holiday::NonWorkday;
         } else {
             holiday.d->mDayType = KHolidays::Holiday::Workday;
