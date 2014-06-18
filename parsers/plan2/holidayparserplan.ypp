@@ -149,7 +149,7 @@ list :
      | list eventname categories calendar eventrule
 ;
 
-eventname : STRING { driver.setEventName( char *s = $1; QString::fromUtf8( s ) ); free( s ); $1 = NULL; }
+eventname : STRING { char *s = $1; driver.setEventName( QString::fromUtf8( s ) ); free( s ); $1 = NULL; }
 ;
 
 categories : CATEGORY { driver.setEventCategory( $1 ); }
@@ -200,7 +200,7 @@ date : pexpr '.' month            { driver.setEventDate( -99999, $3, $1 ); }
      | pexpr                      { driver.setEventDate( $1 ); }
 ;
 
-reldate : STRING                 { char *s = $1; $$ = driver.julianDayFromEventName( s ); free( s ); $1 = NULL}
+reldate : STRING                 { char *s = $1; $$ = driver.julianDayFromEventName( s ); free( s ); $1 = NULL; }
         | EASTER                 { $$ = driver.julianDayFromEaster(); }
         | PASCHA                 { $$ = driver.julianDayFromPascha(); }
         | pexpr '.' month        { $$ = driver.julianDayFromMonthDay( $3, $1 ); }
