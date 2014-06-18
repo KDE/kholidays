@@ -140,6 +140,18 @@ noop                { yylval->ival =      0; return token::NUMBER; }
 before              { yylval->ival =  -1; return token::NUMBER; }
 after               { yylval->ival =   1; return token::NUMBER; }
 
+public              { yylval->sval = "public"; return token::CATEGORY; }
+civil               { yylval->sval = "civil"; return token::CATEGORY; }
+religious           { yylval->sval = "religious"; return token::CATEGORY; }
+school              { yylval->sval = "school"; return token::CATEGORY; }
+government          { yylval->sval = "government"; return token::CATEGORY; }
+financial           { yylval->sval = "financial"; return token::CATEGORY; }
+cultural            { yylval->sval = "cultural"; return token::CATEGORY; }
+commemorative       { yylval->sval = "commemorative"; return token::CATEGORY; }
+historical          { yylval->sval = "historical"; return token::CATEGORY; }
+nameday             { yylval->sval = "nameday"; return token::CATEGORY; }
+seasonal            { yylval->sval = "seasonal"; return token::CATEGORY; }
+
 gregorian           { yylval->sval = "gregorian"; return token::CALENDAR; }
 julian              { yylval->sval = "julian"; return token::CALENDAR; }
 

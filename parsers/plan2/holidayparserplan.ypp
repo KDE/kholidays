@@ -86,9 +86,10 @@
 %union { int  ival; char *sval; }
 
 %type   <ival> offset conditionaloffset length expr pexpr number month reldate wdaycondition monthnumber
+%type   <sval> categories
 %token  END 0
 %token  <ival> NUMBER MONTH WDAY
-%token  <sval> STRING CALENDAR
+%token  <sval> STRING CATEGORY CALENDAR
 %token  INOP PLUS MINUS YEAR LEAPYEAR SHIFT IF
 %token  LENGTH EASTER EQ NE LE GE LT GT PASCHA COUNTRY LANGUAGE NAME DESCRIPTION
 
@@ -145,10 +146,14 @@ description :                    { driver.setFileDescription( QString() ); }
 ;
 
 list :
-     | list eventname calendar eventrule
+     | list eventname categories calendar eventrule
 ;
 
 eventname : STRING { driver.setEventName( char *s = $1; QString::fromUtf8( s ) ); free( s ); $1 = NULL; }
+;
+
+categories : CATEGORY { driver.setEventCategory( $1 ); }
+           | categories CATEGORY { driver.setEventCategory( $1 ); }
 ;
 
 calendar :           { driver.setEventCalendarType( QLatin1String("gregorian") ); }
