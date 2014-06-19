@@ -18,25 +18,25 @@ language    "es"
 description "Días Feriados de Costa Rica"
 
 :: Public Holidays
-"Año Nuevo"                                             weekend on january 1
-"Día de Juan Santamaría"                                weekend on april 11
-"Día Internacional del Trabajo"                         weekend on may 1
-"Anexión del Partido de Nicoya a Costa Rica"            weekend on july 25
-"Día de la Madre"                                       weekend on august 15
-"Conmemoración de la Independencia de Costa Rica"       weekend on september 15
+"Año Nuevo"                                             public on january 1
+"Día de Juan Santamaría"                                public on april 11
+"Día Internacional del Trabajo"                         public on may 1
+"Anexión del Partido de Nicoya a Costa Rica"            public on july 25
+"Día de la Madre"                                       public on august 15
+"Conmemoración de la Independencia de Costa Rica"       public on september 15
 
 :: Religious
-"Día de San José"                                       on march 19
-"Jueves Santo"                                          weekend on easter minus 3 days
-"Viernes Santo"                                         weekend on easter minus 2 days
-"Pascua"                                                weekend on easter
-"día de la Virgen de los Ángeles"                       on august 2
-"Navidad"                                               weekend on december 25
+"Día de San José"                                       religious on march 19
+"Jueves Santo"                                          public religious on easter minus 3 days
+"Viernes Santo"                                         public religious on easter minus 2 days
+"Pascua"                                                public religious on easter
+"día de la Virgen de los Ángeles"                       religious on august 2
+"Navidad"                                               public religious on december 25
 
 :: Financial
 
 :: Cultural
-"Día de las Culturas"                                   on october 12
+"Día de las Culturas"                                   cultural on october 12
 
 :: School
 

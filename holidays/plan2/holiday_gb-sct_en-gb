@@ -28,28 +28,28 @@ language    "en_GB"
 description "National holiday file for Scotland"
 
 :: Public Holidays
-"New Year's Day"                    weekend on january 1
-"New Year's Day Substitute Holiday" weekend on ( (([january 1] == [saturday after ([january 1])]) ||
+"New Year's Day"                    public on january 1
+"New Year's Day Substitute Holiday" public on ( (([january 1] == [saturday after ([january 1])]) ||
                                                   ([january 1] == [sunday after ([january 1])])) ?
                                                      [monday after ([january 1])] :
                                                  noop )
-"2nd January"                       weekend on january 2
-"2nd January Substitute Holiday"    weekend on ( ([january 2] == [saturday after ([january 1])] ) ?
+"2nd January"                       public on january 2
+"2nd January Substitute Holiday"    public on ( ([january 2] == [saturday after ([january 1])] ) ?
                                                      [monday after ([january 1])] :
                                                  ((([january 2] == [sunday after ([january 1])]) ||
                                                    ([january 2] == [monday after ([january 1])])) ?
                                                      [tuesday after ([january 1])] :
                                                  noop ) )
-"Royal Wedding"                     weekend on 29.4.2011
-"Early May Bank Holiday"            weekend on first monday in may
-"Diamond Jubilee Holiday"           weekend on 5.6.2012
-"Christmas Day"                     weekend on december 25
-"Christmas Day Substitute Holiday"  weekend on ( (([december 25] == [saturday after ([december 25])]) ||
+"Royal Wedding"                     public on 29.4.2011
+"Early May Bank Holiday"            public on first monday in may
+"Diamond Jubilee Holiday"           public on 5.6.2012
+"Christmas Day"                     public religious on december 25
+"Christmas Day Substitute Holiday"  public on ( (([december 25] == [saturday after ([december 25])]) ||
                                                   ([december 25] == [sunday after ([december 25])])) ?
                                                      [monday after ([december 25])] :
                                                  noop )
-"Boxing Day"                        weekend on december 26
-"Boxing Day Substitute Holiday"     weekend on ( ([december 26] == [saturday after ([december 25])] ) ?
+"Boxing Day"                        public on december 26
+"Boxing Day Substitute Holiday"     public on ( ([december 26] == [saturday after ([december 25])] ) ?
                                                      [monday after ([december 25])] :
                                                  (([december 26] == [sunday after ([december 25])] ||
                                                   ([december 26] == [monday after ([december 25])])) ?
@@ -59,21 +59,21 @@ description "National holiday file for Scotland"
 :: Religious
 
 :: Financial
-"Good Friday Bank Holiday"          on easter minus 2
-"Spring Bank Holiday"               on ((year == 2012) ? [june 4] : [last monday in may])
-"Summer Bank Holiday"               on first monday in august
-"St Andrew's Day Bank Holiday"      on ( (([november 30] == [saturday after ([november 30])]) ||
-                                          ([november 30] == [sunday after ([november 30])])) ?
-                                             [monday after ([november 30])] :
-                                         ([november 30]) )
+"Good Friday Bank Holiday"          religious on easter minus 2
+"Spring Bank Holiday"               civil on ((year == 2012) ? [june 4] : [last monday in may])
+"Summer Bank Holiday"               civil on first monday in august
+"St Andrew's Day Bank Holiday"      civil on ( (([november 30] == [saturday after ([november 30])]) ||
+                                                ([november 30] == [sunday after ([november 30])])) ?
+                                                 [monday after ([november 30])] :
+                                                ([november 30]) )
 
 :: Cultural
 
 :: School
 
 :: Daylight Saving
-"British Summer Time starts"        on last sunday in march
-"British Summer Time ends"          on last sunday in october
+"British Summer Time starts"        seasonal on last sunday in march
+"British Summer Time ends"          seasonal on last sunday in october
 
 :: Seasons
 

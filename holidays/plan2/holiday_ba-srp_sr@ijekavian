@@ -17,48 +17,48 @@ language     "sr@ijekavian"
 :description  ""
 
 :: Public Holidays
-"Нова година"                                                      weekend on january 1 length 2 days
-"Нова година (нерадни дан)"                                        weekend on ( ( ( [january 2] == [sunday after ([january 2])] ) ) ?
+"Нова година"                                                      public on january 1 length 2 days
+"Нова година (нерадни дан)"                                        public on ( ( ( [january 2] == [sunday after ([january 2])] ) ) ?
                                                                                     [ monday after ([january 2]) ] : noop )
-"Дан Републике"                                                    weekend on january 9
-"Међународни празник рада"                                         weekend on may 1 length 2 days
-"Међународни празник рада (нерадни дан)"                           weekend on ( ( ( [may 2] == [sunday after ([may 2])] ) ) ?
+"Дан Републике"                                                    public on january 9
+"Међународни празник рада"                                         public on may 1 length 2 days
+"Међународни празник рада (нерадни дан)"                           public on ( ( ( [may 2] == [sunday after ([may 2])] ) ) ?
                                                                                     [ monday after ([may 2]) ] : noop )
-"Дан побједе над фашизмом"                                        weekend on may 9
-"Дан Општег оквирног споразума за мир у Босни и Херцеговини"       weekend on november 21
+"Дан побједе над фашизмом"                                         public on may 9
+"Дан Општег оквирног споразума за мир у Босни и Херцеговини"       public on november 21
 
 :: Religious Holidays
-"Православни Бадњи-дан"                                            weekend on january 6
-"Православни Божић"                                                weekend on january 7
-"Римокатолички Бадњи-дан"                                          weekend on december 24
-"Римокатолички Божић"                                              weekend on december 25
-"Православни Велики петак"                                         weekend on pascha minus 2 days
-"Римокатолички Велики петак"                                       weekend on easter minus 2 days
-"Православни Васкрс"                                               weekend on pascha length 2 days
-"Римокатолички Ускрс"                                              weekend on easter length 2 days
-"Рамазански бајрам"                                                on hijri shawwal 1 length 2 days
-"Курбан-бајрам"                                                    on hijri thualhijjah 10 length 2 days
+"Православни Бадњи-дан"                                            public religious on january 6
+"Православни Божић"                                                public religious on january 7
+"Римокатолички Бадњи-дан"                                          public religious on december 24
+"Римокатолички Божић"                                              public religious on december 25
+"Православни Велики петак"                                         public religious on pascha minus 2 days
+"Римокатолички Велики петак"                                       public religious on easter minus 2 days
+"Православни Васкрс"                                               public religious on pascha length 2 days
+"Римокатолички Ускрс"                                              public religious on easter length 2 days
+"Рамазански бајрам"                                                religious on hijri shawwal 1 length 2 days
+"Курбан-бајрам"                                                    religious on hijri thualhijjah 10 length 2 days
 
 :: Financial
 
 :: Cultural
-"Српска Нова Година"                                               on january 14
-"Дан сјећања на жртве холокауста"                                 on january 27
-"Дан Првог српског устанка"                                        on february 15
-"Дан словенске писмености"                                         on may 24
-"Дан бораца одбрамбено-отаџбинског рата"                           on june 28
+"Српска Нова Година"                                               cultural on january 14
+"Дан сјећања на жртве холокауста"                                  cultural on january 27
+"Дан Првог српског устанка"                                        cultural on february 15
+"Дан словенске писмености"                                         cultural on may 24
+"Дан бораца одбрамбено-отаџбинског рата"                           cultural on june 28
 
 :: School
-"Свети Сава — школска слава"                                       weekend on january 27
+"Свети Сава — школска слава"                                       public school on january 27
 
 :: Daylight Saving
-"Љетње рачунање времена (ГМТ+2)"                                  on last sunday in march
-"Зимско рачунање времена (ГМТ+1)"                                  on last sunday in october
+"Љетње рачунање времена (ГМТ+2)"                                   seasonal on last sunday in march
+"Зимско рачунање времена (ГМТ+1)"                                  seasonal on last sunday in october
 
 :: Seasons
-"Први дан прољећа"                                                on march 20
-"Први дан љета"                                                   on june 21
-"Први дан јесени"                                                  on september 23
-"Први дан зиме"                                                    on december 22
+"Први дан прољећа"                                                 seasonal on march 20
+"Први дан љета"                                                    seasonal on june 21
+"Први дан јесени"                                                  seasonal on september 23
+"Први дан зиме"                                                    seasonal on december 22
 
 :: Name Days

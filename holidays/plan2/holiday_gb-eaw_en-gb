@@ -19,23 +19,23 @@ language    "en_GB"
 description "National holiday file for England and Wales"
 
 :: Public Holidays
-"New Years Day"                 weekend on january 1
-"New Years Day Bank Holiday"    weekend on ( (([january 1] == [saturday after ([january 1])]) || ([january 1] == [sunday after ([january 1])])) ?
+"New Years Day"                 public on january 1
+"New Years Day Bank Holiday"    public on ( (([january 1] == [saturday after ([january 1])]) || ([january 1] == [sunday after ([january 1])])) ?
                                              [monday after ([january 1])] :
                                              noop )
-"Good Friday"                   weekend on easter minus 2
-"Easter Monday"                 weekend on easter plus 1
-"Royal Wedding"                 weekend on 29.4.2011
-"Early May Bank Holiday"        weekend on first monday in may
-"Spring Bank Holiday"           weekend on ((year == 2012) ? [june 4] : [last monday in may])
-"Diamond Jubilee Holiday"       weekend on 5.6.2012
-"Summer Bank Holiday"           weekend on last monday in august
-"Christmas Day"                 weekend on december 25
-"Christmas Day Bank Holiday"    weekend on ( (([december 25] == [saturday after ([december 25])]) || ([december 25] == [sunday after ([december 25])])) ?
+"Good Friday"                   public religious on easter minus 2
+"Easter Monday"                 public on easter plus 1
+"Royal Wedding"                 public on 29.4.2011
+"Early May Bank Holiday"        public on first monday in may
+"Spring Bank Holiday"           public on ((year == 2012) ? [june 4] : [last monday in may])
+"Diamond Jubilee Holiday"       public on 5.6.2012
+"Summer Bank Holiday"           public on last monday in august
+"Christmas Day"                 public religious on december 25
+"Christmas Day Bank Holiday"    public on ( (([december 25] == [saturday after ([december 25])]) || ([december 25] == [sunday after ([december 25])])) ?
                                              [monday after ([december 25])] :
                                              noop )
-"Boxing Day"                    weekend on december 26
-"Boxing Day Bank Holiday"       weekend on ( ([december 26] == [saturday after ([december 25])] ) ?
+"Boxing Day"                    public on december 26
+"Boxing Day Bank Holiday"       public on ( ([december 26] == [saturday after ([december 25])] ) ?
                                              [monday after ([december 25])] :
                                              (([december 26] == [sunday after ([december 25])] || [december 26] == [monday after ([december 25])]) ?
                                              [tuesday after ([december 25])] :
@@ -50,8 +50,8 @@ description "National holiday file for England and Wales"
 :: School
 
 :: Daylight Saving
-"British Summer Time starts"    on last sunday in march
-"British Summer Time ends"      on last sunday in october
+"British Summer Time starts"    seasonal on last sunday in march
+"British Summer Time ends"      seasonal on last sunday in october
 
 :: Seasons
 

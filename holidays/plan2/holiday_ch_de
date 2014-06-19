@@ -19,17 +19,17 @@ description "Feiertage in der Schweiz"
 
 :: Public Holidays
 
-"Neujahr"          weekend on january 1
-"Karfreitag"       weekend on easter minus 2 days
-"Ostern"           weekend on easter
-"Auffahrt"         weekend on easter plus 39 days
-"Pfingsten"        weekend on easter plus 49 days
-"Pfingstmontag"    weekend on easter plus 50 days
-"Bundesfeier"      weekend on august 1
-"Bettag"           weekend on third sunday in september
-"Bettagmontag"     weekend on third sunday in september plus 1 day
-"Weihnachten"      weekend on december 25
-"Stefanstag"       weekend on december 26
+"Neujahr"          public on january 1
+"Karfreitag"       public religious on easter minus 2 days
+"Ostern"           public religious on easter
+"Auffahrt"         public religious on easter plus 39 days
+"Pfingsten"        public religious on easter plus 49 days
+"Pfingstmontag"    public religious on easter plus 50 days
+"Bundesfeier"      public on august 1
+"Bettag"           public on third sunday in september
+"Bettagmontag"     public on third sunday in september plus 1 day
+"Weihnachten"      public religious on december 25
+"Stefanstag"       public on december 26
 
 :: Religious Holidays
 

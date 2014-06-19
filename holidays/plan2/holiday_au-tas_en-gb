@@ -20,18 +20,18 @@ description "State holiday file for Tasmania"
 
 :: Public Holidays
 :: State Holidays - Tasmania
-"New Year's Day"                    weekend on january 1
-"Australia Day"                     weekend on january 26
-"Royal Hobart Regatta"              weekend on second monday in february
-"Eight Hours Day"                   weekend on second monday in march
-"Good Friday"                       weekend on easter minus 2
-"Easter Monday"                     weekend on easter plus 1
-"Easter Tuesday"                    weekend on easter plus 2
-"Anzac Day"                         weekend on april 25
-"Recreation Day"                    weekend on first monday in november
-"Queen's Birthday"                  weekend on second monday in june
-"Christmas Day"                     weekend on december 25
-"Boxing Day"                        weekend on december 26
+"New Year's Day"                    public on january 1
+"Australia Day"                     public on january 26
+"Royal Hobart Regatta"              public on second monday in february
+"Eight Hours Day"                   public on second monday in march
+"Good Friday"                       public religious on easter minus 2
+"Easter Monday"                     public on easter plus 1
+"Easter Tuesday"                    public on easter plus 2
+"Anzac Day"                         public on april 25
+"Recreation Day"                    public on first monday in november
+"Queen's Birthday"                  public on second monday in june
+"Christmas Day"                     public religious on december 25
+"Boxing Day"                        public on december 26
 
 :: Religious
 
@@ -42,8 +42,8 @@ description "State holiday file for Tasmania"
 :: School
 
 :: Daylight Saving
-"Daylight Saving Start"             on first sunday in october
-"Daylight Saving End"               on first sunday in april
+"Daylight Saving Start"             seasonal on first sunday in october
+"Daylight Saving End"               seasonal on first sunday in april
 
 :: Seasons
 

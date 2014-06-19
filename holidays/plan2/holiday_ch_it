@@ -19,21 +19,21 @@ language    "it"
 
 :: Public Holidays
 
-"Capo d'anno"      weekend on january 1
-"Epifania"         weekend on january 6
-"San Giuseppe"     weekend on march 19
-"Pasqua"           weekend on easter
-"Lunedi di Pasqua" weekend on easter plus 1 day
-"Festa dei lavoratori" weekend on may 1
-"Ascensione"       weekend on easter plus 39 days
-"Pentecoste"       weekend on easter plus 49 days
-"Lunedi di Pentecoste" weekend on easter plus 50 days
-"Festa nazionale"  weekend on august 1
-"Assunzione"       weekend on august 15
-"Ognissanti"       weekend on november 1
-"Immacolata"       weekend on december 8
-"Natale"           weekend on december 25
-"Santo Stefano"    weekend on december 26
+"Capo d'anno"               public on january 1
+"Epifania"                  public on january 6
+"San Giuseppe"              public on march 19
+"Pasqua"                    public religious on easter
+"Lunedi di Pasqua"          public religious on easter plus 1 day
+"Festa dei lavoratori"      public on may 1
+"Ascensione"                public religious on easter plus 39 days
+"Pentecoste"                public religious on easter plus 49 days
+"Lunedi di Pentecoste"      public religious on easter plus 50 days
+"Festa nazionale"           public on august 1
+"Assunzione"                public religious on august 15
+"Ognissanti"                public on november 1
+"Immacolata"                public religious on december 8
+"Natale"                    public religious on december 25
+"Santo Stefano"             public religious on december 26
 
 :: Religious Holidays
 

@@ -17,39 +17,39 @@ language    "de"
 :description "(please add description in source language) Regional holiday file for South Tyrol"
 
 :: Public Holidays
-"Neujahr"               weekend on january 1
-"Hl. 3 Könige"          weekend on january 6
-"Ostersonntag"          weekend on easter
-"Ostermontag"           weekend on easter plus 1 day
-"Tag der Freiheit"      weekend on april 25
-"Tag der Arbeit"        weekend on may 1
-"Maria Himmelfahrt"     weekend on august 15
-"Allerheiligen"         weekend on november 1
-"Maria Empfängnis"      weekend on december 8
-"Christtag"             weekend on december 25
-"Stephanstag"           weekend on december 26
+"Neujahr"               public on january 1
+"Hl. 3 Könige"          public religious on january 6
+"Ostersonntag"          public religious on easter
+"Ostermontag"           public on easter plus 1 day
+"Tag der Freiheit"      public on april 25
+"Tag der Arbeit"        public on may 1
+"Maria Himmelfahrt"     public on august 15
+"Allerheiligen"         public religious on november 1
+"Maria Empfängnis"      public religious on december 8
+"Christtag"             public religious on december 25
+"Stephanstag"           public religious on december 26
 
 :: Religious
-"Hl. Joseph"            on march 19
-"Unnsinger Donnerstag"  on easter minus 52 days
-"Faschingsdienstag"     on easter minus 47 days
-"Aschermittwoch"        on easter minus 46 days
-"Pfingstsonntag"        on easter plus 49 days
-"Pfingstmontag"         on easter plus 50 days
-"Christi Himmelfahrt"   on easter plus 39 days
-"Hl. Peter und Paul"    on june 29
-"Hl. Franziskus"        on october 4
-"Allerseelen"           on november 2
-"Silvester"             on december 31
+"Hl. Joseph"            religious on march 19
+"Unnsinger Donnerstag"  religious on easter minus 52 days
+"Faschingsdienstag"     religious on easter minus 47 days
+"Aschermittwoch"        religious on easter minus 46 days
+"Pfingstsonntag"        religious on easter plus 49 days
+"Pfingstmontag"         religious on easter plus 50 days
+"Christi Himmelfahrt"   religious on easter plus 39 days
+"Hl. Peter und Paul"    religious on june 29
+"Hl. Franziskus"        religious on october 4
+"Allerseelen"           religious on november 2
+"Silvester"             religious on december 31
 
 :: Financial
 
 :: Cultural
-"Tag der Frau"          on march 8
-"Vatertag"              on march 19
-"Muttertag"             on second sunday in may
-"Tag der Republik"      on june 2
-"Nationalfeiertag"      on november 4
+"Tag der Frau"          cultural on march 8
+"Vatertag"              cultural on march 19
+"Muttertag"             cultural on second sunday in may
+"Tag der Republik"      cultural on june 2
+"Nationalfeiertag"      cultural on november 4
 
 :: School
 

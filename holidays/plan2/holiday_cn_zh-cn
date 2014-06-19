@@ -18,11 +18,11 @@ language    "zh_CN"
 
 :: Public Holidays
 : New Year
-"元旦"                       weekend on january 1
+"元旦"                       public on january 1
 :Labor Day
-"劳动节"                     weekend on may 1
+"劳动节"                     public on may 1
 :National Day
-"国庆节"                     weekend on october 1 length 3 days
+"国庆节"                     public on october 1 length 3 days
 
 :: Religious
 
@@ -30,17 +30,17 @@ language    "zh_CN"
 
 :: Cultural
 :International Women's Day
-"国际妇女节"                  on march 8
+"国际妇女节"                  cultural on march 8
 :Arbor Day
-"植树节"                     on march 12
+"植树节"                     cultural on march 12
 :Youth Day
-"青年节"                     on may 4
+"青年节"                     cultural on may 4
 :Children's Day
-"六一儿童节"                  on june 1
+"六一儿童节"                  cultural on june 1
 :CPC Founding Day
-"建党节"                     on july 1
+"建党节"                     cultural on july 1
 :Army Day
-"建军节"                     on august 1
+"建军节"                     cultural on august 1
 
 :: School
 
@@ -55,26 +55,25 @@ language    "zh_CN"
 ::
 :: Lunar calendar based holidays
 :: and special free (on weekdays) / work (on weekends) arrangements for 2009
-:: yellow for free days, red for working days
 :: Data from http://cnreviews.com/life/living-in-china/china_public_holiday_2009_20081210.html
 :: and various en.wikipedia.org pages
 ::
-"节假日 (day off)"                                 weekend on 2 january 2009
-"工作日 (working day)"                             on 4 january 2009
-"工作日 (working day)"                             on 24 january 2009
-"春节 (Chinese New Year / Spring Festival)"       weekend on 25 january 2009 length 3 days
-"节假日 (day off)"                                 weekend on 28 january 2009 length 3 days
-"工作日 (working day)"                             on 1 february 2009
-"元宵节 (Lantern Festival)"                        on 9 february 2009
-"清明节 (Qing Ming Festival / Tomb Sweeping Day)"  weekend on 4 april 2009
-"节假日 (day off)"                                 weekend on 6 april 2009
-"端午节 (Dragon Boat Festival)"                    weekend on 28 may 2009
-"节假日 (day off)"                                 weekend on 29 may 2009
-"工作日 (working day)"                             on 31 may 2009
-"七夕节 Lover's Day"                               on 26 august 2009
-"中元节 Ghost Festival"                            on 3 september 2009
-"工作日 (working day)"                             on 27 september 2009
-"中秋节 (Mid-Autumn Festival)"                     weekend on 3 october 2009
-"节假日 (day off)"                                 weekend on 5 october 2009 length 4 days
-"工作日 (working day)"                             on 10 october 2009
-"重阳节 (Double Ninth Day / Elders' Day)"          on 26 october 2009
+"节假日 (day off)"                                 public on 2 january 2009
+"工作日 (working day)"                             civil on 4 january 2009
+"工作日 (working day)"                             civil on 24 january 2009
+"春节 (Chinese New Year / Spring Festival)"       public on 25 january 2009 length 3 days
+"节假日 (day off)"                                 public on 28 january 2009 length 3 days
+"工作日 (working day)"                             civil on 1 february 2009
+"元宵节 (Lantern Festival)"                        cultural on 9 february 2009
+"清明节 (Qing Ming Festival / Tomb Sweeping Day)"  public on 4 april 2009
+"节假日 (day off)"                                 public on 6 april 2009
+"端午节 (Dragon Boat Festival)"                    public on 28 may 2009
+"节假日 (day off)"                                 public on 29 may 2009
+"工作日 (working day)"                             civil on 31 may 2009
+"七夕节 Lover's Day"                               cultural on 26 august 2009
+"中元节 Ghost Festival"                            cultural on 3 september 2009
+"工作日 (working day)"                             civil on 27 september 2009
+"中秋节 (Mid-Autumn Festival)"                     public on 3 october 2009
+"节假日 (day off)"                                 public on 5 october 2009 length 4 days
+"工作日 (working day)"                             civil on 10 october 2009
+"重阳节 (Double Ninth Day / Elders' Day)"          cultural on 26 october 2009

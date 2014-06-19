@@ -17,17 +17,17 @@ language    "en_GB"
 description "National holiday file for Ireland"
 
 :: Public Holidays
-"New Years Day"         weekend january 1
-"St Patricks Day"       weekend march 17
-"Good Friday"           weekend easter minus 2
-"Easter Sunday"         weekend easter
-"Easter Monday"         weekend easter plus 1
-"May Day"               weekend first monday in may
-"Spring Bank Holiday"   weekend first monday in june
-"Summer Bank Holiday"   weekend first monday in august
-"October Bank Holiday"  weekend last monday in october
-"Christmas Day"         weekend december 25
-"St Stephens Day"       weekend december 26
+"New Years Day"         public january 1
+"St Patricks Day"       public march 17
+"Good Friday"           public easter minus 2
+"Easter Sunday"         public easter
+"Easter Monday"         public easter plus 1
+"May Day"               public first monday in may
+"Spring Bank Holiday"   public first monday in june
+"Summer Bank Holiday"   public first monday in august
+"October Bank Holiday"  public last monday in october
+"Christmas Day"         public december 25
+"St Stephens Day"       public december 26
 
 :: Religious
 

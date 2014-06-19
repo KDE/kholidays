@@ -17,51 +17,51 @@ language    "en_US"
 description "National holiday file for Japan"
 
 :: Public Holidays
-"New Year's Day"                   weekend on january 1
-"Coming of Age"                    weekend on second monday in january
-"National Foundation Day"          weekend on february 11
-"Vernal Equinox Day"               weekend on 20.3.2005
-"Vernal Equinox Day"               weekend on 21.3.2006
-"Vernal Equinox Day"               weekend on 21.3.2007
-"Vernal Equinox Day"               weekend on 20.3.2008
-"Vernal Equinox Day"               weekend on 20.3.2009
-"Vernal Equinox Day"               weekend on 21.3.2010
-"Greenery Day"                     weekend on april 29
-"Constitution Day"                 weekend on may 3
-"Holiday"                          weekend on may 4
-"Children's Day"                   weekend on may 5
-"Oceans' Day"                      weekend on third monday in july
-"Respect for Senior Citizens Day"  weekend on third monday in september
-"Autumnal Equinox Day"             weekend on september 23
-"Sports Day"                       weekend on second monday in october
-"Culture Day"                      weekend on november 3
-"Labor Thanksgiving Day"           weekend on november 23
-"The Emperor's Birthday"           weekend on december 23
+"New Year's Day"                   public on january 1
+"Coming of Age"                    public on second monday in january
+"National Foundation Day"          public on february 11
+"Vernal Equinox Day"               public on 20.3.2005
+"Vernal Equinox Day"               public on 21.3.2006
+"Vernal Equinox Day"               public on 21.3.2007
+"Vernal Equinox Day"               public on 20.3.2008
+"Vernal Equinox Day"               public on 20.3.2009
+"Vernal Equinox Day"               public on 21.3.2010
+"Greenery Day"                     public on april 29
+"Constitution Day"                 public on may 3
+"Holiday"                          public on may 4
+"Children's Day"                   public on may 5
+"Oceans' Day"                      public on third monday in july
+"Respect for Senior Citizens Day"  public on third monday in september
+"Autumnal Equinox Day"             public on september 23
+"Sports Day"                       public on second monday in october
+"Culture Day"                      public on november 3
+"Labor Thanksgiving Day"           public on november 23
+"The Emperor's Birthday"           public on december 23
 :: If a "National Holiday" is on Sunday,the following day
 :: shall be a substitute holiday.
-"Substitute holiday"               weekend on 21.3.2005
-"Substitute holiday"               weekend on 2.1.2006
-"Substitute holiday"               weekend on 12.2.2007
-"Substitute holiday"               weekend on 30.4.2007
-"Substitute holiday"               weekend on 24.9.2007
-"Substitute holiday"               weekend on 24.12.2007
-"Substitute holiday"               weekend on 24.11.2008
-"Substitute holiday"               weekend on 22.3.2010
+"Substitute holiday"               public on 21.3.2005
+"Substitute holiday"               public on 2.1.2006
+"Substitute holiday"               public on 12.2.2007
+"Substitute holiday"               public on 30.4.2007
+"Substitute holiday"               public on 24.9.2007
+"Substitute holiday"               public on 24.12.2007
+"Substitute holiday"               public on 24.11.2008
+"Substitute holiday"               public on 22.3.2010
 
 :: Religious
 
 :: Financial
 
 :: Cultural
-"St. Valentine's Day"              on february 14
-"Girls' Festival"                  on march 3
-"Buddha's Birthday"                on april 8
-"May Day"                          on may 1
-"Boys' Festival"                   on may 5
-"Mother's Day"                     on second sunday in may
-"Father's Day"                     on third sunday in june
-"Festival of the Weaver Star"      on july 7
-"Christmas"                        on december 25
+"St. Valentine's Day"              cultural on february 14
+"Girls' Festival"                  cultural on march 3
+"Buddha's Birthday"                cultural on april 8
+"May Day"                          cultural on may 1
+"Boys' Festival"                   cultural on may 5
+"Mother's Day"                     cultural on second sunday in may
+"Father's Day"                     cultural on third sunday in june
+"Festival of the Weaver Star"      cultural on july 7
+"Christmas"                        cultural on december 25
 
 :: School
 

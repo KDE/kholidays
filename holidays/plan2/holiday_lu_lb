@@ -17,18 +17,18 @@ language    "lb"
 :description "(please add description in source language) National holiday file for Luxembourg"
 
 :: Public Holidays
-"Neijoerschdag"        weekend on january 1
-"Ouschteren"           weekend on easter
-"Ouschterméindeg"      weekend on easter plus 1 day
-"Éischte Mee"          weekend on may 1
-"Christihimmelfahrt"   weekend on easter plus 39 days
-"Péngschten"           weekend on easter plus 49 days
-"Päischtméindeg"       weekend on easter plus 50 days
-"Nationale Feierdag"   weekend on june 23
-"Maria Himmelfahrt"    weekend on august 15
-"Allerhellegen"        weekend on november 1
-"Chrëschtdag"          weekend on december 25
-"Stiefesdag"           weekend on december 26
+"Neijoerschdag"        public on january 1
+"Ouschteren"           public religious on easter
+"Ouschterméindeg"      public on easter plus 1 day
+"Éischte Mee"          public on may 1
+"Christihimmelfahrt"   public religious on easter plus 39 days
+"Péngschten"           public religious on easter plus 49 days
+"Päischtméindeg"       public religious on easter plus 50 days
+"Nationale Feierdag"   public on june 23
+"Maria Himmelfahrt"    public religious on august 15
+"Allerhellegen"        public religious on november 1
+"Chrëschtdag"          public religious on december 25
+"Stiefesdag"           public on december 26
 
 :: Religious Holidays
 

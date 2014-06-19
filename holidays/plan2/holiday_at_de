@@ -20,82 +20,82 @@ language    "de"
 
 :: Public Holidays
 : New Year's Day
-"Neujahr"                   weekend on january 1
+"Neujahr"                   public on january 1
 : Epiphany
-"Heilige Drei Könige"       weekend on january 6
+"Heilige Drei Könige"       public on january 6
 : Easter Monday
-"Ostermontag"               weekend on easter plus  1 day
+"Ostermontag"               public on easter plus  1 day
 : Ascension
-"Christi Himmelfahrt"       weekend on easter plus 39 days
+"Christi Himmelfahrt"       public on easter plus 39 days
 : Whit Monday
-"Pfingstmontag"             weekend on easter plus 50 days
+"Pfingstmontag"             public on easter plus 50 days
 : Corpus Christi
-"Fronleichnam"              weekend on easter plus 60 days
+"Fronleichnam"              public on easter plus 60 days
 : National Holiday / Labour Day
-"Tag der Arbeit"            weekend on may 1
+"Tag der Arbeit"            public on may 1
 : Assumption
-"Maria Himmelfahrt"         weekend on august 15
+"Maria Himmelfahrt"         public on august 15
 : National Day / Declaration of Neutrality
-"Nationalfeiertag"          weekend on october 26
+"Nationalfeiertag"          public on october 26
 : All Saints
-"Allerheiligen"             weekend on november 1
+"Allerheiligen"             public on november 1
 : Immaculate Conception
-"Maria Empfängnis"          weekend on december 8
+"Maria Empfängnis"          public on december 8
 : Christmas Day
-"Christtag"                 weekend on december 25
+"Christtag"                 public on december 25
 : St Stephen's Day
-"Stephanitag"               weekend on december 26
+"Stephanitag"               public on december 26
 
 :: State Holidays
 : St Joseph in AU-K, AU-ST, AU-T, AU-V
-"Josef"                     on march 19
+"Josef"                     religious on march 19
 : St Florian in AU-OÖ
-"Florian"                   on may 4
+"Florian"                   religious on may 4
 : St Rupert of Salzburg in AU-S
-"Rupert"                    on september 24
+"Rupert"                    religious on september 24
 : Carinthian Plebiscite in AU-K
-"Tag der Volksabstimmung"   on october 10
+"Tag der Volksabstimmung"   civil on october 10
 : St Martin of Tours in AU-B
-"Martini"                   on november 11
+"Martini"                   religious on november 11
 : St Leopold in AU-NÖ, AU-W
-"Leopoldi"                  on november 15
+"Leopoldi"                  religious on november 15
 
 :: Collective Contract
 : Part or full days off as negotiated
-"Heiliger Abend"            on december 24
-"Silvester"                 on december 31
+"Heiliger Abend"            civil on december 24
+"Silvester"                 civil on december 31
 
 :: Religious
-"Rosenmontag"               on easter minus 48 days
-"Faschingsdienstag"         on easter minus 47 days
-"Aschermittwoch"            on easter minus 46 days
-"Palmsonntag"               on easter minus  7 days
-"Gründonnerstag"            on easter minus  3 days
+"Rosenmontag"               religious on easter minus 48 days
+"Faschingsdienstag"         religious on easter minus 47 days
+"Aschermittwoch"            religious on easter minus 46 days
+"Palmsonntag"               religious on easter minus  7 days
+"Gründonnerstag"            religious on easter minus  3 days
 : Good Friday, day off for members of Reformed, Lutheran, Old Catholic and Methodist Churches
-"Karfreitag"                on easter minus  2 days
-"Karsamstag"                on easter minus  1 days
+"Karfreitag"                religious on easter minus  2 days
+"Karsamstag"                religious on easter minus  1 days
 : Easter
-"Ostern"                    on easter
-"Pfingsten"                 on easter plus  49 days
-"Allerseelen"               on november 2
-"Krampus"                   on december 5
-"Nikolaus"                  on december 6
-"1. Advent"                 on sunday before december 24 minus 21 days
-"2. Advent"                 on sunday before december 24 minus 14 days
-"3. Advent"                 on sunday before december 24 minus 7 days
-"4. Advent"                 on sunday before december 24
+"Ostern"                    religious on easter
+"Pfingsten"                 religious on easter plus  49 days
+"Allerseelen"               religious on november 2
+"Krampus"                   religious on december 5
+"Nikolaus"                  religious on december 6
+"1. Advent"                 religious on sunday before december 24 minus 21 days
+"2. Advent"                 religious on sunday before december 24 minus 14 days
+"3. Advent"                 religious on sunday before december 24 minus 7 days
+"4. Advent"                 religious on sunday before december 24
 
 :: Financial
 
 :: Cultural
-"Muttertag"                 on second sunday in may
-"Vatertag"                  on second sunday in june
+"Muttertag"                 cultural on second sunday in may
+"Vatertag"                  cultural on second sunday in june
 
 :: School
 
 :: Daylight Saving
-"Sommerzeit"                on last sunday in march
-"Winterzeit"                on last sunday in october
+"Sommerzeit"                seasonal on last sunday in march
+"Winterzeit"                seasonal on last sunday in october
 
 :: Seasons
 

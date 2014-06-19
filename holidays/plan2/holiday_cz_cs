@@ -17,28 +17,28 @@ language    "cs"
 :description "(please add description in source language) National holiday file for Czech Republic"
 
 :: Public Holidays
-"Nový rok"                                                       weekend on january 1
-"Státní svátek - Den vzniku samostatného českého státu"          weekend on january 1
-"Velikonoce"                                                     weekend on easter
-"Velikonoční pondělí"                                            weekend on easter plus 1 days
-"Svátek práce"                                                   weekend on may 1
-"Státní svátek - Den osvobození"                                 weekend on may 8
-"Státní svátek - Den slovanských věrozvěstů Cyrila a Metoděje"   weekend on july 5
-"Statní svátek - Den upálení mistra Jana Husa"                   weekend on july 6
-"Státní svátek - Den České státnosti"                            weekend on september 28
-"Státní svátek - Den vzniku samostatného Československa (1918)"  weekend on october 28
-"Státní svátek - Den boje za svobodu a demokracii"               weekend on november 17
-"Štědrý den"                                                     weekend on december 24
-"1. svátek vánoční"                                              weekend on december 25
-"2. svátek vánoční"                                              weekend on december 26
+"Nový rok"                                                       public on january 1
+"Státní svátek - Den vzniku samostatného českého státu"          public on january 1
+"Velikonoce"                                                     public religious on easter
+"Velikonoční pondělí"                                            public religious on easter plus 1 days
+"Svátek práce"                                                   public on may 1
+"Státní svátek - Den osvobození"                                 public on may 8
+"Státní svátek - Den slovanských věrozvěstů Cyrila a Metoděje"   public on july 5
+"Statní svátek - Den upálení mistra Jana Husa"                   public on july 6
+"Státní svátek - Den České státnosti"                            public on september 28
+"Státní svátek - Den vzniku samostatného Československa (1918)"  public on october 28
+"Státní svátek - Den boje za svobodu a demokracii"               public on november 17
+"Štědrý den"                                                     public on december 24
+"1. svátek vánoční"                                              public religious on december 25
+"2. svátek vánoční"                                              public on december 26
 
 :: Religious
-"Silvestr"                                                       on december 31
+"Silvestr"                                                       religious on december 31
 
 :: Financial
 
 :: Cultural
-"Mezinárodní den žen"                                            on march 8
+"Mezinárodní den žen"                                            cultural on march 8
 
 :: School
 

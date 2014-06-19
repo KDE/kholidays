@@ -17,23 +17,23 @@ language    "es"
 :description "(please add description in source language) National holiday file for Mexico"
 
 :: Public Holidays
-"Año Nuevo"                         weekend on january 1
-"Día de la Constitución"            weekend on february 5
-"Día del trabajo"                   weekend on may 1
-"Día de la Independencia"           weekend on september 16
-"Natalicio de Benito Juárez"        weekend on march 21
-"Navidad"                           weekend on december 25
-"Día de la Revolución"              weekend on november 20
+"Año Nuevo"                         public on january 1
+"Día de la Constitución"            public on february 5
+"Día del trabajo"                   public on may 1
+"Día de la Independencia"           public on september 16
+"Natalicio de Benito Juárez"        public on march 21
+"Navidad"                           public religious on december 25
+"Día de la Revolución"              public on november 20
 
 :: Religious
-"Día de los Reyes"                  on january 6
-"Domingo de Pascua"                 on easter
-"Sábado de Gloria"                  on easter minus 1
-"Viérnes Santo"                     on easter minus 2
-"Jueves Santo"                      on easter minus 3
-"Día de Todos los Santos"           on november 1
-"Día de los Fieles Difuntos"        on november 2
-"Día de Vírgen de Guadalupe"        on december 12
+"Día de los Reyes"                  religious on january 6
+"Domingo de Pascua"                 religious on easter
+"Sábado de Gloria"                  religious on easter minus 1
+"Viérnes Santo"                     religious on easter minus 2
+"Jueves Santo"                      religious on easter minus 3
+"Día de Todos los Santos"           religious on november 1
+"Día de los Fieles Difuntos"        religious on november 2
+"Día de Vírgen de Guadalupe"        religious on december 12
 
 :: Financial
 
@@ -44,17 +44,17 @@ language    "es"
 :: Daylight Saving
 
 :: Seasons
-"Equinoxio de primavera"            on march 21
-"Solsticio de verano"               on june 21
-"Equinoxio de otoño"                on september 21
-"Solsticio de invierno"             on december 21
+"Equinoxio de primavera"            seasonal on march 21
+"Solsticio de verano"               seasonal on june 21
+"Equinoxio de otoño"                seasonal on september 21
+"Solsticio de invierno"             seasonal on december 21
 
 :: Name Days
 
 
 :: To be sorted
-"Día de la expropiación petrolera"  on march 18
-"Batalla de Puebla"                 on may 5
-"Día de la Madre"                   on may 10
-"Día de la Raza"                    on october 12
-"Día de los Santos Inocentes"       on december 28
+"Día de la expropiación petrolera"  civil on march 18
+"Batalla de Puebla"                 civil on may 5
+"Día de la Madre"                   civil on may 10
+"Día de la Raza"                    civil on october 12
+"Día de los Santos Inocentes"       civil on december 28

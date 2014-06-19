@@ -19,26 +19,26 @@ language    "en"
 description "National holiday file for Costa Rica"
 
 :: Public Holidays
-"New Year's Day"                weekend on january 1
-"Battle of Rivas Day"           weekend on april 11
-"Labor Day"                     weekend on may 1
-"Guanacaste Day"                weekend on july 25
-"Mother's Day"                  weekend on august 15
-"Independence Day"              weekend on september 15
+"New Year's Day"                public on january 1
+"Battle of Rivas Day"           public on april 11
+"Labor Day"                     public on may 1
+"Guanacaste Day"                public on july 25
+"Mother's Day"                  public on august 15
+"Independence Day"              public on september 15
 
 
 :: Religious
-"Saint Joseph's Day"            on march 19
-"Maundy Thursday"               weekend on easter minus 3 days
-"Good Friday"                   weekend on easter minus 2 days
-"Easter"                        weekend on easter
-"Virgin of Los Angeles Day"     on august 2
-"Christmas Day"                 weekend on december 25
+"Saint Joseph's Day"            religious on march 19
+"Maundy Thursday"               public religious on easter minus 3 days
+"Good Friday"                   public religious on easter minus 2 days
+"Easter"                        public religious on easter
+"Virgin of Los Angeles Day"     religious on august 2
+"Christmas Day"                 public religious on december 25
 
 :: Financial
 
 :: Cultural
-"Meeting of Cultures Day"       on october 12
+"Meeting of Cultures Day"       cultural on october 12
 
 :: School
 

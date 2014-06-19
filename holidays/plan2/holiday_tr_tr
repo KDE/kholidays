@@ -23,97 +23,97 @@ language    "tr"
 description "National holiday file for Turkey"
 
 :: Public Holidays
-"Yeni Yıl Tatili"                                  weekend on january 1
-"Ulusal Egemenlik ve Çocuk Bayramı"                weekend on april 23
-"Emek ve Dayanışma Günü"                           weekend on may 1
-"Atatürk'ü Anma, Gençlik ve Spor Bayramı"          weekend on may 19
-"Zafer Bayramı"                                    weekend on august 30
-"Cumhuriyet Bayramı"                               weekend on october 29
+"Yeni Yıl Tatili"                                  public on january 1
+"Ulusal Egemenlik ve Çocuk Bayramı"                public on april 23
+"Emek ve Dayanışma Günü"                           public on may 1
+"Atatürk'ü Anma, Gençlik ve Spor Bayramı"          public on may 19
+"Zafer Bayramı"                                    public on august 30
+"Cumhuriyet Bayramı"                               public on october 29
 
 :: Religious
 :: We cannot use KDE Hijri calendar since is one/two days ahead
 :: than holiday dates defined for Turkey
-:: "Ramazan Bayramı"                                  weekend on hijri shawwal 1 length 3 days
-:: "Kurban Bayramı"                                   weekend on hijri thualhijjah 10 length 4 days
+:: "Ramazan Bayramı"                               public religious on hijri shawwal 1 length 3 days
+:: "Kurban Bayramı"                                public religious on hijri thualhijjah 10 length 4 days
 
-"Ramazan Bayramı"                                  weekend on 08 august 2013 length 3 days
-"Ramazan Bayramı"                                  weekend on 28 july 2014 length 3 days
-"Ramazan Bayramı"                                  weekend on 17 july 2015 length 3 days
+"Ramazan Bayramı"                                  public religious on 08 august 2013 length 3 days
+"Ramazan Bayramı"                                  public religious on 28 july 2014 length 3 days
+"Ramazan Bayramı"                                  public religious on 17 july 2015 length 3 days
 
-"Kurban Bayramı"                                   weekend on 15 october 2013 length 4 days
-"Kurban Bayramı"                                   weekend on 04 october 2014 length 4 days
-"Kurban Bayramı"                                   weekend on 23 september 2015 length 4 days
+"Kurban Bayramı"                                   public religious on 15 october 2013 length 4 days
+"Kurban Bayramı"                                   public religious on 04 october 2014 length 4 days
+"Kurban Bayramı"                                   public religious on 23 september 2015 length 4 days
 
-"Kadir Gecesi"                                     on 03 august 2013
-"Kadir Gecesi"                                     on 23 july 2014
-"Kadir Gecesi"                                     on 12 july 2015
+"Kadir Gecesi"                                     religious on 03 august 2013
+"Kadir Gecesi"                                     religious on 23 july 2014
+"Kadir Gecesi"                                     religious on 12 july 2015
 
-"Mevlid Kandili"                                   on 23 january 2013
-"Mevlid Kandili"                                   on 12 january 2014
-"Mevlid Kandili"                                   on 02 january 2015
-"Mevlid Kandili"                                   on 22 december 2015
+"Mevlid Kandili"                                   religious on 23 january 2013
+"Mevlid Kandili"                                   religious on 12 january 2014
+"Mevlid Kandili"                                   religious on 02 january 2015
+"Mevlid Kandili"                                   religious on 22 december 2015
 
-"Regaib Kandili"                                   on 16 may 2013
-"Regaib Kandili"                                   on 01 may 2014
-"Regaib Kandili"                                   on 23 april 2015
+"Regaib Kandili"                                   religious on 16 may 2013
+"Regaib Kandili"                                   religious on 01 may 2014
+"Regaib Kandili"                                   religious on 23 april 2015
 
-"Mirac Kandili"                                    on 05 june 2013
-"Mirac Kandili"                                    on 25 may 2014
-"Mirac Kandili"                                    on 15 may 2015
+"Mirac Kandili"                                    religious on 05 june 2013
+"Mirac Kandili"                                    religious on 25 may 2014
+"Mirac Kandili"                                    religious on 15 may 2015
 
-"Berat Kandili"                                    on 23 june 2013
-"Berat Kandili"                                    on 12 june 2014
-"Berat Kandili"                                    on 01 june 2015
+"Berat Kandili"                                    religious on 23 june 2013
+"Berat Kandili"                                    religious on 12 june 2014
+"Berat Kandili"                                    religious on 01 june 2015
 
 :: Financial
 
 :: Cultural
-"Dünya Kanser Günü"                                on february 4
-"Sevgililer Günü"                                  on february 14
-"Sivil Savunma Günü"                               on february 28
-"Deprem Haftası Başlangıcı"                        on march 1
-"Dünya Kadınlar Günü"                              on march 8
-"Tıp Bayramı"                                      on march 14
-"Şehitler Günü"                                    on march 18
-"Çanakkale Zaferi"                                 on march 18
-"Nevruz Bayramı"                                   on march 21
-"Dünya Tiyatrolar Günü"                            on march 27
-"Dünya Sağlık Günü"                                on april 7
-"Hıdrellez"                                        on may 6
-"Anneler Günü"                                     on second sunday in may
-"Etik Günü"                                        on may 25
-"İstanbul'un Fethi"                                on may 29
-"Dünya Çevre Günü"                                 on june 5
-"Dünya Gönüllü Kan Bağışçıları Günü"               on june 14
-"Babalar Günü"                                     on third sunday in june
-"Kabotaj ve Deniz Bayramı"                         on july 1
-"Dünya Barış Günü"                                 on september 1
-"Gaziler Günü"                                     on september 19
-"Türk Dil Bayramı"                                 on september 26
-"Dünya Kalp Günü"                                  on last sunday in september
-"Dünya Hayvanları Koruma Günü"                     on october 4
-"Atatürk'ün Ölüm Yıldönümü"                        on november 10
-"Çocuk Hakları Günü"                               on november 20
-"Öğretmenler Günü"                                 on november 24
-"Kadına Yönelik Şiddete Karşı Mücadele Günü"       on november 25
-"Dünya AIDS Günü"                                  on december 1
-"Dünya Özürlüler Günü"                             on december 3
-"Dünya İnsan Hakları Günü"                         on december 10
+"Dünya Kanser Günü"                                cultural on february 4
+"Sevgililer Günü"                                  cultural on february 14
+"Sivil Savunma Günü"                               cultural on february 28
+"Deprem Haftası Başlangıcı"                        cultural on march 1
+"Dünya Kadınlar Günü"                              cultural on march 8
+"Tıp Bayramı"                                      cultural on march 14
+"Şehitler Günü"                                    cultural on march 18
+"Çanakkale Zaferi"                                 cultural on march 18
+"Nevruz Bayramı"                                   cultural on march 21
+"Dünya Tiyatrolar Günü"                            cultural on march 27
+"Dünya Sağlık Günü"                                cultural on april 7
+"Hıdrellez"                                        cultural on may 6
+"Anneler Günü"                                     cultural on second sunday in may
+"Etik Günü"                                        cultural on may 25
+"İstanbul'un Fethi"                                cultural on may 29
+"Dünya Çevre Günü"                                 cultural on june 5
+"Dünya Gönüllü Kan Bağışçıları Günü"               cultural on june 14
+"Babalar Günü"                                     cultural on third sunday in june
+"Kabotaj ve Deniz Bayramı"                         cultural on july 1
+"Dünya Barış Günü"                                 cultural on september 1
+"Gaziler Günü"                                     cultural on september 19
+"Türk Dil Bayramı"                                 cultural on september 26
+"Dünya Kalp Günü"                                  cultural on last sunday in september
+"Dünya Hayvanları Koruma Günü"                     cultural on october 4
+"Atatürk'ün Ölüm Yıldönümü"                        cultural on november 10
+"Çocuk Hakları Günü"                               cultural on november 20
+"Öğretmenler Günü"                                 cultural on november 24
+"Kadına Yönelik Şiddete Karşı Mücadele Günü"       cultural on november 25
+"Dünya AIDS Günü"                                  cultural on december 1
+"Dünya Özürlüler Günü"                             cultural on december 3
+"Dünya İnsan Hakları Günü"                         cultural on december 10
 
 :: School
 
 :: Daylight Saving
-"Yaz Saati Uygulaması Başlangıcı"                  on ((year == 2011) ? [march 28] : [last sunday in march])
-"Yaz Saati Uygulaması Bitişi"                      on last sunday in october
+"Yaz Saati Uygulaması Başlangıcı"                  seasonal on ((year == 2011) ? [march 28] : [last sunday in march])
+"Yaz Saati Uygulaması Bitişi"                      seasonal on last sunday in october
 
 :: Seasons
-"İlkbahar Başlangıcı"                              on march 21
-"Yaz Başlangıcı"                                   on june 21
-"Sonbahar Başlangıcı"                              on september 23
-"Kış Başlangıcı"                                   on december 21
+"İlkbahar Başlangıcı"                              seasonal on march 21
+"Yaz Başlangıcı"                                   seasonal on june 21
+"Sonbahar Başlangıcı"                              seasonal on september 23
+"Kış Başlangıcı"                                   seasonal on december 21
 
-"Birinci Cemrenin (Havaya) Düşüşü"                 on november 8 plus 105 days
-"İkinci Cemrenin (Suya) Düşüşü"                    on november 8 plus 112 days
-"Üçüncü Cemrenin (Toprağa) Düşüşü"                 on november 8 plus 119 days
+"Birinci Cemrenin (Havaya) Düşüşü"                 seasonal on november 8 plus 105 days
+"İkinci Cemrenin (Suya) Düşüşü"                    seasonal on november 8 plus 112 days
+"Üçüncü Cemrenin (Toprağa) Düşüşü"                 seasonal on november 8 plus 119 days
 
 :: Name Days

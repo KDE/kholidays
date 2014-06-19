@@ -17,53 +17,53 @@ language    "pl"
 :description "(please add description in source language) National holiday file for Poland"
 
 :: Public Holidays
-"Nowy Rok"               weekend on january 1
-"Wielkanoc"              weekend on easter length 2 days
-"Lany Poniedziałek"      weekend on easter plus 1 day
-"Zielone Świątki"        weekend on easter plus 49 days
-"Boże Ciało"             weekend on easter plus 60 days
-"Święto Pracy"           weekend on may 1
-"Święto Konstytucji"     weekend on may 3
-"Wniebowzięcie NMP"      weekend on august 15
-"Wszystkich Świętych"    weekend on november 1
-"Święto Niepodległości"  weekend on november 11
-"Boże Narodzenie"        weekend on december 25 length 2 days
+"Nowy Rok"               public on january 1
+"Wielkanoc"              public religious on easter length 2 days
+"Lany Poniedziałek"      public on easter plus 1 day
+"Zielone Świątki"        public religious on easter plus 49 days
+"Boże Ciało"             public religious on easter plus 60 days
+"Święto Pracy"           public on may 1
+"Święto Konstytucji"     public on may 3
+"Wniebowzięcie NMP"      public on august 15
+"Wszystkich Świętych"    public religious on november 1
+"Święto Niepodległości"  public on november 11
+"Boże Narodzenie"        public religious on december 25 length 2 days
 
 :: Religious
-"Śledzik"                on easter minus 47 days
-"Popielec"               on easter minus 46 days
-"Wielki Piątek"          on easter minus  2 days
-"Niedziela Palmowa"      on easter minus 7 days
+"Śledzik"                religious on easter minus 47 days
+"Popielec"               religious on easter minus 46 days
+"Wielki Piątek"          religious on easter minus  2 days
+"Niedziela Palmowa"      religious on easter minus 7 days
 
 :: Financial
 
 :: Cultural
-"Walentynki"             on february 14
+"Walentynki"             cultural on february 14
 
 :: School
 
 :: Daylight Saving
 
 :: Seasons
-"Początek wiosny"        on march 21
-"Początek lata"          on june 22
-"Początek jesieni"       on september 23
-"Początek zimy"          on december 22
+"Początek wiosny"        seasonal on march 21
+"Początek lata"          seasonal on june 22
+"Początek jesieni"       seasonal on september 23
+"Początek zimy"          seasonal on december 22
 
 :: Name Days
 
 
 :: To be sorted
-"Trzech Króli"           on january 6
-"Dzień Babci"            on january 21
-"Dzień Dziadka"          on january 22
-"Dzień Kobiet"           on march 8
-"Dzień Flagi"            on may 2
-"Dzień Matki"            on may 26
-"Dzień Dziecka"          on june 1
-"Dzień Ojca"             on june 23
-"Zaduszki"               on november 2
-"Andrzejki"              on november 30
-"Św. Mikołaj"            on december 6
-"Wigilia"                on december 24
-"Sylwester"              on december 31
+"Trzech Króli"           civil on january 6
+"Dzień Babci"            civil on january 21
+"Dzień Dziadka"          civil on january 22
+"Dzień Kobiet"           civil on march 8
+"Dzień Flagi"            civil on may 2
+"Dzień Matki"            civil on may 26
+"Dzień Dziecka"          civil on june 1
+"Dzień Ojca"             civil on june 23
+"Zaduszki"               civil on november 2
+"Andrzejki"              civil on november 30
+"Św. Mikołaj"            civil on december 6
+"Wigilia"                civil on december 24
+"Sylwester"              civil on december 31

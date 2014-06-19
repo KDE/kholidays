@@ -21,25 +21,25 @@ language    "ar"
 
 :: National Holidays
 : Coptic Christmas
-"عيد الميلاد المجيد"            weekend on january 7
+"عيد الميلاد المجيد"            public religious on january 7
 : Sham El Nessim (Spring Festival)
-"شم النسيم"                    weekend on pascha plus 1 days
+"شم النسيم"                    public on pascha plus 1 days
 : Sinai Liberation Day
-"عيد تحرير سيناء"              weekend on april 25
+"عيد تحرير سيناء"              public on april 25
 : Labour Day
-"عيد العمال"                   weekend on may 1
+"عيد العمال"                   public on may 1
 : Revolution Day
-"عيد الثورة"                   weekend on july 23
+"عيد الثورة"                   public on july 23
 : Armed Forces Day
-"عيد القوات المسلحة"           weekend on october 6
+"عيد القوات المسلحة"           public on october 6
 : Islamic New Year
-"رأس السنة الهجرية"            weekend on hijri muharram 1
+"رأس السنة الهجرية"            public on hijri muharram 1
 : Birthday of the Prophet Muhammad (Sunni)
-"المولد النبوى الشريف"         weekend on hijri rabialawal 12
+"المولد النبوى الشريف"         public religious on hijri rabialawal 12
 : Eid el-Fitr (End of Ramadan)
-"عيد الفطر"                    weekend on hijri shawwal 1 length 3
+"عيد الفطر"                    public religious on hijri shawwal 1 length 3
 : Eid al-Adha (End of the Hajj)
-"عيد الأضحى"                    weekend on hijri thualhijjah 10 length 3
+"عيد الأضحى"                    public religious on hijri thualhijjah 10 length 3
 
 :: Religious Holidays
 

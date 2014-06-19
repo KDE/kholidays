@@ -18,28 +18,28 @@ language    "es"
 :description "(please add description in source language) National holiday file for Colombia"
 
 :: Public Holidays
-"Año nuevo"                   weekend on january 1
-"Epifanía"                    weekend on monday after january 6
-"San José"                    weekend on monday after march 19
-"Jueves Santo"                weekend on easter minus 3
-"Viernes Santo"               weekend on easter minus 2
-"Ascensión de Jesús"          weekend on easter plus 43
-"Corpus Christi"              weekend on easter plus 64
-"Sagrado Corazón"             weekend on easter plus 71
-"Día del Trabajo"             weekend on may 1
-"San Pedro y San Pablo"       weekend on monday after june 29
-"Grito de la Independencia"   weekend on july 20
-"Batalla de Boyacá"           weekend on august 7
-"Asunción de la Virgen"       weekend on monday after august 15
-"Día de la Raza"              weekend on monday after october 12
-"Todos los Santos"            weekend on monday after november 1
-"Independencia de Cartagena"  weekend on monday after november 11
-"Inmaculada Concepción"       weekend on december 8
-"Navidad"                     weekend on december 25
+"Año nuevo"                   public on january 1
+"Epifanía"                    public religious on monday after january 6
+"San José"                    public religious on monday after march 19
+"Jueves Santo"                public religious on easter minus 3
+"Viernes Santo"               public religious on easter minus 2
+"Ascensión de Jesús"          public religious on easter plus 43
+"Corpus Christi"              public religious on easter plus 64
+"Sagrado Corazón"             public religious on easter plus 71
+"Día del Trabajo"             public on may 1
+"San Pedro y San Pablo"       public religious on monday after june 29
+"Grito de la Independencia"   public on july 20
+"Batalla de Boyacá"           public on august 7
+"Asunción de la Virgen"       public religious on monday after august 15
+"Día de la Raza"              public on monday after october 12
+"Todos los Santos"            public on monday after november 1
+"Independencia de Cartagena"  public on monday after november 11
+"Inmaculada Concepción"       public religious on december 8
+"Navidad"                     public religious on december 25
 
 :: Religious
-"Domingo de Ramos"            on easter minus 7
-"Domingo de Pascua"           on easter
+"Domingo de Ramos"            religious on easter minus 7
+"Domingo de Pascua"           religious on easter
 
 :: Financial
 

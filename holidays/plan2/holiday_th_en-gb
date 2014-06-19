@@ -17,21 +17,21 @@ language    "en_GB"
 description "National holiday file for Thailand"
 
 :: Public Holidays
-"New Years Day"                 weekend on January 1
-:"Makha Bucha Day"               weekend on February 11
-"Chakri Memorial Day"           weekend on April 6
-"Songkran Festival"             weekend on April 13 length 3 days
-"Coranation Day"                weekend on May 5
-:"Royal Ploughing Ceremony Day"  weekend on May 8
-:"Visakha Bucha Day"             weekend on May 10
-:"Mid Year Day"                  weekend on July 1
-:"Asarnha Bucha Day"             weekend on July 8
-:"Khao Phansa Day"               weekend on July 9
-"HMThe Queens Birthday"         weekend on August 12
-"Chulalongkorn Day"             weekend on October 23
-"HM The King's Birthdayday"     weekend on December 5
-"Constitution Day"              weekend on December 10
-"New Years Eve"                 weekend on December 31
+"New Years Day"                 public on January 1
+:"Makha Bucha Day"              public on February 11
+"Chakri Memorial Day"           public on April 6
+"Songkran Festival"             public on April 13 length 3 days
+"Coranation Day"                public on May 5
+:"Royal Ploughing Ceremony Day" public on May 8
+:"Visakha Bucha Day"            public on May 10
+:"Mid Year Day"                 public on July 1
+:"Asarnha Bucha Day"            public on July 8
+:"Khao Phansa Day"              public on July 9
+"HM The Queens Birthday"        public on August 12
+"Chulalongkorn Day"             public on October 23
+"HM The King's Birthdayday"     public on December 5
+"Constitution Day"              public on December 10
+"New Years Eve"                 public on December 31
 
 :: Religious Holidays
 
@@ -44,9 +44,9 @@ description "National holiday file for Thailand"
 :: Daylight Saving
 
 :: Seasons
-"Hot season begins"    on march 1
-"Rainy season begins"  on june 1
-"Cool season begins"   on november 1
+"Hot season begins"    seasonal on march 1
+"Rainy season begins"  seasonal on june 1
+"Cool season begins"   seasonal on november 1
 
 :: Name Days
 

@@ -20,19 +20,19 @@ description "State holiday file for Western Australia"
 
 :: Public Holidays
 :: State Holidays - WA
-"New Year's Day"                    weekend on january 1
-"Australia Day"                     weekend on january 26
-"Labour Day"                        weekend on first monday in march
-"Anzac Day"                         weekend on april 25
-"Good Friday"                       weekend on easter minus 2
-"Easter Monday"                     weekend on easter plus 1
-"Foundation Day"                    weekend on first monday in june
-"Queen's Birthday"                  weekend on 27.9.2010
-"Queen's Birthday"                  weekend on 3.10.2011
-"Queen's Birthday"                  weekend on 1.10.2012
-"Queen's Birthday"                  weekend on 30.9.2013
-"Christmas Day"                     weekend on december 25
-"Boxing Day"                        weekend on december 26
+"New Year's Day"                    public on january 1
+"Australia Day"                     public on january 26
+"Labour Day"                        public on first monday in march
+"Anzac Day"                         public on april 25
+"Good Friday"                       public religious on easter minus 2
+"Easter Monday"                     public on easter plus 1
+"Foundation Day"                    public on first monday in june
+"Queen's Birthday"                  public on 27.9.2010
+"Queen's Birthday"                  public on 3.10.2011
+"Queen's Birthday"                  public on 1.10.2012
+"Queen's Birthday"                  public on 30.9.2013
+"Christmas Day"                     public religious on december 25
+"Boxing Day"                        public on december 26
 
 :: Religious
 

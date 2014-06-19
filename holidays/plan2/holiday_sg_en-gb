@@ -18,26 +18,26 @@ language    "en_GB"
 description "National holiday file for Singapore"
 
 :: Public Holidays
-"New Year's Day"                 weekend on january 1
-"Chinese New Year"               weekend on january 23 2012 length 2 days
-"Chinese New Year"               weekend on february 10 2013 length 2 days
-"Chinese New Year"               weekend on january 31 2014 length 2 days
-"Good Friday"                    weekend on easter minus 2
-"Labour Day"                     weekend on may 1
-"Vesak Day"                      weekend on may 5 2012
-"Vesak Day"                      weekend on may 24 2013
-"Vesak Day"                      weekend on may 13 2014
-"National Day"                   weekend on august 9
-"Hari Raya Puasa"                weekend on august 19 2012
-"Hari Raya Puasa"                weekend on august 8 2013
-"Hari Raya Puasa"                weekend on july 28 2014
-"Hari Raya Haji"                 weekend on october 26 2012
-"Hari Raya Haji"                 weekend on october 15 2013
-"Hari Raya Haji"                 weekend on october 4 2014
-"Deepavali"                      weekend on november 13 2012
-"Deepavali"                      weekend on november 3 2013
-"Deepavali"                      weekend on october 23 2014
-"Christmas Day"                  weekend on december 25
+"New Year's Day"                 public on january 1
+"Chinese New Year"               public on january 23 2012 length 2 days
+"Chinese New Year"               public on february 10 2013 length 2 days
+"Chinese New Year"               public on january 31 2014 length 2 days
+"Good Friday"                    public religious on easter minus 2
+"Labour Day"                     public on may 1
+"Vesak Day"                      public on may 5 2012
+"Vesak Day"                      public on may 24 2013
+"Vesak Day"                      public on may 13 2014
+"National Day"                   public on august 9
+"Hari Raya Puasa"                public on august 19 2012
+"Hari Raya Puasa"                public on august 8 2013
+"Hari Raya Puasa"                public on july 28 2014
+"Hari Raya Haji"                 public on october 26 2012
+"Hari Raya Haji"                 public on october 15 2013
+"Hari Raya Haji"                 public on october 4 2014
+"Deepavali"                      public on november 13 2012
+"Deepavali"                      public on november 3 2013
+"Deepavali"                      public on october 23 2014
+"Christmas Day"                  public religious on december 25
 
 :: Religious Holidays
 

@@ -24,57 +24,57 @@ language    "ko"
 
 :: Public Holidays
 : New Year's Day
-"양력설"            weekend on january 1
+"양력설"            public on january 1
 : March 1st Movement Day
-"3·1절"             weekend on march 1
+"3·1절"             public on march 1
 : Children's Day
-"어린이날"          weekend on may 5
+"어린이날"          public on may 5
 : Memorial Day
-"현충일"            weekend on june 6
+"현충일"            public on june 6
 : Liberation Day
-"광복절"            weekend on august 15
+"광복절"            public on august 15
 : National Foundation Day
-"개천절"            weekend on october 3
+"개천절"            public on october 3
 : Christmas Day
-"크리스마스"        weekend on december 25
+"크리스마스"        public on december 25
 : Lunar Holidays
 : Lunar New Year: Day 1 Month 1
-"설날"              weekend on 8.2.2005 length 3 days
-"설날"              weekend on 28.1.2006 length 3 days
-"설날"              weekend on 17.2.2007 length 3 days
-"설날"              weekend on 6.2.2008 length 3 days
-"설날"              weekend on 25.1.2009 length 3 days
-"설날"              weekend on 13.2.2010 length 3 days
-"설날"              weekend on 2.2.2011 length 3 days
-"설날"              weekend on 22.1.2012 length 3 days
-"설날"              weekend on 9.2.2013 length 3 days
-"설날"              weekend on 30.1.2014 length 3 days
-"설날"              weekend on 18.2.2015 length 3 days
-"설날"              weekend on 7.2.2016 length 3 days
+"설날"              public on 8.2.2005 length 3 days
+"설날"              public on 28.1.2006 length 3 days
+"설날"              public on 17.2.2007 length 3 days
+"설날"              public on 6.2.2008 length 3 days
+"설날"              public on 25.1.2009 length 3 days
+"설날"              public on 13.2.2010 length 3 days
+"설날"              public on 2.2.2011 length 3 days
+"설날"              public on 22.1.2012 length 3 days
+"설날"              public on 9.2.2013 length 3 days
+"설날"              public on 30.1.2014 length 3 days
+"설날"              public on 18.2.2015 length 3 days
+"설날"              public on 7.2.2016 length 3 days
 : Buddha's Birthday: Day 8 Month 4
-"부처님 오신 날"    weekend on 24.5.2007
-"부처님 오신 날"    weekend on 12.5.2008
-"부처님 오신 날"    weekend on 2.5.2009
-"부처님 오신 날"    weekend on 21.5.2010
-"부처님 오신 날"    weekend on 10.5.2011
-"부처님 오신 날"    weekend on 28.5.2012
-"부처님 오신 날"    weekend on 17.5.2013
-"부처님 오신 날"    weekend on 6.5.2014
-"부처님 오신 날"    weekend on 25.5.2015
-"부처님 오신 날"    weekend on 14.5.2016
+"부처님 오신 날"    public religious on 24.5.2007
+"부처님 오신 날"    public religious on 12.5.2008
+"부처님 오신 날"    public religious on 2.5.2009
+"부처님 오신 날"    public religious on 21.5.2010
+"부처님 오신 날"    public religious on 10.5.2011
+"부처님 오신 날"    public religious on 28.5.2012
+"부처님 오신 날"    public religious on 17.5.2013
+"부처님 오신 날"    public religious on 6.5.2014
+"부처님 오신 날"    public religious on 25.5.2015
+"부처님 오신 날"    public religious on 14.5.2016
 : Chuseok: Day 15 Month 8
-"추석"              weekend on 17.9.2005 length 3 days
-"추석"              weekend on 5.10.2006 length 3 days
-"추석"              weekend on 24.9.2007 length 3 days
-"추석"              weekend on 13.9.2008 length 3 days
-"추석"              weekend on 2.10.2009 length 3 days
-"추석"              weekend on 21.9.2010 length 3 days
-"추석"              weekend on 11.9.2011 length 3 days
-"추석"              weekend on 29.9.2012 length 3 days
-"추석"              weekend on 18.9.2013 length 3 days
-"추석"              weekend on 7.9.2014 length 3 days
-"추석"              weekend on 26.9.2015 length 3 days
-"추석"              weekend on 14.9.2016 length 3 days
+"추석"              public on 17.9.2005 length 3 days
+"추석"              public on 5.10.2006 length 3 days
+"추석"              public on 24.9.2007 length 3 days
+"추석"              public on 13.9.2008 length 3 days
+"추석"              public on 2.10.2009 length 3 days
+"추석"              public on 21.9.2010 length 3 days
+"추석"              public on 11.9.2011 length 3 days
+"추석"              public on 29.9.2012 length 3 days
+"추석"              public on 18.9.2013 length 3 days
+"추석"              public on 7.9.2014 length 3 days
+"추석"              public on 26.9.2015 length 3 days
+"추석"              public on 14.9.2016 length 3 days
 
 :: Religious
 
@@ -82,9 +82,9 @@ language    "ko"
 
 :: Cultural
 : Constitution Day
-"제헌절"            on july 17
+"제헌절"            civil on july 17
 : Hangeul Day
-"한글날"            on october 9
+"한글날"            cultural on october 9
 
 :: School
 

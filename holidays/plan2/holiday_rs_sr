@@ -24,48 +24,48 @@ language     "sr"
 :description  ""
 
 :: Public Holidays
-"Нова Година"                                                      weekend on january 1 length 2 days
-"Нова Година (нерадни дан)"                                        weekend on ( ( ( [january 2] == [sunday after ([january 2])] ) ) ?
-                                                                                    [ monday after ([january 2]) ] : noop )
-"Православни Божић"                                                weekend on january 7
-"Дан државности"                                                   weekend on february 15
-"Дан државности (нерадни дан)"                                     weekend on ( ( ( [february 15] == [sunday after ([february 15])] ) ) ?
-                                                                                    [ monday after ([february 15]) ] : noop )
-"Међународни празник рада"                                         weekend on may 1 length 2 days
-"Међународни празник рада (нерадни дан)"                           weekend on ( ( ( [may 2] == [sunday after ([may 2])] ) ) ?
-                                                                                    [ monday after ([may 2]) ] : noop )
-"Дан победе"                                                     weekend on may 9
-"Видовдан"                                                         weekend on june 28
+"Нова Година"                                                      public on january 1 length 2 days
+"Нова Година (нерадни дан)"                                        public on ( ( ( [january 2] == [sunday after ([january 2])] ) ) ?
+                                                                                   [ monday after ([january 2]) ] : noop )
+"Православни Божић"                                                public on january 7
+"Дан државности"                                                   public on february 15
+"Дан државности (нерадни дан)"                                     public on ( ( ( [february 15] == [sunday after ([february 15])] ) ) ?
+                                                                                   [ monday after ([february 15]) ] : noop )
+"Међународни празник рада"                                         public on may 1 length 2 days
+"Међународни празник рада (нерадни дан)"                           public on ( ( ( [may 2] == [sunday after ([may 2])] ) ) ?
+                                                                                   [ monday after ([may 2]) ] : noop )
+"Дан победе"                                                       public on may 9
+"Видовдан"                                                         public on june 28
 
 :: Religious Holidays
-"Православни Велики петак"                                         weekend on pascha minus 2 days
-"Православна Велика субота"                                        weekend on pascha minus 1 days
-"Православни Васкрс"                                               weekend on pascha length 2 days
-"Римокатолички Велики петак"                                       weekend on easter minus 2 days
-"Римокатоличка Велика субота"                                      on easter minus 1 days
-"Римокатолички Ускрс"                                              on easter length 2 days
-"Римокатолички Божић"                                              on december 25
-"Рамазански бајрам"                                                on hijri shawwal 1
-"Курбан-бајрам"                                                    on hijri thualhijjah 10
-"Јом Кипур"                                                        on hebrew tishrey 10
+"Православни Велики петак"                                         public religious on pascha minus 2 days
+"Православна Велика субота"                                        public religious on pascha minus 1 days
+"Православни Васкрс"                                               public religious on pascha length 2 days
+"Римокатолички Велики петак"                                       public religious on easter minus 2 days
+"Римокатоличка Велика субота"                                      religious on easter minus 1 days
+"Римокатолички Ускрс"                                              religious on easter length 2 days
+"Римокатолички Божић"                                              religious on december 25
+"Рамазански бајрам"                                                religious on hijri shawwal 1
+"Курбан-бајрам"                                                    religious on hijri thualhijjah 10
+"Јом Кипур"                                                        religious on hebrew tishrey 10
 
 :: Financial
 
 :: Cultural
-"Српска Нова Година"                                               on january 14
-"Дан сећања на жртве холокауста"                                 on january 27
+"Српска Нова Година"                                               cultural on january 14
+"Дан сећања на жртве холокауста"                                   cultural on january 27
 
 :: School
-"Свети Сава"                                                       weekend on january 27
+"Свети Сава"                                                       public school on january 27
 
 :: Daylight Saving
-"Летње рачунање времена (ГМТ+2)"                                  on last sunday in march
-"Зимско рачунање времена (ГМТ+1)"                                  on last sunday in october
+"Летње рачунање времена (ГМТ+2)"                                   seasonal on last sunday in march
+"Зимско рачунање времена (ГМТ+1)"                                  seasonal on last sunday in october
 
 :: Seasons
-"Први дан пролећа"                                                on march 20
-"Први дан лета"                                                   on june 21
-"Први дан јесени"                                                  on september 23
-"Први дан зиме"                                                    on december 22
+"Први дан пролећа"                                                 seasonal on march 20
+"Први дан лета"                                                    seasonal on june 21
+"Први дан јесени"                                                  seasonal on september 23
+"Први дан зиме"                                                    seasonal on december 22
 
 :: Name Days

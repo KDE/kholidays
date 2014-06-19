@@ -19,33 +19,33 @@ description "National holiday file for Morocco"
 
 :: National Holidays
 : New Year's Day
-"رأس السنة الميلادية"                    weekend on january 1
+"رأس السنة الميلادية"                    public on january 1
 : Proclamation of Independence
-"تقديم وثيقة الاستقلال"                  weekend on january 11
+"تقديم وثيقة الاستقلال"                  public on january 11
 : Labour Day
-"عيد الشغل"                               weekend on may 1
+"عيد الشغل"                               public on may 1
 : Enthronement Day
-"عيد العرش"                             weekend on july 30
+"عيد العرش"                             public on july 30
 : Oued Ed-Dahab Day
-"يوم وادي الذهب"                       weekend on august 14
+"يوم وادي الذهب"                       public on august 14
 : Revolution of the King and the People
-"ذكرى ثورة الملك والشعب"               weekend on august 20
+"ذكرى ثورة الملك والشعب"               public on august 20
 : Birthday of King Mohammed VI
-"عيد الشباب"                          weekend on august 21
+"عيد الشباب"                          public on august 21
 : Green March
-"ذكرى المسيرة الخضراء"                weekend on november 6
+"ذكرى المسيرة الخضراء"                public on november 6
 : Independence day
-"عيد الاستقلال"                       weekend on november 18
+"عيد الاستقلال"                       public on november 18
 
 :: Religious Holidays
 : Islamic New Year
-"رأس السنة الهجرية"             weekend on hijri muharram 1
+"رأس السنة الهجرية"             public religious on hijri muharram 1
 : Birthday of the Prophet Muhammad
-"عيد المولد النبوي الشريف"     weekend on hijri rabialawal 12
+"عيد المولد النبوي الشريف"     public religious on hijri rabialawal 12
 : Eid el-Fitr (End of Ramadan)
-"عيد الفطر"            weekend on hijri shawwal 1 length 2
+"عيد الفطر"            public religious on hijri shawwal 1 length 2
 : Eid al-Adha (End of the Hajj)
-"عيد الأضحى"      weekend on hijri thualhijjah 10 length 2
+"عيد الأضحى"      public religious on hijri thualhijjah 10 length 2
 
 :: Financial
 

@@ -23,12 +23,11 @@ language    "en_GB"
 description "National holiday file for India"
 
 :: Public Holidays
-"New Year holiday"            weekend on january 1
-"Muharram"                    weekend on january 10
-"Republic Day"                weekend on january 26
-"Independence Day"            weekend on august 15
-"Mahatma Gandhi's Birthday"   weekend on october 2
-"Christmas"                   weekend on december 25
+"New Year holiday"            public on january 1
+"Republic Day"                public on january 26
+"Independence Day"            public on august 15
+"Mahatma Gandhi's Birthday"   public on october 2
+"Christmas"                   public religious on december 25
 
 :: Religious
 
