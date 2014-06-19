@@ -263,17 +263,25 @@ QString HolidayRegion::name() const
       // Religious types, just simple for now
       if ( type == QLatin1String("public") ) {
         typeName = i18nc( "Holiday type", "Public" );
+      } else if ( type == QLatin1String("civil") ) {
+        typeName = i18nc( "Holiday type", "Civil" );
       } else if ( type == QLatin1String("religious") ) {
         typeName = i18nc( "Holiday type", "Religious" );
+      } else if ( type == QLatin1String("government") ) {
+        typeName = i18nc( "Holiday type", "Government" );
       } else if ( type == QLatin1String("financial") ) {
         typeName = i18nc( "Holiday type", "Financial" );
       } else if ( type == QLatin1String("cultural") ) {
         typeName = i18nc( "Holiday type", "Cultural" );
+      } else if ( type == QLatin1String("commemorative") ) {
+        typeName = i18nc( "Holiday type", "Commemorative" );
+      } else if ( type == QLatin1String("historical") ) {
+        typeName = i18nc( "Holiday type", "Historical" );
       } else if ( type == QLatin1String("school") ) {
         typeName = i18nc( "Holiday type", "School" );
-      } else if ( type == QLatin1String("seasons") ) {
-        typeName = i18nc( "Holiday type", "Seasons" );
-      } else if ( type == QLatin1String("name") ) {
+      } else if ( type == QLatin1String("seasonal") ) {
+        typeName = i18nc( "Holiday type", "Seasonal" );
+      } else if ( type == QLatin1String("nameday") ) {
         typeName = i18nc( "Holiday type", "Name Days" );
       } else if ( type == QLatin1String("personal") ) {
         typeName = i18nc( "Holiday type", "Personal" );
@@ -292,8 +300,7 @@ QString HolidayRegion::name() const
 
     if ( !regionName.isEmpty() ) {
       if ( !typeName.isEmpty() ) {
-        //TODO translate when not frozen
-        tempName = QString::fromLatin1( "%1 - %2" ).arg( regionName ).arg( typeName );
+        tempName = i18nc( "Holiday file display name, %1 = region name, %2 = holiday type", "%1 - %2" ).arg( regionName ).arg( typeName );
       } else {
         tempName = regionName;
       }
