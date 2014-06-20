@@ -27,7 +27,14 @@ language    "nl"
 "Pasen"                                                  public religious on easter length 2 days
 "Hemelvaart"                                             public religious on easter plus 39 days
 "Pinksteren"                                             public on easter plus 49 days length 2 days
-"Koninginnedag"                                          public on april 30 shift to monday if sunday
+: Queen's Day - Queen Beatrix 1980 - 2013 - Moves to previous day if a Sunday
+"Koninginnedag"                                          public on ((year >= 1980 && year <= 2013) ?
+                                                                    ( ([april 30] == [sunday after ([april 30])]) ? [april 29] : [april 30] ) :
+                                                                    noop)
+: King's Day - King Willem-Alexander from 2014 onwards - Moves to previous day if a Sunday
+"Koningsdag"                                             public on ((year >= 2014) ?
+                                                                    ( ([april 27] == [sunday after ([april 27])]) ? [april 26] : [april 27] ) :
+                                                                    noop)
 "Kerstmis"                                               public religious on december 25 length 2 days
 
 :: Religious Holidays
