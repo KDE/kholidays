@@ -54,11 +54,11 @@ description "Public Holidays for Hong Kong"
 "農曆年初"                                              public on 8 february 2016 length 3 days
 "農曆年初"                                              public on 27 january 2017
 "農曆年初"                                              public on 28 january 2017 length 3 days
-"農曆年初"                                              public on 15 february
+"農曆年初"                                              public on 15 february 2018
 "農曆年初"                                              public on 16 february 2018 length 3 days
 "農曆年初"                                              public on 5 february 2019 length 3 days
-"農曆年初"                                              public on 24 january
-"農曆年初"                                              public on 25 january 2018 length 3 days
+"農曆年初"                                              public on 24 january 2020
+"農曆年初"                                              public on 25 january 2020 length 3 days
 : Ching Ming Festival. See https://bugs.kde.org/show_bug.cgi?id=317834#c4
 "清明節"                                                public on 5 april 2010
 "清明節"                                                public on 5 april 2011

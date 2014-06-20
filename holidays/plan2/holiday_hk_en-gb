@@ -54,10 +54,10 @@ description "Public Holidays for Hong Kong"
 "Lunar New Year"                                      public on 8 february 2016 length 3 days
 "Lunar New Year's Eve Holiday"                        public on 27 january 2017
 "Lunar New Year"                                      public on 28 january 2017 length 3 days
-"Lunar New Year's Eve Holiday"                        public on 15 february
+"Lunar New Year's Eve Holiday"                        public on 15 february 2018
 "Lunar New Year"                                      public on 16 february 2018 length 3 days
 "Lunar New Year"                                      public on 5 february 2019 length 3 days
-"Lunar New Year's Eve Holiday"                        public on 24 january
+"Lunar New Year's Eve Holiday"                        public on 24 january 2020
 "Lunar New Year"                                      public on 25 january 2020 length 3 days
 : Ching Ming Festival. See https://bugs.kde.org/show_bug.cgi?id=317834#c4
 "Ching Ming Festival"                                 public on 5 april 2010
