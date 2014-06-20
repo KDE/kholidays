@@ -6,11 +6,12 @@
 :: Author:   John Layt <john@layt.net>
 ::           Park Shinjo <peremen@gmail.com>
 ::
-:: Updated:  2011-02-19
+:: Updated:  2014-06-20
 ::
 :: Source:   http://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EA%B5%AD%EA%B2%BD%EC%9D%BC%EC%97%90%EA%B4%80%ED%95%9C%EB%B2%95%EB%A5%A0
 ::           http://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EA%B4%80%EA%B3%B5%EC%84%9C%EC%9D%98%EA%B3%B5%ED%9C%B4%EC%9D%BC%EC%97%90%EA%B4%80%ED%95%9C%EA%B7%9C%EC%A0%95
 ::           http://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EA%B0%81%EC%A2%85%EA%B8%B0%EB%85%90%EC%9D%BC%EB%93%B1%EC%97%90%EA%B4%80%ED%95%9C%EA%B7%9C%EC%A0%95
+::           http://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EA%B4%80%EA%B3%B5%EC%84%9C%EC%9D%98%20%EA%B3%B5%ED%9C%B4%EC%9D%BC%EC%97%90%20%EA%B4%80%ED%95%9C%20%EA%B7%9C%EC%A0%95
 ::           http://ko.wikipedia.org/w/index.php?title=%ED%95%9C%EA%B5%AD%EC%9D%98_%EC%84%A4%EB%82%A0&oldid=6443996
 ::           http://ko.wikipedia.org/w/index.php?title=%EB%B6%80%EC%B2%98%EB%8B%98_%EC%98%A4%EC%8B%A0_%EB%82%A0&oldid=6444356
 ::           http://ko.wikipedia.org/w/index.php?title=%EC%B6%94%EC%84%9D&oldid=6506477
@@ -35,8 +36,11 @@ language    "ko"
 "광복절"            public on august 15
 : National Foundation Day
 "개천절"            public on october 3
+: Hangeul Day - Only a public holiday from 2013 onwards
+"한글날"            public cultural on ((year >= 2013) ? [october 9] : noop)
 : Christmas Day
 "크리스마스"        public on december 25
+
 : Lunar Holidays
 : Lunar New Year: Day 1 Month 1
 "설날"              public on 8.2.2005 length 3 days
@@ -83,8 +87,8 @@ language    "ko"
 :: Cultural
 : Constitution Day
 "제헌절"            civil on july 17
-: Hangeul Day
-"한글날"            cultural on october 9
+: Hangeul Day - Only a public holiday from 2013 onwards
+"한글날"            cultural on ((year <= 2012) ? [october 9] : noop)
 
 :: School
 
