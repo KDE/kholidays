@@ -17,18 +17,18 @@ language    "fr"
 :description "(please add description in source language) National holiday file for Luxembourg"
 
 :: Public Holidays
-"Nouvel an"           weekend on january 1
-"Pâques"              weekend on easter
-"Lundi de Pâques"     weekend on easter plus 1 day
-"Fête du travail"     weekend on may 1
-"Ascension"           weekend on easter plus 39 days
-"Pentecôte"           weekend on easter plus 49 days
-"Lundi de Pentecôte"  weekend on easter plus 50 days
-"Fête nationale"      weekend on june 23
-"Assomption"          weekend on august 15
-"Toussaint"           weekend on november 1
-"Noël"                weekend on december 25
-"Saint-Étienne"       weekend on december 26
+"Nouvel an"           public on january 1
+"Pâques"              public religious on easter
+"Lundi de Pâques"     public on easter plus 1 day
+"Fête du travail"     public on may 1
+"Ascension"           public religious on easter plus 39 days
+"Pentecôte"           public religious on easter plus 49 days
+"Lundi de Pentecôte"  public religious on easter plus 50 days
+"Fête nationale"      public on june 23
+"Assomption"          public religious on august 15
+"Toussaint"           public religious on november 1
+"Noël"                public religious on december 25
+"Saint-Étienne"       public religious on december 26
 
 :: Religious Holidays
 

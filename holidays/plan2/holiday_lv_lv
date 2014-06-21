@@ -20,96 +20,96 @@ language    "lv"
 
 :: Public Holidays
 : New Year's Day
-"Jaunais Gads"                                                      weekend on january 1
+"Jaunais Gads"                                                      public on january 1
 : Easter Friday
-"Lielā Piektdiena"                                                  weekend on easter minus 2 days
+"Lielā Piektdiena"                                                  public religious on easter minus 2 days
 : Easter
-"Lieldienas"                                                        weekend on easter
+"Lieldienas"                                                        public religious on easter
 : Easter Monday
-"2. Lieldienas"                                                     weekend on easter plus 1 days
+"2. Lieldienas"                                                     public on easter plus 1 days
 : Labour Day & Convocation of the Constitutional Assembly
-"Darba svētki"                                                      weekend on may 1
+"Darba svētki"                                                      public on may 1
 : Independence Day
-"Neatkarības deklarācijas pasludināšanas diena"                     weekend on may 4
-"Neatkarības deklarācijas pasludināšanas diena"                     weekend on ( ( ( [may 4] == [saturday after ([may 4])] ) ||
+"Neatkarības deklarācijas pasludināšanas diena"                     public on may 4
+"Neatkarības deklarācijas pasludināšanas diena"                     public on ( ( ( [may 4] == [saturday after ([may 4])] ) ||
                                                                                  ( [may 4] == [sunday after ([may 4])] ) ) ?
                                                                                  [ monday after ([may 4]) ] :
                                                                                  noop )
 : Midsummers Eve
-"Līgo Diena"                                                        weekend on june 23
+"Līgo Diena"                                                        public on june 23
 : Midsummers Eve
-"Jāņi"                                                              weekend on june 23
+"Jāņi"                                                              public on june 23
 : Proclamation of the Republic of Latvia
-"Latvijas Republikas proklamēšanas diena"                           weekend on november 18
-"Latvijas Republikas proklamēšanas diena"                           weekend on ( ( ( [november 18] == [saturday after ([november 18])] ) ||
+"Latvijas Republikas proklamēšanas diena"                           public on november 18
+"Latvijas Republikas proklamēšanas diena"                           public on ( ( ( [november 18] == [saturday after ([november 18])] ) ||
                                                                                  ( [november 18] == [sunday after ([november 18])] ) ) ?
                                                                                  [ monday after ([november 18]) ] :
                                                                                  noop )
 : Christmas Eve
-"Ziemassvētku vakars"                                               weekend on december 24
+"Ziemassvētku vakars"                                               public religious on december 24
 : Christmas Day
-"Ziemassvētki"                                                      weekend on december 25
+"Ziemassvētki"                                                      public religious on december 25
 : Christmas Day No 2
-"2. Ziemassvētki"                                                   weekend on december 26
+"2. Ziemassvētki"                                                   public on december 26
 : New Year's Eve
-"Vecgada vakars"                                                    weekend on december 31
+"Vecgada vakars"                                                    public on december 31
 
 :: Religious Holidays
-"Vasarsvētkus"                                                      on easter plus 49 days
+"Vasarsvētkus"                                                      religious on easter plus 49 days
 
 :: Financial
 
 :: Commemorative
 : Commemoration Day of Defenders of the Barricades in 1991
-"1991. gada barikāžu aizstāvju atceres dienu"                       on january 20
+"1991. gada barikāžu aizstāvju atceres dienu"                       commemorative on january 20
 : International (de iure) Recognition of the Republic of Latvia
-"Latvijas Republikas starptautiskās (de jure) atzīšanas dienu"      on january 26
+"Latvijas Republikas starptautiskās (de jure) atzīšanas dienu"      commemorative on january 26
 : Commemoration Day of Victims of Communist Terror
-"Komunistiskā genocīda upuru piemiņas dienu"                        on march 25
+"Komunistiskā genocīda upuru piemiņas dienu"                        commemorative on march 25
 : The Defeat of Nazism and Commemoration Day of Victims of World War II
-"Nacisma sagrāves dienu un Otrā pasaules kara upuru piemiņas dienu" on may 8
+"Nacisma sagrāves dienu un Otrā pasaules kara upuru piemiņas dienu" commemorative on may 8
 : Commemoration Day of Victims of Communist Terror
-"Komunistiskā genocīda upuru piemiņas dienu"                        on june 14
+"Komunistiskā genocīda upuru piemiņas dienu"                        commemorative on june 14
 : Occupation of the Republic of Latvia
-"Latvijas Republikas okupācijas dienu"                              on june 17
+"Latvijas Republikas okupācijas dienu"                              commemorative on june 17
 : Heroes' Commemoration Day (Anniversary of the Battle of Cēsis)
-"Varoņu piemiņas dienu (Cēsu kaujas atceres dienu)"                 on june 22
+"Varoņu piemiņas dienu (Cēsu kaujas atceres dienu)"                 commemorative on june 22
 : Commemoration Day of Genocide against the Jews
-"Ebreju tautas genocīda upuru piemiņas dienu"                       on july 4
+"Ebreju tautas genocīda upuru piemiņas dienu"                       commemorative on july 4
 : Commemoration Day of The Latvian Freedom Fighters
-"Latvijas brīvības cīnītāju piemiņas dienu"                         on august 11
+"Latvijas brīvības cīnītāju piemiņas dienu"                         commemorative on august 11
 : Passing of the Constitutional Law on the Status of the Republic of Latvia as a State and Actual Restoration of the Republic of Latvia
-"Konstitucionālā likuma 'Par Latvijas Republikas valstisko statusu' pieņemšanas un Latvijas Republikas faktiskās neatkarības atjaunošanas dienu"    on august 21
+"Konstitucionālā likuma 'Par Latvijas Republikas valstisko statusu' pieņemšanas un Latvijas Republikas faktiskās neatkarības atjaunošanas dienu"    commemorative on august 21
 : Stalinist and Nazi Victims Memorial Day
-"Staļinisma un Nacisma upuru atceres dienu"                         on august 23
+"Staļinisma un Nacisma upuru atceres dienu"                         commemorative on august 23
 : Latvian Freedom Fighters' Remembrance Day - Lāčplēsis Day
-"Lāčplēša dienu"                                                    on november 11
+"Lāčplēša dienu"                                                    commemorative on november 11
 : Commemoration Day of Victims of Genocide Against the Latvian People by the Totalitarian Communist Regime.
-"Pret latviešu tautu vērstā totalitārā komunistiskā režīma genocīda upuru piemiņas dienu"   on 1st sunday in december
+"Pret latviešu tautu vērstā totalitārā komunistiskā režīma genocīda upuru piemiņas dienu"   commemorative on 1st sunday in december
 
 :: Cultural
 : International Women’s Day
-"Starptautisko sieviešu dienu"                                      on march 8
+"Starptautisko sieviešu dienu"                                      cultural on march 8
 : Europe Day
-"Eiropas dienu"                                                     on may 9
+"Eiropas dienu"                                                     cultural on may 9
 : Mothers Day
-"Mātes dienu"                                                       on second sunday in may
+"Mātes dienu"                                                       cultural on second sunday in may
 : International Day of The Family
-"Starptautisko ģimenes dienu"                                       on may 15
+"Starptautisko ģimenes dienu"                                       cultural on may 15
 : International Children’s Day
-"Starptautisko bērnu aizsardzības dienu"                            on june 1
+"Starptautisko bērnu aizsardzības dienu"                            cultural on june 1
 : Sea Festival Day
-"Jūras svētku dienu"                                                on 2nd saturday in july
+"Jūras svētku dienu"                                                cultural on 2nd saturday in july
 : Knowledge Day (First Day of School)
-"Zinību dienu"                                                      on september 1
+"Zinību dienu"                                                      cultural on september 1
 : Father's Day
-"Tēva dienu"                                                        on second sunday in september
+"Tēva dienu"                                                        cultural on second sunday in september
 : Baltic Unity Day
-"Baltu vienības dienu"                                              on september 22
+"Baltu vienības dienu"                                              cultural on september 22
 : International Day of Older Persons
-"Starptautisko veco ļaužu dienu"                                    on october 1
+"Starptautisko veco ļaužu dienu"                                    cultural on october 1
 : Teacher’s Day
-"Skolotāju dienu"                                                   on 1st sunday in october
+"Skolotāju dienu"                                                   cultural on 1st sunday in october
 
 :: School
 

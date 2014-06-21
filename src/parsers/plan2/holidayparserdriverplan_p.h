@@ -117,8 +117,7 @@ protected:
     void  setFileName( const QString &ame );
     void  setFileDescription( const QString &description );
     void  setEventName( const QString &eventName );
-    void  setEventColorName( int nameColor );
-    void  setEventColorDay( int dayColor );
+    void  setEventCategory( const QString &category );
     void  setEventCalendarType( const QString &calendarType = "gregorian" );
     void  setEventDate( int eventYear, int eventMonth, int eventDay );
     void  setEventDate( int jd );
@@ -159,13 +158,12 @@ private:
     QDate               m_parseYearEaster;          // Easter in the parse year, Gregorian only
     QDate               m_parseYearPascha;          // Orthodox Easter in the parse year, Gregorian only
 
+    QStringList         m_eventCategories;          // Event categories
     QString             m_eventCalendarType;        // Calendar System for event rule
     QString             m_eventName;                // Event name text
     int                 m_eventYear;                // Event date fields
     int                 m_eventMonth;               // Event date fields
     int                 m_eventDay;                 // Event date fields
-    int                 m_eventColorName;           // Color of event name text
-    int                 m_eventColorDay;            // Color of event day number
 
     std::string        *m_fileToParse;
 };

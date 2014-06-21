@@ -18,67 +18,67 @@ language    "ja"
 
 :: Public Holidays
 :"New Year's Day"
-"元旦"                               weekend on january 1
+"元旦"                               public on january 1
 :"Coming of Age"
-"成人の日"                            weekend on second monday in january
+"成人の日"                            public on second monday in january
 :"National Foundation Day"
-"建国記念日"                          weekend on february 11
+"建国記念日"                          public on february 11
 :"Vernal Equinox Day"
-"春分の日"                            weekend on 20.3.2005
-"春分の日"                            weekend on 21.3.2006
-"春分の日"                            weekend on 21.3.2007
-"春分の日"                            weekend on 21.3.2008
-"春分の日"                            weekend on 21.3.2009
-"春分の日"                            weekend on 21.3.2010
+"春分の日"                            public on 20.3.2005
+"春分の日"                            public on 21.3.2006
+"春分の日"                            public on 21.3.2007
+"春分の日"                            public on 21.3.2008
+"春分の日"                            public on 21.3.2009
+"春分の日"                            public on 21.3.2010
 :"Greenery Day"
-"みどりの日"                          weekend on april 29
+"みどりの日"                          public on april 29
 :"Constitution Day"
-"憲法記念日"                          weekend on may 3
+"憲法記念日"                          public on may 3
 :"Holiday"
-"休日"                               weekend on may 4
+"休日"                               public on may 4
 :"Children's Day"
-"こどもの日"                          weekend on may 5
+"こどもの日"                          public on may 5
 :"Oceans' Day"
-"海の日"                             weekend on third monday in july
+"海の日"                             public on third monday in july
 :"Respect for Senior Citizens Day"
-"敬老の日"                            weekend on third monday in september
+"敬老の日"                            public on third monday in september
 :"Autumnal Equinox Day"
-"秋分の日"                            weekend on september 23
+"秋分の日"                            public on september 23
 :"Sports Day"
-"体育の日"                            weekend on second monday in october
+"体育の日"                            public on second monday in october
 :"Culture Day"
-"文化の日"                            weekend on november 3
+"文化の日"                            public on november 3
 :"Labor Thanksgiving Day"
-"勤労感謝の日"                         weekend on november 23
+"勤労感謝の日"                         public on november 23
 :"The Emperor's Birthday"
-"天皇誕生日"                          weekend on december 23
+"天皇誕生日"                          public on december 23
 
 :: If a "National Holiday" is on Sunday,the following day
 :: shall be a substitute holiday.
 :"Substitute holiday"
-"振替休日"                            weekend on 21.3.2005
-"振替休日"                            weekend on 2.1.2006
-"振替休日"                            weekend on 12.2.2007
-"振替休日"                            weekend on 30.4.2007
-"振替休日"                            weekend on 24.9.2007
-"振替休日"                            weekend on 24.12.2007
-"振替休日"                            weekend on 24.11.2008
-"振替休日"                            weekend on 22.3.2010
+"振替休日"                            public on 21.3.2005
+"振替休日"                            public on 2.1.2006
+"振替休日"                            public on 12.2.2007
+"振替休日"                            public on 30.4.2007
+"振替休日"                            public on 24.9.2007
+"振替休日"                            public on 24.12.2007
+"振替休日"                            public on 24.11.2008
+"振替休日"                            public on 22.3.2010
 
 :: Religious
 
 :: Financial
 
 :: Cultural
-:"St. Valentine's Day"              on february 14
-:"Girls' Festival"                  on march 3
-:"Buddha's Birthday"                on april 8
-:"May Day"                          on may 1
-:"Boys' Festival"                   on may 5
-:"Mother's Day"                     on second sunday in may
-:"Father's Day"                     on third sunday in june
-:"Festival of the Weaver Star"      on july 7
-:"Christmas"                        on december 25
+:"St. Valentine's Day"              cultural on february 14
+:"Girls' Festival"                  cultural on march 3
+:"Buddha's Birthday"                cultural on april 8
+:"May Day"                          cultural on may 1
+:"Boys' Festival"                   cultural on may 5
+:"Mother's Day"                     cultural on second sunday in may
+:"Father's Day"                     cultural on third sunday in june
+:"Festival of the Weaver Star"      cultural on july 7
+:"Christmas"                        cultural on december 25
 
 :: School
 

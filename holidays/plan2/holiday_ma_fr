@@ -20,33 +20,33 @@ description "Fêtes et jours fériés au Maroc"
 :: National Holidays
 
 : New Year's Day
-"Jour de l'an"            weekend on january 1
+"Jour de l'an"                                  public on january 1
 : Proclamation of Independence
-"Anniversaire du manifeste de l'indépendance" weekend on january 11
+"Anniversaire du manifeste de l'indépendance"   public on january 11
 : Labour Day
-"Fête du Travail"                   weekend on may 1
+"Fête du Travail"                               public on may 1
 : Enthronement Day
-"Fête du trône"                     weekend on july 30
+"Fête du trône"                                 public on july 30
 : Oued Ed-Dahab Day
-"Journée de Oued Ed-Dahab"          weekend on august 14
+"Journée de Oued Ed-Dahab"                      public on august 14
 : Revolution of the King and the People
-"Fête de la révolution du Roi et du peuple"     weekend on august 20
+"Fête de la révolution du Roi et du peuple"     public on august 20
 : Birthday of King Mohammed VI
-"Anniversaire de sa majesté le roi Mohammed VI" weekend on august 21
+"Anniversaire de sa majesté le roi Mohammed VI" public on august 21
 : Green March
-"Anniversaire de la Marche Verte"       weekend on november 6
+"Anniversaire de la Marche Verte"               public on november 6
 : Independence day
-"Fête de l'Indépendance"        weekend on november 18
+"Fête de l'Indépendance"                        public on november 18
 
 :: Religious Holidays
 : Islamic New Year
-"Awal muharram"            weekend on hijri muharram 1
+"Awal muharram"                                 public religious on hijri muharram 1
 : Birthday of the Prophet Muhammad
-"Mawlid nabaoui"         weekend on hijri rabialawal 12
+"Mawlid nabaoui"                                public religious on hijri rabialawal 12
 : Eid el-Fitr (End of Ramadan)
-"Aïd el-Fitr"                    weekend on hijri shawwal 1 length 2
+"Aïd el-Fitr"                                   public religious on hijri shawwal 1 length 2
 : Eid al-Adha (End of the Hajj)
-"Aïd El Adha"                    weekend on hijri thualhijjah 10 length 2
+"Aïd El Adha"                                   public religious on hijri thualhijjah 10 length 2
 
 :: Financial
 

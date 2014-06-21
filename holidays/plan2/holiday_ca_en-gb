@@ -17,28 +17,28 @@ language    "en_GB"
 description "National holiday file for Canada"
 
 :: Public Holidays
-"New Year's Day"    weekend on january 1
-"Good Friday"       weekend on easter minus 2 days
-"Easter"            weekend on easter
-"Easter Monday"     weekend on easter plus 1 day
-"Victoria Day"      weekend on monday before may 24
-"Canada Day"        weekend on july 1
-"Civic Holiday"     weekend on first monday in august
-"Labour Day"        weekend on first monday in september
-"Thanksgiving"      weekend on second monday in october
-"Remembrance Day"   weekend on november 11
-"Christmas"         weekend on december 25
-"Boxing Day"        weekend on december 26
+"New Year's Day"    public on january 1
+"Good Friday"       public on easter minus 2 days
+"Easter"            public religious on easter
+"Easter Monday"     public on easter plus 1 day
+"Victoria Day"      public on monday before may 24
+"Canada Day"        public on july 1
+"Civic Holiday"     public on first monday in august
+"Labour Day"        public on first monday in september
+"Thanksgiving"      public on second monday in october
+"Remembrance Day"   public on november 11
+"Christmas"         public religious on december 25
+"Boxing Day"        public on december 26
 
 :: Religious
 
 :: Financial
 
 :: Cultural
-"Valentine's Day"   on february 14
-"Mother's Day"      on second sunday in may
-"Father's Day"      on third sunday in june
-"St-Jean Baptiste"  on june 24
+"Valentine's Day"   cultural on february 14
+"Mother's Day"      cultural on second sunday in may
+"Father's Day"      cultural on third sunday in june
+"St-Jean Baptiste"  cultural on june 24
 
 :: School
 

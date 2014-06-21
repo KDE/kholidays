@@ -21,19 +21,19 @@ language    "es"
 :description "(please add description in source language) National holiday file for Uruguay"
 
 :: Public Holidays
-"Año nuevo"                      weekend on january 1
-"Jura de la constituación"       weekend on july 18
-"Declaratoria de Independencia"  weekend on august 25
-"Día del Trabajo"                weekend on may 1
-"Día de los difuntos"            weekend on november 2
-"Navidad"                        weekend on december 25
+"Año nuevo"                      public on january 1
+"Jura de la constituación"       public on july 18
+"Declaratoria de Independencia"  public on august 25
+"Día del Trabajo"                public on may 1
+"Día de los difuntos"            public on november 2
+"Navidad"                        public religious on december 25
 
 :: Religious
-"Carnaval"                       on easter minus 47 days length 2 days
-"Jueves santo"                   on easter minus 3 days
-"Viernes santo"                  on easter minus 2 days
-"Sábado de gloria"               on easter minus 1 day
-"Domingo de Pascua"              on easter
+"Carnaval"                       religious on easter minus 47 days length 2 days
+"Jueves santo"                   religious on easter minus 3 days
+"Viernes santo"                  religious on easter minus 2 days
+"Sábado de gloria"               religious on easter minus 1 day
+"Domingo de Pascua"              religious on easter
 
 :: Financial
 
@@ -49,9 +49,9 @@ language    "es"
 
 
 :: To be sorted
-"Día de Reyes"                   on january 6
-"Desembarco 33 Orientales"       on april 19
-"Batalla de las Piedras"         on may 18
-"Natalicio de Artigas"           on june 19
-"Día de las Américas"            on october 18
+"Día de Reyes"                   civil on january 6
+"Desembarco 33 Orientales"       civil on april 19
+"Batalla de las Piedras"         civil on may 18
+"Natalicio de Artigas"           civil on june 19
+"Día de las Américas"            civil on october 18
 

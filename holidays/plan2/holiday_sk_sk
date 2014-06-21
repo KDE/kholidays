@@ -17,23 +17,23 @@ language    "sk"
 :description "(please add description in source language) National holiday file for Slovak Republic"
 
 :: Public Holidays
-"Nový rok"                          weekend on january 1
-"Deň vzniku SR"                     weekend on january 1
-"Traja králi"                       weekend on january 6
-"Veľký piatok"                      weekend on easter minus 2
-"Veľkonočná nedeľa"                 weekend on easter
-"Veľkonočný pondelok"               weekend on easter plus 1
-"Sviatok práce"                     weekend on may 1
-"Deň víťazstva nad fašizmom"        weekend on may 8
-"Sviatok sv. Cyrila a Metoda"       weekend on july 5
-"Výročie SNP"                       weekend on august 29
-"Deň Ústavy SR"                     weekend on september 1
-"Sedembolestná Panna Mária"         weekend on september 15
-"Sviatok všetkých svätých"          weekend on november 1
-"Deň boja za slobodu a demokraciu"  weekend on november 17
-"Štedrý deň"                        weekend on december 24
-"1. sviatok vianočný"               weekend on december 25
-"2. sviatok vianočný"               weekend on december 26
+"Nový rok"                          public on january 1
+"Deň vzniku SR"                     public on january 1
+"Traja králi"                       public on january 6
+"Veľký piatok"                      public religious on easter minus 2
+"Veľkonočná nedeľa"                 public religious on easter
+"Veľkonočný pondelok"               public on easter plus 1
+"Sviatok práce"                     public on may 1
+"Deň víťazstva nad fašizmom"        public on may 8
+"Sviatok sv. Cyrila a Metoda"       public on july 5
+"Výročie SNP"                       public on august 29
+"Deň Ústavy SR"                     public on september 1
+"Sedembolestná Panna Mária"         public on september 15
+"Sviatok všetkých svätých"          public religious on november 1
+"Deň boja za slobodu a demokraciu"  public on november 17
+"Štedrý deň"                        public religious on december 24
+"1. sviatok vianočný"               public religious on december 25
+"2. sviatok vianočný"               public religious on december 26
 
 :: Religious Holidays
 
@@ -51,9 +51,9 @@ language    "sk"
 
 
 :: To be sorted
-"Medzinárodný deň žien"             on march 8
-"Deň učiteľov"                      on april 28
-"Deň matiek"                        on may 13
-"Medzinárodný deň detí"             on june 1
-"Deň otcov"                         on june 17
-"Pamiatka zosnulých"                on november 2
+"Medzinárodný deň žien"             civil on march 8
+"Deň učiteľov"                      civil on april 28
+"Deň matiek"                        civil on may 13
+"Medzinárodný deň detí"             civil on june 1
+"Deň otcov"                         civil on june 17
+"Pamiatka zosnulých"                civil on november 2

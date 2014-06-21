@@ -19,38 +19,38 @@ language    "wa"
 :description "(please add description in source language) National holiday file for Belgium"
 
 :: Public Holidays
-"Novelan"                                          weekend on january 1
-"Påke"                                             weekend on easter
-"Londi d' Påke"                                    weekend on easter plus 1 day
-"Fiesse do boutaedje"                              weekend on january 1
-"Assincion"                                        weekend on easter plus 39 days
-"Céncweme (Pintcosse)"                             weekend on easter plus 49 days
-"Londi d' Céncweme"                                weekend on easter plus 50 days
-"Fiesse nacionåle"                                 weekend on july 21
-"Grande Notru Dame"                                weekend on august 15
-"Tossint"                                          weekend on november 1
-"Årmistice"                                        weekend on november 11
-"Noyé"                                             weekend on december 25
+"Novelan"                                          public on january 1
+"Påke"                                             public religious on easter
+"Londi d' Påke"                                    public on easter plus 1 day
+"Fiesse do boutaedje"                              public on january 1
+"Assincion"                                        public religious on easter plus 39 days
+"Céncweme (Pintcosse)"                             public religious on easter plus 49 days
+"Londi d' Céncweme"                                public religious on easter plus 50 days
+"Fiesse nacionåle"                                 public on july 21
+"Grande Notru Dame"                                public on august 15
+"Tossint"                                          public on november 1
+"Årmistice"                                        public on november 11
+"Noyé"                                             public religious on december 25
 
 :: Religious
-"Fiesse des Rwès"                                  on january 6
-"Crås mårdi"                                       on easter minus 47 days
-"Mierkidi des cindes"                              on easter minus 46 days
-"Floreye Påke"                                     on easter minus 7 days
-"Djudi sint"                                       on easter minus 3 days
-"Bon vénrdi"                                       on easter minus 2 days
-"Sint Nicolai"                                     on december 06
-"Sint Silvesse"                                    on december 31
+"Fiesse des Rwès"                                  religious on january 6
+"Crås mårdi"                                       religious on easter minus 47 days
+"Mierkidi des cindes"                              religious on easter minus 46 days
+"Floreye Påke"                                     religious on easter minus 7 days
+"Djudi sint"                                       religious on easter minus 3 days
+"Bon vénrdi"                                       religious on easter minus 2 days
+"Sint Nicolai"                                     religious on december 06
+"Sint Silvesse"                                    religious on december 31
 
 :: Financial
 
 :: Cultural
-"Fiesse des méres"                                 on every second sunday in may
-"Fiesse des péres"                                 on every third sunday in june
-"Fiesse del Cominålté flaminde"                    on july 11
-"Fiesse del Cominålté francesse di Beldjike"       on september 27
-"Fiesses di Walonreye"                             on every third sunday in september
-"Fiesse del Cominålté Tîxhon-cåzante di Belgjike"  on november 15
+"Fiesse des méres"                                 cultural on every second sunday in may
+"Fiesse des péres"                                 cultural on every third sunday in june
+"Fiesse del Cominålté flaminde"                    cultural on july 11
+"Fiesse del Cominålté francesse di Beldjike"       cultural on september 27
+"Fiesses di Walonreye"                             cultural on every third sunday in september
+"Fiesse del Cominålté Tîxhon-cåzante di Belgjike"  cultural on november 15
 
 :: School
 
@@ -62,5 +62,5 @@ language    "wa"
 
 
 :: To be sorted
-"Tchandleuse"                                      on february 2
-"Djoû des åmes"                                    on november 2
+"Tchandleuse"                                      civil on february 2
+"Djoû des åmes"                                    civil on november 2

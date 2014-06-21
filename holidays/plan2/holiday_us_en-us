@@ -19,54 +19,54 @@ description "National holiday file for USA"
 
 :: Public Holidays
 :: Federal Holidays
-"New Year's Day"                 weekend on january 1
-"Martin Luther King's Birthday"  weekend on third monday in january
-"President's Day"                weekend on third monday in february
-"Memorial Day"                   weekend on last monday in may
-"Independence Day"               weekend on july 4
-"Labor Day"                      weekend on first monday in september
-"Columbus Day"                   weekend on second monday in october
-"Veterans Day"                   weekend on november 11
-"Thanksgiving"                   weekend on fourth thursday in november
-"Christmas Day"                  weekend on december 25
+"New Year's Day"                 public on january 1
+"Martin Luther King's Birthday"  public on third monday in january
+"President's Day"                public on third monday in february
+"Memorial Day"                   public on last monday in may
+"Independence Day"               public on july 4
+"Labor Day"                      public on first monday in september
+"Columbus Day"                   public on second monday in october
+"Veterans Day"                   public on november 11
+"Thanksgiving"                   public on fourth thursday in november
+"Christmas Day"                  public on december 25
 
 :: Religious
-"Easter"                         on easter
-"Ash Wednesday"                  on easter minus 46 days
-"Pentecost"                      on easter plus 49 days
-"Ascension"                      on easter plus 39 days
-"Trinity"                        on easter plus 56 days
-"Corpus Christi"                 on easter plus 53 days
+"Easter"                         religious on easter
+"Ash Wednesday"                  religious on easter minus 46 days
+"Pentecost"                      religious on easter plus 49 days
+"Ascension"                      religious on easter plus 39 days
+"Trinity"                        religious on easter plus 56 days
+"Corpus Christi"                 religious on easter plus 53 days
 
 :: Financial
 
 :: Cultural
-"Groundhog Day"                  on february 2
-"Lincoln's Birthday"             on february 12
-"St. Valentine's Day"            on february 14
-"Susan B. Anthony's Day"         on february 15
-"St. Patrick's Day"              on march 17
-"Arbor Day"                      on last friday in april
-"Loyalty Day"                    on may 1
-"Mother's Day"                   on second sunday in may
-"Armed Forces Day"               on third saturday in may
-"Father's Day"                   on third sunday in june
-"Citizenship Day"                on september 17
-"Child Health Day"               on first monday in september
-"World Poetry Day"               on october 15
-"United Nations' Day"            on october 24
-"Halloween"                      on october 31
-"Bill of Rights' Day"            on december 15
-"Wright Brothers' Day"           on december 17
+"Groundhog Day"                  cultural on february 2
+"Lincoln's Birthday"             cultural on february 12
+"St. Valentine's Day"            cultural on february 14
+"Susan B. Anthony's Day"         cultural on february 15
+"St. Patrick's Day"              cultural on march 17
+"Arbor Day"                      cultural on last friday in april
+"Loyalty Day"                    cultural on may 1
+"Mother's Day"                   cultural on second sunday in may
+"Armed Forces Day"               cultural on third saturday in may
+"Father's Day"                   cultural on third sunday in june
+"Citizenship Day"                cultural on september 17
+"Child Health Day"               cultural on first monday in september
+"World Poetry Day"               cultural on october 15
+"United Nations' Day"            cultural on october 24
+"Halloween"                      cultural on october 31
+"Bill of Rights' Day"            cultural on december 15
+"Wright Brothers' Day"           cultural on december 17
 
 :: School
 
 :: Daylight Saving
 
 :: Seasons
-"Spring Begins"                  on march 22
-"Summer Begins"                  on june 22
-"Fall Begins"                    on september 22
-"Winter Begins"                  on december 22
+"Spring Begins"                  seasonal on march 22
+"Summer Begins"                  seasonal on june 22
+"Fall Begins"                    seasonal on september 22
+"Winter Begins"                  seasonal on december 22
 
 :: Name Days

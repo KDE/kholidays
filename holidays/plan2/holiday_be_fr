@@ -19,38 +19,38 @@ language    "fr"
 :description "(please add description in source language) National holiday file for Belgium"
 
 :: Public Holidays
-"Jour de l'an"                                    weekend on january 1
-"Pâques"                                          weekend on easter
-"Lundi de Pâques"                                 weekend on easter plus 1 day
-"Fête du travail"                                 weekend on may 1
-"Ascencion"                                       weekend on easter plus 39 days
-"Pentecôte"                                       weekend on easter plus 49 days
-"Lundi de Pentecôte"                              weekend on easter plus 50 days
-"Fête nationale - Férié"                          weekend on july 21
-"Assomption"                                      weekend on august 15
-"Toussaint"                                       weekend on november 1
-"Armistice"                                       weekend on november 11
-"Noël"                                            weekend on december 25
+"Jour de l'an"                                    public on january 1
+"Pâques"                                          public religious on easter
+"Lundi de Pâques"                                 public on easter plus 1 day
+"Fête du travail"                                 public on may 1
+"Ascencion"                                       public religious on easter plus 39 days
+"Pentecôte"                                       public religious on easter plus 49 days
+"Lundi de Pentecôte"                              public religious on easter plus 50 days
+"Fête nationale - Férié"                          public on july 21
+"Assomption"                                      public religious on august 15
+"Toussaint"                                       public on november 1
+"Armistice"                                       public on november 11
+"Noël"                                            public religious on december 25
 
 :: Religious
-"Épiphanie"                                       on january 6
-"Mardi-gras"                                      on easter minus 47 days
-"Mercredi des cendres"                            on easter minus 46 days
-"Dimanche des rameaux"                            on easter minus 7 days
-"Jeudi saint"                                     on easter minus 3 days
-"Vendredi saint"                                  on easter minus 2 days
-"Saint Nicolas"                                   on december 06
-"Saint-Sylvestre"                                 on december 31
+"Épiphanie"                                       religious on january 6
+"Mardi-gras"                                      religious on easter minus 47 days
+"Mercredi des cendres"                            religious on easter minus 46 days
+"Dimanche des rameaux"                            religious on easter minus 7 days
+"Jeudi saint"                                     religious on easter minus 3 days
+"Vendredi saint"                                  religious on easter minus 2 days
+"Saint Nicolas"                                   religious on december 06
+"Saint-Sylvestre"                                 religious on december 31
 
 :: Financial
 
 :: Cultural
-"Fête des mères"                                  on every second sunday in may
-"Fête des pères"                                  on every third sunday in june
-"Fête de la Communauté flamande"                  on july 11
-"Fête de la Communauté française de Belgique"     on september 27
-"Fêtes de Wallonie"                               on every third sunday in september
-"Fête de la Communauté germanophone de Belgique"  on november 15
+"Fête des mères"                                  cultural on every second sunday in may
+"Fête des pères"                                  cultural on every third sunday in june
+"Fête de la Communauté flamande"                  cultural on july 11
+"Fête de la Communauté française de Belgique"     cultural on september 27
+"Fêtes de Wallonie"                               cultural on every third sunday in september
+"Fête de la Communauté germanophone de Belgique"  cultural on november 15
 
 :: School
 
@@ -62,5 +62,5 @@ language    "fr"
 
 
 :: To be sorted
-"Chandeleur"                                      on february 2
-"Jour des morts"                                  on november 2
+"Chandeleur"                                      civil on february 2
+"Jour des morts"                                  civil on november 2

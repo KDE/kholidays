@@ -17,41 +17,41 @@ language    "de"
 :description "(please add description in source language) National holiday file for Germany"
 
 :: Public Holidays
-"Neujahr"          weekend on 1.1.
-"Karfreitag"       weekend on easter minus 2 days
-"Ostern"           weekend on easter length 2 days
-"Pfingsten"        weekend on easter plus 49 days length 2 days
-"Himmelfahrt"      weekend on easter plus 39 days
-"1. Mai"           weekend on 1.5.
-"Tag d. Einheit"   weekend on 3.10.
-"Weihnachten"      weekend on 25.12. length 2 days
+"Neujahr"          public on 1.1.
+"Karfreitag"       public on easter minus 2 days
+"Ostern"           public on easter length 2 days
+"Pfingsten"        public on easter plus 49 days length 2 days
+"Himmelfahrt"      public on easter plus 39 days
+"1. Mai"           public on 1.5.
+"Tag d. Einheit"   public on 3.10.
+"Weihnachten"      public on 25.12. length 2 days
 
 :: Religious
-"Hl. 3 Könige"     on january 6
-"Rosenmontag"      on easter minus 48 days
-"Fasching"         on easter minus 47 days
-"Aschermittwoch"   on easter minus 46 days
-"Fronleichnam"     on easter plus 60 days
-"Reformationstag"  on october 31
-"Allerheiligen"    on november 1
-"Buß & Bettag"     on sunday before december 24 minus 32 days
-"1. Advent"        on sunday before december 24 minus 21 days
-"2. Advent"        on sunday before december 24 minus 14 days
-"3. Advent"        on sunday before december 24 minus 7 days
-"4. Advent"        on sunday before december 24
-"Hl. Abend"        on december 24
-"Silvester"        on december 31
+"Hl. 3 Könige"     religious on january 6
+"Rosenmontag"      religious on easter minus 48 days
+"Fasching"         religious on easter minus 47 days
+"Aschermittwoch"   religious on easter minus 46 days
+"Fronleichnam"     religious on easter plus 60 days
+"Reformationstag"  religious on october 31
+"Allerheiligen"    religious on november 1
+"Buß & Bettag"     religious on sunday before december 24 minus 32 days
+"1. Advent"        religious on sunday before december 24 minus 21 days
+"2. Advent"        religious on sunday before december 24 minus 14 days
+"3. Advent"        religious on sunday before december 24 minus 7 days
+"4. Advent"        religious on sunday before december 24
+"Hl. Abend"        religious on december 24
+"Silvester"        religious on december 31
 
 :: Financial
 
 :: Cultural
-"Muttertag"        on second sunday in may
+"Muttertag"        cultural on second sunday in may
 
 :: School
 
 :: Daylight Saving
-"Sommerzeit"       on last sunday in march
-"Winterzeit"       on last sunday in october
+"Sommerzeit"       seasonal on last sunday in march
+"Winterzeit"       seasonal on last sunday in october
 
 :: Seasons
 

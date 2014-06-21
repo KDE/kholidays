@@ -112,23 +112,12 @@ in                  { return token::INOP; }
 if                  { return token::IF; }
 plus                { return token::PLUS; }
 minus               { return token::MINUS; }
-small               { return token::SMALL; }
 year                { return token::YEAR; }
 leapyear            { return token::LEAPYEAR; }
 easter              { return token::EASTER; }
 pascha              { return token::PASCHA; }
 length              { return token::LENGTH; }
 shift               { return token::SHIFT; }
-
-black               { yylval->ival = 1; return token::COLOR; }
-red                 { yylval->ival = 2; return token::COLOR; }
-green               { yylval->ival = 3; return token::COLOR; }
-yellow              { yylval->ival = 4; return token::COLOR; }
-blue                { yylval->ival = 5; return token::COLOR; }
-magenta             { yylval->ival = 6; return token::COLOR; }
-cyan                { yylval->ival = 7; return token::COLOR; }
-white               { yylval->ival = 8; return token::COLOR; }
-weekend             { yylval->ival = 9; return token::COLOR; }
 
 "=="                { return token::EQ; }
 "!="                { return token::NE; }
@@ -150,6 +139,18 @@ noop                { yylval->ival =      0; return token::NUMBER; }
 
 before              { yylval->ival =  -1; return token::NUMBER; }
 after               { yylval->ival =   1; return token::NUMBER; }
+
+public              { yylval->sval = "public"; return token::CATEGORY; }
+civil               { yylval->sval = "civil"; return token::CATEGORY; }
+religious           { yylval->sval = "religious"; return token::CATEGORY; }
+school              { yylval->sval = "school"; return token::CATEGORY; }
+government          { yylval->sval = "government"; return token::CATEGORY; }
+financial           { yylval->sval = "financial"; return token::CATEGORY; }
+cultural            { yylval->sval = "cultural"; return token::CATEGORY; }
+commemorative       { yylval->sval = "commemorative"; return token::CATEGORY; }
+historical          { yylval->sval = "historical"; return token::CATEGORY; }
+nameday             { yylval->sval = "nameday"; return token::CATEGORY; }
+seasonal            { yylval->sval = "seasonal"; return token::CATEGORY; }
 
 gregorian           { yylval->sval = "gregorian"; return token::CALENDAR; }
 julian              { yylval->sval = "julian"; return token::CALENDAR; }

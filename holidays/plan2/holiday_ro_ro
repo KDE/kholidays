@@ -17,17 +17,17 @@ language    "ro"
 :description "(please add description in source language) National holiday file for Romania"
 
 :: Public Holidays
-"Anul nou"                   weekend on january 1 length 2 days
-"Paştele"                    weekend on pascha length 2 days
-"Rusalii"                    weekend on pascha plus 49 days length 2 days
-"Ziua muncii"                weekend on may 1
-"Adormirea Maicii Domnului"  weekend on august 15
-"Ziua naţională"             weekend on december 1
-"Crăciunul"                  weekend on december 25 length 2 days
+"Anul nou"                   public on january 1 length 2 days
+"Paştele"                    public religious on pascha length 2 days
+"Rusalii"                    public religious on pascha plus 49 days length 2 days
+"Ziua muncii"                public on may 1
+"Adormirea Maicii Domnului"  public on august 15
+"Ziua naţională"             public on december 1
+"Crăciunul"                  public religious on december 25 length 2 days
 
 :: Religious
-"Floriile"                   on pascha minus 6 days
-"Înălţarea Domnului"         on pascha plus 40 days
+"Floriile"                   religious on pascha minus 6 days
+"Înălţarea Domnului"         religious on pascha plus 40 days
 
 :: Financial
 
@@ -43,7 +43,7 @@ language    "ro"
 
 
 :: To be sorted
-"Sărbătoarea unirii"         on january 24
-"Ziua mamei"                 on may 8
-"Ziua copilului"             on june 1
-"Ziua Revoluţiei"            on december 22
+"Sărbătoarea unirii"         civil on january 24
+"Ziua mamei"                 civil on may 8
+"Ziua copilului"             civil on june 1
+"Ziua Revoluţiei"            civil on december 22

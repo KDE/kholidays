@@ -85,11 +85,12 @@
 
 %union { int  ival; char *sval; }
 
-%type   <ival> stringcolor daycolor offset conditionaloffset length expr pexpr number month reldate wdaycondition monthnumber
+%type   <ival> offset conditionaloffset length expr pexpr number month reldate wdaycondition monthnumber
+%type   <sval> categories
 %token  END 0
-%token  <ival> NUMBER MONTH WDAY COLOR
-%token  <sval> STRING CALENDAR
-%token  INOP PLUS MINUS SMALL YEAR LEAPYEAR SHIFT IF
+%token  <ival> NUMBER MONTH WDAY
+%token  <sval> STRING CATEGORY CALENDAR
+%token  INOP PLUS MINUS YEAR LEAPYEAR SHIFT IF
 %token  LENGTH EASTER EQ NE LE GE LT GT PASCHA COUNTRY LANGUAGE NAME DESCRIPTION
 
 %destructor { free( $$ ); } STRING
@@ -145,22 +146,14 @@ description :                    { driver.setFileDescription( QString() ); }
 ;
 
 list :
-     | list small stringcolor eventname daycolor calendar eventrule
+     | list eventname categories calendar eventrule
 ;
 
-small :
-      | SMALL
+eventname : STRING { char *s = $1; driver.setEventName( QString::fromUtf8( s ) ); free( s ); $1 = NULL; }
 ;
 
-stringcolor :        { driver.setEventColorName( 0 ); }
-            | COLOR  { driver.setEventColorName( $1 ); }
-;
-
-daycolor :        { driver.setEventColorDay( 0 ); }
-         | COLOR  { driver.setEventColorDay( $1 ); }
-;
-
-eventname : STRING { driver.setEventName( char *s = $1; QString::fromUtf8( s ) ); free( s ); $1 = NULL; }
+categories : CATEGORY { driver.setEventCategory( $1 ); }
+           | categories CATEGORY { driver.setEventCategory( $1 ); }
 ;
 
 calendar :           { driver.setEventCalendarType( QLatin1String("gregorian") ); }
@@ -207,7 +200,7 @@ date : pexpr '.' month            { driver.setEventDate( -99999, $3, $1 ); }
      | pexpr                      { driver.setEventDate( $1 ); }
 ;
 
-reldate : STRING                 { char *s = $1; $$ = driver.julianDayFromEventName( s ); free( s ); $1 = NULL}
+reldate : STRING                 { char *s = $1; $$ = driver.julianDayFromEventName( s ); free( s ); $1 = NULL; }
         | EASTER                 { $$ = driver.julianDayFromEaster(); }
         | PASCHA                 { $$ = driver.julianDayFromPascha(); }
         | pexpr '.' month        { $$ = driver.julianDayFromMonthDay( $3, $1 ); }

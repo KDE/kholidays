@@ -19,62 +19,62 @@ language    "it"
 :description "(please add description in source language) National holiday file for San Marino"
 
 :: Public Holidays
-"Capodanno"                       weekend on january 1
-"Epifania"                        weekend on january 6
-"Pasqua"                          weekend on easter
-"Lunedì dell'Angelo"              weekend on easter plus 1 day
-"Festa di Sant'Agata"		  weekend on february 5
-"Anniversario Arengo - Festa delle Milizie"	weekend on march 25
-"Ingresso Eccellentissimi Capitani Reggenti"	  weekend on april 1
-"Festa del Lavoro"                weekend on may 1
-"Caduta governo Fascista"	  weekend on july 28
-"Ferragosto"                      weekend on august 15
-"Festa della Repubblica - Santo Patrono"	  weekend on september 3
-"Ingresso Eccellentissimi Capitani Reggenti"	weekend on october 1
-"Ognissanti"                      weekend on november 1
-"Commemorazione dei defunti"	  weekend on november 2
-"Immacolata Concezione"           weekend on december 8
-"Natale"                          weekend on december 25
-"Santo Stefano"                   weekend on december 26
+"Capodanno"                       public on january 1
+"Epifania"                        public religious on january 6
+"Pasqua"                          public religious on easter
+"Lunedì dell'Angelo"              public religious on easter plus 1 day
+"Festa di Sant'Agata"             public religious on february 5
+"Anniversario Arengo - Festa delle Milizie"       public on march 25
+"Ingresso Eccellentissimi Capitani Reggenti"      public on april 1
+"Festa del Lavoro"                public on may 1
+"Caduta governo Fascista"         public on july 28
+"Ferragosto"                      public on august 15
+"Festa della Repubblica - Santo Patrono"          public on september 3
+"Ingresso Eccellentissimi Capitani Reggenti"      public on october 1
+"Ognissanti"                      religious public on november 1
+"Commemorazione dei defunti"      public on november 2
+"Immacolata Concezione"           religious public on december 8
+"Natale"                          religious public on december 25
+"Santo Stefano"                   religious public on december 26
 
 :: Religious
-"San Giuseppe"                    on march 19
-"Giovedì Grasso"                  on easter minus 52 days
-"Martedì Grasso"                  on easter minus 47 days
-"Mercoledì delle Ceneri"          on easter minus 46 days
-"Prima di Quaresima"              on easter minus 42 days
-"Seconda di Quaresima"            on easter minus 35 days
-"Terza di Quaresima"              on easter minus 28 days
-"Quarta di Quaresima"             on easter minus 21 days
-"Quinta di Quaresima"             on easter minus 14 days
-"Domenica delle Palme"            on easter minus 7 days
-"Ascensione"                      on easter plus 39 days
-"Pentecoste"                      on easter plus 49 days
-"Santissima Trinità"              on easter plus 56 days
-"Corpus Domini"                   weekend on easter plus 63 days
-"Sacro Cuore di Gesù"             on easter plus 68 days
-"Santi Pietro e Paolo"            on june 29
-"San Francesco"                   on october 4
-"Defunti"                         on november 2
-"Prima d'avvento"                 on sunday before 24 december minus 21 days
-"Seconda d'avvento"               on sunday before 24 december minus 14 days
-"Terza d'avvento"                 on sunday before 24 december minus 7 days
-"Quarta d'avvento"                on sunday before 24 december
-"San Silvestro"                   on december 31
+"San Giuseppe"                    religious on march 19
+"Giovedì Grasso"                  religious on easter minus 52 days
+"Martedì Grasso"                  religious on easter minus 47 days
+"Mercoledì delle Ceneri"          religious on easter minus 46 days
+"Prima di Quaresima"              religious on easter minus 42 days
+"Seconda di Quaresima"            religious on easter minus 35 days
+"Terza di Quaresima"              religious on easter minus 28 days
+"Quarta di Quaresima"             religious on easter minus 21 days
+"Quinta di Quaresima"             religious on easter minus 14 days
+"Domenica delle Palme"            religious on easter minus 7 days
+"Ascensione"                      religious on easter plus 39 days
+"Pentecoste"                      religious on easter plus 49 days
+"Santissima Trinità"              religious on easter plus 56 days
+"Corpus Domini"                   public religious on easter plus 63 days
+"Sacro Cuore di Gesù"             religious on easter plus 68 days
+"Santi Pietro e Paolo"            religious on june 29
+"San Francesco"                   religious on october 4
+"Defunti"                         religious on november 2
+"Prima d'avvento"                 religious on sunday before 24 december minus 21 days
+"Seconda d'avvento"               religious on sunday before 24 december minus 14 days
+"Terza d'avvento"                 religious on sunday before 24 december minus 7 days
+"Quarta d'avvento"                religious on sunday before 24 december
+"San Silvestro"                   religious on december 31
 
 :: Financial
 
 :: Cultural
-"Giornata della Memoria"          on january 27
-"Giornata del Ricordo"            on february 10
-"Festa della donna"               on march 8
-"Festa dell'Unità nazionale"      on november 4
+"Giornata della Memoria"          cultural on january 27
+"Giornata del Ricordo"            cultural on february 10
+"Festa della donna"               cultural on march 8
+"Festa dell'Unità nazionale"      cultural on november 4
 
 :: School
 
 :: Daylight Saving
-"Passaggio all'ora legale"        on last sunday in march
-"Passaggio all'ora solare"        on last sunday in october
+"Passaggio all'ora legale"        seasonal on last sunday in march
+"Passaggio all'ora solare"        seasonal on last sunday in october
 
 :: Seasons
 

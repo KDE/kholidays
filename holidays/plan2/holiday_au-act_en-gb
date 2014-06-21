@@ -20,18 +20,18 @@ description "State holiday file for Australian Capital Territory"
 
 :: Public Holidays
 :: State Holidays - ACT
-"New Year's Day"                    weekend on january 1
-"Australia Day"                     weekend on january 26
-"Canberra Day"                      weekend on second monday in march
-"Anzac Day"                         weekend on april 25
-"Good Friday"                       weekend on easter minus 2
-"Easter Saturday"                   weekend on easter minus 1
-"Easter Monday"                     weekend on easter plus 1
-"Queen's Birthday"                  weekend on second monday in june
-"Labour Day"                        weekend on first monday in october
-"Family and Community Day"          weekend on first tuesday in november
-"Christmas Day"                     weekend on december 25
-"Boxing Day"                        weekend on december 26
+"New Year's Day"                    public on january 1
+"Australia Day"                     public on january 26
+"Canberra Day"                      public on second monday in march
+"Anzac Day"                         public on april 25
+"Good Friday"                       public on religious easter minus 2
+"Easter Saturday"                   public on easter minus 1
+"Easter Monday"                     public on easter plus 1
+"Queen's Birthday"                  public on second monday in june
+"Labour Day"                        public on first monday in october
+"Family and Community Day"          public on first tuesday in november
+"Christmas Day"                     public on religious december 25
+"Boxing Day"                        public on december 26
 
 :: Religious
 
@@ -42,8 +42,8 @@ description "State holiday file for Australian Capital Territory"
 :: School
 
 :: Daylight Saving
-"Daylight Saving Start"             on first sunday in october
-"Daylight Saving End"               on first sunday in april
+"Daylight Saving Start"             seasonal on first sunday in october
+"Daylight Saving End"               seasonal on first sunday in april
 
 :: Seasons
 

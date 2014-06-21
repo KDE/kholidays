@@ -18,34 +18,34 @@ language    "lt"
 :description "(please add description in source language) National holiday file for Lithuania"
 
 :: Public Holidays
-"Naujieji metai"                                            weekend on january 1
-"Lietuvos valstybės atkūrimo diena"                         weekend on february 16
-"Lietuvos nepriklausomybės atkūrimo diena"                  weekend on march 11
-"Velykos"                                                   weekend on easter length 2 days
-"Tarptautinė darbo diena"                                   weekend on may 1
-"Motinos diena"                                             weekend on first sunday in may
-"Rasos (Joninės)"                                           weekend on june 24
-"Valstybės (Lietuvos karaliaus Mindaugo karūnavimo) diena"  weekend on july 6
-"Žolinė (Švč. Mergelės Marijos ėmimo į dangų diena)"        weekend on august 15
-"Visų Šventųjų diena"                                       weekend on november 1
-"Kalėdos"                                                   weekend on december 25 length 2 days
+"Naujieji metai"                                            public on january 1
+"Lietuvos valstybės atkūrimo diena"                         public on february 16
+"Lietuvos nepriklausomybės atkūrimo diena"                  public on march 11
+"Velykos"                                                   public on easter length 2 days
+"Tarptautinė darbo diena"                                   public on may 1
+"Motinos diena"                                             public on first sunday in may
+"Rasos (Joninės)"                                           public on june 24
+"Valstybės (Lietuvos karaliaus Mindaugo karūnavimo) diena"  public on july 6
+"Žolinė (Švč. Mergelės Marijos ėmimo į dangų diena)"        public on august 15
+"Visų Šventųjų diena"                                       public on november 1
+"Kalėdos"                                                   public on december 25 length 2 days
 
 :: Religious
-"Trys karaliai"                                             on january 6
-"Pelenų diena"                                              on easter minus 46 days
-"Verbų sekmadienis"                                         on easter minus 7 days
-"Didysis penktadienis"                                      on easter minus 2 days
-"Sekminės"                                                  on easter plus 49 days
-"Kūčios"                                                    on december 24
-:"Gavėnia"                                                  on easter minus 45 days length 44 days
-:"Adventas"                                                 on november 28 length 27 days
+"Trys karaliai"                                             religious on january 6
+"Pelenų diena"                                              religious on easter minus 46 days
+"Verbų sekmadienis"                                         religious on easter minus 7 days
+"Didysis penktadienis"                                      religious on easter minus 2 days
+"Sekminės"                                                  religious on easter plus 49 days
+"Kūčios"                                                    religious on december 24
+:"Gavėnia"                                                  religious on easter minus 45 days length 44 days
+:"Adventas"                                                 religious on november 28 length 27 days
 
 :: Financial
 
 :: Cultural
-"Šv. Valentino diena"                                       on february 14
-"Užgavėnės"                                                 on easter minus 47 days
-"Melagio diena"                                             on april 1
+"Šv. Valentino diena"                                       cultural on february 14
+"Užgavėnės"                                                 cultural on easter minus 47 days
+"Melagio diena"                                             cultural on april 1
 
 :: School
 

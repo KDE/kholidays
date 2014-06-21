@@ -18,51 +18,51 @@ language    "es"
 :description "(please add description in source language) National holiday file for Panama"
 
 :: Public Holidays
-"Año nuevo"                   weekend on january 1
-"Día de los Martires"         weekend on january 9
-"Martes Carnaval"             weekend on easter minus 47
-"Viernes Santo"               weekend on easter minus 2
-"Día del Trabajo"             weekend on may 1
-"Fundación Panama Vieja"      on august 15
-"Separación Panamá-Colombia"  weekend on november 3
-"Día de Colón"		      weekend on november 5
-"Grito en La Villa, Los Santos"  weekend on november 10
-"Independencia Panamá-España" weekend on november 28
-"Día de la Madre"             weekend on december 8
-"Navidad"                     weekend on december 25
+"Año nuevo"                         public on january 1
+"Día de los Martires"               public religious on january 9
+"Martes Carnaval"                   public religious on easter minus 47
+"Viernes Santo"                     public religious on easter minus 2
+"Día del Trabajo"                   public on may 1
+"Fundación Panama Vieja"            public on august 15
+"Separación Panamá-Colombia"        public on november 3
+"Día de Colón"                      public on november 5
+"Grito en La Villa, Los Santos"     public on november 10
+"Independencia Panamá-España"       public on november 28
+"Día de la Madre"                   public religious on december 8
+"Navidad"                           public religious on december 25
 
 :: Religious
-"Epifanía/Día de Reyes"       on january 6
-"San José"                    on march 19
-"Miércoles de Cenizas"	      weekend on easter minus 46
-"Jueves Santo"                on easter minus 3
-"Domingo de Ramos"            on easter minus 7
-"Domingo de Pascua"           on easter
-"Ascensión de Jesús"          on easter plus 39
-"Lunes Penteconstés"	      on easter plus 50
-"Santísima Trinidad"	      on easter plus 56
-"Corpus Christi"              on easter plus 60
-"Sagrado Corazón"             on easter plus 71
-"San Pedro y San Pablo"       on june 29
-"Asunción de la Virgen"       on august 15
-"San Francisco de Asís"	      on october 4
-"Todos los Santos"            on november 1
+"Epifanía/Día de Reyes"             religious on january 6
+"San José"                          religious on march 19
+"Miércoles de Cenizas"              public religious on easter minus 46
+"Jueves Santo"                      religious on easter minus 3
+"Domingo de Ramos"                  religious on easter minus 7
+"Domingo de Pascua"                 religious on easter
+"Ascensión de Jesús"                religious on easter plus 39
+"Lunes Penteconstés"                religious on easter plus 50
+"Santísima Trinidad"                religious on easter plus 56
+"Corpus Christi"                    religious on easter plus 60
+"Sagrado Corazón"                   religious on easter plus 71
+"San Pedro y San Pablo"             religious on june 29
+"Asunción de la Virgen"             religious on august 15
+"San Francisco de Asís"             religious on october 4
+"Todos los Santos"                  religious on november 1
 
 :: Financial
 
 :: Cultural
-"Día de la Raza"              on october 12
-"Día Internacional de Internet"	on may 17
-"Víspera de Navidad"          on december 24
+"Día de la Raza"                    cultural on october 12
+"Día Internacional de Internet"     cultural on may 17
+"Víspera de Navidad"                cultural on december 24
 
 :: School
 
 :: Daylight Saving
 
 :: Seasons
-"Equinoccio"	               on march 20
-"Solticio"	               on june 21
-"Equinoccio"                   on september 22
-"Solticio"                     on december 21
+"Equinoccio"                        seasonal on march 20
+"Solticio"                          seasonal on june 21
+"Equinoccio"                        seasonal on september 22
+"Solticio"                          seasonal on december 21
 
 :: Name Days

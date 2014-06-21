@@ -39,6 +39,7 @@
 #include <QFileInfo>
 
 #include <qdebug.h>
+#include <KCalendarSystem>
 
 #include "holiday_p.h"
 
@@ -397,17 +398,14 @@ void  HolidayParserDriverPlan::setFileDescription( const QString &description )
 
 void  HolidayParserDriverPlan::setEventName( const QString &eventName )
 {
+    // Assume if setting an event name then is start of new event line, so clear categories
+    m_eventCategories.clear();
     m_eventName = eventName;
 }
 
-void  HolidayParserDriverPlan::setEventColorName( int nameColor )
+void  HolidayParserDriverPlan::setEventCategory( const QString &category )
 {
-    m_eventColorName = nameColor;
-}
-
-void  HolidayParserDriverPlan::setEventColorDay( int dayColor )
-{
-    m_eventColorDay = dayColor;
+    m_eventCategories.append( category );
 }
 
 void  HolidayParserDriverPlan::setEventCalendarType( const QString &calendarType )
@@ -707,8 +705,7 @@ void  HolidayParserDriverPlan::addHoliday( const QDate &observedDate, int durati
         holiday.d->mDuration = duration;
         holiday.d->mText = m_eventName;
         holiday.d->mShortText = m_eventName;
-        if ( m_eventColorName == 2 || m_eventColorName == 9 ||
-             m_eventColorDay == 2 || m_eventColorDay == 9 ) {
+        if ( m_eventCategories.contains( "public" ) ) {
             holiday.d->mDayType = KHolidays::Holiday::NonWorkday;
         } else {
             holiday.d->mDayType = KHolidays::Holiday::Workday;

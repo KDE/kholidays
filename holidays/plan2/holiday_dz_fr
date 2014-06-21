@@ -21,26 +21,26 @@ description "Fêtes et jours fériés en Algérie"
 :: National Holidays
 
 : New Year's Day
-"Jour de l'an"            weekend on january 1
+"Jour de l'an"                      public on january 1
 : Labour Day
-"Fête du Travail"                   weekend on may 1
+"Fête du Travail"                   public on may 1
 : Independence Day
-"Fête de l’Indépendance"           weekend on july 5
+"Fête de l’Indépendance"            public on july 5
 : Anniversary of the Revolution
-"Anniversaire de la Révolution"                   weekend on november 1
+"Anniversaire de la Révolution"     public on november 1
 
 :: Religious Holidays
 
 : Islamic New Year
-"Awal muharram"            weekend on hijri muharram 1
+"Awal muharram"                     public religious on hijri muharram 1
 : Ashura
-"Achoura"         weekend on hijri muharram 10
+"Achoura"                           public religious on hijri muharram 10
 : Birthday of the Prophet Muhammad
-"Mawlid nabaoui"         weekend on hijri rabialawal 12
+"Mawlid nabaoui"                    public religious on hijri rabialawal 12
 : Eid el-Fitr (End of Ramadan)
-"Aïd el-Fitr"                    weekend on hijri shawwal 1 length 2
+"Aïd el-Fitr"                       public religious on hijri shawwal 1 length 2
 : Eid al-Adha (End of the Hajj)
-"Aïd El Adha"                    weekend on hijri thualhijjah 10 length 2
+"Aïd El Adha"                       public religious on hijri thualhijjah 10 length 2
 
 :: Financial
 
@@ -53,12 +53,12 @@ description "Fêtes et jours fériés en Algérie"
 :: Seasons
 
 : Spring
-"Printemps"                 on march 20
+"Printemps"                         seasonal on march 20
 : Summer
-"Été"                       on june 21
+"Été"                               seasonal on june 21
 : Fall
-"Automne"                   on september 23
+"Automne"                           seasonal on september 23
 : Winter
-"Hiver"                     on december 21
+"Hiver"                             seasonal on december 21
 
 :: Name Days

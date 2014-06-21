@@ -20,36 +20,36 @@ language    "sl"
 
 
 :: Public Holidays
-"Novo leto"                                           weekend on january 1
-"Dan upora proti okupatorju"                          weekend on april 27
-"Praznik dela"                                        weekend on may 1 length 2 days
-"Dan državnosti"                                      weekend on june 25
-"Združitev prekmurskih Slovencev z matičnim narodom"  on august 17
-"Vrnitev Primorske k matični domovini"                on september 15
-"Dan Rudolfa Maistra"                                 on november 23
-"Dan samostojnosti in enotnosti"                      weekend on december 26
+"Novo leto"                                           public on january 1
+"Dan upora proti okupatorju"                          public on april 27
+"Praznik dela"                                        public on may 1 length 2 days
+"Dan državnosti"                                      public on june 25
+"Združitev prekmurskih Slovencev z matičnim narodom"  civil on august 17
+"Vrnitev Primorske k matični domovini"                civil on september 15
+"Dan Rudolfa Maistra"                                 civil on november 23
+"Dan samostojnosti in enotnosti"                      public on december 26
 
 
 :: Religious Holidays
-"Velika noč"                                          weekend on easter
-"Velikonočni ponedeljek"                              weekend on easter plus 1 day
-"Binkošti"                                            weekend on easter plus 49 days
-"Marijino vnebovzetje"                                weekend on august 15
-"Dan reformacije"                                     weekend on october 31
-"Dan spomina na mrtve"                                weekend on november 1
-"Božič"                                               weekend on december 25
+"Velika noč"                                          public religious on easter
+"Velikonočni ponedeljek"                              public religious on easter plus 1 day
+"Binkošti"                                            public religious on easter plus 49 days
+"Marijino vnebovzetje"                                public religious on august 15
+"Dan reformacije"                                     public religious on october 31
+"Dan spomina na mrtve"                                public religious on november 1
+"Božič"                                               public religious on december 25
 
 :: Financial
 
 :: Cultural
-"Prešernov dan, slovenski kulturni praznik"           weekend on february 8
-"Dan Primoža Trubarja"                                on june 8
+"Prešernov dan, slovenski kulturni praznik"           public cultural on february 8
+"Dan Primoža Trubarja"                                cultural on june 8
 
 :: School
 
 :: Daylight Saving
-"Poletni čas"      on last sunday in march
-"Zimski čas"       on last sunday in october
+"Poletni čas"                                         seasonal on last sunday in march
+"Zimski čas"                                          seasonal on last sunday in october
 
 :: Seasons
 

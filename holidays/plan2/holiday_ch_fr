@@ -19,19 +19,19 @@ description "Fêtes et jours fériés en Suisse"
 
 :: Public Holidays
 
-"Nouvel An"              weekend on january 1
-"Fête Nationale"         weekend on august 1
-"Jeune Fédéral"          weekend on third sunday in september
-"Lundi du Jeûne Fédéral" weekend on third sunday in september plus 1 day
+"Nouvel An"              public on january 1
+"Fête Nationale"         public on august 1
+"Jeune Fédéral"          public on third sunday in september
+"Lundi du Jeûne Fédéral" public on third sunday in september plus 1 day
 
 :: Religious Holidays
-"Vendredi Saint"         weekend on easter minus 2 days
-"Pâques"                 weekend on easter
-"Ascension"              weekend on easter plus 39 days
-"Pentecôte"              weekend on easter plus 49 days
-"Lundi de Pentecôte"     weekend on easter plus 50 days
-"Noël"                   weekend on december 25
-"Saint-Étienne"          weekend on december 26
+"Vendredi Saint"         public religious on easter minus 2 days
+"Pâques"                 public religious on easter
+"Ascension"              public religious on easter plus 39 days
+"Pentecôte"              public religious on easter plus 49 days
+"Lundi de Pentecôte"     public religious on easter plus 50 days
+"Noël"                   public religious on december 25
+"Saint-Étienne"          public religious on december 26
 
 :: Financial
 

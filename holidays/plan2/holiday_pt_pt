@@ -17,22 +17,22 @@ language    "pt"
 :description "(please add description in source language) National holiday file for Portugal"
 
 :: Public Holidays
-"Ano Novo"              weekend on january 1
-"6ª feira santa"        weekend on easter minus 2 days
-"25 de Abril"           weekend on april 25
-"1º de Maio"            weekend on may 1
-"10 de Junho"           weekend on june 10
-"Assunção"              weekend on august 15
-"Nª Senhora Conceição"  weekend on december 8
-"Natal"                 weekend on december 25
+"Ano Novo"              public on january 1
+"6ª feira santa"        public religious on easter minus 2 days
+"25 de Abril"           public on april 25
+"1º de Maio"            public on may 1
+"10 de Junho"           public on june 10
+"Assunção"              public on august 15
+"Nª Senhora Conceição"  public religious on december 8
+"Natal"                 public religious on december 25
 
 :: Religious
-"Carnaval"              on easter minus 50 days length 4 days
-"4ª feira de cinzas"    on easter minus 46 days
-"Páscoa"                on easter
-"Ascension"             on easter plus 39 days
-"Trinity"               on easter plus 56 days
-"Pentecostes"           on easter plus 49 days
+"Carnaval"              religious on easter minus 50 days length 4 days
+"4ª feira de cinzas"    religious on easter minus 46 days
+"Páscoa"                religious on easter
+"Ascension"             religious on easter plus 39 days
+"Trinity"               religious on easter plus 56 days
+"Pentecostes"           religious on easter plus 49 days
 
 :: Financial
 
@@ -43,17 +43,17 @@ language    "pt"
 :: Daylight Saving
 
 :: Seasons
-"Primavera"            on march 22
-"Verão"                on june 22
-"Outono"               on september 22
-"Inverno"              on december 22
+"Primavera"            seasonal on march 22
+"Verão"                seasonal on june 22
+"Outono"               seasonal on september 22
+"Inverno"              seasonal on december 22
 
 
 :: Removed holidays
-:: "Corpo de Deus"         weekend on easter plus 60 days
-:: "República"             weekend on october 5
-:: "Todos os Santos"       weekend on november 1
-:: "Restauração"           weekend on december 1
+:: "Corpo de Deus"         public on easter plus 60 days
+:: "República"             public on october 5
+:: "Todos os Santos"       public on november 1
+:: "Restauração"           public on december 1
 
 
 :: Name Days

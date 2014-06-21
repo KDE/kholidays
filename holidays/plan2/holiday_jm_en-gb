@@ -17,26 +17,26 @@ language    "en_GB"
 :description "(please add description in source language) National holiday file for Jamaica"
 
 :: Public Holidays
-"New Year's Day"       weekend on january 1
-"Ash Wednesday"        weekend on february 25
-"Good Friday"          weekend on easter minus 2 days
-"Easter"               weekend on easter
-"Easter Monday"        weekend on easter plus 1 day
-"Labour Day"           weekend on may 23
-"Emancipation Day"     weekend on august 1
-"Independence Day"     weekend on august 6
-"National Heroes Day"  weekend on third monday in october
-"Christmas"            weekend on december 25
-"Boxing Day"           weekend on december 26
+"New Year's Day"       public on january 1
+"Ash Wednesday"        public religious on february 25
+"Good Friday"          public religious on easter minus 2 days
+"Easter"               public religious on easter
+"Easter Monday"        public on easter plus 1 day
+"Labour Day"           public on may 23
+"Emancipation Day"     public on august 1
+"Independence Day"     public on august 6
+"National Heroes Day"  public on third monday in october
+"Christmas"            public religious on december 25
+"Boxing Day"           public on december 26
 
 :: Religious
 
 :: Financial
 
 :: Cultural
-"Valentine's Day"      on february 14
-"Mother's Day"         on second sunday in may
-"Father's Day"         on third sunday in june
+"Valentine's Day"      cultural on february 14
+"Mother's Day"         cultural on second sunday in may
+"Father's Day"         cultural on third sunday in june
 
 :: School
 

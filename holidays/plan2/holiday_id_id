@@ -20,70 +20,70 @@ description "File Hari Libur Nasional Indonesia"
 
 :: Public Holidays
 : New Year's Day
-"Tahun Baru Masehi"                      weekend on january 1
+"Tahun Baru Masehi"                      public on january 1
 
 : Independence Day
-"Hari Proklamasi Kemerdekaan R.I."       weekend  on august 17
+"Hari Proklamasi Kemerdekaan R.I."       public  on august 17
 
 
 :: Religious
 : Balinese Galungan (lunar cal)
-"Hari Raya Galungan"                     on february 1 2012
+"Hari Raya Galungan"                     religious on february 1 2012
 
 : Balinese Kuningan (lunar cal)
-"Hari Raya Kuningan"                     on february 11 2012
+"Hari Raya Kuningan"                     religious on february 11 2012
 
 : Ash Wednesday
-"Rabu Abu"                               on easter minus 46 days
+"Rabu Abu"                               religious on easter minus 46 days
 
 : Balinese New Year (lunar cal)
-"Hari Raya Nyepi"                        weekend on march 23 2012
-"Hari Raya Nyepi"                        weekend on march 12 2013
+"Hari Raya Nyepi"                        public on march 23 2012
+"Hari Raya Nyepi"                        public on march 12 2013
 
 : Birth of the Prophet (hijri cal)
-"Maulid Nabi Muhammad SAW"               weekend on hijri rabialawal 12
+"Maulid Nabi Muhammad SAW"               public religious on hijri rabialawal 12
 
 : Good Friday
-"Wafat Yesus Kristus"                    weekend on easter minus 2 days
+"Wafat Yesus Kristus"                    public religious on easter minus 2 days
 
 : Buddha's Birthday (lunar cal)
-"Waisak"                                 weekend on may 6 2012
-"Waisak"                                 weekend on may 25 2013
+"Waisak"                                 public religious on may 6 2012
+"Waisak"                                 public religious on may 25 2013
 
 : Ascension Day
-"Kenaikan Yesus Kristus"                 weekend on easter plus 39 days
+"Kenaikan Yesus Kristus"                 public religious on easter plus 39 days
 
 : Ascension of the Prophet (hijri cal)
-"Isra Mi'raj Nabi Muhammad SAW"          weekend on hijri rajab 27
+"Isra Mi'raj Nabi Muhammad SAW"          public religious on hijri rajab 27
 
 : Day after Ramadan / Idul Fitri
 : Eid Al-Fitr (hijri cal)
-"Idul Fitri"                             weekend on hijri shawwal 1 length 2 days
+"Idul Fitri"                             public religious on hijri shawwal 1 length 2 days
 
 : Feast of the Sacrifice (hijri cal)
-"Idul Adha"                              weekend on hijri thualhijjah 10 
+"Idul Adha"                              public religious on hijri thualhijjah 10
 
 : Islamic New Year (hijri cal)
-"Tahun Baru Hijriyah"                    weekend on hijri muharram 1
+"Tahun Baru Hijriyah"                    public religious on hijri muharram 1
 
 : Christmas
-"Hari Natal"                             weekend on december 25
+"Hari Natal"                             public religious on december 25
 
 
 :: Financial
 
 :: Cultural
 : Chinese New Year (lunar cal)
-"Tahun Baru Imlek"                       weekend on january 23 2012
-"Tahun Baru Imlek"                       weekend on february 9 2013
-: Chinese New Year (from Hongkong kholyday file)
-"Tahun Baru Imlek"                       weekend on 31 january 2014
-"Tahun Baru Imlek"                       weekend on 19 february 2015
-"Tahun Baru Imlek"                       weekend on 8 february 2016
-"Tahun Baru Imlek"                       weekend on 28 january 2017
-"Tahun Baru Imlek"                       weekend on 16 february 2018
-"Tahun Baru Imlek"                       weekend on 5 february 2019
-"Tahun Baru Imlek"                       weekend on 25 january 2020
+"Tahun Baru Imlek"                       public on january 23 2012
+"Tahun Baru Imlek"                       public on february 9 2013
+: Chinese New Year (from Hong Kong kholiday file)
+"Tahun Baru Imlek"                       public on 31 january 2014
+"Tahun Baru Imlek"                       public on 19 february 2015
+"Tahun Baru Imlek"                       public on 8 february 2016
+"Tahun Baru Imlek"                       public on 28 january 2017
+"Tahun Baru Imlek"                       public on 16 february 2018
+"Tahun Baru Imlek"                       public on 5 february 2019
+"Tahun Baru Imlek"                       public on 25 january 2020
 
 :: School
 
@@ -93,72 +93,72 @@ description "File Hari Libur Nasional Indonesia"
 
 :: Name Days
 : Occupational Safety and Health Day
-"Hari Keselamatan dan Kesehatan Kerja"   on january 12
+"Hari Keselamatan dan Kesehatan Kerja"   civil on january 12
 : Press' Day
-"Hari Pers Nasional"                     on february 9
+"Hari Pers Nasional"                     civil on february 9
 : National Nutrision's day
-"Hari Gizi Nasional"                     on february 28
+"Hari Gizi Nasional"                     civil on february 28
 : World Health Day
-"Hari Kesehatan Sedunia"                 on april 7
+"Hari Kesehatan Sedunia"                 civil on april 7
 : Kartini Day
-"Hari Kartini"                           on april 21
+"Hari Kartini"                           civil on april 21
 : Earth day
-"Hari Bumi"                              on april 22
+"Hari Bumi"                              civil on april 22
 : Labor day 
-"Hari Buruh"                             on may 1
+"Hari Buruh"                             civil on may 1
 : National Education Day
-"Hari Pendidikan Nasional"               on may 2
+"Hari Pendidikan Nasional"               civil on may 2
 : World Red Cross and Red Crescent Day
-"Hari Palang Merah dan Bulan Sabit Merah Sedunia" on may 8
+"Hari Palang Merah dan Bulan Sabit Merah Sedunia" civil on may 8
 : National Awakening Day
-"Hari Kebangkitan Nasional"              on may 20
+"Hari Kebangkitan Nasional"              civil on may 20
 : Reformation Commemoration Day
-"Hari Peringatan Reformasi"              on may 22
+"Hari Peringatan Reformasi"              civil on may 22
 : World No Tobacco Day
-"Hari Tanpa Tembakau Sedunia"            on may 31
+"Hari Tanpa Tembakau Sedunia"            civil on may 31
 : Pancasila Birthday
-"Hari Lahir Pancasila"                   on june 1
+"Hari Lahir Pancasila"                   civil on june 1
 : Police Force Birthday
-"Hari Bhayangkara"                       on july 1
+"Hari Bhayangkara"                       civil on july 1
 : National Children day (note: en.wikipedia got this wrong)
-"Hari Anak Nasional"                     on july 23
+"Hari Anak Nasional"                     civil on july 23
 : Scout's day
-"Hari Pramuka"                           on august 14
+"Hari Pramuka"                           civil on august 14
 : National Sports Day
-"Hari Olahraga Nasional"                 on september 9
+"Hari Olahraga Nasional"                 civil on september 9
 : Pancasila Sanctity Day
-"Hari Kesaktian Pancasila"               on october 1
+"Hari Kesaktian Pancasila"               civil on october 1
 : Batik Day 
-"Hari Batik"                             on october 2
+"Hari Batik"                             civil on october 2
 : Indonesian National Armed Forces Day
-"Hari Tentara Nasional Indonesia"        on october 5
+"Hari Tentara Nasional Indonesia"        civil on october 5
 : Youth Pledge Day 
-"Hari Sumpah Pemuda"                     on october 28
+"Hari Sumpah Pemuda"                     civil on october 28
 : Civil Servant Corps Day 
-"Hari Korps Pegawai Republik Indonesia"  on october 29
+"Hari Korps Pegawai Republik Indonesia"  civil on october 29
 : Heroes' Day 
-"Hari Pahlawan"                          on november 10
+"Hari Pahlawan"                          civil on november 10
 : Teacher's Day
-"Hari Guru"                              on november 25
+"Hari Guru"                              civil on november 25
 : World AIDS Day
-"Hari AIDS Sedunia"                      on december 1
+"Hari AIDS Sedunia"                      civil on december 1
 : National Social Solidarity Day
-"Hari Kesetiakawanan Sosial Nasional"    on december 20
+"Hari Kesetiakawanan Sosial Nasional"    civil on december 20
 : Mother's Day 
-"Hari Ibu"                               on december 22
+"Hari Ibu"                               civil on december 22
 
 
 :: To be sorted
 : Joint Leave (defined by the government every year)
 : Joint Leave for 2012
 : Joint leave for Ascension Day
-"Cuti Bersama Kenaikan Yesus Kristus"    weekend on may      18 2012
+"Cuti Bersama Kenaikan Yesus Kristus"    public on may      18 2012
 : Joint leave for Eid Al-Fitr
-"Cuti Bersama Idul Fitri"                weekend on august   21 2012 length 2 days
+"Cuti Bersama Idul Fitri"                public on august   21 2012 length 2 days
 : Joint leave for Islamic New Year
-"Cuti Bersama Hari Raya Natal"           weekend on november 16 2012
+"Cuti Bersama Hari Raya Natal"           public on november 16 2012
 : Joint leave for Christmas
-"Cuti Bersama Tahun Baru Hijriyah"       weekend on december 24 2012
+"Cuti Bersama Tahun Baru Hijriyah"       public on december 24 2012
 : Joint leave for 2013 New Year's Day
-"Cuti bersama Tahun Baru 2013"           weekend on december 31 2012
+"Cuti bersama Tahun Baru 2013"           public on december 31 2012
 

@@ -17,46 +17,46 @@ language    "sv"
 :description "(please add description in source language) National holiday file for Sweden"
 
 :: Public Holidays
-"Nyårsdagen"         weekend on january 1
-"Trett.d. Jul"       weekend on january 6
-"Långfredagen"       weekend on easter minus 2
-"Påskdagen"          weekend on easter
-"Annandag påsk"      weekend on easter plus 1
-"Pingstdagen"        weekend on easter plus 49 days
-"Kristi Him.f."      weekend on easter plus 39 days
+"Nyårsdagen"         public on january 1
+"Trett.d. Jul"       public on january 6
+"Långfredagen"       public religious on easter minus 2
+"Påskdagen"          public religious on easter
+"Annandag påsk"      public on easter plus 1
+"Pingstdagen"        public religious on easter plus 49 days
+"Kristi Him.f."      public religious on easter plus 39 days
 :: Before 2005
-:: "Annandag Pingst"    weekend on easter plus 50 days
-"Första Maj"         weekend on may 1
+:: "Annandag Pingst" public religious on easter plus 50 days
+"Första Maj"         public on may 1
 :: After 2005
-"Nationaldagen"      weekend on june 6
-"Midsommardagen"     weekend on saturday before june 26
-"Alla helgons dag"   weekend on first sunday in november minus 1
-"Juldagen"           weekend on december 25
-"Annandag Jul"       weekend on december 26
+"Nationaldagen"      public on june 6
+"Midsommardagen"     public on saturday before june 26
+"Alla helgons dag"   public religious on first sunday in november minus 1
+"Juldagen"           public religious on december 25
+"Annandag Jul"       public on december 26
 
 :: Religious
-"Fettisdagen"        on easter minus 47 days
-"Askonsdagen"        on easter minus 46 days
-"Sommartid"          on last sunday in march
-"Skärtorsdagen"      on easter minus 3
-"Påskafton"          on easter minus 1
-"Pingstafton"        on easter plus 48 days
+"Fettisdagen"        religious on easter minus 47 days
+"Askonsdagen"        religious on easter minus 46 days
+"Sommartid"          religious on last sunday in march
+"Skärtorsdagen"      religious on easter minus 3
+"Påskafton"          religious on easter minus 1
+"Pingstafton"        religious on easter plus 48 days
 :: After 2005
-"Annandag Pingst"    on easter plus 50 days
-"1. Advent"          on sunday before december 24 minus 21 days
-"2. Advent"          on sunday before december 24 minus 14 days
-"3. Advent"          on sunday before december 24 minus 7 days
-"4. Advent"          on sunday before december 24
+"Annandag Pingst"    religious on easter plus 50 days
+"1. Advent"          religious on sunday before december 24 minus 21 days
+"2. Advent"          religious on sunday before december 24 minus 14 days
+"3. Advent"          religious on sunday before december 24 minus 7 days
+"4. Advent"          religious on sunday before december 24
 
 :: Financial
 
 :: Cultural
-"Alla hjärtans dag"  on february 14
+"Alla hjärtans dag"  cultural on february 14
 :: Before 2005
-:: "Nationaldagen"      on june 6
-"Midsommarafton"     on friday before june 25
-"Vintertid"          on last sunday in october
-"Nyårsafton"         on december 31
+:: "Nationaldagen"   civil on june 6
+"Midsommarafton"     cultural on friday before june 25
+"Vintertid"          cultural on last sunday in october
+"Nyårsafton"         cultural on december 31
 
 :: School
 
@@ -68,5 +68,5 @@ language    "sv"
 
 
 :: To be sorted
-"Trett.d.afton"      on january 5
-"Julafton"           on december 24
+"Trett.d.afton"      civil on january 5
+"Julafton"           civil on december 24

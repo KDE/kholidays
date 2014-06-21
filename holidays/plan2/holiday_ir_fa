@@ -19,49 +19,49 @@ language    "fa"
 
 :: Public Holidays
 : Nowrouz / Eid
-"عید نوروز"                               weekend on jalali farvardin 1 length 4
+"عید نوروز"                               public religious on jalali farvardin 1 length 4
 : Islamic Republic Day
-"روز جمهوری اسلامی"                        weekend on jalali farvardin 12
+"روز جمهوری اسلامی"                        public on jalali farvardin 12
 : Nature Day
-"روز طبیعت"                               weekend on jalali farvardin 13
+"روز طبیعت"                               public on jalali farvardin 13
 : Khomeini's Death
-"رحلت امام خمینی"                         weekend on jalali khordad 14
+"رحلت امام خمینی"                         public on jalali khordad 14
 : Revolt of Khordad 15
-"قیام ۱۵ خرداد"                           weekend on jalali khordad 15
+"قیام ۱۵ خرداد"                           public on jalali khordad 15
 : Victory of the Revolution
-"پیروزی انقلاب"                            weekend on jalali bahman 22
+"پیروزی انقلاب"                            public on jalali bahman 22
 : Nationalization of Oil Industry
-"ملی شدن صنعت نفت"                        weekend on jalali esfand 29
+"ملی شدن صنعت نفت"                        public on jalali esfand 29
 : Tasu'a of Imam Hussain
-"تاسوعا"                                  weekend on hijri muharram 9
+"تاسوعا"                                  public religious on hijri muharram 9
 : Ashura of Imam Hussain
-"عاشورا"                                  weekend on hijri muharram 10
+"عاشورا"                                  public religious on hijri muharram 10
 : Arba'een of Imam Hussain
-"اربعین"                                  weekend on hijri safar 20
+"اربعین"                                  public religious on hijri safar 20
 : Demise of prophet Muhammad and Martyrdom of Imam Hassan (Mujtaba)
-"وفات حضرت محمد و شهادت امام حسن مجتبی"   weekend on hijri safar 28
+"وفات حضرت محمد و شهادت امام حسن مجتبی"   public religious on hijri safar 28
 : Martyrdom of Imam Reza
-"شهادت امام رضا"                          weekend on hijri safar 29
+"شهادت امام رضا"                          public religious on hijri safar 29
 : Birth of Muhammad and Imam Jafar
-"ولادت حضرت محمد و امام جعفر صادق"         weekend on hijri rabialawal 17
+"ولادت حضرت محمد و امام جعفر صادق"         public religious on hijri rabialawal 17
 : Martyrdom of Fatima
-"شهادت حضرت فاطمه"                        weekend on hijri jumaadaalthaani 3
+"شهادت حضرت فاطمه"                        public religious on hijri jumaadaalthaani 3
 : Birth of Imam Ali
-"ولادت حضرت علی"                           weekend on hijri rajab 13
+"ولادت حضرت علی"                           public religious on hijri rajab 13
 : Mission of Muhammad
-"بعثت حضرت محمد"                          weekend on hijri rajab 27
+"بعثت حضرت محمد"                          public religious on hijri rajab 27
 : Birth of Imam Mahdi
-"ولادت حضرت مهدی"                          weekend on hijri shaban 15
+"ولادت حضرت مهدی"                          public religious on hijri shaban 15
 : Martyrdom of Imam Ali
-"شهادت حضرت علی"                          weekend on hijri ramadan 21
+"شهادت حضرت علی"                          public religious on hijri ramadan 21
 : Eid ul-Fitr (End of Ramadhan)
-"عید فطر"                                 weekend on hijri shawwal 1
+"عید فطر"                                 public religious on hijri shawwal 1
 : Martyrdom of Imam Jafar
-"شهادت امام جعفر صادق"                    weekend on hijri shawwal 25
+"شهادت امام جعفر صادق"                    public religious on hijri shawwal 25
 : Eid ul-Adha (Ghurban)
-"عید قربان"                               weekend on hijri thualhijjah 10
+"عید قربان"                               public religious on hijri thualhijjah 10
 : Eid al-Ghadeer
-"عید غدیر"                                weekend on hijri thualhijjah 18
+"عید غدیر"                                public religious on hijri thualhijjah 18
 
 :: Religious
 

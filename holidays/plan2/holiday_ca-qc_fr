@@ -17,26 +17,26 @@ language    "fr"
 :description "(please add description in source language) Provincial holiday file for Quebec"
 
 :: Public Holidays
-"Jour de l'An"                        weekend on january 1
-"Vendredi Saint"                      weekend on easter minus 2 days
-"Paques"                              weekend on easter
-"Lundi de Paques"                     weekend on easter plus 1 day
-"Jour de la Reine (Fete de Dollard)"  weekend on monday before may 24
-"Fete de la Confederation"            weekend on july 1
-"Jour du Travail"                     weekend on first monday in september
-"Action de Graces"                    weekend on second monday in october
-"Jour du Souvenir (Armistice 1918)"   weekend on november 11
-"Noel"                                weekend on december 25
+"Jour de l'An"                        public on january 1
+"Vendredi Saint"                      public religious on easter minus 2 days
+"Paques"                              public religious on easter
+"Lundi de Paques"                     public on easter plus 1 day
+"Jour de la Reine (Fete de Dollard)"  public on monday before may 24
+"Fete de la Confederation"            public on july 1
+"Jour du Travail"                     public on first monday in september
+"Action de Graces"                    public on second monday in october
+"Jour du Souvenir (Armistice 1918)"   public on november 11
+"Noel"                                public religious on december 25
 
 :: Religious Holidays
 
 :: Financial
 
 :: Cultural
-"St Valentin"                         on february 14
-"Fetes des Meres"                     on second sunday in may
-"Fetes des Peres"                     on third sunday in june
-"St-Jean Baptiste"                    on june 24
+"St Valentin"                         cultural on february 14
+"Fetes des Meres"                     cultural on second sunday in may
+"Fetes des Peres"                     cultural on third sunday in june
+"St-Jean Baptiste"                    cultural on june 24
 
 :: School
 

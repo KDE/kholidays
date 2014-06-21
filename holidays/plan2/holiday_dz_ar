@@ -21,26 +21,26 @@ description "National holiday file for Algeria"
 :: National Holidays
 
 : New Year's Day
-"رأس السنة الميلادية"            weekend on january 1
+"رأس السنة الميلادية"            public on january 1
 : Labour Day
-"عيد العمال"                   weekend on may 1
+"عيد العمال"                   public on may 1
 : Independence Day
-"عيد الإستقلال"           weekend on july 5
+"عيد الإستقلال"           public on july 5
 : Anniversary of the Revolution
-"ذكرى الثورة"                   weekend on november 1
+"ذكرى الثورة"                   public on november 1
 
 :: Religious Holidays
 
 : Islamic New Year
-"رأس السنة الهجرية"            weekend on hijri muharram 1
+"رأس السنة الهجرية"            public religious on hijri muharram 1
 : Ashura
-"عاشوراء"         weekend on hijri muharram 10
+"عاشوراء"         public religious on hijri muharram 10
 : Birthday of the Prophet Muhammad
-"المولد النبوى الشريف"         weekend on hijri rabialawal 12
+"المولد النبوى الشريف"         public religious on hijri rabialawal 12
 : Eid el-Fitr (End of Ramadan)
-"عيد الفطر"                    weekend on hijri shawwal 1 length 2
+"عيد الفطر"                    public religious on hijri shawwal 1 length 2
 : Eid al-Adha (End of the Hajj)
-"عيد الأضحى"                    weekend on hijri thualhijjah 10 length 2
+"عيد الأضحى"                    public religious on hijri thualhijjah 10 length 2
 
 :: Financial
 
@@ -53,12 +53,12 @@ description "National holiday file for Algeria"
 :: Seasons
 
 : Spring
-"الربيع"                 on march 20
+"الربيع"                 seasonal on march 20
 : Summer
-"الصيف"                       on june 21
+"الصيف"                       seasonal on june 21
 : Fall
-"الخريف"                   on september 23
+"الخريف"                   seasonal on september 23
 : Winter
-"الشتاء"                     on december 21
+"الشتاء"                     seasonal on december 21
 
 :: Name Days

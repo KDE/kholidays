@@ -1,23 +1,23 @@
-/* A Bison parser, made by GNU Bison 2.3.  */
+
+/* A Bison parser, made by GNU Bison 2.4.1.  */
 
 /* Skeleton implementation for Bison LALR(1) parsers in C++
-
-   Copyright (C) 2002, 2003, 2004, 2005, 2006 Free Software Foundation, Inc.
-
-   This program is free software; you can redistribute it and/or modify
+   
+      Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007, 2008 Free Software
+   Foundation, Inc.
+   
+   This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
-   the Free Software Foundation; either version 2, or (at your option)
-   any later version.
-
+   the Free Software Foundation, either version 3 of the License, or
+   (at your option) any later version.
+   
    This program is distributed in the hope that it will be useful,
    but WITHOUT ANY WARRANTY; without even the implied warranty of
    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
    GNU General Public License for more details.
-
+   
    You should have received a copy of the GNU General Public License
-   along with this program; if not, write to the Free Software
-   Foundation, Inc., 51 Franklin Street, Fifth Floor,
-   Boston, MA 02110-1301, USA.  */
+   along with this program.  If not, see <http://www.gnu.org/licenses/>.  */
 
 /* As a special exception, you may create a larger work that contains
    part or all of the Bison parser skeleton and distribute that work
@@ -28,17 +28,43 @@
    special exception, which will cause the skeleton and the resulting
    Bison output files to be licensed under the GNU General Public
    License without this special exception.
-
+   
    This special exception was added by the Free Software Foundation in
    version 2.2 of Bison.  */
 
 // Take the name prefix into account.
 #define yylex   KHolidayslex
 
+/* First part of user declarations.  */
+
+/* Line 311 of lalr1.cc  */
+#line 30 "holidayparserplan.ypp"
+ /*** C/C++ Declarations ***/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <pwd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <limits.h>
+#include <string>
+
+#include <QString>
+
+#include <KCalendarSystem>
+
+
+
+/* Line 311 of lalr1.cc  */
+#line 60 "holidayparserplan.cpp"
+
+
 #include "holidayparserplan.hpp"
 
 /* User implementation prologue.  */
-#line 108 "holidayparserplan.ypp"
+
+/* Line 317 of lalr1.cc  */
+#line 111 "holidayparserplan.ypp"
 
 
 #include "holidayparserdriverplan_p.h"
@@ -52,8 +78,8 @@
 
 
 
-/* Line 317 of lalr1.cc.  */
-#line 57 "holidayparserplan.cpp"
+/* Line 317 of lalr1.cc  */
+#line 83 "holidayparserplan.cpp"
 
 #ifndef YY_
 # if YYENABLE_NLS
@@ -70,13 +96,11 @@
 /* Suppress unused-variable warnings by "using" E.  */
 #define YYUSE(e) ((void) (e))
 
-/* A pseudo ostream that takes yydebug_ into account.  */
-# define YYCDEBUG							\
-  for (bool yydebugcond_ = yydebug_; yydebugcond_; yydebugcond_ = false)	\
-    (*yycdebug_)
-
 /* Enable debugging if requested.  */
 #if YYDEBUG
+
+/* A pseudo ostream that takes yydebug_ into account.  */
+# define YYCDEBUG if (yydebug_) (*yycdebug_)
 
 # define YY_SYMBOL_PRINT(Title, Type, Value, Location)	\
 do {							\
@@ -102,18 +126,29 @@ do {					\
 
 #else /* !YYDEBUG */
 
+# define YYCDEBUG if (false) std::cerr
 # define YY_SYMBOL_PRINT(Title, Type, Value, Location)
 # define YY_REDUCE_PRINT(Rule)
 # define YY_STACK_PRINT()
 
 #endif /* !YYDEBUG */
 
+#define yyerrok		(yyerrstatus_ = 0)
+#define yyclearin	(yychar = yyempty_)
+
 #define YYACCEPT	goto yyacceptlab
 #define YYABORT		goto yyabortlab
 #define YYERROR		goto yyerrorlab
+#define YYRECOVERING()  (!!yyerrstatus_)
 
-namespace KHolidays
-{
+
+/* Line 380 of lalr1.cc  */
+#line 1 "[Bison:b4_percent_define_default]"
+
+namespace KHolidays {
+
+/* Line 380 of lalr1.cc  */
+#line 152 "holidayparserplan.cpp"
 #if YYERROR_VERBOSE
 
   /* Return YYSTR after stripping away unnecessary quotes and
@@ -157,8 +192,11 @@ namespace KHolidays
 
   /// Build a parser object.
   HolidayParserPlan::HolidayParserPlan (class HolidayParserDriverPlan& driver_yyarg)
-    : yydebug_ (false),
+    :
+#if YYDEBUG
+      yydebug_ (false),
       yycdebug_ (&std::cerr),
+#endif
       driver (driver_yyarg)
   {
   }
@@ -196,7 +234,7 @@ namespace KHolidays
     yy_symbol_value_print_ (yytype, yyvaluep, yylocationp);
     *yycdebug_ << ')';
   }
-#endif /* ! YYDEBUG */
+#endif
 
   void
   HolidayParserPlan::yydestruct_ (const char* yymsg,
@@ -210,9 +248,16 @@ namespace KHolidays
 
     switch (yytype)
       {
-    case 7: /* STRING */
-      { free( ((*yyvaluep).sval) ); };
-      break;
+        case 6: /* "STRING" */
+
+/* Line 480 of lalr1.cc  */
+#line 96 "holidayparserplan.ypp"
+	{ free( (yyvaluep->sval) ); };
+
+/* Line 480 of lalr1.cc  */
+#line 259 "holidayparserplan.cpp"
+	break;
+
 	default:
 	  break;
       }
@@ -226,6 +271,7 @@ namespace KHolidays
     yylocation_stack_.pop (n);
   }
 
+#if YYDEBUG
   std::ostream&
   HolidayParserPlan::debug_stream () const
   {
@@ -250,12 +296,12 @@ namespace KHolidays
   {
     yydebug_ = l;
   }
-
+#endif
 
   int
   HolidayParserPlan::parse ()
   {
-    /// Look-ahead and look-ahead in internal form.
+    /// Lookahead and lookahead in internal form.
     int yychar = yyempty_;
     int yytoken = 0;
 
@@ -268,12 +314,12 @@ namespace KHolidays
     int yynerrs_ = 0;
     int yyerrstatus_ = 0;
 
-    /// Semantic value of the look-ahead.
+    /// Semantic value of the lookahead.
     semantic_type yylval;
-    /// Location of the look-ahead.
+    /// Location of the lookahead.
     location_type yylloc;
     /// The locations where the error started and ended.
-    location yyerror_range[2];
+    location_type yyerror_range[2];
 
     /// $$.
     semantic_type yyval;
@@ -286,14 +332,18 @@ namespace KHolidays
 
 
     /* User initialization code.  */
-    #line 70 "holidayparserplan.ypp"
+    
+/* Line 553 of lalr1.cc  */
+#line 70 "holidayparserplan.ypp"
 {
     // initialize the initial location object
     yylloc.begin.filename = driver.fileToParse();
     yylloc.end.filename = yylloc.begin.filename;
 }
-  /* Line 547 of yacc.c.  */
-#line 295 "holidayparserplan.cpp"
+
+/* Line 553 of lalr1.cc  */
+#line 346 "holidayparserplan.cpp"
+
     /* Initialize the stacks.  The initial state will be pushed in
        yynewstate, since the latter expects the semantical and the
        location values to have been already stored, initialize these
@@ -308,17 +358,22 @@ namespace KHolidays
   yynewstate:
     yystate_stack_.push (yystate);
     YYCDEBUG << "Entering state " << yystate << std::endl;
+
+    /* Accept?  */
+    if (yystate == yyfinal_)
+      goto yyacceptlab;
+
     goto yybackup;
 
     /* Backup.  */
   yybackup:
 
-    /* Try to take a decision without look-ahead.  */
+    /* Try to take a decision without lookahead.  */
     yyn = yypact_[yystate];
     if (yyn == yypact_ninf_)
       goto yydefault;
 
-    /* Read a look-ahead token.  */
+    /* Read a lookahead token.  */
     if (yychar == yyempty_)
       {
 	YYCDEBUG << "Reading a token: ";
@@ -354,16 +409,11 @@ namespace KHolidays
 	goto yyreduce;
       }
 
-    /* Accept?  */
-    if (yyn == yyfinal_)
-      goto yyacceptlab;
-
-    /* Shift the look-ahead token.  */
+    /* Shift the lookahead token.  */
     YY_SYMBOL_PRINT ("Shifting", yytoken, &yylval, &yylloc);
 
-    /* Discard the token being shifted unless it is eof.  */
-    if (yychar != yyeof_)
-      yychar = yyempty_;
+    /* Discard the token being shifted.  */
+    yychar = yyempty_;
 
     yysemantic_stack_.push (yylval);
     yylocation_stack_.push (yylloc);
@@ -409,424 +459,536 @@ namespace KHolidays
     switch (yyn)
       {
 	  case 4:
-#line 129 "holidayparserplan.ypp"
-    { driver.setFileCountryCode( QString() ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 132 "holidayparserplan.ypp"
+    { driver.setFileCountryCode( QString() ); }
     break;
 
   case 5:
-#line 130 "holidayparserplan.ypp"
-    {
-      char *s = yysemantic_stack_[(2) - (2)].sval;
-      driver.setFileCountryCode( QString::fromUtf8( s ) );
-      free( s );
-      yysemantic_stack_[(2) - (2)].sval = NULL;
-    }
+
+/* Line 678 of lalr1.cc  */
+#line 133 "holidayparserplan.ypp"
+    { char *s = (yysemantic_stack_[(2) - (2)].sval); driver.setFileCountryCode( QString::fromUtf8( s ) ); free( s ); (yysemantic_stack_[(2) - (2)].sval) = NULL; }
     break;
 
   case 6:
-#line 133 "holidayparserplan.ypp"
-    { driver.setFileLanguageCode( QString() ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 136 "holidayparserplan.ypp"
+    { driver.setFileLanguageCode( QString() ); }
     break;
 
   case 7:
-#line 134 "holidayparserplan.ypp"
-    {
-      char *s = yysemantic_stack_[(2) - (2)].sval;
-      driver.setFileLanguageCode( QString::fromUtf8( s ) );
-      free( s );
-      yysemantic_stack_[(2) - (2)].sval = NULL;
-    }
+
+/* Line 678 of lalr1.cc  */
+#line 137 "holidayparserplan.ypp"
+    { char *s = (yysemantic_stack_[(2) - (2)].sval); driver.setFileLanguageCode( QString::fromUtf8( s ) ); free( s ); (yysemantic_stack_[(2) - (2)].sval) = NULL; }
     break;
 
   case 8:
-#line 137 "holidayparserplan.ypp"
-    { driver.setFileName( QString() ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 140 "holidayparserplan.ypp"
+    { driver.setFileName( QString() ); }
     break;
 
   case 9:
-#line 138 "holidayparserplan.ypp"
-    {
-      char *s = yysemantic_stack_[(2) - (2)].sval;
-      driver.setFileName( QString::fromUtf8( s ) );
-      free( s );
-      yysemantic_stack_[(2) - (2)].sval = NULL;
-    }
+
+/* Line 678 of lalr1.cc  */
+#line 141 "holidayparserplan.ypp"
+    { char *s = (yysemantic_stack_[(2) - (2)].sval); driver.setFileName( QString::fromUtf8( s ) ); free( s ); (yysemantic_stack_[(2) - (2)].sval) = NULL; }
     break;
 
   case 10:
-#line 141 "holidayparserplan.ypp"
-    { driver.setFileDescription( QString() ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 144 "holidayparserplan.ypp"
+    { driver.setFileDescription( QString() ); }
     break;
 
   case 11:
-#line 142 "holidayparserplan.ypp"
-    {
-      char *s = yysemantic_stack_[(2) - (2)].sval;
-      driver.setFileDescription( QString::fromUtf8( s ) );
-      free( s );
-      yysemantic_stack_[(2) - (2)].sval = NULL;
-    }
+
+/* Line 678 of lalr1.cc  */
+#line 145 "holidayparserplan.ypp"
+    { char *s = (yysemantic_stack_[(2) - (2)].sval); driver.setFileDescription( QString::fromUtf8( s ) ); free( s ); (yysemantic_stack_[(2) - (2)].sval) = NULL; }
+    break;
+
+  case 14:
+
+/* Line 678 of lalr1.cc  */
+#line 152 "holidayparserplan.ypp"
+    { char *s = (yysemantic_stack_[(1) - (1)].sval); driver.setEventName( QString::fromUtf8( s ) ); free( s ); (yysemantic_stack_[(1) - (1)].sval) = NULL; }
+    break;
+
+  case 15:
+
+/* Line 678 of lalr1.cc  */
+#line 155 "holidayparserplan.ypp"
+    { driver.setEventCategory( (yysemantic_stack_[(1) - (1)].sval) ); }
     break;
 
   case 16:
-#line 153 "holidayparserplan.ypp"
-    { driver.setEventColorName( 0 ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 156 "holidayparserplan.ypp"
+    { driver.setEventCategory( (yysemantic_stack_[(2) - (1)].sval) ); }
     break;
 
   case 17:
-#line 154 "holidayparserplan.ypp"
-    { driver.setEventColorName( (yysemantic_stack_[(1) - (1)].ival) ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 159 "holidayparserplan.ypp"
+    { driver.setEventCalendarType( QLatin1String("gregorian") ); }
     break;
 
   case 18:
-#line 157 "holidayparserplan.ypp"
-    { driver.setEventColorDay( 0 ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 160 "holidayparserplan.ypp"
+    { driver.setEventCalendarType( QString::fromUtf8( (yysemantic_stack_[(1) - (1)].sval) ) ); }
     break;
 
   case 19:
-#line 158 "holidayparserplan.ypp"
-    { driver.setEventColorDay( (yysemantic_stack_[(1) - (1)].ival) ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 163 "holidayparserplan.ypp"
+    { driver.setFromEaster( (yysemantic_stack_[(3) - (2)].ival), (yysemantic_stack_[(3) - (3)].ival) ); }
     break;
 
   case 20:
-#line 161 "holidayparserplan.ypp"
-    {
-      char *s = yysemantic_stack_[(1) - (1)].sval;
-      driver.setEventName( QString::fromUtf8( s ) );
-      free( s );
-      yysemantic_stack_[(1) - (1)].sval = NULL;
-    }
+
+/* Line 678 of lalr1.cc  */
+#line 164 "holidayparserplan.ypp"
+    { driver.setFromPascha( (yysemantic_stack_[(3) - (2)].ival), (yysemantic_stack_[(3) - (3)].ival) ); }
     break;
 
   case 21:
-#line 164 "holidayparserplan.ypp"
-    { driver.setEventCalendarType( "gregorian" ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 165 "holidayparserplan.ypp"
+    { driver.setFromDate( (yysemantic_stack_[(4) - (2)].ival), (yysemantic_stack_[(4) - (3)].ival), (yysemantic_stack_[(4) - (4)].ival) ); }
     break;
 
   case 22:
-#line 165 "holidayparserplan.ypp"
-    { driver.setEventCalendarType( QString::fromUtf8( (yysemantic_stack_[(1) - (1)].sval) ) ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 166 "holidayparserplan.ypp"
+    { driver.setFromWeekdayInMonth( 1, (yysemantic_stack_[(3) - (1)].ival), 1, (yysemantic_stack_[(3) - (2)].ival), (yysemantic_stack_[(3) - (3)].ival) ); }
     break;
 
   case 23:
-#line 168 "holidayparserplan.ypp"
-    { driver.setFromEaster( (yysemantic_stack_[(3) - (2)].ival), (yysemantic_stack_[(3) - (3)].ival) ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 167 "holidayparserplan.ypp"
+    { driver.setFromWeekdayInMonth( (yysemantic_stack_[(4) - (1)].ival), (yysemantic_stack_[(4) - (2)].ival), 1, (yysemantic_stack_[(4) - (3)].ival), (yysemantic_stack_[(4) - (4)].ival) ); }
     break;
 
   case 24:
-#line 169 "holidayparserplan.ypp"
-    { driver.setFromPascha( (yysemantic_stack_[(3) - (2)].ival), (yysemantic_stack_[(3) - (3)].ival) ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 168 "holidayparserplan.ypp"
+    { driver.setFromWeekdayInMonth( (yysemantic_stack_[(6) - (1)].ival), (yysemantic_stack_[(6) - (2)].ival), (yysemantic_stack_[(6) - (4)].ival), (yysemantic_stack_[(6) - (5)].ival), (yysemantic_stack_[(6) - (6)].ival) ); }
     break;
 
   case 25:
-#line 170 "holidayparserplan.ypp"
-    { driver.setFromDate( (yysemantic_stack_[(4) - (2)].ival), (yysemantic_stack_[(4) - (3)].ival), (yysemantic_stack_[(4) - (4)].ival) ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 169 "holidayparserplan.ypp"
+    { driver.setFromRelativeWeekday( (yysemantic_stack_[(5) - (2)].ival), (yysemantic_stack_[(5) - (1)].ival), (yysemantic_stack_[(5) - (4)].ival), (yysemantic_stack_[(5) - (5)].ival) ); }
     break;
 
   case 26:
-#line 171 "holidayparserplan.ypp"
-    { driver.setFromWeekdayInMonth( 1, (yysemantic_stack_[(3) - (1)].ival), 1, (yysemantic_stack_[(3) - (2)].ival), (yysemantic_stack_[(3) - (3)].ival) ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 172 "holidayparserplan.ypp"
+    { (yyval.ival) =   0; }
     break;
 
   case 27:
-#line 172 "holidayparserplan.ypp"
-    { driver.setFromWeekdayInMonth( (yysemantic_stack_[(4) - (1)].ival), (yysemantic_stack_[(4) - (2)].ival), 1, (yysemantic_stack_[(4) - (3)].ival), (yysemantic_stack_[(4) - (4)].ival) ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 173 "holidayparserplan.ypp"
+    { (yyval.ival) =  (yysemantic_stack_[(2) - (2)].ival); }
     break;
 
   case 28:
-#line 173 "holidayparserplan.ypp"
-    { driver.setFromWeekdayInMonth( (yysemantic_stack_[(6) - (1)].ival), (yysemantic_stack_[(6) - (2)].ival), (yysemantic_stack_[(6) - (4)].ival), (yysemantic_stack_[(6) - (5)].ival), (yysemantic_stack_[(6) - (6)].ival) ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 174 "holidayparserplan.ypp"
+    { (yyval.ival) = -(yysemantic_stack_[(2) - (2)].ival); }
     break;
 
   case 29:
-#line 174 "holidayparserplan.ypp"
-    { driver.setFromRelativeWeekday( (yysemantic_stack_[(5) - (2)].ival), (yysemantic_stack_[(5) - (1)].ival), (yysemantic_stack_[(5) - (4)].ival), (yysemantic_stack_[(5) - (5)].ival) ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 177 "holidayparserplan.ypp"
+    { (yyval.ival) = 0; }
     break;
 
   case 30:
-#line 177 "holidayparserplan.ypp"
-    { (yyval.ival) =   0; ;}
+
+/* Line 678 of lalr1.cc  */
+#line 178 "holidayparserplan.ypp"
+    { (yyval.ival) = ( (yysemantic_stack_[(4) - (2)].ival) << 8 ) | (yysemantic_stack_[(4) - (4)].ival); }
     break;
 
   case 31:
-#line 178 "holidayparserplan.ypp"
-    { (yyval.ival) =  (yysemantic_stack_[(2) - (2)].ival); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 181 "holidayparserplan.ypp"
+    { (yyval.ival) = 0; }
     break;
 
   case 32:
-#line 179 "holidayparserplan.ypp"
-    { (yyval.ival) = -(yysemantic_stack_[(2) - (2)].ival); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 182 "holidayparserplan.ypp"
+    { (yyval.ival) = ( 1 << (yysemantic_stack_[(1) - (1)].ival) ); }
     break;
 
   case 33:
-#line 182 "holidayparserplan.ypp"
-    { (yyval.ival) = 0; ;}
+
+/* Line 678 of lalr1.cc  */
+#line 183 "holidayparserplan.ypp"
+    { (yyval.ival) = ( 1 << (yysemantic_stack_[(3) - (1)].ival) ) | (yysemantic_stack_[(3) - (3)].ival); }
     break;
 
   case 34:
-#line 183 "holidayparserplan.ypp"
-    { (yyval.ival) = ( (yysemantic_stack_[(4) - (2)].ival) << 8 ) | (yysemantic_stack_[(4) - (4)].ival); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 186 "holidayparserplan.ypp"
+    { (yyval.ival) =  1; }
     break;
 
   case 35:
-#line 186 "holidayparserplan.ypp"
-    { (yyval.ival) = 0; ;}
+
+/* Line 678 of lalr1.cc  */
+#line 187 "holidayparserplan.ypp"
+    { (yyval.ival) = (yysemantic_stack_[(2) - (2)].ival); }
     break;
 
   case 36:
-#line 187 "holidayparserplan.ypp"
-    { (yyval.ival) = ( 1 << (yysemantic_stack_[(1) - (1)].ival) ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 190 "holidayparserplan.ypp"
+    { driver.setEventDate( -99999, (yysemantic_stack_[(3) - (3)].ival), (yysemantic_stack_[(3) - (1)].ival) ); }
     break;
 
   case 37:
-#line 188 "holidayparserplan.ypp"
-    { (yyval.ival) = ( 1 << (yysemantic_stack_[(3) - (1)].ival) ) | (yysemantic_stack_[(3) - (3)].ival); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 191 "holidayparserplan.ypp"
+    { driver.setEventDate( -99999, (yysemantic_stack_[(4) - (3)].ival), (yysemantic_stack_[(4) - (1)].ival) ); }
     break;
 
   case 38:
-#line 191 "holidayparserplan.ypp"
-    { (yyval.ival) =  1; ;}
+
+/* Line 678 of lalr1.cc  */
+#line 192 "holidayparserplan.ypp"
+    { driver.setEventDate(     (yysemantic_stack_[(5) - (5)].ival), (yysemantic_stack_[(5) - (3)].ival), (yysemantic_stack_[(5) - (1)].ival) ); }
     break;
 
   case 39:
-#line 192 "holidayparserplan.ypp"
-    { (yyval.ival) = (yysemantic_stack_[(2) - (2)].ival); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 193 "holidayparserplan.ypp"
+    { driver.setEventDate( -99999, (yysemantic_stack_[(3) - (1)].ival), (yysemantic_stack_[(3) - (3)].ival) ); }
     break;
 
   case 40:
-#line 195 "holidayparserplan.ypp"
-    { driver.setEventDate( -99999, (yysemantic_stack_[(3) - (3)].ival), (yysemantic_stack_[(3) - (1)].ival) ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 194 "holidayparserplan.ypp"
+    { driver.setEventDate(     (yysemantic_stack_[(5) - (5)].ival), (yysemantic_stack_[(5) - (1)].ival), (yysemantic_stack_[(5) - (3)].ival) ); }
     break;
 
   case 41:
-#line 196 "holidayparserplan.ypp"
-    { driver.setEventDate( -99999, (yysemantic_stack_[(4) - (3)].ival), (yysemantic_stack_[(4) - (1)].ival) ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 195 "holidayparserplan.ypp"
+    { driver.setEventDate( -99999, (yysemantic_stack_[(2) - (1)].ival), (yysemantic_stack_[(2) - (2)].ival) ); }
     break;
 
   case 42:
-#line 197 "holidayparserplan.ypp"
-    { driver.setEventDate(     (yysemantic_stack_[(5) - (5)].ival), (yysemantic_stack_[(5) - (3)].ival), (yysemantic_stack_[(5) - (1)].ival) ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 196 "holidayparserplan.ypp"
+    { driver.setEventDate(     (yysemantic_stack_[(3) - (3)].ival), (yysemantic_stack_[(3) - (1)].ival), (yysemantic_stack_[(3) - (2)].ival) ); }
     break;
 
   case 43:
-#line 198 "holidayparserplan.ypp"
-    { driver.setEventDate( -99999, (yysemantic_stack_[(3) - (1)].ival), (yysemantic_stack_[(3) - (3)].ival) ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 197 "holidayparserplan.ypp"
+    { driver.setEventDate( -99999, (yysemantic_stack_[(2) - (2)].ival), (yysemantic_stack_[(2) - (1)].ival) ); }
     break;
 
   case 44:
-#line 199 "holidayparserplan.ypp"
-    { driver.setEventDate(     (yysemantic_stack_[(5) - (5)].ival), (yysemantic_stack_[(5) - (1)].ival), (yysemantic_stack_[(5) - (3)].ival) ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 198 "holidayparserplan.ypp"
+    { driver.setEventDate(     (yysemantic_stack_[(3) - (3)].ival), (yysemantic_stack_[(3) - (2)].ival), (yysemantic_stack_[(3) - (1)].ival) ); }
     break;
 
   case 45:
-#line 200 "holidayparserplan.ypp"
-    { driver.setEventDate( -99999, (yysemantic_stack_[(2) - (1)].ival), (yysemantic_stack_[(2) - (2)].ival) ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 199 "holidayparserplan.ypp"
+    { driver.setEventDate(     (yysemantic_stack_[(4) - (4)].ival), (yysemantic_stack_[(4) - (3)].ival), (yysemantic_stack_[(4) - (1)].ival) ); }
     break;
 
   case 46:
-#line 201 "holidayparserplan.ypp"
-    { driver.setEventDate(     (yysemantic_stack_[(3) - (3)].ival), (yysemantic_stack_[(3) - (1)].ival), (yysemantic_stack_[(3) - (2)].ival) ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 200 "holidayparserplan.ypp"
+    { driver.setEventDate( (yysemantic_stack_[(1) - (1)].ival) ); }
     break;
 
   case 47:
-#line 202 "holidayparserplan.ypp"
-    { driver.setEventDate( -99999, (yysemantic_stack_[(2) - (2)].ival), (yysemantic_stack_[(2) - (1)].ival) ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 203 "holidayparserplan.ypp"
+    { char *s = (yysemantic_stack_[(1) - (1)].sval); (yyval.ival) = driver.julianDayFromEventName( s ); free( s ); (yysemantic_stack_[(1) - (1)].sval) = NULL; }
     break;
 
   case 48:
-#line 203 "holidayparserplan.ypp"
-    { driver.setEventDate(     (yysemantic_stack_[(3) - (3)].ival), (yysemantic_stack_[(3) - (2)].ival), (yysemantic_stack_[(3) - (1)].ival) ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 204 "holidayparserplan.ypp"
+    { (yyval.ival) = driver.julianDayFromEaster(); }
     break;
 
   case 49:
-#line 204 "holidayparserplan.ypp"
-    { driver.setEventDate(     (yysemantic_stack_[(4) - (4)].ival), (yysemantic_stack_[(4) - (3)].ival), (yysemantic_stack_[(4) - (1)].ival) ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 205 "holidayparserplan.ypp"
+    { (yyval.ival) = driver.julianDayFromPascha(); }
     break;
 
   case 50:
-#line 205 "holidayparserplan.ypp"
-    { driver.setEventDate( (yysemantic_stack_[(1) - (1)].ival) ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 206 "holidayparserplan.ypp"
+    { (yyval.ival) = driver.julianDayFromMonthDay( (yysemantic_stack_[(3) - (3)].ival), (yysemantic_stack_[(3) - (1)].ival) ); }
     break;
 
   case 51:
-#line 208 "holidayparserplan.ypp"
-    {
-      char *s = yysemantic_stack_[(1) - (1)].sval;
-      (yyval.ival) = driver.julianDayFromEventName( s );
-      free( s );
-      yysemantic_stack_[(1) - (1)].sval = NULL;
-    }
+
+/* Line 678 of lalr1.cc  */
+#line 207 "holidayparserplan.ypp"
+    { (yyval.ival) = driver.julianDayFromMonthDay( (yysemantic_stack_[(4) - (3)].ival), (yysemantic_stack_[(4) - (1)].ival) ); }
     break;
 
   case 52:
-#line 209 "holidayparserplan.ypp"
-    { (yyval.ival) = driver.julianDayFromEaster(); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 208 "holidayparserplan.ypp"
+    { (yyval.ival) = driver.julianDayFromMonthDay( (yysemantic_stack_[(3) - (1)].ival), (yysemantic_stack_[(3) - (3)].ival) ); }
     break;
 
   case 53:
-#line 210 "holidayparserplan.ypp"
-    { (yyval.ival) = driver.julianDayFromPascha(); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 209 "holidayparserplan.ypp"
+    { (yyval.ival) = driver.julianDayFromMonthDay( (yysemantic_stack_[(2) - (2)].ival), (yysemantic_stack_[(2) - (1)].ival) ); }
     break;
 
   case 54:
-#line 211 "holidayparserplan.ypp"
-    { (yyval.ival) = driver.julianDayFromMonthDay( (yysemantic_stack_[(3) - (3)].ival), (yysemantic_stack_[(3) - (1)].ival) ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 210 "holidayparserplan.ypp"
+    { (yyval.ival) = driver.julianDayFromMonthDay( (yysemantic_stack_[(2) - (1)].ival), (yysemantic_stack_[(2) - (2)].ival) ); }
     break;
 
   case 55:
-#line 212 "holidayparserplan.ypp"
-    { (yyval.ival) = driver.julianDayFromMonthDay( (yysemantic_stack_[(4) - (3)].ival), (yysemantic_stack_[(4) - (1)].ival) ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 211 "holidayparserplan.ypp"
+    { (yyval.ival) = driver.julianDayFromRelativeWeekday( (yysemantic_stack_[(3) - (2)].ival), (yysemantic_stack_[(3) - (1)].ival), (yysemantic_stack_[(3) - (3)].ival) ); }
     break;
 
   case 56:
-#line 213 "holidayparserplan.ypp"
-    { (yyval.ival) = driver.julianDayFromMonthDay( (yysemantic_stack_[(3) - (1)].ival), (yysemantic_stack_[(3) - (3)].ival) ); ;}
-    break;
 
-  case 57:
-#line 214 "holidayparserplan.ypp"
-    { (yyval.ival) = driver.julianDayFromMonthDay( (yysemantic_stack_[(2) - (2)].ival), (yysemantic_stack_[(2) - (1)].ival) ); ;}
+/* Line 678 of lalr1.cc  */
+#line 212 "holidayparserplan.ypp"
+    { (yyval.ival) = driver.julianDayFromWeekdayInMonth( (yysemantic_stack_[(4) - (1)].ival), (yysemantic_stack_[(4) - (2)].ival), (yysemantic_stack_[(4) - (4)].ival) ); }
     break;
 
   case 58:
-#line 215 "holidayparserplan.ypp"
-    { (yyval.ival) = driver.julianDayFromMonthDay( (yysemantic_stack_[(2) - (1)].ival), (yysemantic_stack_[(2) - (2)].ival) ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 216 "holidayparserplan.ypp"
+    { (yyval.ival) = driver.adjustedMonthNumber( (yysemantic_stack_[(1) - (1)].ival) ); }
     break;
 
   case 59:
-#line 216 "holidayparserplan.ypp"
-    { (yyval.ival) = driver.julianDayFromRelativeWeekday( (yysemantic_stack_[(3) - (2)].ival), (yysemantic_stack_[(3) - (1)].ival), (yysemantic_stack_[(3) - (3)].ival) ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 219 "holidayparserplan.ypp"
+    { (yyval.ival) = driver.adjustedMonthNumber( (yysemantic_stack_[(1) - (1)].ival) ); }
     break;
 
   case 60:
-#line 217 "holidayparserplan.ypp"
-    { (yyval.ival) = driver.julianDayFromWeekdayInMonth( (yysemantic_stack_[(4) - (1)].ival), (yysemantic_stack_[(4) - (2)].ival), (yysemantic_stack_[(4) - (4)].ival) ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 222 "holidayparserplan.ypp"
+    { (yyval.ival) = (yysemantic_stack_[(1) - (1)].ival); }
+    break;
+
+  case 61:
+
+/* Line 678 of lalr1.cc  */
+#line 223 "holidayparserplan.ypp"
+    { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) || (yysemantic_stack_[(3) - (3)].ival); }
     break;
 
   case 62:
-#line 221 "holidayparserplan.ypp"
-    { (yyval.ival) = driver.adjustedMonthNumber( (yysemantic_stack_[(1) - (1)].ival) ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 224 "holidayparserplan.ypp"
+    { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) && (yysemantic_stack_[(3) - (3)].ival); }
     break;
 
   case 63:
-#line 224 "holidayparserplan.ypp"
-    { (yyval.ival) = driver.adjustedMonthNumber( (yysemantic_stack_[(1) - (1)].ival) ); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 225 "holidayparserplan.ypp"
+    { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) == (yysemantic_stack_[(3) - (3)].ival); }
     break;
 
   case 64:
-#line 227 "holidayparserplan.ypp"
-    { (yyval.ival) = (yysemantic_stack_[(1) - (1)].ival); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 226 "holidayparserplan.ypp"
+    { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) != (yysemantic_stack_[(3) - (3)].ival); }
     break;
 
   case 65:
-#line 228 "holidayparserplan.ypp"
-    { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) || (yysemantic_stack_[(3) - (3)].ival); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 227 "holidayparserplan.ypp"
+    { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) <= (yysemantic_stack_[(3) - (3)].ival); }
     break;
 
   case 66:
-#line 229 "holidayparserplan.ypp"
-    { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) && (yysemantic_stack_[(3) - (3)].ival); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 228 "holidayparserplan.ypp"
+    { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) >= (yysemantic_stack_[(3) - (3)].ival); }
     break;
 
   case 67:
-#line 230 "holidayparserplan.ypp"
-    { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) == (yysemantic_stack_[(3) - (3)].ival); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 229 "holidayparserplan.ypp"
+    { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) <  (yysemantic_stack_[(3) - (3)].ival); }
     break;
 
   case 68:
-#line 231 "holidayparserplan.ypp"
-    { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) != (yysemantic_stack_[(3) - (3)].ival); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 230 "holidayparserplan.ypp"
+    { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) >  (yysemantic_stack_[(3) - (3)].ival); }
     break;
 
   case 69:
-#line 232 "holidayparserplan.ypp"
-    { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) <= (yysemantic_stack_[(3) - (3)].ival); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 231 "holidayparserplan.ypp"
+    { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) +  (yysemantic_stack_[(3) - (3)].ival); }
     break;
 
   case 70:
-#line 233 "holidayparserplan.ypp"
-    { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) >= (yysemantic_stack_[(3) - (3)].ival); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 232 "holidayparserplan.ypp"
+    { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) -  (yysemantic_stack_[(3) - (3)].ival); }
     break;
 
   case 71:
-#line 234 "holidayparserplan.ypp"
-    { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) <  (yysemantic_stack_[(3) - (3)].ival); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 233 "holidayparserplan.ypp"
+    { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) *  (yysemantic_stack_[(3) - (3)].ival); }
     break;
 
   case 72:
-#line 235 "holidayparserplan.ypp"
-    { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) >  (yysemantic_stack_[(3) - (3)].ival); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 234 "holidayparserplan.ypp"
+    { (yyval.ival) = (yysemantic_stack_[(3) - (3)].ival) ?  (yysemantic_stack_[(3) - (1)].ival) / (yysemantic_stack_[(3) - (3)].ival) : 0; }
     break;
 
   case 73:
-#line 236 "holidayparserplan.ypp"
-    { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) +  (yysemantic_stack_[(3) - (3)].ival); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 235 "holidayparserplan.ypp"
+    { (yyval.ival) = (yysemantic_stack_[(3) - (3)].ival) ?  (yysemantic_stack_[(3) - (1)].ival) % (yysemantic_stack_[(3) - (3)].ival) : 0; }
     break;
 
   case 74:
-#line 237 "holidayparserplan.ypp"
-    { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) -  (yysemantic_stack_[(3) - (3)].ival); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 236 "holidayparserplan.ypp"
+    { (yyval.ival) = (yysemantic_stack_[(5) - (1)].ival) ?  (yysemantic_stack_[(5) - (3)].ival) : (yysemantic_stack_[(5) - (5)].ival); }
     break;
 
   case 75:
-#line 238 "holidayparserplan.ypp"
-    { (yyval.ival) = (yysemantic_stack_[(3) - (1)].ival) *  (yysemantic_stack_[(3) - (3)].ival); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 237 "holidayparserplan.ypp"
+    { (yyval.ival) = !(yysemantic_stack_[(2) - (2)].ival); }
     break;
 
   case 76:
-#line 239 "holidayparserplan.ypp"
-    { (yyval.ival) = (yysemantic_stack_[(3) - (3)].ival) ?  (yysemantic_stack_[(3) - (1)].ival) / (yysemantic_stack_[(3) - (3)].ival) : 0; ;}
+
+/* Line 678 of lalr1.cc  */
+#line 238 "holidayparserplan.ypp"
+    { (yyval.ival) = (yysemantic_stack_[(3) - (2)].ival); }
     break;
 
   case 77:
-#line 240 "holidayparserplan.ypp"
-    { (yyval.ival) = (yysemantic_stack_[(3) - (3)].ival) ?  (yysemantic_stack_[(3) - (1)].ival) % (yysemantic_stack_[(3) - (3)].ival) : 0; ;}
+
+/* Line 678 of lalr1.cc  */
+#line 241 "holidayparserplan.ypp"
+    { (yyval.ival) = (yysemantic_stack_[(3) - (2)].ival); }
     break;
 
   case 78:
-#line 241 "holidayparserplan.ypp"
-    { (yyval.ival) = (yysemantic_stack_[(5) - (1)].ival) ?  (yysemantic_stack_[(5) - (3)].ival) : (yysemantic_stack_[(5) - (5)].ival); ;}
-    break;
 
-  case 79:
+/* Line 678 of lalr1.cc  */
 #line 242 "holidayparserplan.ypp"
-    { (yyval.ival) = !(yysemantic_stack_[(2) - (2)].ival); ;}
+    { (yyval.ival) = (yysemantic_stack_[(1) - (1)].ival); }
     break;
 
   case 80:
-#line 243 "holidayparserplan.ypp"
-    { (yyval.ival) = (yysemantic_stack_[(3) - (2)].ival); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 246 "holidayparserplan.ypp"
+    { (yyval.ival) = -(yysemantic_stack_[(2) - (2)].ival); }
     break;
 
   case 81:
-#line 246 "holidayparserplan.ypp"
-    { (yyval.ival) = (yysemantic_stack_[(3) - (2)].ival); ;}
+
+/* Line 678 of lalr1.cc  */
+#line 247 "holidayparserplan.ypp"
+    { (yyval.ival) = driver.parseYear(); }
     break;
 
   case 82:
-#line 247 "holidayparserplan.ypp"
-    { (yyval.ival) = (yysemantic_stack_[(1) - (1)].ival); ;}
-    break;
 
-  case 84:
-#line 251 "holidayparserplan.ypp"
-    { (yyval.ival) = -(yysemantic_stack_[(2) - (2)].ival); ;}
-    break;
-
-  case 85:
-#line 252 "holidayparserplan.ypp"
-    { (yyval.ival) = driver.parseYear(); ;}
-    break;
-
-  case 86:
-#line 253 "holidayparserplan.ypp"
-    { (yyval.ival) = driver.isLeapYear( (yysemantic_stack_[(2) - (2)].ival) ); ;}
+/* Line 678 of lalr1.cc  */
+#line 248 "holidayparserplan.ypp"
+    { (yyval.ival) = driver.isLeapYear( (yysemantic_stack_[(2) - (2)].ival) ); }
     break;
 
 
-    /* Line 675 of lalr1.cc.  */
-#line 797 "holidayparserplan.cpp"
-	default: break;
+
+/* Line 678 of lalr1.cc  */
+#line 990 "holidayparserplan.cpp"
+	default:
+          break;
       }
     YY_SYMBOL_PRINT ("-> $$ =", yyr1_[yyn], &yyval, &yyloc);
 
@@ -861,7 +1023,7 @@ namespace KHolidays
     yyerror_range[0] = yylloc;
     if (yyerrstatus_ == 3)
       {
-	/* If just tried and failed to reuse look-ahead token after an
+	/* If just tried and failed to reuse lookahead token after an
 	 error, discard it.  */
 
 	if (yychar <= yyeof_)
@@ -877,7 +1039,7 @@ namespace KHolidays
 	  }
       }
 
-    /* Else will try to reuse look-ahead token after shifting the error
+    /* Else will try to reuse lookahead token after shifting the error
        token.  */
     goto yyerrlab1;
 
@@ -934,19 +1096,16 @@ namespace KHolidays
 	YY_STACK_PRINT ();
       }
 
-    if (yyn == yyfinal_)
-      goto yyacceptlab;
-
     yyerror_range[1] = yylloc;
     // Using YYLLOC is tempting, but would change the location of
-    // the look-ahead.  YYLOC is available though.
+    // the lookahead.  YYLOC is available though.
     YYLLOC_DEFAULT (yyloc, (yyerror_range - 1), 2);
     yysemantic_stack_.push (yylval);
     yylocation_stack_.push (yyloc);
 
     /* Shift the error token.  */
     YY_SYMBOL_PRINT ("Shifting", yystos_[yyn],
-		   &yysemantic_stack_[0], &yylocation_stack_[0]);
+		     &yysemantic_stack_[0], &yylocation_stack_[0]);
 
     yystate = yyn;
     goto yynewstate;
@@ -962,7 +1121,7 @@ namespace KHolidays
     goto yyreturn;
 
   yyreturn:
-    if (yychar != yyeof_ && yychar != yyempty_)
+    if (yychar != yyempty_)
       yydestruct_ ("Cleanup: discarding lookahead", yytoken, &yylval, &yylloc);
 
     /* Do not reclaim the symbols of the rule which action triggered
@@ -1032,26 +1191,25 @@ namespace KHolidays
 
   /* YYPACT[STATE-NUM] -- Index in YYTABLE of the portion describing
      STATE-NUM.  */
-  const short int HolidayParserPlan::yypact_ninf_ = -130;
+  const signed char HolidayParserPlan::yypact_ninf_ = -70;
   const short int
   HolidayParserPlan::yypact_[] =
   {
-       -22,    10,    24,  -130,    -1,  -130,  -130,     6,    29,    12,
-    -130,    25,  -130,    32,    13,  -130,    39,  -130,    60,  -130,
-    -130,    62,  -130,  -130,    72,  -130,   115,  -130,  -130,   128,
-    -130,   131,    -9,    -9,    66,    34,  -130,    -9,    47,   131,
-     117,  -130,    34,    34,    74,    61,  -130,    74,    74,  -130,
-      34,    83,   157,  -130,    77,   131,   131,    11,   122,   131,
-     206,   206,    34,  -130,    -9,   126,  -130,  -130,    50,   131,
-    -130,  -130,  -130,    51,    64,   131,     3,    34,    34,    34,
-      34,    34,    34,    34,    34,    34,    34,    34,    34,    34,
-      34,  -130,    90,    74,    65,  -130,    61,    74,   131,    63,
-    -130,  -130,  -130,   206,    74,   131,  -130,   131,  -130,  -130,
-      93,    61,   248,   248,   248,   248,   248,   248,   227,   248,
-     114,   114,    50,    50,    50,   184,    79,    94,  -130,   131,
-      -9,  -130,  -130,    34,  -130,  -130,  -130,    61,    73,    34,
-      90,    90,  -130,    74,   206,  -130,  -130,  -130,  -130,  -130,
-    -130
+       -24,    -1,    25,   -70,     1,   -70,   -70,    39,    42,    38,
+     -70,    65,   -70,    64,    51,   -70,     5,   -70,    75,   -70,
+     -70,   -70,   114,   -70,   -70,   -70,   129,   -70,     6,    30,
+      30,    84,   134,   -70,    30,    58,     6,    -2,   -70,   134,
+     134,    77,    63,   -70,    77,    77,   -70,   134,    85,   160,
+     -70,    81,     6,     6,    12,   131,     6,   209,   209,   134,
+     -70,    30,    43,   -70,   -70,    62,     6,   -70,   -70,   -70,
+      54,    67,     6,     3,   134,   134,   134,   134,   134,   134,
+     134,   134,   134,   134,   134,   134,   134,   134,   -70,    98,
+      77,    71,   -70,    63,    77,     6,    70,   -70,   -70,   -70,
+     209,    77,     6,   -70,     6,   -70,   -70,   102,    63,   251,
+     251,   251,   251,   251,   251,   230,   251,   116,   116,    62,
+      62,    62,   187,    86,    99,   -70,     6,    30,   -70,   -70,
+     134,   -70,   -70,   -70,    63,    80,   134,    98,    98,   -70,
+      77,   209,   -70,   -70,   -70,   -70,   -70,   -70
   };
 
   /* YYDEFACT[S] -- default rule to reduce with in state S when YYTABLE
@@ -1060,31 +1218,30 @@ namespace KHolidays
   const unsigned char
   HolidayParserPlan::yydefact_[] =
   {
-         4,     0,     0,    12,     6,     5,     1,    14,     0,     8,
-      15,    16,     7,     0,    10,    17,     0,     9,     0,     3,
-      20,    18,    11,    19,    21,    22,     0,    83,    63,    30,
-      85,     0,    30,    30,     0,     0,    13,    30,     0,    61,
-      50,    82,     0,     0,    38,     0,    86,    38,    38,    84,
-       0,     0,     0,    64,    33,     0,    45,    30,     0,    47,
-      31,    32,     0,    26,    30,    50,    23,    24,    79,     0,
-      51,    52,    53,     0,     0,    61,    62,     0,     0,     0,
-       0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
-       0,    81,    35,    38,    43,    46,     0,    38,    63,    40,
-      61,    62,    48,    39,    38,     0,    80,     0,    58,    57,
-       0,     0,    67,    68,    69,    70,    71,    72,    65,    66,
-      74,    73,    75,    76,    77,     0,    36,     0,    25,     0,
-      30,    27,    49,    41,    29,    59,    56,     0,    54,     0,
-      35,    35,    44,    38,    42,    60,    55,    78,    37,    34,
-      28
+         4,     0,     0,    12,     6,     5,     1,     2,     0,     8,
+      14,     0,     7,     0,    10,    15,    17,     9,     0,     3,
+      16,    18,     0,    11,    79,    59,    26,    81,     0,    26,
+      26,     0,     0,    13,    26,     0,    57,    46,    78,     0,
+       0,    34,     0,    82,    34,    34,    80,     0,     0,     0,
+      60,    29,     0,    41,    26,     0,    43,    27,    28,     0,
+      22,    26,    46,    19,    20,    75,     0,    47,    48,    49,
+       0,     0,    57,    58,     0,     0,     0,     0,     0,     0,
+       0,     0,     0,     0,     0,     0,     0,     0,    77,    31,
+      34,    39,    42,     0,    34,    59,    36,    57,    58,    44,
+      35,    34,     0,    76,     0,    54,    53,     0,     0,    63,
+      64,    65,    66,    67,    68,    61,    62,    70,    69,    71,
+      72,    73,     0,    32,     0,    21,     0,    26,    23,    45,
+      37,    25,    55,    52,     0,    50,     0,    31,    31,    40,
+      34,    38,    56,    51,    74,    33,    30,    24
   };
 
   /* YYPGOTO[NTERM-NUM].  */
-  const short int
+  const signed char
   HolidayParserPlan::yypgoto_[] =
   {
-      -130,  -130,  -130,  -130,  -130,  -130,  -130,  -130,  -130,  -130,
-    -130,  -130,  -130,  -130,   -23,  -130,  -129,   -20,    68,  -130,
-     -13,   106,   -27,   -26,  -130
+       -70,   -70,   -70,   -70,   -70,   -70,   -70,   -70,   -70,   -70,
+     -70,   -70,   -19,   -70,   -69,   -16,    79,   -70,    -9,   111,
+     -23,   -22,   -70
   };
 
   /* YYDEFGOTO[NTERM-NUM].  */
@@ -1092,81 +1249,81 @@ namespace KHolidays
   HolidayParserPlan::yydefgoto_[] =
   {
         -1,     2,     3,     4,     9,    14,    19,     7,    11,    16,
-      24,    21,    26,    36,    44,    93,   127,    63,    37,    73,
-      38,   100,    52,    53,    41
+      22,    33,    41,    90,   124,    60,    34,    70,    35,    97,
+      49,    50,    38
   };
 
   /* YYTABLE[YYPACT[STATE-NUM]].  What to do in state STATE-NUM.  If
      positive, shift that token.  If negative, reduce the rule which
      number is the opposite.  If zero, do what YYDEFACT says.  */
-  const signed char HolidayParserPlan::yytable_ninf_ = -63;
+  const signed char HolidayParserPlan::yytable_ninf_ = -59;
   const short int
   HolidayParserPlan::yytable_[] =
   {
-        40,    42,    43,    45,     1,    46,    -2,   109,   110,    47,
-      48,   148,   149,    56,    54,    60,    61,     5,    10,    65,
-      96,    42,    43,    68,     6,    76,     8,    66,    67,    94,
-      95,    15,   101,   102,    97,   103,    12,    27,    74,    17,
-      13,   104,    18,   105,   111,    99,    20,    30,    31,   108,
-     112,   113,   114,   115,   116,   117,   118,   119,   120,   121,
-     122,   123,   124,   125,    27,    28,    34,    22,    23,    49,
-     101,    50,   132,   128,    30,    31,    51,   131,    35,   135,
-      25,   136,    55,   130,   134,   101,    27,    28,    69,    90,
-      70,    62,    92,    34,   106,   126,    30,    31,   138,   107,
-     129,    71,   137,   142,   133,    35,   144,   143,    72,   140,
-     141,   101,   147,    64,   146,    34,     0,     0,    27,    28,
-      29,    28,    57,   150,   145,    27,    98,    35,    30,    31,
-      28,    27,    39,    32,    27,    30,    31,     0,    42,    43,
-      33,    30,    31,     0,    30,    31,    59,    34,    87,    88,
-      89,    39,   -62,    90,    34,     0,     0,    75,    58,    35,
-      34,   -62,     0,    34,     0,     0,    35,    58,     0,     0,
-       0,    59,    35,     0,     0,    35,    77,    78,    79,    80,
-      81,    82,     0,     0,     0,     0,     0,    83,    84,    85,
-      86,    87,    88,    89,     0,     0,    90,     0,     0,     0,
-       0,     0,    91,    77,    78,    79,    80,    81,    82,     0,
-       0,     0,     0,     0,    83,    84,    85,    86,    87,    88,
-      89,     0,     0,    90,   139,    77,    78,    79,    80,    81,
-      82,     0,     0,     0,     0,     0,    83,    84,    85,    86,
-      87,    88,    89,     0,     0,    90,    77,    78,    79,    80,
-      81,    82,     0,     0,     0,     0,     0,     0,    84,    85,
-      86,    87,    88,    89,     0,     0,    90,    77,    78,    79,
-      80,    81,    82,     0,     0,     0,     0,     0,     0,     0,
-      85,    86,    87,    88,    89,     0,     0,    90
+        37,     1,    25,    54,    42,     5,    43,   106,   107,    24,
+      44,    45,    20,    21,    53,    51,    57,    58,    27,    28,
+      62,    93,    39,    40,    65,     6,    73,     8,    63,    64,
+      91,    92,   -58,    98,    99,    94,   100,    31,    55,    71,
+      39,    40,   101,   108,   102,    10,    96,    25,    12,    32,
+     105,   109,   110,   111,   112,   113,   114,   115,   116,   117,
+     118,   119,   120,   121,   122,    13,    24,    25,   145,   146,
+      17,    98,    15,   129,   125,    27,    28,   -58,   128,    18,
+     132,    23,   133,    55,   127,   131,    98,    46,    24,    25,
+      66,    67,    52,    59,    31,    89,   103,    27,    28,   135,
+      87,   104,    68,   123,   139,   126,    32,   141,   140,    69,
+     130,   134,    98,   144,   138,   137,    31,    24,    25,    26,
+     143,    61,     0,     0,   147,   142,    27,    28,    32,     0,
+       0,    29,    24,    36,    24,    95,     0,    24,    30,    39,
+      40,    27,    28,    27,    28,    31,    27,    28,    56,    84,
+      85,    86,     0,    36,    87,     0,     0,    32,     0,    72,
+      31,     0,    31,     0,     0,    31,     0,     0,     0,     0,
+      47,     0,    32,    56,    32,    48,     0,    32,    74,    75,
+      76,    77,    78,    79,     0,     0,     0,     0,     0,    80,
+      81,    82,    83,    84,    85,    86,     0,     0,    87,     0,
+       0,     0,     0,     0,    88,    74,    75,    76,    77,    78,
+      79,     0,     0,     0,     0,     0,    80,    81,    82,    83,
+      84,    85,    86,     0,     0,    87,   136,    74,    75,    76,
+      77,    78,    79,     0,     0,     0,     0,     0,    80,    81,
+      82,    83,    84,    85,    86,     0,     0,    87,    74,    75,
+      76,    77,    78,    79,     0,     0,     0,     0,     0,     0,
+      81,    82,    83,    84,    85,    86,     0,     0,    87,    74,
+      75,    76,    77,    78,    79,     0,     0,     0,     0,     0,
+       0,     0,    82,    83,    84,    85,    86,     0,     0,    87
   };
 
   /* YYCHECK.  */
   const short int
   HolidayParserPlan::yycheck_[] =
   {
-        26,    10,    11,    29,    26,    31,     0,     4,     5,    32,
-      33,   140,   141,    39,    37,    42,    43,     7,    12,    45,
-       9,    10,    11,    50,     0,    51,    27,    47,    48,    55,
-      56,     6,    58,    59,    57,    62,     7,     3,    51,     7,
-      28,    64,    29,    69,    41,    58,     7,    13,    14,    75,
-      77,    78,    79,    80,    81,    82,    83,    84,    85,    86,
-      87,    88,    89,    90,     3,     4,    32,     7,     6,     3,
-      96,    37,    98,    93,    13,    14,    42,    97,    44,   105,
-       8,   107,    35,    96,   104,   111,     3,     4,     5,    39,
-       7,    17,    15,    32,    43,     5,    13,    14,   111,    35,
-      35,    18,     9,   129,    41,    44,   133,   130,    25,    30,
-      16,   137,   139,    45,    41,    32,    -1,    -1,     3,     4,
-       5,     4,     5,   143,   137,     3,     4,    44,    13,    14,
-       4,     3,    26,    18,     3,    13,    14,    -1,    10,    11,
-      25,    13,    14,    -1,    13,    14,    40,    32,    34,    35,
-      36,    45,    35,    39,    32,    -1,    -1,    51,    41,    44,
-      32,    35,    -1,    32,    -1,    -1,    44,    41,    -1,    -1,
-      -1,    65,    44,    -1,    -1,    44,    19,    20,    21,    22,
-      23,    24,    -1,    -1,    -1,    -1,    -1,    30,    31,    32,
-      33,    34,    35,    36,    -1,    -1,    39,    -1,    -1,    -1,
-      -1,    -1,    45,    19,    20,    21,    22,    23,    24,    -1,
-      -1,    -1,    -1,    -1,    30,    31,    32,    33,    34,    35,
-      36,    -1,    -1,    39,    40,    19,    20,    21,    22,    23,
-      24,    -1,    -1,    -1,    -1,    -1,    30,    31,    32,    33,
-      34,    35,    36,    -1,    -1,    39,    19,    20,    21,    22,
-      23,    24,    -1,    -1,    -1,    -1,    -1,    -1,    31,    32,
-      33,    34,    35,    36,    -1,    -1,    39,    19,    20,    21,
-      22,    23,    24,    -1,    -1,    -1,    -1,    -1,    -1,    -1,
-      32,    33,    34,    35,    36,    -1,    -1,    39
+        22,    25,     4,     5,    26,     6,    28,     4,     5,     3,
+      29,    30,     7,     8,    36,    34,    39,    40,    12,    13,
+      42,     9,    10,    11,    47,     0,    48,    26,    44,    45,
+      52,    53,    34,    55,    56,    54,    59,    31,    40,    48,
+      10,    11,    61,    40,    66,     6,    55,     4,     6,    43,
+      72,    74,    75,    76,    77,    78,    79,    80,    81,    82,
+      83,    84,    85,    86,    87,    27,     3,     4,   137,   138,
+       6,    93,     7,    95,    90,    12,    13,    34,    94,    28,
+     102,     6,   104,    40,    93,   101,   108,     3,     3,     4,
+       5,     6,    34,    16,    31,    14,    42,    12,    13,   108,
+      38,    34,    17,     5,   126,    34,    43,   130,   127,    24,
+      40,     9,   134,   136,    15,    29,    31,     3,     4,     5,
+      40,    42,    -1,    -1,   140,   134,    12,    13,    43,    -1,
+      -1,    17,     3,    22,     3,     4,    -1,     3,    24,    10,
+      11,    12,    13,    12,    13,    31,    12,    13,    37,    33,
+      34,    35,    -1,    42,    38,    -1,    -1,    43,    -1,    48,
+      31,    -1,    31,    -1,    -1,    31,    -1,    -1,    -1,    -1,
+      36,    -1,    43,    62,    43,    41,    -1,    43,    18,    19,
+      20,    21,    22,    23,    -1,    -1,    -1,    -1,    -1,    29,
+      30,    31,    32,    33,    34,    35,    -1,    -1,    38,    -1,
+      -1,    -1,    -1,    -1,    44,    18,    19,    20,    21,    22,
+      23,    -1,    -1,    -1,    -1,    -1,    29,    30,    31,    32,
+      33,    34,    35,    -1,    -1,    38,    39,    18,    19,    20,
+      21,    22,    23,    -1,    -1,    -1,    -1,    -1,    29,    30,
+      31,    32,    33,    34,    35,    -1,    -1,    38,    18,    19,
+      20,    21,    22,    23,    -1,    -1,    -1,    -1,    -1,    -1,
+      30,    31,    32,    33,    34,    35,    -1,    -1,    38,    18,
+      19,    20,    21,    22,    23,    -1,    -1,    -1,    -1,    -1,
+      -1,    -1,    31,    32,    33,    34,    35,    -1,    -1,    38
   };
 
   /* STOS_[STATE-NUM] -- The (internal number of the) accessing
@@ -1174,22 +1331,21 @@ namespace KHolidays
   const unsigned char
   HolidayParserPlan::yystos_[] =
   {
-         0,    26,    47,    48,    49,     7,     0,    53,    27,    50,
-      12,    54,     7,    28,    51,     6,    55,     7,    29,    52,
-       7,    57,     7,     6,    56,     8,    58,     3,     4,     5,
-      13,    14,    18,    25,    32,    44,    59,    64,    66,    67,
-      69,    70,    10,    11,    60,    69,    69,    60,    60,     3,
-      37,    42,    68,    69,    60,    35,    69,     5,    41,    67,
-      68,    68,    17,    63,    64,    69,    63,    63,    68,     5,
-       7,    18,    25,    65,    66,    67,    69,    19,    20,    21,
-      22,    23,    24,    30,    31,    32,    33,    34,    35,    36,
-      39,    45,    15,    61,    69,    69,     9,    60,     4,    66,
-      67,    69,    69,    68,    60,    69,    43,    35,    69,     4,
-       5,    41,    68,    68,    68,    68,    68,    68,    68,    68,
-      68,    68,    68,    68,    68,    68,     5,    62,    63,    35,
-      66,    63,    69,    41,    63,    69,    69,     9,    66,    40,
-      30,    16,    69,    60,    68,    66,    41,    68,    62,    62,
-      63
+         0,    25,    46,    47,    48,     6,     0,    52,    26,    49,
+       6,    53,     6,    27,    50,     7,    54,     6,    28,    51,
+       7,     8,    55,     6,     3,     4,     5,    12,    13,    17,
+      24,    31,    43,    56,    61,    63,    64,    66,    67,    10,
+      11,    57,    66,    66,    57,    57,     3,    36,    41,    65,
+      66,    57,    34,    66,     5,    40,    64,    65,    65,    16,
+      60,    61,    66,    60,    60,    65,     5,     6,    17,    24,
+      62,    63,    64,    66,    18,    19,    20,    21,    22,    23,
+      29,    30,    31,    32,    33,    34,    35,    38,    44,    14,
+      58,    66,    66,     9,    57,     4,    63,    64,    66,    66,
+      65,    57,    66,    42,    34,    66,     4,     5,    40,    65,
+      65,    65,    65,    65,    65,    65,    65,    65,    65,    65,
+      65,    65,    65,     5,    59,    60,    34,    63,    60,    66,
+      40,    60,    66,    66,     9,    63,    39,    29,    15,    66,
+      57,    65,    63,    40,    65,    59,    59,    60
   };
 
 #if YYDEBUG
@@ -1201,8 +1357,8 @@ namespace KHolidays
          0,   256,   257,   258,   259,   260,   261,   262,   263,   264,
      265,   266,   267,   268,   269,   270,   271,   272,   273,   274,
      275,   276,   277,   278,   279,   280,   281,   282,   283,   284,
-     285,   286,    45,    43,    42,    47,    37,    33,   287,    63,
-      58,    46,    91,    93,    40,    41
+     285,    45,    43,    42,    47,    37,    33,   286,    63,    58,
+      46,    91,    93,    40,    41
   };
 #endif
 
@@ -1210,15 +1366,15 @@ namespace KHolidays
   const unsigned char
   HolidayParserPlan::yyr1_[] =
   {
-         0,    46,    47,    48,    49,    49,    50,    50,    51,    51,
-      52,    52,    53,    53,    54,    54,    55,    55,    56,    56,
-      57,    58,    58,    59,    59,    59,    59,    59,    59,    59,
-      60,    60,    60,    61,    61,    62,    62,    62,    63,    63,
-      64,    64,    64,    64,    64,    64,    64,    64,    64,    64,
-      64,    65,    65,    65,    65,    65,    65,    65,    65,    65,
-      65,    66,    66,    67,    68,    68,    68,    68,    68,    68,
-      68,    68,    68,    68,    68,    68,    68,    68,    68,    68,
-      68,    69,    69,    70,    70,    70,    70
+         0,    45,    46,    47,    48,    48,    49,    49,    50,    50,
+      51,    51,    52,    52,    53,    54,    54,    55,    55,    56,
+      56,    56,    56,    56,    56,    56,    57,    57,    57,    58,
+      58,    59,    59,    59,    60,    60,    61,    61,    61,    61,
+      61,    61,    61,    61,    61,    61,    61,    62,    62,    62,
+      62,    62,    62,    62,    62,    62,    62,    63,    63,    64,
+      65,    65,    65,    65,    65,    65,    65,    65,    65,    65,
+      65,    65,    65,    65,    65,    65,    65,    66,    66,    67,
+      67,    67,    67
   };
 
   /* YYR2[YYN] -- Number of symbols composing right hand side of rule YYN.  */
@@ -1226,14 +1382,14 @@ namespace KHolidays
   HolidayParserPlan::yyr2_[] =
   {
          0,     2,     2,     4,     0,     2,     0,     2,     0,     2,
-       0,     2,     0,     7,     0,     1,     0,     1,     0,     1,
-       1,     0,     1,     3,     3,     4,     3,     4,     6,     5,
-       0,     2,     2,     0,     4,     0,     1,     3,     0,     2,
-       3,     4,     5,     3,     5,     2,     3,     2,     3,     4,
-       1,     1,     1,     1,     3,     4,     3,     2,     2,     3,
-       4,     1,     1,     1,     1,     3,     3,     3,     3,     3,
-       3,     3,     3,     3,     3,     3,     3,     3,     5,     2,
-       3,     3,     1,     1,     2,     1,     2
+       0,     2,     0,     5,     1,     1,     2,     0,     1,     3,
+       3,     4,     3,     4,     6,     5,     0,     2,     2,     0,
+       4,     0,     1,     3,     0,     2,     3,     4,     5,     3,
+       5,     2,     3,     2,     3,     4,     1,     1,     1,     1,
+       3,     4,     3,     2,     2,     3,     4,     1,     1,     1,
+       1,     3,     3,     3,     3,     3,     3,     3,     3,     3,
+       3,     3,     3,     3,     5,     2,     3,     3,     1,     1,
+       2,     1,     2
   };
 
 #if YYDEBUG || YYERROR_VERBOSE || YYTOKEN_TABLE
@@ -1242,16 +1398,16 @@ namespace KHolidays
   const char*
   const HolidayParserPlan::yytname_[] =
   {
-    "END", "error", "$undefined", "NUMBER", "MONTH", "WDAY", "COLOR",
-  "STRING", "CALENDAR", "INOP", "PLUS", "MINUS", "SMALL", "YEAR",
-  "LEAPYEAR", "SHIFT", "IF", "LENGTH", "EASTER", "EQ", "NE", "LE", "GE",
-  "LT", "GT", "PASCHA", "COUNTRY", "LANGUAGE", "NAME", "DESCRIPTION", "OR",
-  "AND", "'-'", "'+'", "'*'", "'/'", "'%'", "'!'", "UMINUS", "'?'", "':'",
-  "'.'", "'['", "']'", "'('", "')'", "$accept", "planfile", "metadata",
-  "countrycode", "languagecode", "name", "description", "list", "small",
-  "stringcolor", "daycolor", "eventname", "calendar", "eventrule",
-  "offset", "conditionaloffset", "wdaycondition", "length", "date",
-  "reldate", "month", "monthnumber", "expr", "pexpr", "number", 0
+    "END", "error", "$undefined", "NUMBER", "MONTH", "WDAY", "STRING",
+  "CATEGORY", "CALENDAR", "INOP", "PLUS", "MINUS", "YEAR", "LEAPYEAR",
+  "SHIFT", "IF", "LENGTH", "EASTER", "EQ", "NE", "LE", "GE", "LT", "GT",
+  "PASCHA", "COUNTRY", "LANGUAGE", "NAME", "DESCRIPTION", "OR", "AND",
+  "'-'", "'+'", "'*'", "'/'", "'%'", "'!'", "UMINUS", "'?'", "':'", "'.'",
+  "'['", "']'", "'('", "')'", "$accept", "planfile", "metadata",
+  "countrycode", "languagecode", "name", "description", "list",
+  "eventname", "categories", "calendar", "eventrule", "offset",
+  "conditionaloffset", "wdaycondition", "length", "date", "reldate",
+  "month", "monthnumber", "expr", "pexpr", "number", 0
   };
 #endif
 
@@ -1260,34 +1416,34 @@ namespace KHolidays
   const HolidayParserPlan::rhs_number_type
   HolidayParserPlan::yyrhs_[] =
   {
-        47,     0,    -1,    48,    53,    -1,    49,    50,    51,    52,
-      -1,    -1,    26,     7,    -1,    -1,    27,     7,    -1,    -1,
-      28,     7,    -1,    -1,    29,     7,    -1,    -1,    53,    54,
-      55,    57,    56,    58,    59,    -1,    -1,    12,    -1,    -1,
-       6,    -1,    -1,     6,    -1,     7,    -1,    -1,     8,    -1,
-      18,    60,    63,    -1,    25,    60,    63,    -1,    64,    60,
-      61,    63,    -1,     5,    60,    63,    -1,    69,     5,    60,
-      63,    -1,    69,     5,     9,    66,    60,    63,    -1,     5,
-      69,    64,    60,    63,    -1,    -1,    10,    68,    -1,    11,
-      68,    -1,    -1,    15,    62,    16,    62,    -1,    -1,     5,
-      -1,     5,    30,    62,    -1,    -1,    17,    68,    -1,    69,
-      41,    66,    -1,    69,    41,    66,    41,    -1,    69,    41,
-      66,    41,    68,    -1,    66,    35,    69,    -1,    66,    35,
-      69,    35,    69,    -1,    67,    69,    -1,    67,    69,    69,
-      -1,    69,    67,    -1,    69,    67,    69,    -1,    69,    41,
-       4,    69,    -1,    69,    -1,     7,    -1,    18,    -1,    25,
-      -1,    69,    41,    66,    -1,    69,    41,    66,    41,    -1,
-      66,    35,    69,    -1,    69,     4,    -1,    67,    69,    -1,
-       5,    69,    69,    -1,    69,     5,     9,    66,    -1,    67,
-      -1,    69,    -1,     4,    -1,    69,    -1,    68,    30,    68,
-      -1,    68,    31,    68,    -1,    68,    19,    68,    -1,    68,
-      20,    68,    -1,    68,    21,    68,    -1,    68,    22,    68,
-      -1,    68,    23,    68,    -1,    68,    24,    68,    -1,    68,
-      33,    68,    -1,    68,    32,    68,    -1,    68,    34,    68,
-      -1,    68,    35,    68,    -1,    68,    36,    68,    -1,    68,
-      39,    68,    40,    68,    -1,    37,    68,    -1,    42,    65,
-      43,    -1,    44,    68,    45,    -1,    70,    -1,     3,    -1,
-      32,     3,    -1,    13,    -1,    14,    69,    -1
+        46,     0,    -1,    47,    52,    -1,    48,    49,    50,    51,
+      -1,    -1,    25,     6,    -1,    -1,    26,     6,    -1,    -1,
+      27,     6,    -1,    -1,    28,     6,    -1,    -1,    52,    53,
+      54,    55,    56,    -1,     6,    -1,     7,    -1,    54,     7,
+      -1,    -1,     8,    -1,    17,    57,    60,    -1,    24,    57,
+      60,    -1,    61,    57,    58,    60,    -1,     5,    57,    60,
+      -1,    66,     5,    57,    60,    -1,    66,     5,     9,    63,
+      57,    60,    -1,     5,    66,    61,    57,    60,    -1,    -1,
+      10,    65,    -1,    11,    65,    -1,    -1,    14,    59,    15,
+      59,    -1,    -1,     5,    -1,     5,    29,    59,    -1,    -1,
+      16,    65,    -1,    66,    40,    63,    -1,    66,    40,    63,
+      40,    -1,    66,    40,    63,    40,    65,    -1,    63,    34,
+      66,    -1,    63,    34,    66,    34,    66,    -1,    64,    66,
+      -1,    64,    66,    66,    -1,    66,    64,    -1,    66,    64,
+      66,    -1,    66,    40,     4,    66,    -1,    66,    -1,     6,
+      -1,    17,    -1,    24,    -1,    66,    40,    63,    -1,    66,
+      40,    63,    40,    -1,    63,    34,    66,    -1,    66,     4,
+      -1,    64,    66,    -1,     5,    66,    66,    -1,    66,     5,
+       9,    63,    -1,    64,    -1,    66,    -1,     4,    -1,    66,
+      -1,    65,    29,    65,    -1,    65,    30,    65,    -1,    65,
+      18,    65,    -1,    65,    19,    65,    -1,    65,    20,    65,
+      -1,    65,    21,    65,    -1,    65,    22,    65,    -1,    65,
+      23,    65,    -1,    65,    32,    65,    -1,    65,    31,    65,
+      -1,    65,    33,    65,    -1,    65,    34,    65,    -1,    65,
+      35,    65,    -1,    65,    38,    65,    39,    65,    -1,    36,
+      65,    -1,    41,    62,    42,    -1,    43,    65,    44,    -1,
+      67,    -1,     3,    -1,    31,     3,    -1,    12,    -1,    13,
+      66,    -1
   };
 
   /* YYPRHS[YYN] -- Index of the first RHS symbol of rule number YYN in
@@ -1296,29 +1452,29 @@ namespace KHolidays
   HolidayParserPlan::yyprhs_[] =
   {
          0,     0,     3,     6,    11,    12,    15,    16,    19,    20,
-      23,    24,    27,    28,    36,    37,    39,    40,    42,    43,
-      45,    47,    48,    50,    54,    58,    63,    67,    72,    79,
-      85,    86,    89,    92,    93,    98,    99,   101,   105,   106,
-     109,   113,   118,   124,   128,   134,   137,   141,   144,   148,
-     153,   155,   157,   159,   161,   165,   170,   174,   177,   180,
-     184,   189,   191,   193,   195,   197,   201,   205,   209,   213,
-     217,   221,   225,   229,   233,   237,   241,   245,   249,   255,
-     258,   262,   266,   268,   270,   273,   275
+      23,    24,    27,    28,    34,    36,    38,    41,    42,    44,
+      48,    52,    57,    61,    66,    73,    79,    80,    83,    86,
+      87,    92,    93,    95,    99,   100,   103,   107,   112,   118,
+     122,   128,   131,   135,   138,   142,   147,   149,   151,   153,
+     155,   159,   164,   168,   171,   174,   178,   183,   185,   187,
+     189,   191,   195,   199,   203,   207,   211,   215,   219,   223,
+     227,   231,   235,   239,   243,   249,   252,   256,   260,   262,
+     264,   267,   269
   };
 
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
   const unsigned char
   HolidayParserPlan::yyrline_[] =
   {
-         0,   123,   123,   126,   129,   130,   133,   134,   137,   138,
-     141,   142,   145,   146,   149,   150,   153,   154,   157,   158,
-     161,   164,   165,   168,   169,   170,   171,   172,   173,   174,
-     177,   178,   179,   182,   183,   186,   187,   188,   191,   192,
-     195,   196,   197,   198,   199,   200,   201,   202,   203,   204,
-     205,   208,   209,   210,   211,   212,   213,   214,   215,   216,
-     217,   220,   221,   224,   227,   228,   229,   230,   231,   232,
-     233,   234,   235,   236,   237,   238,   239,   240,   241,   242,
-     243,   246,   247,   250,   251,   252,   253
+         0,   126,   126,   129,   132,   133,   136,   137,   140,   141,
+     144,   145,   148,   149,   152,   155,   156,   159,   160,   163,
+     164,   165,   166,   167,   168,   169,   172,   173,   174,   177,
+     178,   181,   182,   183,   186,   187,   190,   191,   192,   193,
+     194,   195,   196,   197,   198,   199,   200,   203,   204,   205,
+     206,   207,   208,   209,   210,   211,   212,   215,   216,   219,
+     222,   223,   224,   225,   226,   227,   228,   229,   230,   231,
+     232,   233,   234,   235,   236,   237,   238,   241,   242,   245,
+     246,   247,   248
   };
 
   // Print the state stack on the debug stream.
@@ -1340,7 +1496,7 @@ namespace KHolidays
     int yynrhs = yyr2_[yyrule];
     /* Print the symbols being reduced, and their result.  */
     *yycdebug_ << "Reducing stack by rule " << yyrule - 1
-	       << " (line " << yylno << "), ";
+	       << " (line " << yylno << "):" << std::endl;
     /* The symbols being reduced.  */
     for (int yyi = 0; yyi < yynrhs; yyi++)
       YY_SYMBOL_PRINT ("   $" << yyi + 1 << " =",
@@ -1361,13 +1517,13 @@ namespace KHolidays
            0,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
-       2,     2,     2,    37,     2,     2,     2,    36,     2,     2,
-      44,    45,    34,    33,     2,    32,    41,    35,     2,     2,
-       2,     2,     2,     2,     2,     2,     2,     2,    40,     2,
-       2,     2,     2,    39,     2,     2,     2,     2,     2,     2,
+       2,     2,     2,    36,     2,     2,     2,    35,     2,     2,
+      43,    44,    33,    32,     2,    31,    40,    34,     2,     2,
+       2,     2,     2,     2,     2,     2,     2,     2,    39,     2,
+       2,     2,     2,    38,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
-       2,    42,     2,    43,     2,     2,     2,     2,     2,     2,
+       2,    41,     2,    42,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
@@ -1386,7 +1542,7 @@ namespace KHolidays
        2,     2,     2,     2,     2,     2,     1,     2,     3,     4,
        5,     6,     7,     8,     9,    10,    11,    12,    13,    14,
       15,    16,    17,    18,    19,    20,    21,    22,    23,    24,
-      25,    26,    27,    28,    29,    30,    31,    38
+      25,    26,    27,    28,    29,    30,    37
     };
     if ((unsigned int) t <= yyuser_token_number_max_)
       return translate_table[t];
@@ -1395,20 +1551,29 @@ namespace KHolidays
   }
 
   const int HolidayParserPlan::yyeof_ = 0;
-  const int HolidayParserPlan::yylast_ = 287;
-  const int HolidayParserPlan::yynnts_ = 25;
+  const int HolidayParserPlan::yylast_ = 289;
+  const int HolidayParserPlan::yynnts_ = 23;
   const int HolidayParserPlan::yyempty_ = -2;
   const int HolidayParserPlan::yyfinal_ = 6;
   const int HolidayParserPlan::yyterror_ = 1;
   const int HolidayParserPlan::yyerrcode_ = 256;
-  const int HolidayParserPlan::yyntokens_ = 46;
+  const int HolidayParserPlan::yyntokens_ = 45;
 
-  const unsigned int HolidayParserPlan::yyuser_token_number_max_ = 287;
+  const unsigned int HolidayParserPlan::yyuser_token_number_max_ = 286;
   const HolidayParserPlan::token_number_type HolidayParserPlan::yyundef_token_ = 2;
 
-} // namespace KHolidays
 
-#line 256 "holidayparserplan.ypp"
+/* Line 1054 of lalr1.cc  */
+#line 1 "[Bison:b4_percent_define_default]"
+
+} // KHolidays
+
+/* Line 1054 of lalr1.cc  */
+#line 1573 "holidayparserplan.cpp"
+
+
+/* Line 1056 of lalr1.cc  */
+#line 251 "holidayparserplan.ypp"
 
 
 /*** Private Yacc callbacks and helper functions ***/

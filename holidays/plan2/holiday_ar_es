@@ -19,63 +19,63 @@ language    "es"
 description "Feriados Nacionales de Argentina"
 
 :: Public Holidays
-"Año Nuevo"                       weekend on january 1
-"Lunes de Carnaval"               weekend on easter minus 48
-"Martes de Carnaval"              weekend on easter minus 47
-"Día Nacional de la Memoria"      weekend on march 24
-"Viernes Santo"                   weekend on easter minus 2
-"Día de los Caídos en Malvinas"   weekend on april 2
-"Día del Trabajo"                 weekend on may 1
-"Revolución de Mayo"              weekend on may 25
-"Día de Manuel Belgrano"          weekend on june 20
-"Día de la Independencia"         weekend on july 9
-"Día de San Martín"               weekend on (third + (year == 2011)) monday in august
-"Día de la Raza"                  weekend on second monday in october
-"Día de la Soberanía"             weekend on fourth monday in november
-"Inmaculada Concepción de María"  weekend on december 8
-"Navidad"                         weekend on december 25
+"Año Nuevo"                       public on january 1
+"Lunes de Carnaval"               public on easter minus 48
+"Martes de Carnaval"              public on easter minus 47
+"Día Nacional de la Memoria"      public on march 24
+"Viernes Santo"                   public on easter minus 2
+"Día de los Caídos en Malvinas"   public on april 2
+"Día del Trabajo"                 public on may 1
+"Revolución de Mayo"              public on may 25
+"Día de Manuel Belgrano"          public on june 20
+"Día de la Independencia"         public on july 9
+"Día de San Martín"               public on (third + (year == 2011)) monday in august
+"Día de la Raza"                  public on second monday in october
+"Día de la Soberanía"             public on fourth monday in november
+"Inmaculada Concepción de María"  public on december 8
+"Navidad"                         public on december 25
 
 :: Special designated holdays
 
-"Censo Nacional"                  weekend on 27.10.2010
+"Censo Nacional"                  public on 27.10.2010
 
-"Bicentenario de la Bandera"      weekend on 27.02.2012
-"Bicentenario Batalla de Tucumán" weekend on 24.09.2012
+"Bicentenario de la Bandera"      public on 27.02.2012
+"Bicentenario Batalla de Tucumán" public on 24.09.2012
 
-"Bicentenario Asamblea Año XIII"  weekend on 31.01.2013
-"Bicentenario Batalla de Salta"   weekend on 20.02.2013
+"Bicentenario Asamblea Año XIII"  public on 31.01.2013
+"Bicentenario Batalla de Salta"   public on 20.02.2013
 
-"Feriado Turístico"               weekend on 25.03.2011
-"Feriado Turístico"               weekend on 09.12.2011
+"Feriado Turístico"               public on 25.03.2011
+"Feriado Turístico"               public on 09.12.2011
 
-"Feriado Turístico"               weekend on 30.04.2012
-"Feriado Turístico"               weekend on 24.12.2012
+"Feriado Turístico"               public on 30.04.2012
+"Feriado Turístico"               public on 24.12.2012
 
-"Feriado Turístico"               weekend on 01.04.2013
-"Feriado Turístico"               weekend on 21.06.2013
+"Feriado Turístico"               public on 01.04.2013
+"Feriado Turístico"               public on 21.06.2013
 
-"Feriado Turístico"               weekend on 02.05.2014
-"Feriado Turístico"               weekend on 26.12.2014
+"Feriado Turístico"               public on 02.05.2014
+"Feriado Turístico"               public on 26.12.2014
 
-"Feriado Turístico"               weekend on 23.03.2015
-"Feriado Turístico"               weekend on 07.12.2015
+"Feriado Turístico"               public on 23.03.2015
+"Feriado Turístico"               public on 07.12.2015
 
-"Feriado Turístico"               weekend on 08.07.2016
-"Feriado Turístico"               weekend on 09.12.2016
+"Feriado Turístico"               public on 08.07.2016
+"Feriado Turístico"               public on 09.12.2016
 
 
 :: Religious
 
 :: Holidays for Jewish people
-"Pésaj (Pascuas Judías)"                  on hebrew nisan 15 length 2 days
-"Chol HaMoed Pésaj (Pascuas Judías)"      on hebrew nisan 21 length 2 days
-"Rosh Hashana (Año Nuevo Judío)"          on hebrew tishrey 1 length 2 days
-"Iom Kipur (Día del Perdón Judío)"        on hebrew tishrey 10
+"Pésaj (Pascuas Judías)"                  religious on hebrew nisan 15 length 2 days
+"Chol HaMoed Pésaj (Pascuas Judías)"      religious on hebrew nisan 21 length 2 days
+"Rosh Hashana (Año Nuevo Judío)"          religious on hebrew tishrey 1 length 2 days
+"Iom Kipur (Día del Perdón Judío)"        religious on hebrew tishrey 10
 
 :: Holidays for Islamic people
-"Hégira (Año Nuevo Musulmán)"             on hijri muharram 1
-"Id Al-Fitr (Fin Ayuno Musulmán)"         on hijri shawwal 1
-"Eid al-Adha (Sacrificio Musulmán)"       on hijri thualhijjah 10
+"Hégira (Año Nuevo Musulmán)"             religious on hijri muharram 1
+"Id Al-Fitr (Fin Ayuno Musulmán)"         religious on hijri shawwal 1
+"Eid al-Adha (Sacrificio Musulmán)"       religious on hijri thualhijjah 10
 
 :: Financial
 
@@ -86,28 +86,28 @@ description "Feriados Nacionales de Argentina"
 :: Daylight Saving
 
 :: Seasons
-"Equinoxio de otoño"     on march 21
-"Solsticio de invierno"  on june 21
-"Equinoxio de primavera" on september 21
-"Solsticio de verano"    on december 21
+"Equinoxio de otoño"     seasonal on march 21
+"Solsticio de invierno"  seasonal on june 21
+"Equinoxio de primavera" seasonal on september 21
+"Solsticio de verano"    seasonal on december 21
 
 :: Name Days
 
 
 :: To be sorted
-"Jueves Santo"           on easter minus 3
-"Día de Reyes"           on january 6
-"Día de San Valentín"    on february 14
-"Día de la Mujer"        on march 8
-"Sábado de Gloria"       on easter minus 1
-"Domingo de Pascua"      on easter
-"Día del Animal"         on april 29
-"Día del Ahijado/Nieto"  on second sunday in may
-"Día del Padre"          on third sunday in june
-"Día del Amigo"          on july 20
-"Dia del Niño"           on second sunday in august
-"Día de la Madre"        on third sunday in october
-"Halloween"              on october 31
-"Noche Buena"            on december 24
-"Día de los Inocentes"   on december 28
-"Fin de Año"             on december 31
+"Jueves Santo"           civil on easter minus 3
+"Día de Reyes"           civil on january 6
+"Día de San Valentín"    civil on february 14
+"Día de la Mujer"        civil on march 8
+"Sábado de Gloria"       civil on easter minus 1
+"Domingo de Pascua"      civil on easter
+"Día del Animal"         civil on april 29
+"Día del Ahijado/Nieto"  civil on second sunday in may
+"Día del Padre"          civil on third sunday in june
+"Día del Amigo"          civil on july 20
+"Dia del Niño"           civil on second sunday in august
+"Día de la Madre"        civil on third sunday in october
+"Halloween"              civil on october 31
+"Noche Buena"            civil on december 24
+"Día de los Inocentes"   civil on december 28
+"Fin de Año"             civil on december 31

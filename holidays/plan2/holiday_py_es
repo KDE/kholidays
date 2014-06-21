@@ -17,17 +17,17 @@ language    "es"
 :description "(please add description in source language) National holiday file for Paraguay"
 
 :: Public Holidays
-"Año nuevo"            weekend on january 1
-"Día de los Heroes"    weekend on march 1
-"Jueves Santo"         weekend on easter minus 3 days
-"Viernes Santo"        weekend on easter minus 2 days
-"Trabajo"              weekend on may 1
-"Independencia"        weekend on may 15
-"Paz del Chaco"        weekend on june 12
-"Asunción"             weekend on august 15
-"Batalla de Boquerón"  weekend on september 29
-"Virgen de Caacupé"    weekend on december 8
-"Navidad"              weekend on december 25
+"Año nuevo"            public on january 1
+"Día de los Heroes"    public on march 1
+"Jueves Santo"         public religious on easter minus 3 days
+"Viernes Santo"        public religious on easter minus 2 days
+"Trabajo"              public on may 1
+"Independencia"        public on may 15
+"Paz del Chaco"        public on june 12
+"Asunción"             public religious on august 15
+"Batalla de Boquerón"  public on september 29
+"Virgen de Caacupé"    public religious on december 8
+"Navidad"              public religious on december 25
 
 :: Religious
 

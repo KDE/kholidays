@@ -33,89 +33,89 @@ description "Fêtes et jours fériés en Polynésie Française"
 
 :: Public Holidays - Fêtes civiles et jours fériés
 : New Year's Day
-"Jour de l'an"                                      weekend on january 1
+"Jour de l'an"                                      public on january 1
 : Easter
-"Pâques"                                            weekend on easter length 2 days
-"Ascension"                                         weekend on easter plus 39 days
-"Pentecôte"                                         weekend on easter plus 49 days length 2 days
+"Pâques"                                            public religious on easter length 2 days
+"Ascension"                                         public religious on easter plus 39 days
+"Pentecôte"                                         public religious on easter plus 49 days length 2 days
 : Labor day
-"Fête du Travail"                                   weekend on may 1
+"Fête du Travail"                                   public on may 1
 : WW2 armistice
-"Fête de la Victoire"                               weekend on may 8
+"Fête de la Victoire"                               public on may 8
 : National day
-"Fête nationale"                                    weekend on july 14
+"Fête nationale"                                    public on july 14
 : Assumption
-"Assomption"                                        weekend on august 15
+"Assomption"                                        public religious on august 15
 : All saints day
-"Toussaint"                                         weekend on november 1
+"Toussaint"                                         public religious on november 1
 : WW1 armistice
-"Armistice de 1918"                                 weekend on november 11
+"Armistice de 1918"                                 public on november 11
 : Christmas day
-"Noël"                                              weekend on december 25
+"Noël"                                              public religious on december 25
 
 :: Territorial and Regional holidays
-"Fête de l'autonomie de la Polynésie française"     weekend on june 29
+"Fête de l'autonomie de la Polynésie française"     public on june 29
 
 :: Religious - Fêtes religieuses
-"Épiphanie"                                         on first sunday in january
+"Épiphanie"                                         religious on first sunday in january
 : Presentation of Jesus at the Temple
-"Chandeleur"                                        on february 2
-"Mardi Gras"                                        on easter minus 47 days
+"Chandeleur"                                        religious on february 2
+"Mardi Gras"                                        religious on easter minus 47 days
 : Ash Wednesday
-"Mercredi des Cendres"                              on easter minus 46 days
+"Mercredi des Cendres"                              religious on easter minus 46 days
 : Good Friday
-"Vendredi saint"                                    on easter minus 2 days
+"Vendredi saint"                                    religious on easter minus 2 days
 : Day of the dead
-"Fête des morts"                                    on november 2
-"St Étienne"                                        on december 26
+"Fête des morts"                                    religious on november 2
+"St Étienne"                                        religious on december 26
 
 :: Financial
 
 :: Cultural - Fêtes civiles non fériées
 : Valentine's day
-"Fête des amoureux"                                 on february 14
+"Fête des amoureux"                                 cultural on february 14
 : Grandmothers' day
-"Fête des grands-mères"                             on first sunday in march
+"Fête des grands-mères"                             cultural on first sunday in march
 : Remembrance of the Deportees
-"Souvenir des Déportés"                             on last sunday in april
+"Souvenir des Déportés"                             commemorative on last sunday in april
 : Europe day
-"Journée de l'Europe"                               on may 9
+"Journée de l'Europe"                               cultural on may 9
 : Remembrance of slavery
-"Mémoire de l'esclavage"                            on may 10
+"Mémoire de l'esclavage"                            commemorative on may 10
 : Neighbors' day
-"Fête des voisins"                                  on last tuesday in may
+"Fête des voisins"                                  cultural on last tuesday in may
 : Mothers' day, move if clashes with Pentecost
-"Fête des mères"            ( ( [last sunday in may] == ([easter] + 49 days) ) ? [first sunday in june] : [last sunday in may] )
+"Fête des mères"                                    cultural on ( ( [last sunday in may] == ([easter] + 49 days) ) ? [first sunday in june] : [last sunday in may] )
 : or 'first sunday in june' if same day as Pentecôte
 : Fathers' day
-"Fête des pères"                                    on third sunday in june
+"Fête des pères"                                    cultural on third sunday in june
 : Fatalities in the 1st Indochina war
-"Morts en Indochine"                                on june 8
+"Morts en Indochine"                                commemorative on june 8
 : Music day
-"Fête de la Musique"                                on june 21
+"Fête de la Musique"                                cultural on june 21
 : St John
-"Fête de la Saint Jean"                             on june 24
+"Fête de la Saint Jean"                             cultural on june 24
 : Homage to the Harkis
-"Hommage aux Harkis"                                on september 25
+"Hommage aux Harkis"                                commemorative on september 25
 : Fatalities in the Algerian war
-"Morts en Algérie"                                  on december 5
+"Morts en Algérie"                                  commemorative on december 5
 
 :: School
 
 :: Daylight Saving
 : summer
-"Heure d'été"                                       on last sunday in march
+"Heure d'été"                                       seasonal on last sunday in march
 : winter
-"Heure d'hiver"                                     on last sunday in october
+"Heure d'hiver"                                     seasonal on last sunday in october
 
 :: Seasons
 : Spring
-"Printemps"                 on september 23
+"Printemps"                                         seasonal on september 23
 : Summer
-"Été"                       on december 21
+"Été"                                               seasonal on december 21
 : Fall
-"Automne"                   on march 20
+"Automne"                                           seasonal on march 20
 : Winter
-"Hiver"                     on june 21
+"Hiver"                                             seasonal on june 21
 
 :: Name Days

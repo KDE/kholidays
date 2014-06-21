@@ -17,27 +17,27 @@ language    "es"
 :description "(please add description in source language) National holiday file for Guatemala"
 
 :: Public Holidays
-"Año nuevo"              weekend on january 1
-"Reyes"                  weekend on january 6
-"Trabajo"                weekend on march 19
-"Jueves Santo"           weekend on easter minus 3 days
-"Viernes Santo"          weekend on easter minus 2 days
-"Pentecostes"            weekend on easter plus 49 days
-"Ejército"               weekend on may 1
-"Virgen de la Asunción"  weekend on august 15
-"Independencia"          weekend on september 15
-"Revolucion de 1944"     weekend on october 20
-"Todos los Santos"       weekend on november 1
-"Nochebuena"             weekend on december 24
-"Navidad"                weekend on december 25
-"Fin de año"             weekend on december 31
+"Año nuevo"              public on january 1
+"Reyes"                  public on january 6
+"Trabajo"                public on march 19
+"Jueves Santo"           public on easter minus 3 days
+"Viernes Santo"          public on easter minus 2 days
+"Pentecostes"            public on easter plus 49 days
+"Ejército"               public on may 1
+"Virgen de la Asunción"  public on august 15
+"Independencia"          public on september 15
+"Revolucion de 1944"     public on october 20
+"Todos los Santos"       public on november 1
+"Nochebuena"             public on december 24
+"Navidad"                public on december 25
+"Fin de año"             public on december 31
 
 :: Religious
-"Pascua"                 on easter
-"Miércoles de ceniza"    on easter minus 46 days
-"Ascension"              on easter plus 39 days
-"Trinidad"               on easter plus 56 days
-"Corpus Christi"         on easter plus 60 days
+"Pascua"                 religious on easter
+"Miércoles de ceniza"    religious on easter minus 46 days
+"Ascension"              religious on easter plus 39 days
+"Trinidad"               religious on easter plus 56 days
+"Corpus Christi"         religious on easter plus 60 days
 
 :: Financial
 
@@ -48,9 +48,9 @@ language    "es"
 :: Daylight Saving
 
 :: Seasons
-"Llega la Primavera"     on march 20
-"Llega el Verano"        on june 21
-"Llega el Otoño"         on september 23
-"Llega el Invierno"      on december 22
+"Llega la Primavera"     seasonal on march 20
+"Llega el Verano"        seasonal on june 21
+"Llega el Otoño"         seasonal on september 23
+"Llega el Invierno"      seasonal on december 22
 
 :: Name Days
