@@ -285,6 +285,10 @@ QString HolidayRegion::name() const
         typeName = i18nc( "Holiday type", "Name Days" );
       } else if ( type == QLatin1String("personal") ) {
         typeName = i18nc( "Holiday type", "Personal" );
+      } else if ( type == QLatin1String("christian") ) {
+        typeName = i18nc( "Holiday type", "Christian" );
+      } else if ( type == QLatin1String("anglican") ) {
+        typeName = i18nc( "Holiday type", "Anglican" );
       } else if ( type == QLatin1String("catholic") ) {
         typeName = i18nc( "Holiday type", "Catholic" );
       } else if ( type == QLatin1String("protestant") ) {
@@ -293,8 +297,20 @@ QString HolidayRegion::name() const
         typeName = i18nc( "Holiday type", "Orthodox" );
       } else if ( type == QLatin1String("jewish") ) {
         typeName = i18nc( "Holiday type", "Jewish" );
+      } else if ( type == QLatin1String("jewish-orthodox") ) {
+        typeName = i18nc( "Holiday type", "Jewish Orthodox" );
+      } else if ( type == QLatin1String("jewish-conservative") ) {
+        typeName = i18nc( "Holiday type", "Jewish Conservative" );
+      } else if ( type == QLatin1String("jewish-reform") ) {
+        typeName = i18nc( "Holiday type", "Jewish Reform" );
       } else if ( type == QLatin1String("islamic") ) {
         typeName = i18nc( "Holiday type", "Islamic" );
+      } else if ( type == QLatin1String("islamic-sunni") ) {
+        typeName = i18nc( "Holiday type", "Islamic Sunni" );
+      } else if ( type == QLatin1String("islamic-shia") ) {
+        typeName = i18nc( "Holiday type", "Islamic Shia" );
+      } else if ( type == QLatin1String("islamic-sufi") ) {
+        typeName = i18nc( "Holiday type", "Islamic Sufi" );
       }
     }
 
