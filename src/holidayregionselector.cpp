@@ -24,10 +24,8 @@
 
 #include "holidayregion.h"
 
-#include <QDebug>
 #include <KLocale>
 #include <KLocalizedString>
-#include <KGlobal>
 #include <KComboBox>
 
 using namespace KHolidays;

@@ -25,7 +25,6 @@
 #include "lunarphase.h"
 #include <config-kholidays.h>
 
-#include <QDebug>
 #include <KLocalizedString>
 
 #include <QtCore/QDateTime>

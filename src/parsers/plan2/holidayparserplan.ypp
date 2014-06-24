@@ -39,7 +39,6 @@
 
 #include <QString>
 
-#include <KCalendarSystem>
 
 %}
 

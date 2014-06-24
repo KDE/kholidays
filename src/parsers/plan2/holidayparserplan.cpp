@@ -51,7 +51,6 @@
 
 #include <QString>
 
-#include <KCalendarSystem>
 
 
 

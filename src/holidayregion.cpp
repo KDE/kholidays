@@ -33,7 +33,6 @@
 #include <KGlobal>
 #include <KLocale>
 #include <KLocalizedString>
-#include <QDebug>
 #include <QStandardPaths>
 
 #include "holiday_p.h"
