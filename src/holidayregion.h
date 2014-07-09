@@ -45,10 +45,6 @@ class KHOLIDAYS_EXPORT HolidayRegion
     /**
      * Creates a new Holiday Region object for a given standard Region Code.
      *
-     * From 4.5 onwards this constructor requires the new Region Code not the
-     * deprecated Location Code.  If a Location Code is provided the first
-     * match will be created.
-     *
      * @param regionCode The code for the Holiday Region.
      *                   If null or unknown, an empty instance will be created.
      */
@@ -66,33 +62,6 @@ class KHOLIDAYS_EXPORT HolidayRegion
      * Destroys the holidays object.
      */
     ~HolidayRegion();
-
-    /**
-     * @deprecated use regions() instead
-     *
-     *  Return a list of all available location codes which have a holiday definition.
-     *
-     *  One of these can then be passed to the constructor for a new HolidayRegion
-     *  object.
-     *
-     * @see regions()
-     */
-    static QStringList locations();
-
-    /**
-     * @deprecated use regionCode() or countryCode() instead
-     *
-     * Returns the holiday location.
-     *
-     * The holiday location is a code representing the holiday region.
-     *
-     * @return region code, or null if the instance was constructed with
-     *         an unknown region
-     *
-     * @see regionCode()
-     * @see languageCode()
-     */
-    QString location() const;
 
     /**
      * @since 4.5

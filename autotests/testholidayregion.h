@@ -38,7 +38,6 @@ private Q_SLOTS:
     void testIran();
     void testIsrael();
     void testRegions();
-    void testLocations();
     void testDefaultRegions();
 
 private:

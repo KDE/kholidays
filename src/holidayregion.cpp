@@ -61,16 +61,6 @@ class Q_DECL_HIDDEN HolidayRegion::Private
                                            mRegionCode( regionCode )
     {
       if ( !mRegionCode.isEmpty() ) {
-
-        if ( mRegionCode.length() == 2 ) { //Backwards compatible mode for old location code
-          mLocation = mRegionCode;
-          QStringList locationFiles = allHolidayFiles(mLocation);
-          if ( locationFiles.count() > 0 ) {
-            mRegionCode = locationFiles.at( 0 ).
-                          mid( locationFiles.at( 0 ).lastIndexOf( QLatin1String("holiday_") ) + 8 );
-          }
-        }
-
         mHolidayFile.setFile(
           QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("kf5/libkholidays/plan2/holiday_") + mRegionCode ) );
       }
@@ -95,10 +85,6 @@ class Q_DECL_HIDDEN HolidayRegion::Private
         mDriver = new HolidayParserDriverPlan( mHolidayFile.absoluteFilePath() );
         if ( mDriver ) {
 
-          if ( mLocation.isEmpty() ) {
-            mLocation = mDriver->fileCountryCode().left( 2 );
-          }
-
           if ( mRegionCode.isEmpty() ) {
             if ( mHolidayFile.fileName().startsWith( QLatin1String( "holiday_" ) ) ) {
               mRegionCode = mHolidayFile.fileName().mid( 8 );
@@ -109,17 +95,14 @@ class Q_DECL_HIDDEN HolidayRegion::Private
 
         } else {
           mRegionCode.clear();
-          mLocation.clear();
         }
       } else {
         mRegionCode.clear();
-        mLocation.clear();
       }
     }
 
     HolidayParserDriver  *mDriver;  // The parser driver for the holiday file
     QString mRegionCode;            // region code of holiday region
-    QString mLocation;              // old location code, use now deprecated
     QFileInfo mHolidayFile;         // file containing holiday data, or null
 };
 
@@ -136,26 +119,6 @@ HolidayRegion::HolidayRegion( const QFileInfo &regionFile )
 HolidayRegion::~HolidayRegion()
 {
   delete d;
-}
-
-QStringList HolidayRegion::locations()
-{
-  const QStringList files = allHolidayFiles();
-
-  QStringList locations;
-  locations.reserve(files.count());
-  foreach ( const QString &filename, files ) {
-    locations.append( filename.mid( filename.lastIndexOf( QLatin1String("holiday_") ) + 8, 2 ) );
-  }
-
-  locations.removeDuplicates();
-  qSort( locations );
-  return locations;
-}
-
-QString HolidayRegion::location() const
-{
-  return d->mLocation;
 }
 
 QStringList HolidayRegion::regionCodes()

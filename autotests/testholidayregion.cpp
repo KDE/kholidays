@@ -156,17 +156,6 @@ void HolidayRegionTest::testRegions()
   qDebug() << "";
 }
 
-void HolidayRegionTest::testLocations()
-{
-  qDebug() << "Available locations:";
-  QStringList locations = KHolidays::HolidayRegion::locations();
-  foreach ( const QString &location, locations ) {
-    KHolidays::HolidayRegion testRegion( location );
-    qDebug() << location << " = " << testRegion.regionCode() << testRegion.name();
-  }
-  qDebug() << "";
-}
-
 void HolidayRegionTest::testDefaultRegions()
 {
   QCOMPARE( KHolidays::HolidayRegion::defaultRegionCode( "be", "nl" ), QString( "be_nl" ) );
