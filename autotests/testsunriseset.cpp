@@ -20,9 +20,9 @@
 */
 
 #include "testsunriseset.h"
-#include <qtest_kde.h>
+#include <qtest.h>
 
-QTEST_KDEMAIN( SunriseTest, NoGUI )
+QTEST_MAIN( SunriseTest )
 
 #include "sunriseset.h"
 using namespace KHolidays;

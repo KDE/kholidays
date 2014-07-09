@@ -20,11 +20,11 @@
 */
 
 #include "testlunar.h"
-#include <qtest_kde.h>
+#include <qtest.h>
 #include <klocalizedstring.h>
 #include <qdebug.h>
 
-QTEST_KDEMAIN( LunarTest, NoGUI )
+QTEST_MAIN( LunarTest )
 
 #include "kholidays/lunarphase.h"
 using namespace KHolidays;

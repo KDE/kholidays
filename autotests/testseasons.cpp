@@ -20,10 +20,10 @@
 */
 
 #include "testseasons.h"
-#include <qtest_kde.h>
+#include <qtest.h>
 #include <klocalizedstring.h>
 
-QTEST_KDEMAIN( SeasonsTest, NoGUI )
+QTEST_MAIN( SeasonsTest )
 
 #include "astroseasons.h"
 using namespace KHolidays;

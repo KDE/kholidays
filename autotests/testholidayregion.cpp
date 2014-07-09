@@ -23,12 +23,12 @@
 
 #include <QString>
 #include <QFile>
-
-#include <qtest_kde.h>
+#include <QFileInfo>
+#include <qtest.h>
 #include <KLocalizedString>
 #include <QDebug>
 
-QTEST_KDEMAIN( HolidayRegionTest, NoGUI )
+QTEST_MAIN( HolidayRegionTest )
 
 void HolidayRegionTest::printMetadata( const KHolidays::HolidayRegion &region )
 {
