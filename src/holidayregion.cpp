@@ -338,30 +338,28 @@ bool HolidayRegion::isValid( const QString &regionCode )
   return temp.isValid();
 }
 
-Holiday::List HolidayRegion::holidays( const QDate &startDate, const QDate &endDate,
-                                       Holiday::MultidayMode multidayMode ) const
+Holiday::List HolidayRegion::holidays( const QDate &startDate, const QDate &endDate ) const
 {
   if ( isValid() ) {
-    return d->mDriver->parseHolidays( startDate, endDate, multidayMode );
+    return d->mDriver->parseHolidays( startDate, endDate );
   } else {
     return Holiday::List();
   }
 }
 
-Holiday::List HolidayRegion::holidays( const QDate &date, Holiday::MultidayMode multidayMode ) const
+Holiday::List HolidayRegion::holidays( const QDate &date ) const
 {
   if ( isValid() ) {
-    return d->mDriver->parseHolidays( date, multidayMode );
+    return d->mDriver->parseHolidays( date );
   } else {
     return Holiday::List();
   }
 }
 
-Holiday::List HolidayRegion::holidays( int calendarYear, const QString &calendarType,
-                                       Holiday::MultidayMode multidayMode ) const
+Holiday::List HolidayRegion::holidays( int calendarYear, const QString &calendarType ) const
 {
   if ( isValid() ) {
-    return d->mDriver->parseHolidays( calendarYear, calendarType, multidayMode );
+    return d->mDriver->parseHolidays( calendarYear, calendarType );
   } else {
     return Holiday::List();
   }
@@ -369,7 +367,7 @@ Holiday::List HolidayRegion::holidays( int calendarYear, const QString &calendar
 
 bool HolidayRegion::isHoliday( const QDate &date ) const
 {
-  Holiday::List holidayList = holidays( date, Holiday::MultidayHolidaysAsMultipleEvents );
+  Holiday::List holidayList = holidays( date );
   if ( holidayList.count() > 0 ) {
     foreach ( const KHolidays::Holiday &holiday, holidayList ) {
       if ( holiday.dayType() == Holiday::NonWorkday ) {

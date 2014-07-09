@@ -97,23 +97,20 @@ class HolidayParserDriver
      *
      * @param startDate start date of the holiday parse range
      * @param endDate end date of the holiday parse range
-     * @param multidayMode how to return multiday holidays
      *
      * @return a list of holidays
      */
-    virtual Holiday::List parseHolidays( const QDate &startDate, const QDate &endDate,
-                                         Holiday::MultidayMode multidayMode );
+    virtual Holiday::List parseHolidays( const QDate &startDate, const QDate &endDate );
 
     /**
      * Convenience function
      * Return a list of holidays falling on a given date
      *
      * @param date date to return holidays for
-     * @param multidayMode how to return multiday holidays
      *
      * @return a list of holidays
      */
-    virtual Holiday::List parseHolidays( const QDate &date, Holiday::MultidayMode multidayMode );
+    virtual Holiday::List parseHolidays( const QDate &date );
 
     /**
      * Convenience function
@@ -122,12 +119,10 @@ class HolidayParserDriver
      * @param calendarYear year to return holidays for
      * @param calendarType calendar system of year, standard KDE calendar type,
      *                     see KCalendarSystem
-     * @param multidayMode how to return multiday holidays
      *
      * @return a list of holidays
      */
-    virtual Holiday::List parseHolidays( int calendarYear, const QString &calendarType,
-                                         Holiday::MultidayMode multidayMode );
+    virtual Holiday::List parseHolidays( int calendarYear, const QString &calendarType );
 
     /**
      * Standard error message handling
@@ -175,8 +170,6 @@ class HolidayParserDriver
     int              m_parseYear;          // Year currently being parsed
     int              m_parseStartYear;     // First year to parse in parse calendar
     int              m_parseEndYear;       // Last year to parse in parse calendar
-
-    Holiday::MultidayMode m_multidayMode;   // How to return multiday holidays
 };
 
 }

@@ -57,28 +57,27 @@ void HolidayRegionTest::printHolidays( KHolidays::Holiday::List holidays )
 }
 
 void HolidayRegionTest::parseRegionCalendarYear( const KHolidays::HolidayRegion &region, int year,
-                                                 const QString &calendarType, KHolidays::Holiday::MultidayMode multidayMode )
+                                                 const QString &calendarType )
 {
     qDebug() << "Parsing region = " << region.regionCode() << " year = " << year << " calendar = " << calendarType;
-    printHolidays( region.holidays( year, calendarType, multidayMode ) );
+    printHolidays( region.holidays( year, calendarType ) );
     qDebug() << "";
 }
 
 void HolidayRegionTest::parseRegionDateRange( const KHolidays::HolidayRegion &region, const QDate &startDate,
-                                              const QDate &endDate, KHolidays::Holiday::MultidayMode multidayMode )
+                                              const QDate &endDate )
 {
     qDebug() << "Parsing regionCode = " << region.regionCode()
              << " start date = " << startDate.toString( Qt::ISODate )
              << " end date = " << endDate.toString( Qt::ISODate );
-    printHolidays( region.holidays( startDate, endDate, multidayMode ) );
+    printHolidays( region.holidays( startDate, endDate ) );
     qDebug() << "";
 }
 
-void HolidayRegionTest::parseRegionDate( const KHolidays::HolidayRegion &region, const QDate &date,
-                                         KHolidays::Holiday::MultidayMode multidayMode )
+void HolidayRegionTest::parseRegionDate( const KHolidays::HolidayRegion &region, const QDate &date )
 {
     qDebug() << "Parsing regionCode = " << region.regionCode() << " date = " << date.toString( Qt::ISODate );
-    printHolidays( region.holidays( date, multidayMode ) );
+    printHolidays( region.holidays( date ) );
     qDebug() << "";
 }
 
@@ -86,7 +85,7 @@ void HolidayRegionTest::testLoadFile()
 {
     KHolidays::HolidayRegion region( QFileInfo( KDESRCDIR "/holiday_gb-eaw_en-gb_Test" ) );
     printMetadata( region );
-    parseRegionCalendarYear( region, 2010, "gregorian", KHolidays::Holiday::MultidayHolidaysAsSingleEvents );
+    parseRegionCalendarYear( region, 2010, "gregorian" );
     parseRegionCalendarYear( region, 2010 );
     parseRegionCalendarYear( region, 2011 );
     parseRegionCalendarYear( region, 2012 );

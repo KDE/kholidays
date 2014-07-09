@@ -684,14 +684,7 @@ void HolidayParserDriverPlan::setEvent( int jd, int observeOffset, int duration 
     // Date the holiday will be observed on
     int observeJd = jd + observeOffset;
 
-    if ( m_multidayMode == Holiday::MultidayHolidaysAsSingleEvents ) {
-        addHoliday( QDate::fromJulianDay( observeJd ), duration );
-    } else { // KHolidays::MultidayHolidaysAsMultipleEvents
-        // Create backwards compatible holidays, one incidence per day
-        for ( int dd = 0; dd < duration; ++dd ) {
-            addHoliday( QDate::fromJulianDay( observeJd + dd ), 1 );
-        }
-    }
+    addHoliday( QDate::fromJulianDay( observeJd ), duration );
 }
 
 void  HolidayParserDriverPlan::addHoliday( const QDate &observedDate, int duration )
