@@ -24,7 +24,7 @@
 
 #include <QtCore/QObject>
 
-#include "holidays.h"
+#include "holidayregion.h"
 
 class QString;
 class QDate;
