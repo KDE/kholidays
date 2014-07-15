@@ -37,6 +37,7 @@ set_package_properties(Qt5Designer PROPERTIES
    TYPE OPTIONAL
 )
 add_definitions(-DTRANSLATION_DOMAIN=\"libkholidays5\")
+add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
 
 ########### Targets ###########
 add_subdirectory(src)
