@@ -118,7 +118,7 @@ protected:
     void  setFileDescription( const QString &description );
     void  setEventName( const QString &eventName );
     void  setEventCategory( const QString &category );
-    void  setEventCalendarType( const QString &calendarType = "gregorian" );
+    void  setEventCalendarType( const QString &calendarType = QLatin1String("gregorian") );
     void  setEventDate( int eventYear, int eventMonth, int eventDay );
     void  setEventDate( int jd );
 

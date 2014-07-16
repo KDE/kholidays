@@ -705,7 +705,7 @@ void  HolidayParserDriverPlan::addHoliday( const QDate &observedDate, int durati
         holiday.d->mDuration = duration;
         holiday.d->mText = m_eventName;
         holiday.d->mShortText = m_eventName;
-        if ( m_eventCategories.contains( "public" ) ) {
+        if ( m_eventCategories.contains( QLatin1String("public") ) ) {
             holiday.d->mDayType = KHolidays::Holiday::NonWorkday;
         } else {
             holiday.d->mDayType = KHolidays::Holiday::Workday;
