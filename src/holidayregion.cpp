@@ -50,9 +50,7 @@ class HolidayRegion::Private
 
         if ( mRegionCode.length() == 2 ) { //Backwards compatible mode for old location code
           mLocation = mRegionCode;
-          QStringList locationFiles = KGlobal::dirs()->findAllResources( "data",
-                                      QLatin1String("libkholidays/plan2/holiday_") + mLocation + QLatin1Char('*'),
-                                      KStandardDirs::NoDuplicates );
+          QStringList locationFiles = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QLatin1String("libkholidays/plan2/holiday_") + mLocation + QLatin1Char('*') );
           if ( locationFiles.count() > 0 ) {
             mRegionCode = locationFiles.at( 0 ).
                           mid( locationFiles.at( 0 ).lastIndexOf( QLatin1String("holiday_") ) + 8 );
@@ -129,8 +127,7 @@ HolidayRegion::~HolidayRegion()
 QStringList HolidayRegion::locations()
 {
   const QStringList files =
-    KGlobal::dirs()->findAllResources( "data", QLatin1String("libkholidays/plan2/holiday_*"),
-                                       KStandardDirs::NoDuplicates );
+    QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QLatin1String("libkholidays/plan2/holiday_*") );
 
   QStringList locations;
   foreach ( const QString &filename, files ) {
@@ -150,8 +147,7 @@ QString HolidayRegion::location() const
 QStringList HolidayRegion::regionCodes()
 {
   const QStringList files =
-    KGlobal::dirs()->findAllResources( "data", QLatin1String("libkholidays/plan2/holiday_*"),
-                                       KStandardDirs::NoDuplicates );
+    QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QLatin1String("libkholidays/plan2/holiday_*") );
 
   QStringList regionCodesList;
   foreach ( const QString &filename, files ) {
