@@ -31,50 +31,50 @@ using namespace SunRiseSet;
 void SunriseTest::TestSunrise()
 {
   //test bogus latitudes and longitudes
-  QVERIFY( utcSunrise( QDate( 2012, 1, 1 ), 1000.0, 1000.0 ) == QTime( 0, 0 ) );
-  QVERIFY( utcSunrise( QDate( 2012, 7, 1 ), -1000.0, -1000.0 ) == QTime( 0, 0 ) );
-  QVERIFY( utcSunrise( QDate( 2012, 12, 31 ), 1000.0, -1000.0 ) == QTime( 0, 0 ) );
+  QCOMPARE( utcSunrise( QDate( 2012, 1, 1 ), 1000.0, 1000.0 ), QTime( 0, 0 ) );
+  QCOMPARE( utcSunrise( QDate( 2012, 7, 1 ), -1000.0, -1000.0 ), QTime( 0, 0 ) );
+  QCOMPARE( utcSunrise( QDate( 2012, 12, 31 ), 1000.0, -1000.0 ), QTime( 0, 0 ) );
 
   //NYC
-  QVERIFY( utcSunrise( QDate( 2012, 1, 1 ), 40.72, -74.02 ) == QTime( 12, 20 ) );
-  QVERIFY( utcSunrise( QDate( 2012, 7, 1 ), 40.72, -74.02 ) == QTime( 9, 29 ) );
-  QVERIFY( utcSunrise( QDate( 2012, 12, 31 ), 40.72, -74.02 ) == QTime( 12, 20 ) );
+  QCOMPARE( utcSunrise( QDate( 2012, 1, 1 ), 40.72, -74.02 ), QTime( 12, 20 ) );
+  QCOMPARE( utcSunrise( QDate( 2012, 7, 1 ), 40.72, -74.02 ), QTime( 9, 29 ) );
+  QCOMPARE( utcSunrise( QDate( 2012, 12, 31 ), 40.72, -74.02 ), QTime( 12, 20 ) );
 
   //LA
-  QVERIFY( utcSunrise( QDate( 2012, 1, 1 ), 34.05, -118.23 ) == QTime( 14, 58 ) );
-  QVERIFY( utcSunrise( QDate( 2012, 7, 1 ), 34.05, -118.23 ) == QTime( 12, 45 ) );
-  QVERIFY( utcSunrise( QDate( 2012, 12, 31 ), 34.05, -118.23 ) == QTime( 14, 58 ) );
+  QCOMPARE( utcSunrise( QDate( 2012, 1, 1 ), 34.05, -118.23 ), QTime( 14, 58 ) );
+  QCOMPARE( utcSunrise( QDate( 2012, 7, 1 ), 34.05, -118.23 ), QTime( 12, 45 ) );
+  QCOMPARE( utcSunrise( QDate( 2012, 12, 31 ), 34.05, -118.23 ), QTime( 14, 58 ) );
 
   //Berlin
-  QVERIFY( utcSunrise( QDate( 2012, 1, 1 ), 51.40, 7.38 ) == QTime( 7, 36 ) );
-  QVERIFY( utcSunrise( QDate( 2012, 7, 1 ), 51.40, 7.38 ) == QTime( 3, 19 ) );
-  QVERIFY( utcSunrise( QDate( 2012, 12, 31 ), 51.40, 7.38 ) == QTime( 7, 36 ) );
+  QCOMPARE( utcSunrise( QDate( 2012, 1, 1 ), 51.40, 7.38 ), QTime( 7, 36 ) );
+  QCOMPARE( utcSunrise( QDate( 2012, 7, 1 ), 51.40, 7.38 ), QTime( 3, 19 ) );
+  QCOMPARE( utcSunrise( QDate( 2012, 12, 31 ), 51.40, 7.38 ), QTime( 7, 36 ) );
 
   //Tasmania
-  QVERIFY( utcSunrise( QDate( 2012, 1, 1 ), -14.60, 133.77 ) == QTime( 20, 39 ) );
-  QVERIFY( utcSunrise( QDate( 2012, 7, 1 ), -14.60, 133.77 ) == QTime( 21, 31 ) );
-  QVERIFY( utcSunrise( QDate( 2012, 12, 31 ), -14.60, 133.77 ) == QTime( 20, 39 ) );
+  QCOMPARE( utcSunrise( QDate( 2012, 1, 1 ), -14.60, 133.77 ), QTime( 20, 39 ) );
+  QCOMPARE( utcSunrise( QDate( 2012, 7, 1 ), -14.60, 133.77 ), QTime( 21, 31 ) );
+  QCOMPARE( utcSunrise( QDate( 2012, 12, 31 ), -14.60, 133.77 ), QTime( 20, 39 ) );
 }
 
 void SunriseTest::TestSunset()
 {
   //NYC
-  QVERIFY( utcSunset( QDate( 2012, 1, 1 ), 40.72, -74.02 ) == QTime( 21, 39 ) );
-  QVERIFY( utcSunset( QDate( 2012, 7, 1 ), 40.72, -74.02 ) == QTime( 00, 31 ) );
-  QVERIFY( utcSunset( QDate( 2012, 12, 31 ), 40.72, -74.02 ) == QTime( 21, 38 ) );
+  QCOMPARE( utcSunset( QDate( 2012, 1, 1 ), 40.72, -74.02 ), QTime( 21, 39 ) );
+  QCOMPARE( utcSunset( QDate( 2012, 7, 1 ), 40.72, -74.02 ), QTime( 00, 31 ) );
+  QCOMPARE( utcSunset( QDate( 2012, 12, 31 ), 40.72, -74.02 ), QTime( 21, 38 ) );
 
   //LA
-  QVERIFY( utcSunset( QDate( 2012, 1, 1 ), 34.05, -118.23 ) == QTime( 00, 54 ) );
-  QVERIFY( utcSunset( QDate( 2012, 7, 1 ), 34.05, -118.23 ) == QTime( 3, 8 ) );
-  QVERIFY( utcSunset( QDate( 2012, 12, 31 ), 34.05, -118.23 ) == QTime( 00, 54 ) );
+  QCOMPARE( utcSunset( QDate( 2012, 1, 1 ), 34.05, -118.23 ), QTime( 00, 54 ) );
+  QCOMPARE( utcSunset( QDate( 2012, 7, 1 ), 34.05, -118.23 ), QTime( 3, 8 ) );
+  QCOMPARE( utcSunset( QDate( 2012, 12, 31 ), 34.05, -118.23 ), QTime( 00, 54 ) );
 
   //Berlin
-  QVERIFY( utcSunset( QDate( 2012, 1, 1 ), 51.40, 7.38 ) == QTime( 15, 32 ) );
-  QVERIFY( utcSunset( QDate( 2012, 7, 1 ), 51.40, 7.38 ) == QTime( 19, 50 ) );
-  QVERIFY( utcSunset( QDate( 2012, 12, 31 ), 51.40, 7.38 ) == QTime( 15, 32 ) );
+  QCOMPARE( utcSunset( QDate( 2012, 1, 1 ), 51.40, 7.38 ), QTime( 15, 32 ) );
+  QCOMPARE( utcSunset( QDate( 2012, 7, 1 ), 51.40, 7.38 ), QTime( 19, 50 ) );
+  QCOMPARE( utcSunset( QDate( 2012, 12, 31 ), 51.40, 7.38 ), QTime( 15, 32 ) );
 
   //Tasmania
-  QVERIFY( utcSunset( QDate( 2012, 1, 1 ), -14.60, 133.77 ) == QTime( 9, 37 ) );
-  QVERIFY( utcSunset( QDate( 2012, 7, 1 ), -14.60, 133.77 ) == QTime( 8, 47 ) );
-  QVERIFY( utcSunset( QDate( 2012, 12, 31 ), -14.60, 133.77 ) == QTime( 9, 37 ) );
+  QCOMPARE( utcSunset( QDate( 2012, 1, 1 ), -14.60, 133.77 ), QTime( 9, 37 ) );
+  QCOMPARE( utcSunset( QDate( 2012, 7, 1 ), -14.60, 133.77 ), QTime( 8, 47 ) );
+  QCOMPARE( utcSunset( QDate( 2012, 12, 31 ), -14.60, 133.77 ), QTime( 9, 37 ) );
 }
