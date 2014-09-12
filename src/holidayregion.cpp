@@ -25,6 +25,7 @@
 #include "holidayregion.h"
 
 #include <QtCore/QDateTime>
+#include <QDirIterator>
 #include <QtCore/QFile>
 #include <QtCore/QSharedData>
 #include <QtCore/QFileInfo>
@@ -40,6 +41,19 @@
 
 using namespace KHolidays;
 
+static QStringList allHolidayFiles(const QString &location = QString())
+{
+  const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QLatin1String("kf5/libkholidays/plan2"), QStandardPaths::LocateDirectory);
+  QStringList files;
+  foreach (const QString &dir, dirs) {
+    QDirIterator it(dir, QStringList() << QStringLiteral("holiday_") + location + '*');
+    while (it.hasNext()) {
+      files.push_back(it.next());
+    }
+  }
+  return files;
+}
+
 class HolidayRegion::Private
 {
   public:
@@ -50,7 +64,7 @@ class HolidayRegion::Private
 
         if ( mRegionCode.length() == 2 ) { //Backwards compatible mode for old location code
           mLocation = mRegionCode;
-          QStringList locationFiles = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QLatin1String("libkholidays/plan2/holiday_") + mLocation + QLatin1Char('*') );
+          QStringList locationFiles = allHolidayFiles(mLocation);
           if ( locationFiles.count() > 0 ) {
             mRegionCode = locationFiles.at( 0 ).
                           mid( locationFiles.at( 0 ).lastIndexOf( QLatin1String("holiday_") ) + 8 );
@@ -58,7 +72,7 @@ class HolidayRegion::Private
         }
 
         mHolidayFile.setFile(
-          QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("libkholidays/plan2/holiday_") + mRegionCode ) );
+          QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("kf5/libkholidays/plan2/holiday_") + mRegionCode ) );
       }
 
       init();
@@ -126,8 +140,7 @@ HolidayRegion::~HolidayRegion()
 
 QStringList HolidayRegion::locations()
 {
-  const QStringList files =
-    QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QLatin1String("libkholidays/plan2/holiday_*") );
+  const QStringList files = allHolidayFiles();
 
   QStringList locations;
   foreach ( const QString &filename, files ) {
@@ -146,8 +159,7 @@ QString HolidayRegion::location() const
 
 QStringList HolidayRegion::regionCodes()
 {
-  const QStringList files =
-    QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QLatin1String("libkholidays/plan2/holiday_*") );
+  const QStringList files = allHolidayFiles();
 
   QStringList regionCodesList;
   foreach ( const QString &filename, files ) {
