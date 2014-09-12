@@ -110,8 +110,36 @@ void HolidayParserDriver::parseMetadata()
 void HolidayParserDriver::setParseCalendar( const QString &calendarType )
 {
   delete m_parseCalendar;
-  // Qt5: Port
-//   m_parseCalendar = KCalendarSystem::create( calendarType );
+
+  // this was removed from KCalendarSystem in KF5 for some reason, so copy it here until we have a QCalendarSystem
+  KLocale::CalendarSystem cal = KLocale::QDateCalendar;
+  if (calendarType == QLatin1String("coptic")) {
+    cal = KLocale::CopticCalendar;
+  } else if (calendarType == QLatin1String("ethiopian")) {
+    cal = KLocale::EthiopianCalendar;
+  } else if (calendarType == QLatin1String("gregorian")) {
+    cal = KLocale::QDateCalendar;
+  } else if (calendarType == QLatin1String("gregorian-proleptic")) {
+    cal = KLocale::GregorianCalendar;
+  } else if (calendarType == QLatin1String("hebrew")) {
+    cal = KLocale::HebrewCalendar;
+  } else if (calendarType == QLatin1String("hijri")) {
+    cal = KLocale::IslamicCivilCalendar;
+  } else if (calendarType == QLatin1String("indian-national")) {
+    cal = KLocale::IndianNationalCalendar;
+  } else if (calendarType == QLatin1String("jalali")) {
+    cal = KLocale::JalaliCalendar;
+  } else if (calendarType == QLatin1String("japanese")) {
+    cal = KLocale::JapaneseCalendar;
+  } else if (calendarType == QLatin1String("julian")) {
+    cal = KLocale::JulianCalendar;
+  } else if (calendarType == QLatin1String("minguo")) {
+    cal = KLocale::MinguoCalendar;
+  } else if (calendarType == QLatin1String("thai")) {
+    cal = KLocale::ThaiCalendar;
+  }
+
+  m_parseCalendar = KCalendarSystem::create( cal );
 }
 
 void HolidayParserDriver::setParseStartEnd()
