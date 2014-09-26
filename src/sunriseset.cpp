@@ -24,9 +24,9 @@
 
 #include "sunriseset.h"
 #include <cmath>
-static double PI = 3.14159265358979323846;
-static double MaxLat = 89.99;
-static double MaxLong = 179.99;
+static const double PI = 3.14159265358979323846;
+static const double MaxLat = 89.99;
+static const double MaxLong = 179.99;
 
 using namespace KHolidays;
 using namespace SunRiseSet;
