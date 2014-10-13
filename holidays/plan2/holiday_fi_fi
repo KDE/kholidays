@@ -6,9 +6,12 @@
 :: Author:   Steven Wahlberg <stegu@iki.fi>
 ::           Lasse Liehu <lasse.liehu@gmail.com>
 ::
-:: Updated:  2014-05-18
+:: Updated:  2014-07-09
 ::
 :: Source:   University of Helsinki Almanac office (http://almanakka.helsinki.fi)
+::           http://fi.wikipedia.org
+::           http://en.wikipedia.org
+::           http://www.usno.navy.mil/USNO/astronomical-applications/data-services/earth-seasons
 ::
 
 :: Metadata
@@ -21,78 +24,73 @@ description  "Suomen valtakunnalliset juhla- ja liputuspäivät"
 :: Public Holidays
 
 : New Year's Day
-"Uudenvuodenpäivä"                                 public on 1 january
+"Uudenvuodenpäivä"                                 public cultural on 1 january
 : Epiphany
 "Loppiainen"                                       public religious on 6 january
 : May Day
-"Vappu"                                            public on 1 may
-: Midsummer
-"Juhannuspäivä"                                    public on saturday after 20 june
-: All Saints
-"Pyhäinpäivä"                                      public religious on first saturday in november
+"Vappu, suomalaisen työn päivä"                    public cultural on 1 may
+: Midsummer (Saturday on 20 Jun - 26 Jun)
+"Juhannuspäivä"                                    public cultural on saturday after 19 june
+: All Saints (Saturday on 31 Oct - 6 Nov)
+"Pyhäinpäivä"                                      public religious commemorative on saturday before 7 november
 : Independence Day
-"Itsenäisyyspäivä"                                 public on 6 december
+"Itsenäisyyspäivä"                                 public historical on 6 december
 : Christmas Day
 "Joulupäivä"                                       public religious on 25 december
-: Boxing Day
-"Tapaninpäivä"                                     public on 26 december
+: St. Stephen's Day
+"Tapaninpäivä"                                     public religious on 26 december
 
-: pääsiäisen määräämät - determined by Easter
+
+: Determined by Easter
+
 : Shrove Sunday
 "Laskiaissunnuntai"                                public religious on easter minus 49 days
-: Shrove Tuesday
+: Shrove Tuesday (not a day off)
 "Laskiaistiistai"                                  religious on easter minus 47 days
-: Annunciation
-"Marianpäivä"                                      public religious on ( (( [sunday before ([03/28])] == [easter]) ||
-                                                                          ( [sunday before ([03/28])] == ([easter] - 7)) ) ?
+: Annunciation (sunday on 22 Mar - 28 Mar unless said day is Palm Sunday or Good Friday)
+"Marian ilmestyspäivä"                             public religious on ( (( [sunday before ([03/29])] == [easter]) ||
+                                                                          ( [sunday before ([03/29])] == ([easter] - 7)) ) ?
                                                                           ([easter] - 14) :
-                                                                           [sunday before ([03/28])] )
+                                                                           [sunday before ([03/29])] )
 : Palm Sunday
 "Palmusunnuntai"                                   public religious on easter minus 7 days
 : Good Friday
 "Pitkäperjantai"                                   public religious on easter minus 2 days
 : Easter Day
-"Pääsiäinen"                                       public religious on easter
+"Pääsiäispäivä"                                    public religious on easter
 : Easter Monday
 "2. pääsiäispäivä"                                 public on easter plus 1 days
-: Rogation Sunday
-"Rukoussunnuntai"                                  public religious on easter plus 35 days
 : Ascension
 "Helatorstai"                                      public religious on easter plus 39 days
-: : Whitsunday
+: Pentecost or Whitsunday
 "Helluntaipäivä"                                   public religious on easter plus 49 days
-
 
 :: Religious Holidays
 
-: Kynttilänpäivä, Pyhän Kolminaisuuden päivä, Apostolien päivä,
-: Mikkelinpäivä and Valvomisen sunnuntai could be here, but they're always
-: on Sundays and don't know if we really want them here
-
-: Sleepyhead Day (not a holiday)
-"Unikeonpäivä"                                     cultural on 27 july
+: Seven Sleepers Day (not a day off)
+"Unikeonpäivä"                                     religious on 27 july
 : The First Advent Sunday
-"1. adventtisunnuntai"                             public religious on sunday before 24 december minus 21 days
+"1. adventtisunnuntai"                             religious on sunday before 24 december minus 21 days
 : The Second Advent Sunday
-"2. adventtisunnuntai"                             public religious on sunday before 24 december minus 14 days
+"2. adventtisunnuntai"                             religious on sunday before 24 december minus 14 days
 : The Third Advent Sunday
-"3. adventtisunnuntai"                             public religious on sunday before 24 december minus 7 days
+"3. adventtisunnuntai"                             religious on sunday before 24 december minus 7 days
 : The Fourth Advent Sunday
-"4. adventtisunnuntai"                             public religious on sunday before 24 december
-: Holy Innocents' Day (not a holiday)
+"4. adventtisunnuntai"                             religious on sunday before 24 december
+: Holy Innocents' Day (not a day off), refers to Massacre of the Innocents
 "Viattomien lasten päivä"                          religious on 28 december
 
 
-:: Financial
+:: Commemorative
 
-: Enterpreneur's Day
-"Yrittäjän päivä"                                  cultural on 5 september
+: International Holocaust Remembrance Day
+"Vainojen uhrien muistopäivä"                      commemorative on 27 january
+: Remembrance Day
+"Kaatuneitten muistopäivä"                         commemorative on third sunday in may
 
 
 :: Cultural
 
-: International Holocaust Remembrance Day
-"Vainojen uhrien muistopäivä"                      cultural on 27 january
 : J. L. Runeberg's Day
 "Runebergin päivä"                                 cultural on 5 february
 : Sami National Day
@@ -105,52 +103,97 @@ description  "Suomen valtakunnalliset juhla- ja liputuspäivät"
 "Naistenpäivä"                                     cultural on 8 march
 : Minna Canth's Day, The Day of Equality
 "Minna Canthin päivä, tasa-arvon päivä"            cultural on 19 march
+: National version of International Romani Day
+"Romanien kansallispäivä"                          cultural on 8 april
 : Michael Agricola' Day, (Finnish Language Day)
-"Agricolan päivä"                                  cultural on 9 april
+"Mikael Agricolan päivä, suomen kielen päivä"      cultural on 9 april
 : National Veteran's Day
-"Veteraanipäivä"                                   cultural on 27 april
+"Kansallinen veteraanipäivä"                       cultural on 27 april
 : Mother's Day
-"Äitienpäivä"                                      cultural on second sunday in  may
+"Äitienpäivä"                                      cultural on second sunday in may
 : Europe Day
 "Eurooppa-päivä"                                   cultural on 9 may
 : J. V. Snellman's Day, (The Day of Finnishness)
-"Snellmanin päivä"                                 cultural on 12 may
-: Remembrance Day
-"Kaatuneitten muistopäivä"                         cultural on third sunday in may
+"J. V. Snellmanin päivä, suomalaisuuden päivä"     cultural on 12 may
 : Flag Day of Defence Forces
-"Puolustusvoimien lippujuhla"                      cultural on 4 june
+"Puolustusvoimien lippujuhlan päivä"               cultural on 4 june
+: Midsummer Eve (Friday on 19 Jun - 25 Jun)
+: Although usually not listed in calendars, it is a day off for many and an important day anyway.
+"Juhannusaatto"                                    financial government cultural on friday after 18 june
 : Eino Leino's Day, (Summer and Poetry Day)
-"Eino Leinon päivä"                                cultural on 6 july
+"Eino Leinon päivä, runon ja suven päivä"          cultural on 6 july
+: Entrepreneur's Day
+"Yrittäjän päivä"                                  cultural on 5 september
 : Aleksis Kivi's Day, (Finnish Literature Day)
-"Aleksis Kiven päivä"                              cultural on 10 october
-: United Nations Day
-"YK:n päivä"                                       cultural on 24 october
+"Aleksis Kiven päivä, suomalaisen kirjallisuuden päivä" cultural on 10 october
 : Finnish Swedish Heritage Day
 "Svenska dagen"                                    cultural on 6 november
 : Father's Day
 "Isänpäivä"                                        cultural on second sunday in november
 : Children's Day
-"Lapsen oikeuksien päivä"                          cultural on 20 november
+"Lasten oikeuksien päivä"                          cultural on 20 november
 : Jean Sibelius's Day, (Finnish Music Day)
-"Jean Sibeliuksen päivä"                           cultural on 8 december
+"Jean Sibeliuksen päivä, suomalaisen musiikin päivä" cultural on 8 december
+: Christmas Eve (listed here even though it is usually not listed in calendars)
+"Jouluaatto"                                       financial government cultural on 24 december
+
+
+:: Historical
+
+: United Nations Day
+"YK:n päivä"                                       historical on 24 october
 
 
 :: School
 
-:: Daylight Saving
-"Kesäaika alkaa (+1 tunti)"                        seasonal on last sunday in march
-"Kesäaika päättyy (-1 tunti)"                      seasonal on last sunday in october
+:: Daylight Saving (Winter/Summer Time)
+
+"Kesäaika alkaa (tunti eteenpäin)"                 seasonal on last sunday in march
+"Kesäaika päättyy (tunti taaksepäin)"              seasonal on last sunday in october
 
 
 :: Seasons
 
+: Leap Day
+"Karkauspäivä"                                     seasonal on 29 february
+: Vernal equinox
+"Kevätpäiväntasaus"                                seasonal on 20 march 2013
+"Kevätpäiväntasaus"                                seasonal on 20 march 2014
+"Kevätpäiväntasaus"                                seasonal on 21 march 2015
+"Kevätpäiväntasaus"                                seasonal on 20 march 2016
+"Kevätpäiväntasaus"                                seasonal on 20 march 2017
+"Kevätpäiväntasaus"                                seasonal on 20 march 2018
+"Kevätpäiväntasaus"                                seasonal on 20 march 2019
+"Kevätpäiväntasaus"                                seasonal on 20 march 2020
+: Summer solstice
+"Kesäpäivänseisaus"                                seasonal on 21 june 2013
+"Kesäpäivänseisaus"                                seasonal on 21 june 2014
+"Kesäpäivänseisaus"                                seasonal on 21 june 2015
+"Kesäpäivänseisaus"                                seasonal on 21 june 2016
+"Kesäpäivänseisaus"                                seasonal on 21 june 2017
+"Kesäpäivänseisaus"                                seasonal on 21 june 2018
+"Kesäpäivänseisaus"                                seasonal on 21 june 2019
+"Kesäpäivänseisaus"                                seasonal on 21 june 2020
+: Autumnal equinox
+"Syyspäiväntasaus"                                 seasonal on 22 september 2013
+"Syyspäiväntasaus"                                 seasonal on 23 september 2014
+"Syyspäiväntasaus"                                 seasonal on 23 september 2015
+"Syyspäiväntasaus"                                 seasonal on 22 september 2016
+"Syyspäiväntasaus"                                 seasonal on 22 september 2017
+"Syyspäiväntasaus"                                 seasonal on 23 september 2018
+"Syyspäiväntasaus"                                 seasonal on 23 september 2019
+"Syyspäiväntasaus"                                 seasonal on 22 september 2020
+: Winter solstice
+"Talvipäivänseisaus"                               seasonal on 21 december 2013
+"Talvipäivänseisaus"                               seasonal on 22 december 2014
+"Talvipäivänseisaus"                               seasonal on 22 december 2015
+"Talvipäivänseisaus"                               seasonal on 21 december 2016
+"Talvipäivänseisaus"                               seasonal on 21 december 2017
+"Talvipäivänseisaus"                               seasonal on 22 december 2018
+"Talvipäivänseisaus"                               seasonal on 22 december 2019
+"Talvipäivänseisaus"                               seasonal on 21 december 2020
+
 
 :: Name Days
 
-: Name days in Finland are under copyright by University of Helsinki Almanac office and not free
-
-
-:: To be sorted
-
-: Leap Day
-"Karkauspäivä"                                     seasonal on 29 february
+: Name days in Finland are under copyright by University of Helsinki Almanac office and are not free.
