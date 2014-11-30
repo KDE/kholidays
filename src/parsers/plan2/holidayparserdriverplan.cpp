@@ -304,7 +304,7 @@ int HolidayParserDriverPlan::julianDayFromEventName( const QString &eventName )
 {
     foreach ( const KHolidays::Holiday &thisHoliday, m_resultList ) {
         if ( thisHoliday.name() == eventName ) {
-            return thisHoliday.date().toJulianDay();
+            return thisHoliday.observedStartDate().toJulianDay();
         }
     }
     return -1;

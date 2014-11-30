@@ -64,11 +64,6 @@ bool Holiday::operator>( const Holiday &rhs ) const
   return d->mObservedDate > rhs.d->mObservedDate;
 }
 
-QDate Holiday::date() const
-{
-  return d->mObservedDate;
-}
-
 QDate Holiday::observedStartDate() const
 {
   return d->mObservedDate;

@@ -89,11 +89,6 @@ class KHOLIDAYS_EXPORT Holiday
     bool operator>( const Holiday &rhs ) const;
 
     /**
-     * Returns the observed date of the holiday.
-     */
-    QDate date() const;
-
-    /**
      * @since 4.6
      *
      * Returns the observed start date of the holiday.
