@@ -115,14 +115,22 @@ class KHOLIDAYS_EXPORT Holiday
     int duration() const;
 
     /**
-     * Returns the long description of the holiday.
+     * @since 5.0
+     *
+     * Returns the name of the Holiday.
+     *
+     * @return the name of the Holiday
      */
-    QString text() const;
+    QString name() const;
 
     /**
-     * Returns the short description of the holiday.
+     * @since 5.0
+     *
+     * Returns the description of the Holiday if available
+     *
+     * @return the description of the Holiday
      */
-    QString shortText() const;
+    QString description() const;
 
     /**
      * Returns the day type of the holiday.

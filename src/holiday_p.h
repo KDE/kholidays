@@ -44,15 +44,15 @@ class HolidayPrivate : public QSharedData
     {
         mObservedDate = other.mObservedDate;
         mDuration = other.mDuration;
-        mText = other.mText;
-        mShortText = other.mShortText;
+        mName = other.mName;
+        mDescription = other.mDescription;
         mDayType = other.mDayType;
     }
 
     QDate mObservedDate;
     int mDuration;
-    QString mText;
-    QString mShortText;
+    QString mName;
+    QString mDescription;
     Holiday::DayType mDayType;
 };
 

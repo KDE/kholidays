@@ -303,7 +303,7 @@ QDate HolidayParserDriverPlan::pascha( int year )
 int HolidayParserDriverPlan::julianDayFromEventName( const QString &eventName )
 {
     foreach ( const KHolidays::Holiday &thisHoliday, m_resultList ) {
-        if ( thisHoliday.text() == eventName ) {
+        if ( thisHoliday.name() == eventName ) {
             return thisHoliday.date().toJulianDay();
         }
     }
@@ -696,8 +696,8 @@ void  HolidayParserDriverPlan::addHoliday( const QDate &observedDate, int durati
         KHolidays::Holiday holiday;
         holiday.d->mObservedDate = observedDate;
         holiday.d->mDuration = duration;
-        holiday.d->mText = m_eventName;
-        holiday.d->mShortText = m_eventName;
+        holiday.d->mName = m_eventName;
+        holiday.d->mDescription = m_eventName;
         if ( m_eventCategories.contains( QStringLiteral("public") ) ) {
             holiday.d->mDayType = KHolidays::Holiday::NonWorkday;
         } else {

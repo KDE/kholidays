@@ -84,14 +84,14 @@ int Holiday::duration() const
   return d->mDuration;
 }
 
-QString Holiday::text() const
+QString Holiday::name() const
 {
-  return d->mText;
+  return d->mName;
 }
 
-QString Holiday::shortText() const
+QString Holiday::description() const
 {
-  return d->mShortText;
+  return d->mDescription;
 }
 
 Holiday::DayType Holiday::dayType() const
