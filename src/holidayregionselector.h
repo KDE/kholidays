@@ -91,7 +91,7 @@ class KHOLIDAYS_EXPORT HolidayRegionSelector : public QWidget
      *
      * @param parent The parent widget.
      */
-    explicit HolidayRegionSelector( QWidget *parent = 0 );
+    explicit HolidayRegionSelector( QWidget *parent = Q_NULLPTR );
 
     /**
      * Destructor
