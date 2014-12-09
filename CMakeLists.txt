@@ -19,7 +19,7 @@ include(KDEFrameworkCompilerSettings)
 
 # FIXME: Do we want the same versions in kdepimlibs and kf5?
 set(KF5_VERSION "5.5.0")
-set(KDEPIMLIBS_VERSION "4.77.0")
+set(KDEPIMLIBS_VERSION "4.78.0")
 
 ecm_setup_version(${KDEPIMLIBS_VERSION} VARIABLE_PREFIX KHOLIDAYS
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kholidays_version.h"
