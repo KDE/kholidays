@@ -1,95 +1,105 @@
-     The following description of the holidays file format is excerpted
-     from 'plan.help' which is included with the plan software.
-     See http://www.bitrot.de/plan.html for more about plan.
+The file format was originally adopted from PLAN (http://www.bitrot.de/plan.html)
+but has since been heavily modified to add new features such as holiday categories
+and alternative calendar systems, or to remove unused features.
 
-     Note that some of the information contained here may not be relevant
-     to the application using this library; for example, KOrganizer does
-     not use the color from the holidays file when displaying the holidays.
+The file format is currently defined using Bison and Flex in the following files:
 
-     -- start of excerpt --
+    kholidays/src/parsers/plan2/holidayscannerplan.ypp
+    kholidays/src/parsers/plan2/holidayscannerplan.lpp
 
-        HOLIDAYS
+(In the following definition, optional parts are in [square brackets],
+nonterminals are in CAPS, alternatives are separated by |, everything must be
+entered in lower case. In all cases defer to the defintiion in the ypp/lpp
+files.)
 
-        Holidays are annotations of certain day boxes in the month and year
-        calendars. A holiday can define a text that can appear under the day
-        number (default) or next to the day number (small, because there is
-        less space for text there). Both the color of holiday name and the day
-        number can be set. For each day, only one holiday plus one "small"
-        holiday can be defined. Earlier definitions override later ones.
+A holiday file consists of an optional metadata header section, followed by an
+optional holiday list:
 
-        You don't need to define a holiday if you want an entry with no time
-        field; just define a normal appointment with "-" in the time column.
-        There is no limit on the number of those.
+    [METADATA]
+    [LIST]
 
-        In addition to the user's holiday list, there may be a system-wide
-        holiday file in the LIB directory (LIB is from the Makefile, usually
-        /usr/local/bin). System-wide holidays cannot be edited from within plan.
-        User holidays override system-wide holidays on the same day.
+The meatadata can contain country code, language code, name and description:
 
-        The holiday format is: (optional parts are in [square brackets],
-        nonterminals are in CAPS, alternatives are separated by |, everything
-        must be entered in lower case)
+    [COUNTRY_CODE]
+    [LANGUAGE_CODE]
+    ["Name"]
+    ["Description"]
 
-           [small]  [STRINGCOLOR]  "name"  [DAYNUMBERCOLOR]
-                                                  on  [DATE]  [OFFSET]  [LENGTH]
+The list holds 0 or more holiday definitions:
 
-        (Although shown here on two lines, every holiday definition must be
-        entered on a single line.)
+    "Event Name" [CATEGORIES] DATE_RULE
 
-        Available colors are black, red, green, yellow, blue, magenta, cyan,
-        white, and weekend (the same color used for Saturday and Sunday).
-        The string color is used for the name when printed into a day box; the
-        day number color is used to alter the color of the day number (1..31)
-        of the day box the holiday falls on. This can be used to promote a day
-        to an official holiday by using the "weekend" color. If there is a day
-        number color specified, but no string color, the string color is set to
-        the day number color. The name can be empty, but the quotes must be
-        present. There are several formats for DATE:
+Categories can be 0 or more of the following keywords:
 
-           DAY . MONTH [ . YEAR]
-           MONTH / DAY [ / YEAR]
-           DAY   MONTHNAME   [YEAR]
-           MONTHNAME   DAY   [YEAR]
-           [every   NTH]   WEEKDAY   [in   MONTH]
-           WEEKDAY   before   LIT_DATE
-           WEEKDAY   after   LIT_DATE
-           easter
-           pascha
+    public
+    civil
+    religious
+    school
+    government
+    financial
+    cultural
+    commemorative
+    historical
+    nameday
+    seasonal
 
-        DAY, MONTH, YEAR, NTH, and NUMBER can be C expressions; in
-        dates, they must be parenthesized.  The special values any and last are
-        also available. Any valid DATE description specifying a single day may
-        be converted to a NUMBER by enclosing it in square brackets [].
-        MONTHNAME is january, february, etc;  WEEKDAY is monday, tuesday,
-        etc.  NTH can alternatively be first, second, ..., fifth, last. The
-        words on, every, day, and days are syntactic sugar without meaning.
-        Easter is predefined because its definition is rather complicated.
-        LIT_DATE stands for one of the first two alternatives, DAY.MONTH[.YEAR]
-        or MONTH/DAY[/YEAR]. Pascha is the Christian Orthodox Easter.
+The "public" category caries the extra meaning of being a day off.
 
-        The OFFSET after DATE is "[plus | minus   NUMBER   days", and
-        the LENGTH after that is "length   NUMBER   days". Offsets are
-        useful for holidays relative to Easter, and lengths are useful for trade
-        shows and vacations. Always define vacations last in the list so regular
-        holidays override them.
+There are several possible ways for a date rule to be defined
 
-        Dates can be converted to numbers by enclosing them in square brackets.
-        For example, the number of days between Easter and May 1 can be
-        computed with ([may 1] - [easter]). As with C expressions, bracketed
-        expressions must be parenthesized.
+    [CALENDAR] DATE [OFFSET] [LENGTH]
 
-        If you have /lib/cpp (see CPP_PATH in the Makefile), you can use #include
-        statements to include additional external holiday files. The external
-        files cannot be edited interactively with plan; use an editor.
+Calendar can be 0 or 1 of the following keywords:
 
-        Examples:
-           small  "Easter"  weekend  on  easter
-           small  "Surprise"  blue  on  last  sunday  in  april  plus  1  day
-           small  green  "xmas"  weekend  on  12/25
-           ""  weekend  on  july  4
-           magenta  "Payday"  on  any/last
-           green  "Vacation"  on  20.6.93  length  28  days
-           #include "/usr/local/lib/vacations"
+    gregorian
+    julian
+    coptic
+    ethiopian
+    hebrew
+    hijri
+    indiannational
+    jalali
 
-        Restrictions: plus, minus, and length may not cross over to the next or
-        previous year, you cannot define New Year's as "last/last plus 1 day".
+"gregorian" is the default value if not defined.
+
+There are several formats for DATE:
+
+    DAY.MONTH[.YEAR]
+    MONTH/DAY[/YEAR]
+    DAY MONTHNAME [YEAR]
+    MONTHNAME DAY [YEAR]
+    [every NTH] WEEKDAY [in MONTH]
+    WEEKDAY before LIT_DATE
+    WEEKDAY after LIT_DATE
+    easter
+    pascha
+
+It is recommended to always use month names where-ever possible to avoid confusion,
+but if a month number is used then use DAY.MONTH[.YEAR] format for consistency.
+
+DAY, MONTH, YEAR, NTH, and NUMBER can be C expressions; in
+dates, they must be parenthesized.  The special values "any" and "last" are
+also available. Any valid DATE description specifying a single day may
+be converted to a NUMBER by enclosing it in square brackets [].
+NTH can alternatively be first, second, ..., fifth, last.
+
+The words "on", "every", "day", and "days" are syntactic sugar without meaning.
+LIT_DATE stands for one of the first two alternatives, DAY.MONTH[.YEAR]
+or MONTH/DAY[/YEAR].
+
+Dates can be converted to numbers by enclosing them in square brackets.
+For example, the number of days between Easter and May 1 can be
+computed with ([may 1] - [easter]). As with C expressions, bracketed
+expressions must be parenthesized.
+
+The OFFSET after DATE is used to calculate a holiday date relative to another date
+and is defined as:
+
+    [plus|minus] NUMBER [days]
+
+The LENGTH is used to calcualte how long a holiday is and is defined as:
+
+    length NUMBER [days]
+
+Restrictions: plus, minus, and length may not cross over to the next or
+previous year, you cannot define New Year's as "last/last plus 1 day".
