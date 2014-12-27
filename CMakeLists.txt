@@ -19,9 +19,9 @@ include(KDEFrameworkCompilerSettings)
 
 # FIXME: Do we want the same versions in kdepimlibs and kf5?
 set(KF5_VERSION "5.5.0")
-set(KDEPIMLIBS_VERSION "4.79.0")
+set(KHOLIDAYSLIB_VERSION "4.79.0")
 
-ecm_setup_version(${KDEPIMLIBS_VERSION} VARIABLE_PREFIX KHOLIDAYS
+ecm_setup_version(${KHOLIDAYSLIB_VERSION} VARIABLE_PREFIX KHOLIDAYS
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kholidays_version.h"
                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5HolidaysConfigVersion.cmake"
                         SOVERSION 5
