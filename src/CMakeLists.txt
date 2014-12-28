@@ -38,9 +38,11 @@ target_include_directories(KF5Holidays PUBLIC "$<BUILD_INTERFACE:${KHolidays_SOU
 
 target_link_libraries(KF5Holidays
 PUBLIC
-    KF5::KDELibs4Support
-PRIVATE
+    Qt5::Widgets
+    Qt5::Test
     KF5::I18n
+    KF5::ItemViews
+    KF5::Completion
 )
 
 set_target_properties(KF5Holidays PROPERTIES
@@ -69,6 +71,10 @@ install(TARGETS KF5Holidays EXPORT KF5HolidaysTargets ${KF5_INSTALL_TARGETS_DEFA
 if (Qt5Designer_FOUND)
     kf5designerplugin_add_plugin(holidayswidgets kholidays.widgets)
     target_link_libraries(holidayswidgets
+        Qt5::Widgets
+        Qt5::Designer
+        KF5::ItemViews
+        KF5::Completion
         KF5::Holidays
     )
     set_target_properties(holidayswidgets PROPERTIES
@@ -107,7 +113,6 @@ install(FILES
     COMPONENT Devel
 )
 
+ecm_generate_pri_file(BASE_NAME KHolidays LIB_NAME KF5KHolidays DEPS "widgets" FILENAME_VAR PRI_FILENAME  INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/KHolidays)
 
-ecm_generate_pri_file(BASE_NAME KHolidays LIB_NAME KF5KHolidays DEPS "KDELibs4Support" FILENAME_VAR PRI_FILENAME  INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/KHolidays)
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
-

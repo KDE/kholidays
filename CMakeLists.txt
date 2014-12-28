@@ -27,8 +27,11 @@ ecm_setup_version(${KHOLIDAYS_LIB_VERSION} VARIABLE_PREFIX KHOLIDAYS
 )
 
 ########### Find packages ###########
+find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets Test)
 find_package(KF5ItemViews ${KF5_VERSION} CONFIG REQUIRED)
-find_package(KF5KDELibs4Support ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5Completion ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5I18n ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5DesignerPlugin ${KF5_VERSION} CONFIG REQUIRED)
 
 find_package(Qt5Designer NO_MODULE)
 set_package_properties(Qt5Designer PROPERTIES
