@@ -23,8 +23,8 @@
 #include "ui_holidayregionselector.h"
 
 #include "holidayregion.h"
+#include "holiday_p.h"
 
-#include <KLocale>
 #include <KLocalizedString>
 #include <KComboBox>
 
@@ -100,7 +100,7 @@ QTreeWidgetItem *HolidayRegionSelector::Private::findItem( const QString &holida
 void HolidayRegionSelector::Private::initItem( QTreeWidgetItem *listItem, HolidayRegion *region )
 {
   m_ui.regionTreeWidget->blockSignals( true );
-  QString languageName = KLocale::global()->languageCodeToName( region->languageCode() );
+  QString languageName = QLocale::languageToString( codeToLanguage( region->languageCode() ) );
   listItem->setCheckState( Private::SelectColumn, Qt::Unchecked );
   QString text = i18n( "<p>Select to use Holiday Region</p>" );
   listItem->setToolTip( Private::SelectColumn, text );
@@ -286,8 +286,8 @@ HolidayRegionSelector::HolidayRegionSelector( QWidget *parent ) :
     if ( it.value().count() == 1 && regionMap[it.value().at( 0 )]->countryCode() == country ) {
       d->initItem( rootItem, regionMap[ it.value().at( 0 ) ] );
     } else {
-      rootItem->setText( Private::RegionColumn,
-                         KLocale::global()->countryCodeToName( country ) );
+      //TODO Not translated!
+      rootItem->setText( Private::RegionColumn, QLocale::countryToString( codeToCountry( country ) ) );
       d->m_ui.regionTreeWidget->setFirstItemColumnSpanned ( rootItem, true );
       foreach ( const QString &regionCode, it.value() ) {
         QTreeWidgetItem *childItem = new QTreeWidgetItem( rootItem );
