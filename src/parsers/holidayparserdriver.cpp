@@ -21,7 +21,6 @@
 
 #include "holidayparserdriver_p.h"
 
-#include <KCalendarSystem>
 #include <QDebug>
 
 using namespace KHolidays;
@@ -29,12 +28,10 @@ using namespace KHolidays;
 HolidayParserDriver::HolidayParserDriver( const QString &filePath )
 {
   m_filePath = filePath;
-  m_parseCalendar = 0;
 }
 
 HolidayParserDriver::~HolidayParserDriver()
 {
-  delete m_parseCalendar;
 }
 
 QString HolidayParserDriver::fileCountryCode() const
@@ -75,19 +72,16 @@ Holiday::List HolidayParserDriver::parseHolidays( const QDate &requestDate )
   return parseHolidays( requestDate, requestDate );
 }
 
-Holiday::List HolidayParserDriver::parseHolidays( int calendarYear, const QString &calendarType )
+Holiday::List HolidayParserDriver::parseHolidays( int calendarYear, QCalendarSystem::CalendarSystem calendar )
 {
   m_resultList.clear();
-  setParseCalendar( calendarType );
-  if ( !m_parseCalendar->isValid( calendarYear, 1, 1 ) ) {
+  setParseCalendar( calendar );
+  if ( !m_parseCalendar.isValid( calendarYear, 1, 1 ) ) {
     return m_resultList;
   }
 
-  QDate startDate, endDate;
-  m_parseCalendar->setDate( startDate, calendarYear, 1, 1 );
-  endDate = startDate.addDays( m_parseCalendar->daysInYear( startDate ) - 1 );
-
-  return parseHolidays( startDate, endDate );
+  return parseHolidays( m_parseCalendar.firstDayOfYear( calendarYear ),
+                        m_parseCalendar.lastDayOfYear( calendarYear ) );
 }
 
 void HolidayParserDriver::error( const QString &errorMessage )
@@ -103,39 +97,9 @@ void HolidayParserDriver::parseMetadata()
 {
 }
 
-void HolidayParserDriver::setParseCalendar( const QString &calendarType )
+void HolidayParserDriver::setParseCalendar( QCalendarSystem::CalendarSystem calendar )
 {
-  delete m_parseCalendar;
-
-  // this was removed from KCalendarSystem in KF5 for some reason, so copy it here until we have a QCalendarSystem
-  KLocale::CalendarSystem cal = KLocale::QDateCalendar;
-  if (calendarType == QLatin1String("coptic")) {
-    cal = KLocale::CopticCalendar;
-  } else if (calendarType == QLatin1String("ethiopian")) {
-    cal = KLocale::EthiopianCalendar;
-  } else if (calendarType == QLatin1String("gregorian")) {
-    cal = KLocale::QDateCalendar;
-  } else if (calendarType == QLatin1String("gregorian-proleptic")) {
-    cal = KLocale::GregorianCalendar;
-  } else if (calendarType == QLatin1String("hebrew")) {
-    cal = KLocale::HebrewCalendar;
-  } else if (calendarType == QLatin1String("hijri")) {
-    cal = KLocale::IslamicCivilCalendar;
-  } else if (calendarType == QLatin1String("indian-national")) {
-    cal = KLocale::IndianNationalCalendar;
-  } else if (calendarType == QLatin1String("jalali")) {
-    cal = KLocale::JalaliCalendar;
-  } else if (calendarType == QLatin1String("japanese")) {
-    cal = KLocale::JapaneseCalendar;
-  } else if (calendarType == QLatin1String("julian")) {
-    cal = KLocale::JulianCalendar;
-  } else if (calendarType == QLatin1String("minguo")) {
-    cal = KLocale::MinguoCalendar;
-  } else if (calendarType == QLatin1String("thai")) {
-    cal = KLocale::ThaiCalendar;
-  }
-
-  m_parseCalendar = KCalendarSystem::create( cal );
+  m_parseCalendar = QCalendarSystem( calendar );
 }
 
 void HolidayParserDriver::setParseStartEnd()
@@ -143,22 +107,22 @@ void HolidayParserDriver::setParseStartEnd()
   // Set start year and end year to generate holidays for
   // TODO Maybe make +/- 1 more year to allow spanned holidays from previous/following years
   // Make sure requested date range falls within valid date range for current calendar system
-  if ( m_requestStart > m_parseCalendar->latestValidDate() ||
-       m_requestEnd < m_parseCalendar->earliestValidDate() ) {
+  if ( m_requestStart > m_parseCalendar.latestValidDate() ||
+       m_requestEnd < m_parseCalendar.earliestValidDate() ) {
     // Completely out of range, don't parse
     m_parseStartYear = 0;
     m_parseEndYear = m_parseStartYear - 1;
   } else {
-    if ( m_requestStart < m_parseCalendar->earliestValidDate() ) {
-      m_parseStartYear = m_parseCalendar->year( m_parseCalendar->earliestValidDate() );
+    if ( m_requestStart < m_parseCalendar.earliestValidDate() ) {
+      m_parseStartYear = m_parseCalendar.year( m_parseCalendar.earliestValidDate() );
     } else {
-      m_parseStartYear = m_parseCalendar->year( m_requestStart );
+      m_parseStartYear = m_parseCalendar.year( m_requestStart );
     }
 
-    if ( m_requestEnd > m_parseCalendar->latestValidDate() ) {
-      m_parseEndYear = m_parseCalendar->year( m_parseCalendar->latestValidDate() );
+    if ( m_requestEnd > m_parseCalendar.latestValidDate() ) {
+      m_parseEndYear = m_parseCalendar.year( m_parseCalendar.latestValidDate() );
     } else {
-      m_parseEndYear = m_parseCalendar->year( m_requestEnd );
+      m_parseEndYear = m_parseCalendar.year( m_requestEnd );
     }
   }
 }

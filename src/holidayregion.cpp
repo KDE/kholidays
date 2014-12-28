@@ -356,10 +356,10 @@ Holiday::List HolidayRegion::holidays( const QDate &date ) const
   }
 }
 
-Holiday::List HolidayRegion::holidays( int calendarYear, const QString &calendarType ) const
+Holiday::List HolidayRegion::holidays( int calendarYear ) const
 {
   if ( isValid() ) {
-    return d->mDriver->parseHolidays( calendarYear, calendarType );
+    return d->mDriver->parseHolidays( calendarYear );
   } else {
     return Holiday::List();
   }

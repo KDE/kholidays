@@ -22,12 +22,12 @@
 #ifndef KHOLIDAYS_HOLIDAYPARSERDRIVER_P_H
 #define KHOLIDAYS_HOLIDAYPARSERDRIVER_P_H
 
+#include "qcalendarsystem_p.h"
+
 #include <QDate>
 #include <QString>
 
 #include "holiday.h"
-
-class KCalendarSystem;
 
 namespace KHolidays {
 
@@ -117,12 +117,12 @@ class HolidayParserDriver
      * Return a list of holidays falling in a given calendar year
      *
      * @param calendarYear year to return holidays for
-     * @param calendarType calendar system of year, standard KDE calendar type,
-     *                     see KCalendarSystem
+     * @param calendar calendar system of year
      *
      * @return a list of holidays
      */
-    virtual Holiday::List parseHolidays( int calendarYear, const QString &calendarType );
+    virtual Holiday::List parseHolidays( int calendarYear,
+                                         QCalendarSystem::CalendarSystem calendar = QCalendarSystem::GregorianCalendar );
 
     /**
      * Standard error message handling
@@ -145,9 +145,9 @@ class HolidayParserDriver
     /**
      * Set the calendar system to use
      *
-     * @param calendarType standard KDE calendar type, see KCalendarSystem
+     * @param calendar The QCalendarSystem calendar system to use
      */
-    virtual void setParseCalendar( const QString &calendarType );
+    virtual void setParseCalendar( QCalendarSystem::CalendarSystem calendar );
 
     /**
      * Initialise parse year variables for calendar system
@@ -166,7 +166,7 @@ class HolidayParserDriver
 
     Holiday::List    m_resultList;         // List of requested holidays
 
-    KCalendarSystem *m_parseCalendar;      // Calendar system being parsed
+    QCalendarSystem  m_parseCalendar;      // Calendar system being parsed
     int              m_parseYear;          // Year currently being parsed
     int              m_parseStartYear;     // First year to parse in parse calendar
     int              m_parseEndYear;       // Last year to parse in parse calendar

@@ -60,7 +60,7 @@ void HolidayRegionTest::parseRegionCalendarYear( const KHolidays::HolidayRegion 
                                                  const QString &calendarType )
 {
     qDebug() << "Parsing region = " << region.regionCode() << " year = " << year << " calendar = " << calendarType;
-    printHolidays( region.holidays( year, calendarType ) );
+    printHolidays( region.holidays( year ) );
     qDebug() << "";
 }
 

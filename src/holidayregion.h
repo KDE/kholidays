@@ -212,9 +212,9 @@ class KHOLIDAYS_EXPORT HolidayRegion
     /**
      * @since 4.6
      *
-     * Returns the list of holidays that occur in a calendar year @p calendarYear.
+     * Returns the list of holidays that occur in a Gregorian calendar year @p calendarYear.
      */
-    Holiday::List holidays( int calendarYear, const QString &calendarType ) const;
+    Holiday::List holidays( int calendarYear ) const;
 
     /**
      * Checks whether there is any holiday defined for a @p date.

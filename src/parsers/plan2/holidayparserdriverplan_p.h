@@ -91,6 +91,13 @@ protected:
      */
     void parseMetadata() Q_DECL_OVERRIDE;
 
+    /**
+     * Set the calendar system to use
+     *
+     * @param calendar The QCalendarSystem calendar system to use
+     */
+    void setParseCalendar( QCalendarSystem::CalendarSystem calendar );
+
     // Bison C++ skeleton required friend for Bison parser class implementation
     friend class HolidayParserPlan;
 
@@ -112,6 +119,7 @@ protected:
     int   julianDayFromWeekdayInMonth( int occurrence, int weekday, int month );
 
     // Utilities for parser to set variables during parsing
+    void  setParseCalendar( const QString &calendarType );
     void  setFileCountryCode( const QString &countryCode );
     void  setFileLanguageCode( const QString &languageCode );
     void  setFileName( const QString &ame );
@@ -132,12 +140,12 @@ protected:
 
 private:
     // Calendar and date calculation utilities
-    int   monthsInYear( int year );
-    int   daysInMonth( int year, int month );
     int   julianDay( int year, int month, int day );
     void  julianDayToDate( int jd, int *year, int *month, int *day );
     QDate easter( int year );
     QDate pascha( int year );
+    QCalendarSystem::CalendarSystem typeToSystem( const QString &calendarType );
+    QString systemToType( QCalendarSystem::CalendarSystem calendar );
 
     int   conditionalOffset( int year, int month, int day, int condition );
 
@@ -145,7 +153,8 @@ private:
 
     QByteArray          m_scanData;                 // Holiday file stored as a string
 
-    QStringList         m_fileCalendarTypes;        // List of all Calendar Systems used in file
+    QStringList         m_fileCalendarTypes;        // List of all Calendar Types used in file
+    QString             m_parseCalendarType;        // Calendar Type being parsed
 
     bool                m_traceParsing;             // Bison C++ skeleton enable tracing in Bison parser class
     HolidayParserPlan  *m_parser;                   // Bison C++ skeleton Bison parser class implementation
@@ -159,7 +168,7 @@ private:
     QDate               m_parseYearPascha;          // Orthodox Easter in the parse year, Gregorian only
 
     QStringList         m_eventCategories;          // Event categories
-    QString             m_eventCalendarType;        // Calendar System for event rule
+    QString             m_eventCalendarType;        // Calendar Type for event rule
     QString             m_eventName;                // Event name text
     int                 m_eventYear;                // Event date fields
     int                 m_eventMonth;               // Event date fields
