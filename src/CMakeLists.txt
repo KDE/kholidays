@@ -31,7 +31,7 @@ generate_export_header(KF5Holidays BASE_NAME kholidays)
 
 add_library(KF5::Holidays ALIAS KF5Holidays)
 
-target_include_directories(KF5Holidays INTERFACE "$<INSTALL_INTERFACE:${KF5_INCLUDE_INSTALL_DIR}/KHolidays>")
+target_include_directories(KF5Holidays INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/KHolidays>")
 target_include_directories(KF5Holidays PUBLIC "$<BUILD_INTERFACE:${KHolidays_SOURCE_DIR}/src;${KHolidays_BINARY_DIR}/src>")
 target_include_directories(KF5Holidays PUBLIC "$<BUILD_INTERFACE:${KHolidays_SOURCE_DIR}/src/parsers/plan2>")
 
@@ -87,7 +87,7 @@ if (Qt5Designer_FOUND)
 
     install(TARGETS
         holidayswidgets
-        DESTINATION ${QT_PLUGIN_INSTALL_DIR}/designer
+        DESTINATION ${KDE_INSTALL_QTPLUGINDIR}/designer
     )
 endif()
 
@@ -97,17 +97,17 @@ install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/kholidays_export.h
     ${KHolidays_HEADERS}
     ${KHolidays_CamelCase_HEADERS}
-    DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/KHolidays/kholidays
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KHolidays/kholidays
     COMPONENT Devel
 )
 
 install(FILES
     ${KHolidays_CamelCase_HEADERS}
-    DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/KHolidays/KHolidays
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KHolidays/KHolidays
     COMPONENT Devel
 )
 
 
-ecm_generate_pri_file(BASE_NAME KHolidays LIB_NAME KF5KHolidays DEPS "KDELibs4Support" FILENAME_VAR PRI_FILENAME  INCLUDE_INSTALL_DIR ${KF5_INCLUDE_INSTALL_DIR}/KHolidays)
+ecm_generate_pri_file(BASE_NAME KHolidays LIB_NAME KF5KHolidays DEPS "KDELibs4Support" FILENAME_VAR PRI_FILENAME  INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/KHolidays)
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
 
