@@ -29,7 +29,7 @@ language    "es"
 "Navidad"                        public religious on december 25
 
 :: Religious
-"Carnaval"                       religious on easter minus 47 days length 2 days
+"Carnaval"                       religious on easter minus 48 days length 2 days
 "Jueves santo"                   religious on easter minus 3 days
 "Viernes santo"                  religious on easter minus 2 days
 "Sábado de gloria"               religious on easter minus 1 day
