@@ -21,7 +21,7 @@ language    "de"
 "Karfreitag"       public on easter minus 2 days
 "Ostern"           public on easter length 2 days
 "Pfingsten"        public on easter plus 49 days length 2 days
-"Himmelfahrt"      public on easter plus 39 days
+"Christi Himmelfahrt"      public on easter plus 39 days
 "1. Mai"           public on 1.5.
 "Tag d. Einheit"   public on 3.10.
 "Weihnachten"      public on 25.12. length 2 days

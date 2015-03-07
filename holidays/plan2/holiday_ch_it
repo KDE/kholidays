@@ -15,11 +15,11 @@
 country     "CH"
 language    "it"
 :name        "optional - defaults to country name"
-:description "(please add description in source language) National holiday file for Switzerland"
+description "Feste nazionali in Svizzera"
 
 :: Public Holidays
 
-"Capo d'anno"               public on january 1
+"Capodanno"                 public on january 1
 "Epifania"                  public on january 6
 "San Giuseppe"              public on march 19
 "Pasqua"                    public religious on easter
@@ -28,8 +28,11 @@ language    "it"
 "Ascensione"                public religious on easter plus 39 days
 "Pentecoste"                public religious on easter plus 49 days
 "Lunedi di Pentecoste"      public religious on easter plus 50 days
+"Corpus Domini"             public religious on easter plus 60 days
+"Santi Pietro e Paolo"      public religious on june 29
 "Festa nazionale"           public on august 1
 "Assunzione"                public religious on august 15
+"Digiuno Federale"          public religious on third sunday in september
 "Ognissanti"                public on november 1
 "Immacolata"                public religious on december 8
 "Natale"                    public religious on december 25
