@@ -3,11 +3,23 @@
 ::
 :: Language: Russian
 ::
-:: Author:   Andrey Cherepanov <sibskull@mail.ru>
+:: Authors:  Andrey Cherepanov <sibskull@mail.ru>
+::           Alexander Potashev <aspotashev@gmail.com>
 ::
-:: Updated:  2006-09-01
+:: Updated:  2015-03-11
 ::
-:: Source:
+:: Sources:  http://www.rg.ru/2006/06/03/voennye-prazdniki-dok.html
+::           http://www.consultant.ru/document/cons_doc_LAW_171623/
+::           http://www.consultant.ru/document/cons_doc_LAW_19238/
+::           https://ru.wikipedia.org/wiki/Праздники_России
+::           http://www.pravo.gov.ru:8080/page.aspx?35802 (День работника гражданской авиации)
+::           http://www.kremlin.ru/news/15615 (День местного самоуправления)
+::           http://document.kremlin.ru/page.aspx?1106780 (День работника органов наркоконтроля)
+::           http://graph.document.kremlin.ru/page.aspx?961957 (День работников гидрометеорологической службы России)
+::           http://graph.document.kremlin.ru/page.aspx?926693 (День работника культуры России)
+::           http://graph.document.kremlin.ru/page.aspx?1;3569577 (День полярника)
+::           http://document.kremlin.ru/page.aspx?1101116 (День российского предпринимательства)
+::           http://graph.document.kremlin.ru/page.aspx?920431 (День эколога)
 ::
 
 :: Metadata
@@ -17,8 +29,9 @@ language    "ru"
 :description "(please add description in source language) National holiday file for Russia"
 
 :: Public Holidays
-"Новогодние каникулы"          public on january 1 length 5 days
-"Рождество Христово"           public on january 7
+"Новогодние каникулы"          public on january 1 length 6 days
+"Рождество Христово"           public religious on january 7
+"Новогодние каникулы"          public on january 8
 "День защитника Отечества"     public on february 23
 "Международный женский день"   public on march 8
 "Праздник Весны и Труда"       public on may 1
@@ -26,110 +39,132 @@ language    "ru"
 "День России"                  public on june 12
 "День народного единства"      public on november 4
 
-:: Religious
+:: Other (all that did not fit the categories below)
+"День единения народов"                                                 historical on april 2
+"День местного самоуправления"                                          historical on ((year >= 2013) ? [april 21] : noop)
+"День славянской письменности и культуры"                               cultural on may 24
+"Пушкинский день России"                                                historical on ((year >= 1997) ? [june 6] : noop)
+"День русского языка"                                                   cultural on ((year >= 2011) ? [june 6] : noop)
+"День молодёжи"                                                         cultural on june 27
+"День Государственного флага Российской Федерации"                      historical on august 22
+"День знаний"                                                           cultural on september 1
+"День пожилых людей"                                                    cultural on october 1
+"День памяти жертв политических репрессий"                              commemorative on october 30
+"День матери"                                                           cultural on last sunday in november
 
-:: Financial
+:: Public service professional holidays
+"День работника прокуратуры Российской Федерации"                       government on january 12
+"День работника органов наркоконтроля"                                  government on ((year >= 2008) ? [march 11] : noop)
+"День работников гидрометеорологической службы России"                  government on ((year >= 2009) ? [march 23] : noop)
+"День внутренних войск МВД России"                                      government on march 27
+"День пограничника"                                                     government on may 28
+"День таможенника Российской Федерации"                                 government on october 25
+"День работника налоговых органов Российской Федерации"                 government on november 21
+"День работника органов безопасности Российской Федерации"              government on december 20
 
-:: Cultural
-
-:: School
-
-:: Daylight Saving
-
-:: Seasons
-
-:: Name Days
-
-
-:: To be sorted
-"День работника прокуратуры Российской Федерации"                       civil on january 12
+:: Civil professional holidays
 "День российской печати"                                                civil on january 13
-"День инженерных войск"                                                 civil on january 21
-"День российского студенчества"                                         civil on january 25
-"День снятия блокады города Ленинграда (1944 год)"                      civil on january 27
-"Сталинградская битва (1943 год)"                                       civil on february 2
 "День российской науки"                                                 civil on february 8
+"День работника гражданской авиации"                                    civil on ((year >= 2013) ? [february 9] : noop)
 "День дипломатического работника"                                       civil on february 10
+"День российских студенческих отрядов"                                  civil on ((year >= 2016) ? [february 17] : noop)
 "День работников геодезии и картографии"                                civil on second sunday in march
 "День работников торговли, бытового обслуживания населения и ЖКХ"       civil on third sunday in march
-"День внутренних войск МВД"                                             civil on march 27
-"День специалиста юридической службы в Вооружённых Силах"               civil on march 29
-"День единения народов"                                                 civil on april 2
-"День сотрудников военных комиссариатов"                                civil on april 8
+"День работника культуры России"                                        civil on ((year >= 2008) ? [march 25] : noop)
 "День геолога"                                                          civil on first sunday in april
-"День космонавтики"                                                     civil on april 12
-"День войск противовоздушной обороны"                                   civil on second sunday in april
-"День специалиста по радиоэлектронной борьбе"                           civil on april 15
-"Ледовое побоище (1242 год)"                                            civil on april 18
-"День памяти погибших в радиационных авариях и катастрофах"             civil on april 26
 "День пожарной охраны"                                                  civil on april 30
 "День радио, праздник работников всех отраслей связи"                   civil on may 7
-"День химика"                                                           civil on last sunday in may
-"День славянской письменности и культуры"                               civil on may 24
+"День полярника"                                                        civil on ((year >= 2013) ? [may 21] : noop)
+"День российского предпринимательства"                                  civil on ((year >= 2008) ? [may 26] : noop)
 "Общероссийский День библиотек"                                         civil on may 27
-"День пограничника"                                                     civil on may 28
-"Пушкинский день России"                                                civil on june 6
+"День химика"                                                           civil on last sunday in may
+"День эколога"                                                          civil on ((year >= 2008) ? [june 5] : noop)
 "День социального работника"                                            civil on june 8
 "День работников текстильной и лёгкой промышленности"                   civil on second sunday in june
+"День работников миграционной службы"                                   civil on june 14
 "День медицинского работника"                                           civil on third sunday in june
 "День изобретателя и рационализатора"                                   civil on last saturday in june
-"День памяти и скорби"                                                  civil on june 22
-"День молодёжи"                                                         civil on june 27
 "День работников морского и речного флота"                              civil on first sunday in july
-"Полтавская битва (1709 год)"                                           civil on july 10
-"День рыбака"                                                           civil on second sunday in july
 "День российской почты"                                                 civil on second sunday in july
+"День рыбака"                                                           civil on second sunday in july
 "День металлурга"                                                       civil on third sunday in july
-"День Военно-Морского Флота"                                            civil on last sunday in july
-"День Тыла Вооружённых Сил Российской Федерации"                        civil on august 1
-"День Воздушно-десантных войск"                                         civil on august 2
+"День работника торговли"                                               civil on fourth saturday in july
 "День железнодорожника"                                                 civil on first sunday in august
-"День Железнодорожных войск Российской Федерации"                       civil on august 6
-"День победы у мыса Гангут (1714 год)"                                  civil on august 9
-"День Военно-воздушных сил"                                             civil on august 12
 "День физкультурника"                                                   civil on second saturday in august
 "День строителя"                                                        civil on second sunday in august
-"День Воздушного Флота России"                                          civil on third sunday in august
-"День Государственного флага Российской Федерации"                      civil on august 22
-"Курская битва (1943 год)"                                              civil on august 23
+"День российского кино"                                                 civil on august 27
 "День шахтёра"                                                          civil on last sunday in august
-"День кино"                                                             civil on august 27
-"День знаний"                                                           civil on september 1
-"День российской гвардии"                                               civil on september 2
-"День солидарности в борьбе с терроризмом"                              civil on september 3
-"День специалиста по ядерному обеспечению"                              civil on september 4
 "День работников нефтяной и газовой промышленности"                     civil on first sunday in september
-"Бородинское сражение (1812 год)"                                       civil on september 8
-"День победы у мыса Тендра (1790 год)"                                  civil on september 11
-"День танкиста"                                                         civil on second sunday in september
-"Куликовская битва (1380 год)"                                          civil on september 21
+"День программиста"                                                     civil on january 1 plus 255 days
+"День оружейника"                                                       civil on ((year >= 2012) ? [september 19] : noop)
 "День работников леса"                                                  civil on third sunday in september
 "День работника атомной промышленности"                                 civil on september 28
 "День машиностроителя"                                                  civil on last sunday in september
-"День пожилых людей"                                                    civil on october 1
-"День Сухопутных войск"                                                 civil on october 1
-"День Космических войск"                                                civil on october 4
 "День учителя"                                                          civil on october 5
-"День военного связиста"                                                civil on october 20
-"День подразделений специального назначения"                            civil on october 24
-"День таможенника Российской Федерации"                                 civil on october 25
 "День работника сельского хозяйства и перерабатывающей промышленности"  civil on second sunday in october
 "День работников дорожного хозяйства"                                   civil on third sunday in october
 "День работников автомобильного транспорта"                             civil on last sunday in october
-"День памяти жертв политических репрессий"                              civil on october 30
-"День военного разведчика"                                              civil on november 5
-"Октябрьская революция 1917 года"                                       civil on november 7
+"День судебного пристава"                                               civil on november 1
 "День милиции"                                                          civil on ((year < 2011) ? [november 10] : noop)
 "День сотрудника органов внутренних дел"                                civil on ((year >= 2011) ? [november 10] : noop)
-"День войск радиационной, химической и биологической защиты"            civil on november 13
-"День ракетных войск и артиллерии"                                      civil on november 19
-"День работника налоговых органов Российской Федерации"                 civil on november 21
-"День матери"                                                           civil on last sunday in november
-"День победы у мыса Синоп (1853 год)"                                   civil on december 1
-"Битва под Москвой (1941 год)"                                          civil on december 5
-"День Конституции Российской Федерации"                                 civil on december 12
-"День Ракетных войск стратегического назначения"                        civil on december 17
-"День работника органов безопасности Российской Федерации"              civil on december 20
+"День юриста"                                                           civil on ((year >= 2008) ? [december 3] : noop)
 "День энергетика"                                                       civil on december 22
-"День взятия крепости Измаил (1790 год)"                                civil on december 24
 "День спасателя Российской Федерации"                                   civil on december 27
+
+:: Military professional holidays
+"День специалиста юридической службы в Вооружённых Силах"               government on march 29
+"День сотрудников военных комиссариатов"                                government on april 8
+"День специалиста по радиоэлектронной борьбе"                           government on april 15
+"День специалиста по ядерному обеспечению"                              government on september 4
+"День танкиста"                                                         government on second sunday in september
+"День военного связиста"                                                government on october 20
+"День военного разведчика"                                              government on november 5
+
+:: Military memorable days
+"День инженерных войск"                                                 government historical on january 21
+"День Сил специальных операций"                                         government historical on ((year >= 2015) ? [february 27] : noop)
+"День войск противовоздушной обороны"                                   government historical on second sunday in april
+"День Военно-Морского Флота"                                            government historical on last sunday in july
+"День Тыла Вооружённых Сил Российской Федерации"                        government historical on august 1
+"День Воздушно-десантных войск"                                         government historical on august 2
+"День Железнодорожных войск Российской Федерации"                       government historical on august 6
+"День Военно-воздушных сил"                                             government historical on august 12
+"День российской гвардии"                                               government historical on september 2
+"День Сухопутных войск"                                                 government historical on october 1
+"День Космических войск"                                                government historical on october 4
+"День подразделений специального назначения"                            government historical on october 24
+"День войск радиационной, химической и биологической защиты"            government historical on november 13
+"День ракетных войск и артиллерии"                                      government historical on november 19
+"День Ракетных войск стратегического назначения"                        government historical on december 17
+
+:: Days of military honour (see 32-FZ of 1995, article 1)
+"День снятия блокады города Ленинграда (1944 год)"                      historical on january 27
+"Сталинградская битва (1943 год)"                                       historical on february 2
+"Ледовое побоище (1242 год)"                                            historical on april 18
+"Чесменское сражение (1770 год)"                                        historical on july 7
+"Полтавская битва (1709 год)"                                           historical on july 10
+"День победы у мыса Гангут (1714 год)"                                  historical on august 9
+"Курская битва (1943 год)"                                              historical on august 23
+"Бородинское сражение (1812 год)"                                       historical on september 8
+"День победы у мыса Тендра (1790 год)"                                  historical on september 11
+"Куликовская битва (1380 год)"                                          historical on september 21
+"День победы у мыса Синоп (1853 год)"                                   historical on december 1
+"Битва под Москвой (1941 год)"                                          historical on december 5
+"День взятия крепости Измаил (1790 год)"                                historical on december 24
+
+:: Memorable days of Russia (see 32-FZ of 1995, article 1.1)
+"День российского студенчества"                                         historical on january 25
+"День памяти воинов-интернационалистов"                                 commemorative on ((year >= 2011) ? [february 15] : noop)
+"День космонавтики"                                                     historical on april 12
+"День памяти погибших в радиационных авариях и катастрофах"             commemorative on april 26
+"День российского парламентаризма"                                      historical on ((year >= 2012) ? [april 27] : noop)
+"День памяти и скорби"                                                  commemorative on june 22
+"День партизан и подпольщиков"                                          historical on june 29
+"День Крещения Руси"                                                    historical on july 28
+"День памяти российских воинов, погибших в Первой мировой войне 1914-1918 годов" commemorative on august 1
+"День окончания Второй мировой войны (1945 год)"                        historical on september 2
+"День солидарности в борьбе с терроризмом"                              historical on september 3
+"День согласия и примирения (Октябрьская революция 1917 года)"          historical on november 7
+"День Неизвестного Солдата"                                             commemorative on ((year >= 2014) ? [december 3] : noop)
+"День Героев Отечества"                                                 historical on december 9
+"День Конституции Российской Федерации"                                 historical on december 12
