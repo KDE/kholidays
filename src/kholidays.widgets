@@ -1,7 +1,5 @@
 [Global]
 PluginName=KHolidaysWidgets
-Includes=kcomponentdata.h
-Init=new KComponentData("kholidayswidgets");
 
 [KHolidays::HolidayRegionSelector]
 ToolTip=Holiday Region Selector (KHolidays)
