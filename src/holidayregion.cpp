@@ -143,6 +143,7 @@ QStringList HolidayRegion::locations()
   const QStringList files = allHolidayFiles();
 
   QStringList locations;
+  locations.reserve(files.count());
   foreach ( const QString &filename, files ) {
     locations.append( filename.mid( filename.lastIndexOf( QLatin1String("holiday_") ) + 8, 2 ) );
   }
@@ -162,6 +163,7 @@ QStringList HolidayRegion::regionCodes()
   const QStringList files = allHolidayFiles();
 
   QStringList regionCodesList;
+  regionCodesList.reserve(files.count());
   foreach ( const QString &filename, files ) {
     regionCodesList.append( filename.mid( filename.lastIndexOf( QLatin1String("holiday_") ) + 8 ) );
   }
