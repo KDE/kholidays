@@ -1,0 +1,13 @@
+maintainer: jlayt
+description: Holiday calculation library
+tier: 1
+type: functional
+platforms:
+    - name: All
+portingAid: false
+deprecated: false
+release: true
+libraries:
+ - qmake: KHolidays
+   cmake: "KF5::Holidays"
+cmakename: KF5Holidays
