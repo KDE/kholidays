@@ -21,7 +21,6 @@
 
 #include "testlunar.h"
 #include <qtest.h>
-#include <klocalizedstring.h>
 #include <qdebug.h>
 
 QTEST_MAIN( LunarTest )

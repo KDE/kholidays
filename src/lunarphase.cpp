@@ -25,9 +25,8 @@
 #include "lunarphase.h"
 #include <config-kholidays.h>
 
-#include <KLocalizedString>
-
 #include <QtCore/QDateTime>
+#include <QtCore/QCoreApplication>
 
 using namespace KHolidays;
 
@@ -44,13 +43,13 @@ QString LunarPhase::phaseName( LunarPhase::Phase phase )
 {
   switch ( phase ) {
   case NewMoon:
-    return( i18n( "New Moon" ) );
+    return( QCoreApplication::translate( "LunarPhase", "New Moon" ) );
   case FullMoon:
-    return( i18n( "Full Moon" ) );
+    return( QCoreApplication::translate( "LunarPhase", "Full Moon" ) );
   case FirstQuarter:
-    return( i18n( "First Quarter Moon" ) );
+    return( QCoreApplication::translate( "LunarPhase", "First Quarter Moon" ) );
   case LastQuarter:
-    return( i18n( "Last Quarter Moon" ) );
+    return( QCoreApplication::translate( "LunarPhase", "Last Quarter Moon" ) );
   default:
   case None:
     return QString();

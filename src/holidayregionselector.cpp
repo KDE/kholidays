@@ -25,7 +25,8 @@
 #include "holidayregion.h"
 #include "holiday_p.h"
 
-#include <KLocalizedString>
+#include <QtCore/QCoreApplication>
+
 #include <KComboBox>
 
 using namespace KHolidays;
@@ -102,17 +103,20 @@ void HolidayRegionSelector::Private::initItem( QTreeWidgetItem *listItem, Holida
   m_ui.regionTreeWidget->blockSignals( true );
   QString languageName = QLocale::languageToString( codeToLanguage( region->languageCode() ) );
   listItem->setCheckState( Private::SelectColumn, Qt::Unchecked );
-  QString text = i18n( "<p>Select to use Holiday Region</p>" );
+  QString text = QCoreApplication::translate( "HolidayRegionSelector", "<p>Select to use Holiday Region</p>" );
   listItem->setToolTip( Private::SelectColumn, text );
   listItem->setToolTip( Private::ComboColumn, text );
-  text = i18n( "<p>Select to use Holiday Region</p>" );
+  text = QCoreApplication::translate( "HolidayRegionSelector", "<p>Select to use Holiday Region</p>" );
   listItem->setToolTip( Private::SelectColumn, text );
   listItem->setToolTip( Private::ComboColumn, text );
   listItem->setText( Private::RegionColumn, region->name() );
-  QString toolTip = i18n( "<p><b>Region:</b> %1<br/>"
-                          "<b>Language:</b> %2<br/>"
-                          "<b>Description:</b> %3</p>",
-                          region->name(), languageName, region->description() );
+  QString toolTip = QCoreApplication::translate( "HolidayRegionSelector",
+                                                 "<p><b>Region:</b> %1<br/>"
+                                                 "<b>Language:</b> %2<br/>"
+                                                 "<b>Description:</b> %3</p>")
+                                                .arg( region->name() )
+                                                .arg( languageName )
+                                                .arg( region->description() );
   listItem->setToolTip( Private::RegionColumn, toolTip );
   listItem->setData( Private::RegionColumn, Qt::UserRole, region->regionCode() );
   listItem->setText( Private::LanguageColumn, languageName );
@@ -121,19 +125,20 @@ void HolidayRegionSelector::Private::initItem( QTreeWidgetItem *listItem, Holida
   listItem->setToolTip( Private::DescriptionColumn, region->description() );
   KComboBox *combo = new KComboBox();
   combo->setAutoFillBackground( true );
-  QString comboText = i18n( "<p>You can choose to display the Holiday Region for information only, "
-                            "or to use the Holiday Region when displaying or calculating days off "
-                            "such as Public Holidays.  If you choose to use the Holiday Region for "
-                            "Days Off, then only those Holiday Events marked in the Holiday Region "
-                            "as Days Off will be used for non-work days, Holiday Events that are "
-                            "not marked in the Holiday Region as Days Off will continue to be "
-                            "work days.</p>" );
+  QString comboText = QCoreApplication::translate( "HolidayRegionSelector",
+                                                   "<p>You can choose to display the Holiday Region for information only, "
+                                                   "or to use the Holiday Region when displaying or calculating days off "
+                                                   "such as Public Holidays.  If you choose to use the Holiday Region for "
+                                                   "Days Off, then only those Holiday Events marked in the Holiday Region "
+                                                   "as Days Off will be used for non-work days, Holiday Events that are "
+                                                   "not marked in the Holiday Region as Days Off will continue to be "
+                                                   "work days.</p>" );
   combo->setToolTip( comboText );
-  comboText = i18nc( "Combobox label, Holiday Region not used", "Not Used" );
+  comboText = QCoreApplication::translate( "HolidayRegionSelectorasons", "Not Used", "Combobox label, Holiday Region not used" );
   combo->addItem( comboText, QVariant( NotUsed ) );
-  comboText = i18nc( "Combobox label, use Holiday Region for information only", "Information" );
+  comboText = QCoreApplication::translate( "HolidayRegionSelectorasons", "Information", "Combobox label, use Holiday Region for information only" );
   combo->addItem( comboText, QVariant( UseInformationOnly ) );
-  comboText = i18nc( "Combobox label, use Holiday Region for days off", "Days Off" );
+  comboText = QCoreApplication::translate( "HolidayRegionSelectorasons", "Days Off", "Combobox label, use Holiday Region for days off" );
   combo->addItem( comboText, QVariant( UseDaysOff ) );
   combo->setCurrentIndex( 0 );
   listItem->setData( Private::ComboColumn, Qt::UserRole, NotUsed );
@@ -237,26 +242,26 @@ HolidayRegionSelector::HolidayRegionSelector( QWidget *parent ) :
   // Setup the columns
   d->m_ui.regionTreeWidget->setColumnCount( 5 );
   QTreeWidgetItem *headerItem = d->m_ui.regionTreeWidget->headerItem();
-  QString header = i18nc( "Header for Select column", "Select" );
-  QString text = i18n( "<p>This column selects to use the Holiday Region</p>" );
+  QString header = QCoreApplication::translate( "HolidayRegionSelectorasons", "Select", "Header for Select column" );
+  QString text = QCoreApplication::translate( "HolidayRegionSelector", "<p>This column selects to use the Holiday Region</p>" );
   headerItem->setText( Private::SelectColumn, header );
   headerItem->setToolTip( Private::SelectColumn, text );
   headerItem->setWhatsThis( Private::SelectColumn, text );
   headerItem->setText( Private::ComboColumn, header );
   headerItem->setToolTip( Private::ComboColumn, text );
   headerItem->setWhatsThis( Private::ComboColumn, text );
-  header = i18nc( "Header for Holiday Region column", "Region" );
-  text = i18n( "<p>This column displays the name of the Holiday Region</p>" );
+  header = QCoreApplication::translate( "HolidayRegionSelectorasons", "Region", "Header for Holiday Region column" );
+  text = QCoreApplication::translate( "HolidayRegionSelector", "<p>This column displays the name of the Holiday Region</p>" );
   headerItem->setText( Private::RegionColumn, header );
   headerItem->setToolTip( Private::RegionColumn, text );
   headerItem->setWhatsThis( Private::RegionColumn, text );
-  header = i18nc( "Header for Language column", "Language" );
-  text = i18n( "<p>This column displays the language of the Holiday Region</p>" );
+  header = QCoreApplication::translate( "HolidayRegionSelectorasons", "Language", "Header for Language column" );
+  text = QCoreApplication::translate( "HolidayRegionSelector", "<p>This column displays the language of the Holiday Region</p>" );
   headerItem->setText( Private::LanguageColumn, header );
   headerItem->setToolTip( Private::LanguageColumn, text );
   headerItem->setWhatsThis( Private::LanguageColumn, text );
-  header = i18nc( "Header for Description column", "Description" );
-  text = i18n( "<p>This column displays the description of the Holiday Region</p>" );
+  header = QCoreApplication::translate( "HolidayRegionSelectorasons", "Description", "Header for Description column" );
+  text = QCoreApplication::translate( "HolidayRegionSelector", "<p>This column displays the description of the Holiday Region</p>" );
   headerItem->setText( Private::DescriptionColumn, header );
   headerItem->setToolTip( Private::DescriptionColumn, text );
   headerItem->setWhatsThis( Private::DescriptionColumn, text );

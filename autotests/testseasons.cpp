@@ -21,7 +21,6 @@
 
 #include "testseasons.h"
 #include <qtest.h>
-#include <klocalizedstring.h>
 
 QTEST_MAIN( SeasonsTest )
 

@@ -25,7 +25,6 @@
 #include <QFile>
 #include <QFileInfo>
 #include <qtest.h>
-#include <KLocalizedString>
 #include <QDebug>
 
 QTEST_MAIN( HolidayRegionTest )

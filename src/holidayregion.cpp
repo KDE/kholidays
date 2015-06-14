@@ -30,8 +30,7 @@
 #include <QtCore/QFileInfo>
 #include <QtCore/QSharedData>
 #include <QtCore/QStandardPaths>
-
-#include <KLocalizedString>
+#include <QtCore/QCoreApplication>
 
 #include "holiday_p.h"
 #include "parsers/plan2/holidayparserdriverplan_p.h"
@@ -182,41 +181,41 @@ QString HolidayRegion::name() const
         // In 4.6 hope to have isocodes project integration for translations via KLocale
         QString subdivision = countryParts.at( 1 );
         if ( country == QLatin1String("ca") && subdivision == QLatin1String("qc") ) {
-          regionName = i18nc( "Canadian region", "Quebec" );
+          regionName = QCoreApplication::translate( "HolidayRegion", "Quebec",  "Canadian region" );
         } else if ( country == QLatin1String("de") && subdivision == QLatin1String("by") ) {
-          regionName = i18nc( "German region", "Bavaria" );
+          regionName = QCoreApplication::translate( "HolidayRegion", "Bavaria",  "German region" );
         } else if ( country == QLatin1String("es") && subdivision == QLatin1String("ct") ) {
-          regionName = i18nc( "Spanish region", "Catalonia" );
+          regionName = QCoreApplication::translate( "HolidayRegion", "Catalonia",  "Spanish region" );
         } else if ( country == QLatin1String("gb") && subdivision == QLatin1String("eaw") ) {
-          regionName = i18nc( "UK Region", "England and Wales" );
+          regionName = QCoreApplication::translate( "HolidayRegion", "England and Wales",  "UK Region" );
         } else if ( country == QLatin1String("gb") && subdivision == QLatin1String("eng") ) {
-          regionName = i18nc( "UK Region", "England" );
+          regionName = QCoreApplication::translate( "HolidayRegion", "England",  "UK Region" );
         } else if ( country == QLatin1String("gb") && subdivision == QLatin1String("wls") ) {
-          regionName = i18nc( "UK Region", "Wales" );
+          regionName = QCoreApplication::translate( "HolidayRegion", "Wales",  "UK Region" );
         } else if ( country == QLatin1String("gb") && subdivision == QLatin1String("sct") ) {
-          regionName = i18nc( "UK Region", "Scotland" );
+          regionName = QCoreApplication::translate( "HolidayRegion", "Scotland",  "UK Region" );
         } else if ( country == QLatin1String("gb") && subdivision == QLatin1String("nir") ) {
-          regionName = i18nc( "UK Region", "Northern Ireland" );
+          regionName = QCoreApplication::translate( "HolidayRegion", "Northern Ireland",  "UK Region" );
         } else if ( country == QLatin1String("it") && subdivision == QLatin1String("bz") ) {
-          regionName = i18nc( "Italian Region", "South Tyrol" );
+          regionName = QCoreApplication::translate( "HolidayRegion", "South Tyrol",  "Italian Region" );
         } else if ( country == QLatin1String("au") && subdivision == QLatin1String("nsw") ) {
-          regionName = i18nc( "Australian Region", "New South Wales" );
+          regionName = QCoreApplication::translate( "HolidayRegion", "New South Wales" );
         } else if ( country == QLatin1String("au") && subdivision == QLatin1String("qld") ) {
-          regionName = i18nc( "Australian Region", "Queensland" );
+          regionName = QCoreApplication::translate( "HolidayRegion", "Queensland",  "Australian Region" );
         } else if ( country == QLatin1String("au") && subdivision == QLatin1String("vic") ) {
-          regionName = i18nc( "Australian Region", "Victoria" );
+          regionName = QCoreApplication::translate( "HolidayRegion", "Victoria",  "Australian Region" );
         } else if ( country == QLatin1String("au") && subdivision == QLatin1String("sa") ) {
-          regionName = i18nc( "Australian Region", "South Australia" );
+          regionName = QCoreApplication::translate( "HolidayRegion", "South Australia",  "Australian Region" );
         } else if ( country == QLatin1String("au") && subdivision == QLatin1String("nt") ) {
-          regionName = i18nc( "Australian Region", "Northern Territory" );
+          regionName = QCoreApplication::translate( "HolidayRegion", "Northern Territory",  "Australian Region" );
         } else if ( country == QLatin1String("au") && subdivision == QLatin1String("act") ) {
-          regionName = i18nc( "Australian Region", "Australian Capital Territory" );
+          regionName = QCoreApplication::translate( "HolidayRegion", "Australian Capital Territory",  "Australian Region" );
         } else if ( country == QLatin1String("au") && subdivision == QLatin1String("wa") ) {
-          regionName = i18nc( "Australian Region", "Western Australia" );
+          regionName = QCoreApplication::translate( "HolidayRegion", "Western Australia",  "Australian Region" );
         } else if ( country == QLatin1String("au") && subdivision == QLatin1String("tas") ) {
-          regionName = i18nc( "Australian Region", "Tasmania" );
+          regionName = QCoreApplication::translate( "HolidayRegion", "Tasmania",  "Australian Region" );
         } else if ( country == QLatin1String("ba") && subdivision == QLatin1String("srp") ) {
-          regionName = i18nc( "Bosnian and Herzegovinian Region", "Republic of Srpska" );
+          regionName = QCoreApplication::translate( "HolidayRegion", "Republic of Srpska",  "Bosnian and Herzegovinian Region" );
         } else {
           // TODO Note this does not give the current QLocale translation!
           regionName = QLocale::countryToString( codeToCountry( country ) );
@@ -234,68 +233,68 @@ QString HolidayRegion::name() const
       // Will create lots more in 4.6
       // Religious types, just simple for now
       if ( type == QLatin1String("public") ) {
-        typeName = i18nc( "Holiday type", "Public" );
+        typeName = QCoreApplication::translate( "HolidayRegion", "Public",  "Holiday type" );
       } else if ( type == QLatin1String("civil") ) {
-        typeName = i18nc( "Holiday type", "Civil" );
+        typeName = QCoreApplication::translate( "HolidayRegion", "Civil",  "Holiday type" );
       } else if ( type == QLatin1String("religious") ) {
-        typeName = i18nc( "Holiday type", "Religious" );
+        typeName = QCoreApplication::translate( "HolidayRegion", "Religious",  "Holiday type" );
       } else if ( type == QLatin1String("government") ) {
-        typeName = i18nc( "Holiday type", "Government" );
+        typeName = QCoreApplication::translate( "HolidayRegion", "Government",  "Holiday type" );
       } else if ( type == QLatin1String("financial") ) {
-        typeName = i18nc( "Holiday type", "Financial" );
+        typeName = QCoreApplication::translate( "HolidayRegion", "Financial",  "Holiday type" );
       } else if ( type == QLatin1String("cultural") ) {
-        typeName = i18nc( "Holiday type", "Cultural" );
+        typeName = QCoreApplication::translate( "HolidayRegion", "Cultural",  "Holiday type" );
       } else if ( type == QLatin1String("commemorative") ) {
-        typeName = i18nc( "Holiday type", "Commemorative" );
+        typeName = QCoreApplication::translate( "HolidayRegion", "Commemorative",  "Holiday type" );
       } else if ( type == QLatin1String("historical") ) {
-        typeName = i18nc( "Holiday type", "Historical" );
+        typeName = QCoreApplication::translate( "HolidayRegion", "Historical",  "Holiday type" );
       } else if ( type == QLatin1String("school") ) {
-        typeName = i18nc( "Holiday type", "School" );
+        typeName = QCoreApplication::translate( "HolidayRegion", "School",  "Holiday type" );
       } else if ( type == QLatin1String("seasonal") ) {
-        typeName = i18nc( "Holiday type", "Seasonal" );
+        typeName = QCoreApplication::translate( "HolidayRegion", "Seasonal",  "Holiday type" );
       } else if ( type == QLatin1String("nameday") ) {
-        typeName = i18nc( "Holiday type", "Name Days" );
+        typeName = QCoreApplication::translate( "HolidayRegion", "Name Days",  "Holiday type" );
       } else if ( type == QLatin1String("personal") ) {
-        typeName = i18nc( "Holiday type", "Personal" );
+        typeName = QCoreApplication::translate( "HolidayRegion", "Personal",  "Holiday type" );
       } else if ( type == QLatin1String("christian") ) {
-        typeName = i18nc( "Holiday type", "Christian" );
+        typeName = QCoreApplication::translate( "HolidayRegion", "Christian",  "Holiday type" );
       } else if ( type == QLatin1String("anglican") ) {
-        typeName = i18nc( "Holiday type", "Anglican" );
+        typeName = QCoreApplication::translate( "HolidayRegion", "Anglican",  "Holiday type" );
       } else if ( type == QLatin1String("catholic") ) {
-        typeName = i18nc( "Holiday type", "Catholic" );
+        typeName = QCoreApplication::translate( "HolidayRegion", "Catholic",  "Holiday type" );
       } else if ( type == QLatin1String("protestant") ) {
-        typeName = i18nc( "Holiday type", "Protestant" );
+        typeName = QCoreApplication::translate( "HolidayRegion", "Protestant",  "Holiday type" );
       } else if ( type == QLatin1String("orthodox") ) {
-        typeName = i18nc( "Holiday type", "Orthodox" );
+        typeName = QCoreApplication::translate( "HolidayRegion", "Orthodox",  "Holiday type" );
       } else if ( type == QLatin1String("jewish") ) {
-        typeName = i18nc( "Holiday type", "Jewish" );
+        typeName = QCoreApplication::translate( "HolidayRegion", "Jewish",  "Holiday type" );
       } else if ( type == QLatin1String("jewish-orthodox") ) {
-        typeName = i18nc( "Holiday type", "Jewish Orthodox" );
+        typeName = QCoreApplication::translate( "HolidayRegion", "Jewish Orthodox",  "Holiday type" );
       } else if ( type == QLatin1String("jewish-conservative") ) {
-        typeName = i18nc( "Holiday type", "Jewish Conservative" );
+        typeName = QCoreApplication::translate( "HolidayRegion", "Jewish Conservative",  "Holiday type" );
       } else if ( type == QLatin1String("jewish-reform") ) {
-        typeName = i18nc( "Holiday type", "Jewish Reform" );
+        typeName = QCoreApplication::translate( "HolidayRegion", "Jewish Reform",  "Holiday type" );
       } else if ( type == QLatin1String("islamic") ) {
-        typeName = i18nc( "Holiday type", "Islamic" );
+        typeName = QCoreApplication::translate( "HolidayRegion", "Islamic",  "Holiday type" );
       } else if ( type == QLatin1String("islamic-sunni") ) {
-        typeName = i18nc( "Holiday type", "Islamic Sunni" );
+        typeName = QCoreApplication::translate( "HolidayRegion", "Islamic Sunni",  "Holiday type" );
       } else if ( type == QLatin1String("islamic-shia") ) {
-        typeName = i18nc( "Holiday type", "Islamic Shia" );
+        typeName = QCoreApplication::translate( "HolidayRegion", "Islamic Shia",  "Holiday type" );
       } else if ( type == QLatin1String("islamic-sufi") ) {
-        typeName = i18nc( "Holiday type", "Islamic Sufi" );
+        typeName = QCoreApplication::translate( "HolidayRegion", "Islamic Sufi",  "Holiday type" );
       }
     }
 
     if ( !regionName.isEmpty() ) {
       if ( !typeName.isEmpty() ) {
-        tempName = i18nc( "Holiday file display name, %1 = region name, %2 = holiday type", "%1 - %2" ).arg( regionName ).arg( typeName );
+        tempName = QCoreApplication::translate( "HolidayRegion", "%1 - %2",  "Holiday file display name, %1 = region name, %2 = holiday type" ).arg( regionName ).arg( typeName );
       } else {
         tempName = regionName;
       }
     } else if ( !typeName.isEmpty() ) {
       tempName = typeName;
     } else {
-      tempName = i18nc( "Unknown holiday region", "Unknown" );
+      tempName = QCoreApplication::translate( "HolidayRegion", "Unknown",  "Unknown holiday region" );
     }
   }
   return tempName;

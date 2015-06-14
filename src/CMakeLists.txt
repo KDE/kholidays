@@ -25,8 +25,6 @@ set(kholidays_UI
   holidayregionselector.ui
 )
 
-ki18n_wrap_ui(kholidays_SRCS ${kholidays_UI})
-
 add_library(KF5Holidays ${kholidays_SRCS})
 generate_export_header(KF5Holidays BASE_NAME kholidays)
 
@@ -40,7 +38,6 @@ target_link_libraries(KF5Holidays
 PUBLIC
     Qt5::Widgets
     Qt5::Test
-    KF5::I18n
     KF5::ItemViews
     KF5::Completion
 )

@@ -21,10 +21,9 @@
 
 #include "zodiac.h"
 
-#include <KLocalizedString>
-
 #include <QtCore/QDateTime>
 #include <QtCore/QSharedData>
+#include <QtCore/QCoreApplication>
 
 using namespace KHolidays;
 
@@ -77,29 +76,29 @@ QString Zodiac::signName( Zodiac::ZodiacSigns sign )
 {
   switch ( sign ) {
   case Aries:
-    return i18n( "Aries" );
+    return QCoreApplication::translate( "Zodiac", "Aries" );
   case Taurus:
-    return i18n( "Taurus" );
+    return QCoreApplication::translate( "Zodiac", "Taurus" );
   case Gemini:
-    return i18n( "Gemini" );
+    return QCoreApplication::translate( "Zodiac", "Gemini" );
   case Cancer:
-    return i18n( "Cancer" );
+    return QCoreApplication::translate( "Zodiac", "Cancer" );
   case Leo:
-    return i18n( "Leo" );
+    return QCoreApplication::translate( "Zodiac", "Leo" );
   case Virgo:
-    return i18n( "Virgo" );
+    return QCoreApplication::translate( "Zodiac", "Virgo" );
   case Libra:
-    return i18n( "Libra" );
+    return QCoreApplication::translate( "Zodiac", "Libra" );
   case Scorpio:
-    return i18n( "Scorpio" );
+    return QCoreApplication::translate( "Zodiac", "Scorpio" );
   case Sagittarius:
-    return i18n( "Sagittarius" );
+    return QCoreApplication::translate( "Zodiac", "Sagittarius" );
   case Capricorn:
-    return i18n( "Capricorn" );
+    return QCoreApplication::translate( "Zodiac", "Capricorn" );
   case Aquarius:
-    return i18n( "Aquarius" );
+    return QCoreApplication::translate( "Zodiac", "Aquarius" );
   case Pisces:
-    return i18n( "Pisces" );
+    return QCoreApplication::translate( "Zodiac", "Pisces" );
   default:
   case None:
     return QString();
@@ -270,29 +269,29 @@ QString Zodiac::signSymbol( Zodiac::ZodiacSigns sign )
 {
   switch ( sign ) {
   case Aries:
-    return i18nc( "zodiac symbol for Aries", "ram" );
+    return QCoreApplication::translate( "HolidayRegion", "ram", "zodiac symbol for Aries" );
   case Taurus:
-    return i18nc( "zodiac symbol for Taurus", "bull" );
+    return QCoreApplication::translate( "HolidayRegion", "bull", "zodiac symbol for Taurus" );
   case Gemini:
-    return i18nc( "zodiac symbol for Gemini", "twins" );
+    return QCoreApplication::translate( "HolidayRegion", "twins", "zodiac symbol for Gemini" );
   case Cancer:
-    return i18nc( "zodiac symbol for Cancer", "crab" );
+    return QCoreApplication::translate( "HolidayRegion", "crab", "zodiac symbol for Cancer" );
   case Leo:
-    return i18nc( "zodiac symbol for Leo", "lion" );
+    return QCoreApplication::translate( "HolidayRegion", "lion", "zodiac symbol for Leo" );
   case Virgo:
-    return i18nc( "zodiac symbol for Virgo", "virgin" );
+    return QCoreApplication::translate( "HolidayRegion", "virgin", "zodiac symbol for Virgo" );
   case Libra:
-    return i18nc( "zodiac symbol for Libra", "scales" );
+    return QCoreApplication::translate( "HolidayRegion", "scales", "zodiac symbol for Libra" );
   case Scorpio:
-    return i18nc( "zodiac symbol for Scorpion", "scorpion" );
+    return QCoreApplication::translate( "HolidayRegion", "scorpion", "zodiac symbol for Scorpion" );
   case Sagittarius:
-    return i18nc( "zodiac symbol for Sagittarius", "archer" );
+    return QCoreApplication::translate( "HolidayRegion", "archer", "zodiac symbol for Sagittarius" );
   case Capricorn:
-    return i18nc( "zodiac symbol for Capricorn", "goat" );
+    return QCoreApplication::translate( "HolidayRegion", "goat", "zodiac symbol for Capricorn" );
   case Aquarius:
-    return i18nc( "zodiac symbol for Aquarius", "water carrier" );
+    return QCoreApplication::translate( "HolidayRegion", "water carrier", "zodiac symbol for Aquarius" );
   case Pisces:
-    return i18nc( "zodiac symbol for Pices", "fish" );
+    return QCoreApplication::translate( "HolidayRegion", "fish", "zodiac symbol for Pices" );
   default:
   case None:
     return QString();

@@ -21,9 +21,8 @@
 
 #include "astroseasons.h"
 
-#include <KLocalizedString>
-
 #include <QtCore/QDate>
+#include <QtCore/QCoreApplication>
 
 using namespace KHolidays;
 
@@ -36,13 +35,13 @@ QString AstroSeasons::seasonName( AstroSeasons::Season season )
 {
   switch ( season ) {
   case JuneSolstice:
-    return i18n( "June Solstice" );
+    return QCoreApplication::translate( "AstroSeasons", "June Solstice" );
   case DecemberSolstice:
-    return i18n( "December Solstice" );
+    return QCoreApplication::translate( "AstroSeasons", "December Solstice" );
   case MarchEquinox:
-    return i18n( "March Equinox" );
+    return QCoreApplication::translate( "AstroSeasons", "March Equinox" );
   case SeptemberEquinox:
-    return i18n( "September Equinox" );
+    return QCoreApplication::translate( "AstroSeasons", "September Equinox" );
   default:
   case None:
     return QString();
