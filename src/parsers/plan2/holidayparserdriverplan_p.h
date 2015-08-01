@@ -78,18 +78,18 @@ public:
      *
      * @param errorMessage error message to log
      */
-    void error( const QString &errorMessage );
+    void error( const QString &errorMessage ) Q_DECL_OVERRIDE;
 
 protected:
     /**
      * Actually parse the file, new plan format implementation
      */
-    void parse();
+    void parse() Q_DECL_OVERRIDE;
 
     /**
      * Parse the file for metadata only and populate the metadata variables
      */
-    void parseMetadata();
+    void parseMetadata() Q_DECL_OVERRIDE;
 
     // Bison C++ skeleton required friend for Bison parser class implementation
     friend class HolidayParserPlan;
