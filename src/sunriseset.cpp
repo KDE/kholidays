@@ -178,7 +178,7 @@ QTime KHolidays::SunRiseSet::utcSunrise( const QDate &date, double latitude, dou
   double solarDec = calcSunDeclination( t );
   double hourAngle = calcHourAngleSunrise( latitude, solarDec );
   double delta = longitude + radToDeg( hourAngle );
-  QTime timeUTC;
+  QTime timeUTC(0, 0);
   timeUTC = timeUTC.addSecs( ( 720 - ( 4.0 * delta ) - eqTime ) * 60 );
   return QTime( timeUTC.hour(),
                 timeUTC.second() > 29 ? timeUTC.minute() + 1 : timeUTC.minute(),
@@ -195,7 +195,7 @@ QTime KHolidays::SunRiseSet::utcSunset( const QDate &date, double latitude, doub
   double solarDec = calcSunDeclination( t );
   double hourAngle = -calcHourAngleSunrise( latitude, solarDec );
   double delta = longitude + radToDeg( hourAngle );
-  QTime timeUTC;
+  QTime timeUTC(0, 0);
   timeUTC = timeUTC.addSecs( ( 720 - ( 4.0 * delta ) - eqTime ) * 60 );
   return QTime( timeUTC.hour(),
                 timeUTC.second() > 29 ? timeUTC.minute() + 1 : timeUTC.minute(),
