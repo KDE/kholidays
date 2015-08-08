@@ -81,7 +81,7 @@
 #line 83 "holidayparserplan.cpp"
 
 #ifndef YY_
-# if YYENABLE_NLS
+# if defined(YYENABLE_NLS) && YYENABLE_NLS
 #  if ENABLE_NLS
 #   include <libintl.h> /* FIXME: INFRINGES ON USER NAME SPACE */
 #   define YY_(msgid) dgettext ("bison-runtime", msgid)
