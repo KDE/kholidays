@@ -30,7 +30,7 @@
 
 using namespace KHolidays;
 
-class HolidayRegionSelector::Private
+class Q_DECL_HIDDEN HolidayRegionSelector::Private
 {
   public:
     Private( HolidayRegionSelector *q_ptr )

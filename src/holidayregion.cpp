@@ -54,7 +54,7 @@ static QStringList allHolidayFiles(const QString &location = QString())
   return files;
 }
 
-class HolidayRegion::Private
+class Q_DECL_HIDDEN HolidayRegion::Private
 {
   public:
     Private( const QString &regionCode ) : mDriver( 0 ),

@@ -28,7 +28,7 @@
 
 using namespace KHolidays;
 
-class KHolidays::ZodiacPrivate : public QSharedData
+class Q_DECL_HIDDEN KHolidays::ZodiacPrivate : public QSharedData
 {
   public:
     ZodiacPrivate( Zodiac::ZodiacType type )
