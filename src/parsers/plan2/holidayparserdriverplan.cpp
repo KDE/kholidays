@@ -125,10 +125,10 @@ void HolidayParserDriverPlan::parseMetadata()
     m_fileName.clear();
     m_fileDescription.clear();
     m_fileCalendarTypes.clear();
-    m_fileCalendarTypes.append( QLatin1String("gregorian") );
+    m_fileCalendarTypes.append( QStringLiteral("gregorian") );
 
     // Default to files internal metadata
-    setParseCalendar( QLatin1String("gregorian") );
+    setParseCalendar( QStringLiteral("gregorian") );
     m_parseYear = QDate::currentDate().year();
     std::istringstream iss2( std::string( m_scanData.data() ) );
     m_scanner->yyrestart( &iss2 );
@@ -284,9 +284,9 @@ QDate HolidayParserDriverPlan::pascha( int year )
         }
 
         if ( m_parseCalendar->calendarType() == QLatin1String("gregorian") ) {
-            setParseCalendar( QLatin1String("julian") );
+            setParseCalendar( QStringLiteral("julian") );
             int paschaJd = julianDay( year, month, day );
-            setParseCalendar( QLatin1String("gregorian") );
+            setParseCalendar( QStringLiteral("gregorian") );
             return QDate::fromJulianDay( paschaJd );
         }
     }
@@ -316,7 +316,7 @@ int HolidayParserDriverPlan::julianDayFromEaster( void )
     if ( m_eventCalendarType == QLatin1String("gregorian") ) {
         return m_parseYearEaster.toJulianDay();
     } else {
-        error( QLatin1String("Can only use Easter in Gregorian event rule") );
+        error( QStringLiteral("Can only use Easter in Gregorian event rule") );
         return -1;
     }
 }
@@ -327,7 +327,7 @@ int HolidayParserDriverPlan::julianDayFromPascha( void )
     if ( m_eventCalendarType == QLatin1String("gregorian") || m_eventCalendarType == QLatin1String("julian") ) {
         return m_parseYearPascha.toJulianDay();
     } else {
-        error( QLatin1String("Can only use Easter in Gregorian or Julian event rule") );
+        error( QStringLiteral("Can only use Easter in Gregorian or Julian event rule") );
         return -1;
     }
 }
@@ -649,7 +649,7 @@ void HolidayParserDriverPlan::setFromEaster( int offset, int duration )
     if ( m_eventCalendarType == QLatin1String("gregorian") ) {
         setEvent( m_parseYearEaster.toJulianDay() + offset, 0, duration );
     } else {
-        error( QLatin1String("Can only use Easter in Gregorian event rule") );
+        error( QStringLiteral("Can only use Easter in Gregorian event rule") );
     }
 }
 
@@ -669,7 +669,7 @@ void HolidayParserDriverPlan::setFromPascha( int offset, int duration )
     if ( m_eventCalendarType == QLatin1String("gregorian") || m_eventCalendarType == QLatin1String("julian") ) {
         setEvent( m_parseYearPascha.toJulianDay(), offset, duration );
     } else {
-        error( QLatin1String("Can only use Pascha in Julian and Gregorian event rule") );
+        error( QStringLiteral("Can only use Pascha in Julian and Gregorian event rule") );
     }
 }
 
@@ -705,7 +705,7 @@ void  HolidayParserDriverPlan::addHoliday( const QDate &observedDate, int durati
         holiday.d->mDuration = duration;
         holiday.d->mText = m_eventName;
         holiday.d->mShortText = m_eventName;
-        if ( m_eventCategories.contains( QLatin1String("public") ) ) {
+        if ( m_eventCategories.contains( QStringLiteral("public") ) ) {
             holiday.d->mDayType = KHolidays::Holiday::NonWorkday;
         } else {
             holiday.d->mDayType = KHolidays::Holiday::Workday;

@@ -538,7 +538,7 @@ namespace KHolidays {
 
 /* Line 678 of lalr1.cc  */
 #line 159 "holidayparserplan.ypp"
-    { driver.setEventCalendarType( QLatin1String("gregorian") ); }
+    { driver.setEventCalendarType( QStringLiteral("gregorian") ); }
     break;
 
   case 18:

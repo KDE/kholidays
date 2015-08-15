@@ -43,7 +43,7 @@ using namespace KHolidays;
 
 static QStringList allHolidayFiles(const QString &location = QString())
 {
-  const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QLatin1String("kf5/libkholidays/plan2"), QStandardPaths::LocateDirectory);
+  const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("kf5/libkholidays/plan2"), QStandardPaths::LocateDirectory);
   QStringList files;
   foreach (const QString &dir, dirs) {
     QDirIterator it(dir, QStringList() << QStringLiteral("holiday_") + location + '*');
