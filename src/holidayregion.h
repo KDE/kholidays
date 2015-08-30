@@ -236,8 +236,8 @@ class KHOLIDAYS_EXPORT HolidayRegion
   private:
     Q_DISABLE_COPY( HolidayRegion )
 
-    class Private;
-    Private *const d;
+    class HolidayRegionPrivate;
+    HolidayRegionPrivate *const d;
 };
 
 }

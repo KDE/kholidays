@@ -50,11 +50,11 @@ static QStringList allHolidayFiles(const QString &location = QString())
   return files;
 }
 
-class Q_DECL_HIDDEN HolidayRegion::Private
+class Q_DECL_HIDDEN HolidayRegion::HolidayRegionPrivate
 {
   public:
-    Private( const QString &regionCode ) : mDriver( 0 ),
-                                           mRegionCode( regionCode )
+    HolidayRegionPrivate( const QString &regionCode ) : mDriver( 0 ),
+                                                        mRegionCode( regionCode )
     {
       if ( !mRegionCode.isEmpty() ) {
         mHolidayFile.setFile(
@@ -64,13 +64,13 @@ class Q_DECL_HIDDEN HolidayRegion::Private
       init();
     }
 
-    Private( const QFileInfo &regionFile ) : mDriver( 0 ),
-                                             mHolidayFile( regionFile )
+    HolidayRegionPrivate( const QFileInfo &regionFile ) : mDriver( 0 ),
+                                                          mHolidayFile( regionFile )
     {
       init();
     }
 
-    ~Private()
+    ~HolidayRegionPrivate()
     {
       delete mDriver;
     }
@@ -103,12 +103,12 @@ class Q_DECL_HIDDEN HolidayRegion::Private
 };
 
 HolidayRegion::HolidayRegion( const QString &regionCode )
-  : d( new Private( regionCode ) )
+  : d( new HolidayRegionPrivate( regionCode ) )
 {
 }
 
 HolidayRegion::HolidayRegion( const QFileInfo &regionFile )
-    : d( new Private( regionFile ) )
+    : d( new HolidayRegionPrivate( regionFile ) )
 {
 }
 
