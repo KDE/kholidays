@@ -10,7 +10,6 @@ set(kholidays_SRCS
   astroseasons.cpp
   holiday.cpp
   holidayregion.cpp
-  holidayregionselector.cpp
   lunarphase.cpp
   sunriseset.cpp
   zodiac.cpp
@@ -19,10 +18,6 @@ set(kholidays_SRCS
   parsers/plan2/holidayscannerplan.cpp
   parsers/plan2/holidayparserdriverplan.cpp
   parsers/plan2/holidayparserplan.cpp
-)
-
-set(kholidays_UI
-  holidayregionselector.ui
 )
 
 add_library(KF5Holidays ${kholidays_SRCS})
@@ -36,10 +31,7 @@ target_include_directories(KF5Holidays PUBLIC "$<BUILD_INTERFACE:${KHolidays_SOU
 
 target_link_libraries(KF5Holidays
 PUBLIC
-    Qt5::Widgets
     Qt5::Test
-    KF5::ItemViews
-    KF5::Completion
 )
 
 set_target_properties(KF5Holidays PROPERTIES
@@ -53,7 +45,6 @@ ecm_generate_headers(KHolidays_CamelCase_HEADERS
   AstroSeasons
   Holiday
   HolidayRegion
-  HolidayRegionSelector
   LunarPhase
   Zodiac
   PREFIX KHolidays
@@ -61,39 +52,6 @@ ecm_generate_headers(KHolidays_CamelCase_HEADERS
 )
 
 install(TARGETS KF5Holidays EXPORT KF5HolidaysTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
-
-########### next target ###############
-
-
-if (Qt5Designer_FOUND)
-    kf5designerplugin_add_plugin(holidayswidgets kholidays.widgets)
-    target_link_libraries(holidayswidgets
-        Qt5::Widgets
-        Qt5::Designer
-        KF5::ItemViews
-        KF5::Completion
-        KF5::Holidays
-    )
-    set_target_properties(holidayswidgets PROPERTIES
-        OUTPUT_NAME holidays5widgets
-    )
-
-    if(NOT WIN32)
-        # Since there are no libraries provided by this module,
-        # there is no point including the build tree in RPath,
-        # and then having to edit it at install time.
-        set_target_properties(holidayswidgets PROPERTIES
-            SKIP_BUILD_RPATH TRUE
-            BUILD_WITH_INSTALL_RPATH TRUE
-        )
-    endif()
-
-    install(TARGETS
-        holidayswidgets
-        DESTINATION ${KDE_INSTALL_QTPLUGINDIR}/designer
-    )
-endif()
-
 
 ########### install files ###############
 install(FILES
