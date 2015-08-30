@@ -58,39 +58,40 @@
 class QDate;
 class QString;
 
-namespace KHolidays {
+namespace KHolidays
+{
 
 class ZodiacPrivate;
 
 class KHOLIDAYS_EXPORT Zodiac
 {
-  public:
+public:
     enum ZodiacType {
-      Tropical,
-      Sidereal
+        Tropical,
+        Sidereal
     };
 
     enum ZodiacSigns {
-      Aries,
-      Taurus,
-      Gemini,
-      Cancer,
-      Leo,
-      Virgo,
-      Libra,
-      Scorpio,
-      Sagittarius,
-      Capricorn,
-      Aquarius,
-      Pisces,
-      None
+        Aries,
+        Taurus,
+        Gemini,
+        Cancer,
+        Leo,
+        Virgo,
+        Libra,
+        Scorpio,
+        Sagittarius,
+        Capricorn,
+        Aquarius,
+        Pisces,
+        None
     };
 
-    Zodiac( ZodiacType type );
-    Zodiac( const Zodiac &other );
+    Zodiac(ZodiacType type);
+    Zodiac(const Zodiac &other);
     ~Zodiac();
 
-    Zodiac &operator=( const Zodiac &other );
+    Zodiac &operator=(const Zodiac &other);
 
     /**
        Return the Zodiac sign for the specified Gregorian date.
@@ -99,7 +100,7 @@ class KHOLIDAYS_EXPORT Zodiac
 
        @param date compute the Zodiac sign for the specified Gregorian date.
     */
-    ZodiacSigns signAtDate( const QDate &date ) const;
+    ZodiacSigns signAtDate(const QDate &date) const;
 
     /**
        Return the Zodiac sign as a text string for the specified date.
@@ -108,21 +109,21 @@ class KHOLIDAYS_EXPORT Zodiac
 
        @param date compute the Zodiac sign for the specified Gregorian date.
     */
-    QString signNameAtDate( const QDate &date ) const;
+    QString signNameAtDate(const QDate &date) const;
 
     /**
        Return the string representation of Zodiac sign.
 
        @param sign Zodiac sign.
     */
-    static QString signName( ZodiacSigns sign );
+    static QString signName(ZodiacSigns sign);
 
     /**
        Convert the Zodiac sign to a Zodiac symbol.
     */
-    static QString signSymbol( ZodiacSigns sign );
+    static QString signSymbol(ZodiacSigns sign);
 
-  private:
+private:
     QSharedDataPointer<ZodiacPrivate> d;
 };
 

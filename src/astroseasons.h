@@ -47,18 +47,19 @@
 class QDate;
 class QString;
 
-namespace KHolidays {
+namespace KHolidays
+{
 
 class KHOLIDAYS_EXPORT AstroSeasons //krazy:exclude=dpointer
 {
-  public:
+public:
 
     enum Season {
-      JuneSolstice,
-      DecemberSolstice,
-      MarchEquinox,
-      SeptemberEquinox,
-      None
+        JuneSolstice,
+        DecemberSolstice,
+        MarchEquinox,
+        SeptemberEquinox,
+        None
     };
 
     /**
@@ -68,7 +69,7 @@ class KHOLIDAYS_EXPORT AstroSeasons //krazy:exclude=dpointer
 
        @param date compute the season for the specified Gregorian date.
     */
-    static Season seasonAtDate( const QDate &date );
+    static Season seasonAtDate(const QDate &date);
 
     /**
        Return the season as a text string for the specified date.
@@ -77,14 +78,14 @@ class KHOLIDAYS_EXPORT AstroSeasons //krazy:exclude=dpointer
 
        @param date compute the season for the specified Gregorian date.
     */
-    static QString seasonNameAtDate( const QDate &date );
+    static QString seasonNameAtDate(const QDate &date);
 
     /**
        Return the string representation of season.
 
        @param season astronomical season.
     */
-    static QString seasonName( Season season );
+    static QString seasonName(Season season);
 };
 
 }

@@ -37,18 +37,19 @@ class QDate;
 class QStringList;
 class QFileInfo;
 
-namespace KHolidays {
+namespace KHolidays
+{
 
 class KHOLIDAYS_EXPORT HolidayRegion
 {
-  public:
+public:
     /**
      * Creates a new Holiday Region object for a given standard Region Code.
      *
      * @param regionCode The code for the Holiday Region.
      *                   If null or unknown, an empty instance will be created.
      */
-    explicit HolidayRegion( const QString &regionCode = QString() );
+    explicit HolidayRegion(const QString &regionCode = QString());
 
     /**
      * Creates a new Holiday Region object from a given holiday file.
@@ -56,7 +57,7 @@ class KHOLIDAYS_EXPORT HolidayRegion
      *
      * @param regionFile The code for the Holiday Region.
      */
-    explicit HolidayRegion( const QFileInfo &regionFile );
+    explicit HolidayRegion(const QFileInfo &regionFile);
 
     /**
      * Destroys the holidays object.
@@ -88,8 +89,8 @@ class KHOLIDAYS_EXPORT HolidayRegion
      * @param language The lanaguage to find a default Holiday Region for
      * @return the full region code of the default file
      */
-    static QString defaultRegionCode( const QString &country = QString(),
-                                      const QString &language = QString() );
+    static QString defaultRegionCode(const QString &country = QString(),
+                                     const QString &language = QString());
 
     /**
      * @since 4.5
@@ -130,7 +131,7 @@ class KHOLIDAYS_EXPORT HolidayRegion
      * @param regionCode The code for the Holiday Region.
      * @return the full region code of the file
      */
-    static QString countryCode( const QString &regionCode );
+    static QString countryCode(const QString &regionCode);
 
     /**
      * @since 4.5
@@ -155,7 +156,7 @@ class KHOLIDAYS_EXPORT HolidayRegion
      * @param regionCode The code for the Holiday Region.
      * @return the language code of the file
      */
-    static QString languageCode( const QString &regionCode );
+    static QString languageCode(const QString &regionCode);
 
     /**
      * @since 4.5
@@ -175,7 +176,7 @@ class KHOLIDAYS_EXPORT HolidayRegion
      * @param regionCode The code for the Holiday Region.
      * @return the name of the Holiday Region
      */
-    static QString name( const QString &regionCode );
+    static QString name(const QString &regionCode);
 
     /**
      * @since 4.5
@@ -193,33 +194,33 @@ class KHOLIDAYS_EXPORT HolidayRegion
      *
      * @return the description of the Holiday Region
      */
-    static QString description( const QString &regionCode );
+    static QString description(const QString &regionCode);
 
     /**
      * @since 4.6
      *
      * Returns the list of holidays that occur between @p startDate and @p endDate.
      */
-    Holiday::List holidays( const QDate &startDate, const QDate &endDate ) const;
+    Holiday::List holidays(const QDate &startDate, const QDate &endDate) const;
 
     /**
      * @since 4.6
      *
      * Returns the list of holidays that occur on a @p date.
      */
-    Holiday::List holidays( const QDate &date ) const;
+    Holiday::List holidays(const QDate &date) const;
 
     /**
      * @since 4.6
      *
      * Returns the list of holidays that occur in a Gregorian calendar year @p calendarYear.
      */
-    Holiday::List holidays( int calendarYear ) const;
+    Holiday::List holidays(int calendarYear) const;
 
     /**
      * Checks whether there is any holiday defined for a @p date.
      */
-    bool isHoliday( const QDate &date ) const;
+    bool isHoliday(const QDate &date) const;
 
     /**
      * Returns whether the instance contains any holiday data.
@@ -231,10 +232,10 @@ class KHOLIDAYS_EXPORT HolidayRegion
      *
      * Returns whether the Region Code is valid.
      */
-    static bool isValid( const QString &regionCode );
+    static bool isValid(const QString &regionCode);
 
-  private:
-    Q_DISABLE_COPY( HolidayRegion )
+private:
+    Q_DISABLE_COPY(HolidayRegion)
 
     class HolidayRegionPrivate;
     HolidayRegionPrivate *const d;

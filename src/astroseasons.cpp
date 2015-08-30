@@ -26,47 +26,47 @@
 
 using namespace KHolidays;
 
-QString AstroSeasons::seasonNameAtDate( const QDate &date )
+QString AstroSeasons::seasonNameAtDate(const QDate &date)
 {
-  return seasonName( seasonAtDate( date ) );
+    return seasonName(seasonAtDate(date));
 }
 
-QString AstroSeasons::seasonName( AstroSeasons::Season season )
+QString AstroSeasons::seasonName(AstroSeasons::Season season)
 {
-  switch ( season ) {
-  case JuneSolstice:
-    return QCoreApplication::translate( "AstroSeasons", "June Solstice" );
-  case DecemberSolstice:
-    return QCoreApplication::translate( "AstroSeasons", "December Solstice" );
-  case MarchEquinox:
-    return QCoreApplication::translate( "AstroSeasons", "March Equinox" );
-  case SeptemberEquinox:
-    return QCoreApplication::translate( "AstroSeasons", "September Equinox" );
-  default:
-  case None:
-    return QString();
-  }
+    switch (season) {
+    case JuneSolstice:
+        return QCoreApplication::translate("AstroSeasons", "June Solstice");
+    case DecemberSolstice:
+        return QCoreApplication::translate("AstroSeasons", "December Solstice");
+    case MarchEquinox:
+        return QCoreApplication::translate("AstroSeasons", "March Equinox");
+    case SeptemberEquinox:
+        return QCoreApplication::translate("AstroSeasons", "September Equinox");
+    default:
+    case None:
+        return QString();
+    }
 }
 
-AstroSeasons::Season AstroSeasons::seasonAtDate( const QDate &date )
+AstroSeasons::Season AstroSeasons::seasonAtDate(const QDate &date)
 {
-  // see http://www.hermetic.ch/cal_sw/ve/ve.php
-  Season retSeason = None;
+    // see http://www.hermetic.ch/cal_sw/ve/ve.php
+    Season retSeason = None;
 
-  const int year = date.year();
-  //Use dumb method for now
-  if ( date == QDate( year, 6, 22 ) ) {
-    return JuneSolstice;
-  }
-  if ( date == QDate( year, 12, 22 ) ) {
-    return DecemberSolstice;
-  }
-  if ( date == QDate( year, 3, 22 ) ) {
-    return MarchEquinox;
-  }
-  if ( date == QDate( year, 9, 22 ) ) {
-    return SeptemberEquinox;
-  }
+    const int year = date.year();
+    //Use dumb method for now
+    if (date == QDate(year, 6, 22)) {
+        return JuneSolstice;
+    }
+    if (date == QDate(year, 12, 22)) {
+        return DecemberSolstice;
+    }
+    if (date == QDate(year, 3, 22)) {
+        return MarchEquinox;
+    }
+    if (date == QDate(year, 9, 22)) {
+        return SeptemberEquinox;
+    }
 
-  return retSeason;
+    return retSeason;
 }

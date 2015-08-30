@@ -27,7 +27,8 @@
 class QDate;
 class QString;
 
-namespace KHolidays {
+namespace KHolidays
+{
 
 /**
   Represents and manages a Lunar Phase
@@ -53,18 +54,18 @@ namespace KHolidays {
 */
 class KHOLIDAYS_EXPORT LunarPhase //krazy:exclude=dpointer
 {
-  public:
+public:
     /**
       Phases of the moon, in traditional English notation. The
       phase @c None is used only as an error indicator, for instance
       in phase().
     */
     enum Phase {
-      NewMoon,      ///< New moon phase
-      FirstQuarter, ///< First quarter of moon phase
-      LastQuarter,  ///< Last quarter of moon phase
-      FullMoon,     ///< Full moon phase
-      None          ///< Indication for error
+        NewMoon,      ///< New moon phase
+        FirstQuarter, ///< First quarter of moon phase
+        LastQuarter,  ///< Last quarter of moon phase
+        FullMoon,     ///< Full moon phase
+        None          ///< Indication for error
     };
 
     /**
@@ -74,7 +75,7 @@ class KHOLIDAYS_EXPORT LunarPhase //krazy:exclude=dpointer
 
        @param date compute the lunar phase for the specified Gregorian date.
     */
-    static Phase phaseAtDate( const QDate &date );
+    static Phase phaseAtDate(const QDate &date);
 
     /**
        Return the lunar phase as a text string for the specified date.
@@ -83,14 +84,14 @@ class KHOLIDAYS_EXPORT LunarPhase //krazy:exclude=dpointer
 
        @param date compute the lunar phase for the specified Gregorian date.
     */
-    static QString phaseNameAtDate( const QDate &date );
+    static QString phaseNameAtDate(const QDate &date);
 
     /**
        Return the string representation of phase.
 
        @param phase the lunar phase.
     */
-    static QString phaseName( Phase phase );
+    static QString phaseName(Phase phase);
 };
 
 }

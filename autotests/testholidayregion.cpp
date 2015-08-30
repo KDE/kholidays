@@ -27,140 +27,140 @@
 #include <qtest.h>
 #include <QDebug>
 
-QTEST_MAIN( HolidayRegionTest )
+QTEST_MAIN(HolidayRegionTest)
 
-void HolidayRegionTest::printMetadata( const KHolidays::HolidayRegion &region )
+void HolidayRegionTest::printMetadata(const KHolidays::HolidayRegion &region)
 {
-    if ( region.isValid() ) {
-      qDebug() << "This regionCode = " << region.regionCode();
-      qDebug() << "Is valid? = " << region.isValid();
-      qDebug() << "Country code = " << region.countryCode();
-      qDebug() << "Language code = " << region.languageCode();
-      qDebug() << "Name = " << region.name();
-      qDebug() << "Description = " << region.description();
+    if (region.isValid()) {
+        qDebug() << "This regionCode = " << region.regionCode();
+        qDebug() << "Is valid? = " << region.isValid();
+        qDebug() << "Country code = " << region.countryCode();
+        qDebug() << "Language code = " << region.languageCode();
+        qDebug() << "Name = " << region.name();
+        qDebug() << "Description = " << region.description();
     } else {
-      qDebug() << "Not Valid!";
+        qDebug() << "Not Valid!";
     }
     qDebug() << "";
 }
 
-void HolidayRegionTest::printHolidays( KHolidays::Holiday::List holidays )
+void HolidayRegionTest::printHolidays(KHolidays::Holiday::List holidays)
 {
-    if ( holidays.count() > 0 ) {
-        foreach ( const KHolidays::Holiday &holiday, holidays ) {
-            qDebug() << "Date = " << holiday.observedStartDate().toString( Qt::ISODate ) << " Duration = " << holiday.duration() << " Name = " << holiday.name();
+    if (holidays.count() > 0) {
+        foreach (const KHolidays::Holiday &holiday, holidays) {
+            qDebug() << "Date = " << holiday.observedStartDate().toString(Qt::ISODate) << " Duration = " << holiday.duration() << " Name = " << holiday.name();
         }
     } else {
         qDebug() << "No holidays";
     }
 }
 
-void HolidayRegionTest::parseRegionCalendarYear( const KHolidays::HolidayRegion &region, int year,
-                                                 const QString &calendarType )
+void HolidayRegionTest::parseRegionCalendarYear(const KHolidays::HolidayRegion &region, int year,
+        const QString &calendarType)
 {
     qDebug() << "Parsing region = " << region.regionCode() << " year = " << year << " calendar = " << calendarType;
-    printHolidays( region.holidays( year ) );
+    printHolidays(region.holidays(year));
     qDebug() << "";
 }
 
-void HolidayRegionTest::parseRegionDateRange( const KHolidays::HolidayRegion &region, const QDate &startDate,
-                                              const QDate &endDate )
+void HolidayRegionTest::parseRegionDateRange(const KHolidays::HolidayRegion &region, const QDate &startDate,
+        const QDate &endDate)
 {
     qDebug() << "Parsing regionCode = " << region.regionCode()
-             << " start date = " << startDate.toString( Qt::ISODate )
-             << " end date = " << endDate.toString( Qt::ISODate );
-    printHolidays( region.holidays( startDate, endDate ) );
+             << " start date = " << startDate.toString(Qt::ISODate)
+             << " end date = " << endDate.toString(Qt::ISODate);
+    printHolidays(region.holidays(startDate, endDate));
     qDebug() << "";
 }
 
-void HolidayRegionTest::parseRegionDate( const KHolidays::HolidayRegion &region, const QDate &date )
+void HolidayRegionTest::parseRegionDate(const KHolidays::HolidayRegion &region, const QDate &date)
 {
-    qDebug() << "Parsing regionCode = " << region.regionCode() << " date = " << date.toString( Qt::ISODate );
-    printHolidays( region.holidays( date ) );
+    qDebug() << "Parsing regionCode = " << region.regionCode() << " date = " << date.toString(Qt::ISODate);
+    printHolidays(region.holidays(date));
     qDebug() << "";
 }
 
 void HolidayRegionTest::testLoadFile()
 {
-    KHolidays::HolidayRegion region( QFileInfo( KDESRCDIR "/holiday_gb-eaw_en-gb_Test" ) );
-    printMetadata( region );
-    parseRegionCalendarYear( region, 2010, "gregorian" );
-    parseRegionCalendarYear( region, 2010 );
-    parseRegionCalendarYear( region, 2011 );
-    parseRegionCalendarYear( region, 2012 );
-    parseRegionCalendarYear( region, 2013 );
-    parseRegionCalendarYear( region, 2014 );
-    parseRegionCalendarYear( region, 2015 );
+    KHolidays::HolidayRegion region(QFileInfo(KDESRCDIR "/holiday_gb-eaw_en-gb_Test"));
+    printMetadata(region);
+    parseRegionCalendarYear(region, 2010, "gregorian");
+    parseRegionCalendarYear(region, 2010);
+    parseRegionCalendarYear(region, 2011);
+    parseRegionCalendarYear(region, 2012);
+    parseRegionCalendarYear(region, 2013);
+    parseRegionCalendarYear(region, 2014);
+    parseRegionCalendarYear(region, 2015);
     qDebug() << "";
 }
 
 void HolidayRegionTest::testGb()
 {
-    KHolidays::HolidayRegion region( "gb-eaw_en-gb" );
-    printMetadata( region );
-    parseRegionDateRange( region, QDate( 2010, 7, 1 ), QDate( 2011, 6, 30 ) );
-    parseRegionDateRange( region, QDate( 2010, 1, 1 ), QDate( 2012, 12, 31 ) );
-    parseRegionDateRange( region, QDate( 2010, 1, 1 ), QDate( 2010, 12, 31 ) );
-    parseRegionDate( region, QDate( 2010, 1, 1 ) );
-    parseRegionCalendarYear( region, 2010 );
-    parseRegionCalendarYear( region, 2011 );
-    parseRegionCalendarYear( region, 2012 );
-    parseRegionCalendarYear( region, 2013 );
-    parseRegionCalendarYear( region, 2014 );
-    parseRegionCalendarYear( region, 2015 );
+    KHolidays::HolidayRegion region("gb-eaw_en-gb");
+    printMetadata(region);
+    parseRegionDateRange(region, QDate(2010, 7, 1), QDate(2011, 6, 30));
+    parseRegionDateRange(region, QDate(2010, 1, 1), QDate(2012, 12, 31));
+    parseRegionDateRange(region, QDate(2010, 1, 1), QDate(2010, 12, 31));
+    parseRegionDate(region, QDate(2010, 1, 1));
+    parseRegionCalendarYear(region, 2010);
+    parseRegionCalendarYear(region, 2011);
+    parseRegionCalendarYear(region, 2012);
+    parseRegionCalendarYear(region, 2013);
+    parseRegionCalendarYear(region, 2014);
+    parseRegionCalendarYear(region, 2015);
 }
 
 void HolidayRegionTest::testIran()
 {
-    KHolidays::HolidayRegion region( "ir_en-us" );
-    printMetadata( region );
-    parseRegionCalendarYear( region, 2010 );
-    parseRegionCalendarYear( region, 2011 );
-    parseRegionCalendarYear( region, 2012 );
-    parseRegionCalendarYear( region, 2013 );
-    parseRegionCalendarYear( region, 2014 );
-    parseRegionCalendarYear( region, 2015 );
+    KHolidays::HolidayRegion region("ir_en-us");
+    printMetadata(region);
+    parseRegionCalendarYear(region, 2010);
+    parseRegionCalendarYear(region, 2011);
+    parseRegionCalendarYear(region, 2012);
+    parseRegionCalendarYear(region, 2013);
+    parseRegionCalendarYear(region, 2014);
+    parseRegionCalendarYear(region, 2015);
 }
 
 void HolidayRegionTest::testIsrael()
 {
-    KHolidays::HolidayRegion region( "il_en-us" );
-    printMetadata( region );
-    parseRegionCalendarYear( region, 2010 );
-    parseRegionCalendarYear( region, 2011 );
-    parseRegionCalendarYear( region, 2012 );
-    parseRegionCalendarYear( region, 2013 );
-    parseRegionCalendarYear( region, 2014 );
-    parseRegionCalendarYear( region, 2015 );
+    KHolidays::HolidayRegion region("il_en-us");
+    printMetadata(region);
+    parseRegionCalendarYear(region, 2010);
+    parseRegionCalendarYear(region, 2011);
+    parseRegionCalendarYear(region, 2012);
+    parseRegionCalendarYear(region, 2013);
+    parseRegionCalendarYear(region, 2014);
+    parseRegionCalendarYear(region, 2015);
 }
 
 void HolidayRegionTest::testRegions()
 {
-  qDebug() << "Available region codes:";
-  QStringList regionCodes = KHolidays::HolidayRegion::regionCodes();
-  foreach ( const QString &regionCode, regionCodes ) {
-    KHolidays::HolidayRegion testRegion( regionCode );
-    qDebug() << regionCode << " = " << testRegion.name();
-  }
-  qDebug() << "";
-
-  qDebug() << "This years holidays:";
-  foreach ( const QString &regionCode, regionCodes ) {
-    KHolidays::HolidayRegion testRegion( regionCode );
-    printMetadata( testRegion );
-    parseRegionCalendarYear( testRegion, QDate::currentDate().year() );
+    qDebug() << "Available region codes:";
+    QStringList regionCodes = KHolidays::HolidayRegion::regionCodes();
+    foreach (const QString &regionCode, regionCodes) {
+        KHolidays::HolidayRegion testRegion(regionCode);
+        qDebug() << regionCode << " = " << testRegion.name();
+    }
     qDebug() << "";
-  }
-  qDebug() << "";
+
+    qDebug() << "This years holidays:";
+    foreach (const QString &regionCode, regionCodes) {
+        KHolidays::HolidayRegion testRegion(regionCode);
+        printMetadata(testRegion);
+        parseRegionCalendarYear(testRegion, QDate::currentDate().year());
+        qDebug() << "";
+    }
+    qDebug() << "";
 }
 
 void HolidayRegionTest::testDefaultRegions()
 {
-  QCOMPARE( KHolidays::HolidayRegion::defaultRegionCode( "be", "nl" ), QString( "be_nl" ) );
-  QCOMPARE( KHolidays::HolidayRegion::defaultRegionCode( "be", "fr" ), QString( "be_fr" ) );
-  QCOMPARE( KHolidays::HolidayRegion::defaultRegionCode( "be", "xx" ), QString( "be_fr" ) );
-  QCOMPARE( KHolidays::HolidayRegion::defaultRegionCode( "xx", "fr_BE" ), QString( "be_fr" ) );
-  QCOMPARE( KHolidays::HolidayRegion::defaultRegionCode( "xx", "xx" ), QString() );
-  QCOMPARE( KHolidays::HolidayRegion::defaultRegionCode( "au", "en_GB" ), QString( "au-act_en-gb" ) );
-  QCOMPARE( KHolidays::HolidayRegion::defaultRegionCode( "au-VIC", "en_GB" ), QString( "au-vic_en-gb" ) );
+    QCOMPARE(KHolidays::HolidayRegion::defaultRegionCode("be", "nl"), QString("be_nl"));
+    QCOMPARE(KHolidays::HolidayRegion::defaultRegionCode("be", "fr"), QString("be_fr"));
+    QCOMPARE(KHolidays::HolidayRegion::defaultRegionCode("be", "xx"), QString("be_fr"));
+    QCOMPARE(KHolidays::HolidayRegion::defaultRegionCode("xx", "fr_BE"), QString("be_fr"));
+    QCOMPARE(KHolidays::HolidayRegion::defaultRegionCode("xx", "xx"), QString());
+    QCOMPARE(KHolidays::HolidayRegion::defaultRegionCode("au", "en_GB"), QString("au-act_en-gb"));
+    QCOMPARE(KHolidays::HolidayRegion::defaultRegionCode("au-VIC", "en_GB"), QString("au-vic_en-gb"));
 }

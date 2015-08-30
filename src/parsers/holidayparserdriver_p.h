@@ -29,7 +29,8 @@
 
 #include "holiday.h"
 
-namespace KHolidays {
+namespace KHolidays
+{
 
 /**
  * HolidayParserDriver abstract base class
@@ -43,7 +44,7 @@ namespace KHolidays {
  */
 class HolidayParserDriver
 {
-  public:
+public:
 
     /**
      * Constructor of abstract holiday file parser driver class.
@@ -51,7 +52,7 @@ class HolidayParserDriver
      *
      * @param filePath full path to holiday file
      */
-    explicit HolidayParserDriver( const QString &filePath );
+    explicit HolidayParserDriver(const QString &filePath);
 
     /**
      * Destructor.
@@ -100,7 +101,7 @@ class HolidayParserDriver
      *
      * @return a list of holidays
      */
-    virtual Holiday::List parseHolidays( const QDate &startDate, const QDate &endDate );
+    virtual Holiday::List parseHolidays(const QDate &startDate, const QDate &endDate);
 
     /**
      * Convenience function
@@ -110,7 +111,7 @@ class HolidayParserDriver
      *
      * @return a list of holidays
      */
-    virtual Holiday::List parseHolidays( const QDate &date );
+    virtual Holiday::List parseHolidays(const QDate &date);
 
     /**
      * Convenience function
@@ -121,17 +122,17 @@ class HolidayParserDriver
      *
      * @return a list of holidays
      */
-    virtual Holiday::List parseHolidays( int calendarYear,
-                                         QCalendarSystem::CalendarSystem calendar = QCalendarSystem::GregorianCalendar );
+    virtual Holiday::List parseHolidays(int calendarYear,
+                                        QCalendarSystem::CalendarSystem calendar = QCalendarSystem::GregorianCalendar);
 
     /**
      * Standard error message handling
      *
      * @param errorMessage error message to log
      */
-    virtual void error( const QString &errorMessage );
+    virtual void error(const QString &errorMessage);
 
-  protected:
+protected:
     /**
      * Actually parse the file, must be re-implemented by derived classes
      */
@@ -147,7 +148,7 @@ class HolidayParserDriver
      *
      * @param calendar The QCalendarSystem calendar system to use
      */
-    virtual void setParseCalendar( QCalendarSystem::CalendarSystem calendar );
+    virtual void setParseCalendar(QCalendarSystem::CalendarSystem calendar);
 
     /**
      * Initialise parse year variables for calendar system

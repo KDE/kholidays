@@ -30,7 +30,8 @@
 
 #include "../holidayparserdriver_p.h"
 
-namespace KHolidays {
+namespace KHolidays
+{
 
 class HolidayScannerPlan;
 class HolidayParserPlan;
@@ -59,7 +60,7 @@ public:
      *
      * @param filePath full path to holiday file
      */
-    HolidayParserDriverPlan( const QString &planFilename );
+    HolidayParserDriverPlan(const QString &planFilename);
 
     /**
      * Destructor.
@@ -71,14 +72,14 @@ public:
      *
      * @param errorMessage error message to log
      */
-    void error( const KHolidays::location &errorLocation, const QString &errorMessage );
+    void error(const KHolidays::location &errorLocation, const QString &errorMessage);
 
     /**
      * Standard error message handling
      *
      * @param errorMessage error message to log
      */
-    void error( const QString &errorMessage ) Q_DECL_OVERRIDE;
+    void error(const QString &errorMessage) Q_DECL_OVERRIDE;
 
 protected:
     /**
@@ -96,7 +97,7 @@ protected:
      *
      * @param calendar The QCalendarSystem calendar system to use
      */
-    void setParseCalendar( QCalendarSystem::CalendarSystem calendar );
+    void setParseCalendar(QCalendarSystem::CalendarSystem calendar);
 
     // Bison C++ skeleton required friend for Bison parser class implementation
     friend class HolidayParserPlan;
@@ -106,50 +107,50 @@ protected:
     std::string *fileToParse() const;
 
     // Calendar and date calculation utilities
-    int   adjustedMonthNumber( int month );
-    bool  isLeapYear( int year );
+    int   adjustedMonthNumber(int month);
+    bool  isLeapYear(int year);
     int   parseYear();
 
     // Utilities for parser to calculate interim Julian Day Number during parsing
-    int   julianDayFromEventName( const QString &eventName );
+    int   julianDayFromEventName(const QString &eventName);
     int   julianDayFromEaster();
     int   julianDayFromPascha();
-    int   julianDayFromMonthDay( int month, int day );
-    int   julianDayFromRelativeWeekday( int occurrence, int weekday, int jd );
-    int   julianDayFromWeekdayInMonth( int occurrence, int weekday, int month );
+    int   julianDayFromMonthDay(int month, int day);
+    int   julianDayFromRelativeWeekday(int occurrence, int weekday, int jd);
+    int   julianDayFromWeekdayInMonth(int occurrence, int weekday, int month);
 
     // Utilities for parser to set variables during parsing
-    void  setParseCalendar( const QString &calendarType );
-    void  setFileCountryCode( const QString &countryCode );
-    void  setFileLanguageCode( const QString &languageCode );
-    void  setFileName( const QString &ame );
-    void  setFileDescription( const QString &description );
-    void  setEventName( const QString &eventName );
-    void  setEventCategory( const QString &category );
-    void  setEventCalendarType( const QString &calendarType = QStringLiteral("gregorian") );
-    void  setEventDate( int eventYear, int eventMonth, int eventDay );
-    void  setEventDate( int jd );
+    void  setParseCalendar(const QString &calendarType);
+    void  setFileCountryCode(const QString &countryCode);
+    void  setFileLanguageCode(const QString &languageCode);
+    void  setFileName(const QString &ame);
+    void  setFileDescription(const QString &description);
+    void  setEventName(const QString &eventName);
+    void  setEventCategory(const QString &category);
+    void  setEventCalendarType(const QString &calendarType = QStringLiteral("gregorian"));
+    void  setEventDate(int eventYear, int eventMonth, int eventDay);
+    void  setEventDate(int jd);
 
     // Terminal functions for parser to create holidays from parsed variables
-    void  setFromEaster( int offset, int duration );
-    void  setFromPascha( int offset, int duration );
-    void  setFromDate( int offset, int condition, int duration );
-    void  setFromWeekdayInMonth( int occurrence, int weekday, int month, int offset, int duration );
-    void  setFromRelativeWeekday( int occurrence, int weekday, int offset, int duration );
-    void  setEvent( int event_jd, int observe_offset, int duration );
+    void  setFromEaster(int offset, int duration);
+    void  setFromPascha(int offset, int duration);
+    void  setFromDate(int offset, int condition, int duration);
+    void  setFromWeekdayInMonth(int occurrence, int weekday, int month, int offset, int duration);
+    void  setFromRelativeWeekday(int occurrence, int weekday, int offset, int duration);
+    void  setEvent(int event_jd, int observe_offset, int duration);
 
 private:
     // Calendar and date calculation utilities
-    int   julianDay( int year, int month, int day );
-    void  julianDayToDate( int jd, int *year, int *month, int *day );
-    QDate easter( int year );
-    QDate pascha( int year );
-    QCalendarSystem::CalendarSystem typeToSystem( const QString &calendarType );
-    QString systemToType( QCalendarSystem::CalendarSystem calendar );
+    int   julianDay(int year, int month, int day);
+    void  julianDayToDate(int jd, int *year, int *month, int *day);
+    QDate easter(int year);
+    QDate pascha(int year);
+    QCalendarSystem::CalendarSystem typeToSystem(const QString &calendarType);
+    QString systemToType(QCalendarSystem::CalendarSystem calendar);
 
-    int   conditionalOffset( int year, int month, int day, int condition );
+    int   conditionalOffset(int year, int month, int day, int condition);
 
-    void  addHoliday( const QDate &date, int duration );
+    void  addHoliday(const QDate &date, int duration);
 
     QByteArray          m_scanData;                 // Holiday file stored as a string
 

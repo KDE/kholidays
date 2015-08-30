@@ -25,37 +25,39 @@
 #include "kholidays_export.h"
 #include <QTime>
 
-namespace KHolidays {
+namespace KHolidays
+{
 
 /**
   @brief
   Methods for determining the sunrise and sunset times for a given date and Earth location.
 */
 
-namespace SunRiseSet {
+namespace SunRiseSet
+{
 
-  /**
-    Compute the sunrise time (UTC) for a date and Earth location.
-    @param date is any valid QDate.
-    @param latitude is a floating point representing a valid latitude (-90.0, 90.0)
-    @param longitude is a floating point representing a valid longitude (-180.0, 180.0)
-    @return the QTime of the sunrise in UTC.
+/**
+  Compute the sunrise time (UTC) for a date and Earth location.
+  @param date is any valid QDate.
+  @param latitude is a floating point representing a valid latitude (-90.0, 90.0)
+  @param longitude is a floating point representing a valid longitude (-180.0, 180.0)
+  @return the QTime of the sunrise in UTC.
 
-    @note the latitude and longitude are truncated as needed to fit into their proper range.
+  @note the latitude and longitude are truncated as needed to fit into their proper range.
 
-  */
-  KHOLIDAYS_EXPORT QTime utcSunrise( const QDate &date, double latitude, double longitude );
+*/
+KHOLIDAYS_EXPORT QTime utcSunrise(const QDate &date, double latitude, double longitude);
 
-  /**
-    Compute the sunset time (UTC) for a date and Earth location.
-    @param date is any valid QDate.
-    @param latitude is a floating point representing a valid latitude (-90.0, 90.0)
-    @param longitude is a floating point representing a valid longitude (-180.0, 180.0)
-    @return the QTime of the sunset in UTC.
+/**
+  Compute the sunset time (UTC) for a date and Earth location.
+  @param date is any valid QDate.
+  @param latitude is a floating point representing a valid latitude (-90.0, 90.0)
+  @param longitude is a floating point representing a valid longitude (-180.0, 180.0)
+  @return the QTime of the sunset in UTC.
 
-    @note the latitude and longitude are truncated as needed to fit into their proper range.
-  */
-  KHOLIDAYS_EXPORT QTime utcSunset( const QDate &date, double latitude, double longitude );
+  @note the latitude and longitude are truncated as needed to fit into their proper range.
+*/
+KHOLIDAYS_EXPORT QTime utcSunset(const QDate &date, double latitude, double longitude);
 
 }
 

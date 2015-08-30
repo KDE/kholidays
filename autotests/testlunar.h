@@ -26,8 +26,8 @@
 
 class LunarTest : public QObject
 {
-  Q_OBJECT
-  private Q_SLOTS:
+    Q_OBJECT
+private Q_SLOTS:
     void test2005();
     void test2007();
 };

@@ -31,7 +31,7 @@ class QDate;
 
 class HolidayRegionTest : public QObject
 {
-Q_OBJECT
+    Q_OBJECT
 private Q_SLOTS:
     void testLoadFile();
     void testGb();
@@ -41,12 +41,12 @@ private Q_SLOTS:
     void testDefaultRegions();
 
 private:
-    void printMetadata( const KHolidays::HolidayRegion &region );
-    void printHolidays( KHolidays::Holiday::List holidays );
-    void parseRegionCalendarYear( const KHolidays::HolidayRegion &region, int year,
-                                  const QString &calendarType = "gregorian" );
-    void parseRegionDateRange( const KHolidays::HolidayRegion &region, const QDate &startDate, const QDate &endDate );
-    void parseRegionDate( const KHolidays::HolidayRegion &region, const QDate &date );
+    void printMetadata(const KHolidays::HolidayRegion &region);
+    void printHolidays(KHolidays::Holiday::List holidays);
+    void parseRegionCalendarYear(const KHolidays::HolidayRegion &region, int year,
+                                 const QString &calendarType = "gregorian");
+    void parseRegionDateRange(const KHolidays::HolidayRegion &region, const QDate &startDate, const QDate &endDate);
+    void parseRegionDate(const KHolidays::HolidayRegion &region, const QDate &date);
 };
 
 #endif // TESTHOLIDAYREGION_H

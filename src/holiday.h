@@ -33,18 +33,19 @@
 class QDate;
 class QString;
 
-namespace KHolidays {
+namespace KHolidays
+{
 
 class HolidayPrivate;
 class HolidayRegion;
 
 class KHOLIDAYS_EXPORT Holiday
 {
-  friend class HolidayRegion;
-  friend class HolidayParserDriverPlan;
-  friend class HolidayParserDriverPlanOld;
+    friend class HolidayRegion;
+    friend class HolidayParserDriverPlan;
+    friend class HolidayParserDriverPlanOld;
 
-  public:
+public:
     /**
      * A list of holiday descriptions.
      */
@@ -54,8 +55,8 @@ class KHOLIDAYS_EXPORT Holiday
      * Describes the date type of the holiday.
      */
     enum DayType {
-      Workday,   ///< The holiday is a workday
-      NonWorkday ///< The holiday is a real holiday
+        Workday,   ///< The holiday is a workday
+        NonWorkday ///< The holiday is a real holiday
     };
 
     /**
@@ -66,7 +67,7 @@ class KHOLIDAYS_EXPORT Holiday
     /**
      * Creates a holiday from an @p other holiday.
      */
-    Holiday( const Holiday &other );
+    Holiday(const Holiday &other);
 
     /**
      * Destroys the holiday object.
@@ -76,17 +77,17 @@ class KHOLIDAYS_EXPORT Holiday
     /**
      *
      */
-    Holiday &operator=( const Holiday &other );
+    Holiday &operator=(const Holiday &other);
 
     /**
      *
      */
-    bool operator<( const Holiday &rhs ) const;
+    bool operator<(const Holiday &rhs) const;
 
     /**
      *
      */
-    bool operator>( const Holiday &rhs ) const;
+    bool operator>(const Holiday &rhs) const;
 
     /**
      * @since 4.6
@@ -132,7 +133,7 @@ class KHOLIDAYS_EXPORT Holiday
      */
     DayType dayType() const;
 
-  private:
+private:
     QSharedDataPointer<HolidayPrivate> d;
 };
 

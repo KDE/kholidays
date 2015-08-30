@@ -32,12 +32,12 @@
 using namespace KHolidays;
 
 Holiday::Holiday()
-  : d( new HolidayPrivate )
+    : d(new HolidayPrivate)
 {
 }
 
-Holiday::Holiday( const Holiday &other )
-  : d( other.d )
+Holiday::Holiday(const Holiday &other)
+    : d(other.d)
 {
 }
 
@@ -45,51 +45,51 @@ Holiday::~Holiday()
 {
 }
 
-Holiday &Holiday::operator=( const Holiday &other )
+Holiday &Holiday::operator=(const Holiday &other)
 {
-  if ( &other != this ) {
-    d = other.d;
-  }
+    if (&other != this) {
+        d = other.d;
+    }
 
-  return *this;
+    return *this;
 }
 
-bool Holiday::operator<( const Holiday &rhs ) const
+bool Holiday::operator<(const Holiday &rhs) const
 {
-  return d->mObservedDate < rhs.d->mObservedDate;
+    return d->mObservedDate < rhs.d->mObservedDate;
 }
 
-bool Holiday::operator>( const Holiday &rhs ) const
+bool Holiday::operator>(const Holiday &rhs) const
 {
-  return d->mObservedDate > rhs.d->mObservedDate;
+    return d->mObservedDate > rhs.d->mObservedDate;
 }
 
 QDate Holiday::observedStartDate() const
 {
-  return d->mObservedDate;
+    return d->mObservedDate;
 }
 
 QDate Holiday::observedEndDate() const
 {
-  return d->mObservedDate.addDays( d->mDuration - 1 );
+    return d->mObservedDate.addDays(d->mDuration - 1);
 }
 
 int Holiday::duration() const
 {
-  return d->mDuration;
+    return d->mDuration;
 }
 
 QString Holiday::name() const
 {
-  return d->mName;
+    return d->mName;
 }
 
 QString Holiday::description() const
 {
-  return d->mDescription;
+    return d->mDescription;
 }
 
 Holiday::DayType Holiday::dayType() const
 {
-  return d->mDayType;
+    return d->mDayType;
 }
