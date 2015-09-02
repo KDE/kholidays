@@ -649,7 +649,7 @@ static QString languageToCode(QLocale::Language language)
         return QString();
     }
     if (language == QLocale::C) {
-        return QLatin1String("C");
+        return QStringLiteral("C");
     }
 
     const unsigned char *c = language_code_list + 3 * (uint(language));
