@@ -97,7 +97,7 @@ protected:
      *
      * @param calendar The QCalendarSystem calendar system to use
      */
-    void setParseCalendar(QCalendarSystem::CalendarSystem calendar);
+    void setParseCalendar(QCalendarSystem::CalendarSystem calendar) Q_DECL_OVERRIDE;
 
     // Bison C++ skeleton required friend for Bison parser class implementation
     friend class HolidayParserPlan;
