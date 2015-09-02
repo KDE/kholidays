@@ -6,7 +6,7 @@ platforms:
     - name: All
 portingAid: false
 deprecated: false
-release: true
+release: false
 libraries:
  - qmake: KHolidays
    cmake: "KF5::Holidays"
