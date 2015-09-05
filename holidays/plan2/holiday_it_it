@@ -18,18 +18,18 @@ language    "it"
 :description "(please add description in source language) National holiday file for Italy"
 
 :: Public Holidays
-"Capodanno"                       public on january 1
-"Epifania"                        public on january 6
-"Pasqua"                          public on easter
+"Capodanno"                       public religious on january 1
+"Epifania"                        public religious on january 6
+"Pasqua"                          public religious on easter
 "Lunedì dell'Angelo"              public on easter plus 1 day
-"Anniversario della Liberazione"  public on april 25
+"Anniversario della Liberazione"  public commemorative on april 25
 "Festa del Lavoro"                public on may 1
-"Festa della Repubblica"          public on june 2
-"Ferragosto"                      public on august 15
-"Ognissanti"                      public on november 1
-"Immacolata Concezione"           public on december 8
-"Natale"                          public on december 25
-"Santo Stefano"                   public on december 26
+"Festa della Repubblica"          public commemorative on ((year >= 2001) ? [june 2] : noop)
+"Ferragosto"                      public religious on august 15
+"Ognissanti"                      public religious on november 1
+"Immacolata Concezione"           public religious on december 8
+"Natale"                          public religious on december 25
+"Santo Stefano"                   public religious on december 26
 
 :: Religious
 "San Giuseppe"                    religious on march 19
@@ -42,7 +42,9 @@ language    "it"
 "Quarta di Quaresima"             religious on easter minus 21 days
 "Quinta di Quaresima"             religious on easter minus 14 days
 "Domenica delle Palme"            religious on easter minus 7 days
-"Ascensione"                      religious on easter plus 39 days
+"Ascensione (data tradizionale)"  religious on easter plus 39 days
+:: Ascensione has been moved in Italy to the next Sunday after 1977
+"Ascensione (Chiesa Cattolica)"   religious on ((year >= 1977) ? [easter plus 42 days]: noop)
 "Pentecoste"                      religious on easter plus 49 days
 "Santissima Trinità"              religious on easter plus 56 days
 "Corpus Domini"                   religious on easter plus 63 days
@@ -59,10 +61,7 @@ language    "it"
 :: Financial
 
 :: Cultural
-"Giornata della Memoria"          cultural on january 27
-"Giornata del Ricordo"            cultural on february 10
 "Festa della donna"               cultural on march 8
-"Festa dell'Unità nazionale"      cultural on november 4
 
 :: School
 
@@ -73,3 +72,9 @@ language    "it"
 :: Seasons
 
 :: Name Days
+
+:: Commemorative
+"Giornata della Memoria"          cultural commemorative on january 27
+"Giornata del Ricordo"            cultural commemorative on february 10
+"Festa dell'Unità nazionale"      commemorative on november 4
+"Festa della Repubblica"          commemorative on ((year < 2001) ? [june 2] : noop)
