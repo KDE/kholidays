@@ -1,2 +1,2 @@
 #! /bin/sh
-$XGETTEXT *.cpp -o $podir/libkholidays5.pot
+$EXTRACT_TR_STRINGS *.cpp -o $podir/libkholidays5_qt.pot

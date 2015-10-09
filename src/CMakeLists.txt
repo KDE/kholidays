@@ -1,6 +1,8 @@
 
 include(CheckIncludeFiles)
 
+ecm_create_qm_loader(kholidays_QM_LOADER libkholidays5_qt)
+
 check_include_files(err.h HAVE_ERR_H)
 check_include_files(sys/cdefs.h HAVE_SYS_CDEFS_H)
 
@@ -18,6 +20,7 @@ set(kholidays_SRCS
   parsers/plan2/holidayscannerplan.cpp
   parsers/plan2/holidayparserdriverplan.cpp
   parsers/plan2/holidayparserplan.cpp
+  ${kholidays_QM_LOADER}
 )
 
 add_library(KF5Holidays ${kholidays_SRCS})
