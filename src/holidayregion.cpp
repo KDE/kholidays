@@ -290,7 +290,7 @@ QString HolidayRegion::name() const
 
         if (!regionName.isEmpty()) {
             if (!typeName.isEmpty()) {
-                tempName = QCoreApplication::translate("HolidayRegion", "%1 - %2",  "Holiday file display name, %1 = region name, %2 = holiday type").arg(regionName).arg(typeName);
+                tempName = QCoreApplication::translate("HolidayRegion", "%1 - %2",  "Holiday file display name, %1 = region name, %2 = holiday type").arg(regionName, typeName);
             } else {
                 tempName = regionName;
             }
