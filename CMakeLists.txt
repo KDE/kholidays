@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 2.8.12)
 project(KHolidays)
 
 # ECM setup
-find_package(ECM 5.12.0 CONFIG REQUIRED)
+find_package(ECM 5.14.0 CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
 include(GenerateExportHeader)
@@ -17,7 +17,7 @@ include(KDECMakeSettings)
 include(KDEFrameworkCompilerSettings)
 
 
-set(KF5_VERSION "5.12.0")
+set(KF5_VERSION "5.14.0")
 set(KHOLIDAYS_LIB_VERSION "4.80.0")
 
 ecm_setup_version(${KHOLIDAYS_LIB_VERSION} VARIABLE_PREFIX KHOLIDAYS
@@ -27,7 +27,7 @@ ecm_setup_version(${KHOLIDAYS_LIB_VERSION} VARIABLE_PREFIX KHOLIDAYS
 )
 
 ########### Find packages ###########
-set(REQUIRED_QT_VERSION 5.3.0)
+set(REQUIRED_QT_VERSION 5.4.0)
 find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Test)
 
 remove_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII)
