@@ -84,7 +84,7 @@ void HolidayRegionTest::testLoadFile()
 {
     KHolidays::HolidayRegion region(QFileInfo(KDESRCDIR "/holiday_gb-eaw_en-gb_Test"));
     printMetadata(region);
-    parseRegionCalendarYear(region, 2010, "gregorian");
+    parseRegionCalendarYear(region, 2010, QStringLiteral("gregorian"));
     parseRegionCalendarYear(region, 2010);
     parseRegionCalendarYear(region, 2011);
     parseRegionCalendarYear(region, 2012);
@@ -96,7 +96,7 @@ void HolidayRegionTest::testLoadFile()
 
 void HolidayRegionTest::testGb()
 {
-    KHolidays::HolidayRegion region("gb-eaw_en-gb");
+    KHolidays::HolidayRegion region(QStringLiteral("gb-eaw_en-gb"));
     printMetadata(region);
     parseRegionDateRange(region, QDate(2010, 7, 1), QDate(2011, 6, 30));
     parseRegionDateRange(region, QDate(2010, 1, 1), QDate(2012, 12, 31));
@@ -112,7 +112,7 @@ void HolidayRegionTest::testGb()
 
 void HolidayRegionTest::testIran()
 {
-    KHolidays::HolidayRegion region("ir_en-us");
+    KHolidays::HolidayRegion region(QStringLiteral("ir_en-us"));
     printMetadata(region);
     parseRegionCalendarYear(region, 2010);
     parseRegionCalendarYear(region, 2011);
@@ -124,7 +124,7 @@ void HolidayRegionTest::testIran()
 
 void HolidayRegionTest::testIsrael()
 {
-    KHolidays::HolidayRegion region("il_en-us");
+    KHolidays::HolidayRegion region(QStringLiteral("il_en-us"));
     printMetadata(region);
     parseRegionCalendarYear(region, 2010);
     parseRegionCalendarYear(region, 2011);
