@@ -19,7 +19,7 @@ include(KDEFrameworkCompilerSettings)
 
 
 set(KF5_VERSION "5.17.0")
-set(KHOLIDAYS_LIB_VERSION "5.0.40")
+set(KHOLIDAYS_LIB_VERSION "5.1.40")
 
 ecm_setup_version(${KHOLIDAYS_LIB_VERSION} VARIABLE_PREFIX KHOLIDAYS
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kholidays_version.h"
