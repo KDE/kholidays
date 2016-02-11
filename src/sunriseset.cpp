@@ -23,6 +23,7 @@
 */
 
 #include "sunriseset.h"
+#include <math.h>
 #include <cmath>
 static const double PI = 3.14159265358979323846;
 static const double MaxLat = 89.99;
