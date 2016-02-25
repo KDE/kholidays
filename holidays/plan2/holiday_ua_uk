@@ -59,10 +59,10 @@ description "Файл списку святкових днів України"
                                                                                ((([may 2] == [sunday after ([may 2])])) ?
                                                                                   [tuesday after ([may 2])] :
                                                                                   noop ) )
-: Victory Day
-"День Перемоги"                                                     public on may 9
-: Victory Day Substitute Holiday
-"День Перемоги"                                                     public on ( (([may 9] == [saturday after ([may 9])]) ||
+: Victory Day over Nazism in World War II
+"День перемоги над нацизмом у Другій світовій війні"                public on may 9
+: Victory Day over Nazism in World War II Substitute Holiday
+"День перемоги над нацизмом у Другій світовій війні"                public on ( (([may 9] == [saturday after ([may 9])]) ||
                                                                                  ([may 9] == [sunday after ([may 9])])) ?
                                                                                   [monday after ([may 9])] :
                                                                                   noop )
@@ -83,6 +83,14 @@ description "Файл списку святкових днів України"
 "День Незалежності України"                                         public on ( (([august 24] == [saturday after ([august 24])]) ||
                                                                                  ([august 24] == [sunday after ([august 24])])) ?
                                                                                   [monday after ([august 24])] :
+                                                                                  noop )
+
+: Defender of Ukraine Day
+"День захисника України"                                            public on october 14
+: Defender of Ukraine Day Substitute Holiday
+"День захисника України"                                            public on ( (([october 14] == [saturday after ([october 14])]) ||
+                                                                                 ([october 14] == [sunday after ([october 14])])) ?
+                                                                                  [monday after ([october 14])] :
                                                                                   noop )
 
 :: Religious
@@ -112,12 +120,16 @@ description "Файл списку святкових днів України"
 "День пам’яті героїв Крут"                                          cultural on january 29
 : Valentine's Day
 "День святого Валентина (День всіх закоханих)"                      cultural on february 14
+: Day of the Heavenly Hundred Heroes
+"День Героїв Небесної Сотні"                                        cultural on february 20
 : International Mother Language Day
 "Міжнародний день рідної мови"                                      cultural on february 21
 : International Day for Monuments and Sites
 "День пам'яток історії та культури"                                 cultural on april 18
 : Environment Day
 "День довкілля"                                                     cultural on third saturday in april
+: Day of Remembrance and Reconciliation
+"День пам'яті та примирення"                                        cultural on may 8
 : Mother's Day
 "День матері"                                                       cultural on second sunday in may
 : Europe Day
@@ -138,8 +150,8 @@ description "Файл списку святкових днів України"
 "День Українського козацтва"                                        cultural on october 14
 : Day of Ukrainian Script and Language
 "День української писемності та мови"                               cultural on november 9
-: Freedom Day
-"День Свободи"                                                      cultural on november 22
+: Day of Dignity and Freedom
+"День Гідності та Свободи"                                          cultural on november 21
 : Holodomor Memorial Day
 "День пам'яті жертв голодоморів"                                    cultural on fourth saturday in november
 
