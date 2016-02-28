@@ -42,7 +42,8 @@ language    "de"
 "Mariä Himmelfahrt"           public cultural on august 15
 "Einheitstag"                 public on october 3
 "Allerheiligen"               public on november 1
-"Buß- und Bettag"             public on sunday before december 24 minus 32 days
+::No longer a public holiday (except in Saxony), per Bug 355073
+::"Buß- und Bettag"             public on sunday before december 24 minus 32 days
 "Weihnachten"                 public cultural on december 25 length 2 days
 
 :: Religious
