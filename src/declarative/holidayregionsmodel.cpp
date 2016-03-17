@@ -29,7 +29,6 @@ public:
     QStringList regionCodes;
 };
 
-
 HolidayRegionsDeclarativeModel::HolidayRegionsDeclarativeModel(QObject *parent)
     : QAbstractListModel(parent),
       d(new Private())
@@ -62,12 +61,12 @@ QVariant HolidayRegionsDeclarativeModel::data(const QModelIndex &index, int role
     const QString regionCode = d->regionCodes.at(index.row());
 
     switch (role) {
-        case HolidayRegionsDeclarativeModel::RegionRole:
-            return regionCode;
-        case HolidayRegionsDeclarativeModel::NameRole:
-            return KHolidays::HolidayRegion::name(regionCode);
-        case HolidayRegionsDeclarativeModel::DescriptionRole:
-            return KHolidays::HolidayRegion::description(regionCode);
+    case HolidayRegionsDeclarativeModel::RegionRole:
+        return regionCode;
+    case HolidayRegionsDeclarativeModel::NameRole:
+        return KHolidays::HolidayRegion::name(regionCode);
+    case HolidayRegionsDeclarativeModel::DescriptionRole:
+        return KHolidays::HolidayRegion::description(regionCode);
     }
 
     return QVariant();

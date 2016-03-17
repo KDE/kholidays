@@ -173,7 +173,7 @@ HolidayParserPlan::yytnamerr_(const char *yystr)
             case '"':
                 return yyr;
             }
-    do_not_strip_quotes: ;
+    do_not_strip_quotes:;
     }
 
     return yystr;

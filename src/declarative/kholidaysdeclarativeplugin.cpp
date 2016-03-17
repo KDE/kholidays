@@ -24,7 +24,7 @@
 
 #include <qqml.h>
 
-void KHolidaysDeclarativePlugin::registerTypes(const char* uri)
+void KHolidaysDeclarativePlugin::registerTypes(const char *uri)
 {
     qmlRegisterType<HolidayRegionsDeclarativeModel>(uri, 1, 0, "HolidayRegionsModel");
 }

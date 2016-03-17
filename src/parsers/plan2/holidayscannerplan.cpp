@@ -523,7 +523,7 @@ static yyconst flex_int16_t yy_accept[982] = {
     137,  196,    0,    0,    0,    0,  145,    0,    0,    0,
     52,    0,  146,    0,  155,  154,  157,  161,    0,  147,
     0
-} ;
+};
 
 static yyconst flex_int32_t yy_ec[256] = {
     0,
@@ -555,7 +555,7 @@ static yyconst flex_int32_t yy_ec[256] = {
     1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
     1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
     1,    1,    1,    1,    1
-} ;
+};
 
 static yyconst flex_int32_t yy_meta[70] = {
     0,
@@ -566,7 +566,7 @@ static yyconst flex_int32_t yy_meta[70] = {
     1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
     1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
     1,    1,    1,    1,    1,    1,    1,    1,    1
-} ;
+};
 
 static yyconst flex_int16_t yy_base[985] = {
     0,
@@ -678,7 +678,7 @@ static yyconst flex_int16_t yy_base[985] = {
     2013, 2013, 1934, 1939, 1929, 1942, 2013, 1944, 1934, 1936,
     2013, 1945, 2013, 1953, 2013, 2013, 2013, 2013, 1960, 2013,
     2013,  102,  100,   99
-} ;
+};
 
 static yyconst flex_int16_t yy_def[985] = {
     0,
@@ -790,7 +790,7 @@ static yyconst flex_int16_t yy_def[985] = {
     981,  981,  981,  981,  981,  981,  981,  981,  981,  981,
     981,  981,  981,  981,  981,  981,  981,  981,  981,  981,
     0,  981,  981,  981
-} ;
+};
 
 static yyconst flex_int16_t yy_nxt[2083] = {
     0,
@@ -1023,7 +1023,7 @@ static yyconst flex_int16_t yy_nxt[2083] = {
     981,  981,  981,  981,  981,  981,  981,  981,  981,  981,
     981,  981,  981,  981,  981,  981,  981,  981,  981,  981,
     981,  981
-} ;
+};
 
 static yyconst flex_int16_t yy_chk[2083] = {
     0,
@@ -1256,7 +1256,7 @@ static yyconst flex_int16_t yy_chk[2083] = {
     981,  981,  981,  981,  981,  981,  981,  981,  981,  981,
     981,  981,  981,  981,  981,  981,  981,  981,  981,  981,
     981,  981
-} ;
+};
 
 static yyconst flex_int16_t yy_rule_linenum[202] = {
     0,
@@ -1283,7 +1283,7 @@ static yyconst flex_int16_t yy_rule_linenum[202] = {
     309,  310,  311,  313,  314,  315,  316,  317,  318,  319,
 
     321
-} ;
+};
 
 /* The intent behind this definition is that it'll catch
  * any uses of REJECT which flex missed.
