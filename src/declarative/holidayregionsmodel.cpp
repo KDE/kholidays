@@ -75,9 +75,9 @@ QVariant HolidayRegionsDeclarativeModel::data(const QModelIndex &index, int role
 QHash<int, QByteArray> HolidayRegionsDeclarativeModel::roleNames() const
 {
     QHash<int, QByteArray> roles;
-    roles.insert(HolidayRegionsDeclarativeModel::RegionRole, "region");
-    roles.insert(HolidayRegionsDeclarativeModel::NameRole, "name");
-    roles.insert(HolidayRegionsDeclarativeModel::DescriptionRole, "description");
+    roles.insert(HolidayRegionsDeclarativeModel::RegionRole, QByteArrayLiteral("region"));
+    roles.insert(HolidayRegionsDeclarativeModel::NameRole, QByteArrayLiteral("name"));
+    roles.insert(HolidayRegionsDeclarativeModel::DescriptionRole, QByteArrayLiteral("description"));
 
     return roles;
 }
