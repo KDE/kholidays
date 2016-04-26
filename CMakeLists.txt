@@ -17,9 +17,10 @@ include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 
+set(PIM_VERSION "5.2.40")
 
 set(KF5_VERSION "5.19.0")
-set(KHOLIDAYS_LIB_VERSION "5.2.40")
+set(KHOLIDAYS_LIB_VERSION ${PIM_VERSION})
 
 ecm_setup_version(${KHOLIDAYS_LIB_VERSION} VARIABLE_PREFIX KHOLIDAYS
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kholidays_version.h"
