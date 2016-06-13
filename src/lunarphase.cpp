@@ -148,7 +148,6 @@ LunarPhase::Phase LunarPhase::phaseAtDate(const QDate &date)
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
-#include <unistd.h>
 
 static const double PI = 3.14159265358979323846;
 
