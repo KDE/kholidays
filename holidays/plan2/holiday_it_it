@@ -44,7 +44,7 @@ language    "it"
 "Domenica delle Palme"            religious on easter minus 7 days
 "Ascensione (data tradizionale)"  religious on easter plus 39 days
 :: Ascensione has been moved in Italy to the next Sunday after 1977
-"Ascensione (Chiesa Cattolica)"   religious on ((year >= 1977) ? [easter plus 42 days]: noop)
+"Ascensione (Chiesa Cattolica)"   religious on ((year >= 1977) ? ([easter] + 42 days): noop)
 "Pentecoste"                      religious on easter plus 49 days
 "Santissima Trinità"              religious on easter plus 56 days
 "Corpus Domini"                   religious on easter plus 63 days
