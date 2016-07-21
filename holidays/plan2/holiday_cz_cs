@@ -19,6 +19,7 @@ language    "cs"
 :: Public Holidays
 "Nový rok"                                                       public on january 1
 "Státní svátek - Den vzniku samostatného českého státu"          public on january 1
+"Velký pátek"                                                    public religious on ((year >= 2016) ? ([easter] - 2 days): noop)
 "Velikonoce"                                                     public religious on easter
 "Velikonoční pondělí"                                            public religious on easter plus 1 days
 "Svátek práce"                                                   public on may 1
