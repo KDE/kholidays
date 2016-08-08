@@ -11,3 +11,8 @@ libraries:
  - qmake: KHolidays
    cmake: "KF5::Holidays"
 cmakename: KF5Holidays
+
+public_lib: true
+group: kdepim
+platforms:
+    - name: Linux
