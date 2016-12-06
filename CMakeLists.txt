@@ -17,6 +17,8 @@ include(FeatureSummary)
 include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
+include(ECMCoverageOption)
+
 
 set(PIM_VERSION "5.4.40")
 
