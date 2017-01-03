@@ -1,6 +1,7 @@
-cmake_minimum_required(VERSION 2.8.12)
+cmake_minimum_required(VERSION 3.0)
+set(PIM_VERSION "5.4.40")
 
-project(KHolidays)
+project(KHolidays VERSION ${PIM_VERSION})
 
 # ECM setup
 set(KF5_VERSION "5.28.0")
@@ -10,7 +11,7 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 include(GenerateExportHeader)
 include(ECMGenerateHeaders)
 include(ECMGeneratePriFile)
-include(ECMPackageConfigHelpers)
+include(CMakePackageConfigHelpers)
 include(ECMSetupVersion)
 include(ECMPoQmTools)
 include(FeatureSummary)
@@ -20,11 +21,10 @@ include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(ECMCoverageOption)
 
 
-set(PIM_VERSION "5.4.40")
 
 set(KHOLIDAYS_LIB_VERSION ${PIM_VERSION})
 
-ecm_setup_version(${KHOLIDAYS_LIB_VERSION} VARIABLE_PREFIX KHOLIDAYS
+ecm_setup_version(PROJECT VARIABLE_PREFIX KHOLIDAYS
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kholidays_version.h"
                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5HolidaysConfigVersion.cmake"
                         SOVERSION 5
@@ -52,7 +52,7 @@ endif()
 ########### CMake Config Files ###########
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5Holidays")
 
-ecm_configure_package_config_file(
+configure_package_config_file(
   "${CMAKE_CURRENT_SOURCE_DIR}/KF5HolidaysConfig.cmake.in"
   "${CMAKE_CURRENT_BINARY_DIR}/KF5HolidaysConfig.cmake"
   INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
