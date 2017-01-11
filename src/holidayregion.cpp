@@ -55,7 +55,7 @@ static QStringList allHolidayFiles(const QString &location = QString())
 class Q_DECL_HIDDEN HolidayRegion::HolidayRegionPrivate
 {
 public:
-    HolidayRegionPrivate(const QString &regionCode) : mDriver(0),
+    HolidayRegionPrivate(const QString &regionCode) : mDriver(nullptr),
         mRegionCode(regionCode)
     {
         if (!mRegionCode.isEmpty()) {
@@ -67,7 +67,7 @@ public:
         init();
     }
 
-    HolidayRegionPrivate(const QFileInfo &regionFile) : mDriver(0),
+    HolidayRegionPrivate(const QFileInfo &regionFile) : mDriver(nullptr),
         mHolidayFile(regionFile)
     {
         init();

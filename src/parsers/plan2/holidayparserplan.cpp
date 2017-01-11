@@ -462,7 +462,7 @@ yyreduce:
             char *s = (yysemantic_stack_[(2) - (2)].sval);
             driver.setFileCountryCode(QString::fromUtf8(s));
             free(s);
-            (yysemantic_stack_[(2) - (2)].sval) = NULL;
+            (yysemantic_stack_[(2) - (2)].sval) = nullptr;
         }
         break;
 
@@ -483,7 +483,7 @@ yyreduce:
             char *s = (yysemantic_stack_[(2) - (2)].sval);
             driver.setFileLanguageCode(QString::fromUtf8(s));
             free(s);
-            (yysemantic_stack_[(2) - (2)].sval) = NULL;
+            (yysemantic_stack_[(2) - (2)].sval) = nullptr;
         }
         break;
 
@@ -504,7 +504,7 @@ yyreduce:
             char *s = (yysemantic_stack_[(2) - (2)].sval);
             driver.setFileName(QString::fromUtf8(s));
             free(s);
-            (yysemantic_stack_[(2) - (2)].sval) = NULL;
+            (yysemantic_stack_[(2) - (2)].sval) = nullptr;
         }
         break;
 
@@ -525,7 +525,7 @@ yyreduce:
             char *s = (yysemantic_stack_[(2) - (2)].sval);
             driver.setFileDescription(QString::fromUtf8(s));
             free(s);
-            (yysemantic_stack_[(2) - (2)].sval) = NULL;
+            (yysemantic_stack_[(2) - (2)].sval) = nullptr;
         }
         break;
 
@@ -537,7 +537,7 @@ yyreduce:
             char *s = (yysemantic_stack_[(1) - (1)].sval);
             driver.setEventName(QString::fromUtf8(s));
             free(s);
-            (yysemantic_stack_[(1) - (1)].sval) = NULL;
+            (yysemantic_stack_[(1) - (1)].sval) = nullptr;
         }
         break;
 
@@ -837,7 +837,7 @@ yyreduce:
             char *s = (yysemantic_stack_[(1) - (1)].sval);
             (yyval.ival) = driver.julianDayFromEventName(s);
             free(s);
-            (yysemantic_stack_[(1) - (1)].sval) = NULL;
+            (yysemantic_stack_[(1) - (1)].sval) = nullptr;
         }
         break;
 
@@ -1541,7 +1541,7 @@ const HolidayParserPlan::yytname_[] = {
     "countrycode", "languagecode", "name", "description", "list",
     "eventname", "categories", "calendar", "eventrule", "offset",
     "conditionaloffset", "wdaycondition", "length", "date", "reldate",
-    "month", "monthnumber", "expr", "pexpr", "number", 0
+    "month", "monthnumber", "expr", "pexpr", "number", nullptr
 };
 #endif
 

@@ -2791,7 +2791,7 @@ yyFlexLexer::yyFlexLexer(std::istream *arg_yyin, std::ostream *arg_yyout)
 {
     yyin = arg_yyin;
     yyout = arg_yyout;
-    yy_c_buf_p = 0;
+    yy_c_buf_p = nullptr;
     yy_init = 0;
     yy_start = 0;
     yy_flex_debug = 0;
@@ -2805,13 +2805,13 @@ yyFlexLexer::yyFlexLexer(std::istream *arg_yyin, std::ostream *arg_yyout)
     yy_more_offset = yy_prev_more_offset = 0;
 
     yy_start_stack_ptr = yy_start_stack_depth = 0;
-    yy_start_stack = NULL;
+    yy_start_stack = nullptr;
 
-    yy_buffer_stack = 0;
+    yy_buffer_stack = nullptr;
     yy_buffer_stack_top = 0;
     yy_buffer_stack_max = 0;
 
-    yy_state_buf = 0;
+    yy_state_buf = nullptr;
 
 }
 
@@ -2965,7 +2965,7 @@ int yyFlexLexer::yy_get_next_buffer()
             } else
                 /* Can't grow it, we don't own it. */
             {
-                b->yy_ch_buf = 0;
+                b->yy_ch_buf = nullptr;
             }
 
             if (! b->yy_ch_buf)
@@ -3342,7 +3342,7 @@ void yyFlexLexer::yy_delete_buffer(YY_BUFFER_STATE b)
     }
 
     if (b == YY_CURRENT_BUFFER) { /* Not sure if we should pop here. */
-        YY_CURRENT_BUFFER_LVALUE = (YY_BUFFER_STATE) 0;
+        YY_CURRENT_BUFFER_LVALUE = (YY_BUFFER_STATE) nullptr;
     }
 
     if (b->yy_is_our_buffer) {
@@ -3442,7 +3442,7 @@ void yyFlexLexer::yy_flush_buffer(YY_BUFFER_STATE b)
 void yyFlexLexer::yypush_buffer_state(YY_BUFFER_STATE new_buffer)
 /* %endif */
 {
-    if (new_buffer == NULL) {
+    if (new_buffer == nullptr) {
         return;
     }
 
@@ -3484,7 +3484,7 @@ void yyFlexLexer::yypop_buffer_state(void)
     }
 
     yy_delete_buffer(YY_CURRENT_BUFFER);
-    YY_CURRENT_BUFFER_LVALUE = NULL;
+    YY_CURRENT_BUFFER_LVALUE = nullptr;
     if ((yy_buffer_stack_top) > 0) {
         --(yy_buffer_stack_top);
     }
