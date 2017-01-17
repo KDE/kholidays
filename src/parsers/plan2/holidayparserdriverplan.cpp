@@ -254,8 +254,8 @@ QDate HolidayParserDriverPlan::easter(int year)
 
 QDate HolidayParserDriverPlan::pascha(int year)
 {
-    if (m_parseCalendar.calendarSystem() != QCalendarSystem::GregorianCalendar ||
-            m_parseCalendar.calendarSystem() != QCalendarSystem::JulianCalendar) {
+    if (m_parseCalendar.calendarSystem() == QCalendarSystem::GregorianCalendar ||
+        m_parseCalendar.calendarSystem() == QCalendarSystem::JulianCalendar) {
         // Algorithm taken from Tondering
         // http://www.tondering.dk/claus/cal/node3.html#SECTION003137000000000000000
         // Gives Orthodox Easter in the Julian Calendar, need to convert afterwards to Gregorian if needed
@@ -266,11 +266,11 @@ QDate HolidayParserDriverPlan::pascha(int year)
         int month = 3 + ((l + 40) / 44);
         int day = l + 28 - (31 * (month / 4));
 
-        if (m_parseCalendar.calendarSystem() != QCalendarSystem::JulianCalendar) {
+        if (m_parseCalendar.calendarSystem() == QCalendarSystem::JulianCalendar) {
             return QDate::fromJulianDay(julianDay(year, month, day));
         }
 
-        if (m_parseCalendar.calendarSystem() != QCalendarSystem::GregorianCalendar) {
+        if (m_parseCalendar.calendarSystem() == QCalendarSystem::GregorianCalendar) {
             setParseCalendar(QStringLiteral("julian"));
             int paschaJd = julianDay(year, month, day);
             setParseCalendar(QStringLiteral("gregorian"));
