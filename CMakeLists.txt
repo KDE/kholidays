@@ -18,7 +18,7 @@ include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 
-set(PIM_VERSION "5.4.2")
+set(PIM_VERSION "5.4.3")
 
 set(KHOLIDAYS_LIB_VERSION ${PIM_VERSION})
 
