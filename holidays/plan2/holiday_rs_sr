@@ -36,6 +36,7 @@ language     "sr"
                                                                                    [ monday after ([may 2]) ] : noop )
 "Дан победе"                                                       public on may 9
 "Видовдан"                                                         public on june 28
+"Дан примирја у Првом светском рату"                               public on ( (year >= 2012) ? [november 11] : noop )
 
 :: Religious Holidays
 "Православни Велики петак"                                         public religious on pascha minus 2 days

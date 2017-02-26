@@ -36,6 +36,7 @@ language     "sr@latin"
                                                                                    [ monday after ([may 2]) ] : noop )
 "Dan pobede"                                                       public on may 9
 "Vidovdan"                                                         public on june 28
+"Dan primirja u Prvom svetskom ratu"                               public on ( (year >= 2012) ? [november 11] : noop )
 
 :: Religious Holidays
 "Pravoslavni Veliki petak"                                         public religious on pascha minus 2 days

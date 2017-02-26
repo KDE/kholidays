@@ -34,7 +34,7 @@ public:
         NameRole,
         DescriptionRole
     };
-    explicit HolidayRegionsDeclarativeModel(QObject *parent = Q_NULLPTR);
+    explicit HolidayRegionsDeclarativeModel(QObject *parent = nullptr);
     virtual ~HolidayRegionsDeclarativeModel();
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
