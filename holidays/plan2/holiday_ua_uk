@@ -7,7 +7,7 @@
 ::            Oleg Ivashchenko <ol_iva@i.ua>
 ::            Yuri Chornoivan  <yurchor@ukr.net>
 ::
-:: Updated:   2010-06-06
+:: Updated:   2016-03-03
 ::
 :: Source:   http://en.wikipedia.org/wiki/Public_holidays_in_Ukraine
 ::           http://uk.wikipedia.org/wiki/Свята_та_пам'ятні_дні_в_Україні
@@ -59,11 +59,18 @@ description "Файл списку святкових днів України"
                                                                                ((([may 2] == [sunday after ([may 2])])) ?
                                                                                   [tuesday after ([may 2])] :
                                                                                   noop ) )
+: Victory Day
+"День Перемоги"                                                     public on ((year <= 2015) ? may 9 : noop)
+: Victory Day Substitute Holiday
+"День Перемоги"                                                     public on ((year <= 2015) && ((([may 9] == [saturday after ([may 9])]) ||
+                                                                                 ([may 9] == [sunday after ([may 9])]))) ?
+                                                                                  [monday after ([may 9])] :
+                                                                                  noop )
 : Victory Day over Nazism in World War II
-"День перемоги над нацизмом у Другій світовій війні"                public on may 9
+"День перемоги над нацизмом у Другій світовій війні"                public on ((year >= 2016) ? may 9 : noop)
 : Victory Day over Nazism in World War II Substitute Holiday
-"День перемоги над нацизмом у Другій світовій війні"                public on ( (([may 9] == [saturday after ([may 9])]) ||
-                                                                                 ([may 9] == [sunday after ([may 9])])) ?
+"День перемоги над нацизмом у Другій світовій війні"                public on ((year >= 2016) && ((([may 9] == [saturday after ([may 9])]) ||
+                                                                                 ([may 9] == [sunday after ([may 9])]))) ?
                                                                                   [monday after ([may 9])] :
                                                                                   noop )
 : Orthodox Pentecost / Holy Trinity Day (Triytsya)
@@ -71,25 +78,25 @@ description "Файл списку святкових днів України"
 : Orthodox Pentecost / Holy Trinity Day (Triytsya) Substitute Holiday
 "Трійця"                                                            public religious on pascha plus 50 days
 : Constitution Day
-"День Конституції України"                                          public on june 28
+"День Конституції України"                                          public on ((year >= 1996) ? [june 28] : noop)
 : Constitution Day Substitute Holiday
-"День Конституції України"                                          public on ( (([june 28] == [saturday after ([june 28])]) ||
+"День Конституції України"                                          public on ((year >= 1996) && (([june 28] == [saturday after ([june 28])]) ||
                                                                                  ([june 28] == [sunday after ([june 28])])) ?
                                                                                   [monday after ([june 28])] :
                                                                                   noop )
 : Independence Day
-"День Незалежності України"                                         public on august 24
+"День Незалежності України"                                         public on ((year >= 1992) ? [august 24] : ((year == 1991) ? [july 16] : noop))
 : Independence Day Substitute Holiday
-"День Незалежності України"                                         public on ( (([august 24] == [saturday after ([august 24])]) ||
+"День Незалежності України"                                         public on ((year >= 1992) && (([august 24] == [saturday after ([august 24])]) ||
                                                                                  ([august 24] == [sunday after ([august 24])])) ?
                                                                                   [monday after ([august 24])] :
                                                                                   noop )
 
 : Defender of Ukraine Day
-"День захисника України"                                            public on october 14
+"День захисника України"                                            public on ((year >= 2015) ? [october 14] : noop)
 : Defender of Ukraine Day Substitute Holiday
-"День захисника України"                                            public on ( (([october 14] == [saturday after ([october 14])]) ||
-                                                                                 ([october 14] == [sunday after ([october 14])])) ?
+"День захисника України"                                            public on (((year >= 2015) && (([october 14] == [saturday after ([october 14])]) ||
+                                                                                 ([october 14] == [sunday after ([october 14])]))) ?
                                                                                   [monday after ([october 14])] :
                                                                                   noop )
 
@@ -115,13 +122,13 @@ description "Файл списку святкових днів України"
 
 :: Cultural
 : Unity Day of Ukraine
-"День соборності України"                                           cultural on january 22
+"День соборності України"                                           cultural on ((year >= 2015) ? [january 22] : ((year >= 2012) ? noop : ((year >= 2000) ? [january 22] : noop)))
 : Battle of Kruty Memorial Day
 "День пам’яті героїв Крут"                                          cultural on january 29
 : Valentine's Day
 "День святого Валентина (День всіх закоханих)"                      cultural on february 14
 : Day of the Heavenly Hundred Heroes
-"День Героїв Небесної Сотні"                                        cultural on february 20
+"День Героїв Небесної Сотні"                                        cultural on ((year >= 2015) ? [february 20] : noop)
 : International Mother Language Day
 "Міжнародний день рідної мови"                                      cultural on february 21
 : International Day for Monuments and Sites
@@ -143,7 +150,7 @@ description "Файл списку святкових днів України"
 : International Youth Day
 "День молоді"                                                       cultural on last sunday in june
 : Ukrainian Flag Day
-"День Державного Прапора України"                                   cultural on august 23
+"День Державного Прапора України"                                   cultural on ((year >= 2004) ? [august 23] : noop)
 : Ukrainian Library Day
 "Всеукраїнський день бібліотек"                                     cultural on september 30
 : Day of Ukrainian Cossacks
@@ -151,7 +158,9 @@ description "Файл списку святкових днів України"
 : Day of Ukrainian Script and Language
 "День української писемності та мови"                               cultural on november 9
 : Day of Dignity and Freedom
-"День Гідності та Свободи"                                          cultural on november 21
+"День Гідності та Свободи"                                          cultural on ((year >= 2014) ? [november 21] : noop)
+: Freedom Day
+"День Свободи"                                                      cultural on (((year >= 2005) && (year <= 2011)) ? [november 22] : noop)
 : Holodomor Memorial Day
 "День пам'яті жертв голодоморів"                                    cultural on fourth saturday in november
 
@@ -229,13 +238,13 @@ description "Файл списку святкових днів України"
 : Ukrainian Custom Official Day
 "День митної служби України"                                                                cultural on june 25
 : Architecture Day
-"День архітектури України"                                                                  cultural on july 1
+"День архітектури України"                                                                  cultural on ((year >= 1995) ? [july 1] : noop)
 : Taxman's Day
 "День працівника державної податкової служби України"                                       cultural on july 2
 : Antiaircraft Defence Day
 "День Військ Протиповітряної оборони"                                                       cultural on first sunday in july
 : Navy Day
-"День Військово-Морських Сил"                                                               cultural on first sunday in july
+"День Військово-Морських Сил"                                                               cultural on (((year >= 2015) || ((year >= 2006) && (year <= 2008))) ? [first sunday in july] : ((year >= 1997) && (year <= 2005) ? [august 1] : noop))
 : Sailor's Day
 "День працівників морського та річкового флоту"                                             cultural on first sunday in july
 : Fishman's Day
@@ -302,16 +311,18 @@ description "Файл списку святкових днів України"
 "День працівників харчової промисловості"                                                   cultural on third sunday in october
 : Automobilist's Day
 "День автомобіліста і дорожника"                                                            cultural on last sunday in october
+: Day of Liberation of Ukraine from Nazi Invaders
+"День визволення України від фашистських загарбників"                                       cultural on ((year >= 2009) ? [october 28] : noop)
 : Miltary Engineering Day
 "День інженерних військ"                                                                    cultural on november 3
 : Artillery Day
 "День ракетних військ і артилерії"                                                          cultural on november 3
 : Railroad Day
 "День залізничника"                                                                         cultural on november 4
-: Social Woker's Day
+: Social Worker's Day
 "День працівника соціальної сфери"                                                          cultural on first sunday in november
 : Telecommunication Day
-"День працівників радіо, телебачення та зв'язку"                                            cultural on november 16
+"День працівників радіо, телебачення та зв'язку"                                            cultural on ((year >= 1994) ? [november 16] : noop)
 : Student's Day
 "День студента"                                                                             cultural on november 17
 : Meteorology Day
@@ -325,7 +336,7 @@ description "Файл списку святкових днів України"
 : Statistics Day
 "День працівників статистики"                                                               cultural on december 5
 : Army Day
-"День Збройних Сил України"                                                                 cultural on december 6
+"День Збройних Сил України"                                                                 cultural on ((year >= 1993) ? [december 6] : noop)
 : Local Authorities Day
 "День місцевого самоврядування"                                                             cultural on december 7
 : Infantry Day
