@@ -20,9 +20,6 @@ include(KDECMakeSettings)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(ECMCoverageOption)
 
-
-set(PIM_VERSION "5.4.3")
-
 set(KHOLIDAYS_LIB_VERSION ${PIM_VERSION})
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX KHOLIDAYS
