@@ -43,7 +43,7 @@ static QStringList allHolidayFiles(const QString &location = QString())
                              QStringLiteral("kf5/libkholidays/plan2"),
                              QStandardPaths::LocateDirectory);
     QStringList files;
-    foreach (const QString &dir, dirs) {
+    for (const QString &dir : dirs) {
         QDirIterator it(dir, QStringList() << QStringLiteral("holiday_") + location + '*');
         while (it.hasNext()) {
             files.push_back(it.next());
@@ -126,7 +126,7 @@ QStringList HolidayRegion::regionCodes()
 
     QStringList regionCodesList;
     regionCodesList.reserve(files.count());
-    foreach (const QString &filename, files) {
+    for (const QString &filename : files) {
         regionCodesList.append(filename.mid(filename.lastIndexOf(QLatin1String("holiday_")) + 8));
     }
 
@@ -368,9 +368,9 @@ Holiday::List HolidayRegion::holidays(int calendarYear) const
 
 bool HolidayRegion::isHoliday(const QDate &date) const
 {
-    Holiday::List holidayList = holidays(date);
-    if (holidayList.count() > 0) {
-        foreach (const KHolidays::Holiday &holiday, holidayList) {
+    const Holiday::List holidayList = holidays(date);
+    if (!holidayList.isEmpty()) {
+        for (const KHolidays::Holiday &holiday : holidayList) {
             if (holiday.dayType() == Holiday::NonWorkday) {
                 return true;
             }
