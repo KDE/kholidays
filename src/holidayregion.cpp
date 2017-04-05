@@ -408,12 +408,12 @@ QString HolidayRegion::defaultRegionCode(const QString &country, const QString &
         localeLanguageCountry = localeLanguage.split(QLatin1Char('_')).at(1);
     }
 
-    QStringList regionList = KHolidays::HolidayRegion::regionCodes();
 
     QString countryAndLanguageMatch, countryOnlyMatch, subdivisionAndLanguageMatch,
             subdivisionOnlyMatch, languageCountryAndLanguageMatch, languageCountryOnlyMatch,
             languageSubdivisionAndLanguageMatch, languageSubdivisionOnlyMatch;
 
+    const QStringList regionList = KHolidays::HolidayRegion::regionCodes();
     foreach (const QString &regionCode, regionList) {
         QString regionCountry = KHolidays::HolidayRegion::countryCode(regionCode).toLower();
         QString regionSubdivisionCountry;
