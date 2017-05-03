@@ -130,7 +130,7 @@ QStringList HolidayRegion::regionCodes()
         regionCodesList.append(filename.mid(filename.lastIndexOf(QLatin1String("holiday_")) + 8));
     }
 
-    qSort(regionCodesList);
+    std::sort(regionCodesList.begin(), regionCodesList.end());
     return regionCodesList;
 }
 

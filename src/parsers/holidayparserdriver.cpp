@@ -63,7 +63,7 @@ Holiday::List HolidayParserDriver::parseHolidays(const QDate &startDate, const Q
     m_requestStart = startDate;
     m_requestEnd = endDate;
     parse();
-    qSort(m_resultList);
+    std::sort(m_resultList.begin(), m_resultList.end());
     return m_resultList;
 }
 
