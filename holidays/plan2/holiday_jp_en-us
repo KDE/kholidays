@@ -1,13 +1,18 @@
-::
+Autumnal Equinox Day::
 :: Country:  Japan
 ::
 :: Author:   Toyohiro Asukai <toyohiro@ksmplus.com>
+::           Jumpei Ogawa <phanective@gmail.com>
 ::
 :: Language: English
 ::
-:: Updated:  2004-11-16
+:: Updated:  2017-05-07
 ::
-:: Source:
+:: Source:   http://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html
+::           http://www.nao.ac.jp/faq/a0301.html
+::
+:: Note:     On each Februaries, Vernal and Autumnal Equinox Days of next year is announced by government.
+::           Currently Equinox Days on and after 2019 are expected dates and may be changed.
 ::
 
 :: Metadata
@@ -20,23 +25,86 @@ description "National holiday file for Japan"
 "New Year's Day"                   public on january 1
 "Coming of Age"                    public on second monday in january
 "National Foundation Day"          public on february 11
+
+:: Equinox Days on and after 2019 are expected dates. See notes above.
+"Vernal Equinox Day"               public on march 20 2000
+"Vernal Equinox Day"               public on march 20 2001
+"Vernal Equinox Day"               public on march 21 2002
+"Vernal Equinox Day"               public on march 21 2003
+"Vernal Equinox Day"               public on march 20 2004
 "Vernal Equinox Day"               public on 20.3.2005
 "Vernal Equinox Day"               public on 21.3.2006
 "Vernal Equinox Day"               public on 21.3.2007
-"Vernal Equinox Day"               public on 20.3.2008
-"Vernal Equinox Day"               public on 20.3.2009
+"Vernal Equinox Day"               public on 21.3.2008
+"Vernal Equinox Day"               public on 21.3.2009
 "Vernal Equinox Day"               public on 21.3.2010
-"Greenery Day"                     public on april 29
+"Vernal Equinox Day"               public on march 21 2011
+"Vernal Equinox Day"               public on march 20 2012
+"Vernal Equinox Day"               public on march 20 2013
+"Vernal Equinox Day"               public on march 21 2014
+"Vernal Equinox Day"               public on march 21 2015
+"Vernal Equinox Day"               public on march 20 2016
+"Vernal Equinox Day"               public on march 20 2017
+"Vernal Equinox Day"               public on march 21 2018
+"Vernal Equinox Day"               public on march 21 2019
+"Vernal Equinox Day"               public on march 20 2020
+"Vernal Equinox Day"               public on march 20 2021
+"Vernal Equinox Day"               public on march 21 2022
+"Vernal Equinox Day"               public on march 21 2023
+"Vernal Equinox Day"               public on march 20 2024
+"Vernal Equinox Day"               public on march 20 2025
+"Vernal Equinox Day"               public on march 20 2026
+"Vernal Equinox Day"               public on march 21 2027
+"Vernal Equinox Day"               public on march 20 2028
+"Vernal Equinox Day"               public on march 20 2029
+"Vernal Equinox Day"               public on march 20 2030
+
+"Showa Day"                        public on april 29
 "Constitution Day"                 public on may 3
-"Holiday"                          public on may 4
+"Greenery Day"                     public on may 4
 "Children's Day"                   public on may 5
 "Oceans' Day"                      public on third monday in july
+"Mountain Day"                     public on august 11
 "Respect for Senior Citizens Day"  public on third monday in september
-"Autumnal Equinox Day"             public on september 23
+
+:: Equinox Days on and after 2019 are expected dates. See notes above.
+"Autumnal Equinox Day"             public on september 23 2000
+"Autumnal Equinox Day"             public on september 23 2001
+"Autumnal Equinox Day"             public on september 23 2002
+"Autumnal Equinox Day"             public on september 23 2003
+"Autumnal Equinox Day"             public on september 23 2004
+"Autumnal Equinox Day"             public on september 23 2005
+"Autumnal Equinox Day"             public on september 23 2006
+"Autumnal Equinox Day"             public on september 23 2007
+"Autumnal Equinox Day"             public on september 23 2008
+"Autumnal Equinox Day"             public on september 23 2009
+"Autumnal Equinox Day"             public on september 23 2010
+"Autumnal Equinox Day"             public on september 23 2011
+"Autumnal Equinox Day"             public on september 22 2012
+"Autumnal Equinox Day"             public on september 23 2013
+"Autumnal Equinox Day"             public on september 23 2014
+"Autumnal Equinox Day"             public on september 23 2015
+"Autumnal Equinox Day"             public on september 22 2016
+"Autumnal Equinox Day"             public on september 23 2017
+"Autumnal Equinox Day"             public on september 23 2018
+"Autumnal Equinox Day"             public on september 23 2019
+"Autumnal Equinox Day"             public on september 22 2020
+"Autumnal Equinox Day"             public on september 23 2021
+"Autumnal Equinox Day"             public on september 23 2022
+"Autumnal Equinox Day"             public on september 23 2023
+"Autumnal Equinox Day"             public on september 22 2024
+"Autumnal Equinox Day"             public on september 23 2025
+"Autumnal Equinox Day"             public on september 23 2026
+"Autumnal Equinox Day"             public on september 23 2027
+"Autumnal Equinox Day"             public on september 22 2028
+"Autumnal Equinox Day"             public on september 23 2029
+"Autumnal Equinox Day"             public on september 23 2030
+
 "Sports Day"                       public on second monday in october
 "Culture Day"                      public on november 3
 "Labor Thanksgiving Day"           public on november 23
 "The Emperor's Birthday"           public on december 23
+
 :: If a "National Holiday" is on Sunday,the following day
 :: shall be a substitute holiday.
 "Substitute holiday"               public on 21.3.2005
@@ -47,6 +115,12 @@ description "National holiday file for Japan"
 "Substitute holiday"               public on 24.12.2007
 "Substitute holiday"               public on 24.11.2008
 "Substitute holiday"               public on 22.3.2010
+"Substitute holiday"               public on march 21 2016
+"Substitute holiday"               public on january 2 2017
+"Substitute holiday"               public on february 12 2018
+"Substitute holiday"               public on april 30 2018
+"Substitute holiday"               public on september 24 2018
+"Substitute holiday"               public on december 24 2018
 
 :: Religious
 
