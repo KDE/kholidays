@@ -2,12 +2,13 @@
 :: Country:  Japan
 ::
 :: Author:   Toyohiro Asukai <toyohiro@ksmplus.com>
+::           Jumpei Ogawa <phanective@gmail.com>
 ::
 :: Language: English
 ::
-:: Updated:  2004-11-16
+:: Updated:  2017-05-07
 ::
-:: Source:
+:: Source:   http://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html
 ::
 
 :: Metadata
@@ -26,11 +27,12 @@ description "National holiday file for Japan"
 "Vernal Equinox Day"               public on 20.3.2008
 "Vernal Equinox Day"               public on 20.3.2009
 "Vernal Equinox Day"               public on 21.3.2010
-"Greenery Day"                     public on april 29
+"Showa Day"                        public on april 29
 "Constitution Day"                 public on may 3
-"Holiday"                          public on may 4
+"Greenery Day"                     public on may 4
 "Children's Day"                   public on may 5
 "Oceans' Day"                      public on third monday in july
+"Mountain Day"                     public on august 11
 "Respect for Senior Citizens Day"  public on third monday in september
 "Autumnal Equinox Day"             public on september 23
 "Sports Day"                       public on second monday in october

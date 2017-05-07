@@ -2,12 +2,13 @@
 :: Country:  Japan
 ::
 :: Author:   Toyohiro Asukai <toyohiro@ksmplus.com>
+::           Jumpei Ogawa <phanective@gmail.com>
 ::
 :: Language: Japanese
 ::
-:: Updated:  2004-11-16
+:: Updated:  2017-05-07
 ::
-:: Source:
+:: Source:   http://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html
 ::
 
 :: Metadata
@@ -30,16 +31,18 @@ language    "ja"
 "春分の日"                            public on 21.3.2008
 "春分の日"                            public on 21.3.2009
 "春分の日"                            public on 21.3.2010
-:"Greenery Day"
-"みどりの日"                          public on april 29
+:"Showa Day"
+"昭和の日"                            public on april 29
 :"Constitution Day"
 "憲法記念日"                          public on may 3
-:"Holiday"
-"休日"                               public on may 4
+:"Greenery Day"
+"みどりの日"                          public on may 4
 :"Children's Day"
 "こどもの日"                          public on may 5
 :"Oceans' Day"
 "海の日"                             public on third monday in july
+:"Mountain Day"
+"山の日"                             public on august 11
 :"Respect for Senior Citizens Day"
 "敬老の日"                            public on third monday in september
 :"Autumnal Equinox Day"
