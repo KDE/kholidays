@@ -2,48 +2,115 @@
 :: Country:  Japan
 ::
 :: Author:   Toyohiro Asukai <toyohiro@ksmplus.com>
+::           Jumpei Ogawa <phanective@gmail.com>
 ::
 :: Language: Japanese
 ::
-:: Updated:  2004-11-16
+:: Updated:  2017-05-07
 ::
-:: Source:
+:: Source:   http://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html
+::           http://www.nao.ac.jp/faq/a0301.html
 ::
+:: Note:     On each Februaries, Vernal and Autumnal Equinox Days of next year are announced by government.
+::           Currently Equinox Days on and after 2019 are expected dates and may be changed.
 
 :: Metadata
 country     "JP"
 language    "ja"
 :name        "optional - defaults to country name"
-:description "(please add description in source language) National holiday file for Japan"
+description "日本の国民の休日のファイルです。"
 
 :: Public Holidays
 :"New Year's Day"
 "元旦"                               public on january 1
-:"Coming of Age"
+:"Coming of Age Day"
 "成人の日"                            public on second monday in january
 :"National Foundation Day"
 "建国記念日"                          public on february 11
+
 :"Vernal Equinox Day"
-"春分の日"                            public on 20.3.2005
-"春分の日"                            public on 21.3.2006
-"春分の日"                            public on 21.3.2007
-"春分の日"                            public on 21.3.2008
-"春分の日"                            public on 21.3.2009
-"春分の日"                            public on 21.3.2010
-:"Greenery Day"
-"みどりの日"                          public on april 29
+:: Equinox Days on and after 2019 are expected dates. See notes above.
+"春分の日"                            public on march 20 2000
+"春分の日"                            public on march 20 2001
+"春分の日"                            public on march 21 2002
+"春分の日"                            public on march 21 2003
+"春分の日"                            public on march 20 2004
+"春分の日"                            public on march 20 2005
+"春分の日"                            public on march 21 2006
+"春分の日"                            public on march 21 2007
+"春分の日"                            public on march 20 2008
+"春分の日"                            public on march 20 2009
+"春分の日"                            public on march 21 2010
+"春分の日"                            public on march 21 2011
+"春分の日"                            public on march 20 2012
+"春分の日"                            public on march 20 2013
+"春分の日"                            public on march 21 2014
+"春分の日"                            public on march 21 2015
+"春分の日"                            public on march 20 2016
+"春分の日"                            public on march 20 2017
+"春分の日"                            public on march 21 2018
+"春分の日"                            public on march 21 2019
+"春分の日"                            public on march 20 2020
+"春分の日"                            public on march 20 2021
+"春分の日"                            public on march 21 2022
+"春分の日"                            public on march 21 2023
+"春分の日"                            public on march 20 2024
+"春分の日"                            public on march 20 2025
+"春分の日"                            public on march 20 2026
+"春分の日"                            public on march 21 2027
+"春分の日"                            public on march 20 2028
+"春分の日"                            public on march 20 2029
+"春分の日"                            public on march 20 2030
+
+:"Showa Day"
+"昭和の日"                            public on april 29
 :"Constitution Day"
 "憲法記念日"                          public on may 3
-:"Holiday"
-"休日"                               public on may 4
+:"Greenery Day"
+"みどりの日"                          public on may 4
 :"Children's Day"
 "こどもの日"                          public on may 5
 :"Oceans' Day"
 "海の日"                             public on third monday in july
+:"Mountain Day"
+"山の日"                             public on august 11
 :"Respect for Senior Citizens Day"
 "敬老の日"                            public on third monday in september
+
 :"Autumnal Equinox Day"
-"秋分の日"                            public on september 23
+:: Equinox Days on and after 2019 are expected dates. See notes above.
+"秋分の日"                            public on september 23 2000
+"秋分の日"                            public on september 23 2001
+"秋分の日"                            public on september 23 2002
+"秋分の日"                            public on september 23 2003
+"秋分の日"                            public on september 23 2004
+"秋分の日"                            public on september 23 2005
+"秋分の日"                            public on september 23 2006
+"秋分の日"                            public on september 23 2007
+"秋分の日"                            public on september 23 2008
+"秋分の日"                            public on september 23 2009
+"秋分の日"                            public on september 23 2010
+"秋分の日"                            public on september 23 2011
+"秋分の日"                            public on september 22 2012
+"秋分の日"                            public on september 23 2013
+"秋分の日"                            public on september 23 2014
+"秋分の日"                            public on september 23 2015
+"秋分の日"                            public on september 22 2016
+"秋分の日"                            public on september 23 2017
+"秋分の日"                            public on september 23 2018
+"秋分の日"                            public on september 23 2019
+"秋分の日"                            public on september 22 2020
+"秋分の日"                            public on september 23 2021
+"秋分の日"                            public on september 23 2022
+"秋分の日"                            public on september 23 2023
+"秋分の日"                            public on september 22 2024
+"秋分の日"                            public on september 23 2025
+"秋分の日"                            public on september 23 2026
+"秋分の日"                            public on september 23 2027
+"秋分の日"                            public on september 22 2028
+"秋分の日"                            public on september 23 2029
+"秋分の日"                            public on september 23 2030
+
 :"Sports Day"
 "体育の日"                            public on second monday in october
 :"Culture Day"
@@ -56,29 +123,26 @@ language    "ja"
 :: If a "National Holiday" is on Sunday,the following day
 :: shall be a substitute holiday.
 :"Substitute holiday"
-"振替休日"                            public on 21.3.2005
-"振替休日"                            public on 2.1.2006
-"振替休日"                            public on 12.2.2007
-"振替休日"                            public on 30.4.2007
-"振替休日"                            public on 24.9.2007
-"振替休日"                            public on 24.12.2007
-"振替休日"                            public on 24.11.2008
-"振替休日"                            public on 22.3.2010
+"振替休日"                            public on march 21 2005
+"振替休日"                            public on january 2 2006
+"振替休日"                            public on february 12 2007
+"振替休日"                            public on april 30 2007
+"振替休日"                            public on september 24 2007
+"振替休日"                            public on december 24 2007
+"振替休日"                            public on november 24 2008
+"振替休日"                            public on march 22 2010
+"振替休日"                            public on march 21 2016
+"振替休日"                            public on january 2 2017
+"振替休日"                            public on february 12 2018
+"振替休日"                            public on april 30 2018
+"振替休日"                            public on september 24 2018
+"振替休日"                            public on december 24 2018
 
 :: Religious
 
 :: Financial
 
 :: Cultural
-:"St. Valentine's Day"              cultural on february 14
-:"Girls' Festival"                  cultural on march 3
-:"Buddha's Birthday"                cultural on april 8
-:"May Day"                          cultural on may 1
-:"Boys' Festival"                   cultural on may 5
-:"Mother's Day"                     cultural on second sunday in may
-:"Father's Day"                     cultural on third sunday in june
-:"Festival of the Weaver Star"      cultural on july 7
-:"Christmas"                        cultural on december 25
 
 :: School
 
