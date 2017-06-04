@@ -79,25 +79,25 @@ public:
      *
      * @param errorMessage error message to log
      */
-    void error(const QString &errorMessage) Q_DECL_OVERRIDE;
+    void error(const QString &errorMessage) override;
 
 protected:
     /**
      * Actually parse the file, new plan format implementation
      */
-    void parse() Q_DECL_OVERRIDE;
+    void parse() override;
 
     /**
      * Parse the file for metadata only and populate the metadata variables
      */
-    void parseMetadata() Q_DECL_OVERRIDE;
+    void parseMetadata() override;
 
     /**
      * Set the calendar system to use
      *
      * @param calendar The QCalendarSystem calendar system to use
      */
-    void setParseCalendar(QCalendarSystem::CalendarSystem calendar) Q_DECL_OVERRIDE;
+    void setParseCalendar(QCalendarSystem::CalendarSystem calendar) override;
 
     // Bison C++ skeleton required friend for Bison parser class implementation
     friend class HolidayParserPlan;
