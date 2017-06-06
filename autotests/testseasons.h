@@ -22,7 +22,7 @@
 #ifndef TESTSEASONS_H
 #define TESTSEASONS_H
 
-#include <QtCore/QObject>
+#include <QObject>
 
 class SeasonsTest : public QObject
 {

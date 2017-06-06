@@ -22,7 +22,7 @@
 #ifndef TESTLUNAR_H
 #define TESTLUNAR_H
 
-#include <QtCore/QObject>
+#include <QObject>
 
 class LunarTest : public QObject
 {

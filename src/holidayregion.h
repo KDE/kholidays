@@ -27,9 +27,9 @@
 
 #include "kholidays_export.h"
 
-#include <QtCore/QList>
-#include <QtCore/QSharedDataPointer>
-#include <QtCore/QString>
+#include <QList>
+#include <QSharedDataPointer>
+#include <QString>
 
 #include "holiday.h"
 

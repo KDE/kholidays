@@ -22,7 +22,7 @@
 #ifndef TESTHOLIDAYREGION_H
 #define TESTHOLIDAYREGION_H
 
-#include <QtCore/QObject>
+#include <QObject>
 
 #include "holidayregion.h"
 

@@ -22,8 +22,8 @@
 #ifndef QCALENDARSYSTEM_H
 #define QCALENDARSYSTEM_H
 
-#include <QtCore/QSharedPointer>
-#include <QtCore/QDate>
+#include <QSharedPointer>
+#include <QDate>
 
 class QCalendarSystemPrivate;
 

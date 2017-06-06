@@ -27,8 +27,8 @@
 
 #include "kholidays_export.h"
 
-#include <QtCore/QList>
-#include <QtCore/QSharedDataPointer>
+#include <QList>
+#include <QSharedDataPointer>
 
 class QDate;
 class QString;

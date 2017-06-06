@@ -21,9 +21,9 @@
 
 #include "zodiac.h"
 
-#include <QtCore/QDateTime>
-#include <QtCore/QSharedData>
-#include <QtCore/QCoreApplication>
+#include <QDateTime>
+#include <QSharedData>
+#include <QCoreApplication>
 
 using namespace KHolidays;
 

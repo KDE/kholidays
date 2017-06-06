@@ -21,8 +21,8 @@
 
 #include "astroseasons.h"
 
-#include <QtCore/QDate>
-#include <QtCore/QCoreApplication>
+#include <QDate>
+#include <QCoreApplication>
 
 using namespace KHolidays;
 

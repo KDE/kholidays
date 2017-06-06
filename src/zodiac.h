@@ -53,7 +53,7 @@
 
 #include "kholidays_export.h"
 
-#include <QtCore/QSharedDataPointer>
+#include <QSharedDataPointer>
 
 class QDate;
 class QString;

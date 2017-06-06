@@ -25,8 +25,8 @@
 #include "lunarphase.h"
 #include <config-kholidays.h>
 
-#include <QtCore/QDateTime>
-#include <QtCore/QCoreApplication>
+#include <QDateTime>
+#include <QCoreApplication>
 
 using namespace KHolidays;
 

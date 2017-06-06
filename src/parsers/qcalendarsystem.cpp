@@ -21,8 +21,8 @@
 
 #include "qcalendarsystem_p.h"
 
-#include <QtCore/QDate>
-#include <QtCore/QSharedData>
+#include <QDate>
+#include <QSharedData>
 
 #include "qdebug.h"
 

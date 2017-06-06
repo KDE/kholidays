@@ -24,13 +24,13 @@
 
 #include "holidayregion.h"
 
-#include <QtCore/QDateTime>
-#include <QtCore/QDirIterator>
-#include <QtCore/QFile>
-#include <QtCore/QFileInfo>
-#include <QtCore/QSharedData>
-#include <QtCore/QStandardPaths>
-#include <QtCore/QCoreApplication>
+#include <QDateTime>
+#include <QDirIterator>
+#include <QFile>
+#include <QFileInfo>
+#include <QSharedData>
+#include <QStandardPaths>
+#include <QCoreApplication>
 
 #include "holiday_p.h"
 #include "parsers/plan2/holidayparserdriverplan_p.h"

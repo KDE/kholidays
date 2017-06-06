@@ -27,10 +27,10 @@
 
 #include "holiday.h"
 
-#include <QtCore/QDateTime>
-#include <QtCore/QFile>
-#include <QtCore/QLocale>
-#include <QtCore/QSharedData>
+#include <QDateTime>
+#include <QFile>
+#include <QLocale>
+#include <QSharedData>
 
 namespace KHolidays
 {

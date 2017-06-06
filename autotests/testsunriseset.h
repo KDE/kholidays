@@ -22,7 +22,7 @@
 #ifndef TESTSUNRISE_H
 #define TESTSUNRISE_H
 
-#include <QtCore/QObject>
+#include <QObject>
 
 class SunriseTest : public QObject
 {
