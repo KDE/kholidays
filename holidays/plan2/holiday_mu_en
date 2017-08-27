@@ -1,0 +1,51 @@
+::
+:: Country:   Mauritius
+::
+:: Language:  UK English
+::
+:: Author:    Nadim Attari <nadim.attari@gmail.com>
+::
+:: Updated:
+::
+:: Source:   These were taken from http://pmo.govmu.org 
+::           Note: Only the fixed holidays are available. Some celebrations depend on
+::           special events, eg: The exact date of Eid-ul-Fitr is subject to
+::           confirmation as its celebration depends on the visibility of the moon
+::
+
+:: Metadata
+country     "MU"
+language    "en_GB"
+name        "Mauritius"
+description "National holiday file for Mauritius"
+
+:: Public Holidays
+"New Year"				public on january 01
+"New Year"				public on january 02
+"Chinese Spring Festival"		public on january 28
+"Abolition Of Slavery"			public on february 01
+"Thaipoosam Cavadee"			public on february 09
+"Maha Shivaratree"			public on february 24
+"Independence And Republic Day"		public on march 12
+"Ugaadi"				public on march 29
+"Labour Day"				public on may 01
+"Eid-ul-fitr"				public on june 26
+"Ganesh Chaturthi"			public on august 26
+"Divali"				public on october 19
+"All Saints Day"			public on november 01
+"Arrival Of Indentured Labourers"	public on november 02
+"Christmas"				public on december 25
+
+:: Religious
+
+:: Financial
+
+:: Cultural
+
+:: School
+
+:: Daylight Saving
+
+:: Seasons
+
+:: Name Days
