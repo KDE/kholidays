@@ -100,7 +100,7 @@ public:
         }
     }
 
-    HolidayParserDriver  *mDriver;  // The parser driver for the holiday file
+    HolidayParserDriver  *mDriver = nullptr;  // The parser driver for the holiday file
     QString mRegionCode;            // region code of holiday region
     QFileInfo mHolidayFile;         // file containing holiday data, or null
 };
