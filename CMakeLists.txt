@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-set(PIM_VERSION "5.6.1")
+set(PIM_VERSION "5.6.2")
 
 project(KHolidays VERSION ${PIM_VERSION})
 
