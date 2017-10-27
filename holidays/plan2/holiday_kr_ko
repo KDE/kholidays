@@ -5,8 +5,9 @@
 ::
 :: Author:   John Layt <john@layt.net>
 ::           Park Shinjo <peremen@gmail.com>
+::           Minori Hiraoka <minori@mnetwork.co.kr>
 ::
-:: Updated:  2014-06-20
+:: Updated:  2017-10-27
 ::
 :: Source:   http://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EA%B5%AD%EA%B2%BD%EC%9D%BC%EC%97%90%EA%B4%80%ED%95%9C%EB%B2%95%EB%A5%A0
 ::           http://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EA%B4%80%EA%B3%B5%EC%84%9C%EC%9D%98%EA%B3%B5%ED%9C%B4%EC%9D%BC%EC%97%90%EA%B4%80%ED%95%9C%EA%B7%9C%EC%A0%95
@@ -55,6 +56,28 @@ language    "ko"
 "설날"              public on 30.1.2014 length 3 days
 "설날"              public on 18.2.2015 length 3 days
 "설날"              public on 7.2.2016 length 3 days
+"설날"              public on 27.1.2017 length 3 days
+"설날"              public on 15.2.2018 length 3 days
+"설날"              public on 4.2.2019 length 3 days
+"설날"              public on 24.1.2020 length 3 days
+"설날"              public on 11.2.2021 length 3 days
+"설날"              public on 31.1.2022 length 3 days
+"설날"              public on 21.1.2023 length 3 days
+"설날"              public on 9.2.2024 length 3 days
+"설날"              public on 28.1.2025 length 3 days
+"설날"              public on 16.2.2026 length 3 days
+"설날"              public on 6.2.2027 length 3 days
+"설날"              public on 26.1.2028 length 3 days
+"설날"              public on 12.2.2029 length 3 days
+"설날"              public on 2.2.2030 length 3 days
+"설날"              public on 22.1.2031 length 3 days
+"설날"              public on 10.2.2032 length 3 days
+"설날"              public on 30.1.2033 length 3 days
+"설날"              public on 18.2.2034 length 3 days
+"설날"              public on 7.2.2035 length 3 days
+"설날"              public on 27.1.2036 length 3 days
+"설날"              public on 14.2.2037 length 3 days
+
 : Buddha's Birthday: Day 8 Month 4
 "부처님 오신 날"    public religious on 24.5.2007
 "부처님 오신 날"    public religious on 12.5.2008
@@ -66,6 +89,28 @@ language    "ko"
 "부처님 오신 날"    public religious on 6.5.2014
 "부처님 오신 날"    public religious on 25.5.2015
 "부처님 오신 날"    public religious on 14.5.2016
+"부처님 오신 날"    public religious on 3.5.2017
+"부처님 오신 날"    public religious on 22.5.2018
+"부처님 오신 날"    public religious on 12.5.2019
+"부처님 오신 날"    public religious on 30.4.2020
+"부처님 오신 날"    public religious on 19.5.2021
+"부처님 오신 날"    public religious on 8.5.2022
+"부처님 오신 날"    public religious on 27.5.2023
+"부처님 오신 날"    public religious on 15.5.2024
+"부처님 오신 날"    public religious on 5.5.2025
+"부처님 오신 날"    public religious on 24.5.2026
+"부처님 오신 날"    public religious on 13.5.2027
+"부처님 오신 날"    public religious on 2.5.2028
+"부처님 오신 날"    public religious on 20.5.2029
+"부처님 오신 날"    public religious on 9.5.2030
+"부처님 오신 날"    public religious on 28.5.2031
+"부처님 오신 날"    public religious on 16.5.2032
+"부처님 오신 날"    public religious on 6.5.2033
+"부처님 오신 날"    public religious on 25.5.2034
+"부처님 오신 날"    public religious on 15.5.2035
+"부처님 오신 날"    public religious on 3.5.2036
+"부처님 오신 날"    public religious on 22.5.2037
+
 : Chuseok: Day 15 Month 8
 "추석"              public on 17.9.2005 length 3 days
 "추석"              public on 5.10.2006 length 3 days
@@ -79,6 +124,27 @@ language    "ko"
 "추석"              public on 7.9.2014 length 3 days
 "추석"              public on 26.9.2015 length 3 days
 "추석"              public on 14.9.2016 length 3 days
+"추석"              public on 3.10.2017 length 3 days
+"추석"              public on 23.9.2018 length 3 days
+"추석"              public on 12.9.2019 length 3 days
+"추석"              public on 30.9.2020 length 3 days
+"추석"              public on 20.9.2021 length 3 days
+"추석"              public on 9.9.2022 length 3 days
+"추석"              public on 28.9.2023 length 3 days
+"추석"              public on 16.9.2024 length 3 days
+"추석"              public on 5.10.2025 length 3 days
+"추석"              public on 24.9.2026 length 3 days
+"추석"              public on 14.9.2027 length 3 days
+"추석"              public on 2.10.2028 length 3 days
+"추석"              public on 21.9.2029 length 3 days
+"추석"              public on 11.9.2030 length 3 days
+"추석"              public on 30.9.2031 length 3 days
+"추석"              public on 18.9.2032 length 3 days
+"추석"              public on 7.9.2033 length 3 days
+"추석"              public on 26.9.2034 length 3 days
+"추석"              public on 15.9.2035 length 3 days
+"추석"              public on 3.10.2036 length 3 days
+"추석"              public on 23.9.2037 length 3 days
 
 :: Religious
 
