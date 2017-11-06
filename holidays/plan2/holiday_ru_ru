@@ -56,7 +56,8 @@ language    "ru"
 "День работника прокуратуры Российской Федерации"                       government on january 12
 "День работника органов наркоконтроля"                                  government on ((year >= 2008) ? [march 11] : noop)
 "День работников гидрометеорологической службы России"                  government on ((year >= 2009) ? [march 23] : noop)
-"День внутренних войск МВД России"                                      government on march 27
+"День внутренних войск МВД России"                                      government on ((year < 2017) ? [march 27] : noop)
+"День войск национальной гвардии Российской Федерации"                  government on ((year >= 2017) ? [march 27] : noop)
 "День пограничника"                                                     government on may 28
 "День таможенника Российской Федерации"                                 government on october 25
 "День работника налоговых органов Российской Федерации"                 government on november 21
