@@ -7,9 +7,10 @@
 ::           Jure Repinc <jlp@holodeck1.com>
 ::           Andrej Mernik <andrejm@ubuntu.si>
 ::
-:: Updated:  2012
+:: Updated:  2018
 ::
 :: Source:   http://www.vlada.si/o_sloveniji/politicni_sistem/prazniki/
+::           https://podatki.gov.si/dataset/seznam-praznikov-in-dela-prostih-dni-v-republiki-sloveniji
 ::
 
 :: Metadata
@@ -20,7 +21,7 @@ language    "sl"
 
 
 :: Public Holidays
-"Novo leto"                                           public on january 1
+"Novo leto"                                           public on january 1 length 2 days
 "Dan upora proti okupatorju"                          public on april 27
 "Praznik dela"                                        public on may 1 length 2 days
 "Dan državnosti"                                      public on june 25
