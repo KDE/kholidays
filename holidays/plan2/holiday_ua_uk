@@ -172,16 +172,6 @@ description "Файл списку святкових днів України"
 : DST back
 "Перехід на зимовий час"                                            seasonal on last sunday in october
 
-:: Seasons
-: Spring
-"Початок весни"                                                     seasonal on march 1
-: Summer
-"Початок літа"                                                      seasonal on june 1
-: Autumn
-"Початок осені"                                                     seasonal on september 1
-: Winter
-"Початок зими"                                                      seasonal on december 1
-
 :: Name Days
 
 :: Professions

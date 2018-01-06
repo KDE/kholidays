@@ -50,15 +50,4 @@ description "National holiday file for Algeria"
 
 :: Daylight Saving
 
-:: Seasons
-
-: Spring
-"الربيع"                 seasonal on march 20
-: Summer
-"الصيف"                       seasonal on june 21
-: Fall
-"الخريف"                   seasonal on september 23
-: Winter
-"الشتاء"                     seasonal on december 21
-
 :: Name Days

@@ -59,10 +59,4 @@ language    "en"
 
 :: Daylight Saving
 
-:: Seasons
-"March Equinox"                         seasonal on march 20
-"June Solstice"                         seasonal on june 21
-"September Equinox"                     seasonal on september 22
-"December Solstice"                     seasonal on december 21
-
 :: Name Days

@@ -44,12 +44,6 @@ language    "pl"
 
 :: Daylight Saving
 
-:: Seasons
-"Początek wiosny"        seasonal on march 21
-"Początek lata"          seasonal on june 22
-"Początek jesieni"       seasonal on september 23
-"Początek zimy"          seasonal on december 22
-
 :: Name Days
 
 

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-set(PIM_VERSION "5.7.40")
+set(PIM_VERSION "5.7.41")
 
 project(KHolidays VERSION ${PIM_VERSION})
 
@@ -21,8 +21,6 @@ include(KDECMakeSettings)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(ECMCoverageOption)
 
-
-
 set(KHOLIDAYS_LIB_VERSION ${PIM_VERSION})
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX KHOLIDAYS
@@ -42,13 +40,13 @@ add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
 add_subdirectory(src)
 
 if(BUILD_TESTING)
-    add_subdirectory(autotests)
+  add_subdirectory(autotests)
 endif()
 
 add_subdirectory(holidays)
 
-if (IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/po")
-   ecm_install_po_files_as_qm(po)
+if(IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/po")
+  ecm_install_po_files_as_qm(po)
 endif()
 
 ########### CMake Config Files ###########
@@ -57,7 +55,7 @@ set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5Holidays")
 configure_package_config_file(
   "${CMAKE_CURRENT_SOURCE_DIR}/KF5HolidaysConfig.cmake.in"
   "${CMAKE_CURRENT_BINARY_DIR}/KF5HolidaysConfig.cmake"
-  INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
+  INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR}
 )
 
 install(FILES
@@ -70,7 +68,7 @@ install(FILES
 install(EXPORT KF5HolidaysTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5HolidaysTargets.cmake NAMESPACE KF5::)
 
 install(FILES
-   ${CMAKE_CURRENT_BINARY_DIR}/kholidays_version.h
+  ${CMAKE_CURRENT_BINARY_DIR}/kholidays_version.h
   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
 )
 

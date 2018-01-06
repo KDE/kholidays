@@ -55,10 +55,4 @@ language     "sr@latin"
 "Letnje računanje vremena (GMT+2)"                                 seasonal on last sunday in march
 "Zimsko računanje vremena (GMT+1)"                                 seasonal on last sunday in october
 
-:: Seasons
-"Prvi dan proleća"                                                 seasonal on march 20
-"Prvi dan leta"                                                    seasonal on june 21
-"Prvi dan jeseni"                                                  seasonal on september 23
-"Prvi dan zime"                                                    seasonal on december 22
-
 :: Name Days

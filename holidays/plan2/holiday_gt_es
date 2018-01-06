@@ -47,10 +47,4 @@ language    "es"
 
 :: Daylight Saving
 
-:: Seasons
-"Llega la Primavera"     seasonal on march 20
-"Llega el Verano"        seasonal on june 21
-"Llega el Otoño"         seasonal on september 23
-"Llega el Invierno"      seasonal on december 22
-
 :: Name Days

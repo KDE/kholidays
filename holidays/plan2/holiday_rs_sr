@@ -63,10 +63,4 @@ language     "sr"
 "Летње рачунање времена (ГМТ+2)"                                   seasonal on last sunday in march
 "Зимско рачунање времена (ГМТ+1)"                                  seasonal on last sunday in october
 
-:: Seasons
-"Први дан пролећа"                                                 seasonal on march 20
-"Први дан лета"                                                    seasonal on june 21
-"Први дан јесени"                                                  seasonal on september 23
-"Први дан зиме"                                                    seasonal on december 22
-
 :: Name Days

@@ -723,7 +723,7 @@ void HolidayParserDriverPlan::setEvent(int jd, int observeOffset, int duration)
     addHoliday(QDate::fromJulianDay(observeJd), duration);
 }
 
-void  HolidayParserDriverPlan::addHoliday(const QDate &observedDate, int duration)
+void HolidayParserDriverPlan::addHoliday(const QDate &observedDate, int duration)
 {
     // Only set if event falls in requested date range, i.e. either starts or ends during range
     if (m_parseCalendar.isValid(observedDate) &&
@@ -734,6 +734,7 @@ void  HolidayParserDriverPlan::addHoliday(const QDate &observedDate, int duratio
         holiday.d->mDuration = duration;
         holiday.d->mName = m_eventName;
         holiday.d->mDescription = m_eventName;
+        holiday.d->mCategoryList = m_eventCategories;
         if (m_eventCategories.contains(QStringLiteral("public"))) {
             holiday.d->mDayType = KHolidays::Holiday::NonWorkday;
         } else {

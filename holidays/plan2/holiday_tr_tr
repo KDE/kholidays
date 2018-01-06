@@ -87,12 +87,6 @@ description "Türkiye'nin ulusal tatilleri"
 
 :: Daylight Saving
 
-:: Seasons
-"İlkbahar Başlangıcı"                              seasonal on march 21
-"Yaz Başlangıcı"                                   seasonal on june 21
-"Sonbahar Başlangıcı"                              seasonal on september 23
-"Kış Başlangıcı"                                   seasonal on december 21
-
 "Birinci Cemrenin (Havaya) Düşüşü"                 seasonal on november 8 plus 105 days
 "İkinci Cemrenin (Suya) Düşüşü"                    seasonal on november 8 plus 112 days
 "Üçüncü Cemrenin (Toprağa) Düşüşü"                 seasonal on november 8 plus 119 days

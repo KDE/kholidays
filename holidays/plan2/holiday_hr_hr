@@ -76,12 +76,6 @@ description "Datoteka s blagdanima, spomendanima i neradnim danima u Hrvatskoj"
 "Ljetno računanje vremena"                                         seasonal on last sunday in march
 "Zimsko računanje vremena"                                         seasonal on last sunday in october
 
-:: Seasons
-"Proljetna ravnodnevica (ekvinocij)"                               seasonal on march 20
-"Ljetna dugodnevica (solsticij)"                                   seasonal on june 21
-"Jesenska ravnodnevica (ekvinocij)"                                seasonal on september 22
-"Zimska kratkodnevica (solsticij)"                                 seasonal on december 21
-
 :: Name Days
 
 :: To be sorted

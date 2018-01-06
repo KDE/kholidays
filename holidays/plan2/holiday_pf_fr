@@ -108,14 +108,4 @@ description "Fêtes et jours fériés en Polynésie Française"
 : winter
 "Heure d'hiver"                                     seasonal on last sunday in october
 
-:: Seasons
-: Spring
-"Printemps"                                         seasonal on september 23
-: Summer
-"Été"                                               seasonal on december 21
-: Fall
-"Automne"                                           seasonal on march 20
-: Winter
-"Hiver"                                             seasonal on june 21
-
 :: Name Days

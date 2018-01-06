@@ -48,6 +48,7 @@ public:
         mDuration = other.mDuration;
         mName = other.mName;
         mDescription = other.mDescription;
+        mCategoryList = other.mCategoryList;
         mDayType = other.mDayType;
     }
 
@@ -55,6 +56,7 @@ public:
     int mDuration;
     QString mName;
     QString mDescription;
+    QStringList mCategoryList;
     Holiday::DayType mDayType;
 };
 

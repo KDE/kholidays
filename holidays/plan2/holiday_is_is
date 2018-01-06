@@ -66,10 +66,4 @@ language    "is"
 
 :: Daylight Saving
 
-:: Seasons
-"Vorjafndægur"                 seasonal on march 22
-"Sumar sólstöður"              seasonal on june 22
-"Haustjafndægur"               seasonal on september 22
-"Vetrarsólstöður"              seasonal on december 22
-
 :: Name Days

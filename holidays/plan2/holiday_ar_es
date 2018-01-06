@@ -85,14 +85,7 @@ description "Feriados Nacionales de Argentina"
 
 :: Daylight Saving
 
-:: Seasons
-"Equinoxio de otoño"     seasonal on march 21
-"Solsticio de invierno"  seasonal on june 21
-"Equinoxio de primavera" seasonal on september 21
-"Solsticio de verano"    seasonal on december 21
-
 :: Name Days
-
 
 :: To be sorted
 "Jueves Santo"           civil on easter minus 3

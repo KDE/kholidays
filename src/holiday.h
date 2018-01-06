@@ -42,6 +42,7 @@ class HolidayRegion;
 class KHOLIDAYS_EXPORT Holiday
 {
     friend class HolidayRegion;
+    friend class HolidayParserDriver;
     friend class HolidayParserDriverPlan;
     friend class HolidayParserDriverPlanOld;
 
@@ -53,6 +54,7 @@ public:
 
     /**
      * Describes the date type of the holiday.
+     * If any of the holidays on a date are non-workdays types, then the entire day is non-working.
      */
     enum DayType {
         Workday,   ///< The holiday is a workday
@@ -132,6 +134,14 @@ public:
      * Returns the day type of the holiday.
      */
     DayType dayType() const;
+
+    /**
+     * @since 5.8
+     *
+     * Returns a QStringList of categories for the Holiday.
+     * If the Holiday has no categories then an empty list is returned.
+     */
+    QStringList categoryList() const;
 
 private:
     QSharedDataPointer<HolidayPrivate> d;

@@ -88,12 +88,6 @@ description "National holiday file for Turkey"
 
 :: Daylight Saving
 
-:: Seasons
-"Spring Begins"                                       seasonal on march 21
-"Summer Begins"                                       seasonal on june 21
-"Fall Begins"                                         seasonal on september 23
-"Winter Begins"                                       seasonal on december 21
-
 "Heat Falling from the Sun to the Air"                seasonal on november 8 plus 105 days
 "Heat Falling from the Sun to the Water"              seasonal on november 8 plus 112 days
 "Heat Falling from the Sun to the Ground"             seasonal on november 8 plus 119 days

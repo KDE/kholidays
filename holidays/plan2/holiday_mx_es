@@ -43,14 +43,7 @@ language    "es"
 
 :: Daylight Saving
 
-:: Seasons
-"Equinoxio de primavera"            seasonal on march 21
-"Solsticio de verano"               seasonal on june 21
-"Equinoxio de otoño"                seasonal on september 21
-"Solsticio de invierno"             seasonal on december 21
-
 :: Name Days
-
 
 :: To be sorted
 "Día de la expropiación petrolera"  civil on march 18

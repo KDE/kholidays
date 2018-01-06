@@ -64,10 +64,4 @@ description "National holiday file for USA"
 
 :: Daylight Saving
 
-:: Seasons
-"Spring Begins"                  seasonal on march 22
-"Summer Begins"                  seasonal on june 22
-"Fall Begins"                    seasonal on september 22
-"Winter Begins"                  seasonal on december 22
-
 :: Name Days

@@ -69,10 +69,4 @@ language    "es"
 "Adelanto horario"                           seasonal on last sunday in march
 "Retraso horario"                            seasonal on last sunday in october
 
-:: Seasons
-"Equinoccio e inicio de primavera"           seasonal on march 21
-"Solsticio e inicio de verano"               seasonal on june 21
-"Equinoccio e inicio de otoño"               seasonal on september 23
-"Solsticio e inicio de invierno"             seasonal on december 21
-
 :: Name Days

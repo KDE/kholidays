@@ -20,6 +20,8 @@
 */
 
 #include "holidayparserdriver_p.h"
+#include "holiday_p.h"
+#include "astroseasons.h"
 
 #include <QDebug>
 
@@ -63,6 +65,20 @@ Holiday::List HolidayParserDriver::parseHolidays(const QDate &startDate, const Q
     m_requestStart = startDate;
     m_requestEnd = endDate;
     parse();
+
+    QDate dt;
+    for (dt = startDate; dt <= endDate; dt = dt.addDays(1)) {
+        const QString seasonName = AstroSeasons::seasonNameAtDate(dt);
+        if (!seasonName.isEmpty()) {
+            Holiday season;
+            season.d->mDayType = Holiday::Workday;
+            season.d->mObservedDate = dt;
+            season.d->mDuration = 1;
+            season.d->mName = seasonName;
+            m_resultList.append(season);
+        }
+    }
+
     std::sort(m_resultList.begin(), m_resultList.end());
     return m_resultList;
 }

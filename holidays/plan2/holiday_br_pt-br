@@ -45,12 +45,6 @@ language    "pt_BR"
 
 :: Daylight Saving
 
-:: Seasons
-"Início do Outono"                                          seasonal on march 22
-"Início do Inverno"                                         seasonal on june 22
-"Início da Primavera"                                       seasonal on september 22
-"Início do Verão"                                           seasonal on december 22
-
 :: Name Days
 
 

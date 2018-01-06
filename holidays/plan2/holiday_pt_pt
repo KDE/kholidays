@@ -42,13 +42,6 @@ language    "pt"
 
 :: Daylight Saving
 
-:: Seasons
-"Primavera"            seasonal on march 22
-"Verão"                seasonal on june 22
-"Outono"               seasonal on september 22
-"Inverno"              seasonal on december 22
-
-
 :: Removed holidays
 :: "Corpo de Deus"         public on easter plus 60 days
 :: "República"             public on october 5

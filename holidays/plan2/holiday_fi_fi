@@ -156,43 +156,6 @@ description  "Suomen valtakunnalliset juhla- ja liputuspäivät"
 
 : Leap Day
 "Karkauspäivä"                                     seasonal on 29 february
-: Vernal equinox
-"Kevätpäiväntasaus"                                seasonal on 20 march 2013
-"Kevätpäiväntasaus"                                seasonal on 20 march 2014
-"Kevätpäiväntasaus"                                seasonal on 21 march 2015
-"Kevätpäiväntasaus"                                seasonal on 20 march 2016
-"Kevätpäiväntasaus"                                seasonal on 20 march 2017
-"Kevätpäiväntasaus"                                seasonal on 20 march 2018
-"Kevätpäiväntasaus"                                seasonal on 20 march 2019
-"Kevätpäiväntasaus"                                seasonal on 20 march 2020
-: Summer solstice
-"Kesäpäivänseisaus"                                seasonal on 21 june 2013
-"Kesäpäivänseisaus"                                seasonal on 21 june 2014
-"Kesäpäivänseisaus"                                seasonal on 21 june 2015
-"Kesäpäivänseisaus"                                seasonal on 21 june 2016
-"Kesäpäivänseisaus"                                seasonal on 21 june 2017
-"Kesäpäivänseisaus"                                seasonal on 21 june 2018
-"Kesäpäivänseisaus"                                seasonal on 21 june 2019
-"Kesäpäivänseisaus"                                seasonal on 21 june 2020
-: Autumnal equinox
-"Syyspäiväntasaus"                                 seasonal on 22 september 2013
-"Syyspäiväntasaus"                                 seasonal on 23 september 2014
-"Syyspäiväntasaus"                                 seasonal on 23 september 2015
-"Syyspäiväntasaus"                                 seasonal on 22 september 2016
-"Syyspäiväntasaus"                                 seasonal on 22 september 2017
-"Syyspäiväntasaus"                                 seasonal on 23 september 2018
-"Syyspäiväntasaus"                                 seasonal on 23 september 2019
-"Syyspäiväntasaus"                                 seasonal on 22 september 2020
-: Winter solstice
-"Talvipäivänseisaus"                               seasonal on 21 december 2013
-"Talvipäivänseisaus"                               seasonal on 22 december 2014
-"Talvipäivänseisaus"                               seasonal on 22 december 2015
-"Talvipäivänseisaus"                               seasonal on 21 december 2016
-"Talvipäivänseisaus"                               seasonal on 21 december 2017
-"Talvipäivänseisaus"                               seasonal on 22 december 2018
-"Talvipäivänseisaus"                               seasonal on 22 december 2019
-"Talvipäivänseisaus"                               seasonal on 21 december 2020
-
 
 :: Name Days
 

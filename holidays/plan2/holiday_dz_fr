@@ -50,15 +50,4 @@ description "Fêtes et jours fériés en Algérie"
 
 :: Daylight Saving
 
-:: Seasons
-
-: Spring
-"Printemps"                         seasonal on march 20
-: Summer
-"Été"                               seasonal on june 21
-: Fall
-"Automne"                           seasonal on september 23
-: Winter
-"Hiver"                             seasonal on december 21
-
 :: Name Days

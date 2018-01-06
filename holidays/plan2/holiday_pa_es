@@ -59,10 +59,4 @@ language    "es"
 
 :: Daylight Saving
 
-:: Seasons
-"Equinoccio"                        seasonal on march 20
-"Solticio"                          seasonal on june 21
-"Equinoccio"                        seasonal on september 22
-"Solticio"                          seasonal on december 21
-
 :: Name Days

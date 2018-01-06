@@ -93,3 +93,8 @@ Holiday::DayType Holiday::dayType() const
 {
     return d->mDayType;
 }
+
+QStringList Holiday::categoryList() const
+{
+    return d->mCategoryList;
+}
