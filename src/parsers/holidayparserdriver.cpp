@@ -75,6 +75,7 @@ Holiday::List HolidayParserDriver::parseHolidays(const QDate &startDate, const Q
             season.d->mObservedDate = dt;
             season.d->mDuration = 1;
             season.d->mName = seasonName;
+            season.d->mCategoryList.append(QLatin1String("seasonal"));
             m_resultList.append(season);
         }
     }
