@@ -120,16 +120,16 @@ extern "C++" {
 
         virtual ~yyFlexLexer();
 
-        void yy_switch_to_buffer(struct yy_buffer_state * new_buffer);
-        struct yy_buffer_state * yy_create_buffer(FLEX_STD istream * s, int size);
-        void yy_delete_buffer(struct yy_buffer_state * b);
-        void yyrestart(FLEX_STD istream * s);
+        void yy_switch_to_buffer(struct yy_buffer_state * new_buffer) override;
+        struct yy_buffer_state * yy_create_buffer(FLEX_STD istream * s, int size) override;
+        void yy_delete_buffer(struct yy_buffer_state * b) override;
+        void yyrestart(FLEX_STD istream * s) override;
 
         void yypush_buffer_state(struct yy_buffer_state * new_buffer);
         void yypop_buffer_state();
 
-        virtual int yylex();
-        virtual void switch_streams(FLEX_STD istream * new_in, FLEX_STD ostream *new_out = 0);
+        virtual int yylex() override;
+        virtual void switch_streams(FLEX_STD istream * new_in, FLEX_STD ostream *new_out = 0) override;
         virtual int yywrap();
 
     protected:
@@ -205,4 +205,3 @@ extern "C++" {
 }
 
 #endif // yyFlexLexer || ! yyFlexLexerOnce
-
