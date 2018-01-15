@@ -897,15 +897,20 @@ QString HolidayRegion::name() const
                 } else if (country == QLatin1String("au") && subdivision == QLatin1String("sa")) {
                     regionName = QCoreApplication::translate("HolidayRegion", "South Australia", "Australian Region");
                 } else if (country == QLatin1String("au") && subdivision == QLatin1String("nt")) {
-                    regionName = QCoreApplication::translate("HolidayRegion", "Northern Territory", "Australian Region");
+                    regionName = QCoreApplication::translate("HolidayRegion",
+                                                             "Northern Territory", "Australian Region");
                 } else if (country == QLatin1String("au") && subdivision == QLatin1String("act")) {
-                    regionName = QCoreApplication::translate("HolidayRegion", "Australian Capital Territory", "Australian Region");
+                    regionName = QCoreApplication::translate("HolidayRegion",
+                                                             "Australian Capital Territory", "Australian Region");
                 } else if (country == QLatin1String("au") && subdivision == QLatin1String("wa")) {
-                    regionName = QCoreApplication::translate("HolidayRegion", "Western Australia", "Australian Region");
+                    regionName = QCoreApplication::translate("HolidayRegion",
+                                                             "Western Australia", "Australian Region");
                 } else if (country == QLatin1String("au") && subdivision == QLatin1String("tas")) {
-                    regionName = QCoreApplication::translate("HolidayRegion", "Tasmania", "Australian Region");
+                    regionName = QCoreApplication::translate("HolidayRegion",
+                                                             "Tasmania", "Australian Region");
                 } else if (country == QLatin1String("ba") && subdivision == QLatin1String("srp")) {
-                    regionName = QCoreApplication::translate("HolidayRegion", "Republic of Srpska", "Bosnian and Herzegovinian Region");
+                    regionName = QCoreApplication::translate("HolidayRegion",
+                                                             "Republic of Srpska", "Bosnian and Herzegovinian Region");
                 } else {
                     // TODO Note this does not give the current QLocale translation!
                     regionName = QLocale::countryToString(codeToCountry(country));
@@ -977,7 +982,11 @@ QString HolidayRegion::name() const
 
         if (!regionName.isEmpty()) {
             if (!typeName.isEmpty()) {
-                tempName = QCoreApplication::translate("HolidayRegion", "%1 - %2", "Holiday file display name, %1 = region name, %2 = holiday type").arg(regionName, typeName);
+                tempName =
+                    QCoreApplication::translate(
+                        "HolidayRegion",
+                        "%1 - %2",
+                        "Holiday file display name, %1 = region name, %2 = holiday type").arg(regionName, typeName);
             } else {
                 tempName = regionName;
             }

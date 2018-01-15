@@ -30,7 +30,6 @@ using namespace KHolidays;
 
 void LunarTest::test2005()
 {
-
     QList<QDate> fQ2005, fM2005, lQ2005, nM2005;
     //2005 first quarter moons
     fQ2005.append(QDate(2005, 1, 16));

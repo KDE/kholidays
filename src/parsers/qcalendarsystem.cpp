@@ -513,13 +513,13 @@ qint64 QCalendarSystemPrivate::julianDayFromDate(int year, int month, int day) c
         int a = (14 - month) / 12;
         year = year + 4800 - a;
         int m = month + (12 * a) - 3;
-        jd = day
-             + (((153 * m) + 2) / 5)
-             + (365 * year)
-             + (year / 4)
-             - (year / 100)
-             + (year / 400)
-             - 32045;
+        jd = day +
+            (((153 * m) + 2) / 5) +
+            (365 * year) +
+            (year / 4) -
+            (year / 100) +
+            (year / 400) -
+            32045;
         break;
     }
 
@@ -527,11 +527,11 @@ qint64 QCalendarSystemPrivate::julianDayFromDate(int year, int month, int day) c
     case QCalendarSystem::EthiopicCalendar:
     case QCalendarSystem::EthiopicAmeteAlemCalendar: {
         // Formula derived from first principles by John Layt
-        jd = epoch() - 1
-             + ((year - 1) * 365)
-             + (year / 4)
-             + ((month - 1) * 30)
-             + day;
+        jd = epoch() - 1 +
+            ((year - 1) * 365) +
+            (year / 4) +
+            ((month - 1) * 30) +
+            day;
         break;
     }
 
@@ -539,14 +539,14 @@ qint64 QCalendarSystemPrivate::julianDayFromDate(int year, int month, int day) c
         // Formula from the "Explanatory Supplement to the Astronomical Almanac"
         // Revised Edition 2006 section 12.94 pp 605-606, US Naval Observatory
         // Originally from the "Report of the Calendar Reform Committee" 1955, Indian Government
-        jd = 365 * year
-             + (year + 78 - 1 / month) / 4
-             + 31 * month
-             - (month + 9) / 11
-             - (month / 7) * (month - 7)
-             - (3 * ((year  + 78 - 1 / month) / 100 + 1)) / 4
-             + day
-             + 1749579;
+        jd = 365 * year +
+            (year + 78 - 1 / month) / 4 +
+            31 * month -
+            (month + 9) / 11 -
+            (month / 7) * (month - 7) -
+            (3 * ((year  + 78 - 1 / month) / 100 + 1)) / 4 +
+            day +
+            1749579;
         break;
     }
 
@@ -554,13 +554,13 @@ qint64 QCalendarSystemPrivate::julianDayFromDate(int year, int month, int day) c
         // Formula from the "Explanatory Supplement to the Astronomical Almanac"
         // Revised Edition 2006 section ??? pp ???, US Naval Observatory
         // Derived from Fliegel & Van Flandern 1968
-        jd = (3 + (11 * year)) / 30
-             + 354 * year
-             + 30 * month
-             - (month - 1) / 2
-             + day
-             + epoch()
-             - 385;
+        jd = (3 + (11 * year)) / 30 +
+            354 * year +
+            30 * month -
+            (month - 1) / 2 +
+            day +
+            epoch() -
+            385;
         break;
     }
 
@@ -570,11 +570,11 @@ qint64 QCalendarSystemPrivate::julianDayFromDate(int year, int month, int day) c
         int a = (14 - month) / 12;
         year = year + 4800 - a;
         int m = month + (12 * a) - 3;
-        jd = day
-             + (((153 * m) + 2) / 5)
-             + (365 * year)
-             + (year / 4)
-             - 32083;
+        jd = day +
+            (((153 * m) + 2) / 5) +
+            (365 * year) +
+            (year / 4) -
+            32083;
         break;
     }
 
