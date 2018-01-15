@@ -217,7 +217,8 @@ int QCalendarSystemPrivate::maxMonthsInYear() const
 
 int QCalendarSystemPrivate::monthsInYear(int year) const
 {
-    year = year + yearOffset();
+    //year = year + yearOffset();
+    Q_UNUSED(year);
 
     switch (calendarSystem()) {
     case QCalendarSystem::CopticCalendar:
