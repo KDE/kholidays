@@ -43,8 +43,8 @@
 #include "holiday_p.h"
 
 #define LAST        99999
-#define ANY        -99999
-#define BEFORE         -1
+#define ANY       (-99999)
+#define BEFORE        (-1)
 #define AFTER           1
 
 using namespace KHolidays;
@@ -53,7 +53,10 @@ HolidayParserDriverPlan::HolidayParserDriverPlan(const QString &planFilePath)
     : HolidayParserDriver(planFilePath),
       m_traceParsing(false),
       m_traceScanning(false),
-      m_parseMetadataOnly(false)
+      m_parseMetadataOnly(false),
+      m_eventYear(0),
+      m_eventMonth(0),
+      m_eventDay(0)
 {
     QFile holidayFile(filePath());
     if (holidayFile.open(QIODevice::ReadOnly)) {

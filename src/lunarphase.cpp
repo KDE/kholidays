@@ -140,14 +140,14 @@ LunarPhase::Phase LunarPhase::phaseAtDate(const QDate &date)
  *
  */
 
-#include <ctype.h>
+#include <cctype>
 #ifdef HAVE_ERR_H
 #include <err.h>
 #endif
-#include <math.h>
-#include <string.h>
-#include <stdlib.h>
-#include <time.h>
+#include <cmath>
+#include <cstring>
+#include <cstdlib>
+#include <ctime>
 
 static const double PI = 3.14159265358979323846;
 

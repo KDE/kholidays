@@ -28,6 +28,7 @@
 using namespace KHolidays;
 
 HolidayParserDriver::HolidayParserDriver(const QString &filePath)
+    : m_parseYear(0), m_parseStartYear(0), m_parseEndYear(0)
 {
     m_filePath = filePath;
 }

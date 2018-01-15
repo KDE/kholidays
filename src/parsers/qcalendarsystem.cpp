@@ -388,7 +388,7 @@ bool QCalendarSystemPrivate::isLeapYear(int year) const
 
 void QCalendarSystemPrivate::julianDayToDate(qint64 jd, int *year, int *month, int *day) const
 {
-    int yy = 0, mm, dd;
+    int yy = 0, mm = 0, dd = 0;
 
     switch (calendarSystem()) {
 
@@ -417,7 +417,7 @@ void QCalendarSystemPrivate::julianDayToDate(qint64 jd, int *year, int *month, i
         // Formula derived from first principles by John Layt
         qint64 s = jd - (epoch() - 365);
         qint64 l = s / 1461;
-        yy = (l * 4) + qMin((qint64)3, (s % 1461) / 365);
+        yy = (l * 4) + qMin(static_cast<qint64>(3), (s % 1461) / 365);
         qint64 diy = s - (yy * 365) + (yy / 4);
         mm = (diy / 30) + 1;
         dd = (diy % 30) + 1;

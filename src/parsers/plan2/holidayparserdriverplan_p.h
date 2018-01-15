@@ -157,13 +157,13 @@ private:
     QStringList         m_fileCalendarTypes;        // List of all Calendar Types used in file
     QString             m_parseCalendarType;        // Calendar Type being parsed
 
-    bool                m_traceParsing = false;             // Bison C++ skeleton enable tracing in Bison parser class
-    HolidayParserPlan  *m_parser = nullptr;                   // Bison C++ skeleton Bison parser class implementation
+    bool                m_traceParsing;             // Bison C++ skeleton enable tracing in Bison parser class
+    HolidayParserPlan  *m_parser;                   // Bison C++ skeleton Bison parser class implementation
 
     bool                m_traceScanning;            // Flex C++ enable tracing in Flex scanner class
-    HolidayScannerPlan *m_scanner = nullptr;                  // Flex C++ scanner class implementation
+    HolidayScannerPlan *m_scanner;                  // Flex C++ scanner class implementation
 
-    bool                m_parseMetadataOnly = false;        // Only parse file for metadata
+    bool                m_parseMetadataOnly;        // Only parse file for metadata
     QDate               m_parseYearStart;           // First day of year being parsed
     QDate               m_parseYearEaster;          // Easter in the parse year, Gregorian only
     QDate               m_parseYearPascha;          // Orthodox Easter in the parse year, Gregorian only

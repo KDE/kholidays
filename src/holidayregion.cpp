@@ -787,9 +787,9 @@ public:
         }
     }
 
-    HolidayParserDriver  *mDriver = nullptr;  // The parser driver for the holiday file
-    QString mRegionCode;            // region code of holiday region
-    QFileInfo mHolidayFile;         // file containing holiday data, or null
+    HolidayParserDriver *mDriver;  // The parser driver for the holiday file
+    QString mRegionCode;           // region code of holiday region
+    QFileInfo mHolidayFile;        // file containing holiday data, or null
 };
 
 HolidayRegion::HolidayRegion(const QString &regionCode)
@@ -862,14 +862,14 @@ QString HolidayRegion::name() const
 
     if (tempName.isEmpty()) {
         QStringList countryParts = countryCode().toLower().split(QLatin1Char('-'));
-        QString country = countryParts.at(0);
+        const QString &country = countryParts.at(0);
         QString regionName, typeName;
 
         if (country != QLatin1String("xx")) {
             if (countryParts.count() == 2) {
                 // Temporary measure to get regions translated, only those files that already exist
                 // In 4.6 hope to have isocodes project integration for translations via KLocale
-                QString subdivision = countryParts.at(1);
+                const QString &subdivision = countryParts.at(1);
                 if (country == QLatin1String("ca") && subdivision == QLatin1String("qc")) {
                     regionName = QCoreApplication::translate("HolidayRegion", "Quebec", "Canadian region");
                 } else if (country == QLatin1String("de") && subdivision == QLatin1String("by")) {
@@ -919,7 +919,7 @@ QString HolidayRegion::name() const
         //Cheat on type for now,take direct from region code until API is introduced in SC 4.6
         QStringList regionParts = regionCode().toLower().split(QLatin1Char('_'));
         if (regionParts.count() == 3) {
-            QString type = regionParts.at(2);
+            const QString &type = regionParts.at(2);
             // Will create lots more in 4.6
             // Religious types, just simple for now
             if (type == QLatin1String("public")) {
