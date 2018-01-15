@@ -29,7 +29,7 @@
 class QCalendarSystemPrivate : public QSharedData
 {
 public:
-    QCalendarSystemPrivate(QCalendarSystem::CalendarSystem calendar);
+    explicit QCalendarSystemPrivate(QCalendarSystem::CalendarSystem calendar);
 
     QCalendarSystem::CalendarSystem calendarSystem() const;
     qint64 epoch() const;

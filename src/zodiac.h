@@ -87,7 +87,7 @@ public:
         None
     };
 
-    Zodiac(ZodiacType type);
+    explicit Zodiac(ZodiacType type);
     Zodiac(const Zodiac &other);
     ~Zodiac();
 
@@ -130,4 +130,3 @@ private:
 }
 
 #endif
-
