@@ -140,20 +140,20 @@ noop                { yylval->ival =      0; return token::NUMBER; }
 before              { yylval->ival =  -1; return token::NUMBER; }
 after               { yylval->ival =   1; return token::NUMBER; }
 
-public              { yylval->sval = "public"; return token::CATEGORY; }
-civil               { yylval->sval = "civil"; return token::CATEGORY; }
-religious           { yylval->sval = "religious"; return token::CATEGORY; }
-school              { yylval->sval = "school"; return token::CATEGORY; }
-government          { yylval->sval = "government"; return token::CATEGORY; }
-financial           { yylval->sval = "financial"; return token::CATEGORY; }
-cultural            { yylval->sval = "cultural"; return token::CATEGORY; }
-commemorative       { yylval->sval = "commemorative"; return token::CATEGORY; }
-historical          { yylval->sval = "historical"; return token::CATEGORY; }
-nameday             { yylval->sval = "nameday"; return token::CATEGORY; }
-seasonal            { yylval->sval = "seasonal"; return token::CATEGORY; }
+public              { yylval->sval = (char *)"public"; return token::CATEGORY; }
+civil               { yylval->sval = (char *)"civil"; return token::CATEGORY; }
+religious           { yylval->sval = (char *)"religious"; return token::CATEGORY; }
+school              { yylval->sval = (char *)"school"; return token::CATEGORY; }
+government          { yylval->sval = (char *)"government"; return token::CATEGORY; }
+financial           { yylval->sval = (char *)"financial"; return token::CATEGORY; }
+cultural            { yylval->sval = (char *)"cultural"; return token::CATEGORY; }
+commemorative       { yylval->sval = (char *)"commemorative"; return token::CATEGORY; }
+historical          { yylval->sval = (char *)"historical"; return token::CATEGORY; }
+nameday             { yylval->sval = (char *)"nameday"; return token::CATEGORY; }
+seasonal            { yylval->sval = (char *)"seasonal"; return token::CATEGORY; }
 
-gregorian           { yylval->sval = "gregorian"; return token::CALENDAR; }
-julian              { yylval->sval = "julian"; return token::CALENDAR; }
+gregorian           { yylval->sval = (char *)"gregorian"; return token::CALENDAR; }
+julian              { yylval->sval = (char *)"julian"; return token::CALENDAR; }
 
 january             { yylval->ival =   1; return token::MONTH; }
 february            { yylval->ival =   2; return token::MONTH; }
@@ -176,7 +176,7 @@ friday              { yylval->ival =   5; return token::WDAY; }
 saturday            { yylval->ival =   6; return token::WDAY; }
 sunday              { yylval->ival =   7; return token::WDAY; }
 
-coptic              { yylval->sval = "coptic"; return token::CALENDAR; }
+coptic              { yylval->sval = (char *)"coptic"; return token::CALENDAR; }
 
 thoout              { yylval->ival =   1; return token::MONTH; }
 paope               { yylval->ival =   2; return token::MONTH; }
@@ -200,7 +200,7 @@ psoou               { yylval->ival =   5; return token::WDAY; }
 psabbaton           { yylval->ival =   6; return token::WDAY; }
 tkyriake            { yylval->ival =   7; return token::WDAY; }
 
-ethiopian           { yylval->sval = "ethiopian"; return token::CALENDAR; }
+ethiopian           { yylval->sval = (char *)"ethiopian"; return token::CALENDAR; }
 
 meskerem            { yylval->ival =   1; return token::MONTH; }
 tequemt             { yylval->ival =   2; return token::MONTH; }
@@ -224,7 +224,7 @@ arb                 { yylval->ival =   5; return token::WDAY; }
 qedame              { yylval->ival =   6; return token::WDAY; }
 ehud                { yylval->ival =   7; return token::WDAY; }
 
-hebrew              { yylval->sval = "hebrew"; return token::CALENDAR; }
+hebrew              { yylval->sval = (char *)"hebrew"; return token::CALENDAR; }
 
 tishrey             { yylval->ival =   1; return token::MONTH; }
 heshvan             { yylval->ival =   2; return token::MONTH; }
@@ -249,7 +249,7 @@ yomshishi           { yylval->ival =   5; return token::WDAY; }
 shabbat             { yylval->ival =   6; return token::WDAY; }
 yomrishon           { yylval->ival =   7; return token::WDAY; }
 
-hijri               { yylval->sval = "hijri"; return token::CALENDAR; }
+hijri               { yylval->sval = (char *)"hijri"; return token::CALENDAR; }
 
 muharram            { yylval->ival =   1; return token::MONTH; }
 safar               { yylval->ival =   2; return token::MONTH; }
@@ -272,7 +272,7 @@ yaumaljumma         { yylval->ival =   5; return token::WDAY; }
 yaumalsabt          { yylval->ival =   6; return token::WDAY; }
 yaumalahad          { yylval->ival =   7; return token::WDAY; }
 
-indiannational      { yylval->sval = "indian-national"; return token::CALENDAR; }
+indiannational      { yylval->sval = (char *)"indian-national"; return token::CALENDAR; }
 
 chaitra             { yylval->ival =   1; return token::MONTH; }
 vaishakh            { yylval->ival =   2; return token::MONTH; }
@@ -295,7 +295,7 @@ sukravara           { yylval->ival =   5; return token::WDAY; }
 sanivara            { yylval->ival =   6; return token::WDAY; }
 raviara             { yylval->ival =   7; return token::WDAY; }
 
-jalali              { yylval->sval = "jalali"; return token::CALENDAR; }
+jalali              { yylval->sval = (char *)"jalali"; return token::CALENDAR; }
 
 farvardin           { yylval->ival =   1; return token::MONTH; }
 ordibehesht         { yylval->ival =   2; return token::MONTH; }
