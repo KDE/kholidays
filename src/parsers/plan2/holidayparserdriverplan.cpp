@@ -343,7 +343,7 @@ int HolidayParserDriverPlan::julianDayFromEventName(const QString &eventName)
 }
 
 // Return jd of Easter if Gregorian
-int HolidayParserDriverPlan::julianDayFromEaster(void)
+int HolidayParserDriverPlan::julianDayFromEaster()
 {
     if (m_eventCalendarType == QLatin1String("gregorian")) {
         return m_parseYearEaster.toJulianDay();
@@ -354,7 +354,7 @@ int HolidayParserDriverPlan::julianDayFromEaster(void)
 }
 
 // Return jd of Orthodox Easter if Gregorian or Julian
-int HolidayParserDriverPlan::julianDayFromPascha(void)
+int HolidayParserDriverPlan::julianDayFromPascha()
 {
     if (m_eventCalendarType == QLatin1String("gregorian") || m_eventCalendarType == QLatin1String("julian")) {
         return m_parseYearPascha.toJulianDay();
