@@ -345,6 +345,7 @@ int QCalendarSystemPrivate::quarter(int month) const
         if (month == 13) { // Consider the short epagomenal month as part of the 4th quarter
             return 4;
         }
+        Q_FALLTHROUGH();
     default:
         return (((month - 1) / 3) + 1);
     }
@@ -420,6 +421,7 @@ void QCalendarSystemPrivate::julianDayToDate(qint64 jd, int *year, int *month, i
         qint64 diy = s - (yy * 365) + (yy / 4);
         mm = (diy / 30) + 1;
         dd = (diy % 30) + 1;
+        break;
     }
 
     case QCalendarSystem::IndianNationalCalendar: {
@@ -436,6 +438,7 @@ void QCalendarSystemPrivate::julianDayToDate(qint64 jd, int *year, int *month, i
         l = j / 11;
         mm = j + 2 - 12 * l;
         yy = 100 * (n - 49) + l + i - 78;
+        break;
     }
 
     case QCalendarSystem::IslamicCivilCalendar: {
@@ -450,6 +453,7 @@ void QCalendarSystemPrivate::julianDayToDate(qint64 jd, int *year, int *month, i
         yy = (30 * n) + j - 30;
         mm = (24 * l) / 709;
         dd = l - ((709 * mm) / 24);
+        break;
     }
 
     case QCalendarSystem::JulianCalendar: {
@@ -528,6 +532,7 @@ qint64 QCalendarSystemPrivate::julianDayFromDate(int year, int month, int day) c
              + (year / 4)
              + ((month - 1) * 30)
              + day;
+        break;
     }
 
     case QCalendarSystem::IndianNationalCalendar: {
@@ -542,6 +547,7 @@ qint64 QCalendarSystemPrivate::julianDayFromDate(int year, int month, int day) c
              - (3 * ((year  + 78 - 1 / month) / 100 + 1)) / 4
              + day
              + 1749579;
+        break;
     }
 
     case QCalendarSystem::IslamicCivilCalendar: {
@@ -555,6 +561,7 @@ qint64 QCalendarSystemPrivate::julianDayFromDate(int year, int month, int day) c
              + day
              + epoch()
              - 385;
+        break;
     }
 
     case QCalendarSystem::JulianCalendar: {
