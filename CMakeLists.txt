@@ -1,12 +1,9 @@
 cmake_minimum_required(VERSION 3.0)
-set(PIM_VERSION "5.7.41")
 
-project(KHolidays VERSION ${PIM_VERSION})
+set(KF5_VERSION "5.42.0")
+project(KHolidays VERSION ${KF5_VERSION})
 
-# ECM setup
-set(KF5_VERSION "5.41.0")
-
-find_package(ECM ${KF5_VERSION} CONFIG REQUIRED)
+find_package(ECM 5.42.0 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
 include(GenerateExportHeader)
@@ -21,7 +18,7 @@ include(KDECMakeSettings)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(ECMCoverageOption)
 
-set(KHOLIDAYS_LIB_VERSION ${PIM_VERSION})
+set(KHOLIDAYS_LIB_VERSION ${KF5_VERSION})
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX KHOLIDAYS
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kholidays_version.h"

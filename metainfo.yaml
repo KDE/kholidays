@@ -6,13 +6,12 @@ platforms:
     - name: All
 portingAid: false
 deprecated: false
-release: false
+release: true
 libraries:
  - qmake: KHolidays
    cmake: "KF5::Holidays"
 cmakename: KF5Holidays
 
 public_lib: true
-group: kdepim
-platforms:
-    - name: Linux
+group: Frameworks
+subgroup: Tier 1
