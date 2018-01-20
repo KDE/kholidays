@@ -22,6 +22,18 @@
 #ifndef KHOLIDAYS_ZODIAC_H
 #define KHOLIDAYS_ZODIAC_H
 
+#include "kholidays_export.h"
+
+#include <QSharedDataPointer>
+
+class QDate;
+class QString;
+
+namespace KHolidays
+{
+
+class ZodiacPrivate;
+
 /**
    Represents and manages the Zodiac calendar.
    The Tropical and Sidereal Zodiacs are supported.
@@ -50,19 +62,6 @@
    Pisces       fish      Feb 19 - Mar 20       Mar 15 - Apr 13
 
 */
-
-#include "kholidays_export.h"
-
-#include <QSharedDataPointer>
-
-class QDate;
-class QString;
-
-namespace KHolidays
-{
-
-class ZodiacPrivate;
-
 class KHOLIDAYS_EXPORT Zodiac
 {
 public:

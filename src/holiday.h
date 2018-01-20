@@ -39,6 +39,7 @@ namespace KHolidays
 class HolidayPrivate;
 class HolidayRegion;
 
+/** Represents a holiday event. */
 class KHOLIDAYS_EXPORT Holiday
 {
     friend class HolidayRegion;

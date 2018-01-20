@@ -40,6 +40,7 @@ class QFileInfo;
 namespace KHolidays
 {
 
+/** Represents a holiday region. */
 class KHOLIDAYS_EXPORT HolidayRegion
 {
 public:

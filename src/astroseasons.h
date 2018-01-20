@@ -22,6 +22,14 @@
 #ifndef KHOLIDAYS_ASTROSEASONS_H
 #define KHOLIDAYS_ASTROSEASONS_H
 
+#include "kholidays_export.h"
+
+class QDate;
+class QString;
+
+namespace KHolidays
+{
+
 /**
   Represents and manages the Astronomical Seasons (solstices and equinoxes).
   For the purposes of this class, we sometimes use the shorthand of "Season"
@@ -41,15 +49,6 @@
    Note that this class represents the "Astronomical Seasons" and not
    the traditional "Seasons" which vary widely by culture.
 */
-
-#include "kholidays_export.h"
-
-class QDate;
-class QString;
-
-namespace KHolidays
-{
-
 class KHOLIDAYS_EXPORT AstroSeasons //krazy:exclude=dpointer
 {
 public:
