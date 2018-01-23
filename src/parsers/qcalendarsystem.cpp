@@ -345,7 +345,9 @@ int QCalendarSystemPrivate::quarter(int month) const
         if (month == 13) { // Consider the short epagomenal month as part of the 4th quarter
             return 4;
         }
+#if QT_VERSION >= QT_VERSION_CHECK(5, 8, 0)
         Q_FALLTHROUGH();
+#endif
     default:
         return (((month - 1) / 3) + 1);
     }
