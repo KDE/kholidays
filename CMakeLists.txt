@@ -5,6 +5,7 @@ project(KHolidays VERSION ${KF5_VERSION})
 
 find_package(ECM 5.42.0 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
+set(CMAKE_AUTORCC ON)
 
 include(GenerateExportHeader)
 include(ECMGenerateHeaders)
@@ -39,8 +40,6 @@ add_subdirectory(src)
 if(BUILD_TESTING)
   add_subdirectory(autotests)
 endif()
-
-add_subdirectory(holidays)
 
 if(IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/po")
   ecm_install_po_files_as_qm(po)

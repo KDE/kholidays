@@ -21,6 +21,7 @@ set(kholidays_SRCS
   parsers/plan2/holidayparserdriverplan.cpp
   parsers/plan2/holidayparserplan.cpp
   ${kholidays_QM_LOADER}
+  ../holidays/holidays.qrc
 )
 
 add_library(KF5Holidays ${kholidays_SRCS})
