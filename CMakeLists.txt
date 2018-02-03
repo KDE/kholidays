@@ -18,6 +18,7 @@ include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(ECMCoverageOption)
+include(ECMAddQch)
 
 set(KHOLIDAYS_LIB_VERSION ${KF5_VERSION})
 
@@ -26,6 +27,9 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX KHOLIDAYS
                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5HolidaysConfigVersion.cmake"
                         SOVERSION 5
 )
+
+option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)" OFF)
+add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)")
 
 ########### Find packages ###########
 set(QT_REQUIRED_VERSION 5.7.0)
@@ -47,6 +51,16 @@ endif()
 
 ########### CMake Config Files ###########
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5Holidays")
+
+if (BUILD_QCH)
+    ecm_install_qch_export(
+        TARGETS KF5Holidays_QCH
+        FILE KF5HolidaysQchTargets.cmake
+        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+        COMPONENT Devel
+    )
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF5HolidaysQchTargets.cmake\")")
+endif()
 
 configure_package_config_file(
   "${CMAKE_CURRENT_SOURCE_DIR}/KF5HolidaysConfig.cmake.in"
