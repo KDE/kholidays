@@ -66,7 +66,7 @@ class HolidayScannerPlan : public HolidayScannerFlexLexer
 public:
     HolidayScannerPlan(std::istream *arg_yyin = 0, std::ostream *arg_yyout = 0);
 
-    virtual ~HolidayScannerPlan();
+    ~HolidayScannerPlan() override;
 
     virtual HolidayParserPlan::token_type lex(HolidayParserPlan::semantic_type *yylval,
             HolidayParserPlan::location_type *yylloc);

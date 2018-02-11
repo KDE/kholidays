@@ -35,7 +35,7 @@ public:
         DescriptionRole
     };
     explicit HolidayRegionsDeclarativeModel(QObject *parent = nullptr);
-    virtual ~HolidayRegionsDeclarativeModel();
+    ~HolidayRegionsDeclarativeModel() override;
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role) const override;

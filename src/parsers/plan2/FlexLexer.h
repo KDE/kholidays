@@ -118,7 +118,7 @@ extern "C++" {
         // only make that assignment when initializing in yylex().
         yyFlexLexer(FLEX_STD istream *arg_yyin = 0, FLEX_STD ostream *arg_yyout = 0);
 
-        virtual ~yyFlexLexer();
+        ~yyFlexLexer() override;
 
         void yy_switch_to_buffer(struct yy_buffer_state * new_buffer) override;
         struct yy_buffer_state * yy_create_buffer(FLEX_STD istream * s, int size) override;
