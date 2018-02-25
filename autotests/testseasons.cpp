@@ -20,12 +20,12 @@
 */
 
 #include "testseasons.h"
-#include <qtest.h>
-
-QTEST_MAIN(SeasonsTest)
-
 #include "astroseasons.h"
 using namespace KHolidays;
+
+#include <QTest>
+
+QTEST_MAIN(SeasonsTest)
 
 void SeasonsTest::test2005()
 {

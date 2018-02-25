@@ -20,13 +20,13 @@
 */
 
 #include "testsunriseset.h"
-#include <qtest.h>
-
-QTEST_MAIN(SunriseTest)
-
 #include "sunriseset.h"
 using namespace KHolidays;
 using namespace SunRiseSet;
+
+#include <QTest>
+
+QTEST_MAIN(SunriseTest)
 
 void SunriseTest::TestSunrise()
 {

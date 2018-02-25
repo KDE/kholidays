@@ -21,11 +21,11 @@
 
 #include "testholidayregion.h"
 
-#include <QString>
+#include <QDebug>
 #include <QFile>
 #include <QFileInfo>
-#include <qtest.h>
-#include <QDebug>
+#include <QString>
+#include <QTest>
 
 QTEST_MAIN(HolidayRegionTest)
 

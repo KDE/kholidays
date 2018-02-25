@@ -52,14 +52,14 @@ endif()
 ########### CMake Config Files ###########
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5Holidays")
 
-if (BUILD_QCH)
-    ecm_install_qch_export(
-        TARGETS KF5Holidays_QCH
-        FILE KF5HolidaysQchTargets.cmake
-        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-        COMPONENT Devel
-    )
-    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF5HolidaysQchTargets.cmake\")")
+if(BUILD_QCH)
+  ecm_install_qch_export(
+    TARGETS KF5Holidays_QCH
+    FILE KF5HolidaysQchTargets.cmake
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+    COMPONENT Devel
+  )
+  set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF5HolidaysQchTargets.cmake\")")
 endif()
 
 configure_package_config_file(

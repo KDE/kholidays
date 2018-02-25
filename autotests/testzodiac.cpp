@@ -21,8 +21,6 @@
 
 #include "zodiac.h"
 
-#include <qdebug.h>
-
 #include <QDateTime>
 #include <QCoreApplication>
 

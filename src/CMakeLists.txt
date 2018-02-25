@@ -33,15 +33,12 @@ target_include_directories(KF5Holidays INTERFACE "$<INSTALL_INTERFACE:${KDE_INST
 target_include_directories(KF5Holidays PUBLIC "$<BUILD_INTERFACE:${KHolidays_SOURCE_DIR}/src;${KHolidays_BINARY_DIR}/src>")
 target_include_directories(KF5Holidays PUBLIC "$<BUILD_INTERFACE:${KHolidays_SOURCE_DIR}/src/parsers/plan2>")
 
-target_link_libraries(KF5Holidays
-PUBLIC
-    Qt5::Core
-)
+target_link_libraries(KF5Holidays PUBLIC Qt5::Core)
 
 set_target_properties(KF5Holidays PROPERTIES
-    VERSION ${KHOLIDAYS_VERSION_STRING}
-    SOVERSION ${KHOLIDAYS_SOVERSION}
-    EXPORT_NAME Holidays
+  VERSION ${KHOLIDAYS_VERSION_STRING}
+  SOVERSION ${KHOLIDAYS_SOVERSION}
+  EXPORT_NAME Holidays
 )
 
 ecm_generate_headers(KHolidays_CamelCase_HEADERS
@@ -59,40 +56,46 @@ install(TARGETS KF5Holidays EXPORT KF5HolidaysTargets ${KF5_INSTALL_TARGETS_DEFA
 
 ########### install files ###############
 install(FILES
-    ${CMAKE_CURRENT_BINARY_DIR}/kholidays_export.h
-    ${KHolidays_HEADERS}
-    ${KHolidays_CamelCase_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KHolidays/kholidays
-    COMPONENT Devel
+  ${CMAKE_CURRENT_BINARY_DIR}/kholidays_export.h
+  ${KHolidays_HEADERS}
+  ${KHolidays_CamelCase_HEADERS}
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KHolidays/kholidays
+  COMPONENT Devel
 )
 
 install(FILES
-    ${KHolidays_CamelCase_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KHolidays/KHolidays
-    COMPONENT Devel
+  ${KHolidays_CamelCase_HEADERS}
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KHolidays/KHolidays
+  COMPONENT Devel
 )
 
 if(BUILD_QCH)
-    ecm_add_qch(
-        KF5Holidays_QCH
-        NAME KHolidays
-        BASE_NAME KF5Holidays
-        VERSION ${KF5_VERSION}
-        ORG_DOMAIN org.kde
-        SOURCES # using only public headers, to cover only public API
-            ${KHolidays_HEADERS}
-        MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
-        LINK_QCHS
-            Qt5Core_QCH
-        BLANK_MACROS
-            KHOLIDAYS_EXPORT
-        TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
-        QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
-        COMPONENT Devel
-    )
+  ecm_add_qch(
+    KF5Holidays_QCH
+    NAME KHolidays
+    BASE_NAME KF5Holidays
+    VERSION ${KF5_VERSION}
+    ORG_DOMAIN org.kde
+    SOURCES # using only public headers, to cover only public API
+      ${KHolidays_HEADERS}
+    MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
+    LINK_QCHS
+      Qt5Core_QCH
+    BLANK_MACROS
+      KHOLIDAYS_EXPORT
+    TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
+    QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
+    COMPONENT Devel
+  )
 endif()
 
-ecm_generate_pri_file(BASE_NAME KHolidays LIB_NAME KF5KHolidays DEPS "widgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/KHolidays)
+ecm_generate_pri_file(
+  BASE_NAME KHolidays
+  LIB_NAME KF5KHolidays
+  DEPS "widgets"
+  FILENAME_VAR PRI_FILENAME
+  INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/KHolidays
+)
 
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
 

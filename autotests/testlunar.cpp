@@ -20,8 +20,9 @@
 */
 
 #include "testlunar.h"
-#include <qtest.h>
-#include <qdebug.h>
+
+#include <QDebug>
+#include <QTest>
 
 QTEST_MAIN(LunarTest)
 
