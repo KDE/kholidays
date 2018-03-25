@@ -1,92 +1,70 @@
 ::
-:: Country:  Germany, Bavaria
+:: Country:  Germany
 ::
 :: Language: German
 ::
-:: Author:   Burkhard Ludwig <ludwig@zfe.siemens.de>
+:: Author: Tobias Leupold <tobias.leupold@gmx.de>
 ::
-:: Updated:
+:: Updated: 2018-03-25
 ::
 :: Source:
-::
-:: Hints (to be understood by germans)
-::
-:: Schwalben...
-::  An OCULI da kommen sie
-::  An MARIÄ GEBURT, da sind sie wieder furt.
-:: Geranien...
-::  pflanzt man auf dem Balkon nach den Eisheiligen (PANKRAZ bis kalte SOPHIE)
-:: Gänse...
-::  Wer einen guten Braten macht hat auch ein gutes Herz. (MARTINI)
-:: Spargel...
-::  wird bis höchstens JOHANNI gestochen.
-:: Regen...
-::  Wenns ans SIEBENSCHLÄFER regnet, so regnet's sieben Wochen.
+::     https://www.bmi.bund.de/DE/themen/verfassung/staatliche-symbole/nationale-feiertage/nationale-feiertage-artikel.html
+::     https://de.wikipedia.org/wiki/Gesetzliche_Feiertage_in_Deutschland
+::     https://www.stmi.bayern.de/suk/bayern/feiertage/index.php
 ::
 
 :: Metadata
-country     "DE-BY"
+country     "DE"
 language    "de"
 :name        "optional - defaults to country name"
-:description "(please add description in source language) National holiday file for Bavaria"
+description "Feiertage für Deutschland (Bayern)"
+
+:: ---------- This part is specific for Bavaria ----------
+
+"Heilige Drei Könige"          public on 6.1.
+"Fronleichnam"                 public on easter plus 60 days
+"Mariä Himmelfahrt (regional)" public on 15.8.
+"Allerheiligen"                public on 1.11.
+"Buß- und Bettag (schulfrei)"  public on wednesday before 23.11.
+
+:: ---------- This part is shared across all Federal States of Germany ----------
 
 :: Public Holidays
-"Neujahr"                     public on january 1
-"Hl. 3 Könige"                public on january 6
-"Karfreitag"                  public cultural on easter minus  2 days
-"Ostern"                      public cultural on easter length 2 days
-"Pfingsten"                   public cultural on easter plus 49 days length 2 days
-"Christi Himmelfahrt"         public cultural on easter plus 39 days
-"Fronleichnam"                public cultural on easter plus 60 days
-"1. Mai"                      public on may 1
-"Mariä Himmelfahrt"           public cultural on august 15
-"Einheitstag"                 public on october 3
-"Allerheiligen"               public on november 1
-::No longer a public holiday (except in Saxony), per Bug 355073
-::"Buß- und Bettag"             public on sunday before december 24 minus 32 days
-"Weihnachten"                 public cultural on december 25 length 2 days
+"Neujahr"                   public on 1.1.
+"Karfreitag"                public on easter minus 2 days
+"Ostermontag"               public on easter plus 1 days
+"Christi Himmelfahrt"       public on easter plus 39 days
+"Pfingstmontag"             public on easter plus 50 days
+"1. Mai"                    public on 1.5.
+"Tag der Deutschen Einheit" public on 3.10.
+"1. Weihnachtsfeiertag"     public on 25.12.
+"2. Weihnachtsfeiertag"     public on 26.12.
 
 :: Religious
-"Lichtmeß"                    religious on february 2
-"Rosenmontag"                 religious on easter minus 48 days
-"Fasching"                    religious on easter minus 47 days
-"Aschermittwoch"              religious on easter minus 46 days
-"1. Fastensonntag"            religious on easter minus 42 days
-"2. Fastensonntag"            religious on easter minus 35 days
-"3. Fastensonntag"            religious on easter minus 28 days
-"Oculi"                       religious on easter minus 28 days
-"4. Fastensonntag"            religious on easter minus 21 days
-"5. Fastensonntag"            religious on easter minus 14 days
-"Palmsonntag"                 religious on easter minus  7 days
-"Pankraz"                     religious on may 11
-"Servaz"                      religious on may 12
-"Bonifaz"                     religious on may 13
-"Sophie"                      religious on may 14
-"Johanni"                     religious on june 24
-"Siebenschläfer"              religious on june 27
-"Mariä Geburt"                religious on september 8
-"Martini"                     religious on november 11
-"Nikolaus"                    religious on december 6
-"Christkönig"                 religious on sunday before december 23 minus 28 days
-"1. Advent"                   religious on sunday before december 24 minus 21 days
-"2. Advent"                   religious on sunday before december 24 minus 14 days
-"3. Advent"                   religious on sunday before december 24 minus  7 days
-"4. Advent"                   religious on sunday before december 24
-"Hl. Abend"                   religious on december 24
-"Silvester"                   religious on december 31
+"Gründonnerstag"  religious on easter minus 3 days
+"Ostersonntag"    religious on easter
+"Pfingstsonntag"  religious on easter plus 49 days
+"Nikolaus"        religious on 6.12.
+"1. Advent"       religious on sunday before december 24 minus 21 days
+"2. Advent"       religious on sunday before december 24 minus 14 days
+"3. Advent"       religious on sunday before december 24 minus 7 days
+"4. Advent"       religious on sunday before december 24
+"Heiliger Abend"  religious on december 24
 
 :: Financial
 
 :: Cultural
-"Muttertag"                   cultural on second sunday in may
-"Karwoche"                    cultural on easter minus 6 days length 6 days
-"1. Wies'nsonntag"            cultural on first sunday in october minus 14 days
+"Silvester"         cultural on december 31
+"Rosenmontag"       cultural on easter minus 48 days
+"Faschingsdienstag" cultural on easter minus 47 days
+"Aschermittwoch"    cultural on easter minus 46 days
+"Muttertag"         cultural on second sunday in may
 
 :: School
 
 :: Daylight Saving
-"Sommerzeit"                  seasonal on last sunday in march
-"Winterzeit"                  seasonal on last sunday in october
+"Beginn der Sommerzeit" seasonal on last sunday in march
+"Beginn der Winterzeit" seasonal on last sunday in october
 
 :: Seasons
 

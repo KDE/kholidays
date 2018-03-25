@@ -16,7 +16,12 @@
 country     "DE"
 language    "de"
 :name        "optional - defaults to country name"
-description "Feiertage für Deutschland"
+description "Feiertage für Deutschland (Sachsen-Anhalt)"
+
+:: ---------- This part is specific for Saxony-Anhalt ----------
+
+"Heilige Drei Könige" public on 6.1.
+"Reformationstag"     public on 31.10.
 
 :: ---------- This part is shared across all Federal States of Germany ----------
 

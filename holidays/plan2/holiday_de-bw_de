@@ -10,13 +10,20 @@
 :: Source:
 ::     https://www.bmi.bund.de/DE/themen/verfassung/staatliche-symbole/nationale-feiertage/nationale-feiertage-artikel.html
 ::     https://de.wikipedia.org/wiki/Gesetzliche_Feiertage_in_Deutschland
+::     https://im.baden-wuerttemberg.de/de/service/feiertage/
 ::
 
 :: Metadata
 country     "DE"
 language    "de"
 :name        "optional - defaults to country name"
-description "Feiertage für Deutschland"
+description "Feiertage für Deutschland (Baden-Württemberg)"
+
+:: ---------- This part is specific for Baden-Wuerttemberg ----------
+
+"Heilige Drei Könige" public on 6.1.
+"Fronleichnam"        public on easter plus 60 days
+"Allerheiligen"       public on 1.11.
 
 :: ---------- This part is shared across all Federal States of Germany ----------
 

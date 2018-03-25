@@ -16,7 +16,12 @@
 country     "DE"
 language    "de"
 :name        "optional - defaults to country name"
-description "Feiertage für Deutschland"
+description "Feiertage für Deutschland (Rheinland-Pfalz)"
+
+:: ---------- This part is specific for Rhineland-Palatinate ----------
+
+"Fronleichnam"  public on easter plus 60 days
+"Allerheiligen" public on 1.11.
 
 :: ---------- This part is shared across all Federal States of Germany ----------
 

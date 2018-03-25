@@ -16,7 +16,11 @@
 country     "DE"
 language    "de"
 :name        "optional - defaults to country name"
-description "Feiertage für Deutschland"
+description "Feiertage für Deutschland (Brandenburg)"
+
+:: ---------- This part is specific for Brandenburg ----------
+
+"Reformationstag" public on 31.10.
 
 :: ---------- This part is shared across all Federal States of Germany ----------
 
