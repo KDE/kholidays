@@ -50,10 +50,10 @@ QString LunarPhase::phaseName(LunarPhase::Phase phase)
         return (QCoreApplication::translate("LunarPhase", "First Quarter Moon"));
     case LastQuarter:
         return (QCoreApplication::translate("LunarPhase", "Last Quarter Moon"));
-    default:
     case None:
         return QString();
     }
+    return QString();
 }
 
 LunarPhase::Phase LunarPhase::phaseAtDate(const QDate &date)

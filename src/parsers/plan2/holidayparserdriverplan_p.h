@@ -65,7 +65,7 @@ public:
     /**
      * Destructor.
      */
-    ~HolidayParserDriverPlan();
+    ~HolidayParserDriverPlan() override;
 
     /**
      * Bison C++ skeleton error message handling

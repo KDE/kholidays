@@ -42,10 +42,10 @@ QString AstroSeasons::seasonName(AstroSeasons::Season season)
         return QCoreApplication::translate("AstroSeasons", "March Equinox");
     case SeptemberEquinox:
         return QCoreApplication::translate("AstroSeasons", "September Equinox");
-    default:
     case None:
         return QString();
     }
+    return QString();
 }
 
 AstroSeasons::Season AstroSeasons::seasonAtDate(const QDate &date)

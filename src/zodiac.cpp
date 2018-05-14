@@ -99,10 +99,10 @@ QString Zodiac::signName(Zodiac::ZodiacSigns sign)
         return QCoreApplication::translate("Zodiac", "Aquarius");
     case Pisces:
         return QCoreApplication::translate("Zodiac", "Pisces");
-    default:
     case None:
         return QString();
     }
+    return QString();
 }
 
 Zodiac::ZodiacSigns Zodiac::signAtDate(const QDate &date) const
@@ -184,7 +184,6 @@ Zodiac::ZodiacSigns Zodiac::signAtDate(const QDate &date) const
         }
 
         return Capricorn;
-        break;
 
     case Sidereal:
         startdate = QDate(date.year(), 1, 1);
@@ -260,7 +259,6 @@ Zodiac::ZodiacSigns Zodiac::signAtDate(const QDate &date) const
         }
 
         return Sagittarius;
-        break;
     }
     return None;
 }
@@ -292,8 +290,8 @@ QString Zodiac::signSymbol(Zodiac::ZodiacSigns sign)
         return QCoreApplication::translate("HolidayRegion", "water carrier", "zodiac symbol for Aquarius");
     case Pisces:
         return QCoreApplication::translate("HolidayRegion", "fish", "zodiac symbol for Pices");
-    default:
     case None:
         return QString();
     }
+    return QString();
 }
