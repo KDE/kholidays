@@ -5,7 +5,7 @@
 ::
 :: Author:   Gerald Williams <gwilli@samart.co.th>
 ::
-:: Updated:
+:: Updated: May 31 2018
 ::
 :: Source:
 ::
@@ -18,35 +18,47 @@ description "National holiday file for Thailand"
 
 :: Public Holidays
 "New Years Day"                 public on January 1
-:"Makha Bucha Day"              public on February 11
-"Chakri Memorial Day"           public on April 6
-"Songkran Festival"             public on April 13 length 3 days
-"Coranation Day"                public on May 5
-:"Royal Ploughing Ceremony Day" public on May 8
-:"Visakha Bucha Day"            public on May 10
-:"Mid Year Day"                 public on July 1
-:"Asarnha Bucha Day"            public on July 8
-:"Khao Phansa Day"              public on July 9
-"HM The Queens Birthday"        public on August 12
-"Chulalongkorn Day"             public on October 23
-"HM The King's Birthdayday"     public on December 5
+"Bridge Public Holiday"         public on January 2
+"Labor Day"                     public on May 1
+"Royal Ploughing Ceremony Day"  public on May 14
+"His Majesty King Vajiralongkorn's Birthday"    public on July 28
+"King's Birthday holiday"       public on July 30
+"Her Majesty the Queen's Birthday"    public on August 12 length 2 days
+"Mother's Day"                  public on August 12 length 2 days
+"His Majesty the late King Bhumibol Adulyadej Memorial Day"     public on October 13
+"Anniversary of the Death of King Bhumibol"     public on October 15
+"King Chulalongkorn Memorial Day"       public on October 23
+"Father's Day"                  public on December 5
 "Constitution Day"              public on December 10
-"New Years Eve"                 public on December 31
+"Christmas Eve"                 public on December 24
+"Christmas Day"                 public on December 25
+"New Year's Eve"                public on December 31
 
 :: Religious Holidays
+"Makha Bucha"                   public on March 1
+"Chakri Day"                    public on April 6
+"Visakha Bucha"                 public on May 29
+"Asalha Bucha"                  public on July 27
+"Buddhist Lent Day"             public on July 28
 
 :: Financial
 
 :: Cultural
+"National Children's Day"       public on January 13
+"Valentine's Day"               public on February 14
+"Chinese Lunar New Year's Day"  public on February 16 length 3 days
+"Songkran Festival"             public on April 12 length 5 days
+"Halloween"                     public on October 31
+"Loy Krathong"                  public on November 22
 
 :: School
+"Teachers' Day"                 public on January 16
 
 :: Daylight Saving
 
 :: Seasons
-"Hot season begins"    seasonal on march 1
-"Rainy season begins"  seasonal on june 1
-"Cool season begins"   seasonal on november 1
+"Hot season begins"    seasonal on March 1
+"Rainy season begins"  seasonal on June 1
+"Cool season begins"   seasonal on November 1
 
 :: Name Days
-
