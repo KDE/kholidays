@@ -12,6 +12,13 @@
 ::           http://www.nao.ac.jp/faq/a0301.html
 ::
 
+:: Metadata
+country     "JP"
+language    "en_US"
+:name        "optional - defaults to country name"
+description "National Holiday file for Japan"
+
+
 :: Public Holidays
 "New Year's Day"                   public on january 1
 "Coming of Age Day"                public on second monday in january

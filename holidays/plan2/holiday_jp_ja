@@ -12,6 +12,13 @@
 ::           http://www.nao.ac.jp/faq/a0301.html
 ::
 
+:: Metadata
+country     "JP"
+language    "ja"
+:name        "optional - defaults to country name"
+description "National Holiday file for Japan"
+
+
 :: Public Holidays (国民の祝日)
 :"New Year's Day"
 "元日"                                public on january 1
