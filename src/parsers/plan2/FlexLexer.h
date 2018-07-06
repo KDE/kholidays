@@ -75,7 +75,7 @@ extern "C++" {
         virtual int yylex() = 0;
 
         // Call yylex with new input/output sources.
-        int yylex(FLEX_STD istream * new_in, FLEX_STD ostream *new_out = 0)
+        int yylex(FLEX_STD istream * new_in, FLEX_STD ostream *new_out = nullptr)
         {
             switch_streams(new_in, new_out);
             return yylex();
@@ -83,8 +83,8 @@ extern "C++" {
 
         // Switch to new input/output streams.  A nil stream pointer
         // indicates "keep the current one".
-        virtual void switch_streams(FLEX_STD istream *new_in = 0,
-        FLEX_STD ostream *new_out = 0) = 0;
+        virtual void switch_streams(FLEX_STD istream *new_in = nullptr,
+        FLEX_STD ostream *new_out = nullptr) = 0;
 
         int lineno() const      { return yylineno; }
 
@@ -116,7 +116,7 @@ extern "C++" {
     public:
         // arg_yyin and arg_yyout default to the cin and cout, but we
         // only make that assignment when initializing in yylex().
-        yyFlexLexer(FLEX_STD istream *arg_yyin = 0, FLEX_STD ostream *arg_yyout = 0);
+        yyFlexLexer(FLEX_STD istream *arg_yyin = nullptr, FLEX_STD ostream *arg_yyout = nullptr);
 
         ~yyFlexLexer() override;
 
@@ -129,7 +129,7 @@ extern "C++" {
         void yypop_buffer_state();
 
         virtual int yylex() override;
-        virtual void switch_streams(FLEX_STD istream * new_in, FLEX_STD ostream *new_out = 0) override;
+        virtual void switch_streams(FLEX_STD istream * new_in, FLEX_STD ostream *new_out = nullptr) override;
         virtual int yywrap();
 
     protected:

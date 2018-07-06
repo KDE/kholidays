@@ -64,7 +64,7 @@ namespace KHolidays
 class HolidayScannerPlan : public HolidayScannerFlexLexer
 {
 public:
-    HolidayScannerPlan(std::istream *arg_yyin = 0, std::ostream *arg_yyout = 0);
+    HolidayScannerPlan(std::istream *arg_yyin = nullptr, std::ostream *arg_yyout = nullptr);
 
     ~HolidayScannerPlan() override;
 

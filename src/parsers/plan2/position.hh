@@ -58,7 +58,7 @@ namespace KHolidays {
 
     /// Construct a position.
     position ()
-      : filename (0), line (1), column (1)
+      : filename (nullptr), line (1), column (1)
     {
     }
 
