@@ -3,10 +3,11 @@
 ::
 :: Author:   Toyohiro Asukai <toyohiro@ksmplus.com>
 ::           Jumpei Ogawa <phanective@gmail.com>
+::           Firas Kraiem <firas@fkraiem.org>
 ::
 :: Language: English
 ::
-:: Updated:  2017-05-07
+:: Updated:  2018-07-16
 ::
 :: Source:   http://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html
 ::           http://www.nao.ac.jp/faq/a0301.html
@@ -112,8 +113,12 @@ description "National Holiday file for Japan"
 "Labor Thanksgiving Day"           public on november 23
 "The Emperor's Birthday"           public on december 23
 
-:: If a "National Holiday" is on Sunday,the following day
-:: shall be a substitute holiday.
+:: If a "Public Holiday" is on a Sunday, the first following day which
+:: is not a "Public Holiday" shall be a substitute holiday. If a day
+:: which is not a "Public Holiday" is between two "Public Holidays",
+:: it shall be a holiday. Those holidays are not legally "Public
+:: Holidays" (so in particular not for the purpose of determining such
+:: holidays), but they are identical in practice.
 "Substitute holiday"               public on march 21 2005
 "Substitute holiday"               public on january 2 2006
 "Substitute holiday"               public on february 12 2007
@@ -122,12 +127,25 @@ description "National Holiday file for Japan"
 "Substitute holiday"               public on december 24 2007
 "Substitute holiday"               public on november 24 2008
 "Substitute holiday"               public on march 22 2010
+"Substitute holiday"               public on january 2 2012
+"Substitute holiday"               public on april 30 2012
+"Substitute holiday"               public on december 24 2012
+"Substitute holiday"               public on may 6 2013
+"Substitute holiday"               public on november 4 2013
+"Substitute holiday"               public on may 6 2014
+"Substitute holiday"               public on november 24 2014
+"Substitute holiday"               public on may 6 2015
 "Substitute holiday"               public on march 21 2016
 "Substitute holiday"               public on january 2 2017
 "Substitute holiday"               public on february 12 2018
 "Substitute holiday"               public on april 30 2018
 "Substitute holiday"               public on september 24 2018
 "Substitute holiday"               public on december 24 2018
+"Substitute holiday"               public on may 6 2019
+"Substitute holiday"               public on august 12 2019
+"Substitute holiday"               public on november 4 2019
+
+"Holiday"                public on september 22 2015
 
 :: Religious
 
