@@ -68,9 +68,7 @@ description "Høytids-, flagg- og andre merkedager i Norge"
 "Nyttårsaften"                                   civil on december 31
 :: Andre
 "Valentinsdagen"                                 cultural on february 14
-:: Original version was "on 29.2" but appears every year in error due to no validity checking
-:: Re-enable when new parser which has noop ability
-::"Skuddårsdagen"                                cultural on ((leapyear year) ? [2/29] : noop)
+"Skuddårsdagen"                                  cultural on ((leapyear year) ? [2/29] : noop)
 "Den internasjonale kvinnedagen"                 cultural on march 8
 "Aprilsnarr"                                     cultural on april 1
 "Unionsoppløsningen 1905"                        cultural on june 7
