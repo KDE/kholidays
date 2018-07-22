@@ -13,8 +13,8 @@
 :: Metadata
 country     "NO"
 language    "nn"
-:name        "optional - defaults to country name"
-description "Høgtids-, flagg- og andre merkedagar i Noreg (nynorsk)"
+name        "Noreg (nynorsk)"
+description "Høgtids-, flagg- og andre merkedagar i Noreg"
 
 :: Public Holidays
 "Nyttårsdag"                                     public on january 1

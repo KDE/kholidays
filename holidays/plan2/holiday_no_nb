@@ -13,8 +13,8 @@
 :: Metadata
 country     "NO"
 language    "nb"
-:name        "optional - defaults to country name"
-description "Høytids-, flagg- og andre merkedager i Norge (bokmål)"
+name        "Norge (bokmål)"
+description "Høytids-, flagg- og andre merkedager i Norge"
 
 :: Public Holidays
 "Nyttårsdag"                                     public on january 1
