@@ -14,7 +14,7 @@
 country     "NO"
 language    "nn"
 :name        "optional - defaults to country name"
-:description "(please add description in source language) National holiday file for Norway"
+description "Høgtids-, flagg- og andre merkedagar i Noreg (nynorsk)"
 
 :: Public Holidays
 "Nyttårsdag"                                     public on january 1
