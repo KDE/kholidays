@@ -54,6 +54,7 @@ description "Høgtids-, flagg- og andre merkedagar i Noreg"
 :: Mors- og farsdag
 "Morsdag"                                        cultural on second sunday in february
 "Farsdag"                                        cultural on second sunday in november
+
 :: Offisielle flaggdager som ikkje er høgtidsdagar
 "Prinsesse Ingrid Alexandras fødselsdag"         civil on january 21
 "Samefolkets dag"                                civil on february 6
@@ -67,6 +68,7 @@ description "Høgtids-, flagg- og andre merkedagar i Noreg"
 "Nyttårsaftan"                                   civil on december 31
 :: Andre
 "Valentinsdagen"                                 cultural on february 14
+:: Original version was "on 29.2" but appears every year in error due to no validity checking
 :: Re-enable when new parser which has noop ability
 ::"Skotårsdagen"                                 cultural on ((leapyear year) ? [2/29] : noop)
 "Den internasjonale kvinnedagen"                 cultural on march 8
