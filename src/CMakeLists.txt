@@ -47,6 +47,7 @@ ecm_generate_headers(KHolidays_CamelCase_HEADERS
   Holiday
   HolidayRegion
   LunarPhase
+  SunRiseSet
   Zodiac
   PREFIX KHolidays
   REQUIRED_HEADERS KHolidays_HEADERS
