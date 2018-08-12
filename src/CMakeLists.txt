@@ -25,7 +25,7 @@ set(kholidays_SRCS
 )
 
 add_library(KF5Holidays ${kholidays_SRCS})
-generate_export_header(KF5Holidays BASE_NAME kholidays)
+generate_export_header(KF5Holidays BASE_NAME KHolidays)
 
 add_library(KF5::Holidays ALIAS KF5Holidays)
 
@@ -59,7 +59,6 @@ install(TARGETS KF5Holidays EXPORT KF5HolidaysTargets ${KF5_INSTALL_TARGETS_DEFA
 install(FILES
   ${CMAKE_CURRENT_BINARY_DIR}/kholidays_export.h
   ${KHolidays_HEADERS}
-  ${KHolidays_CamelCase_HEADERS}
   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KHolidays/kholidays
   COMPONENT Devel
 )
