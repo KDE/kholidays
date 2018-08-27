@@ -61,6 +61,16 @@ public:
         None
     };
 
+
+    /**
+     * Return the Gregorian date on which the season occurs in given year.
+     *
+     * @param season Season to return a date for
+     * @param year Year for which to return the date
+     * @since 5.50
+     */
+    static QDate seasonDate(Season season, int year);
+
     /**
        Return the season for the specified Gregorian date.
        The enum 'None' is returned if one of the supported seasons
