@@ -1,0 +1,408 @@
+# Translation of libkholidays5_qt.po into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2005, 2009, 2010, 2012, 2014, 2015.
+# Dalibor Djuric <daliborddjuric@gmail.com>, 2009, 2010, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: libkholidays5_qt\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2015-06-13 09:34+0000\n"
+"PO-Revision-Date: 2015-11-29 18:07+0100\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: qtrich\n"
+"X-Environment: kde\n"
+"X-Qt-Contexts: true\n"
+
+#: astroseasons.cpp:145
+msgctxt "AstroSeasons|"
+msgid "June Solstice"
+msgstr "junska dugodnevnica"
+
+#: astroseasons.cpp:147
+msgctxt "AstroSeasons|"
+msgid "December Solstice"
+msgstr "decembarska kratkodnevnica"
+
+#: astroseasons.cpp:149
+msgctxt "AstroSeasons|"
+msgid "March Equinox"
+msgstr "martovska ravnodnevnica"
+
+#: astroseasons.cpp:151
+msgctxt "AstroSeasons|"
+msgid "September Equinox"
+msgstr "septembarska ravnodnevnica"
+
+#: holidayregion.cpp:882
+msgctxt "HolidayRegion|Canadian region"
+msgid "Quebec"
+msgstr "Kvebek"
+
+#: holidayregion.cpp:884
+msgctxt "HolidayRegion|German region"
+msgid "Bavaria"
+msgstr "Bavarska"
+
+#: holidayregion.cpp:886
+msgctxt "HolidayRegion|Spanish region"
+msgid "Catalonia"
+msgstr "Katalonija"
+
+#: holidayregion.cpp:888
+msgctxt "HolidayRegion|UK Region"
+msgid "England and Wales"
+msgstr "Engleska i Vels"
+
+#: holidayregion.cpp:890
+msgctxt "HolidayRegion|UK Region"
+msgid "England"
+msgstr "Engleska"
+
+#: holidayregion.cpp:892
+msgctxt "HolidayRegion|UK Region"
+msgid "Wales"
+msgstr "Vels"
+
+#: holidayregion.cpp:894
+msgctxt "HolidayRegion|UK Region"
+msgid "Scotland"
+msgstr "Škotska"
+
+#: holidayregion.cpp:896
+msgctxt "HolidayRegion|UK Region"
+msgid "Northern Ireland"
+msgstr "Severna Irska"
+
+#: holidayregion.cpp:898
+msgctxt "HolidayRegion|Italian Region"
+msgid "South Tyrol"
+msgstr "Južni Tirol"
+
+#: holidayregion.cpp:900
+msgctxt "HolidayRegion|"
+msgid "New South Wales"
+msgstr "Novi Južni Vels"
+
+#: holidayregion.cpp:902
+msgctxt "HolidayRegion|Australian Region"
+msgid "Queensland"
+msgstr "Kvinslend"
+
+#: holidayregion.cpp:904
+msgctxt "HolidayRegion|Australian Region"
+msgid "Victoria"
+msgstr "Viktorija"
+
+#: holidayregion.cpp:906
+msgctxt "HolidayRegion|Australian Region"
+msgid "South Australia"
+msgstr "Južna Australija"
+
+#: holidayregion.cpp:908
+msgctxt "HolidayRegion|Australian Region"
+msgid "Northern Territory"
+msgstr "Severna Teritorija"
+
+#: holidayregion.cpp:911
+msgctxt "HolidayRegion|Australian Region"
+msgid "Australian Capital Territory"
+msgstr "Australijska Prestonička Teritorija"
+
+#: holidayregion.cpp:914
+msgctxt "HolidayRegion|Australian Region"
+msgid "Western Australia"
+msgstr "Zapadna Australija"
+
+#: holidayregion.cpp:917
+msgctxt "HolidayRegion|Australian Region"
+msgid "Tasmania"
+msgstr "Tasmanija"
+
+#: holidayregion.cpp:920
+msgctxt "HolidayRegion|Bosnian and Herzegovinian Region"
+msgid "Republic of Srpska"
+msgstr "Republika Srpska"
+
+#: holidayregion.cpp:939
+msgctxt "HolidayRegion|Holiday type"
+msgid "Public"
+msgstr "javni"
+
+#: holidayregion.cpp:941
+msgctxt "HolidayRegion|Holiday type"
+msgid "Civil"
+msgstr "svetovni"
+
+#: holidayregion.cpp:943
+msgctxt "HolidayRegion|Holiday type"
+msgid "Religious"
+msgstr "verski"
+
+#: holidayregion.cpp:945
+msgctxt "HolidayRegion|Holiday type"
+msgid "Government"
+msgstr "državni"
+
+#: holidayregion.cpp:947
+msgctxt "HolidayRegion|Holiday type"
+msgid "Financial"
+msgstr "finansijski"
+
+#: holidayregion.cpp:949
+msgctxt "HolidayRegion|Holiday type"
+msgid "Cultural"
+msgstr "kulturni"
+
+#: holidayregion.cpp:951
+msgctxt "HolidayRegion|Holiday type"
+msgid "Commemorative"
+msgstr "komemorativni"
+
+#: holidayregion.cpp:953
+msgctxt "HolidayRegion|Holiday type"
+msgid "Historical"
+msgstr "istorijski"
+
+#: holidayregion.cpp:955
+msgctxt "HolidayRegion|Holiday type"
+msgid "School"
+msgstr "školski"
+
+#: holidayregion.cpp:957
+msgctxt "HolidayRegion|Holiday type"
+msgid "Seasonal"
+msgstr "sezonski"
+
+#: holidayregion.cpp:959
+msgctxt "HolidayRegion|Holiday type"
+msgid "Name Days"
+msgstr "imendanski"
+
+#: holidayregion.cpp:961
+msgctxt "HolidayRegion|Holiday type"
+msgid "Personal"
+msgstr "lični"
+
+#: holidayregion.cpp:963
+msgctxt "HolidayRegion|Holiday type"
+msgid "Christian"
+msgstr "hrišćanski"
+
+#: holidayregion.cpp:965
+msgctxt "HolidayRegion|Holiday type"
+msgid "Anglican"
+msgstr "anglikanski"
+
+#: holidayregion.cpp:967
+msgctxt "HolidayRegion|Holiday type"
+msgid "Catholic"
+msgstr "katolički"
+
+#: holidayregion.cpp:969
+msgctxt "HolidayRegion|Holiday type"
+msgid "Protestant"
+msgstr "protestantski"
+
+#: holidayregion.cpp:971
+msgctxt "HolidayRegion|Holiday type"
+msgid "Orthodox"
+msgstr "pravoslavni"
+
+#: holidayregion.cpp:973
+msgctxt "HolidayRegion|Holiday type"
+msgid "Jewish"
+msgstr "jevrejski"
+
+#: holidayregion.cpp:975
+msgctxt "HolidayRegion|Holiday type"
+msgid "Jewish Orthodox"
+msgstr "jevrejski ortodoksni"
+
+#: holidayregion.cpp:977
+msgctxt "HolidayRegion|Holiday type"
+msgid "Jewish Conservative"
+msgstr "jevrejski konzervativni"
+
+#: holidayregion.cpp:979
+msgctxt "HolidayRegion|Holiday type"
+msgid "Jewish Reform"
+msgstr "jevrejski reformistički"
+
+#: holidayregion.cpp:981
+msgctxt "HolidayRegion|Holiday type"
+msgid "Islamic"
+msgstr "muslimanski"
+
+#: holidayregion.cpp:983
+msgctxt "HolidayRegion|Holiday type"
+msgid "Islamic Sunni"
+msgstr "muslimanski sunitski"
+
+#: holidayregion.cpp:985
+msgctxt "HolidayRegion|Holiday type"
+msgid "Islamic Shia"
+msgstr "muslimanski šiitski"
+
+#: holidayregion.cpp:987
+msgctxt "HolidayRegion|Holiday type"
+msgid "Islamic Sufi"
+msgstr "muslimanski sufijski"
+
+#: holidayregion.cpp:994
+#, qt-format
+msgctxt ""
+"HolidayRegion|Holiday file display name, %1 = region name, %2 = holiday type"
+msgid "%1 - %2"
+msgstr "%1 — %2"
+
+#: holidayregion.cpp:1004
+msgctxt "HolidayRegion|Unknown holiday region"
+msgid "Unknown"
+msgstr "nepoznato"
+
+#: lunarphase.cpp:46
+msgctxt "LunarPhase|"
+msgid "New Moon"
+msgstr "mladi mesec"
+
+#: lunarphase.cpp:48
+msgctxt "LunarPhase|"
+msgid "Full Moon"
+msgstr "puni mesec"
+
+#: lunarphase.cpp:50
+msgctxt "LunarPhase|"
+msgid "First Quarter Moon"
+msgstr "prva četvrt"
+
+#: lunarphase.cpp:52
+msgctxt "LunarPhase|"
+msgid "Last Quarter Moon"
+msgstr "poslednja četvrt"
+
+#: zodiac.cpp:79
+msgctxt "Zodiac|"
+msgid "Aries"
+msgstr "ovan"
+
+#: zodiac.cpp:81
+msgctxt "Zodiac|"
+msgid "Taurus"
+msgstr "bik"
+
+#: zodiac.cpp:83
+msgctxt "Zodiac|"
+msgid "Gemini"
+msgstr "blizanci"
+
+#: zodiac.cpp:85
+msgctxt "Zodiac|"
+msgid "Cancer"
+msgstr "rak"
+
+#: zodiac.cpp:87
+msgctxt "Zodiac|"
+msgid "Leo"
+msgstr "lav"
+
+#: zodiac.cpp:89
+msgctxt "Zodiac|"
+msgid "Virgo"
+msgstr "devica"
+
+#: zodiac.cpp:91
+msgctxt "Zodiac|"
+msgid "Libra"
+msgstr "vaga"
+
+#: zodiac.cpp:93
+msgctxt "Zodiac|"
+msgid "Scorpio"
+msgstr "škorpija"
+
+#: zodiac.cpp:95
+msgctxt "Zodiac|"
+msgid "Sagittarius"
+msgstr "strelac"
+
+#: zodiac.cpp:97
+msgctxt "Zodiac|"
+msgid "Capricorn"
+msgstr "jarac"
+
+#: zodiac.cpp:99
+msgctxt "Zodiac|"
+msgid "Aquarius"
+msgstr "vodolija"
+
+#: zodiac.cpp:101
+msgctxt "Zodiac|"
+msgid "Pisces"
+msgstr "ribe"
+
+#: zodiac.cpp:270
+msgctxt "HolidayRegion|zodiac symbol for Aries"
+msgid "ram"
+msgstr "ovan"
+
+#: zodiac.cpp:272
+msgctxt "HolidayRegion|zodiac symbol for Taurus"
+msgid "bull"
+msgstr "bik"
+
+#: zodiac.cpp:274
+msgctxt "HolidayRegion|zodiac symbol for Gemini"
+msgid "twins"
+msgstr "blizanci"
+
+#: zodiac.cpp:276
+msgctxt "HolidayRegion|zodiac symbol for Cancer"
+msgid "crab"
+msgstr "rak"
+
+#: zodiac.cpp:278
+msgctxt "HolidayRegion|zodiac symbol for Leo"
+msgid "lion"
+msgstr "lav"
+
+#: zodiac.cpp:280
+msgctxt "HolidayRegion|zodiac symbol for Virgo"
+msgid "virgin"
+msgstr "devica"
+
+#: zodiac.cpp:282
+msgctxt "HolidayRegion|zodiac symbol for Libra"
+msgid "scales"
+msgstr "vaga"
+
+#: zodiac.cpp:284
+msgctxt "HolidayRegion|zodiac symbol for Scorpion"
+msgid "scorpion"
+msgstr "škorpija"
+
+#: zodiac.cpp:286
+msgctxt "HolidayRegion|zodiac symbol for Sagittarius"
+msgid "archer"
+msgstr "strelac"
+
+#: zodiac.cpp:288
+msgctxt "HolidayRegion|zodiac symbol for Capricorn"
+msgid "goat"
+msgstr "jarac"
+
+#: zodiac.cpp:290
+msgctxt "HolidayRegion|zodiac symbol for Aquarius"
+msgid "water carrier"
+msgstr "vodolija"
+
+#: zodiac.cpp:292
+msgctxt "HolidayRegion|zodiac symbol for Pices"
+msgid "fish"
+msgstr "ribe"
