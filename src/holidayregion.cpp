@@ -724,8 +724,18 @@ static QLocale::Language codeToLanguage(const QString &code)
 #endif
 // End Qt copied code
 
+static void initResources()
+{
+    static bool initDone = false;
+    if (!initDone) {
+        Q_INIT_RESOURCE(holidays);
+        initDone = true;
+    }
+}
+
 static QStringList allHolidayFiles(const QString &location = QString())
 {
+    initResources();
     QStringList dirs{ QStringLiteral(":/org.kde.kholidays/plan2") };
     dirs += QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
                              QStringLiteral("kf5/libkholidays/plan2"),
@@ -752,6 +762,7 @@ public:
             if (!file.isEmpty()) {
                 mHolidayFile.setFile(file);
             } else {
+                initResources();
                 file = QStringLiteral(":/org.kde.kholidays/plan2/holiday_") + mRegionCode;
                 if (QFile::exists(file)) {
                     mHolidayFile.setFile(file);
