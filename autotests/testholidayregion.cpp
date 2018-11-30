@@ -46,7 +46,7 @@ void HolidayRegionTest::printMetadata(const KHolidays::HolidayRegion &region)
 
 void HolidayRegionTest::printHolidays(KHolidays::Holiday::List holidays)
 {
-    if (holidays.count() > 0) {
+    if (!holidays.isEmpty()) {
         foreach (const KHolidays::Holiday &holiday, holidays) {
             qDebug() << "Date = " << holiday.observedStartDate().toString(Qt::ISODate)
                      << " Duration = " << holiday.duration()
