@@ -60,14 +60,14 @@ description "Файл списку святкових днів України"
                                                                                   [tuesday after ([may 2])] :
                                                                                   noop ) )
 : Victory Day
-"День Перемоги"                                                     public on ((year <= 2015) ? may 9 : noop)
+"День Перемоги"                                                     public on ((year <= 2015) ? [may 9] : noop)
 : Victory Day Substitute Holiday
 "День Перемоги"                                                     public on ((year <= 2015) && ((([may 9] == [saturday after ([may 9])]) ||
                                                                                  ([may 9] == [sunday after ([may 9])]))) ?
                                                                                   [monday after ([may 9])] :
                                                                                   noop )
 : Victory Day over Nazism in World War II
-"День перемоги над нацизмом у Другій світовій війні"                public on ((year >= 2016) ? may 9 : noop)
+"День перемоги над нацизмом у Другій світовій війні"                public on ((year >= 2016) ? [may 9] : noop)
 : Victory Day over Nazism in World War II Substitute Holiday
 "День перемоги над нацизмом у Другій світовій війні"                public on ((year >= 2016) && ((([may 9] == [saturday after ([may 9])]) ||
                                                                                  ([may 9] == [sunday after ([may 9])]))) ?

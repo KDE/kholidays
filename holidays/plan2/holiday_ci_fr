@@ -16,7 +16,7 @@ language    "fr"
 :name        "[optional - defaults to country name]"
 description "Jours fériés et chômés"
 
-:: Public Holidays 
+:: Public Holidays
 "Fête du 1er janvier"                                                        public cultural on 1.1
 "Lundi de Pâques"                                                            public religious on easter plus 1 days
 "Fête du travail"                                                            public cultural on 1.5.
@@ -33,9 +33,9 @@ description "Jours fériés et chômés"
 "Lendemain de l’anniversaire de la naissance du Prophète Mahomet (Maouloud)" public religious on hijri rabialawal 12
 "Lendemain de la nuit du destin (Laïlatou-Kadr)"                             public religious on hijri ramadan 27
 "Fête du Ramadan (Aîd-El-Fitr)"                                              public religious on hijri shawwal 1
-"Lendemain de la Fête du Ramadan (Aîd-El-Fitr)"                              public on ( ([hijri shawwal 1] == [sunday after ([hijri shawwal 1])]) ? [monday after ([hijri shawwal 1])] : noop )
+"Lendemain de la Fête du Ramadan (Aîd-El-Fitr)"                              public on hijri ( ([shawwal 1] == [sunday after ([shawwal 1])]) ? [monday after ([shawwal 1])] : noop )
 "Fête de la Tabaski (Aîd-El-Kébir)"                                          public religious on hijri thualhijjah 10
-"Lendemain de la Fête de la Tabaski (Aîd-El-Kébir)"                          public on ( ([hijri thualhijjah 10] == [sunday after ([hijri thualhijjah 10])]) ? [monday after ([hijri thualhijjah 10])] : noop )
+"Lendemain de la Fête de la Tabaski (Aîd-El-Kébir)"                          public on hijri ( ([thualhijjah 10] == [sunday after ([thualhijjah 10])]) ? [monday after ([thualhijjah 10])] : noop )
 
 :: Civil
 
