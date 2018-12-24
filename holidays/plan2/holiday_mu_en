@@ -37,6 +37,21 @@ description "National holiday file for Mauritius"
 "Christmas"                         public on december 25
 
 :: Religious
+"Islamic New Year"                          religious on hijri muharram 1
+"Aashura"                                   religious on hijri muharram 10
+"Urs Makhdoom Ashraf Jahangeer Simnaani"    religious on hijri muharram 28
+"Urs Data Ganj Baksh"                       religious on hijri safar 18
+"Urs Data Ganj Baksh"                       religious on hijri safar 19
+"Urs Data Ganj Baksh"                       religious on hijri safar 20
+"Urs Aala-Hazrat"                           religious on hijri safar 27
+"Urs Hazrat Imaam Hassan"                   religious on hijri safar 28
+"Eid-e-Meelaad"                             religious on hijri rabi-ul-awwal 12
+"Urs-e-Ghous-ul-Aazam"                      religious on hijri rabi-ul-akhir 11
+"Urs Khwaja Ghareeb Nawaaz"                 religious on hijri rajab 6
+"Me'raaj-un-Nabi"                           religious on hijri rajab 27
+"Shab-e-Baraa'at"                           religious on hijri shabaan 15
+"Eid-ul-Fitr"		                        religious on hijri shawaal 1
+"Eid-ul-Adha"		                        religious on hijri zil-hijjah 10
 
 :: Financial
 
