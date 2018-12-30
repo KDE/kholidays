@@ -1,13 +1,13 @@
 ::
-:: Country:   Mauritius
+:: Country:  Mauritius
 ::
-:: Language:  UK English
+:: Language: UK English
 ::
-:: Author:    Nadim Attari <nadim.attari@gmail.com>
+:: Author:   Nadim Attari <nadim.attari@gmail.com>
 ::
-:: Updated:
+:: Updated:  2018-12-24
 ::
-:: Source:   These were taken from http://pmo.govmu.org 
+:: Source:   Public holidays have been taken from http://pmo.govmu.org/English/Documents/Communiqu%C3%A9%20and%20Reports/Public%20Holidays%20-%202019.pdf
 ::           Note: Only the fixed holidays are available. Some celebrations depend on
 ::           special events, eg: The exact date of Eid-ul-Fitr is subject to
 ::           confirmation as its celebration depends on the visibility of the moon
@@ -20,23 +20,38 @@ name        "Mauritius"
 description "National holiday file for Mauritius"
 
 :: Public Holidays
-"New Year"				public on january 01
-"New Year"				public on january 02
-"Chinese Spring Festival"		public on january 28
-"Abolition Of Slavery"			public on february 01
-"Thaipoosam Cavadee"			public on february 09
-"Maha Shivaratree"			public on february 24
-"Independence And Republic Day"		public on march 12
-"Ugaadi"				public on march 29
-"Labour Day"				public on may 01
-"Eid-ul-fitr"				public on june 26
-"Ganesh Chaturthi"			public on august 26
-"Divali"				public on october 19
-"All Saints Day"			public on november 01
-"Arrival Of Indentured Labourers"	public on november 02
-"Christmas"				public on december 25
+"New Year"                          public on january 01
+"New Year"                          public on january 02
+"Thaipoosam Cavadee"                public religious on january 21
+"Abolition Of Slavery"              public on february 01
+"Chinese Spring Festival"           public religious on february 05
+"Maha Shivaratree"                  public religious on march 04
+"Independence And Republic Day"     public on march 12
+"Ugaadi"                            public religious on april 06
+"Labour Day"                        public on may 01
+"Eid-ul-Fitr"		                public religious on june 05
+"Ganesh Chaturthi"                  public religious on september 03
+"Divali"				            public religious on october 27
+"All Saints Day"                    public religious on november 01
+"Arrival Of Indentured Labourers"   public on november 02
+"Christmas"                         public on december 25
 
 :: Religious
+"Islamic New Year"                          religious on hijri muharram 1
+"Aashura"                                   religious on hijri muharram 10
+"Urs Makhdoom Ashraf Jahangeer Simnaani"    religious on hijri muharram 28
+"Urs Data Ganj Baksh"                       religious on hijri safar 18
+"Urs Data Ganj Baksh"                       religious on hijri safar 19
+"Urs Data Ganj Baksh"                       religious on hijri safar 20
+"Urs Aala-Hazrat"                           religious on hijri safar 27
+"Urs Hazrat Imaam Hassan"                   religious on hijri safar 28
+"Eid-e-Meelaad"                             religious on hijri rabi-ul-awwal 12
+"Urs-e-Ghous-ul-Aazam"                      religious on hijri rabi-ul-akhir 11
+"Urs Khwaja Ghareeb Nawaaz"                 religious on hijri rajab 6
+"Me'raaj-un-Nabi"                           religious on hijri rajab 27
+"Shab-e-Baraa'at"                           religious on hijri shabaan 15
+"Eid-ul-Fitr"		                        religious on hijri shawaal 1
+"Eid-ul-Adha"		                        religious on hijri zil-hijjah 10
 
 :: Financial
 
