@@ -1,0 +1,495 @@
+# Uyghur translation for libkholidays.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sahran <sahran.ug@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: libkholidays\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2015-06-13 09:34+0000\n"
+"PO-Revision-Date: 2013-09-08 07:05+0900\n"
+"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
+"Language: ug\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Qt-Contexts: true\n"
+
+#: astroseasons.cpp:145
+#, fuzzy
+#| msgid "June Solstice"
+msgctxt "AstroSeasons|"
+msgid "June Solstice"
+msgstr "June Solstice"
+
+#: astroseasons.cpp:147
+#, fuzzy
+#| msgid "June Solstice"
+msgctxt "AstroSeasons|"
+msgid "December Solstice"
+msgstr "June Solstice"
+
+#: astroseasons.cpp:149
+msgctxt "AstroSeasons|"
+msgid "March Equinox"
+msgstr ""
+
+#: astroseasons.cpp:151
+msgctxt "AstroSeasons|"
+msgid "September Equinox"
+msgstr ""
+
+#: holidayregion.cpp:893
+#, fuzzy
+#| msgctxt "Canadian region"
+#| msgid "Quebec"
+msgctxt "HolidayRegion|Canadian region"
+msgid "Quebec"
+msgstr "كىۋېبېك"
+
+#: holidayregion.cpp:895
+#, fuzzy
+#| msgctxt "German region"
+#| msgid "Bavaria"
+msgctxt "HolidayRegion|German region"
+msgid "Bavaria"
+msgstr "باۋارىيە"
+
+#: holidayregion.cpp:897
+#, fuzzy
+#| msgctxt "Spanish region"
+#| msgid "Catalonia"
+msgctxt "HolidayRegion|Spanish region"
+msgid "Catalonia"
+msgstr "كاتالونىيا"
+
+#: holidayregion.cpp:899
+msgctxt "HolidayRegion|UK Region"
+msgid "England and Wales"
+msgstr ""
+
+#: holidayregion.cpp:901
+#, fuzzy
+#| msgctxt "UK Region"
+#| msgid "England"
+msgctxt "HolidayRegion|UK Region"
+msgid "England"
+msgstr "ئەنگلىيە"
+
+#: holidayregion.cpp:903
+#, fuzzy
+#| msgctxt "UK Region"
+#| msgid "Wales"
+msgctxt "HolidayRegion|UK Region"
+msgid "Wales"
+msgstr "ۋېيلىس"
+
+#: holidayregion.cpp:905
+#, fuzzy
+#| msgctxt "UK Region"
+#| msgid "Scotland"
+msgctxt "HolidayRegion|UK Region"
+msgid "Scotland"
+msgstr "شوتلاندىيە"
+
+#: holidayregion.cpp:907
+#, fuzzy
+#| msgctxt "UK Region"
+#| msgid "Northern Ireland"
+msgctxt "HolidayRegion|UK Region"
+msgid "Northern Ireland"
+msgstr "شىمالىي ئىرېلاندىيە"
+
+#: holidayregion.cpp:909
+#, fuzzy
+#| msgctxt "Australian Region"
+#| msgid "South Australia"
+msgctxt "HolidayRegion|Italian Region"
+msgid "South Tyrol"
+msgstr "جەنۇبىي ئاۋسترالىيە"
+
+#: holidayregion.cpp:911
+#, fuzzy
+#| msgctxt "Australian Region"
+#| msgid "New South Wales"
+msgctxt "HolidayRegion|"
+msgid "New South Wales"
+msgstr "يېڭى جەنۇبىي ۋېيلىس"
+
+#: holidayregion.cpp:913
+#, fuzzy
+#| msgctxt "Australian Region"
+#| msgid "Queensland"
+msgctxt "HolidayRegion|Australian Region"
+msgid "Queensland"
+msgstr "كىۋىنسلاند"
+
+#: holidayregion.cpp:915
+#, fuzzy
+#| msgctxt "Australian Region"
+#| msgid "Victoria"
+msgctxt "HolidayRegion|Australian Region"
+msgid "Victoria"
+msgstr "ۋىكتورىيە"
+
+#: holidayregion.cpp:917
+#, fuzzy
+#| msgctxt "Australian Region"
+#| msgid "South Australia"
+msgctxt "HolidayRegion|Australian Region"
+msgid "South Australia"
+msgstr "جەنۇبىي ئاۋسترالىيە"
+
+#: holidayregion.cpp:919
+#, fuzzy
+#| msgctxt "Australian Region"
+#| msgid "Northern Territory"
+msgctxt "HolidayRegion|Australian Region"
+msgid "Northern Territory"
+msgstr "شىمالىي تېررىتورىيە"
+
+#: holidayregion.cpp:922
+#, fuzzy
+#| msgctxt "Australian Region"
+#| msgid "Australian Capital Territory"
+msgctxt "HolidayRegion|Australian Region"
+msgid "Australian Capital Territory"
+msgstr "ئاۋسترالىيە پايتەخت تېررىتورىيىسى"
+
+#: holidayregion.cpp:925
+#, fuzzy
+#| msgctxt "Australian Region"
+#| msgid "Western Australia"
+msgctxt "HolidayRegion|Australian Region"
+msgid "Western Australia"
+msgstr "غەربىي ئاۋسترالىيە"
+
+#: holidayregion.cpp:928
+#, fuzzy
+#| msgctxt "Australian Region"
+#| msgid "Tasmania"
+msgctxt "HolidayRegion|Australian Region"
+msgid "Tasmania"
+msgstr "تاسمانىيە"
+
+#: holidayregion.cpp:931
+msgctxt "HolidayRegion|Bosnian and Herzegovinian Region"
+msgid "Republic of Srpska"
+msgstr ""
+
+#: holidayregion.cpp:950
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "Public"
+msgctxt "HolidayRegion|Holiday type"
+msgid "Public"
+msgstr "ئاممىۋى"
+
+#: holidayregion.cpp:952
+msgctxt "HolidayRegion|Holiday type"
+msgid "Civil"
+msgstr ""
+
+#: holidayregion.cpp:954
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "Religious"
+msgctxt "HolidayRegion|Holiday type"
+msgid "Religious"
+msgstr "دىن"
+
+#: holidayregion.cpp:956
+msgctxt "HolidayRegion|Holiday type"
+msgid "Government"
+msgstr ""
+
+#: holidayregion.cpp:958
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "Financial"
+msgctxt "HolidayRegion|Holiday type"
+msgid "Financial"
+msgstr "مالىيە"
+
+#: holidayregion.cpp:960
+msgctxt "HolidayRegion|Holiday type"
+msgid "Cultural"
+msgstr ""
+
+#: holidayregion.cpp:962
+msgctxt "HolidayRegion|Holiday type"
+msgid "Commemorative"
+msgstr ""
+
+#: holidayregion.cpp:964
+#, fuzzy
+#| msgctxt "Australian Region"
+#| msgid "Victoria"
+msgctxt "HolidayRegion|Holiday type"
+msgid "Historical"
+msgstr "ۋىكتورىيە"
+
+#: holidayregion.cpp:966
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "School"
+msgctxt "HolidayRegion|Holiday type"
+msgid "School"
+msgstr "مەكتەپ"
+
+#: holidayregion.cpp:968
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "Personal"
+msgctxt "HolidayRegion|Holiday type"
+msgid "Seasonal"
+msgstr "شەخسىي"
+
+#: holidayregion.cpp:970
+msgctxt "HolidayRegion|Holiday type"
+msgid "Name Days"
+msgstr ""
+
+#: holidayregion.cpp:972
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "Personal"
+msgctxt "HolidayRegion|Holiday type"
+msgid "Personal"
+msgstr "شەخسىي"
+
+#: holidayregion.cpp:974
+msgctxt "HolidayRegion|Holiday type"
+msgid "Christian"
+msgstr ""
+
+#: holidayregion.cpp:976
+msgctxt "HolidayRegion|Holiday type"
+msgid "Anglican"
+msgstr ""
+
+#: holidayregion.cpp:978
+msgctxt "HolidayRegion|Holiday type"
+msgid "Catholic"
+msgstr ""
+
+#: holidayregion.cpp:980
+msgctxt "HolidayRegion|Holiday type"
+msgid "Protestant"
+msgstr ""
+
+#: holidayregion.cpp:982
+msgctxt "HolidayRegion|Holiday type"
+msgid "Orthodox"
+msgstr ""
+
+#: holidayregion.cpp:984
+msgctxt "HolidayRegion|Holiday type"
+msgid "Jewish"
+msgstr ""
+
+#: holidayregion.cpp:986
+msgctxt "HolidayRegion|Holiday type"
+msgid "Jewish Orthodox"
+msgstr ""
+
+#: holidayregion.cpp:988
+msgctxt "HolidayRegion|Holiday type"
+msgid "Jewish Conservative"
+msgstr ""
+
+#: holidayregion.cpp:990
+msgctxt "HolidayRegion|Holiday type"
+msgid "Jewish Reform"
+msgstr ""
+
+#: holidayregion.cpp:992
+msgctxt "HolidayRegion|Holiday type"
+msgid "Islamic"
+msgstr ""
+
+#: holidayregion.cpp:994
+msgctxt "HolidayRegion|Holiday type"
+msgid "Islamic Sunni"
+msgstr ""
+
+#: holidayregion.cpp:996
+msgctxt "HolidayRegion|Holiday type"
+msgid "Islamic Shia"
+msgstr ""
+
+#: holidayregion.cpp:998
+msgctxt "HolidayRegion|Holiday type"
+msgid "Islamic Sufi"
+msgstr ""
+
+#: holidayregion.cpp:1005
+#, qt-format
+msgctxt ""
+"HolidayRegion|Holiday file display name, %1 = region name, %2 = holiday type"
+msgid "%1 - %2"
+msgstr ""
+
+#: holidayregion.cpp:1015
+#, fuzzy
+#| msgctxt "Unknown holiday region"
+#| msgid "Unknown"
+msgctxt "HolidayRegion|Unknown holiday region"
+msgid "Unknown"
+msgstr "نامەلۇم"
+
+#: lunarphase.cpp:46
+#, fuzzy
+#| msgid "New Moon"
+msgctxt "LunarPhase|"
+msgid "New Moon"
+msgstr "يېڭى ئاي"
+
+#: lunarphase.cpp:48
+#, fuzzy
+#| msgid "Full Moon"
+msgctxt "LunarPhase|"
+msgid "Full Moon"
+msgstr "تولۇن ئاي"
+
+#: lunarphase.cpp:50
+msgctxt "LunarPhase|"
+msgid "First Quarter Moon"
+msgstr ""
+
+#: lunarphase.cpp:52
+msgctxt "LunarPhase|"
+msgid "Last Quarter Moon"
+msgstr ""
+
+#: zodiac.cpp:79
+msgctxt "Zodiac|"
+msgid "Aries"
+msgstr ""
+
+#: zodiac.cpp:81
+msgctxt "Zodiac|"
+msgid "Taurus"
+msgstr ""
+
+#: zodiac.cpp:83
+msgctxt "Zodiac|"
+msgid "Gemini"
+msgstr ""
+
+#: zodiac.cpp:85
+msgctxt "Zodiac|"
+msgid "Cancer"
+msgstr ""
+
+#: zodiac.cpp:87
+#, fuzzy
+#| msgid "Leo"
+msgctxt "Zodiac|"
+msgid "Leo"
+msgstr "Leo"
+
+#: zodiac.cpp:89
+msgctxt "Zodiac|"
+msgid "Virgo"
+msgstr ""
+
+#: zodiac.cpp:91
+#, fuzzy
+#| msgid "Libra"
+msgctxt "Zodiac|"
+msgid "Libra"
+msgstr "لىبرا"
+
+#: zodiac.cpp:93
+msgctxt "Zodiac|"
+msgid "Scorpio"
+msgstr ""
+
+#: zodiac.cpp:95
+#, fuzzy
+#| msgid "Sagittarius"
+msgctxt "Zodiac|"
+msgid "Sagittarius"
+msgstr "ساگىتتارىئۇس"
+
+#: zodiac.cpp:97
+msgctxt "Zodiac|"
+msgid "Capricorn"
+msgstr ""
+
+#: zodiac.cpp:99
+msgctxt "Zodiac|"
+msgid "Aquarius"
+msgstr ""
+
+#: zodiac.cpp:101
+msgctxt "Zodiac|"
+msgid "Pisces"
+msgstr ""
+
+#: zodiac.cpp:270
+msgctxt "HolidayRegion|zodiac symbol for Aries"
+msgid "ram"
+msgstr ""
+
+#: zodiac.cpp:272
+msgctxt "HolidayRegion|zodiac symbol for Taurus"
+msgid "bull"
+msgstr ""
+
+#: zodiac.cpp:274
+msgctxt "HolidayRegion|zodiac symbol for Gemini"
+msgid "twins"
+msgstr ""
+
+#: zodiac.cpp:276
+msgctxt "HolidayRegion|zodiac symbol for Cancer"
+msgid "crab"
+msgstr ""
+
+#: zodiac.cpp:278
+msgctxt "HolidayRegion|zodiac symbol for Leo"
+msgid "lion"
+msgstr ""
+
+#: zodiac.cpp:280
+msgctxt "HolidayRegion|zodiac symbol for Virgo"
+msgid "virgin"
+msgstr ""
+
+#: zodiac.cpp:282
+#, fuzzy
+#| msgctxt "UK Region"
+#| msgid "Wales"
+msgctxt "HolidayRegion|zodiac symbol for Libra"
+msgid "scales"
+msgstr "ۋېيلىس"
+
+#: zodiac.cpp:284
+msgctxt "HolidayRegion|zodiac symbol for Scorpion"
+msgid "scorpion"
+msgstr ""
+
+#: zodiac.cpp:286
+msgctxt "HolidayRegion|zodiac symbol for Sagittarius"
+msgid "archer"
+msgstr ""
+
+#: zodiac.cpp:288
+msgctxt "HolidayRegion|zodiac symbol for Capricorn"
+msgid "goat"
+msgstr ""
+
+#: zodiac.cpp:290
+msgctxt "HolidayRegion|zodiac symbol for Aquarius"
+msgid "water carrier"
+msgstr ""
+
+#: zodiac.cpp:292
+msgctxt "HolidayRegion|zodiac symbol for Pices"
+msgid "fish"
+msgstr ""
