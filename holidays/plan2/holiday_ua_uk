@@ -7,7 +7,7 @@
 ::            Oleg Ivashchenko <ol_iva@i.ua>
 ::            Yuri Chornoivan  <yurchor@ukr.net>
 ::
-:: Updated:   2016-03-03
+:: Updated:   2019-01-31
 ::
 :: Source:   http://en.wikipedia.org/wiki/Public_holidays_in_Ukraine
 ::           http://uk.wikipedia.org/wiki/Свята_та_пам'ятні_дні_в_Україні
@@ -139,6 +139,8 @@ description "Файл списку святкових днів України"
 "День пам'яті та примирення"                                        cultural on may 8
 : Mother's Day
 "День матері"                                                       cultural on second sunday in may
+: Day of Remembrance for the Victims of the Crimean Tatar Genocide
+"День боротьби за права кримськотатарського народу"                 cultural on may 18
 : Europe Day
 "День Європи"                                                       cultural on third saturday in may
 : Saints Cyril and Methodius Day
@@ -179,10 +181,8 @@ description "Файл списку святкових днів України"
 "Міжнародний день митника"                                                                  cultural on january 26
 : Firefighter's Day
 "День працівників пожежної охорони"                                                         cultural on january 29
-: Soviet Troop Withdrawal from Afghanistan Day
+: Day of Commemoration of Combatants in the Territories of Other States
 "День вшанування учасників бойових дій на території інших держав"                           cultural on february 15
-: Defender of the Fatherland Day
-"День захисника Вітчизни"                                                                   cultural on february 23
 : Land Surveyor's Day
 "День землевпорядника"                                                                      cultural on second saturday in march
 : Day of the Housing and Consumer Services
@@ -239,14 +239,18 @@ description "Файл списку святкових днів України"
 "День працівників морського та річкового флоту"                                             cultural on first sunday in july
 : Fishman's Day
 "День рибалки"                                                                              cultural on second sunday in july
+: Ukrainian Peacekeepers Day
+"День українських миротворців"                                                              cultural on july 15
 : Bookkeeper's Day
 "День бухгалтера"                                                                           cultural on july 16
 : Metallurgical and Miner's Day
 "День працівників металургійної та гірничодобувної промисловості"                           cultural on third sunday in july
 : Tradesman's Day
 "День працівників торгівлі"                                                                 cultural on last sunday in july
-: Airborne Day
-"День аеромобільних військ"                                                                 cultural on august 2
+: Military Special Forces Day
+"День Сил спеціальних операцій Збройних сил України"                                        cultural on july 29
+: National Police Day
+"День Національної поліції України"                                                         cultural on august 4
 : Military Operator's Day
 "День військ зв'язку"                                                                       cultural on august 8
 : Builder's Day
@@ -319,6 +323,8 @@ description "Файл списку святкових днів України"
 "День працівників гідрометеорологічної служби"                                              cultural on november 19
 : Glass Worker's Day
 "День скловиробника"                                                                        cultural on november 19
+: Airborne Day
+"День десантно-штурмових військ"                                                            cultural on november 21
 : Farmer's Day
 "День працівників сільського господарства"                                                  cultural on third sunday in november
 : Procuracy Day
@@ -337,8 +343,6 @@ description "Файл списку святкових днів України"
 "День працівників суду"                                                                     cultural on december 15
 : Advocasy Day
 "День адвокатури"                                                                           cultural on december 19
-: Militia Day
-"День міліції"                                                                              cultural on december 20
 : Diplomatist's Day
 "День працівників дипломатичної служби"                                                     cultural on december 22
 : Power Engineering Day
