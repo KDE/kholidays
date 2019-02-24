@@ -95,7 +95,7 @@ void HolidayParserDriverPlan::error(const QString &errorMessage)
 void HolidayParserDriverPlan::parse()
 {
     // Parse the file using every calendar system in the file
-    foreach (const QString &calendarType, m_fileCalendarTypes) {
+    for (const QString &calendarType : qAsConst(m_fileCalendarTypes)) {
 
         // Cater for events defined in other Calendar Systems where request year could cover 2 or 3 event years
         // Perhaps also parse year before and year after to allow events to span years or shift to other year?
@@ -337,7 +337,7 @@ QString HolidayParserDriverPlan::systemToType(QCalendarSystem::CalendarSystem ca
 // Return the jd of an existing event, assumes unique names and correct order in file
 int HolidayParserDriverPlan::julianDayFromEventName(const QString &eventName)
 {
-    foreach (const KHolidays::Holiday &thisHoliday, m_resultList) {
+    for (const KHolidays::Holiday &thisHoliday : qAsConst(m_resultList)) {
         if (thisHoliday.name() == eventName) {
             return thisHoliday.observedStartDate().toJulianDay();
         }

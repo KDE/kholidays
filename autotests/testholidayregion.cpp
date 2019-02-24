@@ -44,10 +44,10 @@ void HolidayRegionTest::printMetadata(const KHolidays::HolidayRegion &region)
     qDebug() << "";
 }
 
-void HolidayRegionTest::printHolidays(KHolidays::Holiday::List holidays)
+void HolidayRegionTest::printHolidays(const KHolidays::Holiday::List &holidays)
 {
     if (!holidays.isEmpty()) {
-        foreach (const KHolidays::Holiday &holiday, holidays) {
+        for (const KHolidays::Holiday &holiday : holidays) {
             qDebug() << "Date = " << holiday.observedStartDate().toString(Qt::ISODate)
                      << " Duration = " << holiday.duration()
                      << " Name = " << holiday.name();
@@ -139,15 +139,15 @@ void HolidayRegionTest::testIsrael()
 void HolidayRegionTest::testRegions()
 {
     qDebug() << "Available region codes:";
-    QStringList regionCodes = KHolidays::HolidayRegion::regionCodes();
-    foreach (const QString &regionCode, regionCodes) {
+    const QStringList regionCodes = KHolidays::HolidayRegion::regionCodes();
+    for (const QString &regionCode : regionCodes) {
         KHolidays::HolidayRegion testRegion(regionCode);
         qDebug() << regionCode << " = " << testRegion.name();
     }
     qDebug() << "";
 
     qDebug() << "This years holidays:";
-    foreach (const QString &regionCode, regionCodes) {
+    for (const QString &regionCode : regionCodes) {
         KHolidays::HolidayRegion testRegion(regionCode);
         printMetadata(testRegion);
         parseRegionCalendarYear(testRegion, QDate::currentDate().year());

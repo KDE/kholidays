@@ -1128,7 +1128,7 @@ QString HolidayRegion::defaultRegionCode(const QString &country, const QString &
             languageSubdivisionAndLanguageMatch, languageSubdivisionOnlyMatch;
 
     const QStringList regionList = KHolidays::HolidayRegion::regionCodes();
-    foreach (const QString &regionCode, regionList) {
+    for (const QString &regionCode : regionList) {
         QString regionCountry = KHolidays::HolidayRegion::countryCode(regionCode).toLower();
         QString regionSubdivisionCountry;
         if (regionCountry.split(QLatin1Char('-')).count() > 1) {
