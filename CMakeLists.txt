@@ -32,7 +32,7 @@ option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, 
 add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)")
 
 ########### Find packages ###########
-set(QT_REQUIRED_VERSION 5.8.0)
+set(QT_REQUIRED_VERSION 5.10.0)
 find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Core Qml)
 
 remove_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII)
