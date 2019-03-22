@@ -6,6 +6,7 @@
 :: Author:   Krzysztof P. Jasiutowicz <kpjas@promail.pl>
 ::
 :: Updated:
+:: 2019-03-22: added english names, sort categories.
 ::
 :: Source:
 ::
@@ -17,28 +18,71 @@ language    "pl"
 :description "(please add description in source language) National holiday file for Poland"
 
 :: Public Holidays
+: New Year's Day
 "Nowy Rok"               public on january 1
-"Wielkanoc"              public religious on easter length 2 days
-"Lany Poniedziałek"      public on easter plus 1 day
-"Zielone Świątki"        public religious on easter plus 49 days
-"Boże Ciało"             public religious on easter plus 60 days
+: Epiphany (public holiday since 2011)
+"Trzech Króli"           public on january 6
+: Easter
+"Niedziela Wielkanocna"  public religious on easter
+: Easter Monday
+"Poniedziałek Wielkanocny" public on easter plus 1 day
+: May Day
 "Święto Pracy"           public on may 1
-"Święto Konstytucji"     public on may 3
+: Constitution Day
+"Święto Konstytucji 3 Maja" public on may 3
+: Pentecost Sunday
+"Zielone Świątki"        public religious on easter plus 49 days
+: Corpus Christi
+"Boże Ciało"             public religious on easter plus 60 days
+: Assumption
 "Wniebowzięcie NMP"      public on august 15
+: All Saints day
 "Wszystkich Świętych"    public religious on november 1
+: Independence Day
 "Święto Niepodległości"  public on november 11
+: Christmas Day and Second day of Christmastide
 "Boże Narodzenie"        public religious on december 25 length 2 days
 
 :: Religious
-"Śledzik"                religious on easter minus 47 days
+: Ash Wednesday
 "Popielec"               religious on easter minus 46 days
+: Good Friday
 "Wielki Piątek"          religious on easter minus  2 days
+: Palm Sunday
 "Niedziela Palmowa"      religious on easter minus 7 days
+: All souls' Day
+"Zaduszki"               religious on november 2
+: Vigil
+"Wigilia"                religious on december 24
 
 :: Financial
 
 :: Cultural
+:Grandma's Day
+"Dzień Babci"            Cultural on january 21
+: Grandpa's Day
+"Dzień Dziadka"          Cultural on january 22
+: Valentine's Day
 "Walentynki"             cultural on february 14
+: Women's Day
+"Dzień Kobiet"           cultural on march 8
+: Fat Tuesday
+: FIXME: No information on events happening on Fat Tuesday in Poland
+"Śledzik"                cultural on easter minus 47 days
+: Flag Day
+"Dzień Flagi"            cultural on may 2
+: Mother's Day
+"Dzień Matki"            cultural on may 26
+: Children's Day
+"Dzień Dziecka"          cultural on june 1
+: Father's Day
+"Dzień Ojca"             cultural on june 23
+: Saint Andrew's Day
+"Andrzejki"              cultural on november 30
+: Saint Nicholas Day
+"Mikołajki"              cultural on december 6
+: New Year's eve
+"Sylwester"              cultural on december 31
 
 :: School
 
@@ -46,18 +90,4 @@ language    "pl"
 
 :: Name Days
 
-
 :: To be sorted
-"Trzech Króli"           civil on january 6
-"Dzień Babci"            civil on january 21
-"Dzień Dziadka"          civil on january 22
-"Dzień Kobiet"           civil on march 8
-"Dzień Flagi"            civil on may 2
-"Dzień Matki"            civil on may 26
-"Dzień Dziecka"          civil on june 1
-"Dzień Ojca"             civil on june 23
-"Zaduszki"               civil on november 2
-"Andrzejki"              civil on november 30
-"Św. Mikołaj"            civil on december 6
-"Wigilia"                civil on december 24
-"Sylwester"              civil on december 31
