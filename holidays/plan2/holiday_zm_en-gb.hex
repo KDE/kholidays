@@ -1,0 +1,50 @@
+::
+:: Country:  Zambia
+::
+:: Author:   Samuel Dokowe <sdokowe@msn.com>
+::
+:: Language: UK English
+::
+:: Updated:
+::
+:: Source:
+::
+
+:: Metadata
+country     "ZM"
+language    "en_GB"
+:name        "optional - defaults to country name"
+description "National holiday file for Zambia"
+
+:: Public Holidays
+"New Year's Day"            public on january 1    shift to monday if sunday
+"International Women's Day"	public on March 8      shift to monday if sunday
+"Youth Day"			       	    public on march 12     shift to monday if sunday
+"Good Friday"            	  public religious on easter minus 2 days
+"Easter Monday"				      public on easter plus 1 days
+"Labour Day"             	  public on may 1 	   shift to monday if sunday
+"Africa Freedom Day"       	public on may 25       shift to monday if sunday
+"Heroes' Day"            	  public on first monday in july
+"Unity Day"              	  public on first tuesday in july
+"Farmers Day"  			 	      public on first monday in august
+"National Day of Prayer"   	public on october 18   shift to monday if sunday
+"Independance Day"  		    public on october 24   shift to monday if sunday
+"Christmas Day"          	  public religious on december 25  shift to monday if sunday
+
+:: Religious Holidays
+"Holy Saturday"             religious on easter minus 1 days
+		
+:: Financial
+
+:: Cultural
+"Valentine's Day"           cultural on february 14
+"Mother's Day"              cultural on second sunday in may
+"Father's Day"              cultural on second sunday in june
+
+:: School
+
+:: Daylight Saving
+
+:: Seasons
+
+:: Name Days
