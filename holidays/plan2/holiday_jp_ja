@@ -7,13 +7,13 @@
 ::
 :: Language: Japanese
 ::
-:: Updated:  2018-07-16
+:: Updated:  2019-04-13
 ::
 :: Source:   http://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html
 ::           http://www.nao.ac.jp/faq/a0301.html
 ::
 :: Note:     On each Februaries, Vernal and Autumnal Equinox Days of next year are announced by government.
-::           Currently Equinox Days on and after 2019 are expected dates and may be changed.
+::           Currently Equinox Days on and after 2020 are expected dates and may be changed.
 
 :: Metadata
 country     "JP"
@@ -30,7 +30,7 @@ description "日本の国民の休日のファイルです。"
 "建国記念日"                          public on february 11
 
 :"Vernal Equinox Day"
-:: Equinox Days on and after 2019 are expected dates. See notes above.
+:: Equinox Days on and after 2020 are expected dates. See notes above.
 "春分の日"                            public on march 20 2000
 "春分の日"                            public on march 20 2001
 "春分の日"                            public on march 21 2002
@@ -72,14 +72,14 @@ description "日本の国民の休日のファイルです。"
 :"Children's Day"
 "こどもの日"                          public on may 5
 :"Oceans' Day"
-"海の日"                             public on third monday in july
+"海の日"                             public on ((year == 2020) ? [july 23] : [third monday in july])
 :"Mountain Day"
-"山の日"                             public on august 11
+"山の日"                             public on ((year == 2020) ? [august 10] : [august 11])
 :"Respect for Senior Citizens Day"
 "敬老の日"                            public on third monday in september
 
 :"Autumnal Equinox Day"
-:: Equinox Days on and after 2019 are expected dates. See notes above.
+:: Equinox Days on and after 2020 are expected dates. See notes above.
 "秋分の日"                            public on september 23 2000
 "秋分の日"                            public on september 23 2001
 "秋分の日"                            public on september 23 2002
@@ -112,14 +112,15 @@ description "日本の国民の休日のファイルです。"
 "秋分の日"                            public on september 23 2029
 "秋分の日"                            public on september 23 2030
 
-:"Sports Day"
-"体育の日"                            public on second monday in october
+:"Sports Day" (new name after 2020)
+"体育の日"                            public on ((year < 2020) ? [second monday in october] : noop)
+"スポーツの日"                         public on ((year > 2020) ? [second monday in october] : ((year == 2020) ? [july 24] : noop))
 :"Culture Day"
 "文化の日"                            public on november 3
 :"Labor Thanksgiving Day"
 "勤労感謝の日"                         public on november 23
 :"The Emperor's Birthday"
-"天皇誕生日"                          public on december 23
+"天皇誕生日"                          public on ((year < 2019) ? [december 23] : ((year > 2019) ? [february 23] : noop))
 
 :: If a "Public Holiday" is on a Sunday, the first following day which
 :: is not a "Public Holiday" shall be a substitute holiday. If a day
@@ -127,33 +128,40 @@ description "日本の国民の休日のファイルです。"
 :: it shall be a holiday. Those holidays are not legally "Public
 :: Holidays" (so in particular not for the purpose of determining such
 :: holidays), but they are identical in practice.
-"振替休日"                            public on march 21 2005
-"振替休日"                            public on january 2 2006
-"振替休日"                            public on february 12 2007
-"振替休日"                            public on april 30 2007
-"振替休日"                            public on september 24 2007
-"振替休日"                            public on december 24 2007
-"振替休日"                            public on november 24 2008
-"振替休日"                            public on march 22 2010
-"振替休日"                            public on january 2 2012
-"振替休日"                            public on april 30 2012
-"振替休日"                            public on december 24 2012
-"振替休日"                            public on may 6 2013
-"振替休日"                            public on november 4 2013
-"振替休日"                            public on may 6 2014
-"振替休日"                            public on november 24 2014
-"振替休日"                            public on may 6 2015
-"振替休日"                            public on march 21 2016
-"振替休日"                            public on january 2 2017
-"振替休日"                            public on february 12 2018
-"振替休日"                            public on april 30 2018
-"振替休日"                            public on september 24 2018
-"振替休日"                            public on december 24 2018
-"振替休日"                            public on may 6 2019
-"振替休日"                            public on august 12 2019
-"振替休日"                            public on november 4 2019
-
+"休日"                               public on march 21 2005
+"休日"                               public on january 2 2006
+"休日"                               public on february 12 2007
+"休日"                               public on april 30 2007
+"休日"                               public on september 24 2007
+"休日"                               public on december 24 2007
+"休日"                               public on november 24 2008
+"休日"                               public on march 22 2010
+"休日"                               public on january 2 2012
+"休日"                               public on april 30 2012
+"休日"                               public on december 24 2012
+"休日"                               public on may 6 2013
+"休日"                               public on november 4 2013
+"休日"                               public on may 6 2014
+"休日"                               public on november 24 2014
+"休日"                               public on may 6 2015
 "休日"                               public on september 22 2015
+"休日"                               public on march 21 2016
+"休日"                               public on january 2 2017
+"休日"                               public on february 12 2018
+"休日"                               public on april 30 2018
+"休日"                               public on september 24 2018
+"休日"                               public on december 24 2018
+"休日"                               public on may 6 2019
+"休日"                               public on august 12 2019
+"休日"                               public on november 4 2019
+"休日"                               public on february 24 2020
+"休日"                               public on may 6 2020
+
+:: 2019 Japanese imperial transition special arrangements
+"休日"                               public on april 30 2019
+"休日"                               public on may 1 2019
+"休日"                               public on may 2 2019
+"休日"                               public on october 22 2019
 
 :: Religious
 
