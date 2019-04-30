@@ -37,8 +37,8 @@ language    "lv"
                                                                                  noop )
 : Midsummers Eve
 "Līgo Diena"                                                        public on june 23
-: Midsummers Eve
-"Jāņi"                                                              public on june 23
+: Midsummer Day
+"Jāņi"                                                              public on june 24
 : Proclamation of the Republic of Latvia
 "Latvijas Republikas proklamēšanas diena"                           public on november 18
 "Latvijas Republikas proklamēšanas diena"                           public on ( ( ( [november 18] == [saturday after ([november 18])] ) ||
