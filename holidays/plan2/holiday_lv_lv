@@ -5,7 +5,7 @@
 ::
 :: Author:   John Layt <john@layt.net>
 ::
-:: Updated:  2011-02-25
+:: Updated:  2019-04-30
 ::
 :: Source:   http://www.li.lv/index.php?Itemid=420&id=18&option=com_content&task=view
 ::           http://en.wikipedia.org/wiki/Public_holidays_in_Latvia
@@ -35,10 +35,10 @@ language    "lv"
                                                                                  ( [may 4] == [sunday after ([may 4])] ) ) ?
                                                                                  [ monday after ([may 4]) ] :
                                                                                  noop )
-: Midsummers Eve
+: Midsummer's Eve
 "Līgo Diena"                                                        public on june 23
-: Midsummers Eve
-"Jāņi"                                                              public on june 23
+: Midsummer's Day
+"Jāņi"                                                              public on june 24
 : Proclamation of the Republic of Latvia
 "Latvijas Republikas proklamēšanas diena"                           public on november 18
 "Latvijas Republikas proklamēšanas diena"                           public on ( ( ( [november 18] == [saturday after ([november 18])] ) ||
