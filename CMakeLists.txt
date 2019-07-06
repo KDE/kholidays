@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.5)
 set(KF5_VERSION "5.60.0")
 project(KHolidays VERSION ${KF5_VERSION})
 
-find_package(ECM 5.59.0 REQUIRED NO_MODULE)
+find_package(ECM 5.60.0 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 set(CMAKE_AUTORCC ON)
 
