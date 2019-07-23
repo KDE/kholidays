@@ -39,6 +39,15 @@ language    "ru"
 "День России"                  public on june 12
 "День народного единства"      public on november 4
 
+:: Public Holidays' substitutes in 2019
+"Перенос выходного дня с 5 января"              public on ((year == 2019) ? [may 2] : noop)
+"Перенос выходного дня с 6 января"              public on ((year == 2019) ? [may 3] : noop)
+"Перенос выходного дня с 23 февраля"            public on ((year == 2019) ? [may 10] : noop)
+
+:: Public Holidays' substitutes in 2020
+"Перенос выходного дня с 4 января"              public on ((year == 2020) ? [may 4] : noop)
+"Перенос выходного дня с 5 января"              public on ((year == 2020) ? [may 5] : noop)
+
 :: Other (all that did not fit the categories below)
 "День единения народов"                                                 historical on april 2
 "День местного самоуправления"                                          historical on ((year >= 2013) ? [april 21] : noop)
