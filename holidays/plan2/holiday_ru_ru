@@ -6,7 +6,7 @@
 :: Authors:  Andrey Cherepanov <sibskull@mail.ru>
 ::           Alexander Potashev <aspotashev@gmail.com>
 ::
-:: Updated:  2015-03-11
+:: Updated:  2019-07-23
 ::
 :: Sources:  http://www.rg.ru/2006/06/03/voennye-prazdniki-dok.html
 ::           http://www.consultant.ru/document/cons_doc_LAW_171623/
@@ -51,6 +51,7 @@ language    "ru"
 "День пожилых людей"                                                    cultural on october 1
 "День памяти жертв политических репрессий"                              commemorative on october 30
 "День матери"                                                           cultural on last sunday in november
+"День добровольца (волонтёра)"                                          cultural on ((year >= 2017) ? [december 5] : noop)
 
 :: Public service professional holidays
 "День работника прокуратуры Российской Федерации"                       government on january 12
@@ -59,7 +60,10 @@ language    "ru"
 "День внутренних войск МВД России"                                      government on ((year < 2017) ? [march 27] : noop)
 "День войск национальной гвардии Российской Федерации"                  government on ((year >= 2017) ? [march 27] : noop)
 "День пограничника"                                                     government on may 28
+"День Государственной инспекции безопасности дорожного движения МВД России" government on ((year >= 2009) ? [july 3] : noop)
 "День таможенника Российской Федерации"                                 government on october 25
+"День работников СИЗО и тюрем"                                          government on ((year >= 2006) ? [october 31] : noop)
+"День специального отряда быстрого реагирования МВД России"             government on ((year >= 2004) ? [november 9] : noop)
 "День работника налоговых органов Российской Федерации"                 government on november 21
 "День работника органов безопасности Российской Федерации"              government on december 20
 
@@ -95,7 +99,9 @@ language    "ru"
 "День строителя"                                                        civil on second sunday in august
 "День российского кино"                                                 civil on august 27
 "День шахтёра"                                                          civil on last sunday in august
+"День ветеринарного работника"                                          civil on ((year >= 2014) ? [august 31] : noop)
 "День работников нефтяной и газовой промышленности"                     civil on first sunday in september
+"День финансиста"                                                       civil on ((year >= 2011) ? [september 8] : noop)
 "День программиста"                                                     civil on january 1 plus 255 days
 "День оружейника"                                                       civil on ((year >= 2012) ? [september 19] : noop)
 "День работников леса"                                                  civil on third sunday in september
@@ -108,6 +114,7 @@ language    "ru"
 "День судебного пристава"                                               civil on november 1
 "День милиции"                                                          civil on ((year < 2011) ? [november 10] : noop)
 "День сотрудника органов внутренних дел"                                civil on ((year >= 2011) ? [november 10] : noop)
+"День экономиста"                                                       civil on ((year >= 2016) ? [november 11] : noop)
 "День юриста"                                                           civil on ((year >= 2008) ? [december 3] : noop)
 "День энергетика"                                                       civil on december 22
 "День спасателя Российской Федерации"                                   civil on december 27
@@ -119,6 +126,7 @@ language    "ru"
 "День специалиста по ядерному обеспечению"                              government on september 4
 "День танкиста"                                                         government on second sunday in september
 "День военного связиста"                                                government on october 20
+"День финансово-экономической службы в Вооружённых Силах"               government on ((year >= 2015) ? [october 22] : noop)
 "День военного разведчика"                                              government on november 5
 
 :: Military memorable days
@@ -157,6 +165,7 @@ language    "ru"
 "День российского студенчества"                                         historical on january 25
 "День памяти воинов-интернационалистов"                                 commemorative on ((year >= 2011) ? [february 15] : noop)
 "День космонавтики"                                                     historical on april 12
+"День принятия Крыма, Тамани и Кубани в состав Российской империи (1783 год)" historical on ((year >= 2019) ? [april 19] : noop)
 "День памяти погибших в радиационных авариях и катастрофах"             commemorative on april 26
 "День российского парламентаризма"                                      historical on ((year >= 2012) ? [april 27] : noop)
 "День памяти и скорби"                                                  commemorative on june 22
