@@ -9,7 +9,6 @@ set(CMAKE_AUTORCC ON)
 
 include(GenerateExportHeader)
 include(ECMGenerateHeaders)
-include(ECMGeneratePriFile)
 include(CMakePackageConfigHelpers)
 include(ECMSetupVersion)
 include(ECMPoQmTools)
@@ -19,6 +18,7 @@ include(KDECMakeSettings)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(ECMCoverageOption)
 include(ECMAddQch)
+include(ECMGeneratePriFile)
 
 set(KHOLIDAYS_LIB_VERSION ${KF5_VERSION})
 
