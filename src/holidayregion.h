@@ -27,7 +27,6 @@
 
 #include "kholidays_export.h"
 
-#include <QList>
 #include <QSharedDataPointer>
 #include <QString>
 

@@ -25,8 +25,6 @@
 #include "holiday.h"
 #include "holiday_p.h"
 
-#include <QDateTime>
-#include <QFile>
 #include <QSharedData>
 
 using namespace KHolidays;

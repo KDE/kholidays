@@ -26,10 +26,7 @@
 #define KHOLIDAYS_HOLIDAY_P_H
 
 #include "holiday.h"
-
 #include <QDateTime>
-#include <QFile>
-#include <QLocale>
 #include <QSharedData>
 
 namespace KHolidays

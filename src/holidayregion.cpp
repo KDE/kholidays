@@ -27,7 +27,7 @@
 
 #include "holidayregion.h"
 
-#include <QDateTime>
+#include <QLocale>
 #include <QDirIterator>
 #include <QFile>
 #include <QFileInfo>
