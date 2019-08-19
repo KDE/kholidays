@@ -204,7 +204,7 @@ namespace KHolidays {
     /// Generate an error message.
     /// \param state   the state where the error occurred.
     /// \param tok     the lookahead token.
-    virtual std::string yysyntax_error_ (int yystate, int tok);
+    virtual std::string yysyntax_error_ (std::string *filename, int yystate, int tok);
 
 #if YYDEBUG
     /// \brief Report a symbol value on the debug stream.

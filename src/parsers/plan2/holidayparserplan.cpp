@@ -1170,7 +1170,7 @@ yyerrlab:
     /* If not already recovering from an error, report this error.  */
     if (!yyerrstatus_) {
         ++yynerrs_;
-        error(yylloc, yysyntax_error_(yystate, yytoken));
+        error(yylloc, yysyntax_error_(yylloc.begin.filename, yystate, yytoken));
     }
 
     yyerror_range[0] = yylloc;
@@ -1290,7 +1290,7 @@ yyreturn:
 
 // Generate an error message.
 std::string
-HolidayParserPlan::yysyntax_error_(int yystate, int tok)
+HolidayParserPlan::yysyntax_error_(std::string *filename, int yystate, int tok)
 {
     std::string res;
     YYUSE(yystate);
@@ -1326,6 +1326,7 @@ HolidayParserPlan::yysyntax_error_(int yystate, int tok)
                 if (yycheck_[x + yyn] == x && x != yyterror_) {
                     res += (!count++) ? ", expecting " : " or ";
                     res += yytnamerr_(yytname_[x]);
+                    res += ". Filepath : " + *filename;
                 }
         }
     } else
