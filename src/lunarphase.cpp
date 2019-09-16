@@ -63,10 +63,10 @@ LunarPhase::Phase LunarPhase::phaseAtDate(const QDate &date)
     // compute percent-full for the middle of today and yesterday.
     const QTime anytime(12, 0, 0);
     const QDateTime today(date, anytime, Qt::UTC);
-    const double todayPer = percentFull(today.toTime_t()) + 0.5;
+    const double todayPer = percentFull(today.toSecsSinceEpoch()) + 0.5;
 
     const QDateTime tomorrow(date.addDays(1), anytime, Qt::UTC);
-    const double tomorrowPer = percentFull(tomorrow.toTime_t()) + 0.5;
+    const double tomorrowPer = percentFull(tomorrow.toSecsSinceEpoch()) + 0.5;
 
     if (static_cast<int>(todayPer) == 100 &&
             static_cast<int>(tomorrowPer) != 100) {
