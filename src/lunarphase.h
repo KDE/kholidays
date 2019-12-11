@@ -48,7 +48,7 @@ namespace KHolidays
    + "last quarter": the left 50% of the moon is visible.
 
    A very good description of the lunar phases can be read at the Wikipedia,
-     http://en.wikipedia.org/wiki/Lunar_phase
+     https://en.wikipedia.org/wiki/Lunar_phase
 
    Note that crescent and gibbous phases are not currently supported.
 */

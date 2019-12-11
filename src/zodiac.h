@@ -40,7 +40,7 @@ class ZodiacPrivate;
 
    A very good description of the Zodiac calendars can be read at the
    Wikipedia,
-     http://en.wikipedia.org/wiki/Zodiac
+     https://en.wikipedia.org/wiki/Zodiac
 
    Disclaimer: I am by no means a Zodiac expert.  I put together this software
    based on some quick scanning of documents I found on the WWW.  Feel free

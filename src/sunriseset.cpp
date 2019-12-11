@@ -1,7 +1,7 @@
 /*
   This file is part of the kholidays library.
 
-  Adapted from the Javascript found at http://www.esrl.noaa.gov/gmd/grad/solcalc
+  Adapted from the Javascript found at https://www.esrl.noaa.gov/gmd/grad/solcalc
   which is in the public domain.
 
   Copyright (c) 2012 Allen Winter <winter@kde.org>

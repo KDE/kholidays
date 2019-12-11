@@ -44,7 +44,7 @@ namespace KHolidays
 
    A very good description of the astronomical seasons can be read at the
    Wikipedia,
-     http://en.wikipedia.org/wiki/Seasons
+     https://en.wikipedia.org/wiki/Seasons
 
    Note that this class represents the "Astronomical Seasons" and not
    the traditional "Seasons" which vary widely by culture.

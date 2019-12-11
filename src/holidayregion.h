@@ -112,7 +112,7 @@ public:
      * May be either just a country code ("US" = USA) or may include a regional
      * identifier ("US-CA" = California).  Returns "XX" if not a country.
      *
-     * See http://en.wikipedia.org/wiki/ISO_3166-2
+     * See https://en.wikipedia.org/wiki/ISO_3166-2
      *
      * @return the full region code of the file
      */
@@ -126,7 +126,7 @@ public:
      * May be either just a country code ("US" = USA) or may include a regional
      * identifier ("US-CA" = California).  Returns "XX" if not a country.
      *
-     * See http://en.wikipedia.org/wiki/ISO_3166-2
+     * See https://en.wikipedia.org/wiki/ISO_3166-2
      *
      * @param regionCode The code for the Holiday Region.
      * @return the full region code of the file

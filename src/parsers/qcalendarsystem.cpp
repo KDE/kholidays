@@ -398,7 +398,7 @@ void QCalendarSystemPrivate::julianDayToDate(qint64 jd, int *year, int *month, i
     case QCalendarSystem::ROCCalendar:
     case QCalendarSystem::ThaiCalendar: {
         // Formula from The Calendar FAQ by Claus Tondering
-        // http://www.tondering.dk/claus/cal/node3.html#SECTION003161000000000000000
+        // https://www.tondering.dk/claus/calendar.html
         qint64 a = jd + 32044;
         qint64 b = ((4 * a) + 3) / 146097;
         qint64 c = a - ((146097 * b) / 4);
@@ -458,7 +458,7 @@ void QCalendarSystemPrivate::julianDayToDate(qint64 jd, int *year, int *month, i
 
     case QCalendarSystem::JulianCalendar: {
         // Formula from The Calendar FAQ by Claus Tondering
-        // http://www.tondering.dk/claus/cal/node3.html#SECTION003161000000000000000
+        // https://www.tondering.dk/claus/calendar.html
         qint64 b = 0;
         qint64 c = jd + 32082;
         qint64 d = ((4 * c) + 3) / 1461;
@@ -509,7 +509,7 @@ qint64 QCalendarSystemPrivate::julianDayFromDate(int year, int month, int day) c
     case QCalendarSystem::ROCCalendar:
     case QCalendarSystem::ThaiCalendar: {
         // Formula from The Calendar FAQ by Claus Tondering
-        // http://www.tondering.dk/claus/cal/node3.html#SECTION003161000000000000000
+        // https://www.tondering.dk/claus/calendar.html
         int a = (14 - month) / 12;
         year = year + 4800 - a;
         int m = month + (12 * a) - 3;
@@ -566,7 +566,7 @@ qint64 QCalendarSystemPrivate::julianDayFromDate(int year, int month, int day) c
 
     case QCalendarSystem::JulianCalendar: {
         // Formula from The Calendar FAQ by Claus Tondering
-        // http://www.tondering.dk/claus/cal/node3.html#SECTION003161000000000000000
+        // https://www.tondering.dk/claus/calendar.html
         int a = (14 - month) / 12;
         year = year + 4800 - a;
         int m = month + (12 * a) - 3;
