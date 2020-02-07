@@ -93,7 +93,7 @@ endif()
 
 ecm_generate_pri_file(
   BASE_NAME KHolidays
-  LIB_NAME KF5KHolidays
+  LIB_NAME KF5Holidays
   DEPS "widgets"
   FILENAME_VAR PRI_FILENAME
   INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/KHolidays
