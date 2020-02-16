@@ -7,13 +7,13 @@
 ::
 :: Language: English
 ::
-:: Updated:  2020-02-14
+:: Updated:  2019-04-13
 ::
-:: Source:   https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html
-::           https://www.nao.ac.jp/faq/a0301.html
+:: Source:   http://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html
+::           http://www.nao.ac.jp/faq/a0301.html
 ::
 :: Note:     On each Februaries, Vernal and Autumnal Equinox Days of next year are announced by government.
-::           Currently Equinox Days on and after 2022 are expected dates and may be changed.
+::           Currently Equinox Days on and after 2020 are expected dates and may be changed.
 ::
 
 :: Metadata
@@ -27,7 +27,7 @@ description "National holiday file for Japan"
 "Coming of Age Day"                public on second monday in january
 "National Foundation Day"          public on february 11
 
-:: Equinox Days on and after 2022 are expected dates. See notes above.
+:: Equinox Days on and after 2020 are expected dates. See notes above.
 "Vernal Equinox Day"               public on march 20 2000
 "Vernal Equinox Day"               public on march 20 2001
 "Vernal Equinox Day"               public on march 21 2002
@@ -68,7 +68,7 @@ description "National holiday file for Japan"
 "Mountain Day"                     public on ((year == 2020) ? [august 10] : [august 11])
 "Respect for Senior Citizens Day"  public on third monday in september
 
-:: Equinox Days on and after 2022 are expected dates. See notes above.
+:: Equinox Days on and after 2020 are expected dates. See notes above.
 "Autumnal Equinox Day"             public on september 23 2000
 "Autumnal Equinox Day"             public on september 23 2001
 "Autumnal Equinox Day"             public on september 23 2002
@@ -104,7 +104,7 @@ description "National holiday file for Japan"
 "Sports Day"                       public on ((year == 2020) ? [july 24] : [second monday in october])
 "Culture Day"                      public on november 3
 "Labor Thanksgiving Day"           public on november 23
-"The Emperor's Birthday"           public on ((year < 2019) ? [december 23] : ((year > 2019) ? [february 23] : noop))
+"The Emperor's Birthday"           public on ((year < 2019) ? [december 23] : ( ((year > 2019) ? [february 23] : noop) ))
 
 :: If a "Public Holiday" is on a Sunday, the first following day which
 :: is not a "Public Holiday" shall be a substitute holiday. If a day

@@ -7,13 +7,13 @@
 ::
 :: Language: Japanese
 ::
-:: Updated:  2020-02-14
+:: Updated:  2019-04-13
 ::
-:: Source:   https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html
-::           https://www.nao.ac.jp/faq/a0301.html
+:: Source:   http://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html
+::           http://www.nao.ac.jp/faq/a0301.html
 ::
 :: Note:     On each Februaries, Vernal and Autumnal Equinox Days of next year are announced by government.
-::           Currently Equinox Days on and after 2022 are expected dates and may be changed.
+::           Currently Equinox Days on and after 2020 are expected dates and may be changed.
 
 :: Metadata
 country     "JP"
@@ -30,7 +30,7 @@ description "日本の国民の休日のファイルです。"
 "建国記念の日"                          public on february 11
 
 :"Vernal Equinox Day"
-:: Equinox Days on and after 2022 are expected dates. See notes above.
+:: Equinox Days on and after 2020 are expected dates. See notes above.
 "春分の日"                            public on march 20 2000
 "春分の日"                            public on march 20 2001
 "春分の日"                            public on march 21 2002
@@ -79,7 +79,7 @@ description "日本の国民の休日のファイルです。"
 "敬老の日"                            public on third monday in september
 
 :"Autumnal Equinox Day"
-:: Equinox Days on and after 2022 are expected dates. See notes above.
+:: Equinox Days on and after 2020 are expected dates. See notes above.
 "秋分の日"                            public on september 23 2000
 "秋分の日"                            public on september 23 2001
 "秋分の日"                            public on september 23 2002
