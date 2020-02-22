@@ -1,28 +1,15 @@
 /*
-  This file is part of the kholidays library.
+    This file is part of the kholidays library.
 
-  Copyright (c) 2001 Cornelius Schumacher <schumacher@kde.org>
-  Copyright (c) 2004 Allen Winter <winter@kde.org>
-  Copyright (c) 2008 David Jarvie <djarvie@kde.org>
-  Copyright 2010 John Layt <john@layt.net>
+    SPDX-FileCopyrightText: 2001 Cornelius Schumacher <schumacher@kde.org>
+    SPDX-FileCopyrightText: 2004 Allen Winter <winter@kde.org>
+    SPDX-FileCopyrightText: 2008 David Jarvie <djarvie@kde.org>
+    SPDX-FileCopyrightText: 2010 John Layt <john@layt.net>
 
-  The functions languageToCode(), codeToLanguage(), countryToCode() and codeToCounty() are
-  Copyright (C) 2014 Digia Plc and/or its subsidiary(-ies).
+    The functions languageToCode(), codeToLanguage(), countryToCode() and codeToCounty() are copyright by
+    SPDX-FileCopyrightText: 2014 Digia Plc and/or its subsidiary(-ies).
 
-  This library is free software; you can redistribute it and/or
-  modify it under the terms of the GNU Library General Public
-  License as published by the Free Software Foundation; either
-  version 2 of the License, or (at your option) any later version.
-
-  This library is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  GNU Library General Public License for more details.
-
-  You should have received a copy of the GNU Library General Public License
-  along with this library; see the file COPYING.LIB.  If not, write to the
-  Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
-  Boston, MA 02110-1301, USA.
+    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
 #include "holidayregion.h"
@@ -40,8 +27,7 @@
 
 using namespace KHolidays;
 
-// Copied from qlocale_data_p.h and qlocale.h
-// Copyright (C) 2014 Digia Plc and/or its subsidiary(-ies).
+// Copied from qlocale_data_p.h and qlocale.h, see copyright information at top of file
 // To later be replaced by OpenCodes or public Qt api
 static const unsigned char country_code_list[] =
     "ZZ\0" // AnyCountry

@@ -1,33 +1,21 @@
 /*
-    Original version from plan by Thomas Driemeyer <thomas@bitrot.de>
+    Original version from plan:
+        SPDX-FileCopyrightText: Thomas Driemeyer <thomas@bitrot.de>
 
-    Adapted for use in KOrganizer by
-        Preston Brown <pbrown@kde.org> and
-        Reinhold Kainhofer <reinhold@kainhofer.com>
+    Adapted for use in KOrganizer:
+        SPDX-FileCopyrightText: Preston Brown <pbrown@kde.org>
+        SPDX-FileCopyrightText: Reinhold Kainhofer <reinhold@kainhofer.com>
 
-    Portions contributed by
-        Peter Littlefield <plittle@sofkin.ca>
-        Armin Liebl <liebla@informatik.tu-muenchen.de>
-        Efthimios Mavrogeorgiadis <emav@enl.auth.gr>
-        Erwin Hugo Achermann <acherman@inf.ethz.ch>
+    Portions contributed:
+        SPDX-FileCopyrightText: Peter Littlefield <plittle@sofkin.ca>
+        SPDX-FileCopyrightText: Armin Liebl <liebla@informatik.tu-muenchen.de>
+        SPDX-FileCopyrightText: Efthimios Mavrogeorgiadis <emav@enl.auth.gr>
+        SPDX-FileCopyrightText: Erwin Hugo Achermann <acherman@inf.ethz.ch>
 
     Major rewrite using Bison C++ skeleton:
-        Copyright 2010 John Layt <john@layt.net>
+        SPDX-FileCopyrightText: 2010 John Layt <john@layt.net>
 
-    This library is free software; you can redistribute it and/or
-    modify it under the terms of the GNU Library General Public
-    License as published by the Free Software Foundation; either
-    version 2 of the License, or (at your option) any later version.
-
-    This library is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Library General Public License for more details.
-
-    You should have received a copy of the GNU Library General Public License
-    along with this library; see the file COPYING.LIB.  If not, write to the
-    Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
-    Boston, MA 02110-1301, USA.
+    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
 #include "holidayparserdriverplan_p.h"

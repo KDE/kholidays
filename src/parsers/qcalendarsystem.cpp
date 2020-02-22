@@ -1,22 +1,9 @@
 /*
-  This file is part of the kholidays library.
+    This file is part of the kholidays library.
 
-  Copyright 2014 John Layt <john@layt.net>
+    SPDX-FileCopyrightText: 2014 John Layt <john@layt.net>
 
-  This library is free software; you can redistribute it and/or
-  modify it under the terms of the GNU Library General Public
-  License as published by the Free Software Foundation; either
-  version 2 of the License, or (at your option) any later version.
-
-  This library is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  GNU Library General Public License for more details.
-
-  You should have received a copy of the GNU Library General Public License
-  along with this library; see the file COPYING.LIB.  If not, write to the
-  Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
-  Boston, MA 02110-1301, USA.
+    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
 #include "qcalendarsystem_p.h"
@@ -842,21 +829,12 @@ int QCalendarSystem::weekNumber(const QDate &date, int *yearNum) const
 }
 
 /*
-    \legalese
-    Copyright (c) 1989 The Regents of the University of California.
-    All rights reserved.
+    The following method is based on code from tzcode's strftime.c, which is turn said to be
+    "Based on the UCB version with the ID appearing below."
 
-    Redistribution and use in source and binary forms are permitted
-    provided that the above copyright notice and this paragraph are
-    duplicated in all such forms and that any documentation,
-    advertising materials, and other materials related to such
-    distribution and use acknowledge that the software was developed
-    by the University of California, Berkeley.  The name of the
-    University may not be used to endorse or promote products derived
-    from this software without specific prior written permission.
-    THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR
-    IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
-    WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+    SPDX-FileCopyrightText: 1989 The Regents of the University of California. All rights reserved.
+
+    SPDX-License-Identifier: BSD-3-Clause
 */
 //TODO These are ISO weeks, may need to localise
 //TODO Replace with cleanly licensed routine

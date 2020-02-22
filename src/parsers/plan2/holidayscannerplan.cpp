@@ -1294,29 +1294,17 @@ static yyconst flex_int16_t yy_rule_linenum[202] = {
 #define YY_RESTORE_YY_MORE_OFFSET
 #line 1 "holidayscannerplan.lpp"
 /*
-    Original version from plan by Thomas Driemeyer <thomas@bitrot.de>
+    Original version from plan:
+        SPDX-FileCopyrightText: Thomas Driemeyer <thomas@bitrot.de>
 
-    Adapted for use in KOrganizer by
-        Preston Brown <pbrown@kde.org> and
-        Reinhold Kainhofer <reinhold@kainhofer.com>
+    Adapted for use in KOrganizer:
+        SPDX-FileCopyrightText: Preston Brown <pbrown@kde.org> and
+        SPDX-FileCopyrightText: Reinhold Kainhofer <reinhold@kainhofer.com>
 
     Major rewrite using Bison C++ skeleton:
-        Copyright 2010 John Layt <john@layt.net>
+        SPDX-FileCopyrightText: 2010 John Layt <john@layt.net>
 
-    This library is free software; you can redistribute it and/or
-    modify it under the terms of the GNU Library General Public
-    License as published by the Free Software Foundation; either
-    version 2 of the License, or (at your option) any later version.
-
-    This library is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Library General Public License for more details.
-
-    You should have received a copy of the GNU Library General Public License
-    along with this library; see the file COPYING.LIB.  If not, write to the
-    Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
-    Boston, MA 02110-1301, USA.
+    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 #line 28 "holidayscannerplan.lpp"
 # include <cstdlib>
