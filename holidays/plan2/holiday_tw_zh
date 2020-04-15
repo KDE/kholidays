@@ -1,0 +1,51 @@
+::
+:: Country:  Taiwan
+::
+:: Language: Traditional Chinese
+::
+:: Author:   Ricky Lindén <pm@rickylinden.com>
+::
+:: Updated:
+::
+:: Source:   https://en.wikipedia.org/wiki/Public_holidays_in_Taiwan
+::
+
+:: Metadata
+country     "TW
+language    "tw_tw"
+:name        "optional - defaults to country name"
+:description "(please add description in source language) National holiday file for Taiwan"
+
+:: Public Holidays
+: New Year's Day
+"中華民國開國紀念日 / 元旦"     public on January 1
+: Lunar New Year's Eve
+"農曆除夕"                    public on February 4
+: Spring festival
+"春節"                       public on February 5 - 8
+: Peace Memorial Day
+"228和平紀念日"               public on February 28 - March 1
+: The Combined Holidays of Women's Day and Children's Day
+"婦女節、兒童節合倂"            public on April 4
+: Tomb Sweeping Day
+"淸明節"                      public on April 5
+: Dragon Boat Festival
+"端午節"                      public on June 7
+: Mid-Autumn Festival       
+"中秋節"                      public on September 13
+: National Day/Double Tenth Day
+"國慶日 / 雙十節"             public on October 10
+
+:: Religious
+
+:: Financial
+
+:: Cultural
+
+:: School
+
+:: Daylight Saving
+
+:: Seasons
+
+:: Name Days
