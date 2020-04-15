@@ -5,47 +5,129 @@
 ::
 :: Author:   Ricky Lindén <pm@rickylinden.com>
 ::
-:: Updated:
+:: Updated:  2020-04-15
 ::
-:: Source:   https://en.wikipedia.org/wiki/Public_holidays_in_Taiwan
+:: Source:   https://www.timeanddate.com/holidays/taiwan/
+::           https://en.wikipedia.org/wiki/Public_holidays_in_Taiwan
 ::
 
 :: Metadata
-country     "TW
-language    "tw_tw"
+country     "TW"
+language    "tw_zh"
 :name        "optional - defaults to country name"
-:description "(please add description in source language) National holiday file for Taiwan"
+:description "National holiday's for Taiwan"
 
 :: Public Holidays
-: New Year's Day
-"中華民國開國紀念日 / 元旦"     public on January 1
-: Lunar New Year's Eve
-"農曆除夕"                    public on February 4
+: Republic Day/New Year's Day
+"中華民國開國紀念日 / 元旦"				public on January 1
+: Chinese New Year's Eve
+"農曆除夕"							public on January 24
 : Spring festival
-"春節"                       public on February 5 - 8
+"春節"								public on January 23 - 29
+: Make up Day for Lunar New Year Holiday
+"春節補假" 							public on February 15	
 : Peace Memorial Day
-"228和平紀念日"               public on February 28 - March 1
-: The Combined Holidays of Women's Day and Children's Day
-"婦女節、兒童節合倂"            public on April 4
+"228和平紀念日"						public on February 28
+: Children's Day
+"兒童節"								public on April 4
+: Tomb Sweeping Day holiday
+"清明節 補假"							public on April 3
 : Tomb Sweeping Day
-"淸明節"                      public on April 5
+"淸明節"								public on April 4
+: Labor Day 
+"勞動節"								public on May 1
+: Make up Day for Dragon Boat Festival holiday
+"端午節 補假"							public on June 20
 : Dragon Boat Festival
-"端午節"                      public on June 7
+"端午節"								public on June 25
+: Dragon Boat Festival holiday
+"端午節 (放假日)"						public on June 26
+: Make up Day for Mid Autumn Festival Holiday
+"中秋節 補假 "						public on September 26
 : Mid-Autumn Festival       
-"中秋節"                      public on September 13
-: National Day/Double Tenth Day
-"國慶日 / 雙十節"             public on October 10
+"中秋節"								public on October 1
+: Mid-Autumn Festival holiday
+"中秋節 (放假日)"						public on October 2
+: National Day observed
+"中華民國國慶日 (放假日)"				public on October 9
+: National Day
+"中華民國國慶日"						public on October 10
+: Taiwan's Retrocession Day
+"臺灣光復節"							public on October 25
 
 :: Religious
+: Earth God's Birthday
+"土地公誕辰" 							religous on February 4
+: Kuan Yin's Birthday
+"觀世音菩薩聖誕" 						religous on March 12
+: God of Medicine's Birthday
+"保生大帝誕辰" 						religious on April 7
+: Easter Sunday
+"復活節" 							religous on April 12
+: Matsu's Birthday
+"媽祖聖誕" 							religous on April 15
+: Buddha's Birthday
+"佛誕日"								religous on April 30
+: Kuan Kung's Birthday
+"關聖帝君生日" 						religous on July 3
+: Chen Huang's Birthday
+"城隍誕辰" 							religous on July 3
+: Hungry Ghost Festival
+"中元節" 							religous on September 2
 
 :: Financial
 
 :: Cultural
+: Farmer's Day
+"農民節" 							cultural on February 4
+: Lantern Festival
+"元宵節" 							cultural on February 8
+: International Women's Day
+"國際婦女節" 							cultural on March 8
+: Arbor Day
+"植樹節 " 							cultural on March 12
+: Youth Day
+"青年節" 							cultural on March 29
+: Literary Day
+"文藝節" 							cultural on May 4
+: Mother's Day
+"母親節" 							cultural on May 10
+: Father's Day
+"父親節" 							cultural on August 8
+: Chinese Valentine's Day
+"七夕節" 							cultural on August 25
+: Armed Forces Day
+"軍人節" 							cultural on September 3
+: Teacher's Day
+"教師節" 							cultural on September 28
+: Double Ninth Day
+"重陽節" 							cultural on October 25
+: Halloween
+"萬聖節" 							cultural on October 31
+: Sun Yat-sen's birthday
+"國父誕辰紀念日" 						cultural on November 12
+: Saisiat Festival
+"賽夏節" 							cultural on November 29
+Constitution Day
+"行憲紀念日" 							cultural on December 25
+Christmas Day
+"聖誕節"								cultural on December 25
 
 :: School
 
 :: Daylight Saving
 
 :: Seasons
+: March Equinox
+"春分"								seasonal on March 20
+: Jun Solstice
+"夏至"								seasonal on June 21
+: September Equinox 
+"秋分" 								seasonal on September 22
+: December Solstice
+"冬至" 								seasonal on December 21
+: Dōngzhì Festival
+"冬至" 								seasonal on December 21
 
 :: Name Days
+
