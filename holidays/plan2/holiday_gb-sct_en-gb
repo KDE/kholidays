@@ -41,7 +41,7 @@ description "National holiday file for Scotland"
                                                      [tuesday after ([january 1])] :
                                                  noop ) )
 "Royal Wedding"                     public on 29.4.2011
-"Early May Bank Holiday"            ((year == 2020) ? [may 8] : [first monday in may])
+"Early May Bank Holiday"            public on ((year == 2020) ? [may 8] : [first monday in may])
 "Diamond Jubilee Holiday"           public on 5.6.2012
 "Christmas Day"                     public religious on december 25
 "Christmas Day Substitute Holiday"  public on ( (([december 25] == [saturday after ([december 25])]) ||
