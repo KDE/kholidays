@@ -2,7 +2,7 @@
     This file is part of the kholidays library.
 
     SPDX-FileCopyrightText: 2001 Cornelius Schumacher <schumacher@kde.org>
-    SPDX-FileCopyrightText: 2004 Allen Winter <winter@kde.org>
+    SPDX-FileCopyrightText: 2004-2020 Allen Winter <winter@kde.org>
     SPDX-FileCopyrightText: 2008 David Jarvie <djarvie@kde.org>
     SPDX-FileCopyrightText: 2010 John Layt <john@layt.net>
 
@@ -877,8 +877,36 @@ QString HolidayRegion::name() const
                 const QString &subdivision = countryParts.at(1);
                 if (country == QLatin1String("ca") && subdivision == QLatin1String("qc")) {
                     regionName = QCoreApplication::translate("HolidayRegion", "Quebec", "Canadian region");
-                } else if (country == QLatin1String("de") && subdivision == QLatin1String("by")) {
-                    regionName = QCoreApplication::translate("HolidayRegion", "Bavaria", "German region");
+                } else if (country == QLatin1String("de")) {
+                    if (subdivision == QLatin1String("by")) {
+                        regionName = QCoreApplication::translate("HolidayRegion", "Germany, Bavaria", "German region");
+                    } else if (subdivision == QLatin1String("bb")) {
+                        regionName = QCoreApplication::translate("HolidayRegion", "Germany, Brandenburg", "German region");
+                    } else if (subdivision == QLatin1String("be")) {
+                        regionName = QCoreApplication::translate("HolidayRegion", "Germany, Berlin", "German region");
+                    } else if (subdivision == QLatin1String("bw")) {
+                        regionName = QCoreApplication::translate("HolidayRegion", "Germany, Baden-Wuerttemberg", "German region");
+                    } else if (subdivision == QLatin1String("he")) {
+                        regionName = QCoreApplication::translate("HolidayRegion", "Germany, Hesse", "German region");
+                    } else if (subdivision == QLatin1String("mv")) {
+                        regionName = QCoreApplication::translate("HolidayRegion", "Germany, Mecklenburg-Hither Pomerania", "German region");
+                    } else if (subdivision == QLatin1String("ni")) {
+                        regionName = QCoreApplication::translate("HolidayRegion", "Germany, Lower Saxony", "German region");
+                    } else if (subdivision == QLatin1String("nw")) {
+                        regionName = QCoreApplication::translate("HolidayRegion", "Germany, North Rhine-Westphalia", "German region");
+                    } else if (subdivision == QLatin1String("rp")) {
+                        regionName = QCoreApplication::translate("HolidayRegion", "Germany, Rhineland-Palatinate", "German region");
+                    } else if (subdivision == QLatin1String("sh")) {
+                        regionName = QCoreApplication::translate("HolidayRegion", "Germany, Schleswig-Holstein", "German region");
+                    } else if (subdivision == QLatin1String("sl")) {
+                        regionName = QCoreApplication::translate("HolidayRegion", "Germany, Saarland", "German region");
+                    } else if (subdivision == QLatin1String("sn")) {
+                        regionName = QCoreApplication::translate("HolidayRegion", "Germany, Saxony", "German region");
+                    } else if (subdivision == QLatin1String("st")) {
+                        regionName = QCoreApplication::translate("HolidayRegion", "Germany, Saxony-Anhalt", "German region");
+                    } else if (subdivision == QLatin1String("th")) {
+                        regionName = QCoreApplication::translate("HolidayRegion", "Germany, Thuringia", "German region");
+                    }
                 } else if (country == QLatin1String("es") && subdivision == QLatin1String("ct")) {
                     regionName = QCoreApplication::translate("HolidayRegion", "Catalonia", "Spanish region");
                 } else if (country == QLatin1String("gb") && subdivision == QLatin1String("eaw")) {
@@ -918,7 +946,7 @@ QString HolidayRegion::name() const
                                                              "Republic of Srpska", "Bosnian and Herzegovinian Region");
                 } else {
                     // TODO Note this does not give the current QLocale translation!
-                    regionName = QLocale::countryToString(codeToCountry(country));
+                    regionName = QLocale::countryToString(codeToCountry(country)) + QLatin1String(" (") + subdivision + QLatin1Char(')');
                 }
             } else {
                 // TODO Note this does not give the current QLocale translation!
