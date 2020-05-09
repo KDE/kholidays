@@ -16,7 +16,7 @@
 :: Metadata
 country     "DE-HE"
 language    "de"
-:name        "optional - defaults to country name"
+name        "Germany, Hesse"
 description "Feiertage für Deutschland (Hessen)"
 
 :: ---------- This part is specific for Hesse ----------

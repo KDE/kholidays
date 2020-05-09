@@ -15,7 +15,7 @@
 :: Metadata
 country     "DE-NW"
 language    "de"
-:name        "optional - defaults to country name"
+name        "Germany, North Rhine-Westphalia"
 description "Feiertage für Deutschland (Nordrhein-Westfalen)"
 
 :: ---------- This part is specific for North Rhine-Westphalia ----------

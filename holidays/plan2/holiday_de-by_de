@@ -16,7 +16,7 @@
 :: Metadata
 country     "DE-BY"
 language    "de"
-:name        "optional - defaults to country name"
+name        "Germany, Bavaria"
 description "Feiertage für Deutschland (Bayern)"
 
 :: ---------- This part is specific for Bavaria ----------

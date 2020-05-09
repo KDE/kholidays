@@ -17,7 +17,7 @@
 :: Metadata
 country     "DE-NI"
 language    "de"
-:name        "optional - defaults to country name"
+name        "Germany, Lower Saxony"
 description "Feiertage für Deutschland (Niedersachsen)"
 
 :: ---------- This part is specific for Lower Saxony ----------

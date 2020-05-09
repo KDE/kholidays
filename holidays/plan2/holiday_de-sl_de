@@ -15,7 +15,7 @@
 :: Metadata
 country     "DE-SL"
 language    "de"
-:name        "optional - defaults to country name"
+name        "Germany, Saarland"
 description "Feiertage für Deutschland (Saarland)"
 
 :: ---------- This part is specific for Saarland ----------

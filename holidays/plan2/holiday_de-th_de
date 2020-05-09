@@ -15,7 +15,7 @@
 :: Metadata
 country     "DE-TH"
 language    "de"
-:name        "optional - defaults to country name"
+name        "Germany, Thuringia"
 description "Feiertage für Deutschland (Thüringen)"
 
 :: ---------- This part is specific for Thuringia ----------

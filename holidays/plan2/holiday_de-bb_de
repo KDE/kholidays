@@ -15,7 +15,7 @@
 :: Metadata
 country     "DE-BB"
 language    "de"
-:name        "optional - defaults to country name"
+name        "Germany, Brandenburg"
 description "Feiertage für Deutschland (Brandenburg)"
 
 :: ---------- This part is specific for Brandenburg ----------

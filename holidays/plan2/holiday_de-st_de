@@ -15,7 +15,7 @@
 :: Metadata
 country     "DE-ST"
 language    "de"
-:name        "optional - defaults to country name"
+name        "Germany, Saxony-Anhalt"
 description "Feiertage für Deutschland (Sachsen-Anhalt)"
 
 :: ---------- This part is specific for Saxony-Anhalt ----------

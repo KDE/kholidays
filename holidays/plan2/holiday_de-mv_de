@@ -15,7 +15,7 @@
 :: Metadata
 country     "DE-MV"
 language    "de"
-:name        "optional - defaults to country name"
+name        "Germany, Mecklenburg-Hither Pomerania"
 description "Feiertage für Deutschland (Mecklenburg-Vorpommern)"
 
 :: ---------- This part is specific for Mecklenburg-Hither Pomerania ----------

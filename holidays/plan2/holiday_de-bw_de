@@ -16,7 +16,7 @@
 :: Metadata
 country     "DE-BW"
 language    "de"
-:name        "optional - defaults to country name"
+name        "Germany, Baden-Wuerttemberg"
 description "Feiertage für Deutschland (Baden-Württemberg)"
 
 :: ---------- This part is specific for Baden-Wuerttemberg ----------

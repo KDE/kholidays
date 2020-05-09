@@ -14,7 +14,7 @@
 :: Metadata
 country     "DE-BE"
 language    "de"
-:name        "optional - defaults to country name"
+name        "Germany, Berlin"
 description "Feiertage für Deutschland (Berlin)"
 
 :: ---------- This part is specific for Berlin ----------

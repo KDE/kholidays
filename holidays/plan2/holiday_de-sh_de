@@ -15,7 +15,7 @@
 :: Metadata
 country     "DE-SH"
 language    "de"
-:name        "optional - defaults to country name"
+name        "Germany, Schleswig-Holstein"
 description "Feiertage für Deutschland (Schleswig-Holstein)"
 
 :: ---------- This part is specific for Schleswig-Holstein ----------

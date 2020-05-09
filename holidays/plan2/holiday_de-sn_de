@@ -15,7 +15,7 @@
 :: Metadata
 country     "DE-SN"
 language    "de"
-:name        "optional - defaults to country name"
+name        "Germany, Saxony"
 description "Feiertage für Deutschland (Sachsen)"
 
 :: ---------- This part is specific for Saxony ----------
