@@ -13,7 +13,7 @@
 ::
 
 :: Metadata
-country     "DE"
+country     "DE-SL"
 language    "de"
 :name        "optional - defaults to country name"
 description "Feiertage für Deutschland (Saarland)"

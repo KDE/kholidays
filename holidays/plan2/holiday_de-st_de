@@ -13,7 +13,7 @@
 ::
 
 :: Metadata
-country     "DE"
+country     "DE-ST"
 language    "de"
 :name        "optional - defaults to country name"
 description "Feiertage für Deutschland (Sachsen-Anhalt)"

@@ -12,7 +12,7 @@
 ::
 
 :: Metadata
-country     "DE"
+country     "DE-BE"
 language    "de"
 :name        "optional - defaults to country name"
 description "Feiertage für Deutschland (Berlin)"

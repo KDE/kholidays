@@ -15,7 +15,7 @@
 ::
 
 :: Metadata
-country     "DE"
+country     "DE-NI"
 language    "de"
 :name        "optional - defaults to country name"
 description "Feiertage für Deutschland (Niedersachsen)"

@@ -14,7 +14,7 @@
 ::
 
 :: Metadata
-country     "DE"
+country     "DE-HE"
 language    "de"
 :name        "optional - defaults to country name"
 description "Feiertage für Deutschland (Hessen)"

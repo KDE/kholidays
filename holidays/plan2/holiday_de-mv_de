@@ -13,7 +13,7 @@
 ::
 
 :: Metadata
-country     "DE"
+country     "DE-MV"
 language    "de"
 :name        "optional - defaults to country name"
 description "Feiertage für Deutschland (Mecklenburg-Vorpommern)"
