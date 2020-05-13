@@ -1,0 +1,81 @@
+::
+:: 國家：中華民國（臺灣）
+::
+:: 語言：中文
+::
+:: 作者：Ricky Lindén <pm@rickylinden.com>
+::
+:: 更新日期：2020-05-04
+::
+:: 來源：https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020033
+::
+
+:: 元資料
+country      "TW"
+language     "zh_TW"
+:name         "可選 - 預設為國家名"
+description  "中華民國（臺灣）紀念日及節日"
+
+:: 應放假之紀念日及節日
+
+: Republic Day/New Year's Day
+"中華民國開國紀念日"                public commemorative on January 1
+
+: Peace Memorial Day
+"和平紀念日"                        public commemorative on ((year >= 1997) ? [February 28] : noop)
+
+: Children's Day
+"兒童節"                            public on ((year >= 2011) ? [April 4] : noop)
+
+: National Day
+"國慶日"                            public commemorative on October 10
+
+:: 應放假之紀念日及節日（以農曆為基礎）
+
+: Chinese New Year's Eve
+"農曆除夕"                          public cultural on 24 January 2020
+: Spring Festival
+"春節"                              public cultural on 25 January 2020 length 5 days
+: Tomb Sweeping Day
+"民族掃墓節"                        public cultural on 4 April 2020
+: Dragon Boat Festival
+"端午節"                            public cultural on 25 June 2020
+: Mid-Autumn Festival       
+"中秋節"                            public cultural on 1 October 2020
+
+:: Substitute holidays
+:: 補假
+
+"兒童節補假"                        public on 3 April 2020
+"民族掃墓節補假"                    public on 2 April 2020
+
+:: 其他紀念日
+
+"國父逝世紀念日"                    commemorative on March 12
+"植樹節"                            commemorative on March 12
+"反侵略日"                          commemorative on ((year >= 2006) ? [March 14] : noop)
+"革命先烈紀念日"                    commemorative on March 29
+"解嚴紀念日"                        commemorative on ((year >= 2007) ? [July 15] : noop)
+"孔子誕辰紀念日"                    commemorative on September 28
+"臺灣聯合國日"                      commemorative on October 24
+"國父誕辰紀念日"                    commemorative on November 12
+"行憲紀念日"                        commemorative on December 25
+
+"佛陀誕辰紀念日"                    commemorative religious on 30 April 2020
+
+:: 其他節日
+
+"婦女節"                            commemorative on March 8
+"青年節"                            commemorative on March 29
+"勞動節"                            commemorative on May 1
+"軍人節"                            commemorative on September 3
+"教師節"                            commemorative on September 28
+"臺灣光復節"                        commemorative on October 25
+"中華文化復興節"                    commemorative on November 12
+
+"道教節"                            commemorative on 25 January 2020
+
+:: Historical
+:: 已廢除假期
+
+"婦女節、兒童節合併假期"            public on ((year >= 1991) && (year <= 1997) ? [April 4] : noop)
