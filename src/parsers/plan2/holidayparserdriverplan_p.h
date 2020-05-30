@@ -9,13 +9,13 @@
 #ifndef KHOLIDAYS_HOLIDAYPARSERDRIVERPLAN_P_H
 #define KHOLIDAYS_HOLIDAYPARSERDRIVERPLAN_P_H
 
-#include <fstream>
-#include <string>
+#include "../holidayparserdriver_p.h"
 
 #include <QByteArray>
 #include <QStringList>
 
-#include "../holidayparserdriver_p.h"
+#include <fstream>
+#include <string>
 
 namespace KHolidays
 {
@@ -47,7 +47,7 @@ public:
      *
      * @param filePath full path to holiday file
      */
-    HolidayParserDriverPlan(const QString &planFilename);
+    explicit HolidayParserDriverPlan(const QString &planFilename);
 
     /**
      * Destructor.
