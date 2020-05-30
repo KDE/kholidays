@@ -21,14 +21,12 @@
 #include "holidayparserdriverplan_p.h"
 #include "holidayscannerplan_p.h"
 #include "holidayparserplan.hpp"
+#include "holiday_p.h"
 
-#include <sstream>
-
+#include <QDebug>
 #include <QFileInfo>
 
-#include <qdebug.h>
-
-#include "holiday_p.h"
+#include <sstream>
 
 #define LAST        99999
 #define ANY       (-99999)
@@ -230,7 +228,7 @@ QDate HolidayParserDriverPlan::easter(int year)
     }
 
     // Algorithm taken from Tondering
-    // http://www.tondering.dk/claus/cal/node3.html#SECTION003137000000000000000
+    // https://www.tondering.dk/claus/cal/easter.php
     int g = year % 19;
     int c = year / 100;
     int h = (c - (c / 4) - (((8 * c) + 13) / 25) + (19 * g) + 15) % 30;
@@ -248,7 +246,7 @@ QDate HolidayParserDriverPlan::pascha(int year)
     if (m_parseCalendar.calendarSystem() == QCalendarSystem::GregorianCalendar ||
         m_parseCalendar.calendarSystem() == QCalendarSystem::JulianCalendar) {
         // Algorithm taken from Tondering
-        // http://www.tondering.dk/claus/cal/node3.html#SECTION003137000000000000000
+        // https://www.tondering.dk/claus/cal/easter.php#orthodoxeast
         // Gives Orthodox Easter in the Julian Calendar, need to convert afterwards to Gregorian if needed
         int g = year % 19;
         int i = ((19 * g) + 15) % 30;
@@ -385,7 +383,7 @@ int HolidayParserDriverPlan::julianDayFromRelativeWeekday(int occurrence, int we
     return jd + weekday - thisWeekday + (occurrence * 7);
 }
 
-// Return jd of weekday occurence in a given month and day in the parse year
+// Return jd of weekday occurrence in a given month and day in the parse year
 int HolidayParserDriverPlan::julianDayFromWeekdayInMonth(int occurrence, int weekday, int month)
 {
     if (occurrence == LAST) {    // Is weekday on or before last day of month

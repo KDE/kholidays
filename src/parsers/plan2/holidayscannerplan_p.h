@@ -42,8 +42,7 @@ namespace KHolidays
  * features.
  *
  * Implemented using Flex C++ mode, based on the example at
- * http://idlebox.net/2007/flex-bison-cpp-example/ which is released to
- * Public Domain.
+ * https://panthema.net/2007/flex-bison-cpp-example/ which is released to Public Domain.
  *
  * @internal Private, for internal use only
  */
