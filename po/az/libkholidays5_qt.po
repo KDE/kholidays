@@ -1,0 +1,469 @@
+# Xəyyam <xxmn77@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"PO-Revision-Date: 2020-05-13 17:10+0400\n"
+"Last-Translator: Xəyyam Qocayev <xxmn77@gmail.com>\n"
+"Language-Team: Azerbaijani\n"
+"Language: az\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Qt-Contexts: true\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.04.0\n"
+
+#: astroseasons.cpp:132
+msgctxt "AstroSeasons|"
+msgid "June Solstice"
+msgstr "Yay gündönümü"
+
+#: astroseasons.cpp:134
+msgctxt "AstroSeasons|"
+msgid "December Solstice"
+msgstr "Dekabr Gündönümü"
+
+#: astroseasons.cpp:136
+msgctxt "AstroSeasons|"
+msgid "March Equinox"
+msgstr "Yaz gecə-gündüz bərabərliyi"
+
+#: astroseasons.cpp:138
+msgctxt "AstroSeasons|"
+msgid "September Equinox"
+msgstr "Payız gecə-gündüz bərabərliyi"
+
+#: holidayregion.cpp:879
+msgctxt "HolidayRegion|Canadian region"
+msgid "Quebec"
+msgstr "Kvebek"
+
+#: holidayregion.cpp:882
+#, fuzzy
+#| msgctxt "HolidayRegion|German region"
+#| msgid "Bavaria"
+msgctxt "HolidayRegion|German region"
+msgid "Germany, Bavaria"
+msgstr "Bavariya"
+
+#: holidayregion.cpp:884
+msgctxt "HolidayRegion|German region"
+msgid "Germany, Brandenburg"
+msgstr "Almaniya, Brandenburq"
+
+#: holidayregion.cpp:886
+msgctxt "HolidayRegion|German region"
+msgid "Germany, Berlin"
+msgstr "Almaniya, Berlin"
+
+#: holidayregion.cpp:888
+msgctxt "HolidayRegion|German region"
+msgid "Germany, Baden-Wuerttemberg"
+msgstr "Almaniya, Baden Vurtenberq"
+
+#: holidayregion.cpp:890
+msgctxt "HolidayRegion|German region"
+msgid "Germany, Hesse"
+msgstr "Almaniya, Hesse"
+
+#: holidayregion.cpp:892
+msgctxt "HolidayRegion|German region"
+msgid "Germany, Mecklenburg-Hither Pomerania"
+msgstr "Almaniya, Meklenburq-Hiter-Pomeraniya"
+
+#: holidayregion.cpp:894
+msgctxt "HolidayRegion|German region"
+msgid "Germany, Lower Saxony"
+msgstr "Almaniya, Aşağı Saksoniya"
+
+#: holidayregion.cpp:896
+msgctxt "HolidayRegion|German region"
+msgid "Germany, North Rhine-Westphalia"
+msgstr "Almaniya, Şimali Rine-Vestfaliya"
+
+#: holidayregion.cpp:898
+msgctxt "HolidayRegion|German region"
+msgid "Germany, Rhineland-Palatinate"
+msgstr "Almaniya, Rineland-Palatinate"
+
+#: holidayregion.cpp:900
+msgctxt "HolidayRegion|German region"
+msgid "Germany, Schleswig-Holstein"
+msgstr "Almaniya, Şlesviq-Holsten"
+
+#: holidayregion.cpp:902
+msgctxt "HolidayRegion|German region"
+msgid "Germany, Saarland"
+msgstr "Almaniya, Saarland"
+
+#: holidayregion.cpp:904
+msgctxt "HolidayRegion|German region"
+msgid "Germany, Saxony"
+msgstr "Almaniya, Saksoniya"
+
+#: holidayregion.cpp:906
+msgctxt "HolidayRegion|German region"
+msgid "Germany, Saxony-Anhalt"
+msgstr "Almaniya, Saksoniya-Anhalt"
+
+#: holidayregion.cpp:908
+msgctxt "HolidayRegion|German region"
+msgid "Germany, Thuringia"
+msgstr "Almaniya, Turunqiya"
+
+#: holidayregion.cpp:911
+msgctxt "HolidayRegion|Spanish region"
+msgid "Catalonia"
+msgstr "Kataloniya"
+
+#: holidayregion.cpp:913
+msgctxt "HolidayRegion|UK Region"
+msgid "England and Wales"
+msgstr "İngiltərə və Uels"
+
+#: holidayregion.cpp:915
+msgctxt "HolidayRegion|UK Region"
+msgid "England"
+msgstr "İngiltərə"
+
+#: holidayregion.cpp:917
+msgctxt "HolidayRegion|UK Region"
+msgid "Wales"
+msgstr "Uels"
+
+#: holidayregion.cpp:919
+msgctxt "HolidayRegion|UK Region"
+msgid "Scotland"
+msgstr "Şotlandiya"
+
+#: holidayregion.cpp:921
+msgctxt "HolidayRegion|UK Region"
+msgid "Northern Ireland"
+msgstr "Şimali İrlandiya"
+
+#: holidayregion.cpp:923
+msgctxt "HolidayRegion|Italian Region"
+msgid "South Tyrol"
+msgstr "Cənubi Tirol"
+
+#: holidayregion.cpp:925
+msgctxt "HolidayRegion|"
+msgid "New South Wales"
+msgstr "Yeni Cənubi Uels"
+
+#: holidayregion.cpp:927
+msgctxt "HolidayRegion|Australian Region"
+msgid "Queensland"
+msgstr "Kvinsland"
+
+#: holidayregion.cpp:929
+msgctxt "HolidayRegion|Australian Region"
+msgid "Victoria"
+msgstr "Viktoriya"
+
+#: holidayregion.cpp:931
+msgctxt "HolidayRegion|Australian Region"
+msgid "South Australia"
+msgstr "Cənubi Avstraliya"
+
+#: holidayregion.cpp:933
+msgctxt "HolidayRegion|Australian Region"
+msgid "Northern Territory"
+msgstr "Şimal Ərazisi"
+
+#: holidayregion.cpp:936
+msgctxt "HolidayRegion|Australian Region"
+msgid "Australian Capital Territory"
+msgstr "Avstraliya paytaxt ərazisi"
+
+#: holidayregion.cpp:939
+msgctxt "HolidayRegion|Australian Region"
+msgid "Western Australia"
+msgstr "Qərbi Avstraliya"
+
+#: holidayregion.cpp:942
+msgctxt "HolidayRegion|Australian Region"
+msgid "Tasmania"
+msgstr "Tasmaniya"
+
+#: holidayregion.cpp:945
+msgctxt "HolidayRegion|Bosnian and Herzegovinian Region"
+msgid "Republic of Srpska"
+msgstr "Serb Respublikası"
+
+#: holidayregion.cpp:964
+msgctxt "HolidayRegion|Holiday type"
+msgid "Public"
+msgstr "İctimai"
+
+#: holidayregion.cpp:966
+msgctxt "HolidayRegion|Holiday type"
+msgid "Civil"
+msgstr "Sivil"
+
+#: holidayregion.cpp:968
+msgctxt "HolidayRegion|Holiday type"
+msgid "Religious"
+msgstr "Dini"
+
+#: holidayregion.cpp:970
+msgctxt "HolidayRegion|Holiday type"
+msgid "Government"
+msgstr "Hökümət"
+
+#: holidayregion.cpp:972
+msgctxt "HolidayRegion|Holiday type"
+msgid "Financial"
+msgstr "Maliyyə"
+
+#: holidayregion.cpp:974
+msgctxt "HolidayRegion|Holiday type"
+msgid "Cultural"
+msgstr "Mədəni"
+
+#: holidayregion.cpp:976
+msgctxt "HolidayRegion|Holiday type"
+msgid "Commemorative"
+msgstr "Xatirə günü"
+
+#: holidayregion.cpp:978
+msgctxt "HolidayRegion|Holiday type"
+msgid "Historical"
+msgstr "Tarixi"
+
+#: holidayregion.cpp:980
+msgctxt "HolidayRegion|Holiday type"
+msgid "School"
+msgstr "Məktəb"
+
+#: holidayregion.cpp:982
+msgctxt "HolidayRegion|Holiday type"
+msgid "Seasonal"
+msgstr "Fəsil"
+
+#: holidayregion.cpp:984
+msgctxt "HolidayRegion|Holiday type"
+msgid "Name Days"
+msgstr "Ad günləri"
+
+#: holidayregion.cpp:986
+msgctxt "HolidayRegion|Holiday type"
+msgid "Personal"
+msgstr "Şəxsi"
+
+#: holidayregion.cpp:988
+msgctxt "HolidayRegion|Holiday type"
+msgid "Christian"
+msgstr "Xristian"
+
+#: holidayregion.cpp:990
+msgctxt "HolidayRegion|Holiday type"
+msgid "Anglican"
+msgstr "Anqlikan"
+
+#: holidayregion.cpp:992
+msgctxt "HolidayRegion|Holiday type"
+msgid "Catholic"
+msgstr "Katolik"
+
+#: holidayregion.cpp:994
+msgctxt "HolidayRegion|Holiday type"
+msgid "Protestant"
+msgstr "Protestant"
+
+#: holidayregion.cpp:996
+msgctxt "HolidayRegion|Holiday type"
+msgid "Orthodox"
+msgstr "Ortodoks"
+
+#: holidayregion.cpp:998
+msgctxt "HolidayRegion|Holiday type"
+msgid "Jewish"
+msgstr "Yəhudi"
+
+#: holidayregion.cpp:1000
+msgctxt "HolidayRegion|Holiday type"
+msgid "Jewish Orthodox"
+msgstr "Yəhudi Ortodoks"
+
+#: holidayregion.cpp:1002
+msgctxt "HolidayRegion|Holiday type"
+msgid "Jewish Conservative"
+msgstr "Yəhudi Konservativ"
+
+#: holidayregion.cpp:1004
+msgctxt "HolidayRegion|Holiday type"
+msgid "Jewish Reform"
+msgstr "Yəhudi Reformativ"
+
+#: holidayregion.cpp:1006
+msgctxt "HolidayRegion|Holiday type"
+msgid "Islamic"
+msgstr "İslam"
+
+#: holidayregion.cpp:1008
+msgctxt "HolidayRegion|Holiday type"
+msgid "Islamic Sunni"
+msgstr "İslami-Sünni"
+
+#: holidayregion.cpp:1010
+msgctxt "HolidayRegion|Holiday type"
+msgid "Islamic Shia"
+msgstr "İslami-Şiə"
+
+#: holidayregion.cpp:1012
+msgctxt "HolidayRegion|Holiday type"
+msgid "Islamic Sufi"
+msgstr "İslami-Sufi"
+
+#: holidayregion.cpp:1019
+#, qt-format
+msgctxt ""
+"HolidayRegion|Holiday file display name, %1 = region name, %2 = holiday type"
+msgid "%1 - %2"
+msgstr "%1 - %2"
+
+#: holidayregion.cpp:1029
+msgctxt "HolidayRegion|Unknown holiday region"
+msgid "Unknown"
+msgstr "Naməlum"
+
+#: lunarphase.cpp:32
+msgctxt "LunarPhase|"
+msgid "New Moon"
+msgstr "Təzə Ay"
+
+#: lunarphase.cpp:34
+msgctxt "LunarPhase|"
+msgid "Full Moon"
+msgstr "Bədirlənmiş Ay"
+
+#: lunarphase.cpp:36
+msgctxt "LunarPhase|"
+msgid "First Quarter Moon"
+msgstr "Ayın birinci rübü"
+
+#: lunarphase.cpp:38
+msgctxt "LunarPhase|"
+msgid "Last Quarter Moon"
+msgstr "Ayın sonuncu rübü"
+
+#: zodiac.cpp:66
+msgctxt "Zodiac|"
+msgid "Aries"
+msgstr "Qoç"
+
+#: zodiac.cpp:68
+msgctxt "Zodiac|"
+msgid "Taurus"
+msgstr "Buğa"
+
+#: zodiac.cpp:70
+msgctxt "Zodiac|"
+msgid "Gemini"
+msgstr "Əkizlər"
+
+#: zodiac.cpp:72
+msgctxt "Zodiac|"
+msgid "Cancer"
+msgstr "Xərçəng"
+
+#: zodiac.cpp:74
+msgctxt "Zodiac|"
+msgid "Leo"
+msgstr "Şir"
+
+#: zodiac.cpp:76
+msgctxt "Zodiac|"
+msgid "Virgo"
+msgstr "Qız"
+
+#: zodiac.cpp:78
+msgctxt "Zodiac|"
+msgid "Libra"
+msgstr "Tərəzi"
+
+#: zodiac.cpp:80
+msgctxt "Zodiac|"
+msgid "Scorpio"
+msgstr "Əqrəb"
+
+#: zodiac.cpp:82
+msgctxt "Zodiac|"
+msgid "Sagittarius"
+msgstr "Oxatan"
+
+#: zodiac.cpp:84
+msgctxt "Zodiac|"
+msgid "Capricorn"
+msgstr "Oğlaq"
+
+#: zodiac.cpp:86
+msgctxt "Zodiac|"
+msgid "Aquarius"
+msgstr "Dolça"
+
+#: zodiac.cpp:88
+msgctxt "Zodiac|"
+msgid "Pisces"
+msgstr "Balıqlar"
+
+#: zodiac.cpp:257
+msgctxt "HolidayRegion|zodiac symbol for Aries"
+msgid "ram"
+msgstr "qoç"
+
+#: zodiac.cpp:259
+msgctxt "HolidayRegion|zodiac symbol for Taurus"
+msgid "bull"
+msgstr "buğa"
+
+#: zodiac.cpp:261
+msgctxt "HolidayRegion|zodiac symbol for Gemini"
+msgid "twins"
+msgstr "əkizlər"
+
+#: zodiac.cpp:263
+msgctxt "HolidayRegion|zodiac symbol for Cancer"
+msgid "crab"
+msgstr "xərçəng"
+
+#: zodiac.cpp:265
+msgctxt "HolidayRegion|zodiac symbol for Leo"
+msgid "lion"
+msgstr "şir"
+
+#: zodiac.cpp:267
+msgctxt "HolidayRegion|zodiac symbol for Virgo"
+msgid "virgin"
+msgstr "qız"
+
+#: zodiac.cpp:269
+msgctxt "HolidayRegion|zodiac symbol for Libra"
+msgid "scales"
+msgstr "tərəzi"
+
+#: zodiac.cpp:271
+msgctxt "HolidayRegion|zodiac symbol for Scorpion"
+msgid "scorpion"
+msgstr "əqrəb"
+
+#: zodiac.cpp:273
+msgctxt "HolidayRegion|zodiac symbol for Sagittarius"
+msgid "archer"
+msgstr "oxatan"
+
+#: zodiac.cpp:275
+msgctxt "HolidayRegion|zodiac symbol for Capricorn"
+msgid "goat"
+msgstr "oğlaq"
+
+#: zodiac.cpp:277
+msgctxt "HolidayRegion|zodiac symbol for Aquarius"
+msgid "water carrier"
+msgstr "dolça"
+
+#: zodiac.cpp:279
+msgctxt "HolidayRegion|zodiac symbol for Pices"
+msgid "fish"
+msgstr "balıqlar"
