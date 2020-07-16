@@ -17,6 +17,7 @@ include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(ECMCoverageOption)
+include(ECMQtDeclareLoggingCategory)
 include(ECMAddQch)
 include(ECMGeneratePriFile)
 

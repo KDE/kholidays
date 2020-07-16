@@ -10,7 +10,7 @@
 #include "holiday_p.h"
 #include "astroseasons.h"
 
-#include <QDebug>
+#include <kholidays_debug.h>
 
 using namespace KHolidays;
 
@@ -91,7 +91,7 @@ Holiday::List HolidayParserDriver::parseHolidays(int calendarYear, QCalendarSyst
 
 void HolidayParserDriver::error(const QString &errorMessage)
 {
-    qDebug() << errorMessage;
+    qCDebug(KHOLIDAYS_LOG) << errorMessage;
 }
 
 void HolidayParserDriver::parse()

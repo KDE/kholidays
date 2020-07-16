@@ -24,6 +24,14 @@ set(kholidays_SRCS
   ../holidays/holidays.qrc
 )
 
+ecm_qt_declare_logging_category(kholidays_SRCS
+    HEADER kholidays_debug.h
+    IDENTIFIER KHOLIDAYS_LOG
+    CATEGORY_NAME kf.holidays
+    DESCRIPTION "KHolidays"
+    EXPORT KHOLIDAYS
+)
+
 add_library(KF5Holidays ${kholidays_SRCS})
 generate_export_header(KF5Holidays BASE_NAME KHolidays)
 
@@ -102,3 +110,9 @@ ecm_generate_pri_file(
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
 
 add_subdirectory(declarative)
+
+ecm_qt_install_logging_categories(
+    EXPORT KHOLIDAYS
+    FILE kholidays.categories
+    DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}"
+)

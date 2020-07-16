@@ -8,10 +8,10 @@
 
 #include "qcalendarsystem_p.h"
 
+#include <kholidays_debug.h>
+
 #include <QDate>
 #include <QSharedData>
-
-#include <QDebug>
 
 class QCalendarSystemPrivate : public QSharedData
 {

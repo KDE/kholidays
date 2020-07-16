@@ -1312,7 +1312,7 @@ static yyconst flex_int16_t yy_rule_linenum[202] = {
 # include <limits.h>
 # include <string>
 
-# include <qdebug.h>
+# include <kholidays_debug.h>
 
 # include "holidayscannerplan_p.h"
 # include "holidayparserdriverplan_p.h"
@@ -3737,7 +3737,7 @@ void HolidayScannerPlan::set_debug(bool b)
 
 int HolidayScannerFlexLexer::yylex()
 {
-    qDebug() << "in HolidayScannerFlexLexer::yylex() !";
+    qCDebug(KHOLIDAYS_LOG) << "in HolidayScannerFlexLexer::yylex() !";
     return 0;
 }
 

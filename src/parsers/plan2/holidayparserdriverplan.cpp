@@ -22,8 +22,8 @@
 #include "holidayscannerplan_p.h"
 #include "holidayparserplan.hpp"
 #include "holiday_p.h"
+#include <kholidays_debug.h>
 
-#include <QDebug>
 #include <QFileInfo>
 
 #include <sstream>
@@ -70,12 +70,12 @@ void HolidayParserDriverPlan::error(const KHolidays::location &errorLocation, co
     Q_UNUSED(errorLocation);
     //std::cerr << errorLocation << " : " << errorMessage;  //Doesn't work???
     //qDebug() << errorLocation << " : " << errorMessage;  //Doesn't work???
-    qDebug() << errorMessage;
+    qCDebug(KHOLIDAYS_LOG) << errorMessage;
 }
 
 void HolidayParserDriverPlan::error(const QString &errorMessage)
 {
-    qDebug() << errorMessage;
+    qCDebug(KHOLIDAYS_LOG) << errorMessage;
 }
 
 void HolidayParserDriverPlan::parse()
