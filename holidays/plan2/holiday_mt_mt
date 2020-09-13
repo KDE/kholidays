@@ -14,8 +14,8 @@
 :: Metadata
 country     "MT"
 language    "mt"
-:name        "optional - defaults to country name"
-:description "Jiem Nazzjonali Malti"
+::name      "optional - defaults to country name"
+description "Jiem Nazzjonali Malti"
 
 :: Public Holidays
 "L-Ewwel tas-Sen​a"           public on january 1

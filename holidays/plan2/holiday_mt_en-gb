@@ -14,8 +14,8 @@
 :: Metadata
 country     "MT"
 language    "en_gb"
-:name        "optional - defaults to country name"
-:description "Maltese National Holidays"
+::name      "optional - defaults to country name"
+description "Maltese National Holidays"
 
 :: Public Holidays
 "New Year's Day"                     public on january 1
