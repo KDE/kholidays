@@ -736,7 +736,8 @@ static QStringList allHolidayFiles(const QString &location = QString())
     return files;
 }
 
-class Q_DECL_HIDDEN HolidayRegion::HolidayRegionPrivate
+namespace KHolidays {
+class HolidayRegionPrivate : public QSharedData
 {
 public:
     explicit HolidayRegionPrivate(const QString &regionCode) : mDriver(nullptr),
@@ -796,6 +797,7 @@ public:
     QString mRegionCode;           // region code of holiday region
     QFileInfo mHolidayFile;        // file containing holiday data, or null
 };
+}
 
 HolidayRegion::HolidayRegion(const QString &regionCode)
     : d(new HolidayRegionPrivate(regionCode))
@@ -807,10 +809,12 @@ HolidayRegion::HolidayRegion(const QFileInfo &regionFile)
 {
 }
 
-HolidayRegion::~HolidayRegion()
-{
-    delete d;
-}
+HolidayRegion::HolidayRegion(const HolidayRegion&) = default;
+HolidayRegion::HolidayRegion(HolidayRegion&&) = default;
+HolidayRegion::~HolidayRegion() = default;
+
+HolidayRegion& HolidayRegion::operator=(const HolidayRegion&) = default;
+HolidayRegion& HolidayRegion::operator=(HolidayRegion&&) = default;
 
 QStringList HolidayRegion::regionCodes()
 {

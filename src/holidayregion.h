@@ -25,6 +25,7 @@ class QFileInfo;
 
 namespace KHolidays
 {
+class HolidayRegionPrivate;
 
 /** Represents a holiday region. */
 class KHOLIDAYS_EXPORT HolidayRegion
@@ -46,10 +47,28 @@ public:
      */
     explicit HolidayRegion(const QFileInfo &regionFile);
 
+    /** Copy constructor.
+     *  @since 5.77
+     */
+    HolidayRegion(const HolidayRegion&);
+    /** Move constructor.
+     *  @since 5.77
+     */
+    HolidayRegion(HolidayRegion&&);
+
     /**
      * Destroys the holidays object.
      */
     ~HolidayRegion();
+
+    /** Assignment operator.
+     *  @since 5.77
+     */
+    HolidayRegion& operator=(const HolidayRegion&);
+    /** Move Assignment operator.
+     *  @since 5.77
+     */
+    HolidayRegion& operator=(HolidayRegion&&);
 
     /**
      * @since 4.5
@@ -222,10 +241,7 @@ public:
     static bool isValid(const QString &regionCode);
 
 private:
-    Q_DISABLE_COPY(HolidayRegion)
-
-    class HolidayRegionPrivate;
-    HolidayRegionPrivate *const d;
+    QExplicitlySharedDataPointer<HolidayRegionPrivate> d;
 };
 
 }
