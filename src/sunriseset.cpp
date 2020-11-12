@@ -144,18 +144,25 @@ static double calcEquationOfTime(double t)
     return radToDeg(Etime) * 4.0;   // in minutes of time
 }
 
-//calculate the hour angle of the sun at sunrise for the latitude (in radians)
-static double calcHourAngleSunrise(double latitude, double solarDec)
+// sun positions (in degree relative to the horizon) for certain events
+static constexpr const double Sunrise = -0.833; // see https://en.wikipedia.org/wiki/Sunrise
+static constexpr const double CivilTwilight = -6.0; // see https://en.wikipedia.org/wiki/Twilight
+
+static constexpr const double Up = 1.0;
+static constexpr const double Down = -1.0;
+
+//calculate the hour angle of the sun at angle @p sunHeight for the latitude (in radians)
+static double calcHourAngleSunrise(double latitude, double solarDec, double sunHeight)
 {
     double latRad = degToRad(latitude);
     double sdRad = degToRad(solarDec);
-    double HAarg = (cos(degToRad(90.833)) /
+    double HAarg = (cos(degToRad(90.0 - sunHeight)) /
                     (cos(latRad) * cos(sdRad)) - tan(latRad) * tan(sdRad));
     double HA = acos(HAarg);
     return HA; // in radians (for sunset, use -HA)
 }
 
-QTime KHolidays::SunRiseSet::utcSunrise(const QDate &date, double latitude, double longitude)
+static QTime calcSunEvent(const QDate &date, double latitude, double longitude, double sunHeight, double direction)
 {
     latitude = qMax(qMin(MaxLat, latitude), -MaxLat);
     longitude = qMax(qMin(MaxLong, longitude), -MaxLong);
@@ -163,7 +170,7 @@ QTime KHolidays::SunRiseSet::utcSunrise(const QDate &date, double latitude, doub
     double t = calcTimeJulianCent(date.toJulianDay());
     double eqTime = calcEquationOfTime(t);
     double solarDec = calcSunDeclination(t);
-    double hourAngle = calcHourAngleSunrise(latitude, solarDec);
+    double hourAngle = direction * calcHourAngleSunrise(latitude, solarDec, sunHeight);
     double delta = longitude + radToDeg(hourAngle);
     QTime timeUTC(0, 0);
     if (std::isnan(delta)) {
@@ -175,22 +182,22 @@ QTime KHolidays::SunRiseSet::utcSunrise(const QDate &date, double latitude, doub
                  0);
 }
 
+QTime KHolidays::SunRiseSet::utcSunrise(const QDate &date, double latitude, double longitude)
+{
+    return calcSunEvent(date, latitude, longitude, Sunrise, Up);
+}
+
 QTime KHolidays::SunRiseSet::utcSunset(const QDate &date, double latitude, double longitude)
 {
-    latitude = qMax(qMin(MaxLat, latitude), -MaxLat);
-    longitude = qMax(qMin(MaxLong, longitude), -MaxLong);
+    return calcSunEvent(date, latitude, longitude, Sunrise, Down);
+}
 
-    double t = calcTimeJulianCent(date.toJulianDay());
-    double eqTime = calcEquationOfTime(t);
-    double solarDec = calcSunDeclination(t);
-    double hourAngle = -calcHourAngleSunrise(latitude, solarDec);
-    double delta = longitude + radToDeg(hourAngle);
-    QTime timeUTC(0, 0);
-    if (std::isnan(delta)) {
-        return timeUTC;
-    }
-    timeUTC = timeUTC.addSecs((720 - (4.0 * delta) - eqTime) * 60);
-    return QTime(timeUTC.hour(),
-                 timeUTC.second() > 29 ? timeUTC.minute() + 1 : timeUTC.minute(),
-                 0);
+QTime SunRiseSet::utcDawn(const QDate& date, double latitude, double longitude)
+{
+    return calcSunEvent(date, latitude, longitude, CivilTwilight, Up);
+}
+
+QTime SunRiseSet::utcDusk(const QDate& date, double latitude, double longitude)
+{
+    return calcSunEvent(date, latitude, longitude, CivilTwilight, Down);
 }

@@ -17,6 +17,8 @@ class SunriseTest : public QObject
 private Q_SLOTS:
     void TestSunrise();
     void TestSunset();
+    void TestDawn();
+    void TestDusk();
 };
 
 #endif
