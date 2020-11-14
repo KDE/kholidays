@@ -54,18 +54,19 @@ Holiday::List HolidayParserDriver::parseHolidays(const QDate &startDate, const Q
     m_requestEnd = endDate;
     parse();
 
-    QDate dt;
-    for (dt = startDate; dt <= endDate; dt = dt.addDays(1)) {
-        const QString seasonName = AstroSeasons::seasonNameAtDate(dt);
-        if (!seasonName.isEmpty()) {
-            Holiday season;
-            season.d->mDayType = Holiday::Workday;
-            season.d->mObservedDate = dt;
-            season.d->mDuration = 1;
-            season.d->mName = seasonName;
-            season.d->mCategoryList.append(QLatin1String("seasonal"));
-            m_resultList.append(season);
-        }
+    for (int year = startDate.year(); year < endDate.year(); ++year) {
+         for (auto s : { AstroSeasons::JuneSolstice, AstroSeasons::DecemberSolstice, AstroSeasons::MarchEquinox, AstroSeasons::SeptemberEquinox }) {
+             const auto dt = AstroSeasons::seasonDate(s, year);
+             if (dt >= startDate && dt <= endDate) {
+                Holiday season;
+                season.d->mDayType = Holiday::Workday;
+                season.d->mObservedDate = dt;
+                season.d->mDuration = 1;
+                season.d->mName = AstroSeasons::seasonName(s);
+                season.d->mCategoryList.append(QLatin1String("seasonal"));
+                m_resultList.append(season);
+             }
+         }
     }
 
     std::sort(m_resultList.begin(), m_resultList.end());
