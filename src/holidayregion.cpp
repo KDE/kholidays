@@ -1123,12 +1123,14 @@ QString HolidayRegion::defaultRegionCode(const QString &country, const QString &
     // Locale language can have a country code embedded in it e.g. en_GB, which we can try use if
     // no country set, but a lot of countries use en_GB so it's a lower priority option
 
-    QString localeCountry, localeLanguage, localeLanguageCountry;
+    QString localeCountry, localeSubdivision, localeLanguage, localeLanguageCountry;
 
     if (country.isEmpty()) {
         localeCountry = countryToCode(QLocale().country()).toLower();
     } else {
         localeCountry = country.toLower();
+        const auto idx = localeCountry.indexOf(QLatin1Char('-'));
+        localeSubdivision = idx > 0 ? localeCountry.left(idx) : localeCountry;
     }
 
     if (language.isEmpty()) {
@@ -1151,23 +1153,27 @@ QString HolidayRegion::defaultRegionCode(const QString &country, const QString &
         QString regionSubdivisionCountry;
         if (regionCountry.split(QLatin1Char('-')).count() > 1) {
             regionSubdivisionCountry = regionCountry.split(QLatin1Char('-')).at(0);
+        } else {
+            regionSubdivisionCountry = regionCountry;
         }
         QString regionLanguage = KHolidays::HolidayRegion::languageCode(regionCode).toLower();
 
         if (regionCountry == localeCountry && regionLanguage == localeLanguage) {
+            // exact match so don't look further
+            return regionCode;
+        } else if (regionCountry == localeSubdivision && regionLanguage == localeLanguage) {
             countryAndLanguageMatch = regionCode;
-            break; // exact match so don't look further
         } else if (regionCountry == localeCountry) {
             if (countryOnlyMatch.isEmpty()) {
                 countryOnlyMatch = regionCode;
             }
         } else if (!regionSubdivisionCountry.isEmpty() &&
-                   regionSubdivisionCountry == localeCountry &&
+                   regionSubdivisionCountry == localeSubdivision &&
                    regionLanguage == localeLanguage) {
             if (subdivisionAndLanguageMatch.isEmpty()) {
                 subdivisionAndLanguageMatch = regionCode;
             }
-        } else if (!regionSubdivisionCountry.isEmpty() && regionSubdivisionCountry == localeCountry) {
+        } else if (!regionSubdivisionCountry.isEmpty() && regionSubdivisionCountry == localeSubdivision) {
             if (subdivisionOnlyMatch.isEmpty()) {
                 subdivisionOnlyMatch = regionCode;
             }

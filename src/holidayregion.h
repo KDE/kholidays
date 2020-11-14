@@ -91,7 +91,8 @@ public:
      * If a required country/language is not provided then the current KDE
      * country/lanaguage is used.
      *
-     * @param country The country to find a default Holiday Region for
+     * @param country The country or region to find a default Holiday Region for.
+     *   This can be either an ISO 3166-1 or ISO 3166-2 code.
      * @param language The lanaguage to find a default Holiday Region for
      * @return the full region code of the default file
      */

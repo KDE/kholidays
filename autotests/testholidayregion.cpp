@@ -152,4 +152,8 @@ void HolidayRegionTest::testDefaultRegions()
     QCOMPARE(KHolidays::HolidayRegion::defaultRegionCode("xx", "xx"), QString());
     QCOMPARE(KHolidays::HolidayRegion::defaultRegionCode("au", "en_GB"), QString("au-act_en-gb"));
     QCOMPARE(KHolidays::HolidayRegion::defaultRegionCode("au-VIC", "en_GB"), QString("au-vic_en-gb"));
+    QCOMPARE(KHolidays::HolidayRegion::defaultRegionCode("DE-BE"), QLatin1String("de-be_de"));
+    QCOMPARE(KHolidays::HolidayRegion::defaultRegionCode("DE"), QLatin1String("de_de"));
+    QCOMPARE(KHolidays::HolidayRegion::defaultRegionCode("AT-9"), QLatin1String("at_de"));
+    QCOMPARE(KHolidays::HolidayRegion::defaultRegionCode("US-CA"), QLatin1String("us_en-us"));
 }
