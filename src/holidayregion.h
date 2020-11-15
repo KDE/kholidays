@@ -95,6 +95,7 @@ public:
      *   This can be either an ISO 3166-1 or ISO 3166-2 code.
      * @param language The lanaguage to find a default Holiday Region for
      * @return the full region code of the default file
+     * @warning This methods is expensive as it involves parsing all holiday definition files.
      */
     static QString defaultRegionCode(const QString &country = QString(),
                                      const QString &language = QString());
@@ -137,6 +138,8 @@ public:
      *
      * @param regionCode The code for the Holiday Region.
      * @return the full region code of the file
+     * @warning This methods is expensive as it involves parsing the corresponding holiday
+     *   definition file. Prefer HolidayRegion::countryCode().
      */
     static QString countryCode(const QString &regionCode);
 
@@ -162,6 +165,8 @@ public:
      *
      * @param regionCode The code for the Holiday Region.
      * @return the language code of the file
+     * @warning This methods is expensive as it involves parsing the corresponding holiday
+     *   definition file. Prefer HolidayRegion::languageCode().
      */
     static QString languageCode(const QString &regionCode);
 
