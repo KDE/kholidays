@@ -37,6 +37,8 @@ void SunriseTest::TestSunrise()
     QCOMPARE(utcSunrise(QDate(2012, 7, 1), 51.40, 7.38), QTime(3, 19));
     QCOMPARE(utcSunrise(QDate(2012, 12, 31), 51.40, 7.38), QTime(7, 36));
 
+    QCOMPARE(utcSunrise(QDate(2020, 12, 3), 52.5, 13.0), QTime(7, 0));
+
     //Tasmania
     QCOMPARE(utcSunrise(QDate(2012, 1, 1), -14.60, 133.77), QTime(20, 39));
     QCOMPARE(utcSunrise(QDate(2012, 7, 1), -14.60, 133.77), QTime(21, 31));

@@ -177,9 +177,12 @@ static QTime calcSunEvent(const QDate &date, double latitude, double longitude, 
         return timeUTC;
     }
     timeUTC = timeUTC.addSecs((720 - (4.0 * delta) - eqTime) * 60);
-    return QTime(timeUTC.hour(),
-                 timeUTC.second() > 29 ? timeUTC.minute() + 1 : timeUTC.minute(),
-                 0);
+
+    // round to nearest minute
+    if (timeUTC.second() > 29) {
+        return QTime(timeUTC.hour(), timeUTC.minute()).addSecs(60);
+    }
+    return QTime(timeUTC.hour(), timeUTC.minute());
 }
 
 QTime KHolidays::SunRiseSet::utcSunrise(const QDate &date, double latitude, double longitude)
