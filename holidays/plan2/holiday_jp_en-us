@@ -64,8 +64,8 @@ description "National holiday file for Japan"
 "Constitution Day"                 public on may 3
 "Greenery Day"                     public on may 4
 "Children's Day"                   public on may 5
-"Oceans' Day"                      public on ((year == 2020) ? [july 23] : [third monday in july])
-"Mountain Day"                     public on ((year == 2020) ? [august 10] : [august 11])
+"Oceans' Day"                      public on ((year != 2020 && year != 2021) ? [third monday in july] : noop)
+"Mountain Day"                     public on ((year != 2020 && year != 2021) ? [august 11] : noop)
 "Respect for Senior Citizens Day"  public on third monday in september
 
 :: Equinox Days on and after 2022 are expected dates. See notes above.
@@ -101,7 +101,7 @@ description "National holiday file for Japan"
 "Autumnal Equinox Day"             public on september 23 2029
 "Autumnal Equinox Day"             public on september 23 2030
 
-"Sports Day"                       public on ((year == 2020) ? [july 24] : [second monday in october])
+"Sports Day"                       public on ((year != 2020 && year != 2021) ? [second monday in october] : noop)
 "Culture Day"                      public on november 3
 "Labor Thanksgiving Day"           public on november 23
 "The Emperor's Birthday"           public on ((year < 2019) ? [december 23] : ((year > 2019) ? [february 23] : noop))
@@ -140,12 +140,21 @@ description "National holiday file for Japan"
 "Holiday"                public on november 4 2019
 "Holiday"                public on february 24 2020
 "Holiday"                public on may 6 2020
+"Holiday"                public on august 9 2021
 
 :: 2019 Japanese imperial transition special arrangements
 "Holiday"                public on april 30 2019
 "Holiday"                public on may 1 2019
 "Holiday"                public on may 2 2019
 "Holiday"                public on october 22 2019
+
+:: 2020 Tokyo Olympics special arrangements
+"Oceans' Day"                      public on july 23 2020
+"Oceans' Day"                      public on july 22 2021
+"Mountain Day"                     public on august 10 2020
+"Mountain Day"                     public on august 8 2021
+"Sports Day"                       public on july 24 2020
+"Sports Day"                       public on july 23 2021
 
 :: Religious
 

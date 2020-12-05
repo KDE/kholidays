@@ -72,9 +72,9 @@ description "日本の国民の休日のファイルです。"
 :"Children's Day"
 "こどもの日"                          public on may 5
 :"Oceans' Day"
-"海の日"                             public on ((year == 2020) ? [july 23] : [third monday in july])
+"海の日"                             public on ((year != 2020 && year != 2021) ? [third monday in july] : noop)
 :"Mountain Day"
-"山の日"                             public on ((year == 2020) ? [august 10] : [august 11])
+"山の日"                             public on ((year != 2020 && year != 2021) ? [august 11] : noop)
 :"Respect for Senior Citizens Day"
 "敬老の日"                            public on third monday in september
 
@@ -114,7 +114,7 @@ description "日本の国民の休日のファイルです。"
 
 :"Sports Day" (new name after 2020)
 "体育の日"                            public on ((year < 2020) ? [second monday in october] : noop)
-"スポーツの日"                         public on ((year > 2020) ? [second monday in october] : ((year == 2020) ? [july 24] : noop))
+"スポーツの日"                         public on ((year > 2021) ? [second monday in october] : noop)
 :"Culture Day"
 "文化の日"                            public on november 3
 :"Labor Thanksgiving Day"
@@ -156,12 +156,24 @@ description "日本の国民の休日のファイルです。"
 "休日"                               public on november 4 2019
 "休日"                               public on february 24 2020
 "休日"                               public on may 6 2020
+"休日"                               public on august 9 2021
 
 :: 2019 Japanese imperial transition special arrangements
 "休日"                               public on april 30 2019
 "休日"                               public on may 1 2019
 "休日"                               public on may 2 2019
 "休日"                               public on october 22 2019
+
+:: 2020 Tokyo Olympics special arrangements
+:"Oceans' Day"
+"海の日"                             public on july 23 2020
+"海の日"                             public on july 22 2021
+:"Mountain Day"
+"山の日"                             public on august 10 2020
+"山の日"                             public on august 8 2021
+:"Sports Day"
+"スポーツの日"                         public on july 24 2020
+"スポーツの日"                         public on july 23 2021
 
 :: Religious
 
