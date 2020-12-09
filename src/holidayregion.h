@@ -16,11 +16,11 @@
 
 #include <QSharedDataPointer>
 #include <QString>
+#include <QStringList>
 
 #include "holiday.h"
 
 class QDate;
-class QStringList;
 class QFileInfo;
 
 namespace KHolidays
