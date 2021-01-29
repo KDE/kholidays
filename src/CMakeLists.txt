@@ -82,7 +82,7 @@ if(BUILD_QCH)
     KF5Holidays_QCH
     NAME KHolidays
     BASE_NAME KF5Holidays
-    VERSION ${KF5_VERSION}
+    VERSION ${KF_VERSION}
     ORG_DOMAIN org.kde
     SOURCES # using only public headers, to cover only public API
       ${KHolidays_HEADERS}

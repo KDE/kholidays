@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 
-set(KF5_VERSION "5.79.0")
-project(KHolidays VERSION ${KF5_VERSION})
+set(KF_VERSION "5.79.0")
+project(KHolidays VERSION ${KF_VERSION})
 
 find_package(ECM 5.79.0 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
@@ -21,7 +21,7 @@ include(ECMQtDeclareLoggingCategory)
 include(ECMAddQch)
 include(ECMGeneratePriFile)
 
-set(KHOLIDAYS_LIB_VERSION ${KF5_VERSION})
+set(KHOLIDAYS_LIB_VERSION ${KF_VERSION})
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX KHOLIDAYS
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kholidays_version.h"
