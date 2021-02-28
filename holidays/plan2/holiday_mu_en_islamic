@@ -5,7 +5,7 @@
 ::
 :: Author:   Nadim Attari <nadim.attari@gmail.com>
 ::
-:: Updated:  2021-02-12
+:: Updated:  2021-02-28
 ::
 :: Source:   https://pmo.govmu.org/Communique/Public%20holidays%20-%202021.pdf
 ::
@@ -17,7 +17,7 @@
 :: Metadata
 country     "MU"
 language    "en_GB"
-name        "Mauritius"
+name        "Mauritius with Islamic holidays"
 description "National holiday file for Mauritius including Islamic holidays"
 
 :: Public Holidays
