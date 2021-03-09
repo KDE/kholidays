@@ -3,8 +3,6 @@
 
     SPDX-FileCopyrightText: 2004, 2007, 2009 Allen Winter <winter@kde.org>
 
-    SPDX-FileCopyrightText: 1989, 1993 The Regents of the University of California. All rights reserved.
-
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
@@ -15,10 +13,6 @@
 #include <QDateTime>
 
 using namespace KHolidays;
-
-static double percentFull(uint tmpt);
-static double degreesToRadians(double degree);
-static void adj360(double *degree);
 
 QString LunarPhase::phaseNameAtDate(const QDate &date)
 {
@@ -42,172 +36,98 @@ QString LunarPhase::phaseName(LunarPhase::Phase phase)
     return QString();
 }
 
+static double phaseAngle(int64_t unixmsec);
+
 LunarPhase::Phase LunarPhase::phaseAtDate(const QDate &date)
 {
     Phase retPhase = None;
 
-    // compute percent-full for the middle of today and yesterday.
-    const QTime anytime(12, 0, 0);
-    const QDateTime today(date, anytime, Qt::UTC);
-    const double todayPer = percentFull(today.toSecsSinceEpoch()) + 0.5;
+    const QTime midnight(0, 0, 0);
+    const QDateTime todayStart(date, midnight, Qt::UTC);
+    const double startAngle = phaseAngle(todayStart.toMSecsSinceEpoch());
+    const QDateTime todayEnd(date.addDays(1), midnight, Qt::UTC);
+    const double endAngle = phaseAngle(todayEnd.toMSecsSinceEpoch());
 
-    const QDateTime tomorrow(date.addDays(1), anytime, Qt::UTC);
-    const double tomorrowPer = percentFull(tomorrow.toSecsSinceEpoch()) + 0.5;
-
-    if (static_cast<int>(todayPer) == 100 && static_cast<int>(tomorrowPer) != 100) {
-        retPhase = FullMoon;
-    } else if (static_cast<int>(todayPer) == 0 && static_cast<int>(tomorrowPer) != 0) {
+    if (startAngle > endAngle)
         retPhase = NewMoon;
-    } else {
-        if (todayPer > 50 && tomorrowPer < 50) {
-            retPhase = LastQuarter;
-        }
-        if (todayPer < 50 && tomorrowPer > 50) {
-            retPhase = FirstQuarter;
-        }
+    else if (startAngle < 90.0 && endAngle > 90.0)
+        retPhase = FirstQuarter;
+    else if (startAngle < 180.0 && endAngle > 180.0)
+        retPhase = FullMoon;
+    else if (startAngle < 270.0 && endAngle > 270.0)
+        retPhase = LastQuarter;
 
-        // Note: if you want to support crescent and gibbous phases then please
-        //  read the source for the original BSD 'pom' program.
-    }
-
-    return (retPhase);
+    return retPhase;
 }
 
 /*
- * Copyright (c) 1989, 1993
- *  The Regents of the University of California.  All rights reserved.
- *
- * This code is derived from software posted to USENET.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions
- * are met:
- * 1. Redistributions of source code must retain the above copyright
- *    notice, this list of conditions and the following disclaimer.
- * 2. Redistributions in binary form must reproduce the above copyright
- *    notice, this list of conditions and the following disclaimer in the
- *    documentation and/or other materials provided with the distribution.
- * 3. All advertising materials mentioning features or use of this software
- *    must display the following acknowledgement:
- *  This product includes software developed by the University of
- *  California, Berkeley and its contributors.
- * 4. Neither the name of the University nor the names of its contributors
- *    may be used to endorse or promote products derived from this software
- *    without specific prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
- * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
- * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
- * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
- * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
- * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
- * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
- * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
- * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
- * SUCH DAMAGE.
- */
+    Algorithm adapted from Moontool by John Walker.
+    Moontool is in the public domain: "Do what thou wilt shall be the whole of the law".
+    Unnecessary calculations have been removed.
+    See https://fourmilab.ch/moontool .
+*/
 
-#ifdef HAVE_SYS_CDEFS_H
-#include <sys/cdefs.h>
-#endif
-
-/*
- * Phase of the Moon.  Calculates the current phase of the moon.
- * Based on routines from `Practical Astronomy with Your Calculator',
- * by Duffett-Smith.  Comments give the section from the book that
- * particular piece of code was adapted from.
- *
- * -- Keith E. Brandt  VIII 1984
- *
- * Updated to the Third Edition of Duffett-Smith's book, Paul Janzen, IX 1998
- *
- */
-#include "util.h"
-#include <cctype>
-#ifdef HAVE_ERR_H
-#include <err.h>
-#endif
 #include <cmath>
-#include <cstdlib>
-#include <cstring>
-#include <ctime>
 
-/*
- * The EPOCH in the third edition of the book is 1990 Jan 0.0 TDT.
- * In this program, we do not bother to correct for the differences
- * between UTC (as shown by the UNIX clock) and TDT.  (TDT = TAI + 32.184s;
- * TAI-UTC = 32s in Jan 1999.)
- */
-static const int EPOCH_MINUS_1970 = (20 * 365 + 5 - 1); /* 20 years, 5 leaps, back 1 day to Jan 0 */
-static const double EPSILONg = 279.403303; /* solar ecliptic long at EPOCH */
-static const double RHOg = 282.768422; /* solar ecliptic long of perigee at EPOCH */
-static const double ECCEN = 0.016713; /* solar orbit eccentricity */
-static const double lzero = 318.351648; /* lunar mean long at EPOCH */
-static const double Pzero = 36.340410; /* lunar mean long of perigee at EPOCH */
-static const double Nzero = 318.510107; /* lunar mean long of node at EPOCH */
+constexpr int64_t epoch = 315446400000; // "1980 January 0.0", a.k.a. midnight on 1979-12-31, in ms Unix time
+constexpr double elonge = 278.833540; // ecliptic longitude of sun at epoch
+constexpr double elongp = 282.596403; // ecliptic longitude of sun at perigee
+constexpr double earthEcc = 0.016718; // eccentricity of earth orbit
+static const double ecPrefactor = sqrt((1 + earthEcc) / (1 - earthEcc));
 
-/*
- * percentFull --
- *  return phase of the moon as a percentage of full
- */
-static double percentFull(uint tmpt)
+constexpr double mmlong = 64.975464; // mean longitude of moon at epoch
+constexpr double mmlongp = 349.383063; // mean longitude of moon at perigee
+
+constexpr double PI = 3.14159265358979323846;
+
+static double fixAngle(double degrees)
 {
-    double N, Msol, Ec, LambdaSol, l, Mm, Ev, Ac, A3, Mmprime;
-    double A4, lprime, V, ldprime, D, Nm;
-
-    double days;
-    days = (tmpt - EPOCH_MINUS_1970 * 86400) / 86400.0;
-
-    N = 360 * days / 365.242191; /* sec 46 #3 */
-    adj360(&N);
-    Msol = N + EPSILONg - RHOg; /* sec 46 #4 */
-    adj360(&Msol);
-    Ec = 360 / PI * ECCEN * sin(degreesToRadians(Msol)); /* sec 46 #5 */
-    LambdaSol = N + Ec + EPSILONg; /* sec 46 #6 */
-    adj360(&LambdaSol);
-    l = 13.1763966 * days + lzero; /* sec 65 #4 */
-    adj360(&l);
-    Mm = l - (0.1114041 * days) - Pzero; /* sec 65 #5 */
-    adj360(&Mm);
-    Nm = Nzero - (0.0529539 * days); /* sec 65 #6 */
-    adj360(&Nm);
-    Ev = 1.2739 * sin(degreesToRadians(2 * (l - LambdaSol) - Mm)); /* sec 65 #7 */
-    Ac = 0.1858 * sin(degreesToRadians(Msol)); /* sec 65 #8 */
-    A3 = 0.37 * sin(degreesToRadians(Msol));
-    Mmprime = Mm + Ev - Ac - A3; /* sec 65 #9 */
-    Ec = 6.2886 * sin(degreesToRadians(Mmprime)); /* sec 65 #10 */
-    A4 = 0.214 * sin(degreesToRadians(2 * Mmprime)); /* sec 65 #11 */
-    lprime = l + Ev + Ec - Ac + A4; /* sec 65 #12 */
-    V = 0.6583 * sin(degreesToRadians(2 * (lprime - LambdaSol))); /* sec 65 #13 */
-    ldprime = lprime + V; /* sec 65 #14 */
-    D = ldprime - LambdaSol; /* sec 67 #2 */
-    D = 50.0 * (1 - cos(degreesToRadians(D))); /* sec 67 #3 */
-    return D;
+    return degrees - floor(degrees / 360.0) * 360.0;
 }
 
-/*
- * degreesToRadians --
- *  convert degrees to radians
- */
-static double degreesToRadians(double degree)
+static constexpr double radToDeg(double rad)
 {
-    return (degree * PI) / 180.00;
+    return rad / PI * 180.0;
 }
 
-/*
- * adj360 --
- *  adjust value so 0 <= degree <= 360
- */
-static void adj360(double *degree)
+static constexpr double degToRad(double deg)
 {
-    for (;;) {
-        if (*degree < 0) {
-            *degree += 360;
-        } else if (*degree > 360) {
-            *degree -= 360;
-        } else {
-            break;
-        }
-    }
+    return deg / 180.0 * PI;
+}
+
+constexpr double epsilon = 1e-6;
+
+static double kepler(double m, double ecc)
+{
+    double mrad = degToRad(m);
+    double e = mrad;
+    double delta;
+    do {
+        delta = e - ecc * sin(e) - mrad;
+        e -= delta / (1 - ecc * cos(e));
+    } while (abs(delta) > epsilon);
+    return e;
+}
+
+static double phaseAngle(int64_t unixmsec)
+{
+    int64_t msec = unixmsec - epoch;
+
+    double sunMeanAnomaly = fixAngle(msec * (360.0 / 365.2422 / 86400000.0) + elonge - elongp);
+    double trueAnomaly = 2 * radToDeg(atan(ecPrefactor * tan(kepler(sunMeanAnomaly, earthEcc) / 2)));
+    double geocentricEclipticLong = fixAngle(trueAnomaly + elongp);
+
+    double moonMeanLong = fixAngle(msec * (13.1763966 / 86400000.0) + mmlong);
+    double moonMeanAnomaly = fixAngle(moonMeanLong - msec * (0.1114041 / 86400000.0) - mmlongp);
+    double evection = 1.2739 * sin(degToRad(2 * (moonMeanLong - geocentricEclipticLong) - moonMeanAnomaly));
+    double annualEquation = 0.1858 * sin(degToRad(sunMeanAnomaly));
+    double a3 = 0.37 * sin(degToRad(sunMeanAnomaly));
+    double correctedAnomaly = moonMeanAnomaly + evection - annualEquation - a3;
+    double centreCorrection = 6.2886 * sin(degToRad(correctedAnomaly));
+    double a4 = 0.214 * sin(degToRad(2 * correctedAnomaly));
+    double correctedLong = moonMeanLong + evection + centreCorrection - annualEquation + a4;
+    double variation = 0.6583 * sin(degToRad(2 * (correctedLong - geocentricEclipticLong)));
+    double trueLong = correctedLong + variation;
+
+    return fixAngle(trueLong - geocentricEclipticLong);
 }
