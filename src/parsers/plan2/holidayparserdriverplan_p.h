@@ -19,7 +19,6 @@
 
 namespace KHolidays
 {
-
 class HolidayScannerPlan;
 class HolidayParserPlan;
 class location;
@@ -41,7 +40,6 @@ class location;
 class HolidayParserDriverPlan : public HolidayParserDriver
 {
 public:
-
     /**
      * Constructor of Plan file parser driver
      *
@@ -94,75 +92,75 @@ protected:
     std::string *fileToParse() const;
 
     // Calendar and date calculation utilities
-    int   adjustedMonthNumber(int month);
-    bool  isLeapYear(int year);
-    int   parseYear();
+    int adjustedMonthNumber(int month);
+    bool isLeapYear(int year);
+    int parseYear();
 
     // Utilities for parser to calculate interim Julian Day Number during parsing
-    int   julianDayFromEventName(const QString &eventName);
-    int   julianDayFromEaster();
-    int   julianDayFromPascha();
-    int   julianDayFromMonthDay(int month, int day);
-    int   julianDayFromRelativeWeekday(int occurrence, int weekday, int jd);
-    int   julianDayFromWeekdayInMonth(int occurrence, int weekday, int month);
+    int julianDayFromEventName(const QString &eventName);
+    int julianDayFromEaster();
+    int julianDayFromPascha();
+    int julianDayFromMonthDay(int month, int day);
+    int julianDayFromRelativeWeekday(int occurrence, int weekday, int jd);
+    int julianDayFromWeekdayInMonth(int occurrence, int weekday, int month);
 
     // Utilities for parser to set variables during parsing
-    void  setParseCalendar(const QString &calendarType);
-    void  setFileCountryCode(const QString &countryCode);
-    void  setFileLanguageCode(const QString &languageCode);
-    void  setFileName(const QString &ame);
-    void  setFileDescription(const QString &description);
-    void  setEventName(const QString &eventName);
-    void  setEventCategory(const QString &category);
-    void  setEventCalendarType(const QString &calendarType = QStringLiteral("gregorian"));
-    void  setEventDate(int eventYear, int eventMonth, int eventDay);
-    void  setEventDate(int jd);
+    void setParseCalendar(const QString &calendarType);
+    void setFileCountryCode(const QString &countryCode);
+    void setFileLanguageCode(const QString &languageCode);
+    void setFileName(const QString &ame);
+    void setFileDescription(const QString &description);
+    void setEventName(const QString &eventName);
+    void setEventCategory(const QString &category);
+    void setEventCalendarType(const QString &calendarType = QStringLiteral("gregorian"));
+    void setEventDate(int eventYear, int eventMonth, int eventDay);
+    void setEventDate(int jd);
 
     // Terminal functions for parser to create holidays from parsed variables
-    void  setFromEaster(int offset, int duration);
-    void  setFromPascha(int offset, int duration);
-    void  setFromDate(int offset, int condition, int duration);
-    void  setFromWeekdayInMonth(int occurrence, int weekday, int month, int offset, int duration);
-    void  setFromRelativeWeekday(int occurrence, int weekday, int offset, int duration);
-    void  setEvent(int event_jd, int observe_offset, int duration);
+    void setFromEaster(int offset, int duration);
+    void setFromPascha(int offset, int duration);
+    void setFromDate(int offset, int condition, int duration);
+    void setFromWeekdayInMonth(int occurrence, int weekday, int month, int offset, int duration);
+    void setFromRelativeWeekday(int occurrence, int weekday, int offset, int duration);
+    void setEvent(int event_jd, int observe_offset, int duration);
 
 private:
     // Calendar and date calculation utilities
-    int   julianDay(int year, int month, int day);
-    void  julianDayToDate(int jd, int *year, int *month, int *day);
+    int julianDay(int year, int month, int day);
+    void julianDayToDate(int jd, int *year, int *month, int *day);
     QDate easter(int year);
     QDate pascha(int year);
     QCalendarSystem::CalendarSystem typeToSystem(const QString &calendarType);
     QString systemToType(QCalendarSystem::CalendarSystem calendar);
 
-    int   conditionalOffset(int year, int month, int day, int condition);
+    int conditionalOffset(int year, int month, int day, int condition);
 
-    void  addHoliday(const QDate &date, int duration);
+    void addHoliday(const QDate &date, int duration);
 
-    QByteArray          m_scanData;                 // Holiday file stored as a string
+    QByteArray m_scanData; // Holiday file stored as a string
 
-    QStringList         m_fileCalendarTypes;        // List of all Calendar Types used in file
-    QString             m_parseCalendarType;        // Calendar Type being parsed
+    QStringList m_fileCalendarTypes; // List of all Calendar Types used in file
+    QString m_parseCalendarType; // Calendar Type being parsed
 
-    bool                m_traceParsing;             // Bison C++ skeleton enable tracing in Bison parser class
-    HolidayParserPlan  *m_parser;                   // Bison C++ skeleton Bison parser class implementation
+    bool m_traceParsing; // Bison C++ skeleton enable tracing in Bison parser class
+    HolidayParserPlan *m_parser; // Bison C++ skeleton Bison parser class implementation
 
-    bool                m_traceScanning;            // Flex C++ enable tracing in Flex scanner class
-    HolidayScannerPlan *m_scanner;                  // Flex C++ scanner class implementation
+    bool m_traceScanning; // Flex C++ enable tracing in Flex scanner class
+    HolidayScannerPlan *m_scanner; // Flex C++ scanner class implementation
 
-    bool                m_parseMetadataOnly;        // Only parse file for metadata
-    QDate               m_parseYearStart;           // First day of year being parsed
-    QDate               m_parseYearEaster;          // Easter in the parse year, Gregorian only
-    QDate               m_parseYearPascha;          // Orthodox Easter in the parse year, Gregorian only
+    bool m_parseMetadataOnly; // Only parse file for metadata
+    QDate m_parseYearStart; // First day of year being parsed
+    QDate m_parseYearEaster; // Easter in the parse year, Gregorian only
+    QDate m_parseYearPascha; // Orthodox Easter in the parse year, Gregorian only
 
-    QStringList         m_eventCategories;          // Event categories
-    QString             m_eventCalendarType;        // Calendar Type for event rule
-    QString             m_eventName;                // Event name text
-    int                 m_eventYear;                // Event date fields
-    int                 m_eventMonth;               // Event date fields
-    int                 m_eventDay;                 // Event date fields
+    QStringList m_eventCategories; // Event categories
+    QString m_eventCalendarType; // Calendar Type for event rule
+    QString m_eventName; // Event name text
+    int m_eventYear; // Event date fields
+    int m_eventMonth; // Event date fields
+    int m_eventDay; // Event date fields
 
-    std::string        *m_fileToParse = nullptr;
+    std::string *m_fileToParse = nullptr;
 };
 
 }

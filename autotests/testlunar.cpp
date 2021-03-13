@@ -19,7 +19,7 @@ using namespace KHolidays;
 void LunarTest::test2005()
 {
     QList<QDate> fQ2005, fM2005, lQ2005, nM2005;
-    //2005 first quarter moons
+    // 2005 first quarter moons
     fQ2005.append(QDate(2005, 1, 16));
     fQ2005.append(QDate(2005, 2, 15));
     fQ2005.append(QDate(2005, 3, 17));
@@ -33,7 +33,7 @@ void LunarTest::test2005()
     fQ2005.append(QDate(2005, 11, 8));
     fQ2005.append(QDate(2005, 12, 7));
 
-    //2005 full moons
+    // 2005 full moons
     fM2005.append(QDate(2005, 1, 25));
     fM2005.append(QDate(2005, 2, 24));
     fM2005.append(QDate(2005, 3, 26));
@@ -47,7 +47,7 @@ void LunarTest::test2005()
     fM2005.append(QDate(2005, 11, 16));
     fM2005.append(QDate(2005, 12, 15));
 
-    //2005 last quarter moons
+    // 2005 last quarter moons
     lQ2005.append(QDate(2005, 1, 3));
     lQ2005.append(QDate(2005, 2, 1));
     lQ2005.append(QDate(2005, 3, 3));
@@ -62,7 +62,7 @@ void LunarTest::test2005()
     lQ2005.append(QDate(2005, 11, 23));
     lQ2005.append(QDate(2005, 12, 23));
 
-    //2005 new moons
+    // 2005 new moons
     nM2005.append(QDate(2005, 1, 10));
     nM2005.append(QDate(2005, 2, 9));
     nM2005.append(QDate(2005, 3, 10));
@@ -106,7 +106,7 @@ void LunarTest::test2005()
 void LunarTest::test2007()
 {
     QList<QDate> fQ2007, fM2007, lQ2007, nM2007;
-    //2007 first quarter moons
+    // 2007 first quarter moons
     fQ2007.append(QDate(2007, 1, 25));
     fQ2007.append(QDate(2007, 2, 23));
     fQ2007.append(QDate(2007, 3, 25));
@@ -120,7 +120,7 @@ void LunarTest::test2007()
     fQ2007.append(QDate(2007, 11, 17));
     fQ2007.append(QDate(2007, 12, 16));
 
-    //2007 full moons
+    // 2007 full moons
     fM2007.append(QDate(2007, 1, 3));
     fM2007.append(QDate(2007, 2, 2));
     fM2007.append(QDate(2007, 3, 4));
@@ -135,7 +135,7 @@ void LunarTest::test2007()
     fM2007.append(QDate(2007, 11, 24));
     fM2007.append(QDate(2007, 12, 24));
 
-    //2007 last quarter moons
+    // 2007 last quarter moons
     lQ2007.append(QDate(2007, 1, 11));
     lQ2007.append(QDate(2007, 2, 9));
     lQ2007.append(QDate(2007, 3, 11));
@@ -150,7 +150,7 @@ void LunarTest::test2007()
     lQ2007.append(QDate(2007, 12, 1));
     lQ2007.append(QDate(2007, 12, 30));
 
-    //2007 new moons
+    // 2007 new moons
     nM2007.append(QDate(2007, 1, 19));
     nM2007.append(QDate(2007, 2, 17));
     nM2007.append(QDate(2007, 3, 19));

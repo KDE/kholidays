@@ -50,11 +50,11 @@ public:
     /** Copy constructor.
      *  @since 5.77
      */
-    HolidayRegion(const HolidayRegion&);
+    HolidayRegion(const HolidayRegion &);
     /** Move constructor.
      *  @since 5.77
      */
-    HolidayRegion(HolidayRegion&&);
+    HolidayRegion(HolidayRegion &&);
 
     /**
      * Destroys the holidays object.
@@ -64,11 +64,11 @@ public:
     /** Assignment operator.
      *  @since 5.77
      */
-    HolidayRegion& operator=(const HolidayRegion&);
+    HolidayRegion &operator=(const HolidayRegion &);
     /** Move Assignment operator.
      *  @since 5.77
      */
-    HolidayRegion& operator=(HolidayRegion&&);
+    HolidayRegion &operator=(HolidayRegion &&);
 
     /**
      * @since 4.5
@@ -97,8 +97,7 @@ public:
      * @return the full region code of the default file
      * @warning This methods is expensive as it involves parsing all holiday definition files.
      */
-    static QString defaultRegionCode(const QString &country = QString(),
-                                     const QString &language = QString());
+    static QString defaultRegionCode(const QString &country = QString(), const QString &language = QString());
 
     /**
      * @since 4.5

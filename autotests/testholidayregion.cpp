@@ -35,28 +35,23 @@ void HolidayRegionTest::printHolidays(const KHolidays::Holiday::List &holidays)
 {
     if (!holidays.isEmpty()) {
         for (const KHolidays::Holiday &holiday : holidays) {
-            qDebug() << "Date = " << holiday.observedStartDate().toString(Qt::ISODate)
-                     << " Duration = " << holiday.duration()
-                     << " Name = " << holiday.name();
+            qDebug() << "Date = " << holiday.observedStartDate().toString(Qt::ISODate) << " Duration = " << holiday.duration() << " Name = " << holiday.name();
         }
     } else {
         qDebug() << "No holidays";
     }
 }
 
-void HolidayRegionTest::parseRegionCalendarYear(const KHolidays::HolidayRegion &region, int year,
-        const QString &calendarType)
+void HolidayRegionTest::parseRegionCalendarYear(const KHolidays::HolidayRegion &region, int year, const QString &calendarType)
 {
     qDebug() << "Parsing region = " << region.regionCode() << " year = " << year << " calendar = " << calendarType;
     printHolidays(region.holidays(year));
     qDebug() << "";
 }
 
-void HolidayRegionTest::parseRegionDateRange(const KHolidays::HolidayRegion &region, const QDate &startDate,
-        const QDate &endDate)
+void HolidayRegionTest::parseRegionDateRange(const KHolidays::HolidayRegion &region, const QDate &startDate, const QDate &endDate)
 {
-    qDebug() << "Parsing regionCode = " << region.regionCode()
-             << " start date = " << startDate.toString(Qt::ISODate)
+    qDebug() << "Parsing regionCode = " << region.regionCode() << " start date = " << startDate.toString(Qt::ISODate)
              << " end date = " << endDate.toString(Qt::ISODate);
     printHolidays(region.holidays(startDate, endDate));
     qDebug() << "";

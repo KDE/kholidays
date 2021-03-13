@@ -9,7 +9,7 @@
 */
 
 // Take the name prefix into account.
-#define yylex   KHolidayslex
+#define yylex KHolidayslex
 
 /* First part of user declarations.  */
 
@@ -17,12 +17,12 @@
 #line 30 "holidayparserplan.ypp"
 /*** C/C++ Declarations ***/
 
+#include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <limits.h>
 #include <string>
+#include <sys/stat.h>
+#include <sys/types.h>
 
 #include <QString>
 

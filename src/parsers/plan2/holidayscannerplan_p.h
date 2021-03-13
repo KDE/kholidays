@@ -14,12 +14,9 @@
 
 #ifndef YY_DECL
 
-#define YY_DECL                                                    \
-    KHolidays::HolidayParserPlan::token_type                       \
-    KHolidays::HolidayScannerPlan::lex(                            \
-            KHolidays::HolidayParserPlan::semantic_type* yylval,       \
-            KHolidays::HolidayParserPlan::location_type* yylloc        \
-                                      )
+#define YY_DECL                                                                                                                                                \
+    KHolidays::HolidayParserPlan::token_type KHolidays::HolidayScannerPlan::lex(KHolidays::HolidayParserPlan::semantic_type *yylval,                           \
+                                                                                KHolidays::HolidayParserPlan::location_type *yylloc)
 #endif
 
 #ifndef __FLEX_LEXER_H
@@ -32,7 +29,6 @@
 
 namespace KHolidays
 {
-
 /**
  * HolidayScannerPlan implementation class
  *
@@ -54,8 +50,7 @@ public:
 
     ~HolidayScannerPlan() override;
 
-    virtual HolidayParserPlan::token_type lex(HolidayParserPlan::semantic_type *yylval,
-            HolidayParserPlan::location_type *yylloc);
+    virtual HolidayParserPlan::token_type lex(HolidayParserPlan::semantic_type *yylval, HolidayParserPlan::location_type *yylloc);
 
     void set_debug(bool b);
 };

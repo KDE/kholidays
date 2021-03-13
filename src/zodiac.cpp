@@ -8,9 +8,9 @@
 
 #include "zodiac.h"
 
+#include <QCoreApplication>
 #include <QDateTime>
 #include <QSharedData>
-#include <QCoreApplication>
 
 using namespace KHolidays;
 
@@ -116,7 +116,7 @@ Zodiac::ZodiacSigns Zodiac::signAtDate(const QDate &date) const
             return Pisces;
         }
 
-        startdate = enddate.addDays(1);    // March 21
+        startdate = enddate.addDays(1); // March 21
         enddate = startdate.addDays(29);
         if (date >= startdate && date <= enddate) {
             return Aries;
@@ -197,7 +197,7 @@ Zodiac::ZodiacSigns Zodiac::signAtDate(const QDate &date) const
             return Pisces;
         }
 
-        startdate = QDate(date.year(), 4, 14);    // April 14
+        startdate = QDate(date.year(), 4, 14); // April 14
         enddate = startdate.addDays(30);
         if (date >= startdate && date <= enddate) {
             return Aries;

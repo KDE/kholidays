@@ -18,7 +18,6 @@ class QString;
 
 namespace KHolidays
 {
-
 class ZodiacPrivate;
 
 /**

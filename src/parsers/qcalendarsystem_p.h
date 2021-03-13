@@ -9,8 +9,8 @@
 #ifndef QCALENDARSYSTEM_H
 #define QCALENDARSYSTEM_H
 
-#include <QSharedPointer>
 #include <QDate>
+#include <QSharedPointer>
 
 class QCalendarSystemPrivate;
 
@@ -101,8 +101,7 @@ public:
     int monthsDifference(const QDate &fromDate, const QDate &toDate) const;
     qint64 daysDifference(const QDate &fromDate, const QDate &toDate) const;
 
-    void dateDifference(const QDate &fromDate, const QDate &toDate,
-                        int *years, int *months, int *days, int *direction) const;
+    void dateDifference(const QDate &fromDate, const QDate &toDate, int *years, int *months, int *days, int *direction) const;
 
     QDate firstDayOfYear(const QDate &date) const;
     QDate firstDayOfYear(int year) const;

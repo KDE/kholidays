@@ -16,7 +16,6 @@ class QString;
 
 namespace KHolidays
 {
-
 /**
   Represents and manages a Lunar Phase
 
@@ -39,7 +38,7 @@ namespace KHolidays
 
    Note that crescent and gibbous phases are not currently supported.
 */
-class KHOLIDAYS_EXPORT LunarPhase //krazy:exclude=dpointer
+class KHOLIDAYS_EXPORT LunarPhase // krazy:exclude=dpointer
 {
 public:
     /**
@@ -48,11 +47,11 @@ public:
       in phase().
     */
     enum Phase {
-        NewMoon,      ///< New moon phase
+        NewMoon, ///< New moon phase
         FirstQuarter, ///< First quarter of moon phase
-        LastQuarter,  ///< Last quarter of moon phase
-        FullMoon,     ///< Full moon phase
-        None,         ///< Indication for error
+        LastQuarter, ///< Last quarter of moon phase
+        FullMoon, ///< Full moon phase
+        None, ///< Indication for error
     };
 
     /**

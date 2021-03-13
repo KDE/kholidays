@@ -18,7 +18,6 @@
 
 namespace KHolidays
 {
-
 /**
  * HolidayParserDriver abstract base class
  *
@@ -32,7 +31,6 @@ namespace KHolidays
 class HolidayParserDriver
 {
 public:
-
     /**
      * Constructor of abstract holiday file parser driver class.
      * This will be called by derived classes.
@@ -109,8 +107,7 @@ public:
      *
      * @return a list of holidays
      */
-    virtual Holiday::List parseHolidays(int calendarYear,
-                                        QCalendarSystem::CalendarSystem calendar = QCalendarSystem::GregorianCalendar);
+    virtual Holiday::List parseHolidays(int calendarYear, QCalendarSystem::CalendarSystem calendar = QCalendarSystem::GregorianCalendar);
 
     /**
      * Standard error message handling
@@ -142,22 +139,22 @@ protected:
      */
     virtual void setParseStartEnd();
 
-    QString          m_filePath;           // File to be parsed
+    QString m_filePath; // File to be parsed
 
-    QString          m_fileCountryCode;    // File country code in ISO 3166-2 standard
-    QString          m_fileLanguageCode;   // File language
-    QString          m_fileName;           // File name
-    QString          m_fileDescription;    // File description
+    QString m_fileCountryCode; // File country code in ISO 3166-2 standard
+    QString m_fileLanguageCode; // File language
+    QString m_fileName; // File name
+    QString m_fileDescription; // File description
 
-    QDate            m_requestStart;       // First day of period being requested
-    QDate            m_requestEnd;         // Last day of period being requested
+    QDate m_requestStart; // First day of period being requested
+    QDate m_requestEnd; // Last day of period being requested
 
-    Holiday::List    m_resultList;         // List of requested holidays
+    Holiday::List m_resultList; // List of requested holidays
 
-    QCalendarSystem  m_parseCalendar;      // Calendar system being parsed
-    int              m_parseYear;          // Year currently being parsed
-    int              m_parseStartYear;     // First year to parse in parse calendar
-    int              m_parseEndYear;       // Last year to parse in parse calendar
+    QCalendarSystem m_parseCalendar; // Calendar system being parsed
+    int m_parseYear; // Year currently being parsed
+    int m_parseStartYear; // First year to parse in parse calendar
+    int m_parseEndYear; // Last year to parse in parse calendar
 };
 
 }

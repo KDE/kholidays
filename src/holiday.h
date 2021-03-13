@@ -22,7 +22,6 @@ class QString;
 
 namespace KHolidays
 {
-
 class HolidayPrivate;
 class HolidayRegion;
 
@@ -45,8 +44,8 @@ public:
      * If any of the holidays on a date are non-workdays types, then the entire day is non-working.
      */
     enum DayType {
-        Workday,   ///< The holiday is a workday
-        NonWorkday,///< The holiday is a real holiday
+        Workday, ///< The holiday is a workday
+        NonWorkday, ///< The holiday is a real holiday
     };
 
     /**

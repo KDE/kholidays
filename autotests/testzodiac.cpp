@@ -8,8 +8,8 @@
 
 #include "zodiac.h"
 
-#include <QDateTime>
 #include <QCoreApplication>
+#include <QDateTime>
 
 #include <cstdlib>
 #include <iostream>

@@ -30,8 +30,7 @@ private Q_SLOTS:
 private:
     void printMetadata(const KHolidays::HolidayRegion &region);
     void printHolidays(const KHolidays::Holiday::List &holidays);
-    void parseRegionCalendarYear(const KHolidays::HolidayRegion &region, int year,
-                                 const QString &calendarType = "gregorian");
+    void parseRegionCalendarYear(const KHolidays::HolidayRegion &region, int year, const QString &calendarType = "gregorian");
     void parseRegionDateRange(const KHolidays::HolidayRegion &region, const QDate &startDate, const QDate &endDate);
     void parseRegionDate(const KHolidays::HolidayRegion &region, const QDate &date);
 };

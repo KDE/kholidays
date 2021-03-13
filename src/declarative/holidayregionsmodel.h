@@ -9,8 +9,8 @@
 #ifndef HOLIDAYREGIONSMODEL_H
 #define HOLIDAYREGIONSMODEL_H
 
-#include <QObject>
 #include <QAbstractListModel>
+#include <QObject>
 
 class HolidayRegionsDeclarativeModel : public QAbstractListModel
 {

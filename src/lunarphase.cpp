@@ -11,8 +11,8 @@
 #include "lunarphase.h"
 #include <config-kholidays.h>
 
-#include <QDateTime>
 #include <QCoreApplication>
+#include <QDateTime>
 
 using namespace KHolidays;
 
@@ -54,11 +54,9 @@ LunarPhase::Phase LunarPhase::phaseAtDate(const QDate &date)
     const QDateTime tomorrow(date.addDays(1), anytime, Qt::UTC);
     const double tomorrowPer = percentFull(tomorrow.toSecsSinceEpoch()) + 0.5;
 
-    if (static_cast<int>(todayPer) == 100 &&
-            static_cast<int>(tomorrowPer) != 100) {
+    if (static_cast<int>(todayPer) == 100 && static_cast<int>(tomorrowPer) != 100) {
         retPhase = FullMoon;
-    } else if (static_cast<int>(todayPer) == 0 &&
-               static_cast<int>(tomorrowPer) != 0) {
+    } else if (static_cast<int>(todayPer) == 0 && static_cast<int>(tomorrowPer) != 0) {
         retPhase = NewMoon;
     } else {
         if (todayPer > 50 && tomorrowPer < 50) {
@@ -131,8 +129,8 @@ LunarPhase::Phase LunarPhase::phaseAtDate(const QDate &date)
 #include <err.h>
 #endif
 #include <cmath>
-#include <cstring>
 #include <cstdlib>
+#include <cstring>
 #include <ctime>
 
 static const double PI = 3.14159265358979323846;
@@ -143,13 +141,13 @@ static const double PI = 3.14159265358979323846;
  * between UTC (as shown by the UNIX clock) and TDT.  (TDT = TAI + 32.184s;
  * TAI-UTC = 32s in Jan 1999.)
  */
-static const int EPOCH_MINUS_1970 = (20 * 365 + 5 - 1);   /* 20 years, 5 leaps, back 1 day to Jan 0 */
-static const double EPSILONg = 279.403303;    /* solar ecliptic long at EPOCH */
-static const double RHOg     = 282.768422;    /* solar ecliptic long of perigee at EPOCH */
-static const double ECCEN    = 0.016713;      /* solar orbit eccentricity */
-static const double lzero    = 318.351648;    /* lunar mean long at EPOCH */
-static const double Pzero    = 36.340410;     /* lunar mean long of perigee at EPOCH */
-static const double Nzero    = 318.510107;    /* lunar mean long of node at EPOCH */
+static const int EPOCH_MINUS_1970 = (20 * 365 + 5 - 1); /* 20 years, 5 leaps, back 1 day to Jan 0 */
+static const double EPSILONg = 279.403303; /* solar ecliptic long at EPOCH */
+static const double RHOg = 282.768422; /* solar ecliptic long of perigee at EPOCH */
+static const double ECCEN = 0.016713; /* solar orbit eccentricity */
+static const double lzero = 318.351648; /* lunar mean long at EPOCH */
+static const double Pzero = 36.340410; /* lunar mean long of perigee at EPOCH */
+static const double Nzero = 318.510107; /* lunar mean long of node at EPOCH */
 
 /*
  * percentFull --
@@ -163,30 +161,30 @@ static double percentFull(uint tmpt)
     double days;
     days = (tmpt - EPOCH_MINUS_1970 * 86400) / 86400.0;
 
-    N = 360 * days / 365.242191;                                 /* sec 46 #3 */
+    N = 360 * days / 365.242191; /* sec 46 #3 */
     adj360(&N);
-    Msol = N + EPSILONg - RHOg;                                  /* sec 46 #4 */
+    Msol = N + EPSILONg - RHOg; /* sec 46 #4 */
     adj360(&Msol);
-    Ec = 360 / PI * ECCEN * sin(degreesToRadians(Msol));         /* sec 46 #5 */
-    LambdaSol = N + Ec + EPSILONg;                               /* sec 46 #6 */
+    Ec = 360 / PI * ECCEN * sin(degreesToRadians(Msol)); /* sec 46 #5 */
+    LambdaSol = N + Ec + EPSILONg; /* sec 46 #6 */
     adj360(&LambdaSol);
-    l = 13.1763966 * days + lzero;                               /* sec 65 #4 */
+    l = 13.1763966 * days + lzero; /* sec 65 #4 */
     adj360(&l);
-    Mm = l - (0.1114041 * days) - Pzero;                         /* sec 65 #5 */
+    Mm = l - (0.1114041 * days) - Pzero; /* sec 65 #5 */
     adj360(&Mm);
-    Nm = Nzero - (0.0529539 * days);                             /* sec 65 #6 */
+    Nm = Nzero - (0.0529539 * days); /* sec 65 #6 */
     adj360(&Nm);
-    Ev = 1.2739 * sin(degreesToRadians(2 * (l - LambdaSol) - Mm));       /* sec 65 #7 */
-    Ac = 0.1858 * sin(degreesToRadians(Msol));                   /* sec 65 #8 */
+    Ev = 1.2739 * sin(degreesToRadians(2 * (l - LambdaSol) - Mm)); /* sec 65 #7 */
+    Ac = 0.1858 * sin(degreesToRadians(Msol)); /* sec 65 #8 */
     A3 = 0.37 * sin(degreesToRadians(Msol));
-    Mmprime = Mm + Ev - Ac - A3;                                 /* sec 65 #9 */
-    Ec = 6.2886 * sin(degreesToRadians(Mmprime));                /* sec 65 #10 */
-    A4 = 0.214 * sin(degreesToRadians(2 * Mmprime));             /* sec 65 #11 */
-    lprime = l + Ev + Ec - Ac + A4;                              /* sec 65 #12 */
-    V = 0.6583 * sin(degreesToRadians(2 * (lprime - LambdaSol)));      /* sec 65 #13 */
-    ldprime = lprime + V;                                        /* sec 65 #14 */
-    D = ldprime - LambdaSol;                                     /* sec 67 #2 */
-    D = 50.0 * (1 - cos(degreesToRadians(D)));                   /* sec 67 #3 */
+    Mmprime = Mm + Ev - Ac - A3; /* sec 65 #9 */
+    Ec = 6.2886 * sin(degreesToRadians(Mmprime)); /* sec 65 #10 */
+    A4 = 0.214 * sin(degreesToRadians(2 * Mmprime)); /* sec 65 #11 */
+    lprime = l + Ev + Ec - Ac + A4; /* sec 65 #12 */
+    V = 0.6583 * sin(degreesToRadians(2 * (lprime - LambdaSol))); /* sec 65 #13 */
+    ldprime = lprime + V; /* sec 65 #14 */
+    D = ldprime - LambdaSol; /* sec 67 #2 */
+    D = 50.0 * (1 - cos(degreesToRadians(D))); /* sec 67 #3 */
     return D;
 }
 

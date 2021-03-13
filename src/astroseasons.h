@@ -16,7 +16,6 @@ class QString;
 
 namespace KHolidays
 {
-
 /**
   Represents and manages the Astronomical Seasons (solstices and equinoxes).
   For the purposes of this class, we sometimes use the shorthand of "Season"
@@ -36,10 +35,9 @@ namespace KHolidays
    Note that this class represents the "Astronomical Seasons" and not
    the traditional "Seasons" which vary widely by culture.
 */
-class KHOLIDAYS_EXPORT AstroSeasons //krazy:exclude=dpointer
+class KHOLIDAYS_EXPORT AstroSeasons // krazy:exclude=dpointer
 {
 public:
-
     enum Season {
         JuneSolstice,
         DecemberSolstice,
@@ -47,7 +45,6 @@ public:
         SeptemberEquinox,
         None,
     };
-
 
     /**
      * Return the Gregorian date on which the season occurs in given year.
@@ -87,4 +84,3 @@ public:
 }
 
 #endif
-

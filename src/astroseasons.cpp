@@ -12,8 +12,8 @@
 #include <cmath>
 #include <numeric>
 
-#include <QDate>
 #include <QCoreApplication>
+#include <QDate>
 
 using namespace KHolidays;
 
@@ -27,8 +27,8 @@ using namespace KHolidays;
  * greater time span, therefor no checks for the given year are performed
  * anywhere in the code.
  */
-namespace {
-
+namespace
+{
 double meanJDE(AstroSeasons::Season season, int year)
 {
     if (year <= 1000) {
@@ -77,8 +77,11 @@ double periodicTerms(double t)
     // at compile time so that they can be passed to std::cos()
     struct Periodic {
         constexpr Periodic(int a, double b_deg, double c_deg)
-            : a(a), b_rad(b_deg * (M_PI / 180.0)), c_rad(c_deg * (M_PI / 180.0))
-        {}
+            : a(a)
+            , b_rad(b_deg * (M_PI / 180.0))
+            , c_rad(c_deg * (M_PI / 180.0))
+        {
+        }
 
         int a;
         double b_rad;
@@ -95,8 +98,9 @@ double periodicTerms(double t)
     };
     // clang-format on
 
-    return std::accumulate(std::begin(periodic), std::end(periodic), 0.0,
-            [t](double s, const Periodic &p) { return s + p.a * std::cos(p.b_rad + p.c_rad * t); });
+    return std::accumulate(std::begin(periodic), std::end(periodic), 0.0, [t](double s, const Periodic &p) {
+        return s + p.a * std::cos(p.b_rad + p.c_rad * t);
+    });
 }
 
 // Returns julian date of given season in given year
@@ -147,7 +151,7 @@ QString AstroSeasons::seasonName(AstroSeasons::Season season)
 
 AstroSeasons::Season AstroSeasons::seasonAtDate(const QDate &date)
 {
-    for (auto season : { JuneSolstice, DecemberSolstice, MarchEquinox, SeptemberEquinox }) {
+    for (auto season : {JuneSolstice, DecemberSolstice, MarchEquinox, SeptemberEquinox}) {
         if (seasonDate(season, date.year()) == date) {
             return season;
         }

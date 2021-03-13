@@ -14,13 +14,13 @@
 
 #include "holidayregion.h"
 
-#include <QLocale>
+#include <QCoreApplication>
 #include <QDirIterator>
 #include <QFile>
 #include <QFileInfo>
+#include <QLocale>
 #include <QSharedData>
 #include <QStandardPaths>
-#include <QCoreApplication>
 
 #include "holiday_p.h"
 #include "parsers/plan2/holidayparserdriverplan_p.h"
@@ -722,7 +722,7 @@ static void initResources()
 static QStringList allHolidayFiles(const QString &location = QString())
 {
     initResources();
-    QStringList dirs{ QStringLiteral(":/org.kde.kholidays/plan2") };
+    QStringList dirs{QStringLiteral(":/org.kde.kholidays/plan2")};
     dirs += QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, //
                                       QStringLiteral("kf5/libkholidays/plan2"),
                                       QStandardPaths::LocateDirectory);
@@ -736,12 +736,14 @@ static QStringList allHolidayFiles(const QString &location = QString())
     return files;
 }
 
-namespace KHolidays {
+namespace KHolidays
+{
 class HolidayRegionPrivate : public QSharedData
 {
 public:
-    explicit HolidayRegionPrivate(const QString &regionCode) : mDriver(nullptr),
-        mRegionCode(regionCode)
+    explicit HolidayRegionPrivate(const QString &regionCode)
+        : mDriver(nullptr)
+        , mRegionCode(regionCode)
     {
         if (!mRegionCode.isEmpty()) {
             auto file = QStandardPaths::locate(QStandardPaths::GenericDataLocation, //
@@ -760,8 +762,9 @@ public:
         init();
     }
 
-    explicit HolidayRegionPrivate(const QFileInfo &regionFile) : mDriver(nullptr),
-        mHolidayFile(regionFile)
+    explicit HolidayRegionPrivate(const QFileInfo &regionFile)
+        : mDriver(nullptr)
+        , mHolidayFile(regionFile)
     {
         init();
     }
@@ -776,7 +779,6 @@ public:
         if (mHolidayFile.exists()) {
             mDriver = new HolidayParserDriverPlan(mHolidayFile.absoluteFilePath());
             if (mDriver) {
-
                 if (mRegionCode.isEmpty()) {
                     if (mHolidayFile.fileName().startsWith(QLatin1String("holiday_"))) {
                         mRegionCode = mHolidayFile.fileName().mid(8);
@@ -793,9 +795,9 @@ public:
         }
     }
 
-    HolidayParserDriver *mDriver;  // The parser driver for the holiday file
-    QString mRegionCode;           // region code of holiday region
-    QFileInfo mHolidayFile;        // file containing holiday data, or null
+    HolidayParserDriver *mDriver; // The parser driver for the holiday file
+    QString mRegionCode; // region code of holiday region
+    QFileInfo mHolidayFile; // file containing holiday data, or null
 };
 }
 
@@ -809,12 +811,12 @@ HolidayRegion::HolidayRegion(const QFileInfo &regionFile)
 {
 }
 
-HolidayRegion::HolidayRegion(const HolidayRegion&) = default;
-HolidayRegion::HolidayRegion(HolidayRegion&&) = default;
+HolidayRegion::HolidayRegion(const HolidayRegion &) = default;
+HolidayRegion::HolidayRegion(HolidayRegion &&) = default;
 HolidayRegion::~HolidayRegion() = default;
 
-HolidayRegion& HolidayRegion::operator=(const HolidayRegion&) = default;
-HolidayRegion& HolidayRegion::operator=(HolidayRegion&&) = default;
+HolidayRegion &HolidayRegion::operator=(const HolidayRegion &) = default;
+HolidayRegion &HolidayRegion::operator=(HolidayRegion &&) = default;
 
 QStringList HolidayRegion::regionCodes()
 {
@@ -934,20 +936,15 @@ QString HolidayRegion::name() const
                 } else if (country == QLatin1String("au") && subdivision == QLatin1String("sa")) {
                     regionName = QCoreApplication::translate("HolidayRegion", "South Australia", "Australian Region");
                 } else if (country == QLatin1String("au") && subdivision == QLatin1String("nt")) {
-                    regionName = QCoreApplication::translate("HolidayRegion",
-                                                             "Northern Territory", "Australian Region");
+                    regionName = QCoreApplication::translate("HolidayRegion", "Northern Territory", "Australian Region");
                 } else if (country == QLatin1String("au") && subdivision == QLatin1String("act")) {
-                    regionName = QCoreApplication::translate("HolidayRegion",
-                                                             "Australian Capital Territory", "Australian Region");
+                    regionName = QCoreApplication::translate("HolidayRegion", "Australian Capital Territory", "Australian Region");
                 } else if (country == QLatin1String("au") && subdivision == QLatin1String("wa")) {
-                    regionName = QCoreApplication::translate("HolidayRegion",
-                                                             "Western Australia", "Australian Region");
+                    regionName = QCoreApplication::translate("HolidayRegion", "Western Australia", "Australian Region");
                 } else if (country == QLatin1String("au") && subdivision == QLatin1String("tas")) {
-                    regionName = QCoreApplication::translate("HolidayRegion",
-                                                             "Tasmania", "Australian Region");
+                    regionName = QCoreApplication::translate("HolidayRegion", "Tasmania", "Australian Region");
                 } else if (country == QLatin1String("ba") && subdivision == QLatin1String("srp")) {
-                    regionName = QCoreApplication::translate("HolidayRegion",
-                                                             "Republic of Srpska", "Bosnian and Herzegovinian Region");
+                    regionName = QCoreApplication::translate("HolidayRegion", "Republic of Srpska", "Bosnian and Herzegovinian Region");
                 } else {
                     // TODO Note this does not give the current QLocale translation!
                     regionName = QLocale::countryToString(codeToCountry(country)) + QLatin1String(" (") + subdivision + QLatin1Char(')');
@@ -958,7 +955,7 @@ QString HolidayRegion::name() const
             }
         }
 
-        //Cheat on type for now,take direct from region code until API is introduced in SC 4.6
+        // Cheat on type for now,take direct from region code until API is introduced in SC 4.6
         QStringList regionParts = regionCode().toLower().split(QLatin1Char('_'));
         if (regionParts.count() == 3) {
             const QString &type = regionParts.at(2);
@@ -1019,11 +1016,8 @@ QString HolidayRegion::name() const
 
         if (!regionName.isEmpty()) {
             if (!typeName.isEmpty()) {
-                tempName =
-                    QCoreApplication::translate(
-                        "HolidayRegion",
-                        "%1 - %2",
-                        "Holiday file display name, %1 = region name, %2 = holiday type").arg(regionName, typeName);
+                tempName = QCoreApplication::translate("HolidayRegion", "%1 - %2", "Holiday file display name, %1 = region name, %2 = holiday type")
+                               .arg(regionName, typeName);
             } else {
                 tempName = regionName;
             }
@@ -1143,9 +1137,8 @@ QString HolidayRegion::defaultRegionCode(const QString &country, const QString &
         localeLanguageCountry = localeLanguage.split(QLatin1Char('_')).at(1);
     }
 
-    QString countryAndLanguageMatch, countryOnlyMatch, subdivisionAndLanguageMatch,
-            subdivisionOnlyMatch, languageCountryAndLanguageMatch, languageCountryOnlyMatch,
-            languageSubdivisionAndLanguageMatch, languageSubdivisionOnlyMatch;
+    QString countryAndLanguageMatch, countryOnlyMatch, subdivisionAndLanguageMatch, subdivisionOnlyMatch, languageCountryAndLanguageMatch,
+        languageCountryOnlyMatch, languageSubdivisionAndLanguageMatch, languageSubdivisionOnlyMatch;
 
     const QStringList regionList = KHolidays::HolidayRegion::regionCodes();
     for (const QString &regionCode : regionList) {
@@ -1168,9 +1161,7 @@ QString HolidayRegion::defaultRegionCode(const QString &country, const QString &
             if (countryOnlyMatch.isEmpty()) {
                 countryOnlyMatch = regionCode;
             }
-        } else if (!regionSubdivisionCountry.isEmpty() &&
-                   regionSubdivisionCountry == localeSubdivision &&
-                   regionLanguage == localeLanguage) {
+        } else if (!regionSubdivisionCountry.isEmpty() && regionSubdivisionCountry == localeSubdivision && regionLanguage == localeLanguage) {
             if (subdivisionAndLanguageMatch.isEmpty()) {
                 subdivisionAndLanguageMatch = regionCode;
             }
@@ -1178,9 +1169,7 @@ QString HolidayRegion::defaultRegionCode(const QString &country, const QString &
             if (subdivisionOnlyMatch.isEmpty()) {
                 subdivisionOnlyMatch = regionCode;
             }
-        } else if (!localeLanguageCountry.isEmpty() &&
-                   regionCountry == localeLanguageCountry &&
-                   regionLanguage == localeLanguage) {
+        } else if (!localeLanguageCountry.isEmpty() && regionCountry == localeLanguageCountry && regionLanguage == localeLanguage) {
             if (languageCountryAndLanguageMatch.isEmpty()) {
                 languageCountryAndLanguageMatch = regionCode;
             }
@@ -1188,16 +1177,12 @@ QString HolidayRegion::defaultRegionCode(const QString &country, const QString &
             if (languageCountryOnlyMatch.isEmpty()) {
                 languageCountryOnlyMatch = regionCode;
             }
-        } else if (!regionSubdivisionCountry.isEmpty() &&
-                   !localeLanguageCountry.isEmpty() &&
-                   regionSubdivisionCountry == localeLanguageCountry &&
-                   regionLanguage == localeLanguage) {
+        } else if (!regionSubdivisionCountry.isEmpty() && !localeLanguageCountry.isEmpty() && regionSubdivisionCountry == localeLanguageCountry
+                   && regionLanguage == localeLanguage) {
             if (languageSubdivisionAndLanguageMatch.isEmpty()) {
                 languageSubdivisionAndLanguageMatch = regionCode;
             }
-        } else if (!regionSubdivisionCountry.isEmpty() &&
-                   !localeLanguageCountry.isEmpty() &&
-                   regionSubdivisionCountry == localeLanguageCountry) {
+        } else if (!regionSubdivisionCountry.isEmpty() && !localeLanguageCountry.isEmpty() && regionSubdivisionCountry == localeLanguageCountry) {
             if (languageSubdivisionOnlyMatch.isEmpty()) {
                 languageSubdivisionOnlyMatch = regionCode;
             }

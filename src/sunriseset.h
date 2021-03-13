@@ -14,7 +14,6 @@
 
 namespace KHolidays
 {
-
 /**
   @brief
   Methods for determining the sunrise and sunset times for a given date and Earth location.
@@ -22,7 +21,6 @@ namespace KHolidays
 
 namespace SunRiseSet
 {
-
 /**
   Compute the sunrise time (UTC) for a date and Earth location.
   @param date is any valid QDate.

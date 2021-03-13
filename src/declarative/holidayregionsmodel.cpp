@@ -17,8 +17,8 @@ public:
 };
 
 HolidayRegionsDeclarativeModel::HolidayRegionsDeclarativeModel(QObject *parent)
-    : QAbstractListModel(parent),
-      d(new Private())
+    : QAbstractListModel(parent)
+    , d(new Private())
 {
     d->regionCodes = KHolidays::HolidayRegion::regionCodes();
     // Make sure we don't add the same regions twice

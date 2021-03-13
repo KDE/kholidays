@@ -18,31 +18,31 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "holidayparserdriverplan_p.h"
-#include "holidayscannerplan_p.h"
-#include "holidayparserplan.hpp"
 #include "holiday_p.h"
+#include "holidayparserdriverplan_p.h"
+#include "holidayparserplan.hpp"
+#include "holidayscannerplan_p.h"
 #include <kholidays_debug.h>
 
 #include <QFileInfo>
 
 #include <sstream>
 
-#define LAST        99999
-#define ANY       (-99999)
-#define BEFORE        (-1)
-#define AFTER           1
+#define LAST 99999
+#define ANY (-99999)
+#define BEFORE (-1)
+#define AFTER 1
 
 using namespace KHolidays;
 
 HolidayParserDriverPlan::HolidayParserDriverPlan(const QString &planFilePath)
-    : HolidayParserDriver(planFilePath),
-      m_traceParsing(false),
-      m_traceScanning(false),
-      m_parseMetadataOnly(false),
-      m_eventYear(0),
-      m_eventMonth(0),
-      m_eventDay(0)
+    : HolidayParserDriver(planFilePath)
+    , m_traceParsing(false)
+    , m_traceScanning(false)
+    , m_parseMetadataOnly(false)
+    , m_eventYear(0)
+    , m_eventMonth(0)
+    , m_eventDay(0)
 {
     QFile holidayFile(filePath());
     if (holidayFile.open(QIODevice::ReadOnly)) {
@@ -64,12 +64,12 @@ HolidayParserDriverPlan::~HolidayParserDriverPlan()
     delete m_fileToParse;
 }
 
-//TODO Figure why it doesn't compile
+// TODO Figure why it doesn't compile
 void HolidayParserDriverPlan::error(const KHolidays::location &errorLocation, const QString &errorMessage)
 {
     Q_UNUSED(errorLocation);
-    //std::cerr << errorLocation << " : " << errorMessage;  //Doesn't work???
-    //qDebug() << errorLocation << " : " << errorMessage;  //Doesn't work???
+    // std::cerr << errorLocation << " : " << errorMessage;  //Doesn't work???
+    // qDebug() << errorLocation << " : " << errorMessage;  //Doesn't work???
     qCDebug(KHOLIDAYS_LOG) << errorMessage;
 }
 
@@ -82,7 +82,6 @@ void HolidayParserDriverPlan::parse()
 {
     // Parse the file using every calendar system in the file
     for (const QString &calendarType : qAsConst(m_fileCalendarTypes)) {
-
         // Cater for events defined in other Calendar Systems where request year could cover 2 or 3 event years
         // Perhaps also parse year before and year after to allow events to span years or shift to other year?
         setParseCalendar(calendarType);
@@ -90,7 +89,6 @@ void HolidayParserDriverPlan::parse()
 
         // Generate all events for this calendar in the required year(s)
         for (m_parseYear = m_parseStartYear; m_parseYear <= m_parseEndYear; ++m_parseYear) {
-
             m_parseYearStart = m_parseCalendar.firstDayOfYear(m_parseYear);
             m_parseYearEaster = easter(m_parseYear);
             m_parseYearPascha = pascha(m_parseYear);
@@ -100,7 +98,6 @@ void HolidayParserDriverPlan::parse()
 
             m_parser->parse();
         }
-
     }
 }
 
@@ -173,18 +170,17 @@ std::string *HolidayParserDriverPlan::fileToParse() const
 // Adjust month numbering for Hebrew civil calendar leap month
 int HolidayParserDriverPlan::adjustedMonthNumber(int month)
 {
-    if (m_eventCalendarType != QLatin1String("hebrew") ||               // Only adjust Hebrew months
-            m_parseCalendarType != QLatin1String("hebrew") ||
-            !m_parseCalendar.isLeapYear(m_parseYear) ||    // Only adjust in leap year
-            month < 6) {                                    // Only adjust from Adar onwards
+    if (m_eventCalendarType != QLatin1String("hebrew") || // Only adjust Hebrew months
+        m_parseCalendarType != QLatin1String("hebrew") || !m_parseCalendar.isLeapYear(m_parseYear) || // Only adjust in leap year
+        month < 6) { // Only adjust from Adar onwards
         return month;
     }
 
-    if (month == 13) {   // Adar I
+    if (month == 13) { // Adar I
         return 6;
     }
 
-    if (month == 14) {   // Adar II
+    if (month == 14) { // Adar II
         return 7;
     }
 
@@ -250,8 +246,7 @@ QDate HolidayParserDriverPlan::pascha(int year)
         return QDate();
     }
 
-    if (m_parseCalendar.calendarSystem() == QCalendarSystem::GregorianCalendar ||
-        m_parseCalendar.calendarSystem() == QCalendarSystem::JulianCalendar) {
+    if (m_parseCalendar.calendarSystem() == QCalendarSystem::GregorianCalendar || m_parseCalendar.calendarSystem() == QCalendarSystem::JulianCalendar) {
         // Algorithm taken from Tondering
         // https://www.tondering.dk/claus/cal/easter.php#orthodoxeast
         // Gives Orthodox Easter in the Julian Calendar, need to convert afterwards to Gregorian if needed
@@ -369,7 +364,7 @@ int HolidayParserDriverPlan::julianDayFromMonthDay(int month, int day)
 // Return jd of weekday relative to a Julian Day number
 int HolidayParserDriverPlan::julianDayFromRelativeWeekday(int occurrence, int weekday, int jd)
 {
-    if (occurrence == ANY) {    /* Should never get this, convert to AFTER instead */
+    if (occurrence == ANY) { /* Should never get this, convert to AFTER instead */
         occurrence = AFTER;
     }
 
@@ -393,9 +388,9 @@ int HolidayParserDriverPlan::julianDayFromRelativeWeekday(int occurrence, int we
 // Return jd of weekday occurrence in a given month and day in the parse year
 int HolidayParserDriverPlan::julianDayFromWeekdayInMonth(int occurrence, int weekday, int month)
 {
-    if (occurrence == LAST) {    // Is weekday on or before last day of month
+    if (occurrence == LAST) { // Is weekday on or before last day of month
         return julianDayFromRelativeWeekday(BEFORE, weekday, julianDay(m_parseYear, month, m_parseCalendar.daysInMonth(m_parseYear, month)));
-    } else {  // Is nth weekday on or after first day of month
+    } else { // Is nth weekday on or after first day of month
         return julianDayFromRelativeWeekday(occurrence, weekday, julianDay(m_parseYear, month, 1));
     }
 }
@@ -410,39 +405,39 @@ void HolidayParserDriverPlan::setParseCalendar(const QString &calendarType)
     setParseCalendar(typeToSystem(calendarType));
 }
 
-void  HolidayParserDriverPlan::setFileCountryCode(const QString &countryCode)
+void HolidayParserDriverPlan::setFileCountryCode(const QString &countryCode)
 {
     m_fileCountryCode = countryCode;
 }
 
-void  HolidayParserDriverPlan::setFileLanguageCode(const QString &languageCode)
+void HolidayParserDriverPlan::setFileLanguageCode(const QString &languageCode)
 {
     m_fileLanguageCode = languageCode;
 }
 
-void  HolidayParserDriverPlan::setFileName(const QString &name)
+void HolidayParserDriverPlan::setFileName(const QString &name)
 {
     m_fileName = name;
 }
 
-void  HolidayParserDriverPlan::setFileDescription(const QString &description)
+void HolidayParserDriverPlan::setFileDescription(const QString &description)
 {
     m_fileDescription = description;
 }
 
-void  HolidayParserDriverPlan::setEventName(const QString &eventName)
+void HolidayParserDriverPlan::setEventName(const QString &eventName)
 {
     // Assume if setting an event name then is start of new event line, so clear categories
     m_eventCategories.clear();
     m_eventName = eventName;
 }
 
-void  HolidayParserDriverPlan::setEventCategory(const QString &category)
+void HolidayParserDriverPlan::setEventCategory(const QString &category)
 {
     m_eventCategories.append(category);
 }
 
-void  HolidayParserDriverPlan::setEventCalendarType(const QString &calendarType)
+void HolidayParserDriverPlan::setEventCalendarType(const QString &calendarType)
 {
     m_eventCalendarType = calendarType;
     if (m_parseMetadataOnly && !m_fileCalendarTypes.contains(calendarType)) {
@@ -450,14 +445,14 @@ void  HolidayParserDriverPlan::setEventCalendarType(const QString &calendarType)
     }
 }
 
-void  HolidayParserDriverPlan::setEventDate(int eventYear, int eventMonth, int eventDay)
+void HolidayParserDriverPlan::setEventDate(int eventYear, int eventMonth, int eventDay)
 {
     m_eventYear = eventYear;
     m_eventMonth = eventMonth;
     m_eventDay = eventDay;
 }
 
-void  HolidayParserDriverPlan::setEventDate(int jd)
+void HolidayParserDriverPlan::setEventDate(int jd)
 {
     julianDayToDate(jd, &m_eventYear, &m_eventMonth, &m_eventDay);
 }
@@ -493,13 +488,12 @@ void HolidayParserDriverPlan::setFromWeekdayInMonth(int occurrence, int weekday,
 
     // Generate all events in the required event month(s)
     for (int thisMonth = startMonth; thisMonth <= endMonth; ++thisMonth) {
-
         if (m_parseCalendar.isValid(m_parseYear, thisMonth, 1)) {
             int startOccurrence, endOccurrence;
-            if (occurrence == ANY) {    // Generate 1st through 5th weekdays, assumes no month with > 35 days
+            if (occurrence == ANY) { // Generate 1st through 5th weekdays, assumes no month with > 35 days
                 startOccurrence = 1;
                 endOccurrence = 5;
-            } else {  // Generate just nth or LAST weekday
+            } else { // Generate just nth or LAST weekday
                 startOccurrence = occurrence;
                 endOccurrence = occurrence;
             }
@@ -515,7 +509,6 @@ void HolidayParserDriverPlan::setFromWeekdayInMonth(int occurrence, int weekday,
                 }
             }
         }
-
     }
 }
 
@@ -533,20 +526,20 @@ void HolidayParserDriverPlan::setFromRelativeWeekday(int occurrence, int weekday
     }
 
     int thisYear;
-    if (m_eventYear == ANY) {    // Generate the parse year
+    if (m_eventYear == ANY) { // Generate the parse year
         thisYear = m_parseYear;
-    } else {  // Generate a specific event year
+    } else { // Generate a specific event year
         thisYear = m_eventYear;
     }
 
     int startMonth, endMonth;
-    if (m_eventMonth == LAST) {    // Generate just the last month
+    if (m_eventMonth == LAST) { // Generate just the last month
         startMonth = m_parseCalendar.monthsInYear(thisYear);
         endMonth = startMonth;
-    } else if (m_eventMonth == ANY) {    // Generate every month
+    } else if (m_eventMonth == ANY) { // Generate every month
         startMonth = 1;
         endMonth = m_parseCalendar.monthsInYear(thisYear);
-    } else {  // Generate just the specific event month
+    } else { // Generate just the specific event month
         startMonth = m_eventMonth;
         endMonth = m_eventMonth;
     }
@@ -554,15 +547,14 @@ void HolidayParserDriverPlan::setFromRelativeWeekday(int occurrence, int weekday
     // Generate all events in the required month(s)
     int thisMonth;
     for (thisMonth = startMonth; thisMonth <= endMonth; ++thisMonth) {
-
         int startDay, endDay;
-        if (m_eventDay == LAST) {    // Generate just the last day in the month
+        if (m_eventDay == LAST) { // Generate just the last day in the month
             startDay = m_parseCalendar.daysInMonth(thisYear, thisMonth);
             endDay = startDay;
-        } else if (m_eventDay == ANY) {    // Generate every day in the month
+        } else if (m_eventDay == ANY) { // Generate every day in the month
             startDay = 1;
             endDay = m_parseCalendar.daysInMonth(thisYear, thisMonth);
-        } else {  // Generate just the specific event day
+        } else { // Generate just the specific event day
             startDay = m_eventDay;
             endDay = m_eventDay;
         }
@@ -574,7 +566,6 @@ void HolidayParserDriverPlan::setFromRelativeWeekday(int occurrence, int weekday
                 setEvent(relativeJd + offset, 0, duration);
             }
         }
-
     }
 }
 
@@ -619,49 +610,44 @@ void HolidayParserDriverPlan::setFromDate(int offset, int condition, int duratio
     }
 
     int thisYear;
-    if (m_eventYear == ANY) {    // Generate the parse year
+    if (m_eventYear == ANY) { // Generate the parse year
         thisYear = m_parseYear;
-    } else {  // Generate a specific event year
+    } else { // Generate a specific event year
         thisYear = m_eventYear;
     }
 
     int startMonth, endMonth;
-    if (m_eventMonth == LAST) {    // Generate just the last month
+    if (m_eventMonth == LAST) { // Generate just the last month
         startMonth = m_parseCalendar.monthsInYear(thisYear);
         endMonth = startMonth;
-    } else if (m_eventMonth == ANY) {    // Generate every month
+    } else if (m_eventMonth == ANY) { // Generate every month
         startMonth = 1;
         endMonth = m_parseCalendar.monthsInYear(thisYear);
-    } else {  // Generate just the specific event month
+    } else { // Generate just the specific event month
         startMonth = m_eventMonth;
         endMonth = m_eventMonth;
     }
 
     // Generate all events in the required month(s)
     for (int thisMonth = startMonth; thisMonth <= endMonth; ++thisMonth) {
-
         int startDay, endDay;
-        if (m_eventDay == LAST) {    // Generate just the last day in the month
+        if (m_eventDay == LAST) { // Generate just the last day in the month
             startDay = m_parseCalendar.daysInMonth(thisYear, thisMonth);
             endDay = startDay;
-        } else if (m_eventDay == ANY) {    // Generate every day in the month
+        } else if (m_eventDay == ANY) { // Generate every day in the month
             startDay = 1;
             endDay = m_parseCalendar.daysInMonth(thisYear, thisMonth);
-        } else {  // Generate just the specific event day
+        } else { // Generate just the specific event day
             startDay = m_eventDay;
             endDay = m_eventDay;
         }
 
         // Generate all events on the required day(s)
         for (int thisDay = startDay; thisDay <= endDay; ++thisDay) {
-
             if (m_parseCalendar.isValid(thisYear, thisMonth, thisDay)) {
-                setEvent(julianDay(thisYear, thisMonth, thisDay) + offset,
-                         conditionalOffset(thisYear, thisMonth, thisDay, condition), duration);
+                setEvent(julianDay(thisYear, thisMonth, thisDay) + offset, conditionalOffset(thisYear, thisMonth, thisDay, condition), duration);
             }
-
         }
-
     }
 }
 

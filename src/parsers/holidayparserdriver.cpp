@@ -6,16 +6,18 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "holidayparserdriver_p.h"
-#include "holiday_p.h"
 #include "astroseasons.h"
+#include "holiday_p.h"
+#include "holidayparserdriver_p.h"
 
 #include <kholidays_debug.h>
 
 using namespace KHolidays;
 
 HolidayParserDriver::HolidayParserDriver(const QString &filePath)
-    : m_parseYear(0), m_parseStartYear(0), m_parseEndYear(0)
+    : m_parseYear(0)
+    , m_parseStartYear(0)
+    , m_parseEndYear(0)
 {
     m_filePath = filePath;
 }
@@ -55,9 +57,9 @@ Holiday::List HolidayParserDriver::parseHolidays(const QDate &startDate, const Q
     parse();
 
     for (int year = startDate.year(); year < endDate.year(); ++year) {
-         for (auto s : { AstroSeasons::JuneSolstice, AstroSeasons::DecemberSolstice, AstroSeasons::MarchEquinox, AstroSeasons::SeptemberEquinox }) {
-             const auto dt = AstroSeasons::seasonDate(s, year);
-             if (dt >= startDate && dt <= endDate) {
+        for (auto s : {AstroSeasons::JuneSolstice, AstroSeasons::DecemberSolstice, AstroSeasons::MarchEquinox, AstroSeasons::SeptemberEquinox}) {
+            const auto dt = AstroSeasons::seasonDate(s, year);
+            if (dt >= startDate && dt <= endDate) {
                 Holiday season;
                 season.d->mDayType = Holiday::Workday;
                 season.d->mObservedDate = dt;
@@ -65,8 +67,8 @@ Holiday::List HolidayParserDriver::parseHolidays(const QDate &startDate, const Q
                 season.d->mName = AstroSeasons::seasonName(s);
                 season.d->mCategoryList.append(QLatin1String("seasonal"));
                 m_resultList.append(season);
-             }
-         }
+            }
+        }
     }
 
     std::sort(m_resultList.begin(), m_resultList.end());
@@ -86,8 +88,7 @@ Holiday::List HolidayParserDriver::parseHolidays(int calendarYear, QCalendarSyst
         return m_resultList;
     }
 
-    return parseHolidays(m_parseCalendar.firstDayOfYear(calendarYear),
-                         m_parseCalendar.lastDayOfYear(calendarYear));
+    return parseHolidays(m_parseCalendar.firstDayOfYear(calendarYear), m_parseCalendar.lastDayOfYear(calendarYear));
 }
 
 void HolidayParserDriver::error(const QString &errorMessage)
@@ -113,8 +114,7 @@ void HolidayParserDriver::setParseStartEnd()
     // Set start year and end year to generate holidays for
     // TODO Maybe make +/- 1 more year to allow spanned holidays from previous/following years
     // Make sure requested date range falls within valid date range for current calendar system
-    if (m_requestStart > m_parseCalendar.latestValidDate() ||
-            m_requestEnd < m_parseCalendar.earliestValidDate()) {
+    if (m_requestStart > m_parseCalendar.latestValidDate() || m_requestEnd < m_parseCalendar.earliestValidDate()) {
         // Completely out of range, don't parse
         m_parseStartYear = 0;
         m_parseEndYear = m_parseStartYear - 1;

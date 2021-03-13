@@ -18,7 +18,6 @@
 
 namespace KHolidays
 {
-
 class HolidayPrivate : public QSharedData
 {
 public:
@@ -26,7 +25,8 @@ public:
     {
     }
 
-    HolidayPrivate(const HolidayPrivate &other) : QSharedData(other)
+    HolidayPrivate(const HolidayPrivate &other)
+        : QSharedData(other)
     {
         mObservedDate = other.mObservedDate;
         mDuration = other.mDuration;
