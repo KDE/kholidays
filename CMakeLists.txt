@@ -20,6 +20,7 @@ include(ECMCoverageOption)
 include(ECMQtDeclareLoggingCategory)
 include(ECMAddQch)
 include(ECMGeneratePriFile)
+include(KDEGitCommitHooks)
 
 set(KHOLIDAYS_LIB_VERSION ${KF_VERSION})
 
@@ -85,3 +86,4 @@ install(FILES
 )
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
+kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
