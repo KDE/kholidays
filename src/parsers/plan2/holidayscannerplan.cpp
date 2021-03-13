@@ -1,3 +1,5 @@
+// clang-format off
+
 #line 2 "holidayscannerplan.cpp"
 
 #line 4 "holidayscannerplan.cpp"

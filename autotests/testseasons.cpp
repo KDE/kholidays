@@ -22,6 +22,7 @@ void SeasonsTest::test_data()
     QTest::addColumn<AstroSeasons::Season>("season");
 
     // Test data obtained from https://data.giss.nasa.gov/ar5/srvernal.html
+    // clang-format off
     QTest::newRow("2005-03-20") << QDate(2005,  3, 20) << AstroSeasons::MarchEquinox;
     QTest::newRow("2005-06-21") << QDate(2005,  6, 21) << AstroSeasons::JuneSolstice;
     QTest::newRow("2005-09-22") << QDate(2005,  9, 22) << AstroSeasons::SeptemberEquinox;
@@ -44,6 +45,7 @@ void SeasonsTest::test_data()
     QTest::newRow("2042-06-21") << QDate(2042,  6, 21) << AstroSeasons::JuneSolstice;
     QTest::newRow("2042-09-22") << QDate(2042,  9, 22) << AstroSeasons::SeptemberEquinox;
     QTest::newRow("2042-12-21") << QDate(2042, 12, 21) << AstroSeasons::DecemberSolstice;
+    // clang-format on
 }
 
 void SeasonsTest::test()

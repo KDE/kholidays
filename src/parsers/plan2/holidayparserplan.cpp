@@ -26,6 +26,8 @@
 
 #include <QString>
 
+// clang-format off
+
 /* Line 311 of lalr1.cc  */
 #line 60 "holidayparserplan.cpp"
 

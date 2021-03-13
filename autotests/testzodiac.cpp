@@ -33,9 +33,9 @@ int main(int argc, char **argv)
         sign = zd.signAtDate(qd);
         pStr = zd.signName(sign);
         if (!pStr.isNull()) {
-            cout << qd.toString(Qt::TextDate).toLocal8Bit().constData() << ": "
-                 << pStr.toLocal8Bit().constData()
-                 << " [" << qPrintable(zd.signSymbol(sign)) << "]"
+            cout << qd.toString(Qt::TextDate).toLocal8Bit().constData() << ": " //
+                 << pStr.toLocal8Bit().constData() //
+                 << " [" << qPrintable(zd.signSymbol(sign)) << "]" //
                  << endl;
         }
         qd = qd.addDays(1);
@@ -47,9 +47,9 @@ int main(int argc, char **argv)
         sign = zd2.signAtDate(qd2);
         pStr = zd2.signName(sign);
         if (!pStr.isNull()) {
-            cout << qd2.toString(Qt::TextDate).toLocal8Bit().constData() << ": "
-                 << pStr.toLocal8Bit().constData()
-                 << " [" << qPrintable(zd2.signSymbol(sign)) << "]"
+            cout << qd2.toString(Qt::TextDate).toLocal8Bit().constData() << ": " //
+                 << pStr.toLocal8Bit().constData() //
+                 << " [" << qPrintable(zd2.signSymbol(sign)) << "]" //
                  << endl;
         }
         qd2 = qd2.addDays(1);

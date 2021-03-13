@@ -722,9 +722,9 @@ void HolidayParserDriverPlan::setEvent(int jd, int observeOffset, int duration)
 void HolidayParserDriverPlan::addHoliday(const QDate &observedDate, int duration)
 {
     // Only set if event falls in requested date range, i.e. either starts or ends during range
-    if (m_parseCalendar.isValid(observedDate) &&
-            observedDate <= m_requestEnd &&
-            observedDate.addDays(duration - 1) >= m_requestStart) {
+    if (m_parseCalendar.isValid(observedDate) //
+        && observedDate <= m_requestEnd //
+        && observedDate.addDays(duration - 1) >= m_requestStart) {
         KHolidays::Holiday holiday;
         holiday.d->mObservedDate = observedDate;
         holiday.d->mDuration = duration;

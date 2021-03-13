@@ -723,9 +723,9 @@ static QStringList allHolidayFiles(const QString &location = QString())
 {
     initResources();
     QStringList dirs{ QStringLiteral(":/org.kde.kholidays/plan2") };
-    dirs += QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
-                             QStringLiteral("kf5/libkholidays/plan2"),
-                             QStandardPaths::LocateDirectory);
+    dirs += QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, //
+                                      QStringLiteral("kf5/libkholidays/plan2"),
+                                      QStandardPaths::LocateDirectory);
     QStringList files;
     for (const QString &dir : qAsConst(dirs)) {
         QDirIterator it(dir, QStringList() << QStringLiteral("holiday_") + location + '*');
@@ -744,8 +744,8 @@ public:
         mRegionCode(regionCode)
     {
         if (!mRegionCode.isEmpty()) {
-            auto file = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
-                                       QLatin1String("kf5/libkholidays/plan2/holiday_") + mRegionCode);
+            auto file = QStandardPaths::locate(QStandardPaths::GenericDataLocation, //
+                                               QLatin1String("kf5/libkholidays/plan2/holiday_") + mRegionCode);
             if (!file.isEmpty()) {
                 mHolidayFile.setFile(file);
             } else {
