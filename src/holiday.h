@@ -46,7 +46,7 @@ public:
      */
     enum DayType {
         Workday,   ///< The holiday is a workday
-        NonWorkday ///< The holiday is a real holiday
+        NonWorkday,///< The holiday is a real holiday
     };
 
     /**

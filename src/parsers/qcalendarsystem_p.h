@@ -34,7 +34,7 @@ public:
         PersianCalendar = 13,
         ROCCalendar = 14,
         ThaiCalendar = 15,
-        LastCalendar = ThaiCalendar
+        LastCalendar = ThaiCalendar,
     };
 
     explicit QCalendarSystem(QCalendarSystem::CalendarSystem calendar = QCalendarSystem::DefaultCalendar);

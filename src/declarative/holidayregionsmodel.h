@@ -19,7 +19,7 @@ public:
     enum Roles {
         RegionRole = Qt::UserRole + 1,
         NameRole,
-        DescriptionRole
+        DescriptionRole,
     };
     explicit HolidayRegionsDeclarativeModel(QObject *parent = nullptr);
     ~HolidayRegionsDeclarativeModel() override;

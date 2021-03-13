@@ -52,7 +52,7 @@ public:
         FirstQuarter, ///< First quarter of moon phase
         LastQuarter,  ///< Last quarter of moon phase
         FullMoon,     ///< Full moon phase
-        None          ///< Indication for error
+        None,         ///< Indication for error
     };
 
     /**

@@ -45,7 +45,7 @@ public:
         DecemberSolstice,
         MarchEquinox,
         SeptemberEquinox,
-        None
+        None,
     };
 
 

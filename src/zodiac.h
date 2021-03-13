@@ -54,7 +54,7 @@ class KHOLIDAYS_EXPORT Zodiac
 public:
     enum ZodiacType {
         Tropical,
-        Sidereal
+        Sidereal,
     };
 
     enum ZodiacSigns {
@@ -70,7 +70,7 @@ public:
         Capricorn,
         Aquarius,
         Pisces,
-        None
+        None,
     };
 
     explicit Zodiac(ZodiacType type);

@@ -142,7 +142,7 @@ namespace KHolidays {
      DESCRIPTION = 283,
      OR = 284,
      AND = 285,
-     UMINUS = 286
+     UMINUS = 286,
    };
 
     };
