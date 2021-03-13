@@ -226,6 +226,9 @@ QDate HolidayParserDriverPlan::easter(int year)
     if (m_parseCalendar.calendarSystem() != QCalendarSystem::GregorianCalendar) {
         return QDate();
     }
+    if (year < 0) {
+        return QDate();
+    }
 
     // Algorithm taken from Tondering
     // https://www.tondering.dk/claus/cal/easter.php
@@ -243,6 +246,10 @@ QDate HolidayParserDriverPlan::easter(int year)
 
 QDate HolidayParserDriverPlan::pascha(int year)
 {
+    if (year < 0) {
+        return QDate();
+    }
+
     if (m_parseCalendar.calendarSystem() == QCalendarSystem::GregorianCalendar ||
         m_parseCalendar.calendarSystem() == QCalendarSystem::JulianCalendar) {
         // Algorithm taken from Tondering
