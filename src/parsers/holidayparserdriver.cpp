@@ -88,7 +88,8 @@ Holiday::List HolidayParserDriver::parseHolidays(int calendarYear, QCalendarSyst
         return m_resultList;
     }
 
-    return parseHolidays(m_parseCalendar.firstDayOfYear(calendarYear), m_parseCalendar.lastDayOfYear(calendarYear));
+    return parseHolidays(m_parseCalendar.firstDayOfYear(calendarYear), //
+                         m_parseCalendar.lastDayOfYear(calendarYear));
 }
 
 void HolidayParserDriver::error(const QString &errorMessage)
@@ -114,7 +115,8 @@ void HolidayParserDriver::setParseStartEnd()
     // Set start year and end year to generate holidays for
     // TODO Maybe make +/- 1 more year to allow spanned holidays from previous/following years
     // Make sure requested date range falls within valid date range for current calendar system
-    if (m_requestStart > m_parseCalendar.latestValidDate() || m_requestEnd < m_parseCalendar.earliestValidDate()) {
+    if (m_requestStart > m_parseCalendar.latestValidDate() //
+        || m_requestEnd < m_parseCalendar.earliestValidDate()) {
         // Completely out of range, don't parse
         m_parseStartYear = 0;
         m_parseEndYear = m_parseStartYear - 1;

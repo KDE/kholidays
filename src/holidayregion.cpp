@@ -1137,8 +1137,14 @@ QString HolidayRegion::defaultRegionCode(const QString &country, const QString &
         localeLanguageCountry = localeLanguage.split(QLatin1Char('_')).at(1);
     }
 
-    QString countryAndLanguageMatch, countryOnlyMatch, subdivisionAndLanguageMatch, subdivisionOnlyMatch, languageCountryAndLanguageMatch,
-        languageCountryOnlyMatch, languageSubdivisionAndLanguageMatch, languageSubdivisionOnlyMatch;
+    QString countryAndLanguageMatch;
+    QString countryOnlyMatch;
+    QString subdivisionAndLanguageMatch;
+    QString subdivisionOnlyMatch;
+    QString languageCountryAndLanguageMatch;
+    QString languageCountryOnlyMatch;
+    QString languageSubdivisionAndLanguageMatch;
+    QString languageSubdivisionOnlyMatch;
 
     const QStringList regionList = KHolidays::HolidayRegion::regionCodes();
     for (const QString &regionCode : regionList) {

@@ -498,7 +498,12 @@ qint64 QCalendarSystemPrivate::julianDayFromDate(int year, int month, int day) c
         int a = (14 - month) / 12;
         year = year + 4800 - a;
         int m = month + (12 * a) - 3;
-        jd = day + (((153 * m) + 2) / 5) + (365 * year) + (year / 4) - (year / 100) + (year / 400) - 32045;
+        jd = day + (((153 * m) + 2) / 5) //
+            + (365 * year) //
+            + (year / 4) //
+            - (year / 100) //
+            + (year / 400) //
+            - 32045;
         break;
     }
 
@@ -506,7 +511,11 @@ qint64 QCalendarSystemPrivate::julianDayFromDate(int year, int month, int day) c
     case QCalendarSystem::EthiopicCalendar:
     case QCalendarSystem::EthiopicAmeteAlemCalendar: {
         // Formula derived from first principles by John Layt
-        jd = epoch() - 1 + ((year - 1) * 365) + (year / 4) + ((month - 1) * 30) + day;
+        jd = epoch() - 1 //
+            + ((year - 1) * 365) //
+            + (year / 4) //
+            + ((month - 1) * 30) //
+            + day;
         break;
     }
 
@@ -514,8 +523,13 @@ qint64 QCalendarSystemPrivate::julianDayFromDate(int year, int month, int day) c
         // Formula from the "Explanatory Supplement to the Astronomical Almanac"
         // Revised Edition 2006 section 12.94 pp 605-606, US Naval Observatory
         // Originally from the "Report of the Calendar Reform Committee" 1955, Indian Government
-        jd = 365 * year + (year + 78 - 1 / month) / 4 + 31 * month - (month + 9) / 11 - (month / 7) * (month - 7)
-            - (3 * ((year + 78 - 1 / month) / 100 + 1)) / 4 + day + 1749579;
+        jd = 365 * year + (year + 78 - 1 / month) / 4 //
+            + 31 * month //
+            - (month + 9) / 11 //
+            - (month / 7) * (month - 7) //
+            - (3 * ((year + 78 - 1 / month) / 100 + 1)) / 4 //
+            + day //
+            + 1749579;
         break;
     }
 
@@ -523,7 +537,13 @@ qint64 QCalendarSystemPrivate::julianDayFromDate(int year, int month, int day) c
         // Formula from the "Explanatory Supplement to the Astronomical Almanac"
         // Revised Edition 2006 section ??? pp ???, US Naval Observatory
         // Derived from Fliegel & Van Flandern 1968
-        jd = (3 + (11 * year)) / 30 + 354 * year + 30 * month - (month - 1) / 2 + day + epoch() - 385;
+        jd = (3 + (11 * year)) / 30 //
+            + 354 * year //
+            + 30 * month //
+            - (month - 1) / 2 //
+            + day //
+            + epoch() //
+            - 385;
         break;
     }
 
@@ -533,7 +553,11 @@ qint64 QCalendarSystemPrivate::julianDayFromDate(int year, int month, int day) c
         int a = (14 - month) / 12;
         year = year + 4800 - a;
         int m = month + (12 * a) - 3;
-        jd = day + (((153 * m) + 2) / 5) + (365 * year) + (year / 4) - 32083;
+        jd = day //
+            + (((153 * m) + 2) / 5) //
+            + (365 * year) //
+            + (year / 4) //
+            - 32083;
         break;
     }
 
@@ -548,7 +572,9 @@ qint64 QCalendarSystemPrivate::julianDayFromDate(int year, int month, int day) c
 
 bool QCalendarSystemPrivate::isValidYear(int year) const
 {
-    return year >= earliestValidYear() && year <= latestValidYear() && (year == 0 ? hasYearZero() : true);
+    return year >= earliestValidYear() //
+        && year <= latestValidYear() //
+        && (year == 0 ? hasYearZero() : true);
 }
 
 bool QCalendarSystemPrivate::isValidMonth(int year, int month) const
@@ -1036,7 +1062,8 @@ int QCalendarSystem::yearsDifference(const QDate &fromDate, const QDate &toDate)
     // m2 == m1
     // Allow for last day of month to last day of month and leap days
     // e.g. 2000-02-29 to 2001-02-28 is 1 year not 0 years
-    if ((d2 >= d1) || (d1 == d->daysInMonth(y1, m1) && d2 == d->daysInMonth(y2, m2))) {
+    if (d2 >= d1 //
+        || (d1 == d->daysInMonth(y1, m1) && d2 == d->daysInMonth(y2, m2))) {
         return d->diffYears(y1, y2);
     } else {
         return d->diffYears(y1, y2) - 1;
@@ -1073,7 +1100,8 @@ int QCalendarSystem::monthsDifference(const QDate &fromDate, const QDate &toDate
     // Allow for last day of month to last day of month and leap days
     // e.g. 2010-03-31 to 2010-04-30 is 1 month not 0 months
     // also 2000-02-29 to 2001-02-28 is 12 months not 11 months
-    if ((d2 >= d1) || (d1 == d->daysInMonth(y1, m1) && d2 == d->daysInMonth(y2, m2))) {
+    if (d2 >= d1 //
+        || (d1 == d->daysInMonth(y1, m1) && d2 == d->daysInMonth(y2, m2))) {
         return my + m2 - m1;
     } else {
         return my + m2 - m1 - 1;

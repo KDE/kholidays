@@ -79,7 +79,9 @@ static double calcSunEqOfCenter(double t)
     double sinm = sin(mrad);
     double sin2m = sin(mrad + mrad);
     double sin3m = sin(mrad + mrad + mrad);
-    double C = sinm * (1.914602 - t * (0.004817 + 0.000014 * t)) + sin2m * (0.019993 - 0.000101 * t) + sin3m * 0.000289;
+    double C = (sinm * (1.914602 - t * (0.004817 + 0.000014 * t)) //
+                + sin2m * (0.019993 - 0.000101 * t) //
+                + sin3m * 0.000289);
     return C; // in degrees
 }
 
@@ -137,7 +139,13 @@ static double calcEquationOfTime(double t)
     double sin4l0 = sin(4.0 * degToRad(l0));
     double sin2m = sin(2.0 * degToRad(m));
 
-    double Etime = y * sin2l0 - 2.0 * e * sinm + 4.0 * e * y * sinm * cos2l0 - 0.5 * y * y * sin4l0 - 1.25 * e * e * sin2m;
+    /* clang-format off */
+    double Etime = (y * sin2l0
+                    - 2.0 * e * sinm
+                    + 4.0 * e * y * sinm * cos2l0
+                    - 0.5 * y * y * sin4l0
+                    - 1.25 * e * e * sin2m);
+    /* clang-format on */
     return radToDeg(Etime) * 4.0; // in minutes of time
 }
 

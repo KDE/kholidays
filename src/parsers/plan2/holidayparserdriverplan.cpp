@@ -645,7 +645,9 @@ void HolidayParserDriverPlan::setFromDate(int offset, int condition, int duratio
         // Generate all events on the required day(s)
         for (int thisDay = startDay; thisDay <= endDay; ++thisDay) {
             if (m_parseCalendar.isValid(thisYear, thisMonth, thisDay)) {
-                setEvent(julianDay(thisYear, thisMonth, thisDay) + offset, conditionalOffset(thisYear, thisMonth, thisDay, condition), duration);
+                setEvent(julianDay(thisYear, thisMonth, thisDay) + offset, //
+                         conditionalOffset(thisYear, thisMonth, thisDay, condition), //
+                         duration);
             }
         }
     }
