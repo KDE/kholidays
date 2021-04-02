@@ -123,7 +123,7 @@ LunarPhase::Phase LunarPhase::phaseAtDate(const QDate &date)
  * Updated to the Third Edition of Duffett-Smith's book, Paul Janzen, IX 1998
  *
  */
-
+#include "util.h"
 #include <cctype>
 #ifdef HAVE_ERR_H
 #include <err.h>
@@ -132,8 +132,6 @@ LunarPhase::Phase LunarPhase::phaseAtDate(const QDate &date)
 #include <cstdlib>
 #include <cstring>
 #include <ctime>
-
-static const double PI = 3.14159265358979323846;
 
 /*
  * The EPOCH in the third edition of the book is 1990 Jan 0.0 TDT.
