@@ -34,14 +34,14 @@ option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, 
 add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)")
 
 ########### Find packages ###########
-set(REQUIRED_QT_VERSION 5.14.0)
+set(REQUIRED_QT_VERSION 5.15.0)
 find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Core Qml)
 
 remove_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII)
 
 ########### Targets ###########
 add_definitions(-DQT_NO_FOREACH)
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050e00)
+add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
 add_subdirectory(src)
 
 if(BUILD_TESTING)
