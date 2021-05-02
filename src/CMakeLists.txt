@@ -44,7 +44,7 @@ target_include_directories(KF5Holidays PUBLIC "$<BUILD_INTERFACE:${KHolidays_SOU
 target_link_libraries(KF5Holidays PUBLIC Qt5::Core)
 
 set_target_properties(KF5Holidays PROPERTIES
-  VERSION ${KHOLIDAYS_VERSION_STRING}
+  VERSION ${KHOLIDAYS_VERSION}
   SOVERSION ${KHOLIDAYS_SOVERSION}
   EXPORT_NAME Holidays
 )
