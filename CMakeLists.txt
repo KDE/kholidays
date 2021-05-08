@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-set(KF_VERSION "5.82.0")
+set(KF_VERSION "5.83.0")
 project(KHolidays VERSION ${KF_VERSION})
 
 find_package(ECM 5.82.0 REQUIRED NO_MODULE)
