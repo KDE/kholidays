@@ -30,7 +30,7 @@ description  "Suomen valtakunnalliset juhla- ja liputuspäivät"
 : May Day
 "Vappu, suomalaisen työn päivä"                    public cultural on 1 may
 : Midsummer (Saturday on 20 Jun - 26 Jun)
-"Juhannuspäivä"                                    public cultural on saturday after 19 june
+"Juhannuspäivä"                                    public cultural on saturday after 20 june
 : All Saints (Saturday on 31 Oct - 6 Nov)
 "Pyhäinpäivä"                                      public religious commemorative on saturday before 7 november
 : Independence Day
@@ -119,7 +119,7 @@ description  "Suomen valtakunnalliset juhla- ja liputuspäivät"
 "Puolustusvoimien lippujuhlan päivä"               cultural on 4 june
 : Midsummer Eve (Friday on 19 Jun - 25 Jun)
 : Although usually not listed in calendars, it is a day off for many and an important day anyway.
-"Juhannusaatto"                                    financial government cultural on friday after 18 june
+"Juhannusaatto"                                    financial government cultural on friday after 19 june
 : Eino Leino's Day, (Summer and Poetry Day)
 "Eino Leinon päivä, runon ja suven päivä"          cultural on 6 july
 : Entrepreneur's Day
