@@ -1,14 +1,21 @@
 
 include(CheckIncludeFiles)
 
-ecm_create_qm_loader(kholidays_QM_LOADER libkholidays5_qt)
-
 check_include_files(err.h HAVE_ERR_H)
 check_include_files(sys/cdefs.h HAVE_SYS_CDEFS_H)
 
 configure_file(config-kholidays.h.cmake ${KHolidays_BINARY_DIR}/src/config-kholidays.h)
 
-set(kholidays_SRCS
+add_library(KF5Holidays)
+add_library(KF5::Holidays ALIAS KF5Holidays)
+
+set_target_properties(KF5Holidays PROPERTIES
+  VERSION     ${KHOLIDAYS_VERSION}
+  SOVERSION   ${KHOLIDAYS_SOVERSION}
+  EXPORT_NAME Holidays
+)
+
+target_sources(KF5Holidays PRIVATE
   astroseasons.cpp
   holiday.cpp
   holidayregion.cpp
@@ -20,11 +27,13 @@ set(kholidays_SRCS
   parsers/plan2/holidayscannerplan.cpp
   parsers/plan2/holidayparserdriverplan.cpp
   parsers/plan2/holidayparserplan.cpp
-  ${kholidays_QM_LOADER}
+
   ../holidays/holidays.qrc
 )
 
-ecm_qt_declare_logging_category(kholidays_SRCS
+ecm_create_qm_loader(KF5Holidays libkholidays5_qt)
+
+ecm_qt_declare_logging_category(KF5Holidays
     HEADER kholidays_debug.h
     IDENTIFIER KHOLIDAYS_LOG
     CATEGORY_NAME kf.holidays
@@ -32,22 +41,13 @@ ecm_qt_declare_logging_category(kholidays_SRCS
     EXPORT KHOLIDAYS
 )
 
-add_library(KF5Holidays ${kholidays_SRCS})
 generate_export_header(KF5Holidays BASE_NAME KHolidays)
-
-add_library(KF5::Holidays ALIAS KF5Holidays)
 
 target_include_directories(KF5Holidays INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/KHolidays>")
 target_include_directories(KF5Holidays PUBLIC "$<BUILD_INTERFACE:${KHolidays_SOURCE_DIR}/src;${KHolidays_BINARY_DIR}/src>")
 target_include_directories(KF5Holidays PUBLIC "$<BUILD_INTERFACE:${KHolidays_SOURCE_DIR}/src/parsers/plan2>")
 
 target_link_libraries(KF5Holidays PUBLIC Qt5::Core)
-
-set_target_properties(KF5Holidays PROPERTIES
-  VERSION ${KHOLIDAYS_VERSION}
-  SOVERSION ${KHOLIDAYS_SOVERSION}
-  EXPORT_NAME Holidays
-)
 
 ecm_generate_headers(KHolidays_CamelCase_HEADERS
   HEADER_NAMES
