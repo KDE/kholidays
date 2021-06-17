@@ -24,4 +24,5 @@ CMakeLists.txt.user*
 .clangd
 .idea
 /cmake-build*
+/build*/
 .cache
