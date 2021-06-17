@@ -9,7 +9,7 @@
 #include "zodiac.h"
 
 #include <QCoreApplication>
-#include <QDateTime>
+#include <QDate>
 #include <QSharedData>
 
 using namespace KHolidays;
