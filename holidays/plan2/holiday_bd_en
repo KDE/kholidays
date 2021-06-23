@@ -1,0 +1,184 @@
+::
+:: Country:  Bangladesh
+::
+:: Language: English
+::
+:: Author:  Riyadul Islam Mollick <riyadul2000@yahoo.com>
+::
+:: Updated:  2021-06-19
+::
+:: Source:          https://mopa.gov.bd/
+::          https://www.bb.org.bd/mediaroom/holiday.php
+::          https://en.wikipedia.org/wiki/Public_holidays_in_Bangladesh
+::          https://www.drikpanchang.com/
+
+:: Metadata
+country     "BD"
+language    "en"
+:name        "optional - defaults to country name"
+description "Holiday file for Bangladesh"
+
+:: Public Holidays
+"International Mother Language Day"         public on february 21
+"Birthday of Father of the Nation Bangabandhu Sheikh Mujibur Rahman"            public on march 17
+"Independence Day"          public on march 26
+"May Day"           public on may 1
+"National Mourning Day"         public on august 15
+"Victory Day"           public on december 16
+
+
+
+:: Religious
+
+"Hijri New Year"            religious school on hijri muharram 1
+"Ashura"            public religious on hijri muharram 10
+"Akhari Chahar Somba"           religious school on hijri yaumalarbia before rabialawal 1
+"Eid Milad un Nabi"         public religious on hijri rabialawal 12
+"Fateha-e-Yazdaham"         religious school on hijri rabialthaani 11
+"Shab-e-Meraj"          religious on hijri rajab 27
+"Shab-e-Barat"          public religious on hijri shaban 14
+"Shab-e-Qadar"          religious on hijri ramadan 27
+"Jumatul Bidah"         public religious on hijri yaumaljumma before shawwal 1
+"Eid ul Fitr"           public religious on hijri shawwal 1 length 3 days
+"Eid ul Adha"           public religious on hijri thualhijjah 10 length 3 days
+
+
+"Saraswati Puja"            religious school on february 16 2021
+"Saraswati Puja"            religious school on february 5 2022
+"Saraswati Puja"            religious school on january 26 2023
+"Saraswati Puja"            religious school on february 14 2024
+"Saraswati Puja"            religious school on february 2 2025
+
+"Maha Shivratri"            public religious on march 11 2021
+"Maha Shivratri"            public religious on march 1 2022
+"Maha Shivratri"            public religious on march 18 2023
+"Maha Shivratri"            public religious on march 8 2024
+"Maha Shivratri"            public religious on february 26 2025
+
+"Doljatra"          religious school on march 29 2021
+"Doljatra"          religious school on march 19 2022
+"Doljatra"          religious school on march 8 2023
+"Doljatra"          religious school on march 25 2024
+"Doljatra"          religious school on march 14 2025
+
+"Arrival Day of Sri Sri Harichand Tagore"           religious on april 9 2021
+
+"Mahalaya"          religious on october 6 2021
+"Mahalaya"          religious on september 25 2022
+"Mahalaya"          religious on october 14 2023
+"Mahalaya"          religious on october 2 2024
+"Mahalaya"          religious on september 21 2025
+
+"Lakshmi Puja"          religious school on october 20 2021
+"Lakshmi Puja"          religious school on october 10 2022
+"Lakshmi Puja"          religious school on october 29 2023
+"Lakshmi Puja"          religious school on october 16 2024
+"Lakshmi Puja"          religious school on october 7 2025
+
+"Kali Puja"         religious school on november 4 2021
+"Kali Puja"         religious school on october 24 2022
+"Kali Puja"         religious school on november 12 2023
+"Kali Puja"         religious school on october 31 2024
+"Kali Puja"         religious school on october 20 2025
+
+"Janmashtami"           public religious on august 30 2021
+"Janmashtami"           public religious on august 19 2022
+"Janmashtami"           public religious on september 7 2023
+"Janmashtami"           public religious on august 26 2024
+"Janmashtami"           public religious on august 16 2025
+
+"Durga Puja - Shashthi"         religious on october 11 2021
+"Durga Puja - Shashthi"         religious on october 1 2022
+"Durga Puja - Shashthi"         religious on october 20 2023
+"Durga Puja - Shashthi"         religious on october 9 2024
+"Durga Puja - Shashthi"         religious on september 28 2025
+
+"Durga Puja - Saptami"          religious on october 12 2021
+"Durga Puja - Saptami"          religious on october 2 2022
+"Durga Puja - Saptami"          religious on october 21 2023
+"Durga Puja - Saptami"          religious on october 10 2024
+"Durga Puja - Saptami"          religious on september 29 2025
+
+"Durga Puja - Ashtami"          religious on october 13 2021
+"Durga Puja - Ashtami"          religious on october 3 2022
+"Durga Puja - Ashtami"          religious on october 22 2023
+"Durga Puja - Ashtami"          religious on october 11 2024
+"Durga Puja - Ashtami"          religious on september 30 2025
+
+"Durga Puja - Nabami"           religious on october 14 2021
+"Durga Puja - Nabami"           religious on october 4 2022
+"Durga Puja - Nabami"           religious on october 23 2023
+"Durga Puja - Nabami"           religious on october 12 2024
+"Durga Puja - Nabami"           religious on october 1 2025
+
+"Durga Puja - Dashami"          public religious on october 15 2021
+"Durga Puja - Dashami"          public religious on october 5 2022
+"Durga Puja - Dashami"          public religious on october 24 2023
+"Durga Puja - Dashami"          public religious on october 13 2024
+"Durga Puja - Dashami"          public religious on october 2 2025
+
+"Happy New Year"            religious on january 1
+"Ash Wednesday"         religious on easter minus 46 days
+"Maundy Thursday"           religious on easter minus 3 days
+"Good Friday"           religious on easter minus 2 days
+"Holy Saturday"         religious on easter minus 1 days
+"Easter Sunday"         public religious on easter length 1 day
+"Christmas"         public religious on december 25
+
+
+"Maghi Purnima"         religious on january 28 2021
+"Maghi Purnima"         religious on january 17 2022
+"Maghi Purnima"         religious on january 6 2023
+"Maghi Purnima"         religious on january 25 2024
+"Maghi Purnima"         religious on january 13 2025
+
+"Chaitra Sankranti"         religious on indiannational chaitra 30
+
+"Buddha Purnima"            public religious on may 26 2021
+"Buddha Purnima"            public religious on may 16 2022
+"Buddha Purnima"            public religious on may 5 2023
+"Buddha Purnima"            public religious on may 23 2024
+"Buddha Purnima"            public religious on may 12 2025
+
+"Ashari Purnima"            religious on july 23 2021
+"Ashari Purnima"            religious on july 13 2022
+"Ashari Purnima"            religious on july 3 2023
+"Ashari Purnima"            religious on july 21 2024
+"Ashari Purnima"            religious on july 10 2025
+
+"Madhu Purnima"         religious on september 20 2021
+"Madhu Purnima"         religious on september 10 2022
+"Madhu Purnima"         religious on september 29 2023
+"Madhu Purnima"         religious on september 17 2024
+"Madhu Purnima"         religious on september 7 2025
+
+"Probarona Purnima"         religious on october 20 2021
+"Probarona Purnima"         religious on october 9 2022
+"Probarona Purnima"         religious on october 28 2023
+"Probarona Purnima"         religious on october 17 2024
+"Probarona Purnima"         religious on october 6 2025
+
+
+:: Financial
+"Bank Holiday"          financial on july 1
+"Bank Holiday"          financial on december 31
+
+:: Cultural
+"Bangla New Year"           public cultural on indiannational vaishakh 1
+"Nabanna"           cultural on indiannational agrahayana 1
+"Shakrain Festival"         cultural on indiannational paush 30
+"Pahela Falgun"         cultural on indiannational phalgun 1
+"Boishabi"          cultural on indiannational chaitra 29 length 3
+
+:: Historical Dates
+"Genocide Remembrance Day"          commemorative on march 25
+"Martyred Intellectuals Day"            commemorative school on december 14
+"Armed Forces Day"          commemorative on november 21
+
+:: Seasonal
+
+:: School
+
+:: Daylight Saving
+
+:: Name Days
