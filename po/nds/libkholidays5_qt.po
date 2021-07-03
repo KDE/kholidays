@@ -1,0 +1,682 @@
+# Translation of libkholidays.po to Low Saxon
+# translation of libkholidays.po to Low Saxon
+#
+# Sönke Dibbern <s_dibbern@web.de>, 2006, 2007, 2009, 2014.
+# Manfred Wiese <m.j.wiese@web.de>, 2010, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: libkholidays\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2015-06-13 09:34+0000\n"
+"PO-Revision-Date: 2014-08-13 23:49+0200\n"
+"Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
+"Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
+"Language: nds\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Qt-Contexts: true\n"
+
+#: astroseasons.cpp:139
+#, fuzzy
+#| msgid "June Solstice"
+msgctxt "AstroSeasons|"
+msgid "June Solstice"
+msgstr "Sommersünnkehr"
+
+#: astroseasons.cpp:141
+#, fuzzy
+#| msgid "December Solstice"
+msgctxt "AstroSeasons|"
+msgid "December Solstice"
+msgstr "Wintersünnkehr"
+
+#: astroseasons.cpp:143
+#, fuzzy
+#| msgid "March Equinox"
+msgctxt "AstroSeasons|"
+msgid "March Equinox"
+msgstr "Vörjohrliekdag"
+
+#: astroseasons.cpp:145
+#, fuzzy
+#| msgid "September Equinox"
+msgctxt "AstroSeasons|"
+msgid "September Equinox"
+msgstr "Harvstliekdag"
+
+#: holidayregion.cpp:885
+#, fuzzy
+#| msgctxt "Canadian region"
+#| msgid "Quebec"
+msgctxt "HolidayRegion|Canadian region"
+msgid "Quebec"
+msgstr "Quebec"
+
+#: holidayregion.cpp:888
+#, fuzzy
+#| msgctxt "German region"
+#| msgid "Bavaria"
+msgctxt "HolidayRegion|German region"
+msgid "Germany, Bavaria"
+msgstr "Bayern"
+
+#: holidayregion.cpp:890
+msgctxt "HolidayRegion|German region"
+msgid "Germany, Brandenburg"
+msgstr ""
+
+#: holidayregion.cpp:892
+msgctxt "HolidayRegion|German region"
+msgid "Germany, Berlin"
+msgstr ""
+
+#: holidayregion.cpp:894
+msgctxt "HolidayRegion|German region"
+msgid "Germany, Baden-Wuerttemberg"
+msgstr ""
+
+#: holidayregion.cpp:896
+msgctxt "HolidayRegion|German region"
+msgid "Germany, Hesse"
+msgstr ""
+
+#: holidayregion.cpp:898
+msgctxt "HolidayRegion|German region"
+msgid "Germany, Mecklenburg-Hither Pomerania"
+msgstr ""
+
+#: holidayregion.cpp:900
+msgctxt "HolidayRegion|German region"
+msgid "Germany, Lower Saxony"
+msgstr ""
+
+#: holidayregion.cpp:902
+msgctxt "HolidayRegion|German region"
+msgid "Germany, North Rhine-Westphalia"
+msgstr ""
+
+#: holidayregion.cpp:904
+msgctxt "HolidayRegion|German region"
+msgid "Germany, Rhineland-Palatinate"
+msgstr ""
+
+#: holidayregion.cpp:906
+msgctxt "HolidayRegion|German region"
+msgid "Germany, Schleswig-Holstein"
+msgstr ""
+
+#: holidayregion.cpp:908
+msgctxt "HolidayRegion|German region"
+msgid "Germany, Saarland"
+msgstr ""
+
+#: holidayregion.cpp:910
+msgctxt "HolidayRegion|German region"
+msgid "Germany, Saxony"
+msgstr ""
+
+#: holidayregion.cpp:912
+msgctxt "HolidayRegion|German region"
+msgid "Germany, Saxony-Anhalt"
+msgstr ""
+
+#: holidayregion.cpp:914
+msgctxt "HolidayRegion|German region"
+msgid "Germany, Thuringia"
+msgstr ""
+
+#: holidayregion.cpp:917
+#, fuzzy
+#| msgctxt "Spanish region"
+#| msgid "Catalonia"
+msgctxt "HolidayRegion|Spanish region"
+msgid "Catalonia"
+msgstr "Katalonien"
+
+#: holidayregion.cpp:919
+#, fuzzy
+#| msgctxt "UK Region"
+#| msgid "England and Wales"
+msgctxt "HolidayRegion|UK Region"
+msgid "England and Wales"
+msgstr "England un Wales"
+
+#: holidayregion.cpp:921
+#, fuzzy
+#| msgctxt "UK Region"
+#| msgid "England"
+msgctxt "HolidayRegion|UK Region"
+msgid "England"
+msgstr "England"
+
+#: holidayregion.cpp:923
+#, fuzzy
+#| msgctxt "UK Region"
+#| msgid "Wales"
+msgctxt "HolidayRegion|UK Region"
+msgid "Wales"
+msgstr "Wales"
+
+#: holidayregion.cpp:925
+#, fuzzy
+#| msgctxt "UK Region"
+#| msgid "Scotland"
+msgctxt "HolidayRegion|UK Region"
+msgid "Scotland"
+msgstr "Schottland"
+
+#: holidayregion.cpp:927
+#, fuzzy
+#| msgctxt "UK Region"
+#| msgid "Northern Ireland"
+msgctxt "HolidayRegion|UK Region"
+msgid "Northern Ireland"
+msgstr "Noordirland"
+
+#: holidayregion.cpp:929
+#, fuzzy
+#| msgctxt "Italian Region"
+#| msgid "South Tyrol"
+msgctxt "HolidayRegion|Italian Region"
+msgid "South Tyrol"
+msgstr "Sööd-Tirol"
+
+#: holidayregion.cpp:931
+#, fuzzy
+#| msgctxt "Australian Region"
+#| msgid "New South Wales"
+msgctxt "HolidayRegion|"
+msgid "New South Wales"
+msgstr "Nieg-Söödwales"
+
+#: holidayregion.cpp:933
+#, fuzzy
+#| msgctxt "Australian Region"
+#| msgid "Queensland"
+msgctxt "HolidayRegion|Australian Region"
+msgid "Queensland"
+msgstr "Queensland"
+
+#: holidayregion.cpp:935
+#, fuzzy
+#| msgctxt "Australian Region"
+#| msgid "Victoria"
+msgctxt "HolidayRegion|Australian Region"
+msgid "Victoria"
+msgstr "Victoria"
+
+#: holidayregion.cpp:937
+#, fuzzy
+#| msgctxt "Australian Region"
+#| msgid "South Australia"
+msgctxt "HolidayRegion|Australian Region"
+msgid "South Australia"
+msgstr "Sööd-Australien"
+
+#: holidayregion.cpp:939
+#, fuzzy
+#| msgctxt "Australian Region"
+#| msgid "Northern Territory"
+msgctxt "HolidayRegion|Australian Region"
+msgid "Northern Territory"
+msgstr "Noorden Rebeet"
+
+#: holidayregion.cpp:941
+#, fuzzy
+#| msgctxt "Australian Region"
+#| msgid "Australian Capital Territory"
+msgctxt "HolidayRegion|Australian Region"
+msgid "Australian Capital Territory"
+msgstr "Austraalsch Hööftstadtrebeet"
+
+#: holidayregion.cpp:943
+#, fuzzy
+#| msgctxt "Australian Region"
+#| msgid "Western Australia"
+msgctxt "HolidayRegion|Australian Region"
+msgid "Western Australia"
+msgstr "West-Australien"
+
+#: holidayregion.cpp:945
+#, fuzzy
+#| msgctxt "Australian Region"
+#| msgid "Tasmania"
+msgctxt "HolidayRegion|Australian Region"
+msgid "Tasmania"
+msgstr "Tasmanien"
+
+#: holidayregion.cpp:947
+#, fuzzy
+#| msgctxt "Bosnian and Herzegovinian Region"
+#| msgid "Republic of Srpska"
+msgctxt "HolidayRegion|Bosnian and Herzegovinian Region"
+msgid "Republic of Srpska"
+msgstr "Republiek Srpska"
+
+#: holidayregion.cpp:965
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "Public"
+msgctxt "HolidayRegion|Holiday type"
+msgid "Public"
+msgstr "Apen"
+
+#: holidayregion.cpp:967
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "Civil"
+msgctxt "HolidayRegion|Holiday type"
+msgid "Civil"
+msgstr "Börgerlich"
+
+#: holidayregion.cpp:969
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "Religious"
+msgctxt "HolidayRegion|Holiday type"
+msgid "Religious"
+msgstr "Religiöös"
+
+#: holidayregion.cpp:971
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "Government"
+msgctxt "HolidayRegion|Holiday type"
+msgid "Government"
+msgstr "Regeren"
+
+#: holidayregion.cpp:973
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "Financial"
+msgctxt "HolidayRegion|Holiday type"
+msgid "Financial"
+msgstr "Warflich"
+
+#: holidayregion.cpp:975
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "Cultural"
+msgctxt "HolidayRegion|Holiday type"
+msgid "Cultural"
+msgstr "Kultuur"
+
+#: holidayregion.cpp:977
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "Commemorative"
+msgctxt "HolidayRegion|Holiday type"
+msgid "Commemorative"
+msgstr "Behollen"
+
+#: holidayregion.cpp:979
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "Historical"
+msgctxt "HolidayRegion|Holiday type"
+msgid "Historical"
+msgstr "Histoorsch"
+
+#: holidayregion.cpp:981
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "School"
+msgctxt "HolidayRegion|Holiday type"
+msgid "School"
+msgstr "School"
+
+#: holidayregion.cpp:983
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "Seasonal"
+msgctxt "HolidayRegion|Holiday type"
+msgid "Seasonal"
+msgstr "Johrstiet"
+
+#: holidayregion.cpp:985
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "Name Days"
+msgctxt "HolidayRegion|Holiday type"
+msgid "Name Days"
+msgstr "Naamdaag"
+
+#: holidayregion.cpp:987
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "Personal"
+msgctxt "HolidayRegion|Holiday type"
+msgid "Personal"
+msgstr "Persöönlich"
+
+#: holidayregion.cpp:989
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "Christian"
+msgctxt "HolidayRegion|Holiday type"
+msgid "Christian"
+msgstr "Christlich"
+
+#: holidayregion.cpp:991
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "Anglican"
+msgctxt "HolidayRegion|Holiday type"
+msgid "Anglican"
+msgstr "Anglikaansch"
+
+#: holidayregion.cpp:993
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "Catholic"
+msgctxt "HolidayRegion|Holiday type"
+msgid "Catholic"
+msgstr "Kathoolsch"
+
+#: holidayregion.cpp:995
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "Protestant"
+msgctxt "HolidayRegion|Holiday type"
+msgid "Protestant"
+msgstr "Evangeelsch"
+
+#: holidayregion.cpp:997
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "Orthodox"
+msgctxt "HolidayRegion|Holiday type"
+msgid "Orthodox"
+msgstr "Orthodox"
+
+#: holidayregion.cpp:999
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "Jewish"
+msgctxt "HolidayRegion|Holiday type"
+msgid "Jewish"
+msgstr "Jöödsch"
+
+#: holidayregion.cpp:1001
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "Jewish Orthodox"
+msgctxt "HolidayRegion|Holiday type"
+msgid "Jewish Orthodox"
+msgstr "Jöödsch-Orthodox"
+
+#: holidayregion.cpp:1003
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "Jewish Conservative"
+msgctxt "HolidayRegion|Holiday type"
+msgid "Jewish Conservative"
+msgstr "Jöödsch-Konservatiev"
+
+#: holidayregion.cpp:1005
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "Jewish Reform"
+msgctxt "HolidayRegion|Holiday type"
+msgid "Jewish Reform"
+msgstr "Reformjöödsch"
+
+#: holidayregion.cpp:1007
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "Islamic"
+msgctxt "HolidayRegion|Holiday type"
+msgid "Islamic"
+msgstr "Islaamsch"
+
+#: holidayregion.cpp:1009
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "Islamic Sunni"
+msgctxt "HolidayRegion|Holiday type"
+msgid "Islamic Sunni"
+msgstr "Sunnitsch-Islaamsch"
+
+#: holidayregion.cpp:1011
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "Islamic Shia"
+msgctxt "HolidayRegion|Holiday type"
+msgid "Islamic Shia"
+msgstr "Schiitsch-Islaamsch"
+
+#: holidayregion.cpp:1013
+#, fuzzy
+#| msgctxt "Holiday type"
+#| msgid "Islamic Sufi"
+msgctxt "HolidayRegion|Holiday type"
+msgid "Islamic Sufi"
+msgstr "Sufi-Islaamsch"
+
+#: holidayregion.cpp:1019
+#, fuzzy, qt-format
+#| msgctxt "Holiday file display name, %1 = region name, %2 = holiday type"
+#| msgid "%1 - %2"
+msgctxt ""
+"HolidayRegion|Holiday file display name, %1 = region name, %2 = holiday type"
+msgid "%1 - %2"
+msgstr "%1 - %2"
+
+#: holidayregion.cpp:1027
+#, fuzzy
+#| msgctxt "Unknown holiday region"
+#| msgid "Unknown"
+msgctxt "HolidayRegion|Unknown holiday region"
+msgid "Unknown"
+msgstr "Nich begäng"
+
+#: lunarphase.cpp:26
+#, fuzzy
+#| msgid "New Moon"
+msgctxt "LunarPhase|"
+msgid "New Moon"
+msgstr "Niegmaand"
+
+#: lunarphase.cpp:28
+#, fuzzy
+#| msgid "Full Moon"
+msgctxt "LunarPhase|"
+msgid "Full Moon"
+msgstr "Vullmaand"
+
+#: lunarphase.cpp:30
+#, fuzzy
+#| msgid "First Quarter Moon"
+msgctxt "LunarPhase|"
+msgid "First Quarter Moon"
+msgstr "Tonehmen Halfmaand"
+
+#: lunarphase.cpp:32
+#, fuzzy
+#| msgid "Last Quarter Moon"
+msgctxt "LunarPhase|"
+msgid "Last Quarter Moon"
+msgstr "Afnehmen Halfmaand"
+
+#: zodiac.cpp:66
+#, fuzzy
+#| msgid "Aries"
+msgctxt "Zodiac|"
+msgid "Aries"
+msgstr "Ramm"
+
+#: zodiac.cpp:68
+#, fuzzy
+#| msgid "Taurus"
+msgctxt "Zodiac|"
+msgid "Taurus"
+msgstr "Bull"
+
+#: zodiac.cpp:70
+#, fuzzy
+#| msgid "Gemini"
+msgctxt "Zodiac|"
+msgid "Gemini"
+msgstr "Tweeschens"
+
+#: zodiac.cpp:72
+#, fuzzy
+#| msgid "Cancer"
+msgctxt "Zodiac|"
+msgid "Cancer"
+msgstr "Dwarslöper"
+
+#: zodiac.cpp:74
+#, fuzzy
+#| msgid "Leo"
+msgctxt "Zodiac|"
+msgid "Leo"
+msgstr "Lööv"
+
+#: zodiac.cpp:76
+#, fuzzy
+#| msgid "Virgo"
+msgctxt "Zodiac|"
+msgid "Virgo"
+msgstr "Jumfer"
+
+#: zodiac.cpp:78
+#, fuzzy
+#| msgid "Libra"
+msgctxt "Zodiac|"
+msgid "Libra"
+msgstr "Waag"
+
+#: zodiac.cpp:80
+#, fuzzy
+#| msgid "Scorpio"
+msgctxt "Zodiac|"
+msgid "Scorpio"
+msgstr "Skorpschoon"
+
+#: zodiac.cpp:82
+#, fuzzy
+#| msgid "Sagittarius"
+msgctxt "Zodiac|"
+msgid "Sagittarius"
+msgstr "Schütt"
+
+#: zodiac.cpp:84
+#, fuzzy
+#| msgid "Capricorn"
+msgctxt "Zodiac|"
+msgid "Capricorn"
+msgstr "Steenbuck"
+
+#: zodiac.cpp:86
+#, fuzzy
+#| msgid "Aquarius"
+msgctxt "Zodiac|"
+msgid "Aquarius"
+msgstr "Watermann"
+
+#: zodiac.cpp:88
+#, fuzzy
+#| msgid "Pisces"
+msgctxt "Zodiac|"
+msgid "Pisces"
+msgstr "Fisch"
+
+#: zodiac.cpp:257
+#, fuzzy
+#| msgctxt "zodiac symbol for Aries"
+#| msgid "ram"
+msgctxt "HolidayRegion|zodiac symbol for Aries"
+msgid "ram"
+msgstr "Ramm"
+
+#: zodiac.cpp:259
+#, fuzzy
+#| msgctxt "zodiac symbol for Taurus"
+#| msgid "bull"
+msgctxt "HolidayRegion|zodiac symbol for Taurus"
+msgid "bull"
+msgstr "Bull"
+
+#: zodiac.cpp:261
+#, fuzzy
+#| msgctxt "zodiac symbol for Gemini"
+#| msgid "twins"
+msgctxt "HolidayRegion|zodiac symbol for Gemini"
+msgid "twins"
+msgstr "Tweeschens"
+
+#: zodiac.cpp:263
+#, fuzzy
+#| msgctxt "zodiac symbol for Cancer"
+#| msgid "crab"
+msgctxt "HolidayRegion|zodiac symbol for Cancer"
+msgid "crab"
+msgstr "Dwarslöper"
+
+#: zodiac.cpp:265
+#, fuzzy
+#| msgctxt "zodiac symbol for Leo"
+#| msgid "lion"
+msgctxt "HolidayRegion|zodiac symbol for Leo"
+msgid "lion"
+msgstr "Lööv"
+
+#: zodiac.cpp:267
+#, fuzzy
+#| msgctxt "zodiac symbol for Virgo"
+#| msgid "virgin"
+msgctxt "HolidayRegion|zodiac symbol for Virgo"
+msgid "virgin"
+msgstr "Jumfer"
+
+#: zodiac.cpp:269
+#, fuzzy
+#| msgctxt "zodiac symbol for Libra"
+#| msgid "scales"
+msgctxt "HolidayRegion|zodiac symbol for Libra"
+msgid "scales"
+msgstr "Waag"
+
+#: zodiac.cpp:271
+#, fuzzy
+#| msgctxt "zodiac symbol for Scorpion"
+#| msgid "scorpion"
+msgctxt "HolidayRegion|zodiac symbol for Scorpion"
+msgid "scorpion"
+msgstr "Skorpschoon"
+
+#: zodiac.cpp:273
+#, fuzzy
+#| msgctxt "zodiac symbol for Sagittarius"
+#| msgid "archer"
+msgctxt "HolidayRegion|zodiac symbol for Sagittarius"
+msgid "archer"
+msgstr "Schütt"
+
+#: zodiac.cpp:275
+#, fuzzy
+#| msgctxt "zodiac symbol for Capricorn"
+#| msgid "goat"
+msgctxt "HolidayRegion|zodiac symbol for Capricorn"
+msgid "goat"
+msgstr "Steenbuck"
+
+#: zodiac.cpp:277
+#, fuzzy
+#| msgctxt "zodiac symbol for Aquarius"
+#| msgid "water carrier"
+msgctxt "HolidayRegion|zodiac symbol for Aquarius"
+msgid "water carrier"
+msgstr "Watermann"
+
+#: zodiac.cpp:279
+#, fuzzy
+#| msgctxt "zodiac symbol for Pices"
+#| msgid "fish"
+msgctxt "HolidayRegion|zodiac symbol for Pices"
+msgid "fish"
+msgstr "Fisch"
