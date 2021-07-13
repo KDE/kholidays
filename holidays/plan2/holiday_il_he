@@ -31,7 +31,7 @@ language    "he"
 : Shvi'i shel Pesach (Seventh day of Passover)
 "שביעי של פסח"                                          public religious on hebrew nisan 21
 : Yom Ha'atzmaut (Independence Day)
-: If falls on a Friday or Saturday, move to preceeding Thursday, if falls on a Monday move to Tuesday
+: If falls on a Friday or Saturday, move to preceding Thursday, if falls on a Monday move to Tuesday
 "יום העצמאות"                                           public on hebrew ( (([iyar 5] == [friday after ([iyar 5])]) ||
                                                                              ([iyar 5] == [saturday after ([iyar 5])])) ?
                                                                                  [thursday before ([iyar 5])] :

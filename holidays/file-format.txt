@@ -18,7 +18,7 @@ optional holiday list:
     [METADATA]
     [LIST]
 
-The meatadata can contain country code, language code, name and description:
+The metadata can contain country code, language code, name and description:
 
     [COUNTRY_CODE]
     [LANGUAGE_CODE]
@@ -97,7 +97,7 @@ and is defined as:
 
     [plus|minus] NUMBER [days]
 
-The LENGTH is used to calcualte how long a holiday is and is defined as:
+The LENGTH is used to calculate how long a holiday is and is defined as:
 
     length NUMBER [days]
 

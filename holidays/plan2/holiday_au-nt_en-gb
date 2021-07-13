@@ -1,5 +1,5 @@
 ::
-:: Country:  Australia, Nothern Territory
+:: Country:  Australia, Northern Territory
 ::
 :: Language: UK English
 ::
@@ -16,7 +16,7 @@
 country     "AU-NT"
 language    "en_GB"
 :name        "optional - defaults to country name"
-description "State holiday file for Nothern Territory"
+description "State holiday file for Northern Territory"
 
 :: Public Holidays
 :: State Holidays - NT

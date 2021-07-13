@@ -24,7 +24,7 @@ description "National holiday file for Israel"
 "Simchat Torah (Assembly of the Eighth Day)"                                public religious on hebrew tishrey 22
 "Pesach (Passover)"                                                         public religious on hebrew nisan 15
 "Shvi'i shel Pesach (Seventh day of Passover)"                              public religious on hebrew nisan 21
-: If Yom Ha'atzmaut falls on a Friday or Saturday, move to preceeding Thursday, if falls on a Monday move to Tuesday
+: If Yom Ha'atzmaut falls on a Friday or Saturday, move to preceding Thursday, if falls on a Monday move to Tuesday
 "Yom Ha'atzmaut (Independence Day)"                                         public on hebrew ( (([iyar 5] == [friday after ([iyar 5])]) ||
                                                                                                  ([iyar 5] == [saturday after ([iyar 5])])) ?
                                                                                                      [thursday before ([iyar 5])] :

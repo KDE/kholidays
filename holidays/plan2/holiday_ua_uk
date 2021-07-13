@@ -295,7 +295,7 @@ description "Файл списку святкових днів України"
 "День працівників освіти"                                                                   cultural on first sunday in october
 : Lawyer's Day
 "День юриста"                                                                               cultural on october 8
-: Standartization Day
+: Standardization Day
 "День працівників стандартизації та метрології"                                             cultural on october 10
 : Epidemiologist's Day
 "День працівників державної санітарно-епідеміологічної служби"                              cultural on second sunday in october
@@ -307,7 +307,7 @@ description "Файл списку святкових днів України"
 "День автомобіліста і дорожника"                                                            cultural on last sunday in october
 : Day of Liberation of Ukraine from Nazi Invaders
 "День визволення України від фашистських загарбників"                                       cultural on ((year >= 2009) ? [october 28] : noop)
-: Miltary Engineering Day
+: Military Engineering Day
 "День інженерних військ"                                                                    cultural on november 3
 : Artillery Day
 "День ракетних військ і артилерії"                                                          cultural on november 3

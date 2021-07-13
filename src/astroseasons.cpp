@@ -24,7 +24,7 @@ using namespace KHolidays;
  * to the book they can be used for several centuries before and after that
  * period with the error still being quite small. As we only care about date
  * and not the time, the precision of the algorithm is good enough even for
- * greater time span, therefor no checks for the given year are performed
+ * greater time span, therefore no checks for the given year are performed
  * anywhere in the code.
  */
 namespace

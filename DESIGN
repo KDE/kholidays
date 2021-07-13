@@ -65,7 +65,7 @@ III. Definitions
         to a nearby business day?
 
    School Holiday:a day-off from school, either as a one-off Public Holiday or
-        extended periods between school terms.  Ths can vary widely depending
+        extended periods between school terms.  This can vary widely depending
         on school level, type, location.  The differing holidays can be held in
         separate files, e.g. State Primary, State Secondary, State University,
         local religious school, etc.
@@ -85,12 +85,12 @@ IV. Requirements
      their date to Gregorian first.
 
    [JPL: No.  In Iran for instance if the rule for a public holiday is defined
-         as the 1st occurance of the 3rd weekday of the 9th month of the Jalali
+         as the 1st occurrence of the 3rd weekday of the 9th month of the Jalali
          calendar (first Chahar Shanbe of Azar) it would not be valid to
          convert that into the first Wednesday of September in the Gregorian
          calendar, there could be no formulation that would always work other
          than expressing the rule in the Calendar System that it applies to.
-         This means all holiday recurrance rules not defined in the Gregorian
+         This means all holiday recurrence rules not defined in the Gregorian
          default must define the Calendar System used to calculate them.  This
          may also mean the recurrence rules must always use month and weekday
          numbers rather than names, except that some calendar systems such as
@@ -107,7 +107,7 @@ IV. Requirements
      (possibly through inheritance) the public, cultural, and financial holidays
 
    * Holidays of political regions will be specified in in files in a
-     heirarchy similar to how timezones are stored in /usr/share/zoneinfo.
+     hierarchy similar to how timezones are stored in /usr/share/zoneinfo.
       eg. holidays/Canada/<Province>, holidays/US/<State>,
           holidays/Europe/Germany/<Province>, holidays/Australia/<State>, ...
 
@@ -161,7 +161,7 @@ IV. Requirements
         bank-closed holiday (financial),
         noteworthy event (cultural),
         religious holiday (religious),
-        holy day (religous),
+        holy day (religious),
         name day (cultural),
         ...
 

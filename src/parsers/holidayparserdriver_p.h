@@ -23,7 +23,7 @@ namespace KHolidays
  *
  * Defines a standard interface for parsing holiday files of various formats
  *
- * Derived classes must implemet method parse(), other methods should work for
+ * Derived classes must implement method parse(), other methods should work for
  * most circumstances
  *
  * @internal Private, for internal use only
