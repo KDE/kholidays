@@ -14,9 +14,9 @@
 ::
 :: Notes:
 ::
-:: 1) The day off on some public holidays is moved to the Monday of the holiday week. That's why there are some dates that are repeated with the word "Descanso" (day off) at the beggining.
-:: 2) Though some dates aren't a day off for public nor private sectors, they're for schools. All the school day off have the "school" category. 
-:: 3) Some holidays aren't days off, but they're remebered and even a ceremony is held on those days. All these kind of dates have the "civil" category.
+:: 1) The day off on some public holidays is moved to the Monday of the holiday week. That's why there are some dates that are repeated with the word "Descanso" (day off) at the beginning.
+:: 2) Though some dates aren't a day off for public nor private sectors, they're for schools. All the school day off have the "school" category.
+:: 3) Some holidays aren't days off, but they're remembered and even a ceremony is held on those days. All these kind of dates have the "civil" category.
 :: 4) The states bordering the U.S. change to daylight saving time on a different date than the rest of the country.
 ::
 :: Metadata
@@ -27,7 +27,7 @@ language    "es"
 
 :: Day offs
 "Año Nuevo"				 public on january 1
-"Descanso por el Día de la Constitución  public school on first Monday in february
+"Descanso por el Día de la Constitución"  public school on first Monday in february
 "Descanso por el Natalicio de Benito Juárez" public school on third monday in march
 "Día del trabajo"                        public school on may 1
 "Día de la Independencia"                public school on september 16
@@ -58,14 +58,14 @@ language    "es"
 
 :: Religious
 "Día de los Reyes Magos"            religious school on january 6
-"Día de la Candelaria"		    religlios on february 2
+"Día de la Candelaria"		          religious on february 2
 "Domingo de Pascua"                 religious on easter
 "Sábado de Gloria"                  religious on easter minus 1
 "Viernes Santo"                     religious on easter minus 2
 "Jueves Santo"                      religious on easter minus 3
 "Día de Todos los Santos"           religious school on november 1
 "Día de la Vírgen de Guadalupe"     religious on december 12
-"Noche buena"	     		    religious cultural on december 24
+"Noche buena"	     		              religious cultural on december 24
 
 :: School
 "Día del niño"			   school cultural on april 30
