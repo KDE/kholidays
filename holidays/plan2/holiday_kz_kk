@@ -3,11 +3,13 @@
 ::
 :: Language: Kazakh
 ::
-:: Author:   Timur Birsh <taem@linukz.org>
+:: First Author:   Timur Birsh <taem@linukz.org>
 ::
-:: Updated:  2011-04-05
+:: Author of update: Artyom Bystrov <arbars@altlinux.ru>
 ::
-:: Source:   http://e.gov.kz/wps/portal/!ut/p/c1/04_SB8K8xLLM9MSSzPy8xBz9CP0os3h_D0M3d1NLYwN_FwtXA08LU2M_Nx8PI3dvI6B8JE55A6A8ft3hIPvw6wfJG-AAjgb6fh75uan6BbkRBlkmjooA63RsuQ!!/dl2/d1/L0lDUmlTUSEhL3dHa0FKRnNBL1lCUlp3QSEhL2tr/
+:: Updated:  2021-07-25
+::
+:: Source:   https://egov.kz/cms/kk/articles/holidays-calend
 ::
 
 :: Metadata
@@ -25,6 +27,8 @@ description "Қазақстан Республикасының мейрамда�
 "Наурыз мейрамы"                                 public on march 22
 :: Kazakhstan Peoples Solidarity Holiday
 "Қазақстан халқының бірлігі мерекесі"            public on may 1
+:: Fatherland Defender’s Day
+"Отан қорғаушы күні"                             civil on may 7
 :: Victory Day
 "Жеңіс күні"                                     public on may 9
 :: Capital City Day
@@ -35,7 +39,10 @@ description "Қазақстан Республикасының мейрамда�
 "Тәуелсіздік күні"                               public on december 16 length 2 days
 
 :: Religious
-
+:: "Eid-ul-Adha"
+Құрбан айттың бірінші күні                       public religious on hijri thualhijjah 10
+:: Ortodox Christmas
+Православиелік Рождество                         public religious on january 7
 :: Financial
 
 :: Cultural
@@ -65,8 +72,6 @@ description "Қазақстан Республикасының мейрамда�
 "Бүкiләлемдiк еңбек қорғау күні"                                        civil on april 28
 "Халықаралық би күнi"                                                   civil on april 29
 "Радио күні"                                                            civil on may 5
-:: Fatherland Defender’s Day
-"Отан қорғаушы күні"                                                    civil on may 7
 "Химиктер күнi"                                                         civil on may 27
 :: Political Repression Victims Memory Day
 "Саяси қуғын-сүргіндер құрбандарын еске"                                civil on may 31
@@ -88,7 +93,7 @@ description "Қазақстан Республикасының мейрамда�
 "Теңіз және өзен флоты күні"                                            civil on first sunday in july
 :: Metal-Maker’s Day
 "Металлург күні"                                                        civil on third sunday in july
-"Жүйелік администратор күні"                                            civil on last sunday in july
+"Жүйелік администратор күні"                                            civil on last friday in july
 "Әуе-десант әскерлерінің күні"                                          civil on august 2
 "Шекаралық әскерлер күнi"                                               civil on august 18
 "Әуе флоты күнi"                                                        civil on august 19
