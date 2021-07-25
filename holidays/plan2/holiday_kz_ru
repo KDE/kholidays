@@ -3,12 +3,13 @@
 ::
 :: Language: Russian
 ::
-:: Author:   Timur Birsh <taem@linukz.org>
+:: First Author:   Timur Birsh <taem@linukz.org>
 ::
-:: Updated:  2011-04-05
+:: Author of update: Artyom Bystrov <arbars@altlinux.ru>
 ::
-:: Source:   http://e.gov.kz/wps/portal/Content?contentPath=/library2/1_kazakhstan/kr/article/prazdniki&lang=ru
-:: 	     http://e.gov.kz/wps/portal/Content?contentPath=/library2/1_kazakhstan/kr/article/prazdniki/addInfo/prof%20prazd&lang=ru
+:: Updated:  2021-07-25
+:: 
+:: Source:  https://egov.kz/cms/ru/articles/holidays-calend
 ::
 
 :: Metadata
@@ -23,9 +24,11 @@ description "Праздники Республики Казахстан"
 :: International Women’s Day
 "Международный женский день"                     public on march 8
 :: Nauryz
-"Наурыз мейрамы"                                 public on march 22
+"Наурыз мейрамы"                                 public on march 21 length 3 days
 :: Kazakhstan Peoples Solidarity Holiday
 "Праздник единства народа Казахстана"            public on may 1
+:: Defenders of Homeland Day
+День Защитника Отечества                         public on may 7
 :: Victory Day
 "День Победы"                                    public on may 9
 :: Capital City Day
@@ -36,7 +39,10 @@ description "Праздники Республики Казахстан"
 "День Независимости"                             public on december 16 length 2 days
 
 :: Religious
-
+:: "Eid-ul-Adha"
+Первый день Курбан-Айт                           public religious on hijri thualhijjah 10
+:: Ortodox Christmas
+Рождество Христово                               public religious on january 7
 :: Financial
 
 :: Cultural
@@ -66,8 +72,6 @@ description "Праздники Республики Казахстан"
 "Всемирный день охраны труда"                                           civil on april 28
 "Международный день танца"                                              civil on april 29
 "День радио"                                                            civil on may 5
-:: Fatherland Defender’s Day
-"День защитника Отечества"                                              civil on may 7
 "День химика"                                                           civil on may 27
 :: Political Repression Victims Memory Day
 "День памяти жертв политических репрессий"                              civil on may 31
@@ -87,9 +91,9 @@ description "Праздники Республики Казахстан"
 "Всемирный день поцелуя"                                                civil on july 6
 "День комитета Национальной Безопасности. День прокуратуры"             civil on july 13
 "День морского и речного флота"                                         civil on first sunday in july
-:: Metal-Maker’s Day
+:: Metallurgist’s Day
 "День металлурга"                                                       civil on third sunday in july
-"День системного администратора"                                        civil on last sunday in july
+"День системного администратора"                                        civil on last friday in july
 "День воздушно-десантных войск"                                         civil on august 2
 "День образования пограничных войск"                                    civil on august 18
 "День воздушного флота"                                                 civil on august 19
