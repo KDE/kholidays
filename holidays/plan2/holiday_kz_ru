@@ -7,7 +7,7 @@
 ::            Artyom Bystrov <arbars@altlinux.ru>
 ::
 :: Updated:  2021-07-25
-:: 
+::
 :: Source:  https://egov.kz/cms/ru/articles/holidays-calend
 ::
 
@@ -27,7 +27,7 @@ description "Праздники Республики Казахстан"
 :: Kazakhstan Peoples Solidarity Holiday
 "Праздник единства народа Казахстана"            public on may 1
 :: Defenders of Homeland Day
-День Защитника Отечества                         public on may 7
+"День Защитника Отечества"                       public on may 7
 :: Victory Day
 "День Победы"                                    public on may 9
 :: Capital City Day
@@ -39,9 +39,9 @@ description "Праздники Республики Казахстан"
 
 :: Religious
 :: "Eid-ul-Adha"
-Первый день Курбан-Айт                           public religious on hijri thualhijjah 10
+"Первый день Курбан-Айт"                         public religious on hijri thualhijjah 10
 :: Ortodox Christmas
-Рождество Христово                               public religious on january 7
+"Рождество Христово"                             public religious on january 7
 :: Financial
 
 :: Cultural
