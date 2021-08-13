@@ -18,7 +18,10 @@ using namespace KHolidays;
 
 void LunarTest::test2005()
 {
-    QList<QDate> fQ2005, fM2005, lQ2005, nM2005;
+    QList<QDate> fQ2005;
+    QList<QDate> fM2005;
+    QList<QDate> lQ2005;
+    QList<QDate> nM2005;
     // 2005 first quarter moons
     fQ2005.append(QDate(2005, 1, 17));
     fQ2005.append(QDate(2005, 2, 16));
@@ -79,7 +82,10 @@ void LunarTest::test2005()
 
     LunarPhase lp;
     QDate qd(2004, 12, 31);
-    QList<QDate> firstQuarter, fullMoon, lastQuarter, newMoon;
+    QList<QDate> firstQuarter;
+    QList<QDate> fullMoon;
+    QList<QDate> lastQuarter;
+    QList<QDate> newMoon;
     for (int i = 1; i <= 365; ++i) {
         qd = qd.addDays(1);
         LunarPhase::Phase phase = lp.phaseAtDate(qd);
@@ -105,7 +111,10 @@ void LunarTest::test2005()
 
 void LunarTest::test2007()
 {
-    QList<QDate> fQ2007, fM2007, lQ2007, nM2007;
+    QList<QDate> fQ2007;
+    QList<QDate> fM2007;
+    QList<QDate> lQ2007;
+    QList<QDate> nM2007;
     // 2007 first quarter moons
     fQ2007.append(QDate(2007, 1, 25));
     fQ2007.append(QDate(2007, 2, 24));
@@ -166,7 +175,10 @@ void LunarTest::test2007()
 
     LunarPhase lp;
     QDate qd(2006, 12, 31);
-    QList<QDate> firstQuarter, fullMoon, lastQuarter, newMoon;
+    QList<QDate> firstQuarter;
+    QList<QDate> fullMoon;
+    QList<QDate> lastQuarter;
+    QList<QDate> newMoon;
     for (int i = 1; i <= 365; ++i) {
         qd = qd.addDays(1);
         LunarPhase::Phase phase = lp.phaseAtDate(qd);

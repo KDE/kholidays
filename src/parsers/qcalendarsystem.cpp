@@ -375,7 +375,9 @@ bool QCalendarSystemPrivate::isLeapYear(int year) const
 
 void QCalendarSystemPrivate::julianDayToDate(qint64 jd, int *year, int *month, int *day) const
 {
-    int yy = 0, mm = 0, dd = 0;
+    int yy = 0;
+    int mm = 0;
+    int dd = 0;
 
     switch (calendarSystem()) {
     case QCalendarSystem::GregorianCalendar:
@@ -808,7 +810,9 @@ int QCalendarSystem::dayOfWeek(int year, int month, int day) const
 int QCalendarSystem::weekNumber(const QDate &date, int *yearNum) const
 {
     if (isValid(date)) {
-        int year, month, day;
+        int year;
+        int month;
+        int day;
         d->julianDayToDate(date.toJulianDay(), &year, &month, &day);
         return weekNumber(year, month, day, yearNum);
     } else {
@@ -843,7 +847,9 @@ int QCalendarSystem::weekNumber(int year, int month, int day, int *yearNum) cons
     int w;
 
     for (;;) {
-        int len, bot, top;
+        int len;
+        int bot;
+        int top;
 
         len = d->daysInYear(year);
         /*
@@ -943,7 +949,8 @@ int QCalendarSystem::daysInYear(int year) const
 int QCalendarSystem::daysInMonth(const QDate &date) const
 {
     if (isValid(date)) {
-        int year, month;
+        int year;
+        int month;
         d->julianDayToDate(date.toJulianDay(), &year, &month, nullptr);
         return d->daysInMonth(year, month);
     } else {
@@ -986,7 +993,9 @@ bool QCalendarSystem::isLeapYear(int year) const
 QDate QCalendarSystem::addYears(const QDate &dt, int years) const
 {
     if (isValid(dt)) {
-        int year, month, day;
+        int year;
+        int month;
+        int day;
         d->julianDayToDate(dt.toJulianDay(), &year, &month, &day);
         year = d->addYears(year, years);
         month = qMin(month, d->monthsInYear(year));
@@ -999,7 +1008,9 @@ QDate QCalendarSystem::addYears(const QDate &dt, int years) const
 QDate QCalendarSystem::addMonths(const QDate &dt, int months) const
 {
     if (isValid(dt)) {
-        int year, month, day;
+        int year;
+        int month;
+        int day;
         d->julianDayToDate(dt.toJulianDay(), &year, &month, &day);
         while (months != 0) {
             if (months < 0) {
@@ -1043,7 +1054,12 @@ int QCalendarSystem::yearsDifference(const QDate &fromDate, const QDate &toDate)
         return -yearsDifference(toDate, fromDate);
     }
 
-    int y1, m1, d1, y2, m2, d2;
+    int y1;
+    int m1;
+    int d1;
+    int y2;
+    int m2;
+    int d2;
     d->julianDayToDate(fromDate.toJulianDay(), &y1, &m1, &d1);
     d->julianDayToDate(toDate.toJulianDay(), &y2, &m2, &d2);
 
@@ -1081,7 +1097,13 @@ int QCalendarSystem::monthsDifference(const QDate &fromDate, const QDate &toDate
         return -monthsDifference(toDate, fromDate);
     }
 
-    int y1, m1, d1, y2, m2, d2, my;
+    int y1;
+    int m1;
+    int d1;
+    int y2;
+    int m2;
+    int d2;
+    int my;
     d->julianDayToDate(fromDate.toJulianDay(), &y1, &m1, &d1);
     d->julianDayToDate(toDate.toJulianDay(), &y2, &m2, &d2);
 
@@ -1130,7 +1152,12 @@ void QCalendarSystem::dateDifference(const QDate &fromDate, const QDate &toDate,
             dateDifference(toDate, fromDate, &dy, &dm, &dd, nullptr);
             dir = -1;
         } else {
-            int y1, m1, d1, y2, m2, d2;
+            int y1;
+            int m1;
+            int d1;
+            int y2;
+            int m2;
+            int d2;
             d->julianDayToDate(fromDate.toJulianDay(), &y1, &m1, &d1);
             d->julianDayToDate(toDate.toJulianDay(), &y2, &m2, &d2);
 
@@ -1213,7 +1240,8 @@ QDate QCalendarSystem::lastDayOfYear(int year) const
 
 QDate QCalendarSystem::firstDayOfMonth(const QDate &dt) const
 {
-    int year, month;
+    int year;
+    int month;
     getDate(dt, &year, &month, nullptr);
     return date(year, month, 1);
 }
@@ -1225,7 +1253,8 @@ QDate QCalendarSystem::firstDayOfMonth(int year, int month) const
 
 QDate QCalendarSystem::lastDayOfMonth(const QDate &dt) const
 {
-    int year, month;
+    int year;
+    int month;
     getDate(dt, &year, &month, nullptr);
     return date(year, month, daysInMonth(year, month));
 }

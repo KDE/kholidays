@@ -48,14 +48,15 @@ LunarPhase::Phase LunarPhase::phaseAtDate(const QDate &date)
     const QDateTime todayEnd(date.addDays(1), midnight, Qt::UTC);
     const double endAngle = phaseAngle(todayEnd.toMSecsSinceEpoch());
 
-    if (startAngle > endAngle)
+    if (startAngle > endAngle) {
         retPhase = NewMoon;
-    else if (startAngle < 90.0 && endAngle > 90.0)
+    } else if (startAngle < 90.0 && endAngle > 90.0) {
         retPhase = FirstQuarter;
-    else if (startAngle < 180.0 && endAngle > 180.0)
+    } else if (startAngle < 180.0 && endAngle > 180.0) {
         retPhase = FullMoon;
-    else if (startAngle < 270.0 && endAngle > 270.0)
+    } else if (startAngle < 270.0 && endAngle > 270.0) {
         retPhase = LastQuarter;
+    }
 
     return retPhase;
 }

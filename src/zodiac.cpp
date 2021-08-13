@@ -94,7 +94,8 @@ QString Zodiac::signName(Zodiac::ZodiacSigns sign)
 
 Zodiac::ZodiacSigns Zodiac::signAtDate(const QDate &date) const
 {
-    QDate startdate, enddate;
+    QDate startdate;
+    QDate enddate;
 
     switch (d->mType) {
     case Tropical:

@@ -874,7 +874,8 @@ QString HolidayRegion::name() const
     if (tempName.isEmpty()) {
         QStringList countryParts = countryCode().toLower().split(QLatin1Char('-'));
         const QString &country = countryParts.at(0);
-        QString regionName, typeName;
+        QString regionName;
+        QString typeName;
 
         if (country != QLatin1String("xx")) {
             if (countryParts.count() == 2) {
@@ -1117,7 +1118,10 @@ QString HolidayRegion::defaultRegionCode(const QString &country, const QString &
     // Locale language can have a country code embedded in it e.g. en_GB, which we can try use if
     // no country set, but a lot of countries use en_GB so it's a lower priority option
 
-    QString localeCountry, localeSubdivision, localeLanguage, localeLanguageCountry;
+    QString localeCountry;
+    QString localeSubdivision;
+    QString localeLanguage;
+    QString localeLanguageCountry;
 
     if (country.isEmpty()) {
         localeCountry = countryToCode(QLocale().country()).toLower();
