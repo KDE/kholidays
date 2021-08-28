@@ -727,7 +727,7 @@ static QStringList allHolidayFiles(const QString &location = QString())
                                       QStringLiteral("kf5/libkholidays/plan2"),
                                       QStandardPaths::LocateDirectory);
     QStringList files;
-    for (const QString &dir : qAsConst(dirs)) {
+    for (const QString &dir : std::as_const(dirs)) {
         QDirIterator it(dir, QStringList() << QStringLiteral("holiday_") + location + '*');
         while (it.hasNext()) {
             files.push_back(it.next());
