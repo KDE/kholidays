@@ -9,11 +9,13 @@ special events for a geographical region.
 
 ## Testing New Holiday Files
 
-put the new file in place under holidays/plan2
-edit the holidays/holidays.qrc file accordingly
+* Put the new file in place under holidays/plan2.
+* Edit the holidays/holidays.qrc file accordingly.
+```
 % cd <builddir>
 % make install && QT_LOGGING_RULES="*.debug=true" ./bin/testholidayregion  >& foo.txt
-look for lines containing "syntax error" in foo.txt.
-fix any such syntax errors and then you can commit
+```
+* Look for lines containing "syntax error" in foo.txt.
+* Fix any such syntax errors and then you can commit.
 
 
