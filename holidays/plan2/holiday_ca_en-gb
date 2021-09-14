@@ -5,14 +5,14 @@
 ::
 :: Author:   Peter Littlefield <plittle@sofkin.ca>
 ::
-:: Updated:
+:: Updated: 2021-09-14
 ::
-:: Source:
+:: Source:  https://en.wikipedia.org/wiki/Public_holidays_in_Canada
 ::
 
 :: Metadata
 country     "CA"
-language    "en_GB"
+language    "en"
 :name        "optional - defaults to country name"
 description "National holiday file for Canada"
 
@@ -25,6 +25,7 @@ description "National holiday file for Canada"
 "Canada Day"        public on july 1
 "Civic Holiday"     public on first monday in august
 "Labour Day"        public on first monday in september
+"National Day for Truth and Reconciliation" public  on ( (year >= 2021) ? [september 30] : noop )
 "Thanksgiving"      public on second monday in october
 "Remembrance Day"   public on november 11
 "Christmas"         public religious on december 25
