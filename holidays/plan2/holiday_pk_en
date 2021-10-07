@@ -11,7 +11,6 @@
 ::                  https://en.wikipedia.org/wiki/Public_holidays_in_Pakistan
 ::                  https://www.edarabia.com/pakistan/public-holidays/
 
-
 :: Metadata
 country     "PK"
 language    "en"
@@ -20,7 +19,7 @@ description "Holidays for the Islamic Republic of Pakistan"
 
 :: Public Holidays
 "New Year"            public on january 1
-"Kashmir Day"	      public on febuary 5
+"Kashmir Day"	      public on february 5
 "Pakistan Day"	      public on march 23
 "Labour Day"          public on may 1
 "Youm-e-Takbir"       public on may 28
