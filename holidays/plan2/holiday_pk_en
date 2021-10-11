@@ -28,8 +28,6 @@ description "Holidays for the Islamic Republic of Pakistan"
 :: Religious    
 "Ashura"                religious on hijri muharram 10
 "Eid Milad un Nabi"     public religious on hijri rabialawal 12
-"Shab-e-Meraj"          religious on hijri rajab 27
-"Shab-e-Barat"          public religious on hijri shaban 14
 "Eid ul Fitr"           public religious on hijri shawwal 1 length 3 days
 "Eid ul Adha"           public religious on hijri thualhijjah 10 length 3 days
 "Christmas"             public religious on december 25
@@ -45,7 +43,7 @@ description "Holidays for the Islamic Republic of Pakistan"
 :: Historical Dates
 "Defence Day"        commemorative on september 6
 "Iqbal Day"	           commemorative on november 9
-"Youm-e-Takbir"       public on may 28
+"Youm-e-Takbir"       commemorative on may 28
 
 :: Seasonal
 
