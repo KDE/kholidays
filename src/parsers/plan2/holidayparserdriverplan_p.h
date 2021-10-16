@@ -14,7 +14,6 @@
 #include <QByteArray>
 #include <QStringList>
 
-#include <fstream>
 #include <string>
 
 namespace KHolidays
