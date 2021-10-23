@@ -13,7 +13,7 @@
 :: Metadata
 country     "IT-BZ"
 language    "de"
-:name        "optional - defaults to country name"
+name        "Italy, South Tyrol"
 :description "(please add description in source language) Regional holiday file for South Tyrol"
 
 :: Public Holidays

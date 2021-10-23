@@ -15,7 +15,7 @@
 :: Metadata
 country     "GB-NIR"
 language    "en_GB"
-:name        "optional - defaults to country name"
+name        "United Kingdom, Northern Ireland"
 description "National holiday file for Northern Ireland"
 
 :: Public Holidays

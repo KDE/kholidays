@@ -24,7 +24,7 @@
 :: Metadata
 country     "GB-SCT"
 language    "en_GB"
-:name        "optional - defaults to country name"
+name        "United Kingdom, Scotland"
 description "National holiday file for Scotland"
 
 :: Public Holidays

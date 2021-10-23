@@ -15,7 +15,7 @@
 :: Metadata
 country     "AU-ACT"
 language    "en_GB"
-:name        "optional - defaults to country name"
+name        "Australia, Australian Capital Territory"
 description "State holiday file for Australian Capital Territory"
 
 :: Public Holidays

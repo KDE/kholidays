@@ -15,7 +15,7 @@
 :: Metadata
 country     "AU-QLD"
 language    "en_GB"
-:name        "optional - defaults to country name"
+name        "Australia, Queensland"
 description "State holiday file for Queensland"
 
 :: Public Holidays

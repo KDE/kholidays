@@ -15,7 +15,7 @@
 :: Metadata
 country     "AU-SA"
 language    "en_GB"
-:name        "optional - defaults to country name"
+name        "Australia, South Australia"
 description "State holiday file for South Australia"
 
 :: Public Holidays

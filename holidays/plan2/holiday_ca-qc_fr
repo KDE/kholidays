@@ -14,7 +14,7 @@
 :: Metadata
 country     "CA-QC"
 language    "fr"
-:name        "optional - defaults to country name"
+name        "Canada, Quebec"
 description "Liste des jours fériés, chômés et payés"
 
 :: Public Holidays

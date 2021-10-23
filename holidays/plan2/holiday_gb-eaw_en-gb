@@ -15,7 +15,7 @@
 :: Metadata
 country     "GB-EAW"
 language    "en_GB"
-:name        "optional - defaults to country name"
+name        "United Kingdom, England and Wales"
 description "National holiday file for England and Wales"
 
 :: Public Holidays

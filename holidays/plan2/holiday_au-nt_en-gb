@@ -15,7 +15,7 @@
 :: Metadata
 country     "AU-NT"
 language    "en_GB"
-:name        "optional - defaults to country name"
+name        "Australia, Northern Territory"
 description "State holiday file for Northern Territory"
 
 :: Public Holidays

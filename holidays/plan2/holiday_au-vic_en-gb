@@ -15,7 +15,7 @@
 :: Metadata
 country     "AU-VIC"
 language    "en_GB"
-:name        "optional - defaults to country name"
+name        "Australia, Victoria"
 description "State holiday file for Victoria"
 
 :: Public Holidays

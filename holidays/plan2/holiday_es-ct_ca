@@ -13,7 +13,7 @@
 :: Metadata
 country     "ES-CT"
 language    "ca"
-:name        "optional - defaults to country name"
+name        "Spain, Catalonia"
 :description "(please add description in source language) Regional holiday file for Catalonia"
 
 :: Public Holidays
