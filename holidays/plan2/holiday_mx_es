@@ -76,5 +76,5 @@ language    "es"
 "Inicio del horario de verano"			       seasonal on first sunday in april
 "Fin del horario de verano"	   		       seasonal on last sunday in october
 "Inicio del horario de verano en la franja fronteriza" seasonal on second sunday in march
-"Fin del horario se verano en la franja fronteriza"    seasonal on first sunday in november
+"Fin del horario de verano en la franja fronteriza"    seasonal on first sunday in november
 
