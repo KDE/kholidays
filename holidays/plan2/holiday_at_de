@@ -94,8 +94,8 @@ language    "de"
 :: School
 
 :: Daylight Saving
-"Sommerzeit"                seasonal on last sunday in march
-"Winterzeit"                seasonal on last sunday in october
+"Beginn der Sommerzeit"     seasonal on last sunday in march
+"Ende der Sommerzeit"       seasonal on last sunday in october
 
 :: Seasons
 

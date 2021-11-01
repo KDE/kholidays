@@ -59,7 +59,7 @@ description "Feiertage für Deutschland (Mecklenburg-Vorpommern)"
 
 :: Daylight Saving
 "Beginn der Sommerzeit" seasonal on last sunday in march
-"Beginn der Winterzeit" seasonal on last sunday in october
+"Ende der Sommerzeit"   seasonal on last sunday in october
 
 :: Seasons
 
