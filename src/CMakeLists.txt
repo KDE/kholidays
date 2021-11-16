@@ -16,17 +16,30 @@ set_target_properties(KF5Holidays PROPERTIES
 )
 
 target_sources(KF5Holidays PRIVATE
-  astroseasons.cpp
-  holiday.cpp
-  holidayregion.cpp
-  lunarphase.cpp
-  sunriseset.cpp
-  zodiac.cpp
-  parsers/holidayparserdriver.cpp
-  parsers/qcalendarsystem.cpp
-  parsers/plan2/holidayscannerplan.cpp
-  parsers/plan2/holidayparserdriverplan.cpp
-  parsers/plan2/holidayparserplan.cpp
+    astroseasons.cpp
+    astroseasons.h
+    holiday.cpp
+    holiday.h
+    holiday_p.h
+    holidayregion.cpp
+    holidayregion.h
+    lunarphase.cpp
+    lunarphase.h
+    parsers/holidayparserdriver.cpp
+    parsers/holidayparserdriver_p.h
+    parsers/plan2/FlexLexer.h
+    parsers/plan2/holidayparserdriverplan.cpp
+    parsers/plan2/holidayparserdriverplan_p.h
+    parsers/plan2/holidayparserplan.cpp
+    parsers/plan2/holidayscannerplan.cpp
+    parsers/plan2/holidayscannerplan_p.h
+    parsers/qcalendarsystem.cpp
+    parsers/qcalendarsystem_p.h
+    sunriseset.cpp
+    sunriseset.h
+    util.h
+    zodiac.cpp
+    zodiac.h
 
   ../holidays/holidays.qrc
 )
