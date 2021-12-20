@@ -1,8 +1,8 @@
 add_library(kholidaysdeclarativeplugin SHARED kholidaysdeclarativeplugin.cpp holidayregionsmodel.cpp kholidaysdeclarativeplugin.h holidayregionsmodel.h)
 
 target_link_libraries(kholidaysdeclarativeplugin
-  Qt5::Qml
-  Qt5::Core
+  Qt${QT_MAJOR_VERSION}::Qml
+  Qt${QT_MAJOR_VERSION}::Core
   KF5Holidays
 )
 
