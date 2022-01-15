@@ -33,8 +33,11 @@ description "National holiday file for Northern Ireland"
 "Easter Monday"                             public on easter plus 1
 "Royal Wedding"                             public on 29.4.2011
 "Early May Bank Holiday"                    public on ((year == 2020) ? [may 8] : [first monday in may])
-"Spring Bank Holiday"                       public on ((year == 2012) ? [june 4] : [last monday in may])
+"Spring Bank Holiday"                       public on ((year == 2012) ? [june 4] :
+                                                       ((year == 2022) ? [june 2] :
+                                                         [last monday in may]))
 "Diamond Jubilee Holiday"                   public on 5.6.2012
+"Platinum Jubilee Holiday"                  public on 3.6.2022
 "Battle of the Boyne (Orangemen's Day)"     public on july 12
 "Battle of the Boyne Bank Holiday"          public on ( (([july 12] == [saturday after ([july 12])]) ||
                                                           ([july 12] == [sunday after ([july 12])])) ?

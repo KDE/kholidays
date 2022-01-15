@@ -43,6 +43,7 @@ description "National holiday file for Scotland"
 "Royal Wedding"                     public on 29.4.2011
 "Early May Bank Holiday"            public on ((year == 2020) ? [may 8] : [first monday in may])
 "Diamond Jubilee Holiday"           public on 5.6.2012
+"Platinum Jubilee Holiday"          public on 3.6.2022
 "Christmas Day"                     public religious on december 25
 "Christmas Day Substitute Holiday"  public on ( (([december 25] == [saturday after ([december 25])]) ||
                                                   ([december 25] == [sunday after ([december 25])])) ?
@@ -60,7 +61,9 @@ description "National holiday file for Scotland"
 
 :: Financial
 "Good Friday Bank Holiday"          religious on easter minus 2
-"Spring Bank Holiday"               civil on ((year == 2012) ? [june 4] : [last monday in may])
+"Spring Bank Holiday"               civil on ((year == 2012) ? [june 4] :
+                                              ((year == 2022) ? [june 2] :
+                                               [last monday in may]))
 "Summer Bank Holiday"               civil on first monday in august
 "St Andrew's Day Bank Holiday"      civil on ( (([november 30] == [saturday after ([november 30])]) ||
                                                 ([november 30] == [sunday after ([november 30])])) ?

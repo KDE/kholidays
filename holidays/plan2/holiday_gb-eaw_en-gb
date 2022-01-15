@@ -27,8 +27,11 @@ description "National holiday file for England and Wales"
 "Easter Monday"                 public on easter plus 1
 "Royal Wedding"                 public on 29.4.2011
 "Early May Bank Holiday"        public on ((year == 2020) ? [may 8] : [first monday in may])
-"Spring Bank Holiday"           public on ((year == 2012) ? [june 4] : [last monday in may])
+"Spring Bank Holiday"           public on ((year == 2012) ? [june 4] :
+                                           ((year == 2022) ? [june 2] :
+                                            [last monday in may]))
 "Diamond Jubilee Holiday"       public on 5.6.2012
+"Platinum Jubilee Holiday"      public on 3.6.2022
 "Summer Bank Holiday"           public on last monday in august
 "Christmas Day"                 public religious on december 25
 "Christmas Day Bank Holiday"    public on ( (([december 25] == [saturday after ([december 25])]) || ([december 25] == [sunday after ([december 25])])) ?
