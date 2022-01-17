@@ -5,7 +5,7 @@
 ::
 :: 作者：Ricky Lindén <pm@rickylinden.com>
 ::
-:: 更新日期：2021-01-01
+:: 更新日期：2022-01-17
 ::
 :: 來源：https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020033
 ::
@@ -49,6 +49,12 @@ description  "中華民國（臺灣）紀念日及節日"
 "端午節"                            public cultural on 14 June 2021
 "中秋節"                            public cultural on 21 September 2021
 
+"農曆除夕"                          public cultural on 31 January 2022
+"春節"                              public cultural on 1 February 2022 length 3 days
+"民族掃墓節"                        public cultural on 5 April 2022
+"端午節"                            public cultural on 3 June 2022
+"中秋節"                            public cultural on 10 September 2022
+
 :: Substitute holidays
 :: 補假
 
@@ -59,6 +65,9 @@ description  "中華民國（臺灣）紀念日及節日"
 "兒童節補假"                        public on 2 April 2021
 "民族掃墓節補假"                    public on 5 April 2021
 "國慶日補假"                        public on 11 October 2021
+"中華民國開國紀念日補假"            public on 31 December 2021
+
+"中秋節補假"                        public cultural on 9 September 2022
 
 :: 其他紀念日
 
@@ -74,6 +83,7 @@ description  "中華民國（臺灣）紀念日及節日"
 
 "佛陀誕辰紀念日"                    commemorative religious on 30 April 2020
 "佛陀誕辰紀念日"                    commemorative religious on 19 May 2021
+"佛陀誕辰紀念日"                    commemorative religious on 8 May 2022
 
 :: 其他節日
 
@@ -87,6 +97,7 @@ description  "中華民國（臺灣）紀念日及節日"
 
 "道教節"                            commemorative on 25 January 2020
 "道教節"                            commemorative on 12 February 2021
+"道教節"                            commemorative on 1 February 2022
 
 :: Historical
 :: 已廢除假期
