@@ -7,6 +7,7 @@
 ::
 :: Updated:
 :: 2019-03-22: added english names, sort categories.
+:: 2022-02-12: added Fat Thursday and "State Holidays without day-off"
 ::
 :: Source:
 ::
@@ -15,7 +16,7 @@
 country     "PL"
 language    "pl"
 :name        "optional - defaults to country name"
-:description "(please add description in source language) National holiday file for Poland"
+description "Polskie Święta Narodowe"
 
 :: Public Holidays
 : New Year's Day
@@ -69,6 +70,8 @@ language    "pl"
 : Fat Tuesday
 : FIXME: No information on events happening on Fat Tuesday in Poland
 "Śledzik"                cultural on easter minus 47 days
+: Fat Thursday
+"Tłusty Czwartek"        cultural on easter minus 52 days
 : Flag Day
 "Dzień Flagi"            cultural on may 2
 : Mother's Day
@@ -83,6 +86,38 @@ language    "pl"
 "Mikołajki"              cultural on december 6
 : New Year's eve
 "Sylwester"              cultural on december 31
+
+:: State Holidays without day-off (https://bugs.kde.org/show_bug.cgi?id=447201)
+: Polish Science Day
+"Dzień Nauki Polskiej"                           cultural on february 19
+
+:National "cursed soldiers" Remembrance Day,
+"Narodowy Dzień Pamięci Żołnierzy Wyklętych"    cultural on march 1
+
+:National Day for the Remembrance of Poles Rescuing Jews under Nazi German Occupation
+"Narodowy Dzień Pamięci Polaków ratujących Żydów pod okupacją niemiecką" cultural on march 24
+
+:Baptism of Poland Day:
+"Święto Chrztu Polski"                           cultural on april 14
+
+:Victory Day
+"Narodowy Dzień Zwycięstwa"                      cultural on may 8
+
+:Day of Struggle and Martyrdom of the Polish Villages
+"Dzień Walki i Męczeństwa Wsi Polskiej"          cultural on july 12
+
+:National Warsaw Uprising Remembrance Day
+"Narodowy Dzień Pamięci Powstania Warszawskiego" cultural on august 1
+
+:Day of Solidarity and Freedom
+"Dzień Solidarności i Wolności"                  cultural on august 31
+
+:National Day of Remembrance for Steadfast Clergy
+"Narodowy Dzień Pamięci Duchownych Niezłomnych"  cultural on october 19
+
+:National Day of the Victorious Greater Poland Uprising
+"Narodowy Dzień Zwycięskiego Powstania Wielkopolskiego" cultural on december 27
+
 
 :: School
 
