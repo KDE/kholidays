@@ -82,13 +82,13 @@ void HolidayRegionTest::testLoadFile()
 {
     KHolidays::HolidayRegion region(QFileInfo(KDESRCDIR "/holiday_gb-eaw_en-gb_Test"));
     printMetadata(region);
-    parseRegionCalendarYear(region, 2010, QStringLiteral("gregorian"));
-    parseRegionCalendarYear(region, 2010);
-    parseRegionCalendarYear(region, 2011);
-    parseRegionCalendarYear(region, 2012);
-    parseRegionCalendarYear(region, 2013);
-    parseRegionCalendarYear(region, 2014);
-    parseRegionCalendarYear(region, 2015);
+    parseRegionCalendarYear(region, 2020, QStringLiteral("gregorian"));
+    parseRegionCalendarYear(region, 2020);
+    parseRegionCalendarYear(region, 2021);
+    parseRegionCalendarYear(region, 2022);
+    parseRegionCalendarYear(region, 2023);
+    parseRegionCalendarYear(region, 2024);
+    parseRegionCalendarYear(region, 2025);
     qDebug() << "";
 }
 
@@ -96,40 +96,40 @@ void HolidayRegionTest::testGb()
 {
     KHolidays::HolidayRegion region(QStringLiteral("gb-eaw_en-gb"));
     printMetadata(region);
-    parseRegionDateRange(region, QDate(2010, 7, 1), QDate(2011, 6, 30));
-    parseRegionDateRange(region, QDate(2010, 1, 1), QDate(2012, 12, 31));
-    parseRegionDateRange(region, QDate(2010, 1, 1), QDate(2010, 12, 31));
-    parseRegionDate(region, QDate(2010, 1, 1));
-    parseRegionCalendarYear(region, 2010);
-    parseRegionCalendarYear(region, 2011);
-    parseRegionCalendarYear(region, 2012);
-    parseRegionCalendarYear(region, 2013);
-    parseRegionCalendarYear(region, 2014);
-    parseRegionCalendarYear(region, 2015);
+    parseRegionDateRange(region, QDate(2020, 7, 1), QDate(2021, 6, 30));
+    parseRegionDateRange(region, QDate(2020, 1, 1), QDate(2022, 12, 31));
+    parseRegionDateRange(region, QDate(2020, 1, 1), QDate(2020, 12, 31));
+    parseRegionDate(region, QDate(2020, 1, 1));
+    parseRegionCalendarYear(region, 2020);
+    parseRegionCalendarYear(region, 2021);
+    parseRegionCalendarYear(region, 2022);
+    parseRegionCalendarYear(region, 2023);
+    parseRegionCalendarYear(region, 2024);
+    parseRegionCalendarYear(region, 2025);
 }
 
 void HolidayRegionTest::testIran()
 {
     KHolidays::HolidayRegion region(QStringLiteral("ir_en-us"));
     printMetadata(region);
-    parseRegionCalendarYear(region, 2010);
-    parseRegionCalendarYear(region, 2011);
-    parseRegionCalendarYear(region, 2012);
-    parseRegionCalendarYear(region, 2013);
-    parseRegionCalendarYear(region, 2014);
-    parseRegionCalendarYear(region, 2015);
+    parseRegionCalendarYear(region, 2020);
+    parseRegionCalendarYear(region, 2021);
+    parseRegionCalendarYear(region, 2022);
+    parseRegionCalendarYear(region, 2023);
+    parseRegionCalendarYear(region, 2024);
+    parseRegionCalendarYear(region, 2025);
 }
 
 void HolidayRegionTest::testIsrael()
 {
     KHolidays::HolidayRegion region(QStringLiteral("il_en-us"));
     printMetadata(region);
-    parseRegionCalendarYear(region, 2010);
-    parseRegionCalendarYear(region, 2011);
-    parseRegionCalendarYear(region, 2012);
-    parseRegionCalendarYear(region, 2013);
-    parseRegionCalendarYear(region, 2014);
-    parseRegionCalendarYear(region, 2015);
+    parseRegionCalendarYear(region, 2020);
+    parseRegionCalendarYear(region, 2021);
+    parseRegionCalendarYear(region, 2022);
+    parseRegionCalendarYear(region, 2023);
+    parseRegionCalendarYear(region, 2024);
+    parseRegionCalendarYear(region, 2025);
 }
 
 void HolidayRegionTest::testRegions()
