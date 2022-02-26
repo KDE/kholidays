@@ -260,7 +260,7 @@ yaumaljumma         { yylval->ival =   5; return token::WDAY; }
 yaumalsabt          { yylval->ival =   6; return token::WDAY; }
 yaumalahad          { yylval->ival =   7; return token::WDAY; }
 
-indiannational      { yylval->sval = (char *)"indian-national"; return token::CALENDAR; }
+indiannational      { yylval->sval = (char *)"indiannational"; return token::CALENDAR; }
 
 chaitra             { yylval->ival =   1; return token::MONTH; }
 vaishakh            { yylval->ival =   2; return token::MONTH; }

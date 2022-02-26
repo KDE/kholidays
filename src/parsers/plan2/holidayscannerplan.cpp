@@ -2436,7 +2436,7 @@ YY_DECL {
         case 161:
             YY_RULE_SETUP
 #line 275 "holidayscannerplan.lpp"
-            { yylval->sval = (char *)"indian-national"; return token::CALENDAR; }
+            { yylval->sval = (char *)"indiannational"; return token::CALENDAR; }
             YY_BREAK
         case 162:
             YY_RULE_SETUP
