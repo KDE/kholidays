@@ -64,6 +64,20 @@ void HolidayRegionTest::parseRegionDate(const KHolidays::HolidayRegion &region, 
     qDebug() << "";
 }
 
+void HolidayRegionTest::testLoadFileCalendarSystems()
+{
+    KHolidays::HolidayRegion region(QFileInfo(KDESRCDIR "/holiday_calendar_systems"));
+    printMetadata(region);
+    parseRegionCalendarYear(region, 2020, QStringLiteral("gregorian"));
+    parseRegionCalendarYear(region, 2020);
+    parseRegionCalendarYear(region, 2021);
+    parseRegionCalendarYear(region, 2022);
+    parseRegionCalendarYear(region, 2023);
+    parseRegionCalendarYear(region, 2024);
+    parseRegionCalendarYear(region, 2025);
+    qDebug() << "";
+}
+
 void HolidayRegionTest::testLoadFile()
 {
     KHolidays::HolidayRegion region(QFileInfo(KDESRCDIR "/holiday_gb-eaw_en-gb_Test"));
