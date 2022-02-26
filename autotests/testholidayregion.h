@@ -20,6 +20,7 @@ class HolidayRegionTest : public QObject
 {
     Q_OBJECT
 private Q_SLOTS:
+    void testLoadFileCalendarSystems();
     void testLoadFile();
     void testGb();
     void testIran();
