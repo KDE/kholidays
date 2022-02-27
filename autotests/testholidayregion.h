@@ -27,6 +27,7 @@ private Q_SLOTS:
     void testIsrael();
     void testRegions();
     void testDefaultRegions();
+    void testSolistaleInHolidays();
 
 private:
     void printMetadata(const KHolidays::HolidayRegion &region);

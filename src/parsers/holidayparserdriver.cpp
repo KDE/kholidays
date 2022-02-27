@@ -56,7 +56,7 @@ Holiday::List HolidayParserDriver::parseHolidays(const QDate &startDate, const Q
     m_requestEnd = endDate;
     parse();
 
-    for (int year = startDate.year(); year < endDate.year(); ++year) {
+    for (int year = startDate.year(); year <= endDate.year(); ++year) {
         for (auto s : {AstroSeasons::JuneSolstice, AstroSeasons::DecemberSolstice, AstroSeasons::MarchEquinox, AstroSeasons::SeptemberEquinox}) {
             const auto dt = AstroSeasons::seasonDate(s, year);
             if (dt >= startDate && dt <= endDate) {

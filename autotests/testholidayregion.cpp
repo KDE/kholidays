@@ -166,3 +166,14 @@ void HolidayRegionTest::testDefaultRegions()
     QCOMPARE(KHolidays::HolidayRegion::defaultRegionCode("AT-9"), QLatin1String("at_de"));
     QCOMPARE(KHolidays::HolidayRegion::defaultRegionCode("US-CA"), QLatin1String("us_en-us"));
 }
+
+void HolidayRegionTest::testSolistaleInHolidays()
+{
+    KHolidays::HolidayRegion region(QFileInfo(KDESRCDIR "/holiday_solstice_in_holidays"));
+    printMetadata(region);
+    parseRegionDateRange(region, QDate(2020, 7, 1), QDate(2021, 6, 30));
+    parseRegionDateRange(region, QDate(2020, 1, 1), QDate(2020, 12, 31));
+    parseRegionDateRange(region, QDate(2020, 11, 1), QDate(2021, 1, 2));
+    parseRegionDateRange(region, QDate(2020, 12, 25), QDate(2021, 7, 2));
+    parseRegionDateRange(region, QDate(2020, 12, 25), QDate(2022, 1, 2));
+}
