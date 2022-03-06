@@ -79,7 +79,7 @@ public:
     virtual QString fileDescription() const;
 
     /**
-     * Return a list of holidays falling between any two dates
+     * Return a list of holidays falling between any two dates inclusive astro seasons
      *
      * @param startDate start date of the holiday parse range
      * @param endDate end date of the holiday parse range
@@ -87,6 +87,26 @@ public:
      * @return a list of holidays
      */
     virtual Holiday::List parseHolidays(const QDate &startDate, const QDate &endDate);
+
+    /**
+     * Return a list of holidays falling between any two dates
+     *
+     * @param startDate start date of the holiday parse range
+     * @param endDate end date of the holiday parse range
+     *
+     * @return a list of holidays
+     */
+    virtual Holiday::List parseHolidaysOnly(const QDate &startDate, const QDate &endDate);
+
+    /**
+     * Return a list of astronomial seasons falling between any two dates
+     *
+     * @param startDate start date of the astronomial seasons range
+     * @param endDate end date of the astronomial seasons range
+     *
+     * @return a list of astronomial seasons
+     */
+    virtual Holiday::List seasonsInRange(const QDate &startDate, const QDate &endDate);
 
     /**
      * Convenience function

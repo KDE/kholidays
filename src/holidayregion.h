@@ -217,6 +217,13 @@ public:
     /**
      * @since 4.6
      *
+     * Returns the list of holidays that occur between @p startDate and @p endDate.
+     */
+    Holiday::List holidaysOnly(const QDate &startDate, const QDate &endDate) const;
+
+    /**
+     * @since 4.6
+     *
      * Returns the list of holidays that occur on a @p date.
      */
     Holiday::List holidays(const QDate &date) const;

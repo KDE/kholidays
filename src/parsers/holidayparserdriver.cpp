@@ -46,7 +46,7 @@ QString HolidayParserDriver::fileDescription() const
     return m_fileDescription;
 }
 
-Holiday::List HolidayParserDriver::parseHolidays(const QDate &startDate, const QDate &endDate)
+Holiday::List HolidayParserDriver::parseHolidaysOnly(const QDate &startDate, const QDate &endDate)
 {
     m_resultList.clear();
     if (startDate.isNull() || endDate.isNull()) {
@@ -55,6 +55,23 @@ Holiday::List HolidayParserDriver::parseHolidays(const QDate &startDate, const Q
     m_requestStart = startDate;
     m_requestEnd = endDate;
     parse();
+    return m_resultList;
+}
+
+Holiday::List HolidayParserDriver::parseHolidays(const QDate &startDate, const QDate &endDate)
+{
+    m_resultList.clear();
+    m_resultList.append(parseHolidaysOnly(startDate, endDate));
+
+    m_resultList.append(seasonsInRange(startDate, endDate));
+
+    std::sort(m_resultList.begin(), m_resultList.end());
+    return m_resultList;
+}
+
+Holiday::List HolidayParserDriver::seasonsInRange(const QDate &startDate, const QDate &endDate)
+{
+    Holiday::List seasons_resultList; 
 
     for (int year = startDate.year(); year <= endDate.year(); ++year) {
         for (auto s : {AstroSeasons::JuneSolstice, AstroSeasons::DecemberSolstice, AstroSeasons::MarchEquinox, AstroSeasons::SeptemberEquinox}) {
@@ -66,13 +83,12 @@ Holiday::List HolidayParserDriver::parseHolidays(const QDate &startDate, const Q
                 season.d->mDuration = 1;
                 season.d->mName = AstroSeasons::seasonName(s);
                 season.d->mCategoryList.append(QLatin1String("seasonal"));
-                m_resultList.append(season);
+                seasons_resultList.append(season);
             }
         }
     }
 
-    std::sort(m_resultList.begin(), m_resultList.end());
-    return m_resultList;
+    return seasons_resultList;
 }
 
 Holiday::List HolidayParserDriver::parseHolidays(const QDate &requestDate)
