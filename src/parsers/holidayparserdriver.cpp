@@ -58,12 +58,41 @@ Holiday::List HolidayParserDriver::parseHolidaysOnly(const QDate &startDate, con
     return m_resultList;
 }
 
+Holiday::List HolidayParserDriver::parseHolidays(const QDate &startDate, const QDate &endDate, const QString &categorie)//
+{
+    m_resultList.clear();
+    m_resultList = parseHolidaysOnly(startDate, endDate);
+
+    m_resultList.append(seasonsInRange(startDate, endDate));
+    Holiday::List m_resultListTemp;
+    
+    for (int index = 0; index < m_resultList.size(); ++index) {
+        const KHolidays::Holiday holidayCat = m_resultList.at(index);
+        const QStringList mHolidayCategoryList = holidayCat.categoryList();
+        qDebug() << "ListMember in new = " << holidayCat.name();
+        for (const QString &mCategoryList : mHolidayCategoryList ) {
+            qDebug() << "Categorie in new = " << mCategoryList;
+            if (mCategoryList == categorie) {
+                m_resultListTemp.append(holidayCat);
+                qDebug() << "Size in new = " << m_resultListTemp.size();
+                break;
+            }
+            qDebug() << "Date = " << holidayCat.observedStartDate().toString(Qt::ISODate) << " Duration = " << holidayCat.duration() << " Name = " << holidayCat.name();
+        }
+    }
+
+    m_resultList.clear();
+    m_resultList = m_resultListTemp;
+
+    return m_resultList;
+}
+
 Holiday::List HolidayParserDriver::parseHolidays(const QDate &startDate, const QDate &endDate)
 {
     m_resultList.clear();
-    m_resultList.append(parseHolidaysOnly(startDate, endDate));
+    m_resultList = parseHolidays(startDate, endDate, "seasonal");
 
-    m_resultList.append(seasonsInRange(startDate, endDate));
+    //m_resultList.append(seasonsInRange(startDate, endDate));
 
     std::sort(m_resultList.begin(), m_resultList.end());
     return m_resultList;

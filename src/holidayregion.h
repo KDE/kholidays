@@ -236,6 +236,13 @@ public:
     Holiday::List holidays(int calendarYear) const;
 
     /**
+     * @since 5.92
+     *
+     * Returns the list of holidays that occur between @p startDate and @p endDate and with @p categorie.
+     */
+    Holiday::List holidays(const QDate &startDate, const QDate &endDate, const QString &categorie) const;
+
+    /**
      * Checks whether there is any holiday defined for a @p date.
      */
     bool isHoliday(const QDate &date) const;
