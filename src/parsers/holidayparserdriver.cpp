@@ -65,11 +65,7 @@ Holiday::List HolidayParserDriver::parseHolidays(const QDate &startDate, const Q
     m_resultListTemp.append(seasonsInRange(startDate, endDate));
     m_resultList.clear();
 
-    // for (int index = 0; index < m_resultList.size(); ++index) {
     for (const KHolidays::Holiday &holidayCat : m_resultListTemp) {
-        // const KHolidays::Holiday holidayCat = m_resultList.at(index);
-        // const QStringList mHolidayCategoryList = holidayCat.categoryList();
-        // for (const QString &mCategoryList : mHolidayCategoryList ) {
         for (const QString &mCategoryList : holidayCat.categoryList()) {
             if (mCategoryList == categorie) {
                 m_resultList.append(holidayCat);
@@ -77,9 +73,6 @@ Holiday::List HolidayParserDriver::parseHolidays(const QDate &startDate, const Q
             }
         }
     }
-
-    // m_resultList.clear();
-    // m_resultList = m_resultListTemp;
 
     return m_resultList;
 }
