@@ -46,7 +46,7 @@ QString HolidayParserDriver::fileDescription() const
     return m_fileDescription;
 }
 
-Holiday::List HolidayParserDriver::parseHolidays(const QDate &startDate, const QDate &endDate, const QString &categorie)//
+Holiday::List HolidayParserDriver::parseHolidays(const QDate &startDate, const QDate &endDate, const QString &category)
 {
     Holiday::List m_resultListTemp;
     m_resultListTemp = parseHolidays(startDate, endDate);
@@ -54,7 +54,7 @@ Holiday::List HolidayParserDriver::parseHolidays(const QDate &startDate, const Q
 
     for (const KHolidays::Holiday &holidayCat : m_resultListTemp) {
         for (const QString &mCategoryList : holidayCat.categoryList()) {
-            if (mCategoryList == categorie) {
+            if (mCategoryList == category) {
                 m_resultList.append(holidayCat);
                 break;
             }
