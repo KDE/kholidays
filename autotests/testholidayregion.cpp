@@ -64,13 +64,24 @@ void HolidayRegionTest::parseRegionDate(const KHolidays::HolidayRegion &region, 
     qDebug() << "";
 }
 
+void HolidayRegionTest::parseRegionDateRangeCategory(const KHolidays::HolidayRegion &region,
+                                                     const QDate &startDate,
+                                                     const QDate &endDate,
+                                                     const QString &category)
+{
+    qDebug() << "Parsing regionCode = " << region.regionCode() << " start date = " << startDate.toString(Qt::ISODate)
+             << " end date = " << endDate.toString(Qt::ISODate) << " category = " << category;
+    printHolidays(region.holidays(startDate, endDate, category));
+    qDebug() << "";
+}
+
 void HolidayRegionTest::testLoadFileCalendarSystems()
 {
     KHolidays::HolidayRegion region(QFileInfo(KDESRCDIR "/holiday_calendar_systems"));
     printMetadata(region);
-    parseRegionCalendarYear(region, 2020, QStringLiteral("gregorian"));
-    parseRegionCalendarYear(region, 2020);
-    parseRegionCalendarYear(region, 2021);
+    parseRegionDateRangeCategory(region, QDate(2020, 7, 1), QDate(2021, 6, 30), "seasonal");
+    parseRegionDateRangeCategory(region, QDate(2020, 1, 1), QDate(2022, 12, 31), "seasonal");
+    parseRegionDateRangeCategory(region, QDate(2020, 1, 1), QDate(2020, 12, 31), "seasonal");
     parseRegionCalendarYear(region, 2022);
     parseRegionCalendarYear(region, 2023);
     parseRegionCalendarYear(region, 2024);
