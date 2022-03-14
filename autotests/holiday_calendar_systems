@@ -15,8 +15,8 @@ description "A test file for multiple calendar systems"
 
 : Holiday List Section
 
-"New Years Day00"                 public on 1/1
-"New Years Day01"                 public on 1/1
-"Bangla New Year"           public cultural indiannational vaishakh 1
+"New Years Day00"                 public religious seasonal cultural civil on 1/1
+"New Years Day01 seasonal"        seasonal public on 1/1
+"Bangla New Year"                 public cultural indiannational vaishakh 1
 
 

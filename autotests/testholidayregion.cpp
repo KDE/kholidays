@@ -35,7 +35,8 @@ void HolidayRegionTest::printHolidays(const KHolidays::Holiday::List &holidays)
 {
     if (!holidays.isEmpty()) {
         for (const KHolidays::Holiday &holiday : holidays) {
-            qDebug() << "Date = " << holiday.observedStartDate().toString(Qt::ISODate) << " Duration = " << holiday.duration() << " Name = " << holiday.name();
+            qDebug() << "Date = " << holiday.observedStartDate().toString(Qt::ISODate) << " Duration = " << holiday.duration() << " Name = " << holiday.name()
+                     << " category = " << holiday.categoryList();
         }
     } else {
         qDebug() << "No holidays";
