@@ -533,7 +533,7 @@ yyreduce:
         /* Line 678 of lalr1.cc  */
 #line 156 "holidayparserplan.ypp"
         {
-            driver.setEventCategory((yysemantic_stack_[(2) - (1)].sval));
+            driver.setEventCategory((yysemantic_stack_[(2) - (2)].sval));
         }
         break;
 
