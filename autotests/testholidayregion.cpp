@@ -35,8 +35,9 @@ void HolidayRegionTest::printHolidays(const KHolidays::Holiday::List &holidays)
 {
     if (!holidays.isEmpty()) {
         for (const KHolidays::Holiday &holiday : holidays) {
-            qDebug() << "Date = " << holiday.observedStartDate().toString(Qt::ISODate) << " Duration = " << holiday.duration() << " Name = " << holiday.name()
-                     << " category = " << holiday.categoryList();
+            qDebug().nospace() << "Date = " << holiday.observedStartDate().toString(Qt::ISODate) << " Duration = " << holiday.duration()
+                               << " Name = " << holiday.name().leftJustified(20, /*QChar fill=*/QLatin1Char(' '), /*bool truncate=*/false)
+                               << " category = " << holiday.categoryList();
         }
     } else {
         qDebug() << "No holidays";
@@ -82,7 +83,7 @@ void HolidayRegionTest::testLoadFileCalendarSystems()
     printMetadata(region);
     parseRegionDateRangeCategory(region, QDate(2020, 7, 1), QDate(2021, 6, 30), "seasonal");
     parseRegionDateRangeCategory(region, QDate(2020, 1, 1), QDate(2022, 12, 31), "seasonal");
-    parseRegionDateRangeCategory(region, QDate(2020, 1, 1), QDate(2020, 12, 31), "seasonal");
+    parseRegionDateRangeCategory(region, QDate(2020, 1, 1), QDate(2020, 12, 31), "public");
     parseRegionCalendarYear(region, 2022);
     parseRegionCalendarYear(region, 2023);
     parseRegionCalendarYear(region, 2024);
