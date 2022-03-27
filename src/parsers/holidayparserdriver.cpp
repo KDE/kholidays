@@ -48,8 +48,8 @@ QString HolidayParserDriver::fileDescription() const
 
 Holiday::List HolidayParserDriver::parseHolidays(const QDate &startDate, const QDate &endDate, const QString &category)
 {
-    Holiday::List m_resultListTemp;
-    m_resultListTemp = parseHolidays(startDate, endDate);
+    parseHolidays(startDate, endDate);
+    Holiday::List m_resultListTemp = m_resultList;
     m_resultList.clear();
 
     for (const KHolidays::Holiday &holidayCat : m_resultListTemp) {
