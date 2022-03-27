@@ -83,7 +83,7 @@ public:
      *
      * @param startDate start date of the holiday parse range
      * @param endDate end date of the holiday parse range
-     * @param categorie only holidays with categorie
+     * @param category only holidays with corresponing category
      *
      * @return a list of holidays
      */
