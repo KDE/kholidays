@@ -32,6 +32,14 @@ QString LunarPhase::phaseName(LunarPhase::Phase phase)
         return (QCoreApplication::translate("LunarPhase", "Last Quarter Moon"));
     case None:
         return QString();
+    case WaxingCrescent:
+        return (QCoreApplication::translate("LunarPhase", "Waxing Crescent"));
+    case WaxingGibbous:
+        return (QCoreApplication::translate("LunarPhase", "Waxing Gibbous"));
+    case WaningGibbous:
+        return (QCoreApplication::translate("LunarPhase", "Waning Gibbous"));
+    case WaningCrescent:
+        return (QCoreApplication::translate("LunarPhase", "Waning Crescent"));
     }
     return QString();
 }
@@ -56,6 +64,14 @@ LunarPhase::Phase LunarPhase::phaseAtDate(const QDate &date)
         retPhase = FullMoon;
     } else if (startAngle < 270.0 && endAngle > 270.0) {
         retPhase = LastQuarter;
+    } else if (endAngle < 90.0) {
+        retPhase = WaxingCrescent;
+    } else if (endAngle < 180.0) {
+        retPhase = WaxingGibbous;
+    } else if (endAngle < 270.0) {
+        retPhase = WaningGibbous;
+    } else if (endAngle < 360.0) {
+        retPhase = WaningCrescent;
     }
 
     return retPhase;

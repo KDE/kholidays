@@ -201,3 +201,41 @@ void LunarTest::test2007()
     QVERIFY(lQ2007 == lastQuarter);
     QVERIFY(nM2007 == newMoon);
 }
+
+void LunarTest::testIntermediatePhases()
+{
+    struct {
+        QDate date;
+        LunarPhase::Phase phase;
+    } const phase_changes[] = {
+        {{2022, 1, 2}, LunarPhase::NewMoon},
+        {{2022, 1, 3}, LunarPhase::WaxingCrescent},
+        {{2022, 1, 9}, LunarPhase::FirstQuarter},
+        {{2022, 1, 10}, LunarPhase::WaxingGibbous},
+        {{2022, 1, 17}, LunarPhase::FullMoon},
+        {{2022, 1, 18}, LunarPhase::WaningGibbous},
+        {{2022, 1, 25}, LunarPhase::LastQuarter},
+        {{2022, 1, 26}, LunarPhase::WaningCrescent},
+        {{2022, 2, 1}, LunarPhase::NewMoon},
+        {{2022, 2, 2}, LunarPhase::WaxingCrescent},
+        {{2022, 2, 8}, LunarPhase::FirstQuarter},
+        {{2022, 2, 9}, LunarPhase::WaxingGibbous},
+        {{2022, 2, 16}, LunarPhase::FullMoon},
+        {{2022, 2, 17}, LunarPhase::WaningGibbous},
+        {{2022, 2, 23}, LunarPhase::LastQuarter},
+        {{2022, 2, 24}, LunarPhase::WaningCrescent},
+        {{2022, 3, 2}, LunarPhase::NewMoon},
+    };
+
+    QDate dt(2022, 1, 1);
+    LunarPhase::Phase phase = LunarPhase::WaningCrescent;
+    for (const auto &phaseChange : phase_changes) {
+        for (auto i = phaseChange.date.daysTo(dt); i > 0; --i) {
+            QCOMPARE(LunarPhase::phaseAtDate(phaseChange.date.addDays(i)), phase);
+        }
+        dt = phaseChange.date;
+        phase = phaseChange.phase;
+        QCOMPARE(LunarPhase::phaseAtDate(dt), phase);
+        QVERIFY(!LunarPhase::phaseNameAtDate(dt).isEmpty());
+    }
+}
