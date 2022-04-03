@@ -35,6 +35,7 @@ private:
     void parseRegionCalendarYear(const KHolidays::HolidayRegion &region, int year, const QString &calendarType = "gregorian");
     void parseRegionDateRange(const KHolidays::HolidayRegion &region, const QDate &startDate, const QDate &endDate);
     void parseRegionDate(const KHolidays::HolidayRegion &region, const QDate &date);
+    void parseRegionDateRangeCategory(const KHolidays::HolidayRegion &region, const QDate &startDate, const QDate &endDate, const QString &category);
 };
 
 #endif // TESTHOLIDAYREGION_H

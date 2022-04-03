@@ -46,6 +46,24 @@ QString HolidayParserDriver::fileDescription() const
     return m_fileDescription;
 }
 
+Holiday::List HolidayParserDriver::parseHolidays(const QDate &startDate, const QDate &endDate, const QString &category)
+{
+    parseHolidays(startDate, endDate);
+    Holiday::List m_resultListTemp = m_resultList;
+    m_resultList.clear();
+
+    for (const KHolidays::Holiday &holidayCat : m_resultListTemp) {
+        for (const QString &mCategoryList : holidayCat.categoryList()) {
+            if (mCategoryList == category) {
+                m_resultList.append(holidayCat);
+                break;
+            }
+        }
+    }
+
+    return m_resultList;
+}
+
 Holiday::List HolidayParserDriver::parseHolidays(const QDate &startDate, const QDate &endDate)
 {
     m_resultList.clear();

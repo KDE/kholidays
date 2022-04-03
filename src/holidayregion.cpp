@@ -1067,6 +1067,15 @@ bool HolidayRegion::isValid(const QString &regionCode)
     return temp.isValid();
 }
 
+Holiday::List HolidayRegion::holidays(const QDate &startDate, const QDate &endDate, const QString &category) const
+{
+    if (isValid()) {
+        return d->mDriver->parseHolidays(startDate, endDate, category);
+    } else {
+        return Holiday::List();
+    }
+}
+
 Holiday::List HolidayRegion::holidays(const QDate &startDate, const QDate &endDate) const
 {
     if (isValid()) {
