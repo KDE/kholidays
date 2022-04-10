@@ -36,5 +36,11 @@ add_executable(testholidayregion testholidayregion.cpp)
 add_test(NAME testholidayregion COMMAND testholidayregion)
 set_target_properties(testholidayregion PROPERTIES COMPILE_FLAGS -DKDESRCDIR="\\"${CMAKE_CURRENT_SOURCE_DIR}/\\"")
 
+# if(NOT EXCLUDE_DEPRECATED_BEFORE_AND_AT STREQUAL "CURRENT" AND
+#    EXCLUDE_DEPRECATED_BEFORE_AND_AT VERSION_LESS 5.93.0)
+#    add_test(NAME testholidayregion COMMAND testholidayregion)
+#    set_target_properties(testholidayregion PROPERTIES COMPILE_FLAGS -DKDESRCDIR="\\"${CMAKE_CURRENT_SOURCE_DIR}/\\"")   
+# endif()
+
 ecm_mark_as_test(testholidayregion)
 target_link_libraries(testholidayregion KF5Holidays Qt${QT_MAJOR_VERSION}::Test)

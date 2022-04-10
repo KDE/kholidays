@@ -1085,6 +1085,15 @@ Holiday::List HolidayRegion::holidays(const QDate &startDate, const QDate &endDa
     }
 }
 
+Holiday::List HolidayRegion::rawHolidays(const QDate &startDate, const QDate &endDate) const
+{
+    if (isValid()) {
+        return d->mDriver->parseRawHolidays(startDate, endDate);
+    } else {
+        return Holiday::List();
+    }
+}
+
 Holiday::List HolidayRegion::holidays(const QDate &date) const
 {
     if (isValid()) {

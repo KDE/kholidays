@@ -54,7 +54,14 @@ ecm_qt_declare_logging_category(KF5Holidays
     EXPORT KHOLIDAYS
 )
 
-generate_export_header(KF5Holidays BASE_NAME KHolidays)
+ecm_generate_export_header(KF5Holidays 
+    VERSION  ${KF_VERSION}
+    BASE_NAME KHolidays
+    GROUP_BASE_NAME KF
+    DEPRECATED_BASE_VERSION 0
+    DEPRECATION_VERSIONS 5.95
+    EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
+)
 
 target_include_directories(KF5Holidays INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/KHolidays>")
 target_include_directories(KF5Holidays PUBLIC "$<BUILD_INTERFACE:${KHolidays_SOURCE_DIR}/src;${KHolidays_BINARY_DIR}/src>")

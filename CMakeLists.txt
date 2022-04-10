@@ -21,8 +21,10 @@ include(ECMQtDeclareLoggingCategory)
 include(ECMAddQch)
 include(ECMGeneratePriFile)
 include(KDEGitCommitHooks)
+include(ECMGenerateExportHeader)
 
 set(KHOLIDAYS_LIB_VERSION ${KF_VERSION})
+set(EXCLUDE_DEPRECATED_BEFORE_AND_AT 0 CACHE STRING "Control the range of deprecated API excluded from the build [default=0].")
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX KHOLIDAYS
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kholidays_version.h"

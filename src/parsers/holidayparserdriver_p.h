@@ -110,6 +110,16 @@ public:
     virtual Holiday::List parseHolidays(const QDate &date);
 
     /**
+     * Return a list of holidays falling between any two dates without astro seasons
+     *
+     * @param startDate start date of the holiday parse range
+     * @param endDate end date of the holiday parse range
+     *
+     * @return a list of holidays
+     */
+    virtual Holiday::List parseRawHolidays(const QDate &startDate, const QDate &endDate);
+
+    /**
      * Convenience function
      * Return a list of holidays falling in a given calendar year
      *
