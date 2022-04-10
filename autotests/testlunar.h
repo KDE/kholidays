@@ -17,6 +17,7 @@ class LunarTest : public QObject
 private Q_SLOTS:
     void test2005();
     void test2007();
+    void testIntermediatePhases();
 };
 
 #endif
