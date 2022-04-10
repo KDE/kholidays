@@ -46,7 +46,7 @@ QString HolidayParserDriver::fileDescription() const
     return m_fileDescription;
 }
 
-Holiday::List HolidayParserDriver::parseHolidays(const QDate &startDate, const QDate &endDate)
+Holiday::List HolidayParserDriver::parseRawHolidays(const QDate &startDate, const QDate &endDate)
 {
     m_resultList.clear();
     if (startDate.isNull() || endDate.isNull()) {
@@ -55,6 +55,12 @@ Holiday::List HolidayParserDriver::parseHolidays(const QDate &startDate, const Q
     m_requestStart = startDate;
     m_requestEnd = endDate;
     parse();
+    return m_resultList;
+}
+
+Holiday::List HolidayParserDriver::parseHolidays(const QDate &startDate, const QDate &endDate)
+{
+    parseRawHolidays(startDate, endDate);
 
     for (int year = startDate.year(); year <= endDate.year(); ++year) {
         for (auto s : {AstroSeasons::JuneSolstice, AstroSeasons::DecemberSolstice, AstroSeasons::MarchEquinox, AstroSeasons::SeptemberEquinox}) {

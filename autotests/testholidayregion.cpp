@@ -46,7 +46,11 @@ void HolidayRegionTest::printHolidays(const KHolidays::Holiday::List &holidays)
 void HolidayRegionTest::parseRegionCalendarYear(const KHolidays::HolidayRegion &region, int year, const QString &calendarType)
 {
     qDebug() << "Parsing region = " << region.regionCode() << " year = " << year << " calendar = " << calendarType;
+#if KHOLIDAYS_BUILD_DEPRECATED_SINCE(5, 95)
     printHolidays(region.holidays(year));
+#else
+    printHolidays(region.rawHolidaysWithAstroSeasons(year));
+#endif
     qDebug() << "";
 }
 
@@ -54,14 +58,30 @@ void HolidayRegionTest::parseRegionDateRange(const KHolidays::HolidayRegion &reg
 {
     qDebug() << "Parsing regionCode = " << region.regionCode() << " start date = " << startDate.toString(Qt::ISODate)
              << " end date = " << endDate.toString(Qt::ISODate);
+#if KHOLIDAYS_BUILD_DEPRECATED_SINCE(5, 95)
     printHolidays(region.holidays(startDate, endDate));
+#else
+    printHolidays(region.rawHolidaysWithAstroSeasons(startDate, endDate));
+#endif
+    qDebug() << "";
+}
+
+void HolidayRegionTest::parseRawRegionDateRange(const KHolidays::HolidayRegion &region, const QDate &startDate, const QDate &endDate)
+{
+    qDebug() << "Parsing regionCode = " << region.regionCode() << " start date = " << startDate.toString(Qt::ISODate)
+             << " end date = " << endDate.toString(Qt::ISODate);
+    printHolidays(region.rawHolidays(startDate, endDate));
     qDebug() << "";
 }
 
 void HolidayRegionTest::parseRegionDate(const KHolidays::HolidayRegion &region, const QDate &date)
 {
     qDebug() << "Parsing regionCode = " << region.regionCode() << " date = " << date.toString(Qt::ISODate);
+#if KHOLIDAYS_BUILD_DEPRECATED_SINCE(5, 95)
     printHolidays(region.holidays(date));
+#else
+    printHolidays(region.rawHolidaysWithAstroSeasons(date));
+#endif
     qDebug() << "";
 }
 
@@ -177,4 +197,15 @@ void HolidayRegionTest::testSolistaleInHolidays()
     parseRegionDateRange(region, QDate(2020, 11, 1), QDate(2021, 1, 2));
     parseRegionDateRange(region, QDate(2020, 12, 25), QDate(2021, 7, 2));
     parseRegionDateRange(region, QDate(2020, 12, 25), QDate(2022, 1, 2));
+}
+
+void HolidayRegionTest::testLoadFileCalendarSystemsForPlasma()
+{
+    KHolidays::HolidayRegion region(QFileInfo(KDESRCDIR "/holiday_calendar_systems"));
+    printMetadata(region);
+    parseRawRegionDateRange(region, QDate(2020, 7, 1), QDate(2021, 6, 30));
+    parseRawRegionDateRange(region, QDate(2020, 1, 1), QDate(2020, 12, 31));
+    parseRawRegionDateRange(region, QDate(2020, 11, 1), QDate(2021, 1, 2));
+    parseRawRegionDateRange(region, QDate(2020, 12, 25), QDate(2021, 7, 2));
+    parseRawRegionDateRange(region, QDate(2020, 12, 25), QDate(2022, 1, 2));
 }
