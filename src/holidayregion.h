@@ -229,7 +229,7 @@ public:
     Holiday::List holidays(int calendarYear) const;
 
     /**
-     * @since 5.93
+     * @since 5.95
      *
      * Returns the list of holidays that occur between @p startDate and @p endDate and with @p category.
      */
