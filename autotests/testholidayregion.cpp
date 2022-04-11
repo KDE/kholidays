@@ -71,7 +71,7 @@ void HolidayRegionTest::parseRawRegionDateRange(const KHolidays::HolidayRegion &
 {
     qDebug() << "Parsing regionCode = " << region.regionCode() << " start date = " << startDate.toString(Qt::ISODate)
              << " end date = " << endDate.toString(Qt::ISODate);
-    printHolidays(region.rawHolidays(startDate, endDate));
+    printHolidays(region.rawHolidaysWithAstroSeasons(startDate, endDate));
     qDebug() << "";
 }
 
@@ -93,7 +93,7 @@ void HolidayRegionTest::parseRegionDateRangeCategory(const KHolidays::HolidayReg
 {
     qDebug() << "Parsing regionCode = " << region.regionCode() << " start date = " << startDate.toString(Qt::ISODate)
              << " end date = " << endDate.toString(Qt::ISODate) << " category = " << category;
-    printHolidays(region.holidays(startDate, endDate, category));
+    printHolidays(region.rawHolidays(startDate, endDate, category));
     qDebug() << "";
 }
 

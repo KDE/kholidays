@@ -1067,7 +1067,7 @@ bool HolidayRegion::isValid(const QString &regionCode)
     return temp.isValid();
 }
 
-Holiday::List HolidayRegion::holidays(const QDate &startDate, const QDate &endDate, const QString &category) const
+Holiday::List HolidayRegion::rawHolidays(const QDate &startDate, const QDate &endDate, const QString &category) const
 {
     if (isValid()) {
         return d->mDriver->parseHolidays(startDate, endDate, category);
@@ -1076,6 +1076,7 @@ Holiday::List HolidayRegion::holidays(const QDate &startDate, const QDate &endDa
     }
 }
 
+#if KHOLIDAYS_BUILD_DEPRECATED_SINCE(5, 95)
 Holiday::List HolidayRegion::holidays(const QDate &startDate, const QDate &endDate) const
 {
     if (isValid()) {
@@ -1084,8 +1085,9 @@ Holiday::List HolidayRegion::holidays(const QDate &startDate, const QDate &endDa
         return Holiday::List();
     }
 }
+#endif
 
-Holiday::List HolidayRegion::rawHolidays(const QDate &startDate, const QDate &endDate) const
+Holiday::List HolidayRegion::rawHolidaysWithAstroSeasons(const QDate &startDate, const QDate &endDate) const
 {
     if (isValid()) {
         return d->mDriver->parseRawHolidays(startDate, endDate);
@@ -1094,6 +1096,7 @@ Holiday::List HolidayRegion::rawHolidays(const QDate &startDate, const QDate &en
     }
 }
 
+#if KHOLIDAYS_BUILD_DEPRECATED_SINCE(5, 95)
 Holiday::List HolidayRegion::holidays(const QDate &date) const
 {
     if (isValid()) {
@@ -1102,8 +1105,29 @@ Holiday::List HolidayRegion::holidays(const QDate &date) const
         return Holiday::List();
     }
 }
+#endif
 
+Holiday::List HolidayRegion::rawHolidaysWithAstroSeasons(const QDate &date) const
+{
+    if (isValid()) {
+        return d->mDriver->parseHolidays(date);
+    } else {
+        return Holiday::List();
+    }
+}
+
+#if KHOLIDAYS_BUILD_DEPRECATED_SINCE(5, 95)
 Holiday::List HolidayRegion::holidays(int calendarYear) const
+{
+    if (isValid()) {
+        return d->mDriver->parseHolidays(calendarYear);
+    } else {
+        return Holiday::List();
+    }
+}
+#endif
+
+Holiday::List HolidayRegion::rawHolidaysWithAstroSeasons(int calendarYear) const
 {
     if (isValid()) {
         return d->mDriver->parseHolidays(calendarYear);
@@ -1114,7 +1138,11 @@ Holiday::List HolidayRegion::holidays(int calendarYear) const
 
 bool HolidayRegion::isHoliday(const QDate &date) const
 {
+#if KHOLIDAYS_BUILD_DEPRECATED_SINCE(5, 95)
+    const Holiday::List holidayList = rawHolidaysWithAstroSeasons(date);
+#else
     const Holiday::List holidayList = holidays(date);
+#endif
     if (!holidayList.isEmpty()) {
         for (const KHolidays::Holiday &holiday : holidayList) {
             if (holiday.dayType() == Holiday::NonWorkday) {

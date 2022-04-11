@@ -277,7 +277,7 @@ public:
      *
      * Returns the list of holidays that occur between @p startDate and @p endDate and with @p category.
      */
-    Holiday::List holidays(const QDate &startDate, const QDate &endDate, const QString &category) const;
+    Holiday::List rawHolidays(const QDate &startDate, const QDate &endDate, const QString &category) const;
 
     /**
      * Checks whether there is any holiday defined for a @p date.
