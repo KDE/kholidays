@@ -11,6 +11,8 @@
 
 #include "kholidays_export.h"
 
+#include <qobjectdefs.h>
+
 class QDate;
 class QString;
 
@@ -42,6 +44,7 @@ namespace KHolidays
 */
 class KHOLIDAYS_EXPORT LunarPhase // krazy:exclude=dpointer
 {
+    Q_GADGET
 public:
     /**
       Phases of the moon, in traditional English notation. The
@@ -59,6 +62,7 @@ public:
         WaningGibbous, ///< @since 5.94
         WaningCrescent, ///< @since 5.94
     };
+    Q_ENUM(Phase)
 
     /**
        Return the lunar phase for the specified Gregorian date.
