@@ -7,10 +7,14 @@
 :: Author:   Christophe Giboudeaux <cgiboudeaux@gmx.com>
 :: Author:   Ronggo Radityo <radityo3000@yahoo.com>
 ::
-:: Updated:  2012-03-13
+:: Updated:  2022-05-19
 ::
 :: Source:   http://en.wikipedia.org/wiki/Public_holidays_in_Indonesia
 :: Source:   http://www.officeholidays.com/countries/indonesia/2012.asp
+:: Source:   https://www.timeanddate.com/holidays/indonesia/waisak-day
+:: Source:   https://publicholidays.co.id/waisak-day/
+:: Source:   https://en.wikipedia.org/wiki/Nyepi
+:: Source:   https://publicholidays.co.id/bali-hindu-new-year/
 
 :: Metadata
 country     "ID"
@@ -39,6 +43,19 @@ description "File Hari Libur Nasional Indonesia"
 : Balinese New Year (lunar cal)
 "Hari Raya Nyepi"                        public on march 23 2012
 "Hari Raya Nyepi"                        public on march 12 2013
+"Hari Raya Nyepi"                        public on march 31 2014
+"Hari Raya Nyepi"                        public on march 21 2015
+"Hari Raya Nyepi"                        public on march 9 2016
+"Hari Raya Nyepi"                        public on march 28 2017
+"Hari Raya Nyepi"                        public on march 17 2018
+"Hari Raya Nyepi"                        public on march 7 2019
+"Hari Raya Nyepi"                        public on march 25 2020
+"Hari Raya Nyepi"                        public on march 14 2021
+"Hari Raya Nyepi"                        public on march 3 2022
+"Hari Raya Nyepi"                        public on march 22 2023
+"Hari Raya Nyepi"                        public on march 11 2024
+"Hari Raya Nyepi"                        public on march 29 2025
+"Hari Raya Nyepi"                        public on march 19 2026
 
 : Birth of the Prophet (hijri cal)
 "Maulid Nabi Muhammad SAW"               public religious on hijri rabialawal 12
@@ -49,6 +66,19 @@ description "File Hari Libur Nasional Indonesia"
 : Buddha's Birthday (lunar cal)
 "Waisak"                                 public religious on may 6 2012
 "Waisak"                                 public religious on may 25 2013
+"Waisak"                                 public religious on may 15 2014
+"Waisak"                                 public religious on june 2 2015
+"Waisak"                                 public religious on may 22 2016
+"Waisak"                                 public religious on may 11 2017
+"Waisak"                                 public religious on may 29 2018
+"Waisak"                                 public religious on may 19 2019
+"Waisak"                                 public religious on may 7 2020
+"Waisak"                                 public religious on may 26 2021
+"Waisak"                                 public religious on may 16 2022
+"Waisak"                                 public religious on may 6 2023
+"Waisak"                                 public religious on may 23 2024
+"Waisak"                                 public religious on may 12 2025
+"Waisak"                                 public religious on may 31 2026
 
 : Ascension Day
 "Kenaikan Yesus Kristus"                 public religious on easter plus 39 days
@@ -77,13 +107,22 @@ description "File Hari Libur Nasional Indonesia"
 "Tahun Baru Imlek"                       public on january 23 2012
 "Tahun Baru Imlek"                       public on february 9 2013
 : Chinese New Year (from Hong Kong kholiday file)
-"Tahun Baru Imlek"                       public on 31 january 2014
-"Tahun Baru Imlek"                       public on 19 february 2015
-"Tahun Baru Imlek"                       public on 8 february 2016
-"Tahun Baru Imlek"                       public on 28 january 2017
-"Tahun Baru Imlek"                       public on 16 february 2018
-"Tahun Baru Imlek"                       public on 5 february 2019
-"Tahun Baru Imlek"                       public on 25 january 2020
+"Tahun Baru Imlek"                       public on january 31 2014
+"Tahun Baru Imlek"                       public on february 19 2015
+"Tahun Baru Imlek"                       public on february 8 2016
+"Tahun Baru Imlek"                       public on january 28 2017
+"Tahun Baru Imlek"                       public on february 16 2018
+"Tahun Baru Imlek"                       public on february 5 2019
+"Tahun Baru Imlek"                       public on january 25 2020
+"Tahun Baru Imlek"                       public on february 12 2021
+"Tahun Baru Imlek"                       public on february 1 2022
+"Tahun Baru Imlek"                       public on january 22 2023
+"Tahun Baru Imlek"                       public on february 10 2024
+"Tahun Baru Imlek"                       public on january 29 2025
+"Tahun Baru Imlek"                       public on february 17 2026
+"Tahun Baru Imlek"                       public on february 6 2027
+"Tahun Baru Imlek"                       public on january 26 2028
+"Tahun Baru Imlek"                       public on february 13 2029
 
 :: School
 

@@ -6,10 +6,14 @@
 ::
 :: Author:   Ronggo Radityo <radityo3000@yahoo.com>
 ::
-:: Updated:  2012-03-13
+:: Updated:  2022-05-19
 ::
 :: Source:   http://en.wikipedia.org/wiki/Public_holidays_in_Indonesia
 :: Source:   http://www.officeholidays.com/countries/indonesia/2012.asp
+:: Source:   https://www.timeanddate.com/holidays/indonesia/waisak-day
+:: Source:   https://publicholidays.co.id/waisak-day/
+:: Source:   https://en.wikipedia.org/wiki/Nyepi
+:: Source:   https://publicholidays.co.id/bali-hindu-new-year/
 
 :: Metadata
 country     "ID"
@@ -37,6 +41,19 @@ description "National Holiday file for Indonesia"
 : Hari Raya Nyepi (lunar cal)
 "Balinese New Year"                      public on march 23 2012
 "Balinese New Year"                      public on march 12 2013
+"Balinese New Year"                      public on march 31 2014
+"Balinese New Year"                      public on march 21 2015
+"Balinese New Year"                      public on march 9 2016
+"Balinese New Year"                      public on march 28 2017
+"Balinese New Year"                      public on march 17 2018
+"Balinese New Year"                      public on march 7 2019
+"Balinese New Year"                      public on march 25 2020
+"Balinese New Year"                      public on march 14 2021
+"Balinese New Year"                      public on march 3 2022
+"Balinese New Year"                      public on march 22 2023
+"Balinese New Year"                      public on march 11 2024
+"Balinese New Year"                      public on march 29 2025
+"Balinese New Year"                      public on march 19 2026
 
 : Maulid Nabi Muhammad SAW (hijri cal)
 "Mawlid"                                 public religious on hijri rabialawal 12
@@ -47,6 +64,19 @@ description "National Holiday file for Indonesia"
 : Waisak (lunar cal)
 "Vesak"                                  public religious on may 6 2012
 "Vesak"                                  public religious on may 25 2013
+"Vesak"                                  public religious on may 15 2014
+"Vesak"                                  public religious on june 2 2015
+"Vesak"                                  public religious on may 22 2016
+"Vesak"                                  public religious on may 11 2017
+"Vesak"                                  public religious on may 29 2018
+"Vesak"                                  public religious on may 19 2019
+"Vesak"                                  public religious on may 7 2020
+"Vesak"                                  public religious on may 26 2021
+"Vesak"                                  public religious on may 16 2022
+"Vesak"                                  public religious on may 6 2023
+"Vesak"                                  public religious on may 23 2024
+"Vesak"                                  public religious on may 12 2025
+"Vesak"                                  public religious on may 31 2026
 
 : Kenaikan Yesus Kristus
 "Ascension Day"                          public religious on easter plus 39 days
@@ -75,13 +105,22 @@ description "National Holiday file for Indonesia"
 "Chinese New Year"                       public on january 23 2012
 "Chinese New Year"                       public on february 9 2013
 : Chinese New Year (from Hong Kong kholiday file)
-"Chinese New Year"                       public on 31 january 2014
-"Chinese New Year"                       public on 19 february 2015
-"Chinese New Year"                       public on 8 february 2016
-"Chinese New Year"                       public on 28 january 2017
-"Chinese New Year"                       public on 16 february 2018
-"Chinese New Year"                       public on 5 february 2019
-"Chinese New Year"                       public on 25 january 2020
+"Chinese New Year"                       public on january 31 2014
+"Chinese New Year"                       public on february 19 2015
+"Chinese New Year"                       public on february 8 2016
+"Chinese New Year"                       public on january 28 2017
+"Chinese New Year"                       public on february 16 2018
+"Chinese New Year"                       public on february 5 2019
+"Chinese New Year"                       public on january 25 2020
+"Chinese New Year"                       public on february 12 2021
+"Chinese New Year"                       public on february 1 2022
+"Chinese New Year"                       public on january 22 2023
+"Chinese New Year"                       public on february 10 2024
+"Chinese New Year"                       public on january 29 2025
+"Chinese New Year"                       public on february 17 2026
+"Chinese New Year"                       public on february 6 2027
+"Chinese New Year"                       public on january 26 2028
+"Chinese New Year"                       public on february 13 2029
 
 :: School
 
