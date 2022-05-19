@@ -12,6 +12,7 @@
 #include <KHolidays/LunarPhase>
 #include <KHolidays/SunRiseSet>
 
+#include <QCoreApplication>
 #include <QQmlEngine>
 
 // convert to/from QDateTime for JS
@@ -58,16 +59,18 @@ public:
 void KHolidaysDeclarativePlugin::registerTypes(const char *uri)
 {
     qmlRegisterType<HolidayRegionsDeclarativeModel>(uri, 1, 0, "HolidayRegionsModel");
-
-    qmlRegisterSingletonType(uri, 1, 0, "Lunar", [](QQmlEngine *engine, QJSEngine *) -> QJSValue {
-        return engine->toScriptValue(LunarPhaseWrapper());
-    });
     qRegisterMetaType<KHolidays::LunarPhase::Phase>();
     qmlRegisterUncreatableType<KHolidays::LunarPhase>(uri, 1, 0, "LunarPhase", {});
 
-    qmlRegisterSingletonType(uri, 1, 0, "SunRiseSet", [](QQmlEngine *engine, QJSEngine *) -> QJSValue {
-        return engine->toScriptValue(SunRiseSetWrapper());
-    });
+    // HACK qmlplugindump chokes on gadget singletons, to the point of breaking ecm_find_qmlmodule()
+    if (QCoreApplication::applicationName() != QLatin1String("qmlplugindump")) {
+        qmlRegisterSingletonType(uri, 1, 0, "Lunar", [](QQmlEngine *engine, QJSEngine *) -> QJSValue {
+            return engine->toScriptValue(LunarPhaseWrapper());
+        });
+        qmlRegisterSingletonType(uri, 1, 0, "SunRiseSet", [](QQmlEngine *engine, QJSEngine *) -> QJSValue {
+            return engine->toScriptValue(SunRiseSetWrapper());
+        });
+    }
 }
 
 #include "kholidaysdeclarativeplugin.moc"
