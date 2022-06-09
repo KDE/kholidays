@@ -1,11 +1,3 @@
-
-include(CheckIncludeFiles)
-
-check_include_files(err.h HAVE_ERR_H)
-check_include_files(sys/cdefs.h HAVE_SYS_CDEFS_H)
-
-configure_file(config-kholidays.h.cmake ${KHolidays_BINARY_DIR}/src/config-kholidays.h)
-
 add_library(KF5Holidays)
 add_library(KF5::Holidays ALIAS KF5Holidays)
 

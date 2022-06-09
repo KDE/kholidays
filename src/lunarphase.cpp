@@ -7,7 +7,6 @@
 */
 
 #include "lunarphase.h"
-#include <config-kholidays.h>
 
 #include <QCoreApplication>
 #include <QDateTime>
