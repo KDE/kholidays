@@ -23,6 +23,7 @@ include(ECMAddQch)
 include(ECMGeneratePriFile)
 include(KDEGitCommitHooks)
 include(ECMGenerateExportHeader)
+include(ECMDeprecationSettings)
 
 set(KHOLIDAYS_LIB_VERSION ${KF_VERSION})
 set(EXCLUDE_DEPRECATED_BEFORE_AND_AT 0 CACHE STRING "Control the range of deprecated API excluded from the build [default=0].")
@@ -41,9 +42,11 @@ set(REQUIRED_QT_VERSION 5.15.2)
 find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} CONFIG REQUIRED Core Qml)
 
 remove_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII)
+ecm_set_disabled_deprecation_versions(
+    QT 5.15.2
+)
 
 ########### Targets ###########
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f02)
 add_subdirectory(src)
 
 if(BUILD_TESTING)
