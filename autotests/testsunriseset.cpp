@@ -18,9 +18,9 @@ QTEST_MAIN(SunriseTest)
 void SunriseTest::TestSunrise()
 {
     // test bogus latitudes and longitudes
-    QCOMPARE(utcSunrise(QDate(2012, 1, 1), 1000.0, 1000.0), QTime(0, 0));
-    QCOMPARE(utcSunrise(QDate(2012, 7, 1), -1000.0, -1000.0), QTime(0, 0));
-    QCOMPARE(utcSunrise(QDate(2012, 12, 31), 1000.0, -1000.0), QTime(0, 0));
+    QCOMPARE(utcSunrise(QDate(2012, 1, 1), 1000.0, 1000.0), QTime());
+    QCOMPARE(utcSunrise(QDate(2012, 7, 1), -1000.0, -1000.0), QTime());
+    QCOMPARE(utcSunrise(QDate(2012, 12, 31), 1000.0, -1000.0), QTime());
 
     // NYC
     QCOMPARE(utcSunrise(QDate(2012, 1, 1), 40.72, -74.02), QTime(12, 20));
@@ -43,6 +43,12 @@ void SunriseTest::TestSunrise()
     QCOMPARE(utcSunrise(QDate(2012, 1, 1), -14.60, 133.77), QTime(20, 39));
     QCOMPARE(utcSunrise(QDate(2012, 7, 1), -14.60, 133.77), QTime(21, 31));
     QCOMPARE(utcSunrise(QDate(2012, 12, 31), -14.60, 133.77), QTime(20, 39));
+
+    // Spitsbergen (affected by polar day/night)
+    QCOMPARE(utcSunrise(QDate(2022, 6, 21), 78.2231, 15.6322), QTime());
+    QCOMPARE(utcSunrise(QDate(2022, 12, 21), 78.2231, 15.6322), QTime());
+    QCOMPARE(utcSunrise(QDate(2022, 3, 21), 78.2231, 15.6322), QTime(4, 42));
+    QCOMPARE(utcSunrise(QDate(2022, 9, 21), 78.2231, 15.6322), QTime(4, 23));
 }
 
 void SunriseTest::TestSunset()
@@ -66,6 +72,12 @@ void SunriseTest::TestSunset()
     QCOMPARE(utcSunset(QDate(2012, 1, 1), -14.60, 133.77), QTime(9, 37));
     QCOMPARE(utcSunset(QDate(2012, 7, 1), -14.60, 133.77), QTime(8, 47));
     QCOMPARE(utcSunset(QDate(2012, 12, 31), -14.60, 133.77), QTime(9, 37));
+
+    // Spitsbergen (affected by polar day/night)
+    QCOMPARE(utcSunset(QDate(2022, 6, 21), 78.2231, 15.6322), QTime());
+    QCOMPARE(utcSunset(QDate(2022, 12, 21), 78.2231, 15.6322), QTime());
+    QCOMPARE(utcSunset(QDate(2022, 3, 21), 78.2231, 15.6322), QTime(17, 27));
+    QCOMPARE(utcSunset(QDate(2022, 9, 21), 78.2231, 15.6322), QTime(17, 18));
 }
 
 void SunriseTest::TestDawn()

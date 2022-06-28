@@ -176,10 +176,10 @@ static QTime calcSunEvent(const QDate &date, double latitude, double longitude, 
     double solarDec = calcSunDeclination(t);
     double hourAngle = direction * calcHourAngleSunrise(latitude, solarDec, sunHeight);
     double delta = longitude + radToDeg(hourAngle);
-    QTime timeUTC(0, 0);
     if (std::isnan(delta)) {
-        return timeUTC;
+        return {};
     }
+    QTime timeUTC(0, 0);
     timeUTC = timeUTC.addSecs((720 - (4.0 * delta) - eqTime) * 60);
 
     // round to nearest minute
