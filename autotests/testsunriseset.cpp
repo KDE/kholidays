@@ -124,3 +124,81 @@ void SunriseTest::TestDusk()
     QCOMPARE(utcDusk(QDate(2012, 7, 1), -14.60, 133.77), QTime(9, 10));
     QCOMPARE(utcDusk(QDate(2012, 12, 31), -14.60, 133.77), QTime(10, 1));
 }
+
+static bool verifyPolarDayRange(QDate begin, QDate end, double latitude, bool expected)
+{
+    for (QDate date = begin; date <= end; date = date.addDays(1)) {
+        if (isPolarDay(date, latitude) != expected) {
+            qDebug() << date << latitude << isPolarDay(date, latitude) << expected;
+            return false;
+        }
+        if (expected && utcSunrise(date, latitude, 0.0).isValid() && utcSunset(date, latitude, 0.0).isValid()) {
+            qDebug() << date << latitude << utcSunrise(date, latitude, 0.0) << utcSunset(date, latitude, 0.0);
+            return false;
+        }
+    }
+    return true;
+}
+
+static bool verifyPolarTwilightRange(QDate begin, QDate end, double latitude, bool expected)
+{
+    for (QDate date = begin; date <= end; date = date.addDays(1)) {
+        if (isPolarTwilight(date, latitude) != expected) {
+            qDebug() << date << latitude << isPolarTwilight(date, latitude) << expected;
+            return false;
+        }
+    }
+    return true;
+}
+
+static bool verifyPolarNightRange(QDate begin, QDate end, double latitude, bool expected)
+{
+    for (QDate date = begin; date <= end; date = date.addDays(1)) {
+        if (isPolarNight(date, latitude) != expected) {
+            qDebug() << date << latitude << isPolarNight(date, latitude) << expected;
+            return false;
+        }
+        if (expected && utcSunrise(date, latitude, 0.0).isValid() && utcSunset(date, latitude, 0.0).isValid()) {
+            qDebug() << date << latitude << utcSunrise(date, latitude, 0.0) << utcSunset(date, latitude, 0.0);
+            return false;
+        }
+    }
+    return true;
+}
+
+void SunriseTest::TestPolarDayNight()
+{
+    // polar circle (north): polar day from 6th June to 6st July, no polar night
+    QVERIFY(verifyPolarDayRange(QDate(2022, 1, 1), QDate(2022, 6, 5), 66.5, false));
+    QVERIFY(verifyPolarDayRange(QDate(2022, 6, 6), QDate(2022, 7, 5), 66.5, true));
+    QVERIFY(verifyPolarDayRange(QDate(2022, 7, 6), QDate(2022, 12, 31), 66.5, false));
+    QVERIFY(verifyPolarNightRange(QDate(2022, 1, 1), QDate(2022, 12, 31), 66.5, false));
+
+    // polar circle (south): same in reverse
+    QVERIFY(verifyPolarDayRange(QDate(2021, 1, 6), QDate(2021, 12, 7), -66.5, false));
+    QVERIFY(verifyPolarDayRange(QDate(2021, 12, 8), QDate(2022, 1, 4), -66.5, true));
+    QVERIFY(verifyPolarDayRange(QDate(2022, 1, 5), QDate(2022, 12, 7), -66.5, false));
+    QVERIFY(verifyPolarNightRange(QDate(2022, 1, 1), QDate(2022, 12, 31), -66.5, false));
+
+    // 68°: polar twilight from Dec 9 to Jan 2, no polar night
+    QVERIFY(verifyPolarTwilightRange(QDate(2021, 1, 3), QDate(2021, 12, 8), 68.0, false));
+    QVERIFY(verifyPolarTwilightRange(QDate(2021, 12, 9), QDate(2022, 1, 2), 68.0, true));
+    QVERIFY(verifyPolarTwilightRange(QDate(2022, 1, 3), QDate(2022, 12, 8), 68.0, false));
+    QVERIFY(verifyPolarNightRange(QDate(2022, 1, 1), QDate(2022, 12, 31), 68.0, false));
+
+    // -68°: polar twilight from June 8 to July 3, no polar night
+    QVERIFY(verifyPolarTwilightRange(QDate(2021, 1, 1), QDate(2021, 6, 7), -68.0, false));
+    QVERIFY(verifyPolarTwilightRange(QDate(2021, 6, 8), QDate(2021, 7, 3), -68.0, true));
+    QVERIFY(verifyPolarTwilightRange(QDate(2021, 7, 4), QDate(2021, 12, 31), -68.0, false));
+    QVERIFY(verifyPolarNightRange(QDate(2022, 1, 1), QDate(2022, 12, 31), -68.0, false));
+
+    // 78.5°: polar night from Nov 11 to Jan 30
+    QVERIFY(verifyPolarNightRange(QDate(2021, 1, 31), QDate(2021, 11, 10), 78.5, false));
+    QVERIFY(verifyPolarNightRange(QDate(2021, 11, 11), QDate(2022, 1, 30), 78.5, true));
+    QVERIFY(verifyPolarNightRange(QDate(2022, 1, 31), QDate(2022, 11, 10), 78.5, false));
+
+    // -78.5°: polar night from May 10 to Aug 2
+    QVERIFY(verifyPolarNightRange(QDate(2022, 1, 1), QDate(2022, 5, 9), -78.5, false));
+    QVERIFY(verifyPolarNightRange(QDate(2022, 5, 10), QDate(2022, 8, 2), -78.5, true));
+    QVERIFY(verifyPolarNightRange(QDate(2022, 8, 3), QDate(2022, 12, 31), -78.5, false));
+}

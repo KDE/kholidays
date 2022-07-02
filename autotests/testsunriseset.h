@@ -19,6 +19,7 @@ private Q_SLOTS:
     void TestSunset();
     void TestDawn();
     void TestDusk();
+    void TestPolarDayNight();
 };
 
 #endif

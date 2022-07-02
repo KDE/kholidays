@@ -58,6 +58,18 @@ public:
         const auto time = KHolidays::SunRiseSet::utcDusk(date.date(), latitude, longitude);
         return time.isValid() ? QDateTime(date.date(), time, Qt::UTC) : QDateTime();
     }
+    static Q_INVOKABLE bool isPolarDay(const QDateTime &date, double latitude)
+    {
+        return KHolidays::SunRiseSet::isPolarDay(date.date(), latitude);
+    }
+    static Q_INVOKABLE bool isPolarTwilight(const QDateTime &date, double latitude)
+    {
+        return KHolidays::SunRiseSet::isPolarTwilight(date.date(), latitude);
+    }
+    static Q_INVOKABLE bool isPolarNight(const QDateTime &date, double latitude)
+    {
+        return KHolidays::SunRiseSet::isPolarNight(date.date(), latitude);
+    }
 };
 
 void KHolidaysDeclarativePlugin::registerTypes(const char *uri)

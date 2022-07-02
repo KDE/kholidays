@@ -208,3 +208,31 @@ QTime SunRiseSet::utcDusk(const QDate &date, double latitude, double longitude)
 {
     return calcSunEvent(date, latitude, longitude, CivilTwilight, Down);
 }
+
+// see https://en.wikipedia.org/wiki/Solar_zenith_angle
+bool SunRiseSet::isPolarDay(const QDate &date, double latitude)
+{
+    const double t = calcTimeJulianCent(date.toJulianDay());
+    const double solarDec = calcSunDeclination(t);
+    const double maxSolarZenithAngle = 180.0 - std::abs(latitude + solarDec);
+
+    return maxSolarZenithAngle <= 90.0 - Sunrise;
+}
+
+bool SunRiseSet::isPolarTwilight(const QDate &date, double latitude)
+{
+    const double t = calcTimeJulianCent(date.toJulianDay());
+    const double solarDec = calcSunDeclination(t);
+    const double minSolarZenithAngle = std::abs(latitude - solarDec);
+
+    return minSolarZenithAngle > 90.0 - Sunrise && minSolarZenithAngle <= 90.0 - CivilTwilight;
+}
+
+bool SunRiseSet::isPolarNight(const QDate &date, double latitude)
+{
+    const double t = calcTimeJulianCent(date.toJulianDay());
+    const double solarDec = calcSunDeclination(t);
+    const double minSolarZenithAngle = std::abs(latitude - solarDec);
+
+    return minSolarZenithAngle > 90.0 - CivilTwilight;
+}

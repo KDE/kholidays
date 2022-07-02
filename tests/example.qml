@@ -42,6 +42,15 @@ ApplicationWindow {
         Label {
             text: "Dusk: " + KHolidays.SunRiseSet.utcDusk(new Date(), lat.text, lon.text)
         }
+        Label {
+            text: "Polar day: " + KHolidays.SunRiseSet.isPolarDay(new Date(), lat.text)
+        }
+        Label {
+            text: "Polar twilight: " + KHolidays.SunRiseSet.isPolarTwilight(new Date(), lat.text)
+        }
+        Label {
+            text: "Polar night: " + KHolidays.SunRiseSet.isPolarNight(new Date(), lat.text)
+        }
 
         Label {
             text: "Lunar phase: " + KHolidays.Lunar.phaseNameAtDate(new Date())

@@ -70,6 +70,42 @@ KHOLIDAYS_EXPORT QTime utcDawn(const QDate &date, double latitude, double longit
 */
 KHOLIDAYS_EXPORT QTime utcDusk(const QDate &date, double latitude, double longitude);
 
+/**
+  Checks whether it is polar day on day @p date at @p latitude.
+  That is, the sun stays above -0.83° relative to the horizon at all times.
+  Both sunrise/sunset and dawn/dusk times will be invalid for such a day.
+  @param latitude in degree (-90.0, 90.0)
+  @see isPolarNight(), isPolarTwilight()
+  @see https://en.wikipedia.org/wiki/Midnight_sun
+
+  @since 5.97
+*/
+KHOLIDAYS_EXPORT bool isPolarDay(const QDate &date, double latitude);
+
+/**
+  Checks whether it is polar twilight on day @p date at @p latitude.
+  That is, the sun rises at least above -6° relative the horizon during the day,
+  but remains below -0.83° at all times. Sunrise/sunset times will be invalid
+  for such a day, but dawn/dusk times will be available.
+  @param latitude in degree (-90.0, 90.0)
+  @see isPolarDay(), isPolarNight()
+  @see https://en.wikipedia.org/wiki/Polar_night
+
+  @since 5.97
+*/
+KHOLIDAYS_EXPORT bool isPolarTwilight(const QDate &date, double latitude);
+
+/**
+  Checks whether it is polar night on day @p date at @p latitude.
+  That is, the sun stays below -6° relative to the horizon at all times.
+  Both sunrise/sunset and dawn/dusk times will be invalid for such a day.
+  @param latitude in degree (-90.0, 90.0)
+  @see isPolarDay(), isPolarTwilight()
+  @see https://en.wikipedia.org/wiki/Polar_night
+
+  @since 5.97
+*/
+KHOLIDAYS_EXPORT bool isPolarNight(const QDate &date, double latitude);
 }
 
 }
