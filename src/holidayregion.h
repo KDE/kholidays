@@ -228,7 +228,7 @@ public:
     Holiday::List rawHolidaysWithAstroSeasons(const QDate &startDate, const QDate &endDate) const;
 
     /**
-     * @since 5.95
+     * @since 5.97
      *
      * Returns the list of holidays that occur between @p startDate and @p endDate.
      */
