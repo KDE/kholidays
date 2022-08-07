@@ -203,12 +203,38 @@ void HolidayRegionTest::testDefaultRegions()
 void HolidayRegionTest::testSolistaleInHolidays()
 {
     KHolidays::HolidayRegion region(QFileInfo(KDESRCDIR "/holiday_solstice_in_holidays"));
-    printMetadata(region);
-    parseRegionDateRange(region, QDate(2020, 7, 1), QDate(2021, 6, 30));
-    parseRegionDateRange(region, QDate(2020, 1, 1), QDate(2020, 12, 31));
-    parseRegionDateRange(region, QDate(2020, 11, 1), QDate(2021, 1, 2));
-    parseRegionDateRange(region, QDate(2020, 12, 25), QDate(2021, 7, 2));
-    parseRegionDateRange(region, QDate(2020, 12, 25), QDate(2022, 1, 2));
+
+    auto holidays = region.rawHolidaysWithAstroSeasons(QDate(2020, 7, 1), QDate(2021, 6, 30));
+    QCOMPARE(holidays.size(), 5);
+    QCOMPARE(holidays.first().observedStartDate(), QDate(2020, 9, 22));
+    QCOMPARE(holidays.first().name(), QLatin1String("September Equinox"));
+
+    holidays = region.rawHolidays(QDate(2020, 7, 1), QDate(2021, 6, 30));
+    QCOMPARE(holidays.size(), 1);
+    QCOMPARE(holidays.first().observedStartDate(), QDate(2021, 1, 1));
+    QCOMPARE(holidays.first().name(), QLatin1String("New Years"));
+
+    holidays = region.rawHolidays(QDate(2020, 7, 1), QDate(2021, 6, 30), QLatin1String("public"));
+    QCOMPARE(holidays.size(), 1);
+    QCOMPARE(holidays.first().observedStartDate(), QDate(2021, 1, 1));
+    QCOMPARE(holidays.first().name(), QLatin1String("New Years"));
+
+    holidays = region.rawHolidays(QDate(2020, 7, 1), QDate(2021, 6, 30), QLatin1String("seasonal"));
+    QCOMPARE(holidays.size(), 4);
+    QCOMPARE(holidays.first().observedStartDate(), QDate(2020, 9, 22));
+    QCOMPARE(holidays.first().name(), QLatin1String("September Equinox"));
+
+    holidays = region.rawHolidaysWithAstroSeasons(2020);
+    QCOMPARE(holidays.size(), 5);
+    QCOMPARE(holidays.first().observedStartDate(), QDate(2020, 1, 1));
+    QCOMPARE(holidays.first().name(), QLatin1String("New Years"));
+    QCOMPARE(holidays.last().observedStartDate(), QDate(2020, 12, 21));
+    QCOMPARE(holidays.last().name(), QLatin1String("December Solstice"));
+
+    holidays = region.rawHolidaysWithAstroSeasons(QDate(2021, 3, 20));
+    QCOMPARE(holidays.size(), 1);
+    QCOMPARE(holidays.first().observedStartDate(), QDate(2021, 3, 20));
+    QCOMPARE(holidays.first().name(), QLatin1String("March Equinox"));
 }
 
 void HolidayRegionTest::testLoadFileCalendarSystemsForPlasma()
