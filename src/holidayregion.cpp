@@ -1135,11 +1135,7 @@ Holiday::List HolidayRegion::rawHolidaysWithAstroSeasons(int calendarYear) const
 
 bool HolidayRegion::isHoliday(const QDate &date) const
 {
-#if KHOLIDAYS_BUILD_DEPRECATED_SINCE(5, 95)
-    const Holiday::List holidayList = holidays(date);
-#else
     const Holiday::List holidayList = rawHolidaysWithAstroSeasons(date);
-#endif
     if (!holidayList.isEmpty()) {
         for (const KHolidays::Holiday &holiday : holidayList) {
             if (holiday.dayType() == Holiday::NonWorkday) {

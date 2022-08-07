@@ -47,11 +47,7 @@ void HolidayRegionTest::printHolidays(const KHolidays::Holiday::List &holidays)
 void HolidayRegionTest::parseRegionCalendarYear(const KHolidays::HolidayRegion &region, int year, const QString &calendarType)
 {
     qDebug() << "Parsing region = " << region.regionCode() << " year = " << year << " calendar = " << calendarType;
-#if KHOLIDAYS_BUILD_DEPRECATED_SINCE(5, 95)
-    printHolidays(region.holidays(year));
-#else
     printHolidays(region.rawHolidaysWithAstroSeasons(year));
-#endif
     qDebug() << "";
 }
 
@@ -59,11 +55,7 @@ void HolidayRegionTest::parseRegionDateRange(const KHolidays::HolidayRegion &reg
 {
     qDebug() << "Parsing regionCode = " << region.regionCode() << " start date = " << startDate.toString(Qt::ISODate)
              << " end date = " << endDate.toString(Qt::ISODate);
-#if KHOLIDAYS_BUILD_DEPRECATED_SINCE(5, 95)
-    printHolidays(region.holidays(startDate, endDate));
-#else
     printHolidays(region.rawHolidaysWithAstroSeasons(startDate, endDate));
-#endif
     qDebug() << "";
 }
 
@@ -78,11 +70,7 @@ void HolidayRegionTest::parseRawRegionDateRange(const KHolidays::HolidayRegion &
 void HolidayRegionTest::parseRegionDate(const KHolidays::HolidayRegion &region, const QDate &date)
 {
     qDebug() << "Parsing regionCode = " << region.regionCode() << " date = " << date.toString(Qt::ISODate);
-#if KHOLIDAYS_BUILD_DEPRECATED_SINCE(5, 95)
-    printHolidays(region.holidays(date));
-#else
     printHolidays(region.rawHolidaysWithAstroSeasons(date));
-#endif
     qDebug() << "";
 }
 
