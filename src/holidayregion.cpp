@@ -1090,7 +1090,7 @@ Holiday::List HolidayRegion::holidays(const QDate &startDate, const QDate &endDa
 Holiday::List HolidayRegion::rawHolidaysWithAstroSeasons(const QDate &startDate, const QDate &endDate) const
 {
     if (isValid()) {
-        return d->mDriver->parseRawHolidays(startDate, endDate);
+        return d->mDriver->parseHolidays(startDate, endDate);
     } else {
         return Holiday::List();
     }
