@@ -1079,11 +1079,7 @@ Holiday::List HolidayRegion::rawHolidays(const QDate &startDate, const QDate &en
 #if KHOLIDAYS_BUILD_DEPRECATED_SINCE(5, 95)
 Holiday::List HolidayRegion::holidays(const QDate &startDate, const QDate &endDate) const
 {
-    if (isValid()) {
-        return d->mDriver->parseHolidays(startDate, endDate);
-    } else {
-        return Holiday::List();
-    }
+    return rawHolidaysWithAstroSeasons(startDate, endDate);
 }
 #endif
 
@@ -1108,11 +1104,7 @@ Holiday::List HolidayRegion::rawHolidaysWithAstroSeasons(const QDate &startDate,
 #if KHOLIDAYS_BUILD_DEPRECATED_SINCE(5, 95)
 Holiday::List HolidayRegion::holidays(const QDate &date) const
 {
-    if (isValid()) {
-        return d->mDriver->parseHolidays(date);
-    } else {
-        return Holiday::List();
-    }
+    return rawHolidaysWithAstroSeasons(date);
 }
 #endif
 
@@ -1128,11 +1120,7 @@ Holiday::List HolidayRegion::rawHolidaysWithAstroSeasons(const QDate &date) cons
 #if KHOLIDAYS_BUILD_DEPRECATED_SINCE(5, 95)
 Holiday::List HolidayRegion::holidays(int calendarYear) const
 {
-    if (isValid()) {
-        return d->mDriver->parseHolidays(calendarYear);
-    } else {
-        return Holiday::List();
-    }
+    return rawHolidaysWithAstroSeasons(calendarYear);
 }
 #endif
 
