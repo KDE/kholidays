@@ -73,7 +73,7 @@ ecm_generate_headers(KHolidays_CamelCase_HEADERS
   REQUIRED_HEADERS KHolidays_HEADERS
 )
 
-install(TARGETS KF5Holidays EXPORT KF5HolidaysTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS KF5Holidays EXPORT KF5HolidaysTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
 ########### install files ###############
 install(FILES
