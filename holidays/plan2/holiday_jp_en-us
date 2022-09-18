@@ -7,7 +7,7 @@
 ::
 :: Language: English
 ::
-:: Updated:  2020-02-14
+:: Updated:  2022-09-19
 ::
 :: Source:   https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html
 ::           https://www.nao.ac.jp/faq/a0301.html
@@ -141,6 +141,7 @@ description "National holiday file for Japan"
 "Holiday"                public on february 24 2020
 "Holiday"                public on may 6 2020
 "Holiday"                public on august 9 2021
+"Holiday"                public on january 2 2023
 
 :: 2019 Japanese imperial transition special arrangements
 "Holiday"                public on april 30 2019

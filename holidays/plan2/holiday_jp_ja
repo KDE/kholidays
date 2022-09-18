@@ -7,7 +7,7 @@
 ::
 :: Language: Japanese
 ::
-:: Updated:  2020-02-14
+:: Updated:  2022-09-19
 ::
 :: Source:   https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html
 ::           https://www.nao.ac.jp/faq/a0301.html
@@ -157,6 +157,7 @@ description "日本の国民の休日のファイルです。"
 "休日"                               public on february 24 2020
 "休日"                               public on may 6 2020
 "休日"                               public on august 9 2021
+"休日"                               public on january 2 2023
 
 :: 2019 Japanese imperial transition special arrangements
 "休日"                               public on april 30 2019
