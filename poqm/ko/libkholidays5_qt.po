@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2015-06-13 09:34+0000\n"
-"PO-Revision-Date: 2022-04-15 23:55+0200\n"
+"PO-Revision-Date: 2022-10-03 15:48+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
-"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language-Team: Korean <kde-i18n-doc@kde.org>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 21.12.3\n"
 "X-Qt-Contexts: true\n"
 
 #: astroseasons.cpp:139
@@ -31,33 +31,24 @@ msgstr "동지"
 #: astroseasons.cpp:143
 msgctxt "AstroSeasons|"
 msgid "March Equinox"
-msgstr "추분"
+msgstr "춘분"
 
 #: astroseasons.cpp:145
 msgctxt "AstroSeasons|"
 msgid "September Equinox"
-msgstr "춘분"
+msgstr "추분"
 
 #: declarative/holidayregionsmodel.cpp:89
-#, fuzzy
-#| msgctxt "Header for Holiday Region column"
-#| msgid "Region"
 msgctxt "HolidayRegionsDeclarativeModel|"
 msgid "Region"
 msgstr "지역"
 
 #: declarative/holidayregionsmodel.cpp:91
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Name Days"
 msgctxt "HolidayRegionsDeclarativeModel|"
 msgid "Name"
-msgstr "영명축일"
+msgstr "이름"
 
 #: declarative/holidayregionsmodel.cpp:93
-#, fuzzy
-#| msgctxt "Header for Description column"
-#| msgid "Description"
 msgctxt "HolidayRegionsDeclarativeModel|"
 msgid "Description"
 msgstr "설명"
