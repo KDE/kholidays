@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2015-06-13 09:34+0000\n"
-"PO-Revision-Date: 2022-05-15 20:13+0200\n"
+"PO-Revision-Date: 2022-10-18 18:03+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 22.03.70\n"
+"X-Generator: Lokalize 22.08.1\n"
 "X-Qt-Contexts: true\n"
 
 #: astroseasons.cpp:139
@@ -40,25 +40,16 @@ msgid "September Equinox"
 msgstr "Przesilenie jesienne"
 
 #: declarative/holidayregionsmodel.cpp:89
-#, fuzzy
-#| msgctxt "Header for Holiday Region column"
-#| msgid "Region"
 msgctxt "HolidayRegionsDeclarativeModel|"
 msgid "Region"
 msgstr "Region"
 
 #: declarative/holidayregionsmodel.cpp:91
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Name Days"
 msgctxt "HolidayRegionsDeclarativeModel|"
 msgid "Name"
-msgstr "Nazwy dni"
+msgstr "Nazwa"
 
 #: declarative/holidayregionsmodel.cpp:93
-#, fuzzy
-#| msgctxt "Header for Description column"
-#| msgid "Description"
 msgctxt "HolidayRegionsDeclarativeModel|"
 msgid "Description"
 msgstr "Opis"
