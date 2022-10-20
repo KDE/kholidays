@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: libkholidays5\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2015-06-13 09:34+0000\n"
-"PO-Revision-Date: 2022-04-13 10:47-0300\n"
+"PO-Revision-Date: 2022-10-19 15:46-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 21.12.3\n"
 "X-Qt-Contexts: true\n"
 
 #: astroseasons.cpp:139
@@ -45,20 +45,17 @@ msgstr "Equinócio de setembro"
 #: declarative/holidayregionsmodel.cpp:89
 msgctxt "HolidayRegionsDeclarativeModel|"
 msgid "Region"
-msgstr ""
+msgstr "Região"
 
 #: declarative/holidayregionsmodel.cpp:91
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Name Days"
 msgctxt "HolidayRegionsDeclarativeModel|"
 msgid "Name"
-msgstr "Dias com Nome"
+msgstr "Nome"
 
 #: declarative/holidayregionsmodel.cpp:93
 msgctxt "HolidayRegionsDeclarativeModel|"
 msgid "Description"
-msgstr ""
+msgstr "Descrição"
 
 #: holidayregion.cpp:886
 msgctxt "HolidayRegion|Canadian region"
