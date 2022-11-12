@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2022-04-22 15:04+0400\n"
-"Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
+"PO-Revision-Date: 2022-11-11 17:41+0400\n"
+"Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Qt-Contexts: true\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: astroseasons.cpp:139
 msgctxt "AstroSeasons|"
@@ -36,20 +36,17 @@ msgstr "Payız gecə-gündüz bərabərliyi"
 #: declarative/holidayregionsmodel.cpp:89
 msgctxt "HolidayRegionsDeclarativeModel|"
 msgid "Region"
-msgstr ""
+msgstr "Bölgə"
 
 #: declarative/holidayregionsmodel.cpp:91
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Name Days"
 msgctxt "HolidayRegionsDeclarativeModel|"
 msgid "Name"
-msgstr "Ad günləri"
+msgstr "Ad"
 
 #: declarative/holidayregionsmodel.cpp:93
 msgctxt "HolidayRegionsDeclarativeModel|"
 msgid "Description"
-msgstr ""
+msgstr "Təsviri"
 
 #: holidayregion.cpp:886
 msgctxt "HolidayRegion|Canadian region"
