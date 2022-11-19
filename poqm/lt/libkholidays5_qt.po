@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: libkholidays\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2015-06-13 09:34+0000\n"
-"PO-Revision-Date: 2021-06-15 23:06+0300\n"
-"Last-Translator: Moo\n"
+"PO-Revision-Date: 2022-11-19 01:25+0200\n"
+"Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.2.1\n"
 "X-Qt-Contexts: true\n"
 
 #: astroseasons.cpp:139
@@ -41,28 +41,19 @@ msgid "September Equinox"
 msgstr "Rugsėjo lygiadienis"
 
 #: declarative/holidayregionsmodel.cpp:89
-#, fuzzy
-#| msgctxt "Header for Holiday Region column"
-#| msgid "Region"
 msgctxt "HolidayRegionsDeclarativeModel|"
 msgid "Region"
 msgstr "Regionas"
 
 #: declarative/holidayregionsmodel.cpp:91
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Name Days"
 msgctxt "HolidayRegionsDeclarativeModel|"
 msgid "Name"
-msgstr "Vardadieniai"
+msgstr "Pavadinimas"
 
 #: declarative/holidayregionsmodel.cpp:93
-#, fuzzy
-#| msgctxt "Header for Description column"
-#| msgid "Description"
 msgctxt "HolidayRegionsDeclarativeModel|"
 msgid "Description"
-msgstr "Aprašymas"
+msgstr "Aprašas"
 
 #: holidayregion.cpp:886
 msgctxt "HolidayRegion|Canadian region"
@@ -379,22 +370,22 @@ msgstr "Delčia (Paskutinio ketvirčio mėnulis)"
 #: lunarphase.cpp:35
 msgctxt "LunarPhase|"
 msgid "Waxing Crescent"
-msgstr ""
+msgstr "Jaunatis (Pilnėjantis pusmėnulis)"
 
 #: lunarphase.cpp:37
 msgctxt "LunarPhase|"
 msgid "Waxing Gibbous"
-msgstr ""
+msgstr "Priešpilnis (Pilnėjantis kuprotas mėnulis)"
 
 #: lunarphase.cpp:39
 msgctxt "LunarPhase|"
 msgid "Waning Gibbous"
-msgstr ""
+msgstr "Pilnatis (Dylantis kuprotas mėnulis)"
 
 #: lunarphase.cpp:41
 msgctxt "LunarPhase|"
 msgid "Waning Crescent"
-msgstr ""
+msgstr "Delčia (Dylantis mėnulis)"
 
 #: zodiac.cpp:66
 msgctxt "Zodiac|"
@@ -514,7 +505,7 @@ msgstr "vandenis"
 #: zodiac.cpp:280
 msgctxt "HolidayRegion|zodiac symbol for Pices"
 msgid "fish"
-msgstr "žuvis"
+msgstr "žuvys"
 
 #~ msgctxt "Combobox label, use Holiday Region for information only"
 #~ msgid "Information"
