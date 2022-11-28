@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2\n"
 
 #: astroseasons.cpp:139
 msgctxt "AstroSeasons|"
@@ -368,17 +368,17 @@ msgstr "ნახევარმთვარე"
 #: lunarphase.cpp:37
 msgctxt "LunarPhase|"
 msgid "Waxing Gibbous"
-msgstr ""
+msgstr "მეორე მეოთხედი"
 
 #: lunarphase.cpp:39
 msgctxt "LunarPhase|"
 msgid "Waning Gibbous"
-msgstr ""
+msgstr "მესამე მეოთხედი"
 
 #: lunarphase.cpp:41
 msgctxt "LunarPhase|"
 msgid "Waning Crescent"
-msgstr ""
+msgstr "მეოთხე მეოთხედი"
 
 #: zodiac.cpp:66
 msgctxt "Zodiac|"
