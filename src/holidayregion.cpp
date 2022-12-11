@@ -1169,8 +1169,8 @@ QString HolidayRegion::defaultRegionCode(const QString &country, const QString &
     QString languageSubdivisionOnlyMatch;
 
     const QStringList regionList = KHolidays::HolidayRegion::regionCodes();
-    for (const QString &regionCode : regionList) {
-        const auto hr = KHolidays::HolidayRegion(regionCode);
+    for (const QString &aRegionCode : regionList) {
+        const auto hr = KHolidays::HolidayRegion(aRegionCode);
         QString regionCountry = hr.countryCode().toLower();
         QString regionSubdivisionCountry;
         if (regionCountry.split(QLatin1Char('-')).count() > 1) {
@@ -1182,37 +1182,37 @@ QString HolidayRegion::defaultRegionCode(const QString &country, const QString &
 
         if (regionCountry == localeCountry && regionLanguage == localeLanguage) {
             // exact match so don't look further
-            return regionCode;
+            return aRegionCode;
         } else if (regionCountry == localeSubdivision && regionLanguage == localeLanguage) {
-            countryAndLanguageMatch = regionCode;
+            countryAndLanguageMatch = aRegionCode;
         } else if (regionCountry == localeCountry) {
             if (countryOnlyMatch.isEmpty()) {
-                countryOnlyMatch = regionCode;
+                countryOnlyMatch = aRegionCode;
             }
         } else if (!regionSubdivisionCountry.isEmpty() && regionSubdivisionCountry == localeSubdivision && regionLanguage == localeLanguage) {
             if (subdivisionAndLanguageMatch.isEmpty()) {
-                subdivisionAndLanguageMatch = regionCode;
+                subdivisionAndLanguageMatch = aRegionCode;
             }
         } else if (!regionSubdivisionCountry.isEmpty() && regionSubdivisionCountry == localeSubdivision) {
             if (subdivisionOnlyMatch.isEmpty()) {
-                subdivisionOnlyMatch = regionCode;
+                subdivisionOnlyMatch = aRegionCode;
             }
         } else if (!localeLanguageCountry.isEmpty() && regionCountry == localeLanguageCountry && regionLanguage == localeLanguage) {
             if (languageCountryAndLanguageMatch.isEmpty()) {
-                languageCountryAndLanguageMatch = regionCode;
+                languageCountryAndLanguageMatch = aRegionCode;
             }
         } else if (!localeLanguageCountry.isEmpty() && regionCountry == localeLanguageCountry) {
             if (languageCountryOnlyMatch.isEmpty()) {
-                languageCountryOnlyMatch = regionCode;
+                languageCountryOnlyMatch = aRegionCode;
             }
         } else if (!regionSubdivisionCountry.isEmpty() && !localeLanguageCountry.isEmpty() && regionSubdivisionCountry == localeLanguageCountry
                    && regionLanguage == localeLanguage) {
             if (languageSubdivisionAndLanguageMatch.isEmpty()) {
-                languageSubdivisionAndLanguageMatch = regionCode;
+                languageSubdivisionAndLanguageMatch = aRegionCode;
             }
         } else if (!regionSubdivisionCountry.isEmpty() && !localeLanguageCountry.isEmpty() && regionSubdivisionCountry == localeLanguageCountry) {
             if (languageSubdivisionOnlyMatch.isEmpty()) {
-                languageSubdivisionOnlyMatch = regionCode;
+                languageSubdivisionOnlyMatch = aRegionCode;
             }
         }
     }
