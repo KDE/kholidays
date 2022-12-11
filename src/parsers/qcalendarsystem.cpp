@@ -1017,7 +1017,7 @@ QDate QCalendarSystem::addMonths(const QDate &dt, int months) const
                 if (month + months >= 1) {
                     month += months;
                     months = 0;
-                } else if (months < 0) {
+                } else {
                     year = d->addYears(year, -1);
                     months += d->monthsInYear(year);
                 }
