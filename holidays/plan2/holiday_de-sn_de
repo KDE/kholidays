@@ -22,7 +22,7 @@ description "Feiertage für Deutschland (Sachsen)"
 
 "Fronleichnam (regional)" public on easter plus 60 days
 "Reformationstag"         public on 31.10.
-"Buß- und Bettag"         public on wednesday before 23.11.
+"Buß- und Bettag"         public on wednesday before 22.11.
 
 :: ---------- This part is shared across all Federal States of Germany ----------
 
