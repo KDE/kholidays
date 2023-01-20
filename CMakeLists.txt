@@ -31,8 +31,8 @@ set(EXCLUDE_DEPRECATED_BEFORE_AND_AT 0 CACHE STRING "Control the range of deprec
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX KHOLIDAYS
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kholidays_version.h"
-                        PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5HolidaysConfigVersion.cmake"
-                        SOVERSION 5
+                        PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF6HolidaysConfigVersion.cmake"
+                        SOVERSION 6
 )
 
 option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)" OFF)
@@ -57,32 +57,32 @@ endif()
 ecm_install_po_files_as_qm(poqm)
 
 ########### CMake Config Files ###########
-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5Holidays")
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF6Holidays")
 
 if(BUILD_QCH)
   ecm_install_qch_export(
-    TARGETS KF5Holidays_QCH
-    FILE KF5HolidaysQchTargets.cmake
+    TARGETS KF6Holidays_QCH
+    FILE KF6HolidaysQchTargets.cmake
     DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
     COMPONENT Devel
   )
-  set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF5HolidaysQchTargets.cmake\")")
+  set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF6HolidaysQchTargets.cmake\")")
 endif()
 
 configure_package_config_file(
-  "${CMAKE_CURRENT_SOURCE_DIR}/KF5HolidaysConfig.cmake.in"
-  "${CMAKE_CURRENT_BINARY_DIR}/KF5HolidaysConfig.cmake"
+  "${CMAKE_CURRENT_SOURCE_DIR}/KF6HolidaysConfig.cmake.in"
+  "${CMAKE_CURRENT_BINARY_DIR}/KF6HolidaysConfig.cmake"
   INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR}
 )
 
 install(FILES
-  "${CMAKE_CURRENT_BINARY_DIR}/KF5HolidaysConfig.cmake"
-  "${CMAKE_CURRENT_BINARY_DIR}/KF5HolidaysConfigVersion.cmake"
+  "${CMAKE_CURRENT_BINARY_DIR}/KF6HolidaysConfig.cmake"
+  "${CMAKE_CURRENT_BINARY_DIR}/KF6HolidaysConfigVersion.cmake"
   DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
   COMPONENT Devel
 )
 
-install(EXPORT KF5HolidaysTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5HolidaysTargets.cmake NAMESPACE KF5::)
+install(EXPORT KF6HolidaysTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF6HolidaysTargets.cmake NAMESPACE KF6::)
 
 install(FILES
   ${CMAKE_CURRENT_BINARY_DIR}/kholidays_version.h

@@ -10,7 +10,7 @@ target_sources(kholidaysdeclarativeplugin PRIVATE
 target_link_libraries(kholidaysdeclarativeplugin
   Qt${QT_MAJOR_VERSION}::Qml
   Qt${QT_MAJOR_VERSION}::Core
-  KF5Holidays
+  KF6Holidays
 )
 
 ecm_finalize_qml_module(kholidaysdeclarativeplugin DESTINATION ${KDE_INSTALL_QMLDIR})

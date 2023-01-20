@@ -3,5 +3,5 @@
 include(CMakeFindDependencyMacro)
 find_dependency(Qt@QT_MAJOR_VERSION@Core @REQUIRED_QT_VERSION@)
 
-include("${CMAKE_CURRENT_LIST_DIR}/KF5HolidaysTargets.cmake")
+include("${CMAKE_CURRENT_LIST_DIR}/KF6HolidaysTargets.cmake")
 @PACKAGE_INCLUDE_QCHTARGETS@

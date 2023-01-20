@@ -1,13 +1,13 @@
-add_library(KF5Holidays)
-add_library(KF5::Holidays ALIAS KF5Holidays)
+add_library(KF6Holidays)
+add_library(KF6::Holidays ALIAS KF6Holidays)
 
-set_target_properties(KF5Holidays PROPERTIES
+set_target_properties(KF6Holidays PROPERTIES
   VERSION     ${KHOLIDAYS_VERSION}
   SOVERSION   ${KHOLIDAYS_SOVERSION}
   EXPORT_NAME Holidays
 )
 
-target_sources(KF5Holidays PRIVATE
+target_sources(KF6Holidays PRIVATE
     astroseasons.cpp
     astroseasons.h
     holiday.cpp
@@ -36,9 +36,9 @@ target_sources(KF5Holidays PRIVATE
   ../holidays/holidays.qrc
 )
 
-ecm_create_qm_loader(KF5Holidays libkholidays5_qt)
+ecm_create_qm_loader(KF6Holidays libkholidays5_qt)
 
-ecm_qt_declare_logging_category(KF5Holidays
+ecm_qt_declare_logging_category(KF6Holidays
     HEADER kholidays_debug.h
     IDENTIFIER KHOLIDAYS_LOG
     CATEGORY_NAME kf.holidays
@@ -46,7 +46,7 @@ ecm_qt_declare_logging_category(KF5Holidays
     EXPORT KHOLIDAYS
 )
 
-ecm_generate_export_header(KF5Holidays 
+ecm_generate_export_header(KF6Holidays 
     VERSION  ${KF_VERSION}
     BASE_NAME KHolidays
     GROUP_BASE_NAME KF
@@ -55,11 +55,11 @@ ecm_generate_export_header(KF5Holidays
     EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
 )
 
-target_include_directories(KF5Holidays INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/KHolidays>")
-target_include_directories(KF5Holidays PUBLIC "$<BUILD_INTERFACE:${KHolidays_SOURCE_DIR}/src;${KHolidays_BINARY_DIR}/src>")
-target_include_directories(KF5Holidays PUBLIC "$<BUILD_INTERFACE:${KHolidays_SOURCE_DIR}/src/parsers/plan2>")
+target_include_directories(KF6Holidays INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/KHolidays>")
+target_include_directories(KF6Holidays PUBLIC "$<BUILD_INTERFACE:${KHolidays_SOURCE_DIR}/src;${KHolidays_BINARY_DIR}/src>")
+target_include_directories(KF6Holidays PUBLIC "$<BUILD_INTERFACE:${KHolidays_SOURCE_DIR}/src/parsers/plan2>")
 
-target_link_libraries(KF5Holidays PUBLIC Qt${QT_MAJOR_VERSION}::Core)
+target_link_libraries(KF6Holidays PUBLIC Qt${QT_MAJOR_VERSION}::Core)
 
 ecm_generate_headers(KHolidays_CamelCase_HEADERS
   HEADER_NAMES
@@ -73,7 +73,7 @@ ecm_generate_headers(KHolidays_CamelCase_HEADERS
   REQUIRED_HEADERS KHolidays_HEADERS
 )
 
-install(TARGETS KF5Holidays EXPORT KF5HolidaysTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS KF6Holidays EXPORT KF6HolidaysTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
 ########### install files ###############
 install(FILES
@@ -91,9 +91,9 @@ install(FILES
 
 if(BUILD_QCH)
   ecm_add_qch(
-    KF5Holidays_QCH
+    KF6Holidays_QCH
     NAME KHolidays
-    BASE_NAME KF5Holidays
+    BASE_NAME KF6Holidays
     VERSION ${KF_VERSION}
     ORG_DOMAIN org.kde
     SOURCES # using only public headers, to cover only public API
@@ -113,7 +113,7 @@ endif()
 
 ecm_generate_pri_file(
   BASE_NAME KHolidays
-  LIB_NAME KF5Holidays
+  LIB_NAME KF6Holidays
   DEPS "widgets"
   FILENAME_VAR PRI_FILENAME
   INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/KHolidays
