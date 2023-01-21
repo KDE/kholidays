@@ -207,18 +207,6 @@ public:
      */
     static QString description(const QString &regionCode);
 
-#if KHOLIDAYS_ENABLE_DEPRECATED_SINCE(5, 95)
-    /**
-     * @since 4.6
-     *
-     * Returns the list of holidays that occur between @p startDate and @p endDate.
-     *
-     * @deprecated Since 5.95, use rawHolidaysWithAstroSeasons() instead.
-     */
-    KHOLIDAYS_DEPRECATED_VERSION(5, 95, "use rawHolidaysWithAstroSeasons() instead")
-    Holiday::List holidays(const QDate &startDate, const QDate &endDate) const;
-#endif
-
     /**
      * @since 5.95
      *
@@ -234,36 +222,12 @@ public:
      */
     Holiday::List rawHolidays(const QDate &startDate, const QDate &endDate) const;
 
-#if KHOLIDAYS_ENABLE_DEPRECATED_SINCE(5, 95)
-    /**
-     * @since 4.6
-     *
-     * Returns the list of holidays that occur on a @p date.
-     *
-     * @deprecated Since 5.95, use rawHolidaysWithAstroSeasons() instead.
-     */
-    KHOLIDAYS_DEPRECATED_VERSION(5, 95, "use rawHolidaysWithAstroSeasons() instead")
-    Holiday::List holidays(const QDate &date) const;
-#endif
-
     /**
      * @since 5.95
      *
      * Returns the list of holidays that occur on a @p date.
      */
     Holiday::List rawHolidaysWithAstroSeasons(const QDate &date) const;
-
-#if KHOLIDAYS_ENABLE_DEPRECATED_SINCE(5, 95)
-    /**
-     * @since 4.6
-     *
-     * Returns the list of holidays that occur in a Gregorian calendar year @p calendarYear.
-     *
-     * @deprecated Since 5.95, use rawHolidaysWithAstroSeasons() instead.
-     */
-    KHOLIDAYS_DEPRECATED_VERSION(5, 95, "use rawHolidaysWithAstroSeasons() instead")
-    Holiday::List holidays(int calendarYear) const;
-#endif
 
     /**
      * @since 5.95

@@ -1076,13 +1076,6 @@ Holiday::List HolidayRegion::rawHolidays(const QDate &startDate, const QDate &en
     }
 }
 
-#if KHOLIDAYS_BUILD_DEPRECATED_SINCE(5, 95)
-Holiday::List HolidayRegion::holidays(const QDate &startDate, const QDate &endDate) const
-{
-    return rawHolidaysWithAstroSeasons(startDate, endDate);
-}
-#endif
-
 Holiday::List HolidayRegion::rawHolidays(const QDate &startDate, const QDate &endDate) const
 {
     if (isValid()) {
@@ -1101,13 +1094,6 @@ Holiday::List HolidayRegion::rawHolidaysWithAstroSeasons(const QDate &startDate,
     }
 }
 
-#if KHOLIDAYS_BUILD_DEPRECATED_SINCE(5, 95)
-Holiday::List HolidayRegion::holidays(const QDate &date) const
-{
-    return rawHolidaysWithAstroSeasons(date);
-}
-#endif
-
 Holiday::List HolidayRegion::rawHolidaysWithAstroSeasons(const QDate &date) const
 {
     if (isValid()) {
@@ -1116,13 +1102,6 @@ Holiday::List HolidayRegion::rawHolidaysWithAstroSeasons(const QDate &date) cons
         return Holiday::List();
     }
 }
-
-#if KHOLIDAYS_BUILD_DEPRECATED_SINCE(5, 95)
-Holiday::List HolidayRegion::holidays(int calendarYear) const
-{
-    return rawHolidaysWithAstroSeasons(calendarYear);
-}
-#endif
 
 Holiday::List HolidayRegion::rawHolidaysWithAstroSeasons(int calendarYear) const
 {
