@@ -8,8 +8,8 @@ target_sources(kholidaysdeclarativeplugin PRIVATE
 )
 
 target_link_libraries(kholidaysdeclarativeplugin
-  Qt${QT_MAJOR_VERSION}::Qml
-  Qt${QT_MAJOR_VERSION}::Core
+  Qt6::Qml
+  Qt6::Core
   KF6Holidays
 )
 

@@ -59,7 +59,7 @@ target_include_directories(KF6Holidays INTERFACE "$<INSTALL_INTERFACE:${KDE_INST
 target_include_directories(KF6Holidays PUBLIC "$<BUILD_INTERFACE:${KHolidays_SOURCE_DIR}/src;${KHolidays_BINARY_DIR}/src>")
 target_include_directories(KF6Holidays PUBLIC "$<BUILD_INTERFACE:${KHolidays_SOURCE_DIR}/src/parsers/plan2>")
 
-target_link_libraries(KF6Holidays PUBLIC Qt${QT_MAJOR_VERSION}::Core)
+target_link_libraries(KF6Holidays PUBLIC Qt6::Core)
 
 ecm_generate_headers(KHolidays_CamelCase_HEADERS
   HEADER_NAMES
@@ -100,7 +100,7 @@ if(BUILD_QCH)
       ${KHolidays_HEADERS}
     MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
     LINK_QCHS
-      Qt${QT_MAJOR_VERSION}Core_QCH
+      Qt6Core_QCH
     INCLUDE_DIRS
       ${CMAKE_CURRENT_BINARY_DIR}
     BLANK_MACROS
