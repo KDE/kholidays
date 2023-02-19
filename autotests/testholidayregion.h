@@ -29,6 +29,7 @@ private Q_SLOTS:
     void testDefaultRegions();
     void testSolistaleInHolidays();
     void testLoadFileCalendarSystemsForPlasma();
+    void testDominicanRepublicDiadelaConstitucion();
 
 private:
     void printMetadata(const KHolidays::HolidayRegion &region);
