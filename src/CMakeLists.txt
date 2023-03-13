@@ -36,7 +36,7 @@ target_sources(KF6Holidays PRIVATE
   ../holidays/holidays.qrc
 )
 
-ecm_create_qm_loader(KF6Holidays libkholidays5_qt)
+ecm_create_qm_loader(KF6Holidays libkholidays6_qt)
 
 ecm_qt_declare_logging_category(KF6Holidays
     HEADER kholidays_debug.h
