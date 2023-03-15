@@ -1,4 +1,4 @@
-# Translation of libkholidays5_qt to Norwegian Nynorsk
+# Translation of libkholidays6_qt to Norwegian Nynorsk
 #
 # Gaute Hvoslef Kvalnes <gaute@verdsveven.com>, 2005.
 # Karl Ove Hufthammer <karl@huftis.org>, 2008, 2018, 2020, 2022.
