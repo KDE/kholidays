@@ -1,4 +1,4 @@
-# Translation of libkholidays5_qt to Norwegian Bokmål
+# Translation of libkholidays6_qt to Norwegian Bokmål
 #
 # Bjørn Steensrud <bjornst@skogkatt.homelinux.org>, 2007, 2010, 2012, 2014.
 # Karl Ove Hufthammer <karl@huftis.org>, 2018.
