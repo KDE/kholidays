@@ -1,0 +1,43 @@
+::
+:: Country:  Guyana
+::
+:: Language: British English
+::
+:: Author:  Emille Giddings <emilledigital@gmail.com>
+::
+:: Updated: 2023-03-24
+::
+:: Source:  https://moha.gov.gy/notice-of-public-holidays-2023/
+::          https://officialgazette.gov.gy/index.php
+::          https://dpi.gov.gy/
+::          https://guyanachronicle.com/
+
+:: Metadata
+country     "GY"
+language    "en_GB"
+:name       "Guyana"
+description "National Holiday file for Guyana"
+
+:: Public Holidays
+"New Year's Day"                 public on january 1
+"Republic Day"                   public on february 23
+"Labour Day"                     public on may 1
+"Arrival Day"                    public on may 5
+"Caricom Day"                    public on first monday in july
+"Emancipation Day"               public on august 1
+"Independence Day"               public on may 26
+
+:: Religious
+"Phagwah"                        public religious on march 7 2023
+"Good Friday"                    public religious on friday before easter
+"Easter Day"                     public religious on april 10 2023
+"Eid-Ul-Adha"                    public religious on june 28 2023
+"Youman Nabi"                    public religious on september 27 2023
+"Deepavali"                      public religious on november 12 2023
+"Christmas Day"                  public religious on december 25
+"Boxing Day"                     public religious on december 26
+
+:: Cultural
+"Valentine's Day"           cultural on february 14
+"Mother's Day"              cultural on second sunday in may
+"Father's Day"              cultural on third sunday in june
