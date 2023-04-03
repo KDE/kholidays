@@ -48,6 +48,7 @@ ecm_qt_declare_logging_category(KF6Holidays
 
 ecm_generate_export_header(KF6Holidays 
     VERSION  ${KF_VERSION}
+    USE_VERSION_HEADER
     BASE_NAME KHolidays
     GROUP_BASE_NAME KF
     DEPRECATED_BASE_VERSION 0
