@@ -29,8 +29,9 @@ include(ECMQmlModule)
 set(KHOLIDAYS_LIB_VERSION ${KF_VERSION})
 set(EXCLUDE_DEPRECATED_BEFORE_AND_AT 0 CACHE STRING "Control the range of deprecated API excluded from the build [default=0].")
 
+set(kholidays_version_header "${CMAKE_CURRENT_BINARY_DIR}/src/kholidays_version.h")
 ecm_setup_version(PROJECT VARIABLE_PREFIX KHOLIDAYS
-                        VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kholidays_version.h"
+                        VERSION_HEADER "${kholidays_version_header}"
                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF6HolidaysConfigVersion.cmake"
                         SOVERSION 6
 )
@@ -85,7 +86,7 @@ install(FILES
 install(EXPORT KF6HolidaysTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF6HolidaysTargets.cmake NAMESPACE KF6::)
 
 install(FILES
-  ${CMAKE_CURRENT_BINARY_DIR}/kholidays_version.h
+  ${kholidays_version_header}
   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KHolidays COMPONENT Devel
 )
 
