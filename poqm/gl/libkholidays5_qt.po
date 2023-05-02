@@ -5,20 +5,21 @@
 # marce villarino <mvillarino@users.sourceforge.net>, 2009.
 # Xosé <xosecalvo@gmail.com>, 2010.
 # Adrian Chaves Fernandez <adriyetichaves@gmail.com>, 2013, 2015.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: libkholidays\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2015-06-13 09:34+0000\n"
-"PO-Revision-Date: 2015-11-19 06:43+0100\n"
-"Last-Translator: Adrián Chaves Fernández (Gallaecio) <adriyetichaves@gmail."
-"com>\n"
-"Language-Team: Galician <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-05-01 10:05+0200\n"
+"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.04.0\n"
 "X-Qt-Contexts: true\n"
 
 #: astroseasons.cpp:139
@@ -42,25 +43,16 @@ msgid "September Equinox"
 msgstr "Equinoccio de setembro"
 
 #: declarative/holidayregionsmodel.cpp:89
-#, fuzzy
-#| msgctxt "Header for Holiday Region column"
-#| msgid "Region"
 msgctxt "HolidayRegionsDeclarativeModel|"
 msgid "Region"
 msgstr "Rexión"
 
 #: declarative/holidayregionsmodel.cpp:91
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Name Days"
 msgctxt "HolidayRegionsDeclarativeModel|"
 msgid "Name"
-msgstr "Santos"
+msgstr "Nome"
 
 #: declarative/holidayregionsmodel.cpp:93
-#, fuzzy
-#| msgctxt "Header for Description column"
-#| msgid "Description"
 msgctxt "HolidayRegionsDeclarativeModel|"
 msgid "Description"
 msgstr "Descrición"
@@ -71,77 +63,74 @@ msgid "Quebec"
 msgstr "Quebec"
 
 #: holidayregion.cpp:889
-#, fuzzy
-#| msgctxt "HolidayRegion|German region"
-#| msgid "Bavaria"
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Bavaria"
-msgstr "Bavária"
+msgstr "Alemaña, Baviera"
 
 #: holidayregion.cpp:891
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Brandenburg"
-msgstr ""
+msgstr "Alemaña, Brandeburgo"
 
 #: holidayregion.cpp:893
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Berlin"
-msgstr ""
+msgstr "Alemaña, Berlín"
 
 #: holidayregion.cpp:895
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Baden-Wuerttemberg"
-msgstr ""
+msgstr "Alemaña, Baden-Württemberg"
 
 #: holidayregion.cpp:897
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Hesse"
-msgstr ""
+msgstr "Alemaña, Hessen"
 
 #: holidayregion.cpp:899
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Mecklenburg-Hither Pomerania"
-msgstr ""
+msgstr "Alemaña, Mecklemburgo-Antepomerania"
 
 #: holidayregion.cpp:901
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Lower Saxony"
-msgstr ""
+msgstr "Alemaña, Baixa Saxonia"
 
 #: holidayregion.cpp:903
 msgctxt "HolidayRegion|German region"
 msgid "Germany, North Rhine-Westphalia"
-msgstr ""
+msgstr "Alemaña, Renania do Norte-Westfalia"
 
 #: holidayregion.cpp:905
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Rhineland-Palatinate"
-msgstr ""
+msgstr "Alemaña, Renania-Palatinado"
 
 #: holidayregion.cpp:907
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Schleswig-Holstein"
-msgstr ""
+msgstr "Alemaña, Schleswig-Holstein"
 
 #: holidayregion.cpp:909
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Saarland"
-msgstr ""
+msgstr "Alemaña, Saarland"
 
 #: holidayregion.cpp:911
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Saxony"
-msgstr ""
+msgstr "Alemaña, Saxonia"
 
 #: holidayregion.cpp:913
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Saxony-Anhalt"
-msgstr ""
+msgstr "Alemaña, Saxonia-Anhalt"
 
 #: holidayregion.cpp:915
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Thuringia"
-msgstr ""
+msgstr "Alemaña, Turinxia"
 
 #: holidayregion.cpp:918
 msgctxt "HolidayRegion|Spanish region"
@@ -311,22 +300,22 @@ msgstr "Ortodoxa"
 #: holidayregion.cpp:1000
 msgctxt "HolidayRegion|Holiday type"
 msgid "Jewish"
-msgstr "Xudea"
+msgstr "Xudía"
 
 #: holidayregion.cpp:1002
 msgctxt "HolidayRegion|Holiday type"
 msgid "Jewish Orthodox"
-msgstr "Xudea ortodoxa"
+msgstr "Xudía ortodoxa"
 
 #: holidayregion.cpp:1004
 msgctxt "HolidayRegion|Holiday type"
 msgid "Jewish Conservative"
-msgstr "Xudea conservadora"
+msgstr "Xudía conservadora"
 
 #: holidayregion.cpp:1006
 msgctxt "HolidayRegion|Holiday type"
 msgid "Jewish Reform"
-msgstr "Xudea reformista"
+msgstr "Xudía reformista"
 
 #: holidayregion.cpp:1008
 msgctxt "HolidayRegion|Holiday type"
@@ -383,22 +372,22 @@ msgstr "Cuarto minguante"
 #: lunarphase.cpp:35
 msgctxt "LunarPhase|"
 msgid "Waxing Crescent"
-msgstr ""
+msgstr "Pre-cuarto crecente"
 
 #: lunarphase.cpp:37
 msgctxt "LunarPhase|"
 msgid "Waxing Gibbous"
-msgstr ""
+msgstr "Pre-Lúa chea"
 
 #: lunarphase.cpp:39
 msgctxt "LunarPhase|"
 msgid "Waning Gibbous"
-msgstr ""
+msgstr "Pre-cuarto minguante"
 
 #: lunarphase.cpp:41
 msgctxt "LunarPhase|"
 msgid "Waning Crescent"
-msgstr ""
+msgstr "Pre-Lúa nova"
 
 #: zodiac.cpp:66
 msgctxt "Zodiac|"
@@ -413,7 +402,7 @@ msgstr "Tauro"
 #: zodiac.cpp:70
 msgctxt "Zodiac|"
 msgid "Gemini"
-msgstr "Xémeos"
+msgstr "Xemelgos"
 
 #: zodiac.cpp:72
 msgctxt "Zodiac|"
@@ -473,7 +462,7 @@ msgstr "touro"
 #: zodiac.cpp:262
 msgctxt "HolidayRegion|zodiac symbol for Gemini"
 msgid "twins"
-msgstr "xémeos"
+msgstr "xemelgos"
 
 #: zodiac.cpp:264
 msgctxt "HolidayRegion|zodiac symbol for Cancer"
@@ -513,7 +502,7 @@ msgstr "cabra"
 #: zodiac.cpp:278
 msgctxt "HolidayRegion|zodiac symbol for Aquarius"
 msgid "water carrier"
-msgstr "acuarius"
+msgstr "acuario"
 
 #: zodiac.cpp:280
 msgctxt "HolidayRegion|zodiac symbol for Pices"
