@@ -1,4 +1,4 @@
-# Translation of libkholidays5_qt to Northern Sami
+# Translation of libkholidays6_qt to Northern Sami
 #
 msgid ""
 msgstr ""
