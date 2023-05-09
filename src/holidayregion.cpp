@@ -1125,6 +1125,17 @@ bool HolidayRegion::isHoliday(const QDate &date) const
     return false;
 }
 
+static bool maybeCountry(QStringView holidayId, QStringView country)
+{
+    if (country.isEmpty()) {
+        return false;
+    }
+    if (holidayId.size() < 2 || country.size() < 2 || (country.size() > 2 && country[2] != QLatin1Char('-'))) {
+        return true; // not the format we expect, check the content
+    }
+    return holidayId.startsWith(country.left(2));
+}
+
 QString HolidayRegion::defaultRegionCode(const QString &country, const QString &language)
 {
     // Try to match against the users country and language, or failing that the language country.
@@ -1170,6 +1181,11 @@ QString HolidayRegion::defaultRegionCode(const QString &country, const QString &
 
     const QStringList regionList = KHolidays::HolidayRegion::regionCodes();
     for (const QString &aRegionCode : regionList) {
+        // avoid expensive parsing in most cases by leveraging the country being in the file name
+        if (!maybeCountry(aRegionCode, localeCountry) && !maybeCountry(aRegionCode, localeLanguageCountry)) {
+            continue;
+        }
+
         const auto hr = KHolidays::HolidayRegion(aRegionCode);
         QString regionCountry = hr.countryCode().toLower();
         QString regionSubdivisionCountry;
