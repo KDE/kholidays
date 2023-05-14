@@ -2,7 +2,7 @@
 # Language AR translations for PACKAGE package.
 # Automatically generated, 2007.
 # Youssef Chahibi <chahibi@gmail.com>, 2007.
-# Safa Alfulaij <safa1996alfulaij@gmail.com>, ٢٠١٥, ٢٠١٦, 2018.
+# Safa Alfulaij <safa1996alfulaij@gmail.com>, 2015, 2016, 2018.
 # Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022.
 msgid ""
 msgstr ""
