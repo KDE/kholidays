@@ -24,6 +24,10 @@ description "National holiday file for USA"
 "President's Day"                public on third monday in february
 "Memorial Day"                   public on last monday in may
 "Juneteenth Day"                 public on june 19
+"Juneteenth Day"                 public on (([june 19] == [saturday after ([june 19])]) ?
+                                                          [friday before ([june 19])] : noop)
+"Juneteenth Day"                 public on (([june 19] == [sunday   after ([june 19])]) ?
+                                                          [monday after  ([june 19])] : noop)
 "Independence Day"               public on july 4
 "Labor Day"                      public on first monday in september
 "Columbus Day"                   public on second monday in october

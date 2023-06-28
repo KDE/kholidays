@@ -267,3 +267,17 @@ void HolidayRegionTest::testDominicanRepublicDiadelaConstitucion()
     holidays = region.rawHolidays(QDate(2035, 10, 20), QDate(2035, 12, 15), QLatin1String("public"));
     QCOMPARE(holidays.first().observedStartDate(), QDate(2035, 11, 5));
 }
+
+void HolidayRegionTest::testUsAmericanJuneteenth()
+{
+    KHolidays::HolidayRegion region(QStringLiteral("us_en-us"));
+    printMetadata(region);
+    auto holidays = region.rawHolidays(QDate(2023, 6, 19), QDate(2023, 6, 19));
+    QCOMPARE(holidays.first().observedStartDate(), QDate(2023, 6, 19));
+    holidays = region.rawHolidays(QDate(2024, 6, 1), QDate(2024, 6, 25), QLatin1String("public"));
+    QCOMPARE(holidays.first().observedStartDate(), QDate(2024, 6, 19));
+    holidays = region.rawHolidays(QDate(2027, 6, 1), QDate(2027, 6, 25), QLatin1String("public"));
+    QCOMPARE(holidays.first().observedStartDate(), QDate(2027, 6, 18));
+    holidays = region.rawHolidays(QDate(2033, 6, 20), QDate(2033, 6, 25), QLatin1String("public"));
+    QCOMPARE(holidays.first().observedStartDate(), QDate(2033, 6, 20));
+}
