@@ -105,3 +105,5 @@ QHash<int, QByteArray> HolidayRegionsDeclarativeModel::roleNames() const
 
     return roles;
 }
+
+#include "moc_holidayregionsmodel.cpp"

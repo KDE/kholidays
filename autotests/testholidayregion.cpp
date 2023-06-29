@@ -281,3 +281,5 @@ void HolidayRegionTest::testUsAmericanJuneteenth()
     holidays = region.rawHolidays(QDate(2033, 6, 20), QDate(2033, 6, 25), QLatin1String("public"));
     QCOMPARE(holidays.first().observedStartDate(), QDate(2033, 6, 20));
 }
+
+#include "moc_testholidayregion.cpp"

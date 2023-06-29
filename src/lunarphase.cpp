@@ -147,3 +147,5 @@ static double phaseAngle(int64_t unixmsec)
 
     return fixAngle(trueLong - geocentricEclipticLong);
 }
+
+#include "moc_lunarphase.cpp"
