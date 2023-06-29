@@ -90,3 +90,4 @@ void KHolidaysDeclarativePlugin::registerTypes(const char *uri)
 }
 
 #include "kholidaysdeclarativeplugin.moc"
+#include "moc_kholidaysdeclarativeplugin.cpp"

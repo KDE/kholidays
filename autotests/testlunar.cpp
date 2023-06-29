@@ -239,3 +239,5 @@ void LunarTest::testIntermediatePhases()
         QVERIFY(!LunarPhase::phaseNameAtDate(dt).isEmpty());
     }
 }
+
+#include "moc_testlunar.cpp"

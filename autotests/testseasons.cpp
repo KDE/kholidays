@@ -56,3 +56,5 @@ void SeasonsTest::test()
     AstroSeasons as;
     QCOMPARE(as.seasonAtDate(date), season);
 }
+
+#include "moc_testseasons.cpp"

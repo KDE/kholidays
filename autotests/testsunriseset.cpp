@@ -202,3 +202,5 @@ void SunriseTest::TestPolarDayNight()
     QVERIFY(verifyPolarNightRange(QDate(2022, 5, 10), QDate(2022, 8, 2), -78.5, true));
     QVERIFY(verifyPolarNightRange(QDate(2022, 8, 3), QDate(2022, 12, 31), -78.5, false));
 }
+
+#include "moc_testsunriseset.cpp"
