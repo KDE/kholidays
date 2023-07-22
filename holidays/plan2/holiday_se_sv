@@ -5,7 +5,7 @@
 ::
 :: Author:   riiga
 ::
-:: Updated:  2019-12-22
+:: Updated:  2023-07-22
 ::
 :: Source:   https://sv.wikipedia.org/wiki/Helgdagar_i_Sverige
 ::           https://sv.wikipedia.org/wiki/Flaggdagar_i_Sverige
@@ -44,7 +44,6 @@ description "Helg- och flaggdagar i Sverige"
 "Pingstafton"                 religious on easter plus 48 days
 "Annandag pingst"             public religious on ((year < 2005) ? ([easter] + 50 days) : noop)
 "Annandag pingst"             religious on ((year >= 2005) ? ([easter] + 50 days) : noop)
-::"Annandag pingst"             religious on easter plus 50 days
 "Allhelgonaafton"             religious on friday before november 5
 "Allhelgonadagen"             religious on november 1
 "Första advent"               religious on sunday before december 24 minus 21 days
@@ -77,14 +76,15 @@ description "Helg- och flaggdagar i Sverige"
 "Krav på vinterdäck"          seasonal on december 1
 
 :: Flag Days
-"Konung Carl XVI Gustafs namnsdag"               commemorative on ((year >= 1982) ? [january 28] : noop)
-"Kronprinsessan Victorias namnsdag"              commemorative on ((year >= 1982) ? [march 12] : noop)
-"Konung Carl XVI Gustafs födelsedag"             commemorative on ((year >= 1982) ? [april 30] : noop)
-"Veterandagen"                                   commemorative on ((year >= 2018) ? [may 29] : noop)
-"Kronprinsessan Victorias födelsedag"            commemorative on ((year >= 1982) ? [july 14] : noop)
-"Drottning Silvias namnsdag"                     commemorative on ((year >= 1982) ? [august 8] : noop)
-"FN-dagen"                                       commemorative on ((year >= 1982) ? [october 24] : noop)
-"Gustav Adolfsdagen"                             commemorative on ((year >= 1982) ? [november 6] : noop)
-"Nobeldagen"                                     commemorative on ((year >= 1982) ? [december 10] : noop)
-"Drottning Silvias födelsedag"                   commemorative on ((year >= 1982) ? [december 23] : noop)
-"100-årsminnet av införandet av allmän rösträtt" commemorative on 17 december 2018
+"Konung Carl XVI Gustafs namnsdag"                          commemorative on ((year >= 1982) ? [january 28] : noop)
+"Kronprinsessan Victorias namnsdag"                         commemorative on ((year >= 1982) ? [march 12] : noop)
+"Konung Carl XVI Gustafs födelsedag"                        commemorative on ((year >= 1982) ? [april 30] : noop)
+"Veterandagen"                                              commemorative on ((year >= 2018) ? [may 29] : noop)
+"Kronprinsessan Victorias födelsedag"                       commemorative on ((year >= 1982) ? [july 14] : noop)
+"Drottning Silvias namnsdag"                                commemorative on ((year >= 1982) ? [august 8] : noop)
+"FN-dagen"                                                  commemorative on ((year >= 1982) ? [october 24] : noop)
+"Gustav Adolfsdagen"                                        commemorative on ((year >= 1982) ? [november 6] : noop)
+"Nobeldagen"                                                commemorative on ((year >= 1982) ? [december 10] : noop)
+"Drottning Silvias födelsedag"                              commemorative on ((year >= 1982) ? [december 23] : noop)
+"100-årsminnet av införandet av allmän rösträtt"            commemorative on 17 december 2018
+"50-årsdagen av H.M. Konung Carl XVI Gustafs trontillträde" commemorative on 15 september 2023
