@@ -5,7 +5,7 @@
 ::
 :: Author:   riiga
 ::
-:: Updated:  2019-12-22
+:: Updated:  2023-07-22
 ::
 :: Source:   https://sv.wikipedia.org/wiki/Lista_över_namnsdagar_i_Sverige_i_datumordning
 ::
@@ -34,7 +34,7 @@ description "Namnsdagar i Sverige"
 "Hjalmar, Helmer" nameday on january 16
 "Anton, Tony" nameday on january 17
 "Hilda, Hildur" nameday on january 18
-"Henrik" nameday on january 19
+"Henrik, Henry" nameday on january 19
 "Fabian, Sebastian" nameday on january 20
 "Agnes, Agneta" nameday on january 21
 "Vincent, Viktor" nameday on january 22
@@ -74,7 +74,7 @@ description "Namnsdagar i Sverige"
 "Sigvard, Sivert" nameday on february 25
 "Torgny, Torkel" nameday on february 26
 "Lage" nameday on february 27
-"Maria" nameday on february 28
+"Maria, Maja" nameday on february 28
 
 "Albin, Elvira" nameday on march 1
 "Ernst, Erna" nameday on march 2
@@ -87,7 +87,7 @@ description "Namnsdagar i Sverige"
 "Torbjörn, Torleif" nameday on march 9
 "Edla, Ada" nameday on march 10
 "Edvin, Egon" nameday on march 11
-"Viktoria" nameday on march 12
+"Viktoria, Regina" nameday on march 12
 "Greger" nameday on march 13
 "Matilda, Maud" nameday on march 14
 "Kristoffer, Christel" nameday on march 15
@@ -105,7 +105,7 @@ description "Namnsdagar i Sverige"
 "Malkolm, Morgan" nameday on march 28
 "Jonas, Jens" nameday on march 29
 "Holger, Holmfrid" nameday on march 30
-"Ester" nameday on march 31
+"Ester, Noa" nameday on march 31
 
 "Harald, Hervor" nameday on april 1
 "Gudmund, Ingemund" nameday on april 2
@@ -228,7 +228,7 @@ description "Namnsdagar i Sverige"
 "Jesper, Jasmine" nameday on july 26
 "Marta" nameday on july 27
 "Botvid, Seved" nameday on july 28
-"Olof" nameday on july 29
+"Olof, Olle" nameday on july 29
 "Algot" nameday on july 30
 "Helena, Elin" nameday on july 31
 
@@ -327,7 +327,7 @@ description "Namnsdagar i Sverige"
 "Elsa, Isabella" nameday on october 30
 "Edit, Edgar" nameday on october 31
 
-"Tobias" nameday on november 2
+"Tobias, Tim" nameday on november 2
 "Hubert, Hugo" nameday on november 3
 "Sverker" nameday on november 4
 "Eugen, Eugenia" nameday on november 5
@@ -359,7 +359,7 @@ description "Namnsdagar i Sverige"
 
 "Oskar, Ossian" nameday on december 1
 "Beata, Beatrice" nameday on december 2
-"Lydia" nameday on december 3
+"Lydia, Cornelia" nameday on december 3
 "Barbara, Barbro" nameday on december 4
 "Sven" nameday on december 5
 "Nikolaus, Niklas" nameday on december 6
