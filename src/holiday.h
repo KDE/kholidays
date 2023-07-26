@@ -136,4 +136,6 @@ private:
 
 }
 
+Q_DECLARE_TYPEINFO(KHolidays::Holiday, Q_RELOCATABLE_TYPE);
+
 #endif // KHOLIDAYS_HOLIDAY_H
