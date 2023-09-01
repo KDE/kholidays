@@ -7,7 +7,7 @@ target_sources(kholidaysdeclarativeplugin PRIVATE
   holidayregionsmodel.h
 )
 
-target_link_libraries(kholidaysdeclarativeplugin
+target_link_libraries(kholidaysdeclarativeplugin PRIVATE
   Qt6::Qml
   Qt6::Core
   KF6Holidays
