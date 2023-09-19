@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: libkholidays\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2015-06-13 09:34+0000\n"
-"PO-Revision-Date: 2023-03-22 15:03+0000\n"
+"PO-Revision-Date: 2023-09-18 14:42+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -240,7 +240,7 @@ msgstr "Menningarlegt"
 #: holidayregion.cpp:978
 msgctxt "HolidayRegion|Holiday type"
 msgid "Commemorative"
-msgstr ""
+msgstr "Minningarathöfn"
 
 #: holidayregion.cpp:980
 msgctxt "HolidayRegion|Holiday type"
@@ -300,17 +300,17 @@ msgstr "Gyðinglegt"
 #: holidayregion.cpp:1002
 msgctxt "HolidayRegion|Holiday type"
 msgid "Jewish Orthodox"
-msgstr ""
+msgstr "Rétttrúnaðar-gyðinglegt"
 
 #: holidayregion.cpp:1004
 msgctxt "HolidayRegion|Holiday type"
 msgid "Jewish Conservative"
-msgstr ""
+msgstr "Íhaldsamt-gyðinglegt"
 
 #: holidayregion.cpp:1006
 msgctxt "HolidayRegion|Holiday type"
 msgid "Jewish Reform"
-msgstr ""
+msgstr "Umbóta-gyðinglegt"
 
 #: holidayregion.cpp:1008
 msgctxt "HolidayRegion|Holiday type"
