@@ -112,16 +112,6 @@ if(BUILD_QCH)
   )
 endif()
 
-ecm_generate_pri_file(
-  BASE_NAME KHolidays
-  LIB_NAME KF6Holidays
-  DEPS "widgets"
-  FILENAME_VAR PRI_FILENAME
-  INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/KHolidays
-)
-
-install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
-
 add_subdirectory(declarative)
 
 ecm_qt_install_logging_categories(
