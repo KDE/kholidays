@@ -8,8 +8,7 @@ portingAid: false
 deprecated: false
 release: true
 libraries:
- - qmake: KHolidays
-   cmake: "KF6::Holidays"
+  - cmake: "KF6::Holidays"
 cmakename: KF6Holidays
 
 public_lib: true
