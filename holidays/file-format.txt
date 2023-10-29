@@ -27,9 +27,9 @@ The metadata can contain country code, language code, name and description:
 
 The list holds 0 or more holiday definitions:
 
-    "Event Name" [CATEGORIES] DATE_RULE
+    "Event Name" CATEGORIES DATE_RULE
 
-Categories can be 0 or more of the following keywords:
+CATEGORIES can be 0 or more of the following keywords:
 
     public
     civil
