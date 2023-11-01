@@ -29,20 +29,22 @@ using namespace KHolidays;
 
 // Copied from qlocale_data_p.h and qlocale.h, see copyright information at top of file
 // To later be replaced by OpenCodes or public Qt api
-static const unsigned char country_code_list[] =
-    "ZZ\0" // AnyCountry
+static constexpr unsigned char territory_code_list[] =
+    "ZZ\0" // AnyTerritory
     "AF\0" // Afghanistan
+    "AX\0" // Aland Islands
     "AL\0" // Albania
     "DZ\0" // Algeria
-    "AS\0" // AmericanSamoa
+    "AS\0" // American Samoa
     "AD\0" // Andorra
     "AO\0" // Angola
     "AI\0" // Anguilla
     "AQ\0" // Antarctica
-    "AG\0" // AntiguaAndBarbuda
+    "AG\0" // Antigua and Barbuda
     "AR\0" // Argentina
     "AM\0" // Armenia
     "AW\0" // Aruba
+    "AC\0" // Ascension Island
     "AU\0" // Australia
     "AT\0" // Austria
     "AZ\0" // Azerbaijan
@@ -57,58 +59,65 @@ static const unsigned char country_code_list[] =
     "BM\0" // Bermuda
     "BT\0" // Bhutan
     "BO\0" // Bolivia
-    "BA\0" // BosniaAndHerzegowina
+    "BA\0" // Bosnia and Herzegovina
     "BW\0" // Botswana
-    "BV\0" // BouvetIsland
+    "BV\0" // Bouvet Island
     "BR\0" // Brazil
-    "IO\0" // BritishIndianOceanTerritory
+    "IO\0" // British Indian Ocean Territory
+    "VG\0" // British Virgin Islands
     "BN\0" // Brunei
     "BG\0" // Bulgaria
-    "BF\0" // BurkinaFaso
+    "BF\0" // Burkina Faso
     "BI\0" // Burundi
     "KH\0" // Cambodia
     "CM\0" // Cameroon
     "CA\0" // Canada
-    "CV\0" // CapeVerde
-    "KY\0" // CaymanIslands
-    "CF\0" // CentralAfricanRepublic
+    "IC\0" // Canary Islands
+    "CV\0" // Cape Verde
+    "BQ\0" // Caribbean Netherlands
+    "KY\0" // Cayman Islands
+    "CF\0" // Central African Republic
+    "EA\0" // Ceuta and Melilla
     "TD\0" // Chad
     "CL\0" // Chile
     "CN\0" // China
-    "CX\0" // ChristmasIsland
-    "CC\0" // CocosIslands
+    "CX\0" // Christmas Island
+    "CP\0" // Clipperton Island
+    "CC\0" // Cocos Islands
     "CO\0" // Colombia
     "KM\0" // Comoros
-    "CD\0" // CongoKinshasa
-    "CG\0" // CongoBrazzaville
-    "CK\0" // CookIslands
-    "CR\0" // CostaRica
-    "CI\0" // IvoryCoast
+    "CG\0" // Congo - Brazzaville
+    "CD\0" // Congo - Kinshasa
+    "CK\0" // Cook Islands
+    "CR\0" // Costa Rica
     "HR\0" // Croatia
     "CU\0" // Cuba
+    "CW\0" // Curacao
     "CY\0" // Cyprus
-    "CZ\0" // CzechRepublic
+    "CZ\0" // Czechia
     "DK\0" // Denmark
+    "DG\0" // Diego Garcia
     "DJ\0" // Djibouti
     "DM\0" // Dominica
-    "DO\0" // DominicanRepublic
-    "TL\0" // EastTimor
+    "DO\0" // Dominican Republic
     "EC\0" // Ecuador
     "EG\0" // Egypt
-    "SV\0" // ElSalvador
-    "GQ\0" // EquatorialGuinea
+    "SV\0" // El Salvador
+    "GQ\0" // Equatorial Guinea
     "ER\0" // Eritrea
     "EE\0" // Estonia
+    "SZ\0" // Eswatini
     "ET\0" // Ethiopia
-    "FK\0" // FalklandIslands
-    "FO\0" // FaroeIslands
+    "150" // Europe
+    "EU\0" // European Union
+    "FK\0" // Falkland Islands
+    "FO\0" // Faroe Islands
     "FJ\0" // Fiji
     "FI\0" // Finland
     "FR\0" // France
-    "GG\0" // Guernsey
-    "GF\0" // FrenchGuiana
-    "PF\0" // FrenchPolynesia
-    "TF\0" // FrenchSouthernTerritories
+    "GF\0" // French Guiana
+    "PF\0" // French Polynesia
+    "TF\0" // French Southern Territories
     "GA\0" // Gabon
     "GM\0" // Gambia
     "GE\0" // Georgia
@@ -121,13 +130,14 @@ static const unsigned char country_code_list[] =
     "GP\0" // Guadeloupe
     "GU\0" // Guam
     "GT\0" // Guatemala
+    "GG\0" // Guernsey
+    "GW\0" // Guinea-Bissau
     "GN\0" // Guinea
-    "GW\0" // GuineaBissau
     "GY\0" // Guyana
     "HT\0" // Haiti
-    "HM\0" // HeardAndMcDonaldIslands
+    "HM\0" // Heard and McDonald Islands
     "HN\0" // Honduras
-    "HK\0" // HongKong
+    "HK\0" // Hong Kong
     "HU\0" // Hungary
     "IS\0" // Iceland
     "IN\0" // India
@@ -135,19 +145,22 @@ static const unsigned char country_code_list[] =
     "IR\0" // Iran
     "IQ\0" // Iraq
     "IE\0" // Ireland
+    "IM\0" // Isle of Man
     "IL\0" // Israel
     "IT\0" // Italy
+    "CI\0" // Ivory Coast
     "JM\0" // Jamaica
     "JP\0" // Japan
+    "JE\0" // Jersey
     "JO\0" // Jordan
     "KZ\0" // Kazakhstan
     "KE\0" // Kenya
     "KI\0" // Kiribati
-    "KP\0" // NorthKorea
-    "KR\0" // SouthKorea
+    "XK\0" // Kosovo
     "KW\0" // Kuwait
     "KG\0" // Kyrgyzstan
     "LA\0" // Laos
+    "419" // Latin America
     "LV\0" // Latvia
     "LB\0" // Lebanon
     "LS\0" // Lesotho
@@ -156,7 +169,7 @@ static const unsigned char country_code_list[] =
     "LI\0" // Liechtenstein
     "LT\0" // Lithuania
     "LU\0" // Luxembourg
-    "MO\0" // Macau
+    "MO\0" // Macao
     "MK\0" // Macedonia
     "MG\0" // Madagascar
     "MW\0" // Malawi
@@ -164,7 +177,7 @@ static const unsigned char country_code_list[] =
     "MV\0" // Maldives
     "ML\0" // Mali
     "MT\0" // Malta
-    "MH\0" // MarshallIslands
+    "MH\0" // Marshall Islands
     "MQ\0" // Martinique
     "MR\0" // Mauritania
     "MU\0" // Mauritius
@@ -174,6 +187,7 @@ static const unsigned char country_code_list[] =
     "MD\0" // Moldova
     "MC\0" // Monaco
     "MN\0" // Mongolia
+    "ME\0" // Montenegro
     "MS\0" // Montserrat
     "MA\0" // Morocco
     "MZ\0" // Mozambique
@@ -182,59 +196,65 @@ static const unsigned char country_code_list[] =
     "NR\0" // Nauru
     "NP\0" // Nepal
     "NL\0" // Netherlands
-    "CW\0" // CuraSao
-    "NC\0" // NewCaledonia
-    "NZ\0" // NewZealand
+    "NC\0" // New Caledonia
+    "NZ\0" // New Zealand
     "NI\0" // Nicaragua
-    "NE\0" // Niger
     "NG\0" // Nigeria
+    "NE\0" // Niger
     "NU\0" // Niue
-    "NF\0" // NorfolkIsland
-    "MP\0" // NorthernMarianaIslands
+    "NF\0" // Norfolk Island
+    "MP\0" // Northern Mariana Islands
+    "KP\0" // North Korea
     "NO\0" // Norway
     "OM\0" // Oman
+    "QO\0" // Outlying Oceania
     "PK\0" // Pakistan
     "PW\0" // Palau
-    "PS\0" // PalestinianTerritories
+    "PS\0" // Palestinian Territories
     "PA\0" // Panama
-    "PG\0" // PapuaNewGuinea
+    "PG\0" // Papua New Guinea
     "PY\0" // Paraguay
     "PE\0" // Peru
     "PH\0" // Philippines
     "PN\0" // Pitcairn
     "PL\0" // Poland
     "PT\0" // Portugal
-    "PR\0" // PuertoRico
+    "PR\0" // Puerto Rico
     "QA\0" // Qatar
     "RE\0" // Reunion
     "RO\0" // Romania
     "RU\0" // Russia
     "RW\0" // Rwanda
-    "KN\0" // SaintKittsAndNevis
-    "LC\0" // SaintLucia
-    "VC\0" // SaintVincentAndTheGrenadines
+    "BL\0" // Saint Barthelemy
+    "SH\0" // Saint Helena
+    "KN\0" // Saint Kitts and Nevis
+    "LC\0" // Saint Lucia
+    "MF\0" // Saint Martin
+    "PM\0" // Saint Pierre and Miquelon
+    "VC\0" // Saint Vincent and Grenadines
     "WS\0" // Samoa
-    "SM\0" // SanMarino
-    "ST\0" // SaoTomeAndPrincipe
-    "SA\0" // SaudiArabia
+    "SM\0" // San Marino
+    "ST\0" // Sao Tome and Principe
+    "SA\0" // Saudi Arabia
     "SN\0" // Senegal
+    "RS\0" // Serbia
     "SC\0" // Seychelles
-    "SL\0" // SierraLeone
+    "SL\0" // Sierra Leone
     "SG\0" // Singapore
+    "SX\0" // Sint Maarten
     "SK\0" // Slovakia
     "SI\0" // Slovenia
-    "SB\0" // SolomonIslands
+    "SB\0" // Solomon Islands
     "SO\0" // Somalia
-    "ZA\0" // SouthAfrica
-    "GS\0" // SouthGeorgiaAndTheSouthSandwichIslands
+    "ZA\0" // South Africa
+    "GS\0" // South Georgia and South Sandwich Islands
+    "KR\0" // South Korea
+    "SS\0" // South Sudan
     "ES\0" // Spain
-    "LK\0" // SriLanka
-    "SH\0" // SaintHelena
-    "PM\0" // SaintPierreAndMiquelon
+    "LK\0" // Sri Lanka
     "SD\0" // Sudan
     "SR\0" // Suriname
-    "SJ\0" // SvalbardAndJanMayenIslands
-    "SZ\0" // Swaziland
+    "SJ\0" // Svalbard and Jan Mayen
     "SE\0" // Sweden
     "CH\0" // Switzerland
     "SY\0" // Syria
@@ -242,52 +262,36 @@ static const unsigned char country_code_list[] =
     "TJ\0" // Tajikistan
     "TZ\0" // Tanzania
     "TH\0" // Thailand
+    "TL\0" // Timor-Leste
     "TG\0" // Togo
     "TK\0" // Tokelau
     "TO\0" // Tonga
-    "TT\0" // TrinidadAndTobago
+    "TT\0" // Trinidad and Tobago
+    "TA\0" // Tristan da Cunha
     "TN\0" // Tunisia
     "TR\0" // Turkey
     "TM\0" // Turkmenistan
-    "TC\0" // TurksAndCaicosIslands
+    "TC\0" // Turks and Caicos Islands
     "TV\0" // Tuvalu
     "UG\0" // Uganda
     "UA\0" // Ukraine
-    "AE\0" // UnitedArabEmirates
-    "GB\0" // UnitedKingdom
-    "US\0" // UnitedStates
-    "UM\0" // UnitedStatesMinorOutlyingIslands
+    "AE\0" // United Arab Emirates
+    "GB\0" // United Kingdom
+    "UM\0" // United States Outlying Islands
+    "US\0" // United States
+    "VI\0" // United States Virgin Islands
     "UY\0" // Uruguay
     "UZ\0" // Uzbekistan
     "VU\0" // Vanuatu
-    "VA\0" // VaticanCityState
+    "VA\0" // Vatican City
     "VE\0" // Venezuela
     "VN\0" // Vietnam
-    "VG\0" // BritishVirginIslands
-    "VI\0" // UnitedStatesVirginIslands
-    "WF\0" // WallisAndFutunaIslands
-    "EH\0" // WesternSahara
+    "WF\0" // Wallis and Futuna
+    "EH\0" // Western Sahara
+    "001" // world
     "YE\0" // Yemen
-    "IC\0" // CanaryIslands
     "ZM\0" // Zambia
     "ZW\0" // Zimbabwe
-    "CP\0" // ClippertonIsland
-    "ME\0" // Montenegro
-    "RS\0" // Serbia
-    "BL\0" // Saint Barthelemy
-    "MF\0" // Saint Martin
-    "419" // LatinAmericaAndTheCaribbean
-    "AC\0" // AscensionIsland
-    "AX\0" // AlandIslands
-    "DG\0" // DiegoGarcia
-    "EA\0" // CeutaAndMelilla
-    "IM\0" // IsleOfMan
-    "JE\0" // Jersey
-    "TA\0" // TristanDaCunha
-    "SS\0" // SouthSudan
-    "BQ\0" // Bonaire
-    "SX\0" // SintMaarten
-    "XK\0" // Kosovo
     ;
 
 static const unsigned char language_code_list[] =
@@ -636,7 +640,7 @@ static QString countryToCode(QLocale::Country country)
         return QString();
     }
 
-    const unsigned char *c = country_code_list + 3 * (uint(country));
+    const unsigned char *c = territory_code_list + 3 * (uint(country));
 
     QString code(c[2] == 0 ? 2 : 3, Qt::Uninitialized);
 
@@ -659,10 +663,10 @@ static QLocale::Country codeToCountry(const QString &code)
     ushort uc2 = len-- > 0 ? code[1].toUpper().unicode() : 0;
     ushort uc3 = len-- > 0 ? code[2].toUpper().unicode() : 0;
 
-    const unsigned char *c = country_code_list;
+    const unsigned char *c = territory_code_list;
     for (; *c != 0; c += 3) {
         if (uc1 == c[0] && uc2 == c[1] && uc3 == c[2]) {
-            return QLocale::Country((c - country_code_list) / 3);
+            return QLocale::Country((c - territory_code_list) / 3);
         }
     }
 
