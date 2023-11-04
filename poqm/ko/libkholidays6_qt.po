@@ -53,294 +53,294 @@ msgctxt "HolidayRegionsDeclarativeModel|"
 msgid "Description"
 msgstr "설명"
 
-#: holidayregion.cpp:890
+#: holidayregion.cpp:584
 msgctxt "HolidayRegion|Canadian region"
 msgid "Quebec"
 msgstr "퀘벡"
 
-#: holidayregion.cpp:893
+#: holidayregion.cpp:587
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Bavaria"
 msgstr "독일, 바이에른"
 
-#: holidayregion.cpp:895
+#: holidayregion.cpp:589
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Brandenburg"
 msgstr "독일, 브란덴부르크"
 
-#: holidayregion.cpp:897
+#: holidayregion.cpp:591
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Berlin"
 msgstr "독일, 베를린"
 
-#: holidayregion.cpp:899
+#: holidayregion.cpp:593
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Baden-Wuerttemberg"
 msgstr "독일, 바덴뷔르템베르크"
 
-#: holidayregion.cpp:901
+#: holidayregion.cpp:595
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Hesse"
 msgstr "독일, 헤센"
 
-#: holidayregion.cpp:903
+#: holidayregion.cpp:597
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Mecklenburg-Hither Pomerania"
 msgstr "독일, 메클렌부르크포어포메른"
 
-#: holidayregion.cpp:905
+#: holidayregion.cpp:599
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Lower Saxony"
 msgstr "독일, 니더작센"
 
-#: holidayregion.cpp:907
+#: holidayregion.cpp:601
 msgctxt "HolidayRegion|German region"
 msgid "Germany, North Rhine-Westphalia"
 msgstr "독일, 노르트라인베스트팔렌"
 
-#: holidayregion.cpp:909
+#: holidayregion.cpp:603
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Rhineland-Palatinate"
 msgstr "독일, 라인란트팔츠"
 
-#: holidayregion.cpp:911
+#: holidayregion.cpp:605
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Schleswig-Holstein"
 msgstr "독일, 슐레스비히홀슈타인"
 
-#: holidayregion.cpp:913
+#: holidayregion.cpp:607
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Saarland"
 msgstr "독일, 자를란트"
 
-#: holidayregion.cpp:915
+#: holidayregion.cpp:609
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Saxony"
 msgstr "독일, 작센"
 
-#: holidayregion.cpp:917
+#: holidayregion.cpp:611
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Saxony-Anhalt"
 msgstr "독일, 작센안할트"
 
-#: holidayregion.cpp:919
+#: holidayregion.cpp:613
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Thuringia"
 msgstr "독일, 튀링겐"
 
-#: holidayregion.cpp:922
+#: holidayregion.cpp:616
 msgctxt "HolidayRegion|Spanish region"
 msgid "Catalonia"
 msgstr "카탈루냐"
 
-#: holidayregion.cpp:924
+#: holidayregion.cpp:618
 msgctxt "HolidayRegion|UK Region"
 msgid "England and Wales"
 msgstr "잉글랜드와 웨일스"
 
-#: holidayregion.cpp:926
+#: holidayregion.cpp:620
 msgctxt "HolidayRegion|UK Region"
 msgid "England"
 msgstr "잉글랜드"
 
-#: holidayregion.cpp:928
+#: holidayregion.cpp:622
 msgctxt "HolidayRegion|UK Region"
 msgid "Wales"
 msgstr "웨일스"
 
-#: holidayregion.cpp:930
+#: holidayregion.cpp:624
 msgctxt "HolidayRegion|UK Region"
 msgid "Scotland"
 msgstr "스코틀랜드"
 
-#: holidayregion.cpp:932
+#: holidayregion.cpp:626
 msgctxt "HolidayRegion|UK Region"
 msgid "Northern Ireland"
 msgstr "북아일랜드"
 
-#: holidayregion.cpp:934
+#: holidayregion.cpp:628
 msgctxt "HolidayRegion|Italian Region"
 msgid "South Tyrol"
 msgstr "남티롤"
 
-#: holidayregion.cpp:936
+#: holidayregion.cpp:630
 msgctxt "HolidayRegion|"
 msgid "New South Wales"
 msgstr "뉴사우스웨일스"
 
-#: holidayregion.cpp:938
+#: holidayregion.cpp:632
 msgctxt "HolidayRegion|Australian Region"
 msgid "Queensland"
 msgstr "퀸즐랜드"
 
-#: holidayregion.cpp:940
+#: holidayregion.cpp:634
 msgctxt "HolidayRegion|Australian Region"
 msgid "Victoria"
 msgstr "빅토리아"
 
-#: holidayregion.cpp:942
+#: holidayregion.cpp:636
 msgctxt "HolidayRegion|Australian Region"
 msgid "South Australia"
 msgstr "사우스오스트레일리아"
 
-#: holidayregion.cpp:944
+#: holidayregion.cpp:638
 msgctxt "HolidayRegion|Australian Region"
 msgid "Northern Territory"
 msgstr "노던 준주"
 
-#: holidayregion.cpp:946
+#: holidayregion.cpp:640
 msgctxt "HolidayRegion|Australian Region"
 msgid "Australian Capital Territory"
 msgstr "오스트레일리아 수도 준주"
 
-#: holidayregion.cpp:948
+#: holidayregion.cpp:642
 msgctxt "HolidayRegion|Australian Region"
 msgid "Western Australia"
 msgstr "웨스턴오스트레일리아"
 
-#: holidayregion.cpp:950
+#: holidayregion.cpp:644
 msgctxt "HolidayRegion|Australian Region"
 msgid "Tasmania"
 msgstr "태즈메이니아"
 
-#: holidayregion.cpp:952
+#: holidayregion.cpp:646
 msgctxt "HolidayRegion|Bosnian and Herzegovinian Region"
 msgid "Republic of Srpska"
 msgstr "스르프스카 공화국"
 
-#: holidayregion.cpp:970
+#: holidayregion.cpp:664
 msgctxt "HolidayRegion|Holiday type"
 msgid "Public"
 msgstr "공공"
 
-#: holidayregion.cpp:972
+#: holidayregion.cpp:666
 msgctxt "HolidayRegion|Holiday type"
 msgid "Civil"
 msgstr "민간"
 
-#: holidayregion.cpp:974
+#: holidayregion.cpp:668
 msgctxt "HolidayRegion|Holiday type"
 msgid "Religious"
 msgstr "종교"
 
-#: holidayregion.cpp:976
+#: holidayregion.cpp:670
 msgctxt "HolidayRegion|Holiday type"
 msgid "Government"
 msgstr "정부"
 
-#: holidayregion.cpp:978
+#: holidayregion.cpp:672
 msgctxt "HolidayRegion|Holiday type"
 msgid "Financial"
 msgstr "경제"
 
-#: holidayregion.cpp:980
+#: holidayregion.cpp:674
 msgctxt "HolidayRegion|Holiday type"
 msgid "Cultural"
 msgstr "문화"
 
-#: holidayregion.cpp:982
+#: holidayregion.cpp:676
 msgctxt "HolidayRegion|Holiday type"
 msgid "Commemorative"
 msgstr "기념"
 
-#: holidayregion.cpp:984
+#: holidayregion.cpp:678
 msgctxt "HolidayRegion|Holiday type"
 msgid "Historical"
 msgstr "역사"
 
-#: holidayregion.cpp:986
+#: holidayregion.cpp:680
 msgctxt "HolidayRegion|Holiday type"
 msgid "School"
 msgstr "학교"
 
-#: holidayregion.cpp:988
+#: holidayregion.cpp:682
 msgctxt "HolidayRegion|Holiday type"
 msgid "Seasonal"
 msgstr "계절"
 
-#: holidayregion.cpp:990
+#: holidayregion.cpp:684
 msgctxt "HolidayRegion|Holiday type"
 msgid "Name Days"
 msgstr "영명축일"
 
-#: holidayregion.cpp:992
+#: holidayregion.cpp:686
 msgctxt "HolidayRegion|Holiday type"
 msgid "Personal"
 msgstr "개인"
 
-#: holidayregion.cpp:994
+#: holidayregion.cpp:688
 msgctxt "HolidayRegion|Holiday type"
 msgid "Christian"
 msgstr "기독교"
 
-#: holidayregion.cpp:996
+#: holidayregion.cpp:690
 msgctxt "HolidayRegion|Holiday type"
 msgid "Anglican"
 msgstr "영국 국교"
 
-#: holidayregion.cpp:998
+#: holidayregion.cpp:692
 msgctxt "HolidayRegion|Holiday type"
 msgid "Catholic"
 msgstr "가톨릭"
 
-#: holidayregion.cpp:1000
+#: holidayregion.cpp:694
 msgctxt "HolidayRegion|Holiday type"
 msgid "Protestant"
 msgstr "개신교"
 
-#: holidayregion.cpp:1002
+#: holidayregion.cpp:696
 msgctxt "HolidayRegion|Holiday type"
 msgid "Orthodox"
 msgstr "정교회"
 
-#: holidayregion.cpp:1004
+#: holidayregion.cpp:698
 msgctxt "HolidayRegion|Holiday type"
 msgid "Jewish"
 msgstr "유대교"
 
-#: holidayregion.cpp:1006
+#: holidayregion.cpp:700
 msgctxt "HolidayRegion|Holiday type"
 msgid "Jewish Orthodox"
 msgstr "유대교 정교"
 
-#: holidayregion.cpp:1008
+#: holidayregion.cpp:702
 msgctxt "HolidayRegion|Holiday type"
 msgid "Jewish Conservative"
 msgstr "보수적 유대교"
 
-#: holidayregion.cpp:1010
+#: holidayregion.cpp:704
 msgctxt "HolidayRegion|Holiday type"
 msgid "Jewish Reform"
 msgstr "개혁적 유대교"
 
-#: holidayregion.cpp:1012
+#: holidayregion.cpp:706
 msgctxt "HolidayRegion|Holiday type"
 msgid "Islamic"
 msgstr "이슬람"
 
-#: holidayregion.cpp:1014
+#: holidayregion.cpp:708
 msgctxt "HolidayRegion|Holiday type"
 msgid "Islamic Sunni"
 msgstr "순니 이슬람"
 
-#: holidayregion.cpp:1016
+#: holidayregion.cpp:710
 msgctxt "HolidayRegion|Holiday type"
 msgid "Islamic Shia"
 msgstr "시아 이슬람"
 
-#: holidayregion.cpp:1018
+#: holidayregion.cpp:712
 msgctxt "HolidayRegion|Holiday type"
 msgid "Islamic Sufi"
 msgstr "수피 이슬람"
 
-#: holidayregion.cpp:1024
+#: holidayregion.cpp:718
 #, qt-format
 msgctxt ""
 "HolidayRegion|Holiday file display name, %1 = region name, %2 = holiday type"
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: holidayregion.cpp:1032
+#: holidayregion.cpp:726
 msgctxt "HolidayRegion|Unknown holiday region"
 msgid "Unknown"
 msgstr "알 수 없음"

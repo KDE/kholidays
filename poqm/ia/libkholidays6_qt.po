@@ -48,294 +48,294 @@ msgctxt "HolidayRegionsDeclarativeModel|"
 msgid "Description"
 msgstr "Description"
 
-#: holidayregion.cpp:890
+#: holidayregion.cpp:584
 msgctxt "HolidayRegion|Canadian region"
 msgid "Quebec"
 msgstr "Quebec"
 
-#: holidayregion.cpp:893
+#: holidayregion.cpp:587
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Bavaria"
 msgstr "Germania, Bavaria"
 
-#: holidayregion.cpp:895
+#: holidayregion.cpp:589
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Brandenburg"
 msgstr "Germania, Brandeburgo"
 
-#: holidayregion.cpp:897
+#: holidayregion.cpp:591
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Berlin"
 msgstr "Germania, Berlino"
 
-#: holidayregion.cpp:899
+#: holidayregion.cpp:593
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Baden-Wuerttemberg"
 msgstr "Germania, Baden-Wuerttemberg"
 
-#: holidayregion.cpp:901
+#: holidayregion.cpp:595
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Hesse"
 msgstr "Germania, Hesse"
 
-#: holidayregion.cpp:903
+#: holidayregion.cpp:597
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Mecklenburg-Hither Pomerania"
 msgstr "Germania, Mecklenburg-Hither Pomerania"
 
-#: holidayregion.cpp:905
+#: holidayregion.cpp:599
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Lower Saxony"
 msgstr "Germania, Basse Saxonia"
 
-#: holidayregion.cpp:907
+#: holidayregion.cpp:601
 msgctxt "HolidayRegion|German region"
 msgid "Germany, North Rhine-Westphalia"
 msgstr "Germania, Nord Reno-Westphalia"
 
-#: holidayregion.cpp:909
+#: holidayregion.cpp:603
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Rhineland-Palatinate"
 msgstr "Germania, Renania-Palatinato"
 
-#: holidayregion.cpp:911
+#: holidayregion.cpp:605
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Schleswig-Holstein"
 msgstr "Germania, Schleswig-Holstein"
 
-#: holidayregion.cpp:913
+#: holidayregion.cpp:607
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Saarland"
 msgstr "Germania, Saarland"
 
-#: holidayregion.cpp:915
+#: holidayregion.cpp:609
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Saxony"
 msgstr "Germania, Saxonia"
 
-#: holidayregion.cpp:917
+#: holidayregion.cpp:611
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Saxony-Anhalt"
 msgstr "Germania, Saxonia-Anhalt"
 
-#: holidayregion.cpp:919
+#: holidayregion.cpp:613
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Thuringia"
 msgstr "Germania, Thuringia"
 
-#: holidayregion.cpp:922
+#: holidayregion.cpp:616
 msgctxt "HolidayRegion|Spanish region"
 msgid "Catalonia"
 msgstr "Catalonia"
 
-#: holidayregion.cpp:924
+#: holidayregion.cpp:618
 msgctxt "HolidayRegion|UK Region"
 msgid "England and Wales"
 msgstr "Anglaterra e Galles"
 
-#: holidayregion.cpp:926
+#: holidayregion.cpp:620
 msgctxt "HolidayRegion|UK Region"
 msgid "England"
 msgstr "Anglaterra"
 
-#: holidayregion.cpp:928
+#: holidayregion.cpp:622
 msgctxt "HolidayRegion|UK Region"
 msgid "Wales"
 msgstr "Galles"
 
-#: holidayregion.cpp:930
+#: holidayregion.cpp:624
 msgctxt "HolidayRegion|UK Region"
 msgid "Scotland"
 msgstr "Scotia"
 
-#: holidayregion.cpp:932
+#: holidayregion.cpp:626
 msgctxt "HolidayRegion|UK Region"
 msgid "Northern Ireland"
 msgstr "Irlanda del Nord"
 
-#: holidayregion.cpp:934
+#: holidayregion.cpp:628
 msgctxt "HolidayRegion|Italian Region"
 msgid "South Tyrol"
 msgstr "Tyrol meridional"
 
-#: holidayregion.cpp:936
+#: holidayregion.cpp:630
 msgctxt "HolidayRegion|"
 msgid "New South Wales"
 msgstr "Nove Galles del Sud"
 
-#: holidayregion.cpp:938
+#: holidayregion.cpp:632
 msgctxt "HolidayRegion|Australian Region"
 msgid "Queensland"
 msgstr "Queensland"
 
-#: holidayregion.cpp:940
+#: holidayregion.cpp:634
 msgctxt "HolidayRegion|Australian Region"
 msgid "Victoria"
 msgstr "Victoria"
 
-#: holidayregion.cpp:942
+#: holidayregion.cpp:636
 msgctxt "HolidayRegion|Australian Region"
 msgid "South Australia"
 msgstr "Australia del Sud"
 
-#: holidayregion.cpp:944
+#: holidayregion.cpp:638
 msgctxt "HolidayRegion|Australian Region"
 msgid "Northern Territory"
 msgstr "Territorio del Nord"
 
-#: holidayregion.cpp:946
+#: holidayregion.cpp:640
 msgctxt "HolidayRegion|Australian Region"
 msgid "Australian Capital Territory"
 msgstr "Territorio del Capital Australian"
 
-#: holidayregion.cpp:948
+#: holidayregion.cpp:642
 msgctxt "HolidayRegion|Australian Region"
 msgid "Western Australia"
 msgstr "Australia Occidental "
 
-#: holidayregion.cpp:950
+#: holidayregion.cpp:644
 msgctxt "HolidayRegion|Australian Region"
 msgid "Tasmania"
 msgstr "Tasmania"
 
-#: holidayregion.cpp:952
+#: holidayregion.cpp:646
 msgctxt "HolidayRegion|Bosnian and Herzegovinian Region"
 msgid "Republic of Srpska"
 msgstr "Republica Srpska"
 
-#: holidayregion.cpp:970
+#: holidayregion.cpp:664
 msgctxt "HolidayRegion|Holiday type"
 msgid "Public"
 msgstr "Public"
 
-#: holidayregion.cpp:972
+#: holidayregion.cpp:666
 msgctxt "HolidayRegion|Holiday type"
 msgid "Civil"
 msgstr "Civil"
 
-#: holidayregion.cpp:974
+#: holidayregion.cpp:668
 msgctxt "HolidayRegion|Holiday type"
 msgid "Religious"
 msgstr "Religiose"
 
-#: holidayregion.cpp:976
+#: holidayregion.cpp:670
 msgctxt "HolidayRegion|Holiday type"
 msgid "Government"
 msgstr "Governo"
 
-#: holidayregion.cpp:978
+#: holidayregion.cpp:672
 msgctxt "HolidayRegion|Holiday type"
 msgid "Financial"
 msgstr "Financiari"
 
-#: holidayregion.cpp:980
+#: holidayregion.cpp:674
 msgctxt "HolidayRegion|Holiday type"
 msgid "Cultural"
 msgstr "Cultural"
 
-#: holidayregion.cpp:982
+#: holidayregion.cpp:676
 msgctxt "HolidayRegion|Holiday type"
 msgid "Commemorative"
 msgstr "Commemorative"
 
-#: holidayregion.cpp:984
+#: holidayregion.cpp:678
 msgctxt "HolidayRegion|Holiday type"
 msgid "Historical"
 msgstr "Historic"
 
-#: holidayregion.cpp:986
+#: holidayregion.cpp:680
 msgctxt "HolidayRegion|Holiday type"
 msgid "School"
 msgstr "Schola"
 
-#: holidayregion.cpp:988
+#: holidayregion.cpp:682
 msgctxt "HolidayRegion|Holiday type"
 msgid "Seasonal"
 msgstr "Saisonal"
 
-#: holidayregion.cpp:990
+#: holidayregion.cpp:684
 msgctxt "HolidayRegion|Holiday type"
 msgid "Name Days"
 msgstr "Dies de Nomine"
 
-#: holidayregion.cpp:992
+#: holidayregion.cpp:686
 msgctxt "HolidayRegion|Holiday type"
 msgid "Personal"
 msgstr "Personal"
 
-#: holidayregion.cpp:994
+#: holidayregion.cpp:688
 msgctxt "HolidayRegion|Holiday type"
 msgid "Christian"
 msgstr "Christiano"
 
-#: holidayregion.cpp:996
+#: holidayregion.cpp:690
 msgctxt "HolidayRegion|Holiday type"
 msgid "Anglican"
 msgstr "Anglicano"
 
-#: holidayregion.cpp:998
+#: holidayregion.cpp:692
 msgctxt "HolidayRegion|Holiday type"
 msgid "Catholic"
 msgstr "Catholic"
 
-#: holidayregion.cpp:1000
+#: holidayregion.cpp:694
 msgctxt "HolidayRegion|Holiday type"
 msgid "Protestant"
 msgstr "Protestant"
 
-#: holidayregion.cpp:1002
+#: holidayregion.cpp:696
 msgctxt "HolidayRegion|Holiday type"
 msgid "Orthodox"
 msgstr "Orthodox"
 
-#: holidayregion.cpp:1004
+#: holidayregion.cpp:698
 msgctxt "HolidayRegion|Holiday type"
 msgid "Jewish"
 msgstr "Judee"
 
-#: holidayregion.cpp:1006
+#: holidayregion.cpp:700
 msgctxt "HolidayRegion|Holiday type"
 msgid "Jewish Orthodox"
 msgstr "Judee Orthodox"
 
-#: holidayregion.cpp:1008
+#: holidayregion.cpp:702
 msgctxt "HolidayRegion|Holiday type"
 msgid "Jewish Conservative"
 msgstr "Judee Conservator"
 
-#: holidayregion.cpp:1010
+#: holidayregion.cpp:704
 msgctxt "HolidayRegion|Holiday type"
 msgid "Jewish Reform"
 msgstr "Reforma Judee"
 
-#: holidayregion.cpp:1012
+#: holidayregion.cpp:706
 msgctxt "HolidayRegion|Holiday type"
 msgid "Islamic"
 msgstr "Islamic"
 
-#: holidayregion.cpp:1014
+#: holidayregion.cpp:708
 msgctxt "HolidayRegion|Holiday type"
 msgid "Islamic Sunni"
 msgstr "Islamic Sunni"
 
-#: holidayregion.cpp:1016
+#: holidayregion.cpp:710
 msgctxt "HolidayRegion|Holiday type"
 msgid "Islamic Shia"
 msgstr "Islamic Shia"
 
-#: holidayregion.cpp:1018
+#: holidayregion.cpp:712
 msgctxt "HolidayRegion|Holiday type"
 msgid "Islamic Sufi"
 msgstr "Islamic Sufi"
 
-#: holidayregion.cpp:1024
+#: holidayregion.cpp:718
 #, qt-format
 msgctxt ""
 "HolidayRegion|Holiday file display name, %1 = region name, %2 = holiday type"
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: holidayregion.cpp:1032
+#: holidayregion.cpp:726
 msgctxt "HolidayRegion|Unknown holiday region"
 msgid "Unknown"
 msgstr "Incognite"
