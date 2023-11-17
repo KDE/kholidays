@@ -14,6 +14,7 @@
 
 #include <QCoreApplication>
 #include <QQmlEngine>
+#include <QTimeZone>
 
 // convert to/from QDateTime for JS
 class LunarPhaseWrapper
@@ -41,22 +42,22 @@ public:
     static Q_INVOKABLE QDateTime utcSunrise(const QDateTime &date, double latitude, double longitude)
     {
         const auto time = KHolidays::SunRiseSet::utcSunrise(date.date(), latitude, longitude);
-        return time.isValid() ? QDateTime(date.date(), time, Qt::UTC) : QDateTime();
+        return time.isValid() ? QDateTime(date.date(), time, QTimeZone::utc()) : QDateTime();
     }
     static Q_INVOKABLE QDateTime utcSunset(const QDateTime &date, double latitude, double longitude)
     {
         const auto time = KHolidays::SunRiseSet::utcSunset(date.date(), latitude, longitude);
-        return time.isValid() ? QDateTime(date.date(), time, Qt::UTC) : QDateTime();
+        return time.isValid() ? QDateTime(date.date(), time, QTimeZone::utc()) : QDateTime();
     }
     static Q_INVOKABLE QDateTime utcDawn(const QDateTime &date, double latitude, double longitude)
     {
         const auto time = KHolidays::SunRiseSet::utcDawn(date.date(), latitude, longitude);
-        return time.isValid() ? QDateTime(date.date(), time, Qt::UTC) : QDateTime();
+        return time.isValid() ? QDateTime(date.date(), time, QTimeZone::utc()) : QDateTime();
     }
     static Q_INVOKABLE QDateTime utcDusk(const QDateTime &date, double latitude, double longitude)
     {
         const auto time = KHolidays::SunRiseSet::utcDusk(date.date(), latitude, longitude);
-        return time.isValid() ? QDateTime(date.date(), time, Qt::UTC) : QDateTime();
+        return time.isValid() ? QDateTime(date.date(), time, QTimeZone::utc()) : QDateTime();
     }
     static Q_INVOKABLE bool isPolarDay(const QDateTime &date, double latitude)
     {
