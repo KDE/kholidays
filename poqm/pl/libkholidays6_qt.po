@@ -346,42 +346,42 @@ msgctxt "HolidayRegion|Unknown holiday region"
 msgid "Unknown"
 msgstr "Nieznany"
 
-#: lunarphase.cpp:25
+#: lunarphase.cpp:26
 msgctxt "LunarPhase|"
 msgid "New Moon"
 msgstr "Nów"
 
-#: lunarphase.cpp:27
+#: lunarphase.cpp:28
 msgctxt "LunarPhase|"
 msgid "Full Moon"
 msgstr "Pełnia"
 
-#: lunarphase.cpp:29
+#: lunarphase.cpp:30
 msgctxt "LunarPhase|"
 msgid "First Quarter Moon"
 msgstr "Pierwsza kwadra Księżyca"
 
-#: lunarphase.cpp:31
+#: lunarphase.cpp:32
 msgctxt "LunarPhase|"
 msgid "Last Quarter Moon"
 msgstr "Ostatnia kwadra Księżyca"
 
-#: lunarphase.cpp:35
+#: lunarphase.cpp:36
 msgctxt "LunarPhase|"
 msgid "Waxing Crescent"
 msgstr "Przybywający Księżyc Sierpowaty"
 
-#: lunarphase.cpp:37
+#: lunarphase.cpp:38
 msgctxt "LunarPhase|"
 msgid "Waxing Gibbous"
 msgstr "Przybywający Księżyc Garbaty"
 
-#: lunarphase.cpp:39
+#: lunarphase.cpp:40
 msgctxt "LunarPhase|"
 msgid "Waning Gibbous"
 msgstr "Ubywający Księżyc Garbaty"
 
-#: lunarphase.cpp:41
+#: lunarphase.cpp:42
 msgctxt "LunarPhase|"
 msgid "Waning Crescent"
 msgstr "Ubywający Księżyc Sierpowaty"
