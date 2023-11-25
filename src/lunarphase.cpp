@@ -12,6 +12,8 @@
 #include <QDateTime>
 #include <QTimeZone>
 
+#include <numbers>
+
 using namespace KHolidays;
 
 QString LunarPhase::phaseNameAtDate(const QDate &date)
@@ -95,8 +97,6 @@ static const double ecPrefactor = sqrt((1 + earthEcc) / (1 - earthEcc));
 constexpr double mmlong = 64.975464; // mean longitude of moon at epoch
 constexpr double mmlongp = 349.383063; // mean longitude of moon at perigee
 
-constexpr double PI = 3.14159265358979323846;
-
 static double fixAngle(double degrees)
 {
     return degrees - floor(degrees / 360.0) * 360.0;
@@ -104,12 +104,12 @@ static double fixAngle(double degrees)
 
 static constexpr double radToDeg(double rad)
 {
-    return rad / PI * 180.0;
+    return rad / std::numbers::pi * 180.0;
 }
 
 static constexpr double degToRad(double deg)
 {
-    return deg / 180.0 * PI;
+    return deg / 180.0 * std::numbers::pi;
 }
 
 constexpr double epsilon = 1e-6;

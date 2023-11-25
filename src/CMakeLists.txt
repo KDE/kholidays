@@ -29,7 +29,6 @@ target_sources(KF6Holidays PRIVATE
     parsers/qcalendarsystem_p.h
     sunriseset.cpp
     sunriseset.h
-    util.h
     zodiac.cpp
     zodiac.h
 
