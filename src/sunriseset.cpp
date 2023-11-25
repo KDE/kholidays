@@ -10,8 +10,10 @@
 */
 
 #include "sunriseset.h"
-#include "util.h"
+
 #include <cmath>
+#include <numbers>
+
 static const double MaxLat = 89.99;
 static const double MaxLong = 179.99;
 
@@ -20,12 +22,12 @@ using namespace SunRiseSet;
 
 static double degToRad(double degree)
 {
-    return (degree * PI) / 180.00;
+    return (degree * std::numbers::pi) / 180.00;
 }
 
 static double radToDeg(double rad)
 {
-    return (rad * 180.0) / PI;
+    return (rad * 180.0) / std::numbers::pi;
 }
 
 // convert Julian Day to centuries since J2000.0.
