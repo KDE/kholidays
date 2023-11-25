@@ -21,21 +21,6 @@ namespace KHolidays
 class HolidayPrivate : public QSharedData
 {
 public:
-    HolidayPrivate()
-    {
-    }
-
-    HolidayPrivate(const HolidayPrivate &other)
-        : QSharedData(other)
-    {
-        mObservedDate = other.mObservedDate;
-        mDuration = other.mDuration;
-        mName = other.mName;
-        mDescription = other.mDescription;
-        mCategoryList = other.mCategoryList;
-        mDayType = other.mDayType;
-    }
-
     QDate mObservedDate;
     int mDuration;
     QString mName;
