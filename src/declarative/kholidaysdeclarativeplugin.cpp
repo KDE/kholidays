@@ -77,7 +77,7 @@ void KHolidaysDeclarativePlugin::registerTypes(const char *uri)
 {
     qmlRegisterType<HolidayRegionsDeclarativeModel>(uri, 1, 0, "HolidayRegionsModel");
     qRegisterMetaType<KHolidays::LunarPhase::Phase>();
-    qmlRegisterUncreatableType<KHolidays::LunarPhase>(uri, 1, 0, "LunarPhase", {});
+    qmlRegisterUncreatableMetaObject(KHolidays::LunarPhase::staticMetaObject, uri, 1, 0, "LunarPhase", {});
 
     // HACK qmlplugindump chokes on gadget singletons, to the point of breaking ecm_find_qmlmodule()
     if (QCoreApplication::applicationName() != QLatin1String("qmlplugindump")) {
