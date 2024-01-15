@@ -14,11 +14,12 @@
 country     "IE"
 language    "en_GB"
 :name        "optional - defaults to country name"
-description "National holiday file for Ireland"
+description "National holiday file for the Republic of Ireland"
 
 :: Public Holidays
 "New Years Day"         public january 1
-"St Patricks Day"       public march 17
+"Saint Brigid's Day"    public on ( (year >= 2023) ? ( ( [first friday in february] == [february 1] ) ?  ([february 1]) : ([first monday in february]) ) : noop )
+"St Patrick's Day"      public march 17
 "Good Friday"           public easter minus 2
 "Easter Sunday"         public easter
 "Easter Monday"         public easter plus 1
@@ -27,7 +28,7 @@ description "National holiday file for Ireland"
 "Summer Bank Holiday"   public first monday in august
 "October Bank Holiday"  public last monday in october
 "Christmas Day"         public december 25
-"St Stephens Day"       public december 26
+"St Stephen's Day"      public december 26
 
 :: Religious
 
