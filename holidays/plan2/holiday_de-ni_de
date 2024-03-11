@@ -3,11 +3,10 @@
 ::
 :: Language: German
 ::
-:: Author:
-::		Tobias Leupold <tobias.leupold@gmx.de>
-::		Marijo Mustac <mustacmarijo@hotmail.de>
+:: Author: Tobias Leupold <tobias.leupold@gmx.de>
+::		   Marijo Mustač <mustacmarijo@googlemail.com>
 ::
-:: Updated: 2019-04-15
+:: Updated: 2024-03-11
 ::
 :: Source:
 ::     https://www.mi.niedersachsen.de/themen/allgemeine_angelegenheiten_inneren/feiertagsrecht/feiertagsgesetz-61491.html
@@ -32,7 +31,7 @@ description "Feiertage für Deutschland (Niedersachsen)"
 "Ostermontag"               public on easter plus 1 days
 "Christi Himmelfahrt"       public on easter plus 39 days
 "Pfingstmontag"             public on easter plus 50 days
-"1. Mai"                    public on 1.5.
+"Tag der Arbeit"            public on 1.5.
 "Tag der Deutschen Einheit" public on 3.10.
 "1. Weihnachtsfeiertag"     public on 25.12.
 "2. Weihnachtsfeiertag"     public on 26.12.

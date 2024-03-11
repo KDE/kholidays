@@ -4,8 +4,9 @@
 :: Language: German
 ::
 :: Author: Tobias Leupold <tobias.leupold@gmx.de>
+::		   Marijo Mustač <mustacmarijo@googlemail.com>
 ::
-:: Updated: 2018-03-25
+:: Updated: 2024-03-11
 ::
 :: Source:
 ::     https://www.bmi.bund.de/DE/themen/verfassung/staatliche-symbole/nationale-feiertage/nationale-feiertage-artikel.html
@@ -20,6 +21,8 @@ description "Feiertage für Deutschland (Brandenburg)"
 
 :: ---------- This part is specific for Brandenburg ----------
 
+"Ostersonntag"    public on easter
+"Pfingstsonntag"  public on easter plus 49 days
 "Reformationstag" public on 31.10.
 
 :: ---------- This part is shared across all Federal States of Germany ----------
@@ -30,7 +33,7 @@ description "Feiertage für Deutschland (Brandenburg)"
 "Ostermontag"               public on easter plus 1 days
 "Christi Himmelfahrt"       public on easter plus 39 days
 "Pfingstmontag"             public on easter plus 50 days
-"1. Mai"                    public on 1.5.
+"Tag der Arbeit"            public on 1.5.
 "Tag der Deutschen Einheit" public on 3.10.
 "1. Weihnachtsfeiertag"     public on 25.12.
 "2. Weihnachtsfeiertag"     public on 26.12.
