@@ -157,14 +157,14 @@ protected:
     // Number of characters read into yy_ch_buf.
     int yy_n_chars;
 
-    // Points to current character in buffer.
+    // Points to the current character in buffer.
     char *yy_c_buf_p;
 
     int yy_init; // whether we need to initialize
     int yy_start; // start state number
 
     // Flag which is used to allow yywrap()'s to do buffer switches
-    // instead of setting up a fresh yyin.  A bit of a hack ...
+    // instead of setting up a fresh yyin. A bit of a hack ...
     int yy_did_buffer_switch_on_eof;
 
     size_t yy_buffer_stack_top; /**< index of top of stack. */

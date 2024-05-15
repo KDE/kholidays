@@ -270,7 +270,7 @@ QString HolidayRegion::name() const
             }
         }
 
-        // Cheat on type for now,take direct from region code until API is introduced in SC 4.6
+        // Cheat on type for now, take direct from region code until API is introduced in SC 4.6
         QStringList regionParts = regionCode().toLower().split(QLatin1Char('_'));
         if (regionParts.count() == 3) {
             const QString &type = regionParts.at(2);
@@ -452,14 +452,14 @@ static bool maybeCountry(QStringView holidayId, QStringView country)
 
 QString HolidayRegion::defaultRegionCode(const QString &country, const QString &language)
 {
-    // Try to match against the users country and language, or failing that the language country.
-    // Scan through all the regions finding the first match for each possible default
+    // Try to match against the user's country and language, or failing that the language country.
+    // Scan through all the regions finding the first match for each possible default.
     // Holiday Region Country Code can be a country subdivision or the country itself,
-    // e.g. US or US-CA for California, so we can try match on both but an exact match has priority
+    // e.g. US or US-CA for California, so we can try match on both but an exact match has priority.
     // The Holiday Region file is in one language only, so give priority to any file in the
-    // users language, e.g. bilingual countries with a separate file for each language
-    // Locale language can have a country code embedded in it e.g. en_GB, which we can try use if
-    // no country set, but a lot of countries use en_GB so it's a lower priority option
+    // user's language, e.g. bilingual countries with a separate file for each language.
+    // Locale language can have a country code embedded in it e.g. en_GB, which we can try to use if
+    // no country is set, but a lot of countries use en_GB so it's a lower priority option.
 
     QString localeCountry;
     QString localeSubdivision;

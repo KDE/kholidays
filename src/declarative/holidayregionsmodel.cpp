@@ -21,9 +21,9 @@ HolidayRegionsDeclarativeModel::HolidayRegionsDeclarativeModel(QObject *parent)
     , d(new Private())
 {
     d->regionCodes = KHolidays::HolidayRegion::regionCodes();
-    // Make sure we don't add the same regions twice
-    // This can happen if two copies of the data exists
-    // in the system and both are read by KHolidays
+    // Make sure we don't add the same regions twice.
+    // This can happen if two copies of the data exist
+    // in the system and both are read by KHolidays.
     d->regionCodes.removeDuplicates();
 }
 

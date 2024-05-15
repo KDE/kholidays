@@ -20,11 +20,11 @@ using namespace KHolidays;
 /* Correction tables and calculation algorithms below are based on the book
  * Astronomical Algorithms by Jean Meeus, (c) 1991 by Willman-Bell, Inc.,
  *
- * The correction tables are precise for years -1000 to +3000 but according
- * to the book they can be used for several centuries before and after that
+ * The correction tables are precise for years -1000 to +3000, but according
+ * to the book, they can be used for several centuries before and after that
  * period with the error still being quite small. As we only care about date
  * and not the time, the precision of the algorithm is good enough even for
- * greater time span, therefore no checks for the given year are performed
+ * a greater time span, therefore no checks for the given year are performed
  * anywhere in the code.
  */
 namespace

@@ -168,7 +168,7 @@ static bool verifyPolarNightRange(QDate begin, QDate end, double latitude, bool 
 
 void SunriseTest::TestPolarDayNight()
 {
-    // polar circle (north): polar day from 6th June to 6st July, no polar night
+    // polar circle (north): polar day from 6th June to 6th July, no polar night
     QVERIFY(verifyPolarDayRange(QDate(2022, 1, 1), QDate(2022, 6, 5), 66.5, false));
     QVERIFY(verifyPolarDayRange(QDate(2022, 6, 6), QDate(2022, 7, 5), 66.5, true));
     QVERIFY(verifyPolarDayRange(QDate(2022, 7, 6), QDate(2022, 12, 31), 66.5, false));

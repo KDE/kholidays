@@ -182,7 +182,7 @@ static QTime calcSunEvent(const QDate &date, double latitude, double longitude, 
     QTime timeUTC(0, 0);
     timeUTC = timeUTC.addSecs((720 - (4.0 * delta) - eqTime) * 60);
 
-    // round to nearest minute
+    // round to the nearest minute
     if (timeUTC.second() > 29) {
         return QTime(timeUTC.hour(), timeUTC.minute()).addSecs(60);
     }

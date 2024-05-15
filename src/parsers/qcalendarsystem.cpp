@@ -342,8 +342,8 @@ bool QCalendarSystemPrivate::isLeapYear(int year) const
 {
     year = year + yearOffset();
 
-    // Uses same rule as Gregorian and in same years as Gregorian to keep in sync
-    // Can't use yearOffset() as this offset only applies for isLeapYear()
+    // Uses same rule as Gregorian and in same years as Gregorian to keep in sync.
+    // Can't use yearOffset() as this offset only applies for isLeapYear().
     if (calendarSystem() == QCalendarSystem::IndianNationalCalendar) {
         year = year + 78;
     }
@@ -1107,7 +1107,7 @@ int QCalendarSystem::monthsDifference(const QDate &fromDate, const QDate &toDate
     d->julianDayToDate(fromDate.toJulianDay(), &y1, &m1, &d1);
     d->julianDayToDate(toDate.toJulianDay(), &y2, &m2, &d2);
 
-    // Calculate number of months in full years preceding y2
+    // Calculate the number of months in full years preceding y2.
     if (y2 == y1) {
         my = 0;
     } else if (d->hasLeapMonths()) {
