@@ -352,42 +352,42 @@ msgctxt "HolidayRegion|Unknown holiday region"
 msgid "Unknown"
 msgstr "Desconegut"
 
-#: lunarphase.cpp:26
+#: lunarphase.cpp:28
 msgctxt "LunarPhase|"
 msgid "New Moon"
 msgstr "Lluna nova"
 
-#: lunarphase.cpp:28
+#: lunarphase.cpp:30
 msgctxt "LunarPhase|"
 msgid "Full Moon"
 msgstr "Lluna plena"
 
-#: lunarphase.cpp:30
+#: lunarphase.cpp:32
 msgctxt "LunarPhase|"
 msgid "First Quarter Moon"
 msgstr "Lluna en quart creixent"
 
-#: lunarphase.cpp:32
+#: lunarphase.cpp:34
 msgctxt "LunarPhase|"
 msgid "Last Quarter Moon"
 msgstr "Lluna en quart minvant"
 
-#: lunarphase.cpp:36
+#: lunarphase.cpp:38
 msgctxt "LunarPhase|"
 msgid "Waxing Crescent"
 msgstr "Quart creixent"
 
-#: lunarphase.cpp:38
+#: lunarphase.cpp:40
 msgctxt "LunarPhase|"
 msgid "Waxing Gibbous"
 msgstr "Gibosa creixent"
 
-#: lunarphase.cpp:40
+#: lunarphase.cpp:42
 msgctxt "LunarPhase|"
 msgid "Waning Gibbous"
 msgstr "Gibosa minvant"
 
-#: lunarphase.cpp:42
+#: lunarphase.cpp:44
 msgctxt "LunarPhase|"
 msgid "Waning Crescent"
 msgstr "Quart minvant"

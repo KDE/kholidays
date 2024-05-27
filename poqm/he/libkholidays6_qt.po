@@ -345,42 +345,42 @@ msgctxt "HolidayRegion|Unknown holiday region"
 msgid "Unknown"
 msgstr "לא ידוע"
 
-#: lunarphase.cpp:26
+#: lunarphase.cpp:28
 msgctxt "LunarPhase|"
 msgid "New Moon"
 msgstr "ירח חדש"
 
-#: lunarphase.cpp:28
+#: lunarphase.cpp:30
 msgctxt "LunarPhase|"
 msgid "Full Moon"
 msgstr "ירח מלא"
 
-#: lunarphase.cpp:30
+#: lunarphase.cpp:32
 msgctxt "LunarPhase|"
 msgid "First Quarter Moon"
 msgstr "רבע ראשון של הירח"
 
-#: lunarphase.cpp:32
+#: lunarphase.cpp:34
 msgctxt "LunarPhase|"
 msgid "Last Quarter Moon"
 msgstr "רבע אחרון של הירח"
 
-#: lunarphase.cpp:36
+#: lunarphase.cpp:38
 msgctxt "LunarPhase|"
 msgid "Waxing Crescent"
 msgstr "חרמש מתמלא ראשון"
 
-#: lunarphase.cpp:38
+#: lunarphase.cpp:40
 msgctxt "LunarPhase|"
 msgid "Waxing Gibbous"
 msgstr "חרמש מתמלא שני"
 
-#: lunarphase.cpp:40
+#: lunarphase.cpp:42
 msgctxt "LunarPhase|"
 msgid "Waning Gibbous"
 msgstr "חרמש נחסר ראשון"
 
-#: lunarphase.cpp:42
+#: lunarphase.cpp:44
 msgctxt "LunarPhase|"
 msgid "Waning Crescent"
 msgstr "חרמש נחסר שני"
