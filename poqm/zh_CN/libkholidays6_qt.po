@@ -58,72 +58,72 @@ msgstr "魁北克"
 #: holidayregion.cpp:203
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Bavaria"
-msgstr "德国巴伐利亚"
+msgstr "德国，巴伐利亚"
 
 #: holidayregion.cpp:205
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Brandenburg"
-msgstr "德国勃兰登堡"
+msgstr "德国，勃兰登堡"
 
 #: holidayregion.cpp:207
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Berlin"
-msgstr "德国柏林"
+msgstr "德国，柏林"
 
 #: holidayregion.cpp:209
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Baden-Wuerttemberg"
-msgstr "德国巴登-符腾堡"
+msgstr "德国，巴登-符腾堡"
 
 #: holidayregion.cpp:211
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Hesse"
-msgstr "德国黑森"
+msgstr "德国，黑森"
 
 #: holidayregion.cpp:213
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Mecklenburg-Hither Pomerania"
-msgstr "德国梅克伦堡-前波美拉尼亚"
+msgstr "德国，梅克伦堡-前波美拉尼亚"
 
 #: holidayregion.cpp:215
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Lower Saxony"
-msgstr "德国下萨克森"
+msgstr "德国，下萨克森"
 
 #: holidayregion.cpp:217
 msgctxt "HolidayRegion|German region"
 msgid "Germany, North Rhine-Westphalia"
-msgstr "德国北莱茵-威斯特法伦"
+msgstr "德国，北莱茵-威斯特法伦"
 
 #: holidayregion.cpp:219
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Rhineland-Palatinate"
-msgstr "德国莱茵兰-普法尔茨"
+msgstr "德国，莱茵兰-普法尔茨"
 
 #: holidayregion.cpp:221
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Schleswig-Holstein"
-msgstr "德国石勒苏益格-荷尔斯泰因"
+msgstr "德国，石勒苏益格-荷尔斯泰因"
 
 #: holidayregion.cpp:223
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Saarland"
-msgstr "德国萨尔兰"
+msgstr "德国，萨尔兰"
 
 #: holidayregion.cpp:225
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Saxony"
-msgstr "德国萨克森"
+msgstr "德国，萨克森"
 
 #: holidayregion.cpp:227
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Saxony-Anhalt"
-msgstr "德国萨克森-安哈尔特"
+msgstr "德国，萨克森-安哈尔特"
 
 #: holidayregion.cpp:229
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Thuringia"
-msgstr "德国图林根"
+msgstr "德国，图林根"
 
 #: holidayregion.cpp:232
 msgctxt "HolidayRegion|Spanish region"
@@ -203,17 +203,17 @@ msgstr "塔斯马尼亚"
 #: holidayregion.cpp:262
 msgctxt "HolidayRegion|Bosnian and Herzegovinian Region"
 msgid "Republic of Srpska"
-msgstr "塞尔维亚共和国"
+msgstr "塞族共和国"
 
 #: holidayregion.cpp:280
 msgctxt "HolidayRegion|Holiday type"
 msgid "Public"
-msgstr "公开"
+msgstr "公共"
 
 #: holidayregion.cpp:282
 msgctxt "HolidayRegion|Holiday type"
 msgid "Civil"
-msgstr "民用"
+msgstr "民间"
 
 #: holidayregion.cpp:284
 msgctxt "HolidayRegion|Holiday type"
@@ -238,12 +238,12 @@ msgstr "文化"
 #: holidayregion.cpp:292
 msgctxt "HolidayRegion|Holiday type"
 msgid "Commemorative"
-msgstr "纪念日"
+msgstr "纪念"
 
 #: holidayregion.cpp:294
 msgctxt "HolidayRegion|Holiday type"
 msgid "Historical"
-msgstr "Historical"
+msgstr "历史"
 
 #: holidayregion.cpp:296
 msgctxt "HolidayRegion|Holiday type"
