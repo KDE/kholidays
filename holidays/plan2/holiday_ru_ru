@@ -11,6 +11,10 @@
 :: Sources:  http://www.rg.ru/2006/06/03/voennye-prazdniki-dok.html
 ::           http://www.consultant.ru/document/cons_doc_LAW_171623/
 ::           http://www.consultant.ru/document/cons_doc_LAW_19238/
+::           https://www.consultant.ru/document/cons_doc_LAW_395538/
+::           https://www.consultant.ru/document/cons_doc_LAW_425407/
+::           https://www.consultant.ru/document/cons_doc_law_365179/
+::           https://www.consultant.ru/document/cons_doc_LAW_455140/
 ::           https://ru.wikipedia.org/wiki/Праздники_России
 ::           http://www.pravo.gov.ru:8080/page.aspx?35802 (День работника гражданской авиации)
 ::           http://www.kremlin.ru/news/15615 (День местного самоуправления)
@@ -47,6 +51,27 @@ language    "ru"
 :: Public Holidays' substitutes in 2020
 "Перенос выходного дня с 4 января"              public on ((year == 2020) ? [may 4] : noop)
 "Перенос выходного дня с 5 января"              public on ((year == 2020) ? [may 5] : noop)
+
+:: Public Holidays' substitutes in 2021
+"Перенос выходного дня с 2 января"              public on ((year == 2021) ? [november 5] : noop)
+"Перенос выходного дня с 3 января"              public on ((year == 2021) ? [december 31] : noop)
+"Перенос выходного дня с 20 февраля"            public on ((year == 2021) ? [february 22] : noop)
+
+:: Public Holidays' substitutes in 2022
+"Перенос выходного дня с 1 января"              public on ((year == 2022) ? [may 3] : noop)
+"Перенос выходного дня с 2 января"              public on ((year == 2022) ? [may 10] : noop)
+"Перенос выходного дня с 5 марта"               public on ((year == 2022) ? [march 7] : noop)
+
+:: Public Holidays' substitutes in 2023
+"Перенос выходного дня с 1 января"              public on ((year == 2023) ? [february 24] : noop)
+"Перенос выходного дня с 8 января"              public on ((year == 2023) ? [may 8] : noop)
+
+:: Public Holidays' substitutes in 2024
+"Перенос выходного дня с 6 января"              public on ((year == 2024) ? [may 10] : noop)
+"Перенос выходного дня с 7 января"              public on ((year == 2024) ? [december 31] : noop)
+"Перенос выходного дня с 27 апреля"             public on ((year == 2024) ? [april 29] : noop)
+"Перенос выходного дня с 2 ноября"              public on ((year == 2024) ? [april 30] : noop)
+"Перенос выходного дня с 28 декабря"            public on ((year == 2024) ? [december 30] : noop)
 
 :: Other (all that did not fit the categories below)
 "День единения народов"                                                 historical on april 2
