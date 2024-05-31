@@ -25,11 +25,11 @@ language    "en"
 description "National holiday file for Philippines"
 
 :: Public Holidays
-"New Year's Day "                                                  public on january 1
+"New Year's Day"                                                   public on january 1
 "Day of Valor"                                                     public on april 9
 "Labor day"                                                        public on may 1
 "Independence Day"                                                 public on june 12
-"National Heroes Day"                                              public on last monday of august
+"National Heroes Day"                                              public on last monday in august
 "Ninoy Aquino Day"                                                 public on august 21
 "Bonifacio Day"                                                    public on november 30
 "Rizal Day"                                                        public on december 30
