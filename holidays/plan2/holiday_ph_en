@@ -21,7 +21,7 @@
 :: Metadata
 country     "PH"
 language    "en"
-:name        "optional - defaults to country name"
+:name        "Philippines"
 description "National holiday file for Philippines"
 
 :: Public Holidays
