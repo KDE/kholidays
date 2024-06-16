@@ -19,9 +19,13 @@ description "Feriados Nacionales de Peru"
 :: Public Holidays
 "Año Nuevo"                       public on january 1
 "Día del Trabajo"                 public on may 1
+"Batalla de Arica y Día de la Bandera" public on june 7
+"Día de la Fuerza Aérea"          public on july 23
 "Día de la Independencia"         public on july 28
 "Fiestas Patrias"                 public on july 29
+"Batalla de Junín"                public on august 6
 "Combate de Angamos"              public on October 8
+"Batalla de Ayacucho"             public on december 9
 
 :: Religious
 "Jueves Santo"                    public religious on easter minus 3
