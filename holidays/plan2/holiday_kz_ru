@@ -132,3 +132,5 @@ description "Праздники Республики Казахстан"
 "День экономистов"                                                      civil on december 25
 :: Power Engineer’s Day
 "День энергетика"                                                       civil on third sunday in december
+:: National Book Day
+"Национальный день книги"                                               cultural on ((year >= 2025) ? [april 23] : noop)
