@@ -7,7 +7,7 @@
 # Alois Spitzbart <spitz234@hotmail.com>, 2022.
 msgid ""
 msgstr ""
-"Project-Id-Version: libkholidays\n"
+"Project-Id-Version: libkholidays6_qt\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2015-06-13 09:34+0000\n"
 "PO-Revision-Date: 2022-09-05 18:47+0200\n"
