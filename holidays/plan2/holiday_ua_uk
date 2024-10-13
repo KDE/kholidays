@@ -6,8 +6,9 @@
 :: Authors:   Andriy Gapon     <avg@icyb.net.ua>
 ::            Oleg Ivashchenko <ol_iva@i.ua>
 ::            Yuri Chornoivan  <yurchor@ukr.net>
+::            Serhii Yehorov   <syehorov@unixzone.org.ua>
 ::
-:: Updated:   2019-01-31
+:: Updated:   2024-10-13
 ::
 :: Source:   http://en.wikipedia.org/wiki/Public_holidays_in_Ukraine
 ::           http://uk.wikipedia.org/wiki/Свята_та_пам'ятні_дні_в_Україні
@@ -28,13 +29,7 @@ description "Файл списку святкових днів України"
                                                                                  ([january 1] == [sunday after ([january 1])])) ?
                                                                                   [monday after ([january 1])] :
                                                                                   noop )
-: Orthodox Christmas, could use "public on julian december 25"
-"Різдво Христове"                                                   public religious on january 7
-: Orthodox Christmas Substitute Holiday
-"Різдво Христове"                                                   public on ( (([january 7] == [saturday after ([january 7])]) ||
-                                                                                 ([january 7] == [sunday after ([january 7])])) ?
-                                                                                  [monday after ([january 7])] :
-                                                                                  noop )
+                                                                                  : New Year's Day
 : International Women's Day
 "Міжнародний жіночий день"                                          public on march 8
 : International Women's Day Substitute Holiday
@@ -93,18 +88,16 @@ description "Файл списку святкових днів України"
                                                                                   noop )
 
 : Defender of Ukraine Day
-"День захисника України"                                            public on ((year >= 2015) ? [october 14] : noop)
+"День захисника України"                                            public on october 1
 : Defender of Ukraine Day Substitute Holiday
-"День захисника України"                                            public on (((year >= 2015) && (([october 14] == [saturday after ([october 14])]) ||
-                                                                                 ([october 14] == [sunday after ([october 14])]))) ?
-                                                                                  [monday after ([october 14])] :
+"День захисника України"                                            public on (((year >= 2023) && (([october 1] == [saturday after ([october 1])]) ||
+                                                                                 ([october 1] == [sunday after ([october 1])]))) ?
+                                                                                  [monday after ([october 1])] :
                                                                                   noop )
 
 :: Religious
-: Old New Year Eve, could use "on julian december 31"
-"Щедрий вечір"                                                      religious on january 13
-: Old New Year, could use "on julian january 1"
-"День Василія Великого"                                             religious on january 14
+: New Year
+"День Василія Великого"                                             religious on january 1
 : Epiphany
 "Водохреща"                                                         religious on january 19
 : The Purification of St. Mary
@@ -114,15 +107,21 @@ description "Файл списку святкових днів України"
 : Merciful Saviour and the Blessed Virgin Mary
 "Маковея"                                                           religious on august 14
 : Assumption of Mary
-"Успіння Пресвятої Богородиці"                                      religious on august 28
+"Успіння Пресвятої Богородиці"                                      religious on august 15
 : The Protection of the Mother of God
-"Покрова Пресвятої Богородиці"                                      religious on october 14
+"Покрова Пресвятої Богородиці"                                      religious on october 1
+: Orthodox Christmas
+"Різдво Христове"                                                   public religious on december 25
+: New Year Eves
+"Щедрий вечір"                                                      religious on december 31
 
 :: Financial
 
 :: Cultural
 : Unity Day of Ukraine
 "День соборності України"                                           cultural on ((year >= 2015) ? [january 22] : ((year >= 2012) ? noop : ((year >= 2000) ? [january 22] : noop)))
+: Donetsk's airport defenders day
+"День вшанування захисників Донецького аеропорту"                   cultural on january 20
 : Battle of Kruty Memorial Day
 "День пам’яті героїв Крут"                                          cultural on january 29
 : Valentine's Day
@@ -156,7 +155,7 @@ description "Файл списку святкових днів України"
 : Ukrainian Library Day
 "Всеукраїнський день бібліотек"                                     cultural on september 30
 : Day of Ukrainian Cossacks
-"День Українського козацтва"                                        cultural on october 14
+"День Українського козацтва"                                        cultural on october 1
 : Day of Ukrainian Script and Language
 "День української писемності та мови"                               cultural on november 9
 : Day of Dignity and Freedom
@@ -177,6 +176,8 @@ description "Файл списку святкових днів України"
 :: Name Days
 
 :: Professions
+: Foreign Intelligence Service Day
+"День зовнішньої розвідки України"                                                          cultural on january 24
 : Customs Official Day
 "Міжнародний день митника"                                                                  cultural on january 26
 : Firefighter's Day
@@ -273,6 +274,8 @@ description "Файл списку святкових днів України"
 "День працівників нафтової, газової та нафтопереробної промисловості"                       cultural on second sunday in september
 : Ukrainian Cinema Day
 "День українського кіно"                                                                    cultural on second saturday in september
+: Military Intelligence Day
+"День воєнної розвідки"                                                                     cultural on september 7
 : Civil Defence Day
 "День працівників цивільного захисту"                                                       cultural on september 17
 : Peace Day
@@ -291,6 +294,8 @@ description "Файл списку святкових днів України"
 "День знань"                                                                                cultural on september 1
 : Tourist's Day
 "День туризму"                                                                              cultural on september 27
+: Territorial Forces Day
+"День територіальної оборони України"                                                       cultural on first sunday in october
 : Education Day
 "День працівників освіти"                                                                   cultural on first sunday in october
 : Lawyer's Day
