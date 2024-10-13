@@ -29,7 +29,6 @@ description "Файл списку святкових днів України"
                                                                                  ([january 1] == [sunday after ([january 1])])) ?
                                                                                   [monday after ([january 1])] :
                                                                                   noop )
-                                                                                  : New Year's Day
 : International Women's Day
 "Міжнародний жіночий день"                                          public on march 8
 : International Women's Day Substitute Holiday
