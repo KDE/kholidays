@@ -88,7 +88,7 @@ description "Файл списку святкових днів України"
                                                                                   noop )
 
 : Defender of Ukraine Day
-"День захисника України"                                            public on october 1
+"День захисника України"                                            public on  ((year >= 2023) ? [october 1] : october 14)
 : Defender of Ukraine Day Substitute Holiday
 "День захисника України"                                            public on (((year >= 2023) && (([october 1] == [saturday after ([october 1])]) ||
                                                                                  ([october 1] == [sunday after ([october 1])]))) ?
