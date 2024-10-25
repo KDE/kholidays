@@ -5,7 +5,7 @@
 ::
 :: Author:   riiga
 ::
-:: Updated:  2023-07-22
+:: Updated:  2024-10-25
 ::
 :: Source:   https://sv.wikipedia.org/wiki/Helgdagar_i_Sverige
 ::           https://sv.wikipedia.org/wiki/Flaggdagar_i_Sverige
@@ -44,8 +44,6 @@ description "Helg- och flaggdagar i Sverige"
 "Pingstafton"                 religious on easter plus 48 days
 "Annandag pingst"             public religious on ((year < 2005) ? ([easter] + 50 days) : noop)
 "Annandag pingst"             religious on ((year >= 2005) ? ([easter] + 50 days) : noop)
-"Allhelgonaafton"             religious on friday before november 5
-"Allhelgonadagen"             religious on november 1
 "Första advent"               religious on sunday before december 24 minus 21 days
 "Andra advent"                religious on sunday before december 24 minus 14 days
 "Lucia"                       religious on december 13
