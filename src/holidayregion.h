@@ -210,7 +210,8 @@ public:
     /**
      * @since 5.95
      *
-     * Returns the list of holidays that occur between @p startDate and @p endDate.
+     * Returns the list of holidays and astronomical season dates (equinoxes
+     * and solstices) that occur between @p startDate and @p endDate.
      *
      */
     Holiday::List rawHolidaysWithAstroSeasons(const QDate &startDate, const QDate &endDate) const;
@@ -225,14 +226,16 @@ public:
     /**
      * @since 5.95
      *
-     * Returns the list of holidays that occur on a @p date.
+     * Returns the list of holidays and astronomical season dates (equinoxes
+     * and solstices) that occur on a @p date.
      */
     Holiday::List rawHolidaysWithAstroSeasons(const QDate &date) const;
 
     /**
      * @since 5.95
      *
-     * Returns the list of holidays that occur in a Gregorian calendar year @p calendarYear.
+     * Returns the list of holidays and astronomical season dates (equinoxes
+     * and solstices) that occur in a Gregorian calendar year @p calendarYear.
      */
     Holiday::List rawHolidaysWithAstroSeasons(int calendarYear) const;
 
