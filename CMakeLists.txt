@@ -44,7 +44,7 @@ find_package(Qt6 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Core Qml)
 
 remove_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII)
 ecm_set_disabled_deprecation_versions(
-    QT 6.5
+    QT 6.8
 )
 
 ########### Targets ###########
