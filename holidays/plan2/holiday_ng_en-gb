@@ -1,0 +1,48 @@
+::
+:: Country:  Nigeria
+::
+:: Author:   Ibrahim Abdullahi <ibrahimabdul050@gmail.com>
+::
+:: Language: UK English
+::
+:: Updated:   2024-11-25
+::
+:: Source: https://en.wikipedia.org/wiki/Public_holidays_in_Nigeria
+::         https://www.officeholidays.com/countries/nigeria/
+::
+
+:: Metadata
+country     "NG"
+language    "en_GB"
+:name        "Nigeria"
+description "National holiday file for Nigeria"
+
+:: Public Holidays
+"New Year's Day"         public on january 1    shift to monday if sunday
+"Workers' Day"           public on may 1     shift to monday if sunday
+"Democracy Day"          public on june 12     shift to monday if sunday
+"Independence Day"       public on october 1     shift to monday if sunday
+
+
+
+:: Religious
+"Mawlid"                 public religious on hijri rabialawal 12
+"Eid el-Fitr"            public religious on hijri shawwal 1 length 2
+"Eid el-Adha"            public religious on hijri thualhijjah 10 length 2
+"Good Friday"            public religious on easter minus 2 day
+"Easter Monday"          public on easter plus 1 day
+"Christmas Day"          public religious on december 25  shift to monday if sunday
+"Boxing Day"             public on december 26  shift to monday if sunday
+
+
+:: Financial
+
+:: Cultural
+
+:: School
+
+:: Daylight Saving
+
+:: Seasons
+
+:: Name Days
