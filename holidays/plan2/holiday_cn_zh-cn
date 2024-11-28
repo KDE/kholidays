@@ -5,7 +5,7 @@
 ::
 :: Author:   Patrick Nagel <mail@patrick-nagel.net> Ha Ma <0xcccc@bupt.cn>
 ::
-:: Updated:  2024-02-06T17:54:12.233233
+:: Updated:  2024-11-27T18:15:06.035125
 ::
 :: Source:   https://github.com/0xcccccccccccc/kholidays_cn
 ::
@@ -713,6 +713,8 @@ language    "zh_CN"
 "国庆节(National Day)"                                                  public on october 6 2023
 "法定工作日-国庆节调休 (Workday)"                                          public on october 7 2023
 "法定工作日-国庆节调休 (Workday)"                                          public on october 8 2023
+"元旦(New Year's Day)"                                               public on december 30 2023
+"元旦(New Year's Day)"                                               public on december 31 2023
 "元旦(New Year's Day)"                                                 public on january 1 2024
 "法定工作日-春节调休 (Workday)"                                          public on february 4 2024
 "春节(Spring Festival)"                                              public on february 10 2024
@@ -749,3 +751,36 @@ language    "zh_CN"
 "国庆节(National Day)"                                                  public on october 6 2024
 "国庆节(National Day)"                                                  public on october 7 2024
 "法定工作日-国庆节调休 (Workday)"                                         public on october 12 2024
+"元旦(New Year's Day)"                                                 public on january 1 2025
+"法定工作日-春节调休 (Workday)"                                          public on january 26 2025
+"春节(Spring Festival)"                                               public on january 28 2025
+"春节(Spring Festival)"                                               public on january 29 2025
+"春节(Spring Festival)"                                               public on january 30 2025
+"春节(Spring Festival)"                                               public on january 31 2025
+"春节(Spring Festival)"                                               public on february 1 2025
+"春节(Spring Festival)"                                               public on february 2 2025
+"春节(Spring Festival)"                                               public on february 3 2025
+"春节(Spring Festival)"                                               public on february 4 2025
+"法定工作日-春节调休 (Workday)"                                          public on february 8 2025
+"清明(Tomb-sweeping Day)"                                                public on april 4 2025
+"清明(Tomb-sweeping Day)"                                                public on april 5 2025
+"清明(Tomb-sweeping Day)"                                                public on april 6 2025
+"法定工作日-劳动节调休 (Workday)"                                           public on april 27 2025
+"劳动节(Labour Day)"                                                        public on may 1 2025
+"劳动节(Labour Day)"                                                        public on may 2 2025
+"劳动节(Labour Day)"                                                        public on may 3 2025
+"劳动节(Labour Day)"                                                        public on may 4 2025
+"劳动节(Labour Day)"                                                        public on may 5 2025
+"端午(Dragon Boat Festival)"                                              public on may 31 2025
+"端午(Dragon Boat Festival)"                                              public on june 1 2025
+"端午(Dragon Boat Festival)"                                              public on june 2 2025
+"法定工作日-国庆节调休 (Workday)"                                       public on september 28 2025
+"国庆节(National Day)"                                                  public on october 1 2025
+"国庆节(National Day)"                                                  public on october 2 2025
+"国庆节(National Day)"                                                  public on october 3 2025
+"国庆节(National Day)"                                                  public on october 4 2025
+"国庆节(National Day)"                                                  public on october 5 2025
+"中秋(Mid-autumn Festival)"                                            public on october 6 2025
+"国庆节(National Day)"                                                  public on october 7 2025
+"国庆节(National Day)"                                                  public on october 8 2025
+"法定工作日-国庆节调休 (Workday)"                                         public on october 11 2025
