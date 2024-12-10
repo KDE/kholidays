@@ -113,6 +113,8 @@ endif()
 
 add_subdirectory(declarative)
 
+ecm_generate_qdoc(KF6Holidays kholidays.qdocconf)
+
 ecm_qt_install_logging_categories(
     EXPORT KHOLIDAYS
     FILE kholidays.categories

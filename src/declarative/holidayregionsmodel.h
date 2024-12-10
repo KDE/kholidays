@@ -12,6 +12,10 @@
 #include <QAbstractTableModel>
 #include <QObject>
 
+/*!
+ * \qmltype HolidayRegionsModel
+ * \inqmlmodule org.kde.kholidays
+ */
 class HolidayRegionsDeclarativeModel : public QAbstractTableModel
 {
     Q_OBJECT

@@ -20,8 +20,13 @@ namespace KHolidays
 {
 class ZodiacPrivate;
 
-/**
-   Represents and manages the Zodiac calendar.
+/*!
+   \class KHolidays::Zodiac
+   \inheaderfile KHolidays/Zodiac
+   \inmodule KHolidays
+
+   \brief Represents and manages the Zodiac calendar.
+
    The Tropical and Sidereal Zodiacs are supported.
 
    A very good description of the Zodiac calendars can be read at the
@@ -32,6 +37,7 @@ class ZodiacPrivate;
    based on some quick scanning of documents I found on the WWW.  Feel free
    to contact me about this code if you have improvements.
 
+   \badcode
    Sign         Symbol               Birthdates
                           Tropical              Sidereal
    Aries        ram       Mar 21 - Apr 19       Apr 14 - May 14
@@ -46,16 +52,35 @@ class ZodiacPrivate;
    Capricorn    goat      Dec 22 - Jan 19       Jan 15 - Feb 12
    Aquarius     water     Jan 20 - Feb 18       Feb 13 - Mar 14
    Pisces       fish      Feb 19 - Mar 20       Mar 15 - Apr 13
-
+   \endcode
 */
 class KHOLIDAYS_EXPORT Zodiac
 {
 public:
+    /*!
+     * \value Tropical
+     * \value Sidereal
+     */
     enum ZodiacType {
         Tropical,
         Sidereal,
     };
 
+    /*!
+     * \value Aries
+     * \value Taurus
+     * \value Gemini
+     * \value Cancer
+     * \value Leo
+     * \value Virgo
+     * \value Libra
+     * \value Scorpio
+     * \value Sagittarius
+     * \value Capricorn
+     * \value Aquarius
+     * \value Pisces
+     * \value None
+     */
     enum ZodiacSigns {
         Aries,
         Taurus,
@@ -72,38 +97,40 @@ public:
         None,
     };
 
+    /*!
+     */
     explicit Zodiac(ZodiacType type);
     Zodiac(const Zodiac &other);
     ~Zodiac();
 
     Zodiac &operator=(const Zodiac &other);
 
-    /**
+    /*!
        Return the Zodiac sign for the specified Gregorian date.
        The enum 'None' is returned if one of the supported signs
        does not occur on the date.
 
-       @param date compute the Zodiac sign for the specified Gregorian date.
+       \a date compute the Zodiac sign for the specified Gregorian date.
     */
     ZodiacSigns signAtDate(const QDate &date) const;
 
-    /**
+    /*!
        Return the Zodiac sign as a text string for the specified date.
        A null string is returned if one of the supported Zodiac signs does
        not occur on the date.
 
-       @param date compute the Zodiac sign for the specified Gregorian date.
+       \a date compute the Zodiac sign for the specified Gregorian date.
     */
     QString signNameAtDate(const QDate &date) const;
 
-    /**
+    /*!
        Return the string representation of Zodiac sign.
 
-       @param sign Zodiac sign.
+       \a sign Zodiac sign.
     */
     static QString signName(ZodiacSigns sign);
 
-    /**
+    /*!
        Convert the Zodiac sign to a Zodiac symbol.
     */
     static QString signSymbol(ZodiacSigns sign);

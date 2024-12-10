@@ -16,19 +16,42 @@
 #include <QQmlEngine>
 #include <QTimeZone>
 
+/*!
+ * \qmltype Lunar
+ * \inqmlmodule org.kde.kholidays
+ */
+
+/*!
+ * \qmltype SunRiseSet
+ * \inqmlmodule org.kde.kholidays
+ */
+
 // convert to/from QDateTime for JS
 class LunarPhaseWrapper
 {
     Q_GADGET
 public:
+    /*!
+     * \qmlmethod enumeration Lunar::phaseAtDate(datetime date)
+     *
+     * \sa LunarPhase::Phase
+     */
     static Q_INVOKABLE KHolidays::LunarPhase::Phase phaseAtDate(const QDateTime &date)
     {
         return KHolidays::LunarPhase::phaseAtDate(date.date());
     }
+
+    /*!
+     * \qmlmethod string Lunar::phaseNameAtDate(datetime date)
+     */
     static Q_INVOKABLE QString phaseNameAtDate(const QDateTime &date)
     {
         return KHolidays::LunarPhase::phaseNameAtDate(date.date());
     }
+
+    /*!
+     * \qmlmethod string Lunar::phaseName(enumeration phase)
+     */
     static Q_INVOKABLE QString phaseName(KHolidays::LunarPhase::Phase phase)
     {
         return KHolidays::LunarPhase::phaseName(phase);
@@ -39,34 +62,61 @@ class SunRiseSetWrapper
 {
     Q_GADGET
 public:
+    /*!
+     * \qmlmethod datetime SunRiseSet::utcSunrise(datetime date, real latitude, real longitude)
+     */
     static Q_INVOKABLE QDateTime utcSunrise(const QDateTime &date, double latitude, double longitude)
     {
         const auto time = KHolidays::SunRiseSet::utcSunrise(date.date(), latitude, longitude);
         return time.isValid() ? QDateTime(date.date(), time, QTimeZone::utc()) : QDateTime();
     }
+
+    /*!
+     * \qmlmethod datetime SunRiseSet::utcSunset(datetime date, real latitude, real longitude)
+     */
     static Q_INVOKABLE QDateTime utcSunset(const QDateTime &date, double latitude, double longitude)
     {
         const auto time = KHolidays::SunRiseSet::utcSunset(date.date(), latitude, longitude);
         return time.isValid() ? QDateTime(date.date(), time, QTimeZone::utc()) : QDateTime();
     }
+
+    /*!
+     * \qmlmethod datetime SunRiseSet::utcDawn(datetime date, real latitude, real longitude)
+     */
     static Q_INVOKABLE QDateTime utcDawn(const QDateTime &date, double latitude, double longitude)
     {
         const auto time = KHolidays::SunRiseSet::utcDawn(date.date(), latitude, longitude);
         return time.isValid() ? QDateTime(date.date(), time, QTimeZone::utc()) : QDateTime();
     }
+
+    /*!
+     * \qmlmethod datetime SunRiseSet::utcDusk(datetime date, real latitude, real longitude)
+     */
     static Q_INVOKABLE QDateTime utcDusk(const QDateTime &date, double latitude, double longitude)
     {
         const auto time = KHolidays::SunRiseSet::utcDusk(date.date(), latitude, longitude);
         return time.isValid() ? QDateTime(date.date(), time, QTimeZone::utc()) : QDateTime();
     }
+
+    /*!
+     * \qmlmethod bool SunRiseSet::isPolarDay(datetime date, real latitude)
+     */
     static Q_INVOKABLE bool isPolarDay(const QDateTime &date, double latitude)
     {
         return KHolidays::SunRiseSet::isPolarDay(date.date(), latitude);
     }
+
+    /*!
+     * \qmlmethod bool SunRiseSet::isPolarTwilight(datetime date, real latitude)
+     */
     static Q_INVOKABLE bool isPolarTwilight(const QDateTime &date, double latitude)
     {
         return KHolidays::SunRiseSet::isPolarTwilight(date.date(), latitude);
     }
+
+    /*!
+     * \qmlmethod bool SunRiseSet::isPolarNight(datetime date, real latitude)
+     */
     static Q_INVOKABLE bool isPolarNight(const QDateTime &date, double latitude)
     {
         return KHolidays::SunRiseSet::isPolarNight(date.date(), latitude);

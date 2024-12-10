@@ -163,7 +163,7 @@ std::string *HolidayParserDriverPlan::fileToParse() const
     return m_fileToParse;
 }
 
-/*****************************************
+/****************************************
   Calendar and Date convenience routines
 ******************************************/
 
@@ -318,7 +318,7 @@ QString HolidayParserDriverPlan::systemToType(QCalendarSystem::CalendarSystem ca
     }
 }
 
-/*************************
+/************************
  * Calculate jd routines *
  *************************/
 
@@ -395,7 +395,7 @@ int HolidayParserDriverPlan::julianDayFromWeekdayInMonth(int occurrence, int wee
     }
 }
 
-/****************************************************
+/***************************************************
  * Set parsed event variables convenience functions *
  ****************************************************/
 
@@ -457,7 +457,7 @@ void HolidayParserDriverPlan::setEventDate(int jd)
     julianDayToDate(jd, &m_eventYear, &m_eventMonth, &m_eventDay);
 }
 
-/********************************************
+/*******************************************
  * Set event date from event rules routines *
  ********************************************/
 
@@ -572,7 +572,7 @@ void HolidayParserDriverPlan::setFromRelativeWeekday(int occurrence, int weekday
 // TODO Figure out how this works :-)
 int HolidayParserDriverPlan::conditionalOffset(int year, int month, int day, int condition)
 {
-    /** The encoding of the condition is:
+    /* The encoding of the condition is:
           8 lower bits: conditions to shift (bit-register, bit 1=mon, ..., bit 7=sun)
           8 higher bits: weekday to shift to (bit-register, bit 1=mon, ..., bit 7=sun)
     */
