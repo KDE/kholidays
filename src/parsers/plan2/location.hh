@@ -8,7 +8,7 @@
     SPDX-License-Identifier: GPL-3.0-or-later WITH Bison-exception-2.2
 */
 
-/**
+/*!
  ** \file location.hh
  ** Define the KHolidays::location class.
  */
@@ -48,7 +48,7 @@ namespace KHolidays {
       end = begin;
     }
 
-    /** \name Line and Column related manipulators
+    /*! \name Line and Column related manipulators
      ** \{ */
   public:
     /// Reset initial location to final location.
@@ -68,7 +68,7 @@ namespace KHolidays {
     {
       end.lines (count);
     }
-    /** \} */
+    /*! \} */
 
 
   public:
@@ -115,7 +115,7 @@ namespace KHolidays {
     return !(loc1 == loc2);
   }
 
-  /** \brief Intercept output stream redirection.
+  /*! \brief Intercept output stream redirection.
    ** \param ostr the destination output stream
    ** \param loc a reference to the location to redirect
    **

@@ -1,0 +1,28 @@
+include($KDE_DOCS/global/qt-module-defaults.qdocconf)
+
+project = KHolidays
+description = Dates for holidays and other special events
+
+documentationinheaders = true
+
+headerdirs += .
+sourcedirs += .
+
+outputformats = HTML
+
+depends += \
+    qtcore
+
+qhp.projects            = KHolidays
+
+qhp.KHolidays.file                = kholidays.qhp
+qhp.KHolidays.namespace           = org.kde.kholidays.$QT_VERSION_TAG
+qhp.KHolidays.virtualFolder       = kholidays
+qhp.KHolidays.indexTitle          = KHolidays
+qhp.KHolidays.indexRoot           =
+
+qhp.KHolidays.subprojects         = classes
+qhp.KHolidays.subprojects.classes.title = C++ Classes
+qhp.KHolidays.subprojects.classes.indexTitle = KHolidays C++ Classes
+qhp.KHolidays.subprojects.classes.selectors = class fake:headerfile
+qhp.KHolidays.subprojects.classes.sortPages = true

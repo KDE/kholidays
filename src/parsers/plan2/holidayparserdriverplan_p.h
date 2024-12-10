@@ -22,7 +22,7 @@ class HolidayScannerPlan;
 class HolidayParserPlan;
 class location;
 
-/**
+/*!
  * HolidayParserDriverPlan implementation class
  *
  * Implements the standard driver interface for parsing Plan holiday files as
@@ -34,52 +34,52 @@ class location;
  * While almost all code is new, the structure of the parser is based on the
  * original Plan parser.
  *
- * @internal Private, for internal use only
+ * \internal Private, for internal use only
  */
 class HolidayParserDriverPlan : public HolidayParserDriver
 {
 public:
-    /**
+    /*!
      * Constructor of Plan file parser driver
      *
-     * @param filePath full path to holiday file
+     * \a filePath full path to holiday file
      */
     explicit HolidayParserDriverPlan(const QString &planFilename);
 
-    /**
+    /*!
      * Destructor.
      */
     ~HolidayParserDriverPlan() override;
 
-    /**
+    /*!
      * Bison C++ skeleton error message handling
      *
-     * @param errorMessage error message to log
+     * \a errorMessage error message to log
      */
     void error(const KHolidays::location &errorLocation, const QString &errorMessage);
 
-    /**
+    /*!
      * Standard error message handling
      *
-     * @param errorMessage error message to log
+     * \a errorMessage error message to log
      */
     void error(const QString &errorMessage) override;
 
 protected:
-    /**
+    /*!
      * Actually parse the file, new plan format implementation
      */
     void parse() override;
 
-    /**
+    /*!
      * Parse the file for metadata only and populate the metadata variables
      */
     void parseMetadata() override;
 
-    /**
+    /*!
      * Set the calendar system to use
      *
-     * @param calendar The QCalendarSystem calendar system to use
+     * \a calendar The QCalendarSystem calendar system to use
      */
     void setParseCalendar(QCalendarSystem::CalendarSystem calendar) override;
 

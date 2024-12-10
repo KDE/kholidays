@@ -12,7 +12,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-%{ /*** C/C++ Declarations ***/
+%{ /*!* C/C++ Declarations ***/
 # include <cstdlib>
 # include <errno.h>
 # include <limits.h>
@@ -37,7 +37,7 @@ typedef KHolidays::HolidayParserPlan::token_type token_type;
 # define YY_NO_UNISTD_H
 %}
 
-/*** Flex Declarations and Options ***/
+/*!* Flex Declarations and Options ***/
 
 /* enable c++ scanner class generation */
 %option c++
@@ -66,7 +66,7 @@ typedef KHolidays::HolidayParserPlan::token_type token_type;
 # define YY_USER_ACTION  yylloc->columns( yyleng );
 %}
 
-%% /*** Regular Expressions Part ***/
+%% /*!* Regular Expressions Part ***/
 
 %{
     /* code to place at the beginning of yylex() */
@@ -308,7 +308,7 @@ yekshanbe           { yylval->ival =   7; return token::WDAY; }
 
 .                   { LexerError( yytext ); }
 
-%% /*** Additional Code ***/
+%% /*!* Additional Code ***/
 
 namespace KHolidays {
 

@@ -292,8 +292,8 @@ struct yy_buffer_state {
      */
     int yy_at_bol;
 
-    int yy_bs_lineno; /**< The line count. */
-    int yy_bs_column; /**< The column count. */
+    int yy_bs_lineno; /*< The line count. */
+    int yy_bs_column; /*< The column count. */
 
     /* Whether to try to fill the input buffer when we reach the
      * end of it.
@@ -1331,7 +1331,7 @@ typedef KHolidays::HolidayParserPlan::token_type token_type;
 /* This disables inclusion of unistd.h, which is not available under Visual C++
  * on Win32. The C++ scanner uses STL streams instead. */
 # define YY_NO_UNISTD_H
-/*** Flex Declarations and Options ***/
+/** Flex Declarations and Options ***/
 /* enable c++ scanner class generation */
 /* change the name of the scanner class. results in "HolidayScannerFlexLexer" */
 /* the manual says "somewhat more optimized" */
@@ -1499,7 +1499,7 @@ static int yy_flex_strlen(yyconst char *);
 
 /* %not-for-header */
 
-/** The main scanner function which does all the work.
+/* The main scanner function which does all the work.
  */
 YY_DECL {
     yy_state_type yy_current_state;
@@ -3207,8 +3207,8 @@ int yyFlexLexer::yyinput()
 /* %if-c-only */
 /* %endif */
 
-/** Immediately switch to a different input stream.
- * @param input_file A readable stream.
+/* Immediately switch to a different input stream.
+ * \a input_file A readable stream.
  *
  * @note This function does not reset the start condition to @c INITIAL .
  */
@@ -3229,8 +3229,8 @@ void yyFlexLexer::yyrestart(std::istream *input_file)
     yy_load_buffer_state();
 }
 
-/** Switch to a different input buffer.
- * @param new_buffer The new input buffer.
+/* Switch to a different input buffer.
+ * \a new_buffer The new input buffer.
  *
  */
 /* %if-c-only */
@@ -3280,9 +3280,9 @@ void yyFlexLexer::yy_load_buffer_state()
     (yy_hold_char) = *(yy_c_buf_p);
 }
 
-/** Allocate and initialize an input buffer state.
- * @param file A readable stream.
- * @param size The character buffer size in bytes. When in doubt, use @c YY_BUF_SIZE.
+/* Allocate and initialize an input buffer state.
+ * \a file A readable stream.
+ * \a size The character buffer size in bytes. When in doubt, use @c YY_BUF_SIZE.
  *
  * @return the allocated buffer state.
  */
@@ -3316,8 +3316,8 @@ YY_BUFFER_STATE yyFlexLexer::yy_create_buffer(std::istream *file, int size)
     return b;
 }
 
-/** Destroy the buffer.
- * @param b a buffer created with yy_create_buffer()
+/* Destroy the buffer.
+ * \a b a buffer created with yy_create_buffer()
  *
  */
 /* %if-c-only */
@@ -3386,8 +3386,8 @@ void yyFlexLexer::yy_init_buffer(YY_BUFFER_STATE b, std::istream *file)
     errno = oerrno;
 }
 
-/** Discard all buffered characters. On the next scan, YY_INPUT will be called.
- * @param b the buffer state to be flushed, usually @c YY_CURRENT_BUFFER.
+/* Discard all buffered characters. On the next scan, YY_INPUT will be called.
+ * \a b the buffer state to be flushed, usually @c YY_CURRENT_BUFFER.
  *
  */
 /* %if-c-only */
@@ -3420,10 +3420,10 @@ void yyFlexLexer::yy_flush_buffer(YY_BUFFER_STATE b)
 }
 
 /* %if-c-or-c++ */
-/** Pushes the new state onto the stack. The new state becomes
+/* Pushes the new state onto the stack. The new state becomes
  *  the current state. This function will allocate the stack
  *  if necessary.
- *  @param new_buffer The new state.
+ *  \a new_buffer The new state.
  *
  */
 /* %if-c-only */
@@ -3459,7 +3459,7 @@ void yyFlexLexer::yypush_buffer_state(YY_BUFFER_STATE new_buffer)
 /* %endif */
 
 /* %if-c-or-c++ */
-/** Removes and deletes the top of the stack, if present.
+/* Removes and deletes the top of the stack, if present.
  *  The next element becomes the new top.
  *
  */

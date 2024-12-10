@@ -167,9 +167,9 @@ protected:
     // instead of setting up a fresh yyin. A bit of a hack ...
     int yy_did_buffer_switch_on_eof;
 
-    size_t yy_buffer_stack_top; /**< index of top of stack. */
-    size_t yy_buffer_stack_max; /**< capacity of stack. */
-    struct yy_buffer_state **yy_buffer_stack; /**< Stack as an array. */
+    size_t yy_buffer_stack_top; /*< index of top of stack. */
+    size_t yy_buffer_stack_max; /*< capacity of stack. */
+    struct yy_buffer_state **yy_buffer_stack; /*< Stack as an array. */
     void yyensure_buffer_stack(void);
 
     // The following are not always needed, but may be depending
