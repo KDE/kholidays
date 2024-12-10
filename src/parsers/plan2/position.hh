@@ -8,7 +8,7 @@
     SPDX-License-Identifier: GPL-3.0-or-later WITH Bison-exception-2.2
 */
 
-/**
+/*!
  ** \file position.hh
  ** Define the KHolidays::position class.
  */
@@ -48,7 +48,7 @@ namespace KHolidays {
       column = 1;
     }
 
-    /** \name Line and Column related manipulators
+    /*! \name Line and Column related manipulators
      ** \{ */
   public:
     /// (line related) Advance to the COUNT next lines.
@@ -63,7 +63,7 @@ namespace KHolidays {
     {
       column = std::max (1u, column + count);
     }
-    /** \} */
+    /*! \} */
 
   public:
     /// File name to which this position refers.
@@ -121,7 +121,7 @@ namespace KHolidays {
     return !(pos1 == pos2);
   }
 
-  /** \brief Intercept output stream redirection.
+  /*! \brief Intercept output stream redirection.
    ** \param ostr the destination output stream
    ** \param pos a reference to the position to redirect
    */

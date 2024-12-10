@@ -15,7 +15,7 @@
 
 /* Line 311 of lalr1.cc  */
 #line 30 "holidayparserplan.ypp"
-/*** C/C++ Declarations ***/
+/*!* C/C++ Declarations ***/
 
 #include <limits.h>
 #include <stdio.h>
@@ -1684,7 +1684,7 @@ const HolidayParserPlan::token_number_type HolidayParserPlan::yyundef_token_ = 2
 /* Line 1056 of lalr1.cc  */
 #line 251 "holidayparserplan.ypp"
 
-/*** Private Yacc callbacks and helper functions ***/
+/*!* Private Yacc callbacks and helper functions ***/
 
 void KHolidays::HolidayParserPlan::error(const KHolidays::HolidayParserPlan::location_type &errorLocation, const std::string &errorMessage)
 {

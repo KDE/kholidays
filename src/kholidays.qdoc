@@ -1,0 +1,20 @@
+/*!
+    \module KHolidays
+    \title KHolidays C++ Classes
+    \ingroup modules
+    \cmakepackage KF6
+    \cmakecomponent Holidays
+
+    \brief Provides Stuff.
+
+    Stuff
+*/
+
+/*!
+    \qmlmodule org.kde.kholidays
+    \title KHolidays QML Types
+    \ingroup qmlmodules
+    \brief Stuff.
+
+    lalala
+*/
