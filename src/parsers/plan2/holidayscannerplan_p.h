@@ -29,7 +29,7 @@
 
 namespace KHolidays
 {
-/**
+/*!
  * HolidayScannerPlan implementation class
  *
  * Implements the flex scanner for scanning Plan holiday files as
@@ -40,7 +40,7 @@ namespace KHolidays
  * Implemented using Flex C++ mode, based on the example at
  * https://panthema.net/2007/flex-bison-cpp-example/ which is released to Public Domain.
  *
- * @internal Private, for internal use only
+ * \internal Private, for internal use only
  */
 
 class HolidayScannerPlan : public HolidayScannerFlexLexer

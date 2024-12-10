@@ -1,0 +1,22 @@
+/*!
+    \module KHolidays
+    \title KHolidays C++ Classes
+    \ingroup modules
+    \cmakepackage KF6
+    \cmakecomponent Holidays
+
+    \brief Dates for holidays and other special events.
+
+    This library provides a C++ API that determines holiday and other
+    special events for a geographical region.
+*/
+
+/*!
+    \qmlmodule org.kde.kholidays
+    \title KHolidays QML Types
+    \ingroup qmlmodules
+    \brief Dates for holidays and other special events.
+
+    This module provides a QML API that determines holiday and other
+    special events for a geographical region.
+*/

@@ -15,7 +15,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-%{ /*** C/C++ Declarations ***/
+%{ /*!* C/C++ Declarations ***/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -30,7 +30,7 @@
 
 %}
 
-/*** yacc/bison Declarations ***/
+/*!* yacc/bison Declarations ***/
 
 /* Require bison 2.3 or later */
 %require "2.3"
@@ -68,7 +68,7 @@
 /* verbose error messages */
 %error-verbose
 
-/*** Grammar Tokens ***/
+/*!* Grammar Tokens ***/
 
 %union { int  ival; char *sval; }
 
@@ -93,7 +93,7 @@
 
 %start planfile
 
-/*** End Grammar Tokens ***/
+/*!* End Grammar Tokens ***/
 
 %{
 
@@ -108,7 +108,7 @@
 
 %}
 
-%% /*** Grammar Rules ***/
+%% /*!* Grammar Rules ***/
 
 planfile : metadata list
 ;
@@ -237,7 +237,7 @@ number : NUMBER
 
 %%
 
-/*** Private Yacc callbacks and helper functions ***/
+/*!* Private Yacc callbacks and helper functions ***/
 
 void KHolidays::HolidayParserPlan::error( const KHolidays::HolidayParserPlan::location_type &errorLocation, const std::string &errorMessage )
 {

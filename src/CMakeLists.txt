@@ -89,29 +89,9 @@ install(FILES
   COMPONENT Devel
 )
 
-if(BUILD_QCH)
-  ecm_add_qch(
-    KF6Holidays_QCH
-    NAME KHolidays
-    BASE_NAME KF6Holidays
-    VERSION ${KF_VERSION}
-    ORG_DOMAIN org.kde
-    SOURCES # using only public headers, to cover only public API
-      ${KHolidays_HEADERS}
-    MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
-    LINK_QCHS
-      Qt6Core_QCH
-    INCLUDE_DIRS
-      ${CMAKE_CURRENT_BINARY_DIR}
-    BLANK_MACROS
-      KHOLIDAYS_EXPORT
-    TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
-    QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
-    COMPONENT Devel
-  )
-endif()
-
 add_subdirectory(declarative)
+
+ecm_generate_qdoc(KF6Holidays kholidays.qdocconf)
 
 ecm_qt_install_logging_categories(
     EXPORT KHOLIDAYS
