@@ -43,7 +43,27 @@ language    "bg"
 :: Seasons
 
 :: Name Days
-
+"Васильовден"                                                           nameday on january 1
+"Йордановден Богоявление"                                               nameday on january 6
+"Ивановден"                                                             nameday on january 7
+"Антоновден"                                                            nameday on january 17
+"Атанасовден"                                                           nameday on january 18
+"Трифоновден, Трифон Зарезан"                                           nameday on february 1
+"Петльовден"                                                            nameday on february 2
+"Зимен Симеоновден"                                                     nameday on february 3
+"Благовещение"                                                          nameday on march 25
+"Еньовден"                                                              nameday on june 24
+"Петровден"                                                             nameday on june 29
+"Илинден"                                                               nameday on july 20
+"Симеоновден"                                                           nameday on september 1
+"Кръстовден"                                                            nameday on september 14
+"Петковден"                                                             nameday on october 14
+"Димитровден"                                                           nameday on october 26
+"Архангеловден"                                                         nameday on november 8
+"Андреевден"                                                            nameday on november 30
+"Никулден"                                                              nameday on december 6
+"Игнажден"                                                              nameday on december 20
+"Стефановден"                                                           nameday on december 27
 
 :: To be sorted
 "Ден на народните будители - неприсъствен за всички учебни заведения"   civil on november 1
