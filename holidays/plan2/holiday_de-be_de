@@ -24,6 +24,8 @@ description "Feiertage für Deutschland (Berlin)"
 
 "Internationaler Frauentag" public on ((year >= 2019) ? [march 8] : noop)
 "75. Jahrestag der Befreiung vom Nationalsozialismus und der Beendigung des Zweiten Weltkrieges in Europa" public on 8.5.2020
+"80. Jahrestag der Befreiung vom Nationalsozialismus und der Beendigung des Zweiten Weltkrieges in Europa" public on 8.5.2025
+"75-jährige Jubiläum des Volksaufstands in der DDR" public on 17.6.2028
 
 :: ---------- This part is shared across all Federal States of Germany ----------
 
