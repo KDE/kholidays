@@ -18,22 +18,22 @@ description "Public Holidays"
 
 :: Public Holidays
 "New Year’s Day"                        public cultural on 1.1
-"Zanzibar Revolution Day"               public cultural on 12.1.
+"Revolution Day"                        public cultural on 12.1.
 "Karume Day"                            public cultural on 7.4.
 "Good Friday"                           public religious on easter minus 2 days
-"Easter"                                public religious on easter
 "Easter Monday"                         public religious on easter plus 1 days
 "Union Day"                             public cultural on 26.4.
-"Labour Day"                            public cultural on 1.5.
+"International Worker’s Day"            public cultural on 1.5.
 "Saba Saba Day"                         public cultural on 7.7.
-"Nane Nane Day"                         public cultural on 8.8.
+"Peasant’s Day"                         public cultural on 8.8.
 "Nyerere Day"                           public cultural on 14.10.
-"Independence Day"                      public cultural on 9.12.
+"Independence and Republic Day"         public cultural on 9.12.
 "Christmas Day"                         public religious on 25.12.
 "Boxing Day"                            public religious on 26.12.
-"Maulid"                                public religious on hijri rabialawal 12
-"Eid al-Fitr"                           public religious on hijri shawwal 1
-"Eid al-Hajj"                           public religious on hijri thualhijjah 10
+"Maulidi Day"                           public religious on hijri rabialawal 12
+"Id-ul-Fitr"                            public religious on hijri shawwal 1
+"Id-ul-Fitr"                            public religious on hijri shawwal 2
+"Id-el-Haj"                             public religious on hijri thualhijjah 10
 
 :: Civil
 
