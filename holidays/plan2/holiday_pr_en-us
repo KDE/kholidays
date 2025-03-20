@@ -1,0 +1,65 @@
+::
+:: Country:  Puerto Rico
+::
+:: Language: US English
+::
+:: Author:   Tatiana de la Cruz Monserrate <tatic90@gmail.com>
+::           
+::
+:: Updated:
+::
+:: Source: https://en.wikipedia.org/wiki/Public_holidays_in_Puerto_Rico
+::
+
+:: Metadata
+country     "PR"
+language    "en_US"
+:name        "optional - defaults to country name"
+description "National holiday file for Puerto Rico"
+
+:: Public Holidays
+"New Year's Day"                    public on january 1
+"American Citizenship Day"          public on march 2
+"Emancipation Day"                  public on march 22
+"Puerto Rico Constitution Day"      public on july 25
+"Birthday of José Celso Barbosa"    public on july 27
+"Puerto Rican Day"                  public on november 19
+
+:: Federal Holidays
+"Martin Luther King's Birthday"  public on third monday in january
+"President's Day"                public on third monday in february
+"Memorial Day"                   public on last monday in may
+"Juneteenth Day"                 public on june 19
+"Juneteenth Day"                 public on (([june 19] == [saturday after ([june 19])]) ?
+                                                          [friday before ([june 19])] : noop)
+"Juneteenth Day"                 public on (([june 19] == [sunday   after ([june 19])]) ?
+                                                          [monday after  ([june 19])] : noop)
+"Independence Day"               public on july 4
+"Labor Day"                      public on first monday in september
+"Columbus Day"                   public on second monday in october
+"Veterans Day"                   public on november 11
+"Thanksgiving"                   public on fourth thursday in november
+
+:: Cultural
+"St. Valentine's Day"            cultural on february 14
+"Mother's Day"                   cultural on second sunday in may
+"Father's Day"                   cultural on third sunday in june
+"Halloween"                      cultural on october 31
+
+:: Religious
+"Three Kings Day"                religious on january 6
+"Ash Wednesday"                  religious on easter minus 46 days
+"Palm Sunday"                    religious on easter minus 7 days
+"Holy Thursday"                  religious on easter minus 3 days
+"Good Friday"                    public religious on easter minus 2 days
+"Holy Saturday"                  religious on easter minus 1 days
+"Easter Sunday"                  religious on easter
+"Christmas Eve"                  religious cultural on december 25
+"Christmas Day"                  public religious on december 25
+
+:: School
+"Grito de Lares"                 school on september 23
+
+:: Daylight Saving
+
+

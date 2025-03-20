@@ -1,0 +1,64 @@
+::
+:: Country:  Puerto Rico
+::
+:: Language: Spanish
+::
+:: Author:   Tatiana de la Cruz Monserrate <tatic90@gmail.com>
+::
+:: Updated: 
+::
+:: Source:   https://camarapr.org/wp-content/uploads/Dias-Feriados-2025.pdf
+::           https://en.wikipedia.org/wiki/Public_holidays_in_Puerto_Rico
+:: 
+
+:: Metadata
+country     "PR"
+language    "es"
+:name        "Puerto Rico"
+:description "Días festivos y feriados en Puerto Rico"
+
+:: Public Holidays
+"Año Nuevo"				                 public on january 1
+"Día de la ciudadanía americana"         public on march 2
+"Día de la abolición de la esclavitud"   public on march 22
+"Día de la constitución de Puerto Rico"  public on july 25
+"Natalicio de José Celso Barbosa"        public on july 27
+"Día de la Puertorriqueñidad"            public on november 19
+
+:: Federal Holidays
+"Natalicio de Martin Luther King"                                           public on third monday in january
+"Día de los presidentes y las mujeres y hombres procéres de Puerto Rico"    public on third monday in february
+"Día de la conmemoración de los muertos en la guerra"                       public on last monday in may
+"Juneteenth"                                                                public on june 19
+"Juneteenth"                                                                public on (([june 19] == [saturday after ([june 19])]) ?
+                                                                                                     [friday before ([june 19])] : noop)
+"Juneteenth"                                                                public on (([june 19] == [sunday   after ([june 19])]) ?
+                                                                                                     [monday after  ([june 19])] : noop)
+"Día de la independencia de los Estados Unidos"                             public on july 4
+"Día del trabajo"                                                           public on first monday in september
+"Día de la raza"                                                            public on second monday in october
+"Día del veterano"                                                          public on november 11
+"Día de acción de gracias"                                                  public on fourth thursday in november
+
+:: Cultural
+"Día de San Valentín"	            cultural on february 14
+"Día de las Madres"                 cultural on second sunday in may 
+"Día de los Padres"			        cultural on third sunday in june
+"Noche de brujas"                   cultural on october 31
+
+:: Religious
+"Día de Reyes"                      public religious school on january 6
+"Miércoles de ceniza"               religious on easter minus 46 days
+"Domingo de Ramos"                  religious on easter minus 7 days
+"Jueves Santo"                      religious on easter minus 3 days
+"Viernes Santo"                     public religious on easter minus 2 days
+"Sábado de Gloria"                  religious on easter minus 1 days
+"Domingo de Pascua"                 religious on easter               
+"Noche buena"		            religious cultural on december 24
+"Navidad"                           public religious on december 25
+
+:: School
+"Grito de Lares"                    school on september 23
+
+:: Daylight Saving
+
