@@ -277,7 +277,7 @@ HolidayParserPlan::parse()
     int yystate = 0;
 
     /* Error handling.  */
-    int yynerrs_ = 0;
+    /* unused int yynerrs_ = 0;*/
     int yyerrstatus_ = 0;
 
     /// Semantic value of the lookahead.
@@ -1147,7 +1147,7 @@ yyreduce:
 yyerrlab:
     /* If not already recovering from an error, report this error.  */
     if (!yyerrstatus_) {
-        ++yynerrs_;
+        /* unused ++yynerrs_; */
         error(yylloc, yysyntax_error_(yylloc.begin.filename, yystate, yytoken));
     }
 
