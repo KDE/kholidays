@@ -6,9 +6,8 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+#include "kholidays_debug.h"
 #include "qcalendarsystem_p.h"
-
-#include <kholidays_debug.h>
 
 #include <QDate>
 #include <QSharedData>

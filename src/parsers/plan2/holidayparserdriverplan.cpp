@@ -22,7 +22,7 @@
 #include "holidayparserdriverplan_p.h"
 #include "holidayparserplan.hpp"
 #include "holidayscannerplan_p.h"
-#include <kholidays_debug.h>
+#include "kholidays_debug.h"
 
 #include <QFileInfo>
 

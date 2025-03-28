@@ -9,8 +9,7 @@
 #include "astroseasons.h"
 #include "holiday_p.h"
 #include "holidayparserdriver_p.h"
-
-#include <kholidays_debug.h>
+#include "kholidays_debug.h"
 
 using namespace KHolidays;
 
