@@ -5,17 +5,13 @@
 ::
 :: Author:   Petar Margetić <pmargeti34@gmail.com>
 ::
-:: Updated:  2024-05-24
+:: Updated:  2025-03-28
 ::
 :: Source:   Official Gazette of the Republic of the Philippines
 ::           Nationwide Holidays
-::           https://www.officialgazette.gov.ph/nationwide-holidays/
-::           Proclamation No.368
-::           https://www.officialgazette.gov.ph/downloads/2023/10oct/20231011-PROC-368-FRM.pdf
-::           Proclamation No. 453, s.2024
-::           https://www.officialgazette.gov.ph/2024/01/18/proclamation-no-453-s-2024/
-::           DepEd amends school calendar amid gradual shift to April-May break
-::           https://www.pna.gov.ph/articles/1219220
+::           https://www.officialgazette.gov.ph/nationwide-holidays/2025/
+::           https://www.officialgazette.gov.ph/downloads/2025/03mar/20250320-PROC-839-FRM.pdf
+::           https://www.officialgazette.gov.ph/2024/10/30/proclamation-no-729-s-2024/
 ::
 
 :: Metadata
@@ -36,12 +32,12 @@ description "National holiday file for Philippines"
 "Last Day of the Year"                                             public on december 31
 
 :: Religious Holidays
-"Maundy Thursday"                                                  religious on march 28
-"Good Friday"                                                      religious on march 29
-"Black Saturday"                                                   religious on march 30
-"Feast of Ramadhan"                                                religious on april 10
+"Feast of Ramadhan"                                                religious on april 1
+"Maundy Thursday"                                                  religious on april 17
+"Good Friday"                                                      religious on april 18
+"Black Saturday"                                                   religious on april 19
+"All Saints' Day Eve"                                              religious on october 31
 "All Saints' Day"                                                  religious on november 1
-"All Souls' Day"                                                   religious on november 2
 "Feast of Immaculate Conception of Mary"                           religious on december 8
 "Christmas Eve"                                                    religious on december 24
 "Christmas Day"                                                    religious on december 25
@@ -49,15 +45,14 @@ description "National holiday file for Philippines"
 :: Financial
 
 :: Cultural
-"Chinese New Year"                                                 cultural on february 10
+"Chinese New Year"                                                 cultural on january 29
 
 :: School
 "End of School Year 2023/24"                                       school on may 31
-"School break"                                                     school on june 1 length 56 days
-"Start of School Year 2024/25"                                     school on july 29
-"End of School Year 2024/25"                                       school on may 16 2025
+"Start of School Year 2025/26"                                     school on july 29
+"End of School Year 2025/26"                                       school on april 15 2026
 
 :: Name Days
 
 :: To be sorted
-"By proclamation of the President"                                 public on february 9
+"Founding anniversary of Iglesia ni Cristo"                        public on july 27
