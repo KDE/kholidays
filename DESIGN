@@ -95,7 +95,7 @@ IV. Requirements
          may also mean the recurrence rules must always use month and weekday
          numbers rather than names, except that some calendar systems such as
          the Hebrew add leap months in the middle of the year which change the
-         month numbering but are not counted when calculating recurrances. Use
+         month numbering but are not counted when calculating recurrences. Use
          either the existing calendarType e.g. "jalali" or a new short code
          "JA" or a new standard agreed on FDO?]
 
@@ -125,7 +125,7 @@ IV. Requirements
      land on a weekend.  This occurs for holidays with a fixed date.
 
    [JPL
-   * Be able to specify where to move holidays if they reccur on a day that
+   * Be able to specify where to move holidays if they recur on a day that
      doesn't exist, e.g. whether holiday on 29th February should only ever
      occur on 29th Feb or should be moved to the 28th Feb or 1st March.  This
      particularly applies to religious holidays in calendar systems where the
@@ -251,8 +251,8 @@ VI. Date Specification
 
    * Fixed date: the date is fixed on the calendar.
 
-   * Postional date: the date occurs according to a position,
-                       eg. "first Monday in September".
+   * Positional date: the date occurs according to a position,
+                      eg. "first Monday in September".
 
    * Moon date:  the date corresponds to a phase of the moon.
 

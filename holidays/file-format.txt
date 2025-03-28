@@ -9,7 +9,7 @@ The file format is currently defined using Bison and Flex in the following files
 
 (In the following definition, optional parts are in [square brackets],
 nonterminals are in CAPS, alternatives are separated by |, everything must be
-entered in lower case. In all cases defer to the defintiion in the ypp/lpp
+entered in lower case. In all cases defer to the definition in the ypp/lpp
 files.)
 
 A holiday file consists of an optional metadata header section, followed by an
