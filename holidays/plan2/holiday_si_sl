@@ -8,9 +8,9 @@
 ::           Andrej Mernik <andrejm@ubuntu.si>
 ::           Jaka Kranjc <smgl+kdeid@lynxlynx.info>
 ::
-:: Updated:  2024
+:: Updated:  2025
 ::
-:: Source:   http://www.vlada.si/o_sloveniji/politicni_sistem/prazniki/
+:: Source:   https://www.gov.si/teme/drzavni-prazniki-in-dela-prosti-dnevi/
 ::           https://podatki.gov.si/dataset/seznam-praznikov-in-dela-prostih-dni-v-republiki-sloveniji
 ::
 
@@ -30,6 +30,7 @@ language    "sl"
 "Vrnitev Primorske k matični domovini"                commemorative on september 15
 "Dan slovenskega športa"                              civil on september 23
 "Dan suverenosti"                                     commemorative on october 25
+"Dan znanosti"                                        civil on november 10
 "Dan Rudolfa Maistra"                                 commemorative on november 23
 "Dan samostojnosti in enotnosti"                      public government on december 26
 
