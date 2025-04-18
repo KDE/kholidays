@@ -36,6 +36,7 @@ description "National holiday file for USA"
 "Christmas Day"                  public on december 25
 
 :: Religious
+"Good Friday"                    religious on easter minus 2 days
 "Easter"                         religious on easter
 "Ash Wednesday"                  religious on easter minus 46 days
 "Pentecost"                      religious on easter plus 49 days
