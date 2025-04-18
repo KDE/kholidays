@@ -13,7 +13,7 @@ special events for a geographical region.
 * Edit the holidays/holidays.qrc file accordingly.
 ```
 % cd <builddir>
-% make install && QT_LOGGING_RULES="*.debug=true" ./bin/testholidayregion -maxwarnings 0 >& foo.txt
+% cmake --install . && QT_LOGGING_RULES="*.debug=true" ./bin/testholidayregion -maxwarnings 0 >& foo.txt
 ```
 * Look for lines containing "syntax error" in foo.txt.
 * Fix any such syntax errors and then you can commit.
