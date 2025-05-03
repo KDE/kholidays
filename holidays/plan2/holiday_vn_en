@@ -1,0 +1,437 @@
+::
+:: Country:  Vietnam
+::
+:: Language: Vietnamese
+::
+:: Author:   Kien Ho    <channelback546@gmail.com>
+::
+:: Updated:  2025-5-2
+::
+:: Source:   https://www.timeanddate.com/holidays/vietnam
+::           https://en.wikipedia.org/wiki/Public_holidays_in_Vietnam
+::
+:: Effective date: 2000-01-01
+
+:: Metadata
+country     "VN"
+language    "en"
+:name       "optional - defaults to country name"
+description "Public Holidays in Viet Nam"
+
+:: Public/National Holidays
+: The first day of january (or if that day is a Sunday, then the following day)
+"New Year's Day"                                      public on january 1
+"Supplementary holiday for New Year's Day"            public on ( ( [january 1] == [sunday after ([january 1])]) ?
+                                                                   [monday after ([january 1])] :
+                                                                   noop )
+
+: Liberation Day/Reunification Day (or if that day is a Sunday, then the following day)
+"Liberation Day/Reunification Day"                    public on ( (year >= 2000) ? [april 30]: noop )
+"Supplementary holiday for Liberation Day/Reunification Day"       public on ( (year >= 2000 && [april 30] == [sunday after ([april 30])]) ?
+                                                                   [monday after ([april 30])] :
+                                                                   noop )
+
+: Labour Day (or if that day is a Sunday, then the following day)
+"Labour Day"                                          public on ( (year >= 2000) ? [may 1]: noop )
+"Supplementary holiday for Labour Day"                public on ( (year >= 2000 && [may 1] == [sunday after ([may 1])]) ?
+                                                                   [monday after ([may 1])] :
+                                                                   noop )
+                                                                   
+: Independence Day (or if that day is a Sunday, then the following day)
+"Independence Day"                                    public on ( (year >= 2000) ? [september 2] : noop )
+"Supplementary holiday for Independence Day"          public on ( (year >= 2000 && [september 2] == [sunday after ([september 2])]) ?
+                                                                   [monday after ([september 2])] :
+                                                                   noop )
+
+:: Observed holiday
+"Valentine's Day"                                     public on february 14
+"International Woman's Day"                           public on march 8
+"World Children's Day"                                public on june 1
+"Vietnamese Family Day"                               public on ( (year >= 2001) ? [june 28]: noop )
+"Vietnamese Woman's Day"                              public on october 20
+"Halloween"                                           public on october 31
+"Vietnamese Teacher's Day"                            public on november 20
+"Christmas Eve"                                       public on december 24
+"Christmas Day"                                       public on december 25
+"International New Year's Eve"                        public on december 31
+
+:: Holidays based on lunar calendar
+"Kitchen Gods Farewell Day"                           public on 29 january 2000
+"Vietnamese New Year's Eve"                           public on 4 february 2000
+"Vietnamese New Year"                                 public on 5 february 2000
+"Tet Holiday"                                         public on 6 february 2000 length 4 days
+"Easter Sunday"                                       public on 23 april 2000
+"Buddha's Birthday"                                   public on 18 may 2000
+"Ghost Festival"                                      public on 14 august 2000
+"Mid-Autumn Festival"                                 public on 12 september 2000
+
+"Kitchen Gods Farewell Day"                           public on 17 january 2001
+"Vietnamese New Year's Eve"                           public on 23 january 2001
+"Vietnamese New Year"                                 public on 24 january 2001
+"Tet Holiday"                                         public on 25 january 2001 length 4 days
+"Easter Sunday"                                       public on 15 april 2001
+"Buddha's Birthday"                                   public on 7 may 2001
+"Ghost Festival"                                      public on 2 september 2001
+"Mid-Autumn Festival"                                 public on 1 october 2001
+
+"Kitchen Gods Farewell Day"                           public on 4 february 2002
+"Vietnamese New Year's Eve"                           public on 11 february 2002
+"Vietnamese New Year"                                 public on 12 february 2002
+"Tet Holiday"                                         public on 13 february 2002 length 4 days
+"Easter Sunday"                                       public on 31 march 2002
+"Buddha's Birthday"                                   public on 26 may 2002
+"Ghost Festival"                                      public on 23 august 2002
+"Mid-Autumn Festival"                                 public on 21 september 2002
+
+"Kitchen Gods Farewell Day"                           public on 25 january 2003
+"Vietnamese New Year's Eve"                           public on 31 january 2003
+"Vietnamese New Year"                                 public on 1 february 2003
+"Tet Holiday"                                         public on 2 february 2003 length 4 days
+"Easter Sunday"                                       public on 20 april 2003
+"Buddha's Birthday"                                   public on 15 may 2003
+"Ghost Festival"                                      public on 12 august 2003
+"Mid-Autumn Festival"                                 public on 11 september 2003
+
+"Kitchen Gods Farewell Day"                           public on 14 january 2004
+"Vietnamese New Year's Eve"                           public on 21 january 2004
+"Vietnamese New Year"                                 public on 22 january 2004
+"Tet Holiday"                                         public on 23 january 2004 length 4 days
+"Easter Sunday"                                       public on 11 april 2004
+"Buddha's Birthday"                                   public on 2 june 2004
+"Ghost Festival"                                      public on 30 august 2004
+"Mid-Autumn Festival"                                 public on 28 september 2004
+
+"Kitchen Gods Farewell Day"                           public on 1 february 2005
+"Vietnamese New Year's Eve"                           public on 8 february 2005
+"Vietnamese New Year"                                 public on 9 february 2005
+"Tet Holiday"                                         public on 10 february 2005 length 4 days
+"Easter Sunday"                                       public on 27 march 2005
+"Buddha's Birthday"                                   public on 22 may 2005
+"Ghost Festival"                                      public on 19 august 2005
+"Mid-Autumn Festival"                                 public on 18 september 2005
+
+"Kitchen Gods Farewell Day"                           public on 22 january 2006
+"Vietnamese New Year's Eve"                           public on 28 january 2006
+"Vietnamese New Year"                                 public on 29 january 2006
+"Tet Holiday"                                         public on 30 january 2006 length 4 days
+"Easter Sunday"                                       public on 16 april 2006
+"Buddha's Birthday"                                   public on 12 may 2006
+"Ghost Festival"                                      public on 8 august 2006
+"Mid-Autumn Festival"                                 public on 6 october 2006
+
+"Kitchen Gods Farewell Day"                           public on 10 february 2007
+"Vietnamese New Year's Eve"                           public on 17 february 2007
+"Vietnamese New Year"                                 public on 18 february 2007
+"Tet Holiday"                                         public on 19 february 2007 length 4 days
+"Easter Sunday"                                       public on 8 april 2007
+"Buddha's Birthday"                                   public on 31 may 2007
+"Ghost Festival"                                      public on 27 august 2007
+"Mid-Autumn Festival"                                 public on 25 september 2007
+
+"Kitchen Gods Farewell Day"                           public on 30 january 2008
+"Vietnamese New Year's Eve"                           public on 6 february 2008
+"Vietnamese New Year"                                 public on 7 february 2008
+"Tet Holiday"                                         public on 8 february 2008 length 4 days
+"Easter Sunday"                                       public on 23 march 2008
+"Buddha's Birthday"                                   public on 19 may 2008
+"Ghost Festival"                                      public on 15 august 2008
+"Mid-Autumn Festival"                                 public on 14 september 2008
+
+"Kitchen Gods Farewell Day"                           public on 18 january 2009
+"Vietnamese New Year's Eve"                           public on 25 january 2009
+"Vietnamese New Year"                                 public on 26 january 2009
+"Tet Holiday"                                         public on 27 january 2009 length 4 days
+"Easter Sunday"                                       public on 12 april 2009
+"Buddha's Birthday"                                   public on 9 may 2009
+"Ghost Festival"                                      public on 3 september 2009
+"Mid-Autumn Festival"                                 public on 3 october 2009
+
+"Kitchen Gods Farewell Day"                           public on 6 february 2010
+"Vietnamese New Year's Eve"                           public on 13 february 2010
+"Vietnamese New Year"                                 public on 14 february 2010
+"Tet Holiday"                                         public on 15 february 2010 length 4 days
+"Easter Sunday"                                       public on 4 april 2010
+"Buddha's Birthday"                                   public on 28 may 2010
+"Ghost Festival"                                      public on 24 august 2010
+"Mid-Autumn Festival"                                 public on 22 september 2010
+
+"Kitchen Gods Farewell Day"                           public on 26 january 2011
+"Vietnamese New Year's Eve"                           public on 2 february 2011
+"Vietnamese New Year"                                 public on 3 february 2011
+"Tet Holiday"                                         public on 4 february 2011 length 4 days
+"Easter Sunday"                                       public on 24 april 2011
+"Buddha's Birthday"                                   public on 17 may 2011
+"Ghost Festival"                                      public on 14 august 2011
+"Mid-Autumn Festival"                                 public on 12 september 2011
+
+"Kitchen Gods Farewell Day"                           public on 16 january 2012
+"Vietnamese New Year's Eve"                           public on 22 january 2012
+"Vietnamese New Year"                                 public on 23 january 2012
+"Tet Holiday"                                         public on 24 january 2012 length 4 days
+"Easter Sunday"                                       public on 8 april 2012
+"Buddha's Birthday"                                   public on 5 may 2012
+"Ghost Festival"                                      public on 31 august 2012
+"Mid-Autumn Festival"                                 public on 30 september 2012
+
+"Kitchen Gods Farewell Day"                           public on 3 february 2013
+"Vietnamese New Year's Eve"                           public on 9 february 2013
+"Vietnamese New Year"                                 public on 10 february 2013
+"Tet Holiday"                                         public on 11 february 2013 length 5 days
+"Easter Sunday"                                       public on 31 march 2013
+"Buddha's Birthday"                                   public on 24 may 2013
+"Ghost Festival"                                      public on 21 august 2013
+"Mid-Autumn Festival"                                 public on 19 september 2013
+
+"Kitchen Gods Farewell Day"                           public on 23 january 2014
+"Tet Holiday"                                         public on 28 january 2014 length 2 days
+"Vietnamese New Year's Eve"                           public on 30 january 2014
+"Vietnamese New Year"                                 public on 31 january 2014
+"Tet Holiday"                                         public on 1 february 2014 length 5 days
+"Easter Sunday"                                       public on 20 april 2014
+"Buddha's Birthday"                                   public on 13 may 2014
+"Ghost Festival"                                      public on 10 august 2014
+"Mid-Autumn Festival"                                 public on 8 september 2014
+
+"Kitchen Gods Farewell Day"                           public on 11 february 2015
+"Tet Holiday"                                         public on 15 february 2015 length 3 days
+"Vietnamese New Year's Eve"                           public on 18 february 2015
+"Vietnamese New Year"                                 public on 19 february 2015
+"Tet Holiday"                                         public on 20 february 2015 length 4 days
+"Easter Sunday"                                       public on 5 april 2015
+"Buddha's Birthday"                                   public on 1 june 2015
+"Ghost Festival"                                      public on 28 august 2015
+"Mid-Autumn Festival"                                 public on 27 september 2015
+
+"Kitchen Gods Farewell Day"                           public on 1 february 2016
+"Vietnamese New Year's Eve"                           public on 7 february 2016
+"Vietnamese New Year"                                 public on 8 february 2016
+"Tet Holiday"                                         public on 9 february 2016 length 5 days
+"Easter Sunday"                                       public on 27 march 2016
+"Buddha's Birthday"                                   public on 21 may 2016
+"Ghost Festival"                                      public on 17 august 2016
+"Mid-Autumn Festival"                                 public on 15 september 2016
+
+"Kitchen Gods Farewell Day"                           public on 20 january 2017
+"Tet Holiday"                                         public on 26 january 2017
+"Vietnamese New Year's Eve"                           public on 27 january 2017
+"Vietnamese New Year"                                 public on 28 january 2017
+"Tet Holiday"                                         public on 29 january 2017 length 4 days
+"Easter Sunday"                                       public on 16 april 2017
+"Buddha's Birthday"                                   public on 10 may 2017
+"Ghost Festival"                                      public on 5 september 2017
+"Mid-Autumn Festival"                                 public on 4 october 2017
+
+"Kitchen Gods Farewell Day"                           public on 8 february 2018
+"Tet Holiday"                                         public on 14 february 2018
+"Vietnamese New Year's Eve"                           public on 15 february 2018
+"Vietnamese New Year"                                 public on 16 february 2018
+"Tet Holiday"                                         public on 17 february 2018 length 4 days
+"Easter Sunday"                                       public on 1 april 2018
+"Buddha's Birthday"                                   public on 29 may 2018
+"Ghost Festival"                                      public on 25 august 2018
+"Mid-Autumn Festival"                                 public on 24 september 2018
+
+"Kitchen Gods Farewell Day"                           public on 28 january 2019
+"Tet Holiday"                                         public on 2 february 2019 length 2 days
+"Vietnamese New Year's Eve"                           public on 4 february 2019
+"Vietnamese New Year"                                 public on 5 february 2019
+"Tet Holiday"                                         public on 6 february 2019 length 5 days
+"Easter Sunday"                                       public on 21 april 2019
+"Buddha's Birthday"                                   public on 19 may 2019
+"Ghost Festival"                                      public on 15 august 2019
+"Mid-Autumn Festival"                                 public on 13 september 2019
+
+"Kitchen Gods Farewell Day"                           public on 17 january 2020
+"Tet Holiday"                                         public on 23 january 2020
+"Vietnamese New Year's Eve"                           public on 24 january 2020
+"Vietnamese New Year"                                 public on 25 january 2020
+"Tet Holiday"                                         public on 26 january 2020 length 4 days
+"Easter Sunday"                                       public on 12 april 2020
+"Buddha's Birthday"                                   public on 7 may 2020
+"Ghost Festival"                                      public on 2 september 2020
+"Mid-Autumn Festival"                                 public on 1 october 2020
+
+"Kitchen Gods Farewell Day"                           public on 4 february 2021
+"Tet Holiday"                                         public on 10 february 2021
+"Vietnamese New Year's Eve"                           public on 11 february 2021
+"Vietnamese New Year"                                 public on 12 february 2021
+"Tet Holiday"                                         public on 13 february 2021 length 4 days
+"Easter Sunday"                                       public on 4 april 2021
+"Buddha's Birthday"                                   public on 26 may 2021
+"Ghost Festival"                                      public on 22 august 2021
+"Mid-Autumn Festival"                                 public on 21 september 2021
+
+"Kitchen Gods Farewell Day"                           public on 25 january 2022
+"Vietnamese New Year's Eve"                           public on 31 january 2022
+"Vietnamese New Year"                                 public on 1 february 2022
+"Tet Holiday"                                         public on 2 february 2022 length 4 days
+"Easter Sunday"                                       public on 17 april 2022
+"Buddha's Birthday"                                   public on 15 may 2022
+"Ghost Festival"                                      public on 12 august 2022
+"Mid-Autumn Festival"                                 public on 10 september 2022
+
+"Kitchen Gods Farewell Day"                           public on 14 january 2023
+"Tet Holiday"                                         public on 20 january 2023
+"Vietnamese New Year's Eve"                           public on 21 january 2023
+"Vietnamese New Year"                                 public on 22 january 2023
+"Tet Holiday"                                         public on 23 january 2023 length 4 days
+"Easter Sunday"                                       public on 9 april 2023
+"Buddha's Birthday"                                   public on 2 june 2023
+"Ghost Festival"                                      public on 30 august 2023
+"Mid-Autumn Festival"                                 public on 29 september 2023
+
+"Kitchen Gods Farewell Day"                           public on 2 february 2024
+"Tet Holiday"                                         public on 8 february 2024
+"Vietnamese New Year's Eve"                           public on 9 february 2024
+"Vietnamese New Year"                                 public on 10 february 2024
+"Tet Holiday"                                         public on 11 february 2024 length 4 days
+"Easter Sunday"                                       public on 31 march 2024
+"Buddha's Birthday"                                   public on 22 may 2024
+"Ghost Festival"                                      public on 18 august 2024
+"Mid-Autumn Festival"                                 public on 17 september 2024
+
+"Kitchen Gods Farewell Day"                           public on 22 january 2025
+"Tet Holiday"                                         public on 25 january 2025 length 3 days
+"Vietnamese New Year's Eve"                           public on 28 january 2025
+"Vietnamese New Year"                                 public on 29 january 2025
+"Tet Holiday"                                         public on 30 january 2025 length 4 days
+"Easter Sunday"                                       public on 20 april 2025
+"Buddha's Birthday"                                   public on 12 may 2025
+"Ghost Festival"                                      public on 6 september 2025
+"Mid-Autumn Festival"                                 public on 6 october 2025
+
+"Kitchen Gods Farewell Day"                           public on 10 february 2026
+"Vietnamese New Year's Eve"                           public on 16 february 2026
+"Vietnamese New Year"                                 public on 17 february 2026
+"Tet Holiday"                                         public on 18 february 2026 length 4 days
+"Easter Sunday"                                       public on 5 april 2026
+"Buddha's Birthday"                                   public on 31 may 2026
+"Ghost Festival"                                      public on 27 august 2026
+"Mid-Autumn Festival"                                 public on 25 september 2026
+
+"Kitchen Gods Farewell Day"                           public on 30 january 2027
+"Vietnamese New Year's Eve"                           public on 5 february 2027
+"Vietnamese New Year"                                 public on 6 february 2027
+"Tet Holiday"                                         public on 7 february 2027 length 4 days
+"Easter Sunday"                                       public on 28 march 2027
+"Buddha's Birthday"                                   public on 20 may 2027
+"Ghost Festival"                                      public on 16 august 2027
+"Mid-Autumn Festival"                                 public on 15 september 2027
+
+"Kitchen Gods Farewell Day"                           public on 19 january 2028
+"Vietnamese New Year's Eve"                           public on 25 january 2028
+"Vietnamese New Year"                                 public on 26 january 2028
+"Tet Holiday"                                         public on 27 january 2028 length 4 days
+"Easter Sunday"                                       public on 16 april 2028
+"Buddha's Birthday"                                   public on 9 may 2028
+"Ghost Festival"                                      public on 3 september 2028
+"Mid-Autumn Festival"                                 public on 3 october 2028
+
+"Kitchen Gods Farewell Day"                           public on 6 february 2029
+"Vietnamese New Year's Eve"                           public on 12 february 2029
+"Vietnamese New Year"                                 public on 13 february 2029
+"Tet Holiday"                                         public on 14 february 2029 length 4 days
+"Easter Sunday"                                       public on 1 april 2029
+"Buddha's Birthday"                                   public on 27 may 2029
+"Ghost Festival"                                      public on 24 august 2029
+"Mid-Autumn Festival"                                 public on 22 september 2029
+
+"Kitchen Gods Farewell Day"                           public on 26 january 2030
+"Vietnamese New Year's Eve"                           public on 2 february 2030
+"Vietnamese New Year"                                 public on 3 february 2030
+"Tet Holiday"                                         public on 4 february 2030 length 4 days
+"Easter Sunday"                                       public on 21 april 2030
+"Buddha's Birthday"                                   public on 16 may 2030
+"Ghost Festival"                                      public on 13 august 2030
+"Mid-Autumn Festival"                                 public on 12 september 2030
+
+"Kitchen Gods Farewell Day"                           public on 16 january 2031
+"Vietnamese New Year's Eve"                           public on 22 january 2031
+"Vietnamese New Year"                                 public on 23 january 2031
+"Tet Holiday"                                         public on 24 january 2031 length 4 days
+"Easter Sunday"                                       public on 13 april 2031
+"Buddha's Birthday"                                   public on 4 june 2031
+"Ghost Festival"                                      public on 1 september 2031
+"Mid-Autumn Festival"                                 public on 1 october 2031
+
+"Kitchen Gods Farewell Day"                           public on 4 february 2032
+"Vietnamese New Year's Eve"                           public on 10 february 2032
+"Vietnamese New Year"                                 public on 11 february 2032
+"Tet Holiday"                                         public on 12 february 2032 length 4 days
+"Easter Sunday"                                       public on 28 march 2032
+"Buddha's Birthday"                                   public on 23 may 2032
+"Ghost Festival"                                      public on 20 august 2032
+"Mid-Autumn Festival"                                 public on 19 september 2032
+
+"Kitchen Gods Farewell Day"                           public on 23 january 2033
+"Vietnamese New Year's Eve"                           public on 30 january 2033
+"Vietnamese New Year"                                 public on 31 january 2033
+"Tet Holiday"                                         public on 1 february 2033 length 4 days
+"Easter Sunday"                                       public on 17 april 2033
+"Buddha's Birthday"                                   public on 13 may 2033
+"Ghost Festival"                                      public on 9 august 2033
+"Mid-Autumn Festival"                                 public on 8 september 2033
+
+"Kitchen Gods Farewell Day"                           public on 11 february 2034
+"Vietnamese New Year's Eve"                           public on 18 february 2034
+"Vietnamese New Year"                                 public on 19 february 2034
+"Tet Holiday"                                         public on 20 february 2034 length 4 days
+"Easter Sunday"                                       public on 9 april 2034
+"Buddha's Birthday"                                   public on 1 june 2034
+"Ghost Festival"                                      public on 28 august 2034
+"Mid-Autumn Festival"                                 public on 27 september 2034
+
+"Kitchen Gods Farewell Day"                           public on 31 january 2035
+"Vietnamese New Year's Eve"                           public on 7 february 2035
+"Vietnamese New Year"                                 public on 8 february 2035
+"Tet Holiday"                                         public on 9 february 2035 length 4 days
+"Easter Sunday"                                       public on 25 march 2035
+"Buddha's Birthday"                                   public on 22 may 2035
+"Ghost Festival"                                      public on 18 august 2035
+"Mid-Autumn Festival"                                 public on 16 september 2035
+
+"Kitchen Gods Farewell Day"                           public on 20 january 2036
+"Vietnamese New Year's Eve"                           public on 27 january 2036
+"Vietnamese New Year"                                 public on 28 january 2036
+"Tet Holiday"                                         public on 29 january 2036 length 4 days
+"Easter Sunday"                                       public on 13 april 2036
+"Buddha's Birthday"                                   public on 10 may 2036
+"Ghost Festival"                                      public on 5 september 2036
+"Mid-Autumn Festival"                                 public on 4 october 2036
+
+"Kitchen Gods Farewell Day"                           public on 7 february 2037
+"Vietnamese New Year's Eve"                           public on 14 february 2037
+"Vietnamese New Year"                                 public on 15 february 2037
+"Tet Holiday"                                         public on 16 february 2037 length 4 days
+"Easter Sunday"                                       public on 5 april 2037
+"Buddha's Birthday"                                   public on 29 may 2037
+"Ghost Festival"                                      public on 25 august 2037
+"Mid-Autumn Festival"                                 public on 24 september 2037
+
+"Kitchen Gods Farewell Day"                           public on 27 january 2038
+"Vietnamese New Year's Eve"                           public on 3 february 2038
+"Vietnamese New Year"                                 public on 4 february 2038
+"Tet Holiday"                                         public on 5 february 2038 length 4 days
+"Easter Sunday"                                       public on 25 april 2038
+"Buddha's Birthday"                                   public on 18 may 2038
+"Ghost Festival"                                      public on 15 august 2038
+"Mid-Autumn Festival"                                 public on 13 september 2038
+
+"Kitchen Gods Farewell Day"                           public on 17 january 2039
+"Vietnamese New Year's Eve"                           public on 23 january 2039
+"Vietnamese New Year"                                 public on 24 january 2039
+"Tet Holiday"                                         public on 25 january 2039 length 4 days
+"Easter Sunday"                                       public on 10 april 2039
+"Buddha's Birthday"                                   public on 7 may 2039
+"Ghost Festival"                                      public on 3 september 2039
+"Mid-Autumn Festival"                                 public on 2 october 2039
+
+"Kitchen Gods Farewell Day"                           public on 5 february 2040
+"Vietnamese New Year's Eve"                           public on 11 february 2040
+"Vietnamese New Year"                                 public on 12 february 2040
+"Tet Holiday"                                         public on 13 february 2040 length 4 days
+"Easter Sunday"                                       public on 1 april 2040
+"Buddha's Birthday"                                   public on 25 may 2040
+"Ghost Festival"                                      public on 22 august 2040
+"Mid-Autumn Festival"                                 public on 20 september 2040
+

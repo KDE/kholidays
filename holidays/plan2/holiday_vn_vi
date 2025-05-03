@@ -1,0 +1,395 @@
+::
+:: Country:  Vietnam
+::
+:: Language: English
+::
+:: Author:   Kien Ho    <channelback546@gmail.com>
+::
+:: Updated:  2025-5-2
+::
+:: Source:   https://www.timeanddate.com/holidays/vietnam
+::           https://en.wikipedia.org/wiki/Public_holidays_in_Vietnam
+::
+:: Effective date: 2000-01-01
+
+:: Metadata
+country     "VN"
+language    "vi"
+:name       "optional - defaults to country name"
+description "Các ngày lễ ở Việt Nam"
+
+:: Public/National Holidays
+: The first day of january (or if that day is a Sunday, then the following day)
+"Tết Dương Lịch"                                      public on january 1
+"Tết Dương Lịch (ngày lễ bổ sung)"                    public on ( ( [january 1] == [sunday after ([january 1])]) ?
+                                                                   [monday after ([january 1])] :
+                                                                   noop )
+
+: Liberation Day/Reunification Day (or if that day is a Sunday, then the following day)
+"Ngày giải phóng"                                     public on ( (year >= 2000) ? [april 30]: noop )
+"Ngày giải phóng (ngày lễ bổ sung)"                   public on ( (year >= 2000 && [april 30] == [sunday after ([april 30])]) ?
+                                                                   [monday after ([april 30])] :
+                                                                   noop )
+
+: Labour Day (or if that day is a Sunday, then the following day)
+"Ngày Quốc tế Lao động"                               public on ( (year >= 2000) ? [may 1]: noop )
+"Ngày Quốc tế Lao động (ngày lễ bổ sung)"             public on ( (year >= 2000 && [may 1] == [sunday after ([may 1])]) ?
+                                                                   [monday after ([may 1])] :
+                                                                   noop )
+                                                                   
+: Independence Day (or if that day is a Sunday, then the following day)
+"Quốc khánh"                                          public on ( (year >= 2000) ? [september 2] : noop )
+"Quốc khánh (ngày lễ bổ sung)"                        public on ( (year >= 2000 && [september 2] == [sunday after ([september 2])]) ?
+                                                                   [monday after ([september 2])] :
+                                                                   noop )
+
+:: Observed holiday
+"Ngày Valentine"                                      public on february 14
+"Ngày Quốc tế Phụ nữ"                                 public on march 8
+"Ngày Quốc tế Thiếu nhi"                              public on june 1
+"Ngày gia đình Việt Nam"                              public on ( (year >= 2001) ? [june 28]: noop )
+"Ngày Phụ nữ Việt Nam"                                public on october 20
+"Halloween"                                           public on october 31
+"Ngày Nhà giáo Việt Nam"                              public on november 20
+"Lễ Giáng Sinh"                                       public on december 24 length 2 days
+"Đêm giao thừa"                                       public on december 31
+
+:: Holidays based on lunar calendar
+"Tết Ông Công Ông Táo"                                public on 29 january 2000
+"Tết đêm giao thừa"                                   public on 4 february 2000
+"Tết Nguyên Đán"                                      public on 5 february 2000 length 5 days
+"Lễ Phục Sinh"                                        public on 23 april 2000
+"Lễ Phật Đản"                                         public on 18 may 2000
+"Lễ Vu Lan"                                           public on 14 august 2000
+"Tết Trung Thu"                                       public on 12 september 2000
+
+"Tết Ông Công Ông Táo"                                public on 17 january 2001
+"Tết đêm giao thừa"                                   public on 23 january 2001
+"Tết Nguyên Đán"                                      public on 24 january 2001 length 5 days
+"Lễ Phục Sinh"                                        public on 15 april 2001
+"Lễ Phật Đản"                                         public on 7 may 2001
+"Lễ Vu Lan"                                           public on 2 september 2001
+"Tết Trung Thu"                                       public on 1 october 2001
+
+"Tết Ông Công Ông Táo"                                public on 4 february 2002
+"Tết đêm giao thừa"                                   public on 11 february 2002
+"Tết Nguyên Đán"                                      public on 12 february 2002 length 5 days
+"Lễ Phục Sinh"                                        public on 31 march 2002
+"Lễ Phật Đản"                                         public on 26 may 2002
+"Lễ Vu Lan"                                           public on 23 august 2002
+"Tết Trung Thu"                                       public on 21 september 2002
+
+"Tết Ông Công Ông Táo"                                public on 25 january 2003
+"Tết đêm giao thừa"                                   public on 31 january 2003
+"Tết Nguyên Đán"                                      public on 1 february 2003 length 5 days
+"Lễ Phục Sinh"                                        public on 20 april 2003
+"Lễ Phật Đản"                                         public on 15 may 2003
+"Lễ Vu Lan"                                           public on 12 august 2003
+"Tết Trung Thu"                                       public on 11 september 2003
+
+"Tết Ông Công Ông Táo"                                public on 14 january 2004
+"Tết đêm giao thừa"                                   public on 21 january 2004
+"Tết Nguyên Đán"                                      public on 22 january 2004 length 5 days
+"Lễ Phục Sinh"                                        public on 11 april 2004
+"Lễ Phật Đản"                                         public on 2 june 2004
+"Lễ Vu Lan"                                           public on 30 august 2004
+"Tết Trung Thu"                                       public on 28 september 2004
+
+"Tết Ông Công Ông Táo"                                public on 1 february 2005
+"Tết đêm giao thừa"                                   public on 8 february 2005
+"Tết Nguyên Đán"                                      public on 9 february 2005 length 5 days
+"Lễ Phục Sinh"                                        public on 27 march 2005
+"Lễ Phật Đản"                                         public on 22 may 2005
+"Lễ Vu Lan"                                           public on 19 august 2005
+"Tết Trung Thu"                                       public on 18 september 2005
+
+"Tết Ông Công Ông Táo"                                public on 22 january 2006
+"Tết đêm giao thừa"                                   public on 28 january 2006
+"Tết Nguyên Đán"                                      public on 29 january 2006 length 5 days
+"Lễ Phục Sinh"                                        public on 16 april 2006
+"Lễ Phật Đản"                                         public on 12 may 2006
+"Lễ Vu Lan"                                           public on 8 august 2006
+"Tết Trung Thu"                                       public on 6 october 2006
+
+"Tết Ông Công Ông Táo"                                public on 10 february 2007
+"Tết đêm giao thừa"                                   public on 17 february 2007
+"Tết Nguyên Đán"                                      public on 18 february 2007 length 5 days
+"Lễ Phục Sinh"                                        public on 8 april 2007
+"Lễ Phật Đản"                                         public on 31 may 2007
+"Lễ Vu Lan"                                           public on 27 august 2007
+"Tết Trung Thu"                                       public on 25 september 2007
+
+"Tết Ông Công Ông Táo"                                public on 30 january 2008
+"Tết đêm giao thừa"                                   public on 6 february 2008
+"Tết Nguyên Đán"                                      public on 7 february 2008 length 5 days
+"Lễ Phục Sinh"                                        public on 23 march 2008
+"Lễ Phật Đản"                                         public on 19 may 2008
+"Lễ Vu Lan"                                           public on 15 august 2008
+"Tết Trung Thu"                                       public on 14 september 2008
+
+"Tết Ông Công Ông Táo"                                public on 18 january 2009
+"Tết đêm giao thừa"                                   public on 25 january 2009
+"Tết Nguyên Đán"                                      public on 26 january 2009 length 5 days
+"Lễ Phục Sinh"                                        public on 12 april 2009
+"Lễ Phật Đản"                                         public on 9 may 2009
+"Lễ Vu Lan"                                           public on 3 september 2009
+"Tết Trung Thu"                                       public on 3 october 2009
+
+"Tết Ông Công Ông Táo"                                public on 6 february 2010
+"Tết đêm giao thừa"                                   public on 13 february 2010
+"Tết Nguyên Đán"                                      public on 14 february 2010 length 5 days
+"Lễ Phục Sinh"                                        public on 4 april 2010
+"Lễ Phật Đản"                                         public on 28 may 2010
+"Lễ Vu Lan"                                           public on 24 august 2010
+"Tết Trung Thu"                                       public on 22 september 2010
+
+"Tết Ông Công Ông Táo"                                public on 26 january 2011
+"Tết đêm giao thừa"                                   public on 2 february 2011
+"Tết Nguyên Đán"                                      public on 3 february 2011 length 5 days
+"Lễ Phục Sinh"                                        public on 24 april 2011
+"Lễ Phật Đản"                                         public on 17 may 2011
+"Lễ Vu Lan"                                           public on 14 august 2011
+"Tết Trung Thu"                                       public on 12 september 2011
+
+"Tết Ông Công Ông Táo"                                public on 16 january 2012
+"Tết đêm giao thừa"                                   public on 22 january 2012
+"Tết Nguyên Đán"                                      public on 23 january 2012 length 5 days
+"Lễ Phục Sinh"                                        public on 8 april 2012
+"Lễ Phật Đản"                                         public on 5 may 2012
+"Lễ Vu Lan"                                           public on 31 august 2012
+"Tết Trung Thu"                                       public on 30 september 2012
+
+"Tết Ông Công Ông Táo"                                public on 3 february 2013
+"Tết đêm giao thừa"                                   public on 9 february 2013
+"Tết Nguyên Đán"                                      public on 10 february 2013 length 6 days
+"Lễ Phục Sinh"                                        public on 31 march 2013
+"Lễ Phật Đản"                                         public on 24 may 2013
+"Lễ Vu Lan"                                           public on 21 august 2013
+"Tết Trung Thu"                                       public on 19 september 2013
+
+"Tết Ông Công Ông Táo"                                public on 23 january 2014
+"Tết Nguyên Đán"                                      public on 28 january 2014 length 2 days
+"Tết đêm giao thừa"                                   public on 30 january 2014
+"Tết Nguyên Đán"                                      public on 31 january 2014 length 6 days
+"Lễ Phục Sinh"                                        public on 20 april 2014
+"Lễ Phật Đản"                                         public on 13 may 2014
+"Lễ Vu Lan"                                           public on 10 august 2014
+"Tết Trung Thu"                                       public on 8 september 2014
+
+"Tết Ông Công Ông Táo"                                public on 11 february 2015
+"Tết Nguyên Đán"                                      public on 15 february 2015 length 3 days
+"Tết đêm giao thừa"                                   public on 18 february 2015
+"Tết Nguyên Đán"                                      public on 19 february 2015 length 5 days
+"Lễ Phục Sinh"                                        public on 5 april 2015
+"Lễ Phật Đản"                                         public on 1 june 2015
+"Lễ Vu Lan"                                           public on 28 august 2015
+"Tết Trung Thu"                                       public on 27 september 2015
+
+"Tết Ông Công Ông Táo"                                public on 1 february 2016
+"Tết đêm giao thừa"                                   public on 7 february 2016
+"Tết Nguyên Đán"                                      public on 8 february 2016 length 6 days
+"Lễ Phục Sinh"                                        public on 27 march 2016
+"Lễ Phật Đản"                                         public on 21 may 2016
+"Lễ Vu Lan"                                           public on 17 august 2016
+"Tết Trung Thu"                                       public on 15 september 2016
+
+"Tết Ông Công Ông Táo"                                public on 20 january 2017
+"Tết Nguyên Đán"                                      public on 26 january 2017
+"Tết đêm giao thừa"                                   public on 27 january 2017
+"Tết Nguyên Đán"                                      public on 28 january 2017 length 5 days
+"Lễ Phục Sinh"                                        public on 16 april 2017
+"Lễ Phật Đản"                                         public on 10 may 2017
+"Lễ Vu Lan"                                           public on 5 september 2017
+"Tết Trung Thu"                                       public on 4 october 2017
+
+"Tết Ông Công Ông Táo"                                public on 8 february 2018
+"Tết Nguyên Đán"                                      public on 14 february 2018
+"Tết đêm giao thừa"                                   public on 15 february 2018
+"Tết Nguyên Đán"                                      public on 16 february 2018 length 5 days
+"Lễ Phục Sinh"                                        public on 1 april 2018
+"Lễ Phật Đản"                                         public on 29 may 2018
+"Lễ Vu Lan"                                           public on 25 august 2018
+"Tết Trung Thu"                                       public on 24 september 2018
+
+"Tết Ông Công Ông Táo"                                public on 28 january 2019
+"Tết Nguyên Đán"                                      public on 2 february 2019 length 2 days
+"Tết đêm giao thừa"                                   public on 4 february 2019
+"Tết Nguyên Đán"                                      public on 5 february 2019 length 6 days
+"Lễ Phục Sinh"                                        public on 21 april 2019
+"Lễ Phật Đản"                                         public on 19 may 2019
+"Lễ Vu Lan"                                           public on 15 august 2019
+"Tết Trung Thu"                                       public on 13 september 2019
+
+"Tết Ông Công Ông Táo"                                public on 17 january 2020
+"Tết Nguyên Đán"                                      public on 23 january 2020
+"Tết đêm giao thừa"                                   public on 24 january 2020
+"Tết Nguyên Đán"                                      public on 25 january 2020 length 5 days
+"Lễ Phục Sinh"                                        public on 12 april 2020
+"Lễ Phật Đản"                                         public on 7 may 2020
+"Lễ Vu Lan"                                           public on 2 september 2020
+"Tết Trung Thu"                                       public on 1 october 2020
+
+"Tết Ông Công Ông Táo"                                public on 4 february 2021
+"Tết Nguyên Đán"                                      public on 10 february 2021
+"Tết đêm giao thừa"                                   public on 11 february 2021
+"Tết Nguyên Đán"                                      public on 12 february 2021 length 5 days
+"Lễ Phục Sinh"                                        public on 4 april 2021
+"Lễ Phật Đản"                                         public on 26 may 2021
+"Lễ Vu Lan"                                           public on 22 august 2021
+"Tết Trung Thu"                                       public on 21 september 2021
+
+"Tết Ông Công Ông Táo"                                public on 25 january 2022
+"Tết đêm giao thừa"                                   public on 31 january 2022
+"Tết Nguyên Đán"                                      public on 1 february 2022 length 5 days
+"Lễ Phục Sinh"                                        public on 17 april 2022
+"Lễ Phật Đản"                                         public on 15 may 2022
+"Lễ Vu Lan"                                           public on 12 august 2022
+"Tết Trung Thu"                                       public on 10 september 2022
+
+"Tết Ông Công Ông Táo"                                public on 14 january 2023
+"Tết Nguyên Đán"                                      public on 20 january 2023
+"Tết đêm giao thừa"                                   public on 21 january 2023
+"Tết Nguyên Đán"                                      public on 22 january 2023 length 5 days
+"Lễ Phục Sinh"                                        public on 9 april 2023
+"Lễ Phật Đản"                                         public on 2 june 2023
+"Lễ Vu Lan"                                           public on 30 august 2023
+"Tết Trung Thu"                                       public on 29 september 2023
+
+"Tết Ông Công Ông Táo"                                public on 2 february 2024
+"Tết Nguyên Đán"                                      public on 8 february 2024
+"Tết đêm giao thừa"                                   public on 9 february 2024
+"Tết Nguyên Đán"                                      public on 10 february 2024 length 5 days
+"Lễ Phục Sinh"                                        public on 31 march 2024
+"Lễ Phật Đản"                                         public on 22 may 2024
+"Lễ Vu Lan"                                           public on 18 august 2024
+"Tết Trung Thu"                                       public on 17 september 2024
+
+"Tết Ông Công Ông Táo"                                public on 22 january 2025
+"Tết Nguyên Đán"                                      public on 25 january 2025 length 3 days
+"Tết đêm giao thừa"                                   public on 28 january 2025
+"Tết Nguyên Đán"                                      public on 29 january 2025 length 5 days
+"Lễ Phục Sinh"                                        public on 20 april 2025
+"Lễ Phật Đản"                                         public on 12 may 2025
+"Lễ Vu Lan"                                           public on 6 september 2025
+"Tết Trung Thu"                                       public on 6 october 2025
+
+"Tết Ông Công Ông Táo"                                public on 10 february 2026
+"Tết đêm giao thừa"                                   public on 16 february 2026
+"Tết Nguyên Đán"                                      public on 17 february 2026 length 5 days
+"Lễ Phục Sinh"                                        public on 5 april 2026
+"Lễ Phật Đản"                                         public on 31 may 2026
+"Lễ Vu Lan"                                           public on 27 august 2026
+"Tết Trung Thu"                                       public on 25 september 2026
+
+"Tết Ông Công Ông Táo"                                public on 30 january 2027
+"Tết đêm giao thừa"                                   public on 5 february 2027
+"Tết Nguyên Đán"                                      public on 6 february 2027 length 5 days
+"Lễ Phục Sinh"                                        public on 28 march 2027
+"Lễ Phật Đản"                                         public on 20 may 2027
+"Lễ Vu Lan"                                           public on 16 august 2027
+"Tết Trung Thu"                                       public on 15 september 2027
+
+"Tết Ông Công Ông Táo"                                public on 19 january 2028
+"Tết đêm giao thừa"                                   public on 25 january 2028
+"Tết Nguyên Đán"                                      public on 26 january 2028 length 5 days
+"Lễ Phục Sinh"                                        public on 16 april 2028
+"Lễ Phật Đản"                                         public on 9 may 2028
+"Lễ Vu Lan"                                           public on 3 september 2028
+"Tết Trung Thu"                                       public on 3 october 2028
+
+"Tết Ông Công Ông Táo"                                public on 6 february 2029
+"Tết đêm giao thừa"                                   public on 12 february 2029
+"Tết Nguyên Đán"                                      public on 13 february 2029 length 5 days
+"Lễ Phục Sinh"                                        public on 1 april 2029
+"Lễ Phật Đản"                                         public on 27 may 2029
+"Lễ Vu Lan"                                           public on 24 august 2029
+"Tết Trung Thu"                                       public on 22 september 2029
+
+"Tết Ông Công Ông Táo"                                public on 26 january 2030
+"Tết đêm giao thừa"                                   public on 2 february 2030
+"Tết Nguyên Đán"                                      public on 3 february 2030 length 5 days
+"Lễ Phục Sinh"                                        public on 21 april 2030
+"Lễ Phật Đản"                                         public on 16 may 2030
+"Lễ Vu Lan"                                           public on 13 august 2030
+"Tết Trung Thu"                                       public on 12 september 2030
+
+"Tết Ông Công Ông Táo"                                public on 16 january 2031
+"Tết đêm giao thừa"                                   public on 22 january 2031
+"Tết Nguyên Đán"                                      public on 23 january 2031 length 5 days
+"Lễ Phục Sinh"                                        public on 13 april 2031
+"Lễ Phật Đản"                                         public on 4 june 2031
+"Lễ Vu Lan"                                           public on 1 september 2031
+"Tết Trung Thu"                                       public on 1 october 2031
+
+"Tết Ông Công Ông Táo"                                public on 4 february 2032
+"Tết đêm giao thừa"                                   public on 10 february 2032
+"Tết Nguyên Đán"                                      public on 11 february 2032 length 5 days
+"Lễ Phục Sinh"                                        public on 28 march 2032
+"Lễ Phật Đản"                                         public on 23 may 2032
+"Lễ Vu Lan"                                           public on 20 august 2032
+"Tết Trung Thu"                                       public on 19 september 2032
+
+"Tết Ông Công Ông Táo"                                public on 23 january 2033
+"Tết đêm giao thừa"                                   public on 30 january 2033
+"Tết Nguyên Đán"                                      public on 31 january 2033 length 5 days
+"Lễ Phục Sinh"                                        public on 17 april 2033
+"Lễ Phật Đản"                                         public on 13 may 2033
+"Lễ Vu Lan"                                           public on 9 august 2033
+"Tết Trung Thu"                                       public on 8 september 2033
+
+"Tết Ông Công Ông Táo"                                public on 11 february 2034
+"Tết đêm giao thừa"                                   public on 18 february 2034
+"Tết Nguyên Đán"                                      public on 19 february 2034 length 5 days
+"Lễ Phục Sinh"                                        public on 9 april 2034
+"Lễ Phật Đản"                                         public on 1 june 2034
+"Lễ Vu Lan"                                           public on 28 august 2034
+"Tết Trung Thu"                                       public on 27 september 2034
+
+"Tết Ông Công Ông Táo"                                public on 31 january 2035
+"Tết đêm giao thừa"                                   public on 7 february 2035
+"Tết Nguyên Đán"                                      public on 8 february 2035 length 5 days
+"Lễ Phục Sinh"                                        public on 25 march 2035
+"Lễ Phật Đản"                                         public on 22 may 2035
+"Lễ Vu Lan"                                           public on 18 august 2035
+"Tết Trung Thu"                                       public on 16 september 2035
+
+"Tết Ông Công Ông Táo"                                public on 20 january 2036
+"Tết đêm giao thừa"                                   public on 27 january 2036
+"Tết Nguyên Đán"                                      public on 28 january 2036 length 5 days
+"Lễ Phục Sinh"                                        public on 13 april 2036
+"Lễ Phật Đản"                                         public on 10 may 2036
+"Lễ Vu Lan"                                           public on 5 september 2036
+"Tết Trung Thu"                                       public on 4 october 2036
+
+"Tết Ông Công Ông Táo"                                public on 7 february 2037
+"Tết đêm giao thừa"                                   public on 14 february 2037
+"Tết Nguyên Đán"                                      public on 15 february 2037 length 5 days
+"Lễ Phục Sinh"                                        public on 5 april 2037
+"Lễ Phật Đản"                                         public on 29 may 2037
+"Lễ Vu Lan"                                           public on 25 august 2037
+"Tết Trung Thu"                                       public on 24 september 2037
+
+"Tết Ông Công Ông Táo"                                public on 27 january 2038
+"Tết đêm giao thừa"                                   public on 3 february 2038
+"Tết Nguyên Đán"                                      public on 4 february 2038 length 5 days
+"Lễ Phục Sinh"                                        public on 25 april 2038
+"Lễ Phật Đản"                                         public on 18 may 2038
+"Lễ Vu Lan"                                           public on 15 august 2038
+"Tết Trung Thu"                                       public on 13 september 2038
+
+"Tết Ông Công Ông Táo"                                public on 17 january 2039
+"Tết đêm giao thừa"                                   public on 23 january 2039
+"Tết Nguyên Đán"                                      public on 24 january 2039 length 5 days
+"Lễ Phục Sinh"                                        public on 10 april 2039
+"Lễ Phật Đản"                                         public on 7 may 2039
+"Lễ Vu Lan"                                           public on 3 september 2039
+"Tết Trung Thu"                                       public on 2 october 2039
+
+"Tết Ông Công Ông Táo"                                public on 5 february 2040
+"Tết đêm giao thừa"                                   public on 11 february 2040
+"Tết Nguyên Đán"                                      public on 12 february 2040 length 5 days
+"Lễ Phục Sinh"                                        public on 1 april 2040
+"Lễ Phật Đản"                                         public on 25 may 2040
+"Lễ Vu Lan"                                           public on 22 august 2040
+"Tết Trung Thu"                                       public on 20 september 2040
+
