@@ -10,11 +10,10 @@
 #include "holidayregionsmodel.h"
 
 #include <KHolidays/LunarPhase>
-#include <KHolidays/SunRiseSet>
+#include <KHolidays/SunEvents>
 
 #include <QCoreApplication>
 #include <QQmlEngine>
-#include <QTimeZone>
 
 /*!
  * \qmltype Lunar
@@ -67,8 +66,7 @@ public:
      */
     static Q_INVOKABLE QDateTime utcSunrise(const QDateTime &date, double latitude, double longitude)
     {
-        const auto time = KHolidays::SunRiseSet::utcSunrise(date.date(), latitude, longitude);
-        return time.isValid() ? QDateTime(date.date(), time, QTimeZone::utc()) : QDateTime();
+        return KHolidays::SunEvents(date, latitude, longitude).sunrise().toUTC();
     }
 
     /*!
@@ -76,8 +74,7 @@ public:
      */
     static Q_INVOKABLE QDateTime utcSunset(const QDateTime &date, double latitude, double longitude)
     {
-        const auto time = KHolidays::SunRiseSet::utcSunset(date.date(), latitude, longitude);
-        return time.isValid() ? QDateTime(date.date(), time, QTimeZone::utc()) : QDateTime();
+        return KHolidays::SunEvents(date, latitude, longitude).sunset().toUTC();
     }
 
     /*!
@@ -85,8 +82,7 @@ public:
      */
     static Q_INVOKABLE QDateTime utcDawn(const QDateTime &date, double latitude, double longitude)
     {
-        const auto time = KHolidays::SunRiseSet::utcDawn(date.date(), latitude, longitude);
-        return time.isValid() ? QDateTime(date.date(), time, QTimeZone::utc()) : QDateTime();
+        return KHolidays::SunEvents(date, latitude, longitude).civilDawn().toUTC();
     }
 
     /*!
@@ -94,8 +90,7 @@ public:
      */
     static Q_INVOKABLE QDateTime utcDusk(const QDateTime &date, double latitude, double longitude)
     {
-        const auto time = KHolidays::SunRiseSet::utcDusk(date.date(), latitude, longitude);
-        return time.isValid() ? QDateTime(date.date(), time, QTimeZone::utc()) : QDateTime();
+        return KHolidays::SunEvents(date, latitude, longitude).civilDusk().toUTC();
     }
 
     /*!
@@ -103,7 +98,7 @@ public:
      */
     static Q_INVOKABLE bool isPolarDay(const QDateTime &date, double latitude)
     {
-        return KHolidays::SunRiseSet::isPolarDay(date.date(), latitude);
+        return KHolidays::SunEvents(date, latitude, 0).isPolarDay();
     }
 
     /*!
@@ -111,7 +106,7 @@ public:
      */
     static Q_INVOKABLE bool isPolarTwilight(const QDateTime &date, double latitude)
     {
-        return KHolidays::SunRiseSet::isPolarTwilight(date.date(), latitude);
+        return KHolidays::SunEvents(date, latitude, 0).isPolarTwilight();
     }
 
     /*!
@@ -119,7 +114,7 @@ public:
      */
     static Q_INVOKABLE bool isPolarNight(const QDateTime &date, double latitude)
     {
-        return KHolidays::SunRiseSet::isPolarNight(date.date(), latitude);
+        return KHolidays::SunEvents(date, latitude, 0).isPolarNight();
     }
 };
 
