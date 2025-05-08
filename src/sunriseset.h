@@ -14,14 +14,16 @@
 
 namespace KHolidays
 {
+#if KHOLIDAYS_ENABLE_DEPRECATED_SINCE(6, 15)
 /*!
  * \namespace KHolidays::SunRiseSet
  * \inheaderfile KHolidays/SunRiseSet
  * \inmodule KHolidays
  *
  * \brief Methods for determining the sunrise and sunset times for a given date and Earth location.
+ * \deprecated[6.15] Use SunEvents instead
  */
-namespace SunRiseSet
+namespace KHOLIDAYS_DEPRECATED_VERSION(6, 15, "Use SunEvents instead") SunRiseSet
 {
 /*!
   Compute the sunrise time (UTC) for a date and Earth location.
@@ -134,6 +136,7 @@ KHOLIDAYS_EXPORT bool isPolarTwilight(const QDate &date, double latitude);
 */
 KHOLIDAYS_EXPORT bool isPolarNight(const QDate &date, double latitude);
 }
+#endif
 
 }
 

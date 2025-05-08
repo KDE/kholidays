@@ -38,3 +38,10 @@ set_target_properties(testholidayregion PROPERTIES COMPILE_FLAGS -DKDESRCDIR="\\
 
 ecm_mark_as_test(testholidayregion)
 target_link_libraries(testholidayregion KF6Holidays Qt6::Test)
+
+########### next target ###############
+
+add_executable(testsunevents testsunevents.cpp testsunevents.h)
+add_test(NAME testsunevents COMMAND testsunevents)
+ecm_mark_as_test(testsunevents)
+target_link_libraries(testsunevents KF6Holidays Qt6::Test)

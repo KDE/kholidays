@@ -27,6 +27,9 @@ target_sources(KF6Holidays PRIVATE
     parsers/plan2/holidayscannerplan_p.h
     parsers/qcalendarsystem.cpp
     parsers/qcalendarsystem_p.h
+    sunevents_p.h
+    sunevents.cpp
+    sunevents.h
     sunriseset.cpp
     sunriseset.h
     zodiac.cpp
@@ -45,13 +48,13 @@ ecm_qt_declare_logging_category(KF6Holidays
     EXPORT KHOLIDAYS
 )
 
-ecm_generate_export_header(KF6Holidays 
+ecm_generate_export_header(KF6Holidays
     VERSION  ${KF_VERSION}
     USE_VERSION_HEADER
     BASE_NAME KHolidays
     GROUP_BASE_NAME KF
     DEPRECATED_BASE_VERSION 0
-    DEPRECATION_VERSIONS
+    DEPRECATION_VERSIONS 6.15
     EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
 )
 
@@ -67,6 +70,7 @@ ecm_generate_headers(KHolidays_CamelCase_HEADERS
   Holiday
   HolidayRegion
   LunarPhase
+  SunEvents
   SunRiseSet
   Zodiac
   PREFIX KHolidays

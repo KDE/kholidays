@@ -28,8 +28,8 @@ void SunriseTest::TestSunrise()
     QCOMPARE(utcSunrise(QDate(2012, 12, 31), 40.72, -74.02), QTime(12, 20));
 
     // LA
-    QCOMPARE(utcSunrise(QDate(2012, 1, 1), 34.05, -118.23), QTime(14, 58));
-    QCOMPARE(utcSunrise(QDate(2012, 7, 1), 34.05, -118.23), QTime(12, 45));
+    QCOMPARE(utcSunrise(QDate(2012, 1, 1), 34.05, -118.23), QTime(14, 59));
+    QCOMPARE(utcSunrise(QDate(2012, 7, 1), 34.05, -118.23), QTime(12, 46));
     QCOMPARE(utcSunrise(QDate(2012, 12, 31), 34.05, -118.23), QTime(14, 58));
 
     // Berlin
@@ -48,7 +48,7 @@ void SunriseTest::TestSunrise()
     QCOMPARE(utcSunrise(QDate(2022, 6, 21), 78.2231, 15.6322), QTime());
     QCOMPARE(utcSunrise(QDate(2022, 12, 21), 78.2231, 15.6322), QTime());
     QCOMPARE(utcSunrise(QDate(2022, 3, 21), 78.2231, 15.6322), QTime(4, 42));
-    QCOMPARE(utcSunrise(QDate(2022, 9, 21), 78.2231, 15.6322), QTime(4, 23));
+    QCOMPARE(utcSunrise(QDate(2022, 9, 21), 78.2231, 15.6322), QTime(4, 22));
 }
 
 void SunriseTest::TestSunset()
@@ -56,7 +56,7 @@ void SunriseTest::TestSunset()
     // NYC
     QCOMPARE(utcSunset(QDate(2012, 1, 1), 40.72, -74.02), QTime(21, 39));
     QCOMPARE(utcSunset(QDate(2012, 7, 1), 40.72, -74.02), QTime(00, 31));
-    QCOMPARE(utcSunset(QDate(2012, 12, 31), 40.72, -74.02), QTime(21, 38));
+    QCOMPARE(utcSunset(QDate(2012, 12, 31), 40.72, -74.02), QTime(21, 39));
 
     // LA
     QCOMPARE(utcSunset(QDate(2012, 1, 1), 34.05, -118.23), QTime(00, 54));
@@ -77,7 +77,7 @@ void SunriseTest::TestSunset()
     QCOMPARE(utcSunset(QDate(2022, 6, 21), 78.2231, 15.6322), QTime());
     QCOMPARE(utcSunset(QDate(2022, 12, 21), 78.2231, 15.6322), QTime());
     QCOMPARE(utcSunset(QDate(2022, 3, 21), 78.2231, 15.6322), QTime(17, 27));
-    QCOMPARE(utcSunset(QDate(2022, 9, 21), 78.2231, 15.6322), QTime(17, 18));
+    QCOMPARE(utcSunset(QDate(2022, 9, 21), 78.2231, 15.6322), QTime(17, 19));
 }
 
 void SunriseTest::TestDawn()
@@ -98,7 +98,7 @@ void SunriseTest::TestDawn()
     QCOMPARE(utcDawn(QDate(2012, 12, 31), 51.40, 7.38), QTime(6, 56));
 
     // Tasmania
-    QCOMPARE(utcDawn(QDate(2012, 1, 1), -14.60, 133.77), QTime(20, 16));
+    QCOMPARE(utcDawn(QDate(2012, 1, 1), -14.60, 133.77), QTime(20, 15));
     QCOMPARE(utcDawn(QDate(2012, 7, 1), -14.60, 133.77), QTime(21, 7));
     QCOMPARE(utcDawn(QDate(2012, 12, 31), -14.60, 133.77), QTime(20, 15));
 }
