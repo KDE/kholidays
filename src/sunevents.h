@@ -18,7 +18,8 @@ namespace KHolidays
 class SunEventsData;
 
 /*!
- * \class SunEvents
+ * \class KHolidays::SunEvents
+ * \inheaderfile KHolidays/SunEvents
  * \inmodule KHolidays
  * \brief The SunEvents type provides dates for solar events, for example sunset or sunrise.
  *
