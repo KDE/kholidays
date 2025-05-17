@@ -8,6 +8,8 @@ documentationinheaders = true
 headerdirs += .
 sourcedirs += .
 
+excludedirs += parsers
+
 outputformats = HTML
 
 navigation.landingpage = "KHolidays"

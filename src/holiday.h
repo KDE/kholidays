@@ -20,6 +20,10 @@
 class QDate;
 class QString;
 
+/*!
+ * \namespace KHolidays
+ * \inmodule KHolidays
+ */
 namespace KHolidays
 {
 class HolidayPrivate;
