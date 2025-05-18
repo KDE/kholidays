@@ -1,19 +1,20 @@
-# Translation of libkholidays to Spanish
-# translation of libkholidays.po to Spanish
+# Spanish translations for libkholidays6_qt.po package.
+# Copyright (C) 2005-2025 This file is copyright:
+# This file is distributed under the same license as the kholidays package.
 #
-# Juan Manuel Garcia Molina <juanma@superiodico.net>, 2005.
-# Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007, 2009.
-# Dario Andres Rodriguez <andresbajotierra@gmail.com>, 2009.
-# Adrián Martínez <sfxgt3@gmail.com>, 2009, 2010.
-# Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2010.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2010, 2020, 2022.
-# Javier Vinal <fjvinal@gmail.com>, 2011, 2012, 2014, 2015.
+# SPDX-FileCopyrightText: 2005 Juan Manuel Garcia Molina <juanma@superiodico.net>
+# SPDX-FileCopyrightText: 2007, 2009 Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>
+# SPDX-FileCopyrightText: 2009 Dario Andres Rodriguez <andresbajotierra@gmail.com>
+# SPDX-FileCopyrightText: 2009, 2010 Adrián Martínez <sfxgt3@gmail.com>
+# SPDX-FileCopyrightText: 2010 Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>
+# SPDX-FileCopyrightText: 2010, 2020, 2022, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2011, 2012, 2014, 2015 Javier Vinal <fjvinal@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: libkholidays\n"
-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"Project-Id-Version: libkholidays6_qt\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2015-06-13 09:34+0000\n"
-"PO-Revision-Date: 2022-08-30 04:29+0200\n"
+"PO-Revision-Date: 2025-05-17 13:07+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
