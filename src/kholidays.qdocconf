@@ -25,8 +25,13 @@ qhp.KHolidays.virtualFolder       = kholidays
 qhp.KHolidays.indexTitle          = KHolidays
 qhp.KHolidays.indexRoot           =
 
-qhp.KHolidays.subprojects         = classes
+qhp.KHolidays.subprojects         = classes qmltypes
 qhp.KHolidays.subprojects.classes.title = C++ Classes
 qhp.KHolidays.subprojects.classes.indexTitle = KHolidays C++ Classes
 qhp.KHolidays.subprojects.classes.selectors = class fake:headerfile
 qhp.KHolidays.subprojects.classes.sortPages = true
+
+qhp.KHolidays.subprojects.qmltypes.title = QML Types
+qhp.KHolidays.subprojects.qmltypes.indexTitle = KHolidays QML Types
+qhp.KHolidays.subprojects.qmltypes.selectors = qmltype
+qhp.KHolidays.subprojects.qmltypes.sortPages = true
