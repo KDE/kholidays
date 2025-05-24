@@ -35,3 +35,5 @@ qhp.KHolidays.subprojects.qmltypes.title = QML Types
 qhp.KHolidays.subprojects.qmltypes.indexTitle = KHolidays QML Types
 qhp.KHolidays.subprojects.qmltypes.selectors = qmltype
 qhp.KHolidays.subprojects.qmltypes.sortPages = true
+
+tagfile = kholidays.tags
