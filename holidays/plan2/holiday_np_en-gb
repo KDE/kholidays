@@ -1,0 +1,83 @@
+::
+:: Country:  Nepal
+::
+:: Language: UK English
+::
+:: Author:   nehubuser <oldfaggio@gmail.com>
+::
+:: Updated:  2025-05-29
+::
+:: Source:   https://www.moha.gov.np/page/government-and-public-holidays-in-2082
+::           https://en.wikipedia.org/wiki/Public_holidays_in_Nepal
+::           https://english.hamropatro.com/nepali-public-holidays
+::           Due to lack of support for "Bikram Sambat", Nepalese canlander system
+::           dates for Nepalese holidays vary every year. Hence this list need to updated manually every year.
+
+:: Metadata
+country     "NP"
+language    "en_GB"
+name        "Nepal"
+description "National holiday file for the Federal Democratic Republic of Nepal"
+
+:: Public Holidays
+"Nepali New Year (Nawabarsha)"                public on april 14 2025
+"International Labour Day"                    public on may 1 2025
+"Constitution Day"                            public on september 19 2025
+"International Day of Persons w/Disabilities" public on december 3 2025
+"Prithvi Jayanti"                             public on january 11 2026
+"Martyrs’ Day"                                public on january 30 2026
+"National Democracy Day"                      public on february 19 2026
+"International Women's Day"                   public on march 8 2026
+
+:: Religious
+"Buddha Jayanti"                              public religious on may 12 2025
+"Ubhauli Parva"                               public religious on may 12 2025
+"Bakar Eed"                                   public religious on june 7 2025
+"Janai Purnima-Naag Panchami"                 public religious on august 9 2025
+"Gai Jatra-Kathmandu Only"                    public religious on august 10 2025
+"Krishna Janmashtami"                         public religious on august 16 2025
+"Haritalika Teej-Women Only"                  public religious on august 26 2025
+"Gaura Parba-Optional"                        public religious on august 31 2025
+"Indra Jatra-Kathmandu Only"                  public religious on september 6 2025
+"Jitiya Parwa-Optional for Women Only"        public religious on september 15 2025
+"Dashain Festival-Ghatasthapana"              public religious on september 22 2025
+"Dashain Festival-Phulpati"                   public religious on september 29 2025
+"Dashain Festival-Maha Astami"                public religious on september 30 2025
+"Dashain Festival-Maha Nawami"                public religious on october 1 2025
+"Dashain Festival-Bijaya Dashami"             public religious on october 2 2025
+"Dashain Festival-Pampakusha Ekadashi"        public religious on october 3 2025
+"Dashain Festival-Dwadashi"                   public religious on october 4 2025
+"Tihar Festival-Laxmi Puja"                   public religious on october 20 2025
+"Tihar Festival-Gai Tihar"                    public religious on october 21 2025
+"Tihar Festival-Gobardhan Puja"               public religious on october 22 2025
+"Tihar Festival-Bhai-Tika"                    public religious on october 23 2025
+"Tihar Festival-Tihar Holiday"                public religious on october 24 2025
+"Chhath Parwa"                                public religious on october 27 2025
+"Guru Nanak Jayanti"                          public religious on november 5 2025
+"Dhanya Purnima"                              public religious on december 4 2025
+"Udhauli Parva"                               public religious on december 4 2025
+"Yomari Punhi"                                public religious on december 4 2025
+"Christmas"                                   public religious on december 25 2025
+"Tamu Lhosar"                                 public religious on december 30 2025
+"Maghe/Makar Sankranti"                       public religious on january 15 2026
+"Basanta Panchami/Saraswati Puja"             public religious on january 23 2026
+"Sonam Lhosar"                                public religious on january 19 2026
+"Maha Shivaratri"                             public religious on february 15 2026
+"Gyalpo Lhosar"                               public religious on february 18 2026
+"Falgunand Jayanti"                           public religious on march 9 2026
+"Fagu Purnima-Holi in Hills"                  public religious on march 2 2026
+"Fagu Purnima-Holi in Terai"                  public religious on march 3 2026
+"Ghode Jatra-Kathmandu Only"                  public religious on march 18 2026
+"Ram Navami"                                  public religious on march 27 2026
+
+:: Financial
+
+:: Cultural
+
+:: School
+
+:: Daylight Saving
+
+:: Seasons
+
+:: Name Days
