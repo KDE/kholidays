@@ -9,8 +9,8 @@
 ::
 :: 更新日期：2017-01-25
 ::
-:: 來源：http://www.gov.hk/tc/about/abouthk/holiday/
-::           http://www.legislation.gov.hk/blis_pdf.nsf/6799165D2FEE3FA94825755E0033E532/EDECE5C30B1D4B87482575EE0044F685/$FILE/CAP_149_c_b5.pdf
+:: 來源：https://www.gov.hk/tc/about/abouthk/holiday/index.htm
+::           https://www.elegislation.gov.hk/hk/cap149!zh-Hant-HK.pdf
 ::
 :: 生效日期：1997-07-01
 
@@ -47,9 +47,9 @@ description "香港公眾假期"
                                                                    [monday after ([july 1])] :
                                                                    noop )
                                                                    
-: 國慶節（如該日為星期日，則為翌日）
-"國慶節"                                        public on october 1
-"國慶節補假"              public on ( ( [october 1] == [sunday after ([october 1])]) ?
+: 國慶日（如該日為星期日，則為翌日）
+"國慶日"                                        public on october 1
+"國慶日補假"              public on ( ( [october 1] == [sunday after ([october 1])]) ?
                                                                    [monday after ([october 1])] :
                                                                    noop )
 
@@ -301,6 +301,6 @@ description "香港公眾假期"
 :: 特別及已廢除假期
 
 "抗戰勝利紀念日"                       public on ((year >= 1997 && year <= 1998) ? [3rd monday in august] : noop)
-"國慶節翌日"                              public on ((year >= 1997 && year <= 1998) ? [2 october] : noop) shift to monday if sunday
+"國慶日翌日"                              public on ((year >= 1997 && year <= 1998) ? [2 october] : noop) shift to monday if sunday
 "千禧除夕"                                    public on 31 december 1999
 "中國人民抗日戰爭勝利70周年紀念日" public on 3 september 2015
