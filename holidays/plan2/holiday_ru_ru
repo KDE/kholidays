@@ -24,6 +24,7 @@
 ::           http://graph.document.kremlin.ru/page.aspx?1;3569577 (День полярника)
 ::           http://document.kremlin.ru/page.aspx?1101116 (День российского предпринимательства)
 ::           http://graph.document.kremlin.ru/page.aspx?920431 (День эколога)
+::           http://publication.pravo.gov.ru/Document/View/0001202305020001 (День молодёжи)
 ::
 
 :: Metadata
@@ -79,7 +80,7 @@ language    "ru"
 "День славянской письменности и культуры"                               cultural on may 24
 "Пушкинский день России"                                                historical on ((year >= 1997) ? [june 6] : noop)
 "День русского языка"                                                   cultural on ((year >= 2011) ? [june 6] : noop)
-"День молодёжи"                                                         cultural on june 27
+"День молодёжи"                                                         cultural on last saturday in june
 "День Государственного флага Российской Федерации"                      historical on august 22
 "День знаний"                                                           cultural on september 1
 "День пожилых людей"                                                    cultural on october 1
