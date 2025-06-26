@@ -80,7 +80,7 @@ language    "ru"
 "День славянской письменности и культуры"                               cultural on may 24
 "Пушкинский день России"                                                historical on ((year >= 1997) ? [june 6] : noop)
 "День русского языка"                                                   cultural on ((year >= 2011) ? [june 6] : noop)
-"День молодёжи"                                                         cultural on last saturday in june
+"День молодёжи"                                                         cultural on ((year >= 2023) ? [last saturday in june] : [june 27])
 "День Государственного флага Российской Федерации"                      historical on august 22
 "День знаний"                                                           cultural on september 1
 "День пожилых людей"                                                    cultural on october 1
