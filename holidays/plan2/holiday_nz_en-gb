@@ -6,13 +6,14 @@
 :: Author:   Miles Leonard-Taylor <m.leonardtaylor@irl.cri.nz>
 ::           John Layt <john@layt.net>
 ::
-:: Updated:  2011-01-01
+:: Updated:  2025-06-29
 ::
 :: Source:   Holidays as defined by the government's "Holidays Acts, 1981-1991"
 ::           and the Visits and Ceremonial office of the Department of Internal Affairs
 ::           http://www.ers.dol.govt.nz/holidays_act_2003/dates/
 ::           http://www.dia.govt.nz/diawebsite.nsf/wpg_URL/Services-Daylight-Saving-Index?OpenDocument
-::
+::           https://www.govt.nz/browse/work/public-holidays-and-work/public-holidays-and-anniversary-dates/
+::           https://www.tepapa.govt.nz/discover-collections/read-watch-play/matariki-maori-new-year/dates-for-matariki-public-holiday
 
 :: Metadata
 country     "NZ"
@@ -37,7 +38,40 @@ description "National holiday file for New Zealand"
 "Easter Monday"                      public on easter plus 1 days
 "Waitangi Day"                       public on february 6
 "Anzac Day"                          public on april 25
-"Queen's Birthday"                   public on first monday in june
+"King's Birthday"                    public on first monday in june
+
+"Matariki"                           public cultural on june 24 2022
+"Matariki"                           public cultural on june 14 2023
+"Matariki"                           public cultural on june 28 2024
+"Matariki"                           public cultural on june 20 2025
+"Matariki"                           public cultural on july 10 2026
+"Matariki"                           public cultural on june 25 2027
+"Matariki"                           public cultural on july 14 2028
+"Matariki"                           public cultural on july  6 2029
+"Matariki"                           public cultural on june 21 2030
+"Matariki"                           public cultural on july 11 2031
+"Matariki"                           public cultural on july  2 2032
+"Matariki"                           public cultural on june 24 2033
+"Matariki"                           public cultural on july  7 2034
+"Matariki"                           public cultural on june 29 2035
+"Matariki"                           public cultural on july 18 2036
+"Matariki"                           public cultural on july 10 2037
+"Matariki"                           public cultural on june 25 2038
+"Matariki"                           public cultural on july 15 2039
+"Matariki"                           public cultural on july  6 2040
+"Matariki"                           public cultural on july 19 2041
+"Matariki"                           public cultural on july 11 2042
+"Matariki"                           public cultural on july  3 2043
+"Matariki"                           public cultural on june 24 2044
+"Matariki"                           public cultural on july  7 2045
+"Matariki"                           public cultural on june 29 2046
+"Matariki"                           public cultural on july 19 2047
+"Matariki"                           public cultural on july  3 2048
+"Matariki"                           public cultural on june 25 2049
+"Matariki"                           public cultural on july 15 2050
+"Matariki"                           public cultural on june 30 2051
+"Matariki"                           public cultural on june 21 2052
+
 "Labour Day"                         public on fourth monday in october
 "Christmas Day"                      public religious on december 25
 "Christmas Day Holiday"              public on ( ( ( [december 25] == [saturday after ([december 25])] ) ||
