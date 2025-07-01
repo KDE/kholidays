@@ -6,7 +6,7 @@
 :: Author:   Miles Leonard-Taylor <m.leonardtaylor@irl.cri.nz>
 ::           John Layt <john@layt.net>
 ::
-:: Updated:  2025-06-29
+:: Updated:  2025-06-30
 ::
 :: Source:   Holidays as defined by the government's "Holidays Acts, 1981-1991"
 ::           and the Visits and Ceremonial office of the Department of Internal Affairs
@@ -38,7 +38,11 @@ description "National holiday file for New Zealand"
 "Easter Monday"                      public on easter plus 1 days
 "Waitangi Day"                       public on february 6
 "Anzac Day"                          public on april 25
-"King's Birthday"                    public on first monday in june
+
+: Elizabeth II
+"Queen's Birthday"                   public on ( (year >= 1952 && year <= 2022) ? [first monday in june] : noop)
+: Charles III
+"King's Birthday"                    public on ( (year >= 2023) ? [first monday in june] : noop)
 
 "Matariki"                           public cultural on june 24 2022
 "Matariki"                           public cultural on june 14 2023

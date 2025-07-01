@@ -6,7 +6,7 @@
 :: Author:   Peter Turnbull <peter@cbr.atr.com.au>
 ::           John Layt <john@layt.net>
 ::
-:: Updated:  2010-05-27
+:: Updated:  2025-06-30
 ::
 :: Source:   http://australia.gov.au/topics/australian-facts-and-figures/public-holidays
 ::           http://en.wikipedia.org/wiki/Public_holidays_in_Australia
@@ -27,7 +27,14 @@ description "State holiday file for Queensland"
 "Easter Monday"                     public on easter plus 1
 "Anzac Day"                         public on april 25
 "Labour Day"                        public on first monday in may
-"Queen's Birthday"                  public on second monday in june
+
+: Elizabeth II
+"Queen's Birthday"                  public on ((year >= 1952 && year <= 2015)? [second monday in june] : noop)
+"Queen's Birthday Jubilee"          public on 1.10.2012
+"Queen's Birthday"                  public on ((year >= 2016 && year <= 2022)? [first monday in october] : noop)
+: Charles III
+"King's Birthday"                   public on ((year >= 2023)? [first monday in october] : noop)
+
 "Christmas Day"                     public religious on december 25
 "Boxing Day"                        public on december 26
 

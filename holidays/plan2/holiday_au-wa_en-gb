@@ -6,7 +6,7 @@
 :: Author:   Peter Turnbull <peter@cbr.atr.com.au>
 ::           John Layt <john@layt.net>
 ::
-:: Updated:  2010-05-27
+:: Updated:  2025-06-30
 ::
 :: Source:   http://australia.gov.au/topics/australian-facts-and-figures/public-holidays
 ::           http://en.wikipedia.org/wiki/Public_holidays_in_Australia
@@ -31,6 +31,18 @@ description "State holiday file for Western Australia"
 "Queen's Birthday"                  public on 3.10.2011
 "Queen's Birthday"                  public on 1.10.2012
 "Queen's Birthday"                  public on 30.9.2013
+"Queen's Birthday"                  public on 29.9.2014
+"Queen's Birthday"                  public on 28.9.2015
+"Queen's Birthday"                  public on 26.9.2016
+"Queen's Birthday"                  public on 25.9.2017
+"Queen's Birthday"                  public on 24.9.2018
+"Queen's Birthday"                  public on 30.9.2019
+"Queen's Birthday"                  public on 28.9.2020
+"Queen's Birthday"                  public on 27.9.2021
+"Queen's Birthday"                  public on 26.9.2022
+"King's Birthday"                   public on 25.9.2023
+"King's Birthday"                   public on 23.9.2024
+"King's Birthday"                   public on 29.9.2025
 "Christmas Day"                     public religious on december 25
 "Boxing Day"                        public on december 26
 

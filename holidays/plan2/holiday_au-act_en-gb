@@ -6,7 +6,7 @@
 :: Author:   Peter Turnbull <peter@cbr.atr.com.au>
 ::           John Layt <john@layt.net>
 ::
-:: Updated:  2010-05-27
+:: Updated:  2025-06-30
 ::
 :: Source:   http://australia.gov.au/topics/australian-facts-and-figures/public-holidays
 ::           http://en.wikipedia.org/wiki/Public_holidays_in_Australia
@@ -27,7 +27,12 @@ description "State holiday file for Australian Capital Territory"
 "Good Friday"                       public on religious easter minus 2
 "Easter Saturday"                   public on easter minus 1
 "Easter Monday"                     public on easter plus 1
-"Queen's Birthday"                  public on second monday in june
+
+: Elizabeth II
+"Queen's Birthday"                  public on ((year >= 1952 && year <= 2022)? [second monday in june] : noop)
+: Charles III
+"King's Birthday"                   public on ((year >= 2023)? [second monday in june] : noop)
+
 "Labour Day"                        public on first monday in october
 "Family and Community Day"          public on first tuesday in november
 "Christmas Day"                     public on religious december 25
