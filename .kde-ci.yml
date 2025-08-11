@@ -3,6 +3,9 @@ Dependencies:
    'require':
     'frameworks/extra-cmake-modules': '@same'
 
+Environment:
+ TZ: UTC
+
 Options:
  test-before-installing: True
  require-passing-tests-on: ['Linux', 'FreeBSD', 'Windows']
