@@ -88,7 +88,7 @@ msgstr "ألمانيا، هيس"
 #: holidayregion.cpp:213
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Mecklenburg-Hither Pomerania"
-msgstr "ألمانيا ، مكلنبورغ هيذر بوميرانيا"
+msgstr "ألمانيا، مكلنبورغ هيذر بوميرانيا"
 
 #: holidayregion.cpp:215
 msgctxt "HolidayRegion|German region"
