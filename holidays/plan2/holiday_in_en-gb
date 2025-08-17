@@ -27,7 +27,7 @@ description "National holiday file for India"
 :: Public Holidays
 "New Year holiday"            public on january 1
 "Republic Day"                public on january 26
-"Independence Day"            public on august 15
+"Independence Day"            public on ((year >= 1947)? [august 15] : noop)
 "Gandhi Jayanti"              public on october 2
 
 :: Religious
