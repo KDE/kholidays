@@ -23,7 +23,8 @@ name        "Italy, South Tyrol"
 "Ostermontag"           public on easter plus 1 day
 "Tag der Freiheit"      public on april 25
 "Tag der Arbeit"        public on may 1
-"Maria Himmelfahrt"     public on august 15
+"Tag der Republik"      public commemorative on ((year >= 2001) ? [june 2] : noop)
+"Maria Himmelfahrt"     public religious on august 15
 "Allerheiligen"         public religious on november 1
 "Maria Empfängnis"      public religious on december 8
 "Christtag"             public religious on december 25
@@ -48,16 +49,17 @@ name        "Italy, South Tyrol"
 "Tag der Frau"          cultural on march 8
 "Vatertag"              cultural on march 19
 "Muttertag"             cultural on second sunday in may
-"Tag der Republik"      cultural on june 2
-"Nationalfeiertag"      cultural on november 4
 
 :: School
 
 :: Daylight Saving
+"Beginn der Sommerzeit" seasonal on last sunday in march
+"Ende der Sommerzeit"   seasonal on last sunday in october
 
 :: Seasons
 
 :: Name Days
 
-
-
+:: Commemorative
+"Nationalfeiertag"      commemorative on november 4
+"Tag der Republik"      commemorative on ((year < 2001) ? [june 2] : noop)
