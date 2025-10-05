@@ -5,7 +5,7 @@
 ::
 :: Author:   Tatiana de la Cruz Monserrate <tatic90@gmail.com>
 ::
-:: Updated: 
+:: Updated:  October 5, 2025
 ::
 :: Source:   https://camarapr.org/wp-content/uploads/Dias-Feriados-2025.pdf
 ::           https://en.wikipedia.org/wiki/Public_holidays_in_Puerto_Rico
@@ -15,7 +15,7 @@
 country     "PR"
 language    "es"
 :name        "Puerto Rico"
-:description "Días festivos y feriados en Puerto Rico"
+description "Días festivos y feriados de Puerto Rico"
 
 :: Public Holidays
 "Año Nuevo"				                 public on january 1
@@ -41,10 +41,14 @@ language    "es"
 "Día de acción de gracias"                                                  public on fourth thursday in november
 
 :: Cultural
-"Día de San Valentín"	            cultural on february 14
-"Día de las Madres"                 cultural on second sunday in may 
-"Día de los Padres"			        cultural on third sunday in june
-"Noche de brujas"                   cultural on october 31
+"Natalicio de Eugenio María de Hostos" cultural on january 11
+"Día de San Valentín"	               cultural on february 14
+"Natalicio de Luis Muñoz Marín"        cultural on february 18
+"Natalicio de José de Diego"           cultural on april 16
+"Día de las Madres"                    cultural on second sunday in may
+"Día de los Padres"			           cultural on third sunday in june
+"Noche de brujas"                      cultural on october 31
+"Vispera de año nuevo"                 cultural on december 31
 
 :: Religious
 "Día de Reyes"                      public religious school on january 6
@@ -54,7 +58,7 @@ language    "es"
 "Viernes Santo"                     public religious on easter minus 2 days
 "Sábado de Gloria"                  religious on easter minus 1 days
 "Domingo de Pascua"                 religious on easter               
-"Noche buena"		            religious cultural on december 24
+"Noche buena"		                religious cultural on december 24
 "Navidad"                           public religious on december 25
 
 :: School

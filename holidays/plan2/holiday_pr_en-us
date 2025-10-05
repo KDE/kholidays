@@ -6,7 +6,7 @@
 :: Author:   Tatiana de la Cruz Monserrate <tatic90@gmail.com>
 ::           
 ::
-:: Updated:
+:: Updated: October 5, 2025
 ::
 :: Source: https://en.wikipedia.org/wiki/Public_holidays_in_Puerto_Rico
 ::
@@ -41,10 +41,14 @@ description "National holiday file for Puerto Rico"
 "Thanksgiving"                   public on fourth thursday in november
 
 :: Cultural
-"St. Valentine's Day"            cultural on february 14
-"Mother's Day"                   cultural on second sunday in may
-"Father's Day"                   cultural on third sunday in june
-"Halloween"                      cultural on october 31
+"Birthday of Eugenio María de Hostos"   cultural on january 11
+"St. Valentine's Day"                   cultural on february 14
+"Birthday of Luis Muñoz Marín"          cultural on february 18
+"José de Diego's Birthday"              cultural on april 16
+"Mother's Day"                          cultural on second sunday in may
+"Father's Day"                          cultural on third sunday in june
+"Halloween"                             cultural on october 31
+"New Year's Eve"                        cultural on december 31
 
 :: Religious
 "Three Kings Day"                religious on january 6
@@ -54,7 +58,7 @@ description "National holiday file for Puerto Rico"
 "Good Friday"                    public religious on easter minus 2 days
 "Holy Saturday"                  religious on easter minus 1 days
 "Easter Sunday"                  religious on easter
-"Christmas Eve"                  religious cultural on december 25
+"Christmas Eve"                  religious cultural on december 24
 "Christmas Day"                  public religious on december 25
 
 :: School
