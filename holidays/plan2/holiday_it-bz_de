@@ -26,6 +26,7 @@ name        "Italy, South Tyrol"
 "Tag der Republik"      public commemorative on ((year >= 2001) ? [june 2] : noop)
 "Maria Himmelfahrt"     public religious on august 15
 "Allerheiligen"         public religious on november 1
+"Hl. Franziskus"        public religious on ((year >= 2026) ? [october 4] : noop)
 "Maria Empfängnis"      public religious on december 8
 "Christtag"             public religious on december 25
 "Stephanstag"           public religious on december 26
@@ -39,7 +40,7 @@ name        "Italy, South Tyrol"
 "Pfingstmontag"         religious on easter plus 50 days
 "Christi Himmelfahrt"   religious on easter plus 39 days
 "Hl. Peter und Paul"    religious on june 29
-"Hl. Franziskus"        religious on october 4
+"Hl. Franziskus"        religious on ((year < 2026) ? [october 4] : noop)
 "Allerseelen"           religious on november 2
 "Silvester"             religious on december 31
 
