@@ -26,6 +26,7 @@ language    "it"
 "Festa del Lavoro"                public on may 1
 "Festa della Repubblica"          public commemorative on ((year >= 2001) ? [june 2] : noop)
 "Ferragosto"                      public religious on august 15
+"San Francesco"                   public religious on ((year >= 2026) ? [october 4] : noop)
 "Ognissanti"                      public religious on november 1
 "Immacolata Concezione"           public religious on december 8
 "Natale"                          public religious on december 25
@@ -50,7 +51,7 @@ language    "it"
 "Corpus Domini"                   religious on easter plus 63 days
 "Sacro Cuore di Gesù"             religious on easter plus 68 days
 "Santi Pietro e Paolo"            religious on june 29
-"San Francesco"                   religious on october 4
+"San Francesco"                   religious on ((year < 2026) ? [october 4] : noop)
 "Defunti"                         religious on november 2
 "Prima d'avvento"                 religious on sunday before 24 december minus 21 days
 "Seconda d'avvento"               religious on sunday before 24 december minus 14 days
