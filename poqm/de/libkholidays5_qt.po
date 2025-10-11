@@ -1,10 +1,10 @@
-# Gregor Zumstein <zumstein@ssd.ethz.ch>, 2005.
-# Thomas Reitelbach <tr@erdfunkstelle.de>, 2007.
-# Burkhard Lück <lueck@hube-lueck.de>, 2009, 2020.
-# Frederik Schwarzer <schwarzer@kde.org>, 2010, 2011, 2012, 2014, 2015, 2022.
-# Johannes Obermayr <johannesobermayr@gmx.de>, 2010.
-# Torbjörn Klatt <torbjoern@torbjoern-klatt.de>, 2011.
-# Alois Spitzbart <spitz234@hotmail.com>, 2022.
+# SPDX-FileCopyrightText: 2005 Gregor Zumstein <zumstein@ssd.ethz.ch>
+# SPDX-FileCopyrightText: 2007 Thomas Reitelbach <tr@erdfunkstelle.de>
+# SPDX-FileCopyrightText: 2009, 2020 Burkhard Lück <lueck@hube-lueck.de>
+# SPDX-FileCopyrightText: 2010, 2011, 2012, 2014, 2015, 2022 Frederik Schwarzer <schwarzer@kde.org>
+# SPDX-FileCopyrightText: 2010 Johannes Obermayr <johannesobermayr@gmx.de>
+# SPDX-FileCopyrightText: 2011 Torbjörn Klatt <torbjoern@torbjoern-klatt.de>
+# SPDX-FileCopyrightText: 2022 Alois Spitzbart <spitz234@hotmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: libkholidays6_qt\n"
