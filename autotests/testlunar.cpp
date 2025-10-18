@@ -103,10 +103,10 @@ void LunarTest::test2005()
             qDebug() << "new moon" << qd;
         }
     }
-    QVERIFY(fQ2005 == firstQuarter);
-    QVERIFY(fM2005 == fullMoon);
-    QVERIFY(lQ2005 == lastQuarter);
-    QVERIFY(nM2005 == newMoon);
+    QCOMPARE(fQ2005, firstQuarter);
+    QCOMPARE(fM2005, fullMoon);
+    QCOMPARE(lQ2005, lastQuarter);
+    QCOMPARE(nM2005, newMoon);
 }
 
 void LunarTest::test2007()
@@ -196,10 +196,10 @@ void LunarTest::test2007()
             qDebug() << "new moon" << qd;
         }
     }
-    QVERIFY(fQ2007 == firstQuarter);
-    QVERIFY(fM2007 == fullMoon);
-    QVERIFY(lQ2007 == lastQuarter);
-    QVERIFY(nM2007 == newMoon);
+    QCOMPARE(fQ2007, firstQuarter);
+    QCOMPARE(fM2007, fullMoon);
+    QCOMPARE(lQ2007, lastQuarter);
+    QCOMPARE(nM2007, newMoon);
 }
 
 void LunarTest::testIntermediatePhases()
