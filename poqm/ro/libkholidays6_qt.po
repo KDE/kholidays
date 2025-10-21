@@ -2,23 +2,23 @@
 # Copyright (C) 2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the libkholidays package.
 # Laurenţiu Buzdugan <lbuz@rolix.org>, 2008".
-# Sergiu Bivol <sergiu@cip.md>, 2009, 2020, 2022.
+# SPDX-FileCopyrightText: 2009, 2020, 2022, 2025 Sergiu Bivol <sergiu@cip.md>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: libkholidays\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2015-06-13 09:34+0000\n"
-"PO-Revision-Date: 2022-02-05 16:13+0000\n"
+"PO-Revision-Date: 2025-10-19 23:06+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
-"Language-Team: Romanian\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 25.08.1\n"
 "X-Qt-Contexts: true\n"
 
 #: astroseasons.cpp:139
@@ -44,23 +44,17 @@ msgstr "Echinocțiul din septembrie"
 #: declarative/holidayregionsmodel.cpp:89
 msgctxt "HolidayRegionsDeclarativeModel|"
 msgid "Region"
-msgstr ""
+msgstr "Regiune"
 
 #: declarative/holidayregionsmodel.cpp:91
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Name Days"
 msgctxt "HolidayRegionsDeclarativeModel|"
 msgid "Name"
-msgstr "Onomastică"
+msgstr "Denumire"
 
 #: declarative/holidayregionsmodel.cpp:93
-#, fuzzy
-#| msgctxt "zodiac symbol for Scorpion"
-#| msgid "scorpion"
 msgctxt "HolidayRegionsDeclarativeModel|"
 msgid "Description"
-msgstr "scorpion"
+msgstr "Descriere"
 
 #: holidayregion.cpp:200
 msgctxt "HolidayRegion|Canadian region"
@@ -95,32 +89,32 @@ msgstr "Germania, Hesse"
 #: holidayregion.cpp:213
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Mecklenburg-Hither Pomerania"
-msgstr ""
+msgstr "Germania, Mecklenburg-Hither Pomerania"
 
 #: holidayregion.cpp:215
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Lower Saxony"
-msgstr ""
+msgstr "Germania, Saxonia Inferioară"
 
 #: holidayregion.cpp:217
 msgctxt "HolidayRegion|German region"
 msgid "Germany, North Rhine-Westphalia"
-msgstr ""
+msgstr "Germania, Renania de Nord-Westfalia"
 
 #: holidayregion.cpp:219
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Rhineland-Palatinate"
-msgstr ""
+msgstr "Germania, Renania-Palatinat"
 
 #: holidayregion.cpp:221
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Schleswig-Holstein"
-msgstr ""
+msgstr "Germania, Schleswig-Holstein"
 
 #: holidayregion.cpp:223
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Saarland"
-msgstr ""
+msgstr "Germania, Saarland"
 
 #: holidayregion.cpp:225
 msgctxt "HolidayRegion|German region"
@@ -130,12 +124,12 @@ msgstr "Germania, Saxonia"
 #: holidayregion.cpp:227
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Saxony-Anhalt"
-msgstr ""
+msgstr "Germania, Saxonia-Anhalt"
 
 #: holidayregion.cpp:229
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Thuringia"
-msgstr ""
+msgstr "Germania, Turingia"
 
 #: holidayregion.cpp:232
 msgctxt "HolidayRegion|Spanish region"
@@ -170,7 +164,7 @@ msgstr "Irlanda de Nord"
 #: holidayregion.cpp:244
 msgctxt "HolidayRegion|Italian Region"
 msgid "South Tyrol"
-msgstr ""
+msgstr "Tirolul de Sud"
 
 #: holidayregion.cpp:246
 msgctxt "HolidayRegion|"
