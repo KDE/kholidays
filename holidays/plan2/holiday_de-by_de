@@ -25,7 +25,8 @@ description "Feiertage für Deutschland (Bayern)"
 "Fronleichnam"                 public on easter plus 60 days
 "Mariä Himmelfahrt (regional)" public on 15.8.
 "Allerheiligen"                public on 1.11.
-"Buß- und Bettag (schulfrei)"  public on wednesday before 22.11.
+"Buß- und Bettag"              public on ((year <= 1994) ? ([wednesday before ([22.11.])]) : noop)
+"Buß- und Bettag (schulfrei)"  school on ((year >= 1995) ? ([wednesday before ([22.11.])]) : noop)
 
 :: ---------- This part is shared across all Federal States of Germany ----------
 
