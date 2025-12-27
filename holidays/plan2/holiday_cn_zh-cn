@@ -5,7 +5,7 @@
 ::
 :: Author:   Patrick Nagel <mail@patrick-nagel.net> Ha Ma <0xcccc@bupt.cn>
 ::
-:: Updated:  2024-11-27T18:15:06.035125
+:: Updated:  2025-11-19T07:01:15.325959
 ::
 :: Source:   https://github.com/0xcccccccccccc/kholidays_cn
 ::
@@ -784,3 +784,42 @@ language    "zh_CN"
 "国庆节(National Day)"                                                  public on october 7 2025
 "国庆节(National Day)"                                                  public on october 8 2025
 "法定工作日-国庆节调休 (Workday)"                                         public on october 11 2025
+"元旦(New Year's Day)"                                                 public on january 1 2026
+"元旦(New Year's Day)"                                                 public on january 2 2026
+"元旦(New Year's Day)"                                                 public on january 3 2026
+"法定工作日-元旦调休 (Workday)"                                           public on january 4 2026
+"法定工作日-春节调休 (Workday)"                                         public on february 14 2026
+"春节(Spring Festival)"                                              public on february 15 2026
+"春节(Spring Festival)"                                              public on february 16 2026
+"春节(Spring Festival)"                                              public on february 17 2026
+"春节(Spring Festival)"                                              public on february 18 2026
+"春节(Spring Festival)"                                              public on february 19 2026
+"春节(Spring Festival)"                                              public on february 20 2026
+"春节(Spring Festival)"                                              public on february 21 2026
+"春节(Spring Festival)"                                              public on february 22 2026
+"春节(Spring Festival)"                                              public on february 23 2026
+"法定工作日-春节调休 (Workday)"                                         public on february 28 2026
+"清明(Tomb-sweeping Day)"                                                public on april 4 2026
+"清明(Tomb-sweeping Day)"                                                public on april 5 2026
+"清明(Tomb-sweeping Day)"                                                public on april 6 2026
+"劳动节(Labour Day)"                                                        public on may 1 2026
+"劳动节(Labour Day)"                                                        public on may 2 2026
+"劳动节(Labour Day)"                                                        public on may 3 2026
+"劳动节(Labour Day)"                                                        public on may 4 2026
+"劳动节(Labour Day)"                                                        public on may 5 2026
+"法定工作日-劳动节调休 (Workday)"                                              public on may 9 2026
+"端午(Dragon Boat Festival)"                                             public on june 19 2026
+"端午(Dragon Boat Festival)"                                             public on june 20 2026
+"端午(Dragon Boat Festival)"                                             public on june 21 2026
+"法定工作日-国庆节调休 (Workday)"                                       public on september 20 2026
+"中秋(Mid-autumn Festival)"                                         public on september 25 2026
+"中秋(Mid-autumn Festival)"                                         public on september 26 2026
+"中秋(Mid-autumn Festival)"                                         public on september 27 2026
+"国庆节(National Day)"                                                  public on october 1 2026
+"国庆节(National Day)"                                                  public on october 2 2026
+"国庆节(National Day)"                                                  public on october 3 2026
+"国庆节(National Day)"                                                  public on october 4 2026
+"国庆节(National Day)"                                                  public on october 5 2026
+"国庆节(National Day)"                                                  public on october 6 2026
+"国庆节(National Day)"                                                  public on october 7 2026
+"法定工作日-国庆节调休 (Workday)"                                         public on october 10 2026
