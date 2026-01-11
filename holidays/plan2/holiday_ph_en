@@ -5,14 +5,12 @@
 ::
 :: Author:   Petar Margetić <pmargeti34@gmail.com>
 ::
-:: Updated:  2025-03-28
+:: Updated:  2025-01-11
 ::
 :: Source:   Official Gazette of the Republic of the Philippines
 ::           Nationwide Holidays
-::           https://www.officialgazette.gov.ph/nationwide-holidays/2025/
-::           https://www.officialgazette.gov.ph/downloads/2025/03mar/20250320-PROC-839-FRM.pdf
-::           https://www.officialgazette.gov.ph/2024/10/30/proclamation-no-729-s-2024/
-::
+::           https://www.officialgazette.gov.ph/nationwide-holidays/2026/
+::           https://www.officialgazette.gov.ph/downloads/2025/09sep/20250903-PROC-1006-FRM.pdf
 
 :: Metadata
 country     "PH"
@@ -33,11 +31,10 @@ description "National holiday file for Philippines"
 
 :: Religious Holidays
 "Feast of Ramadhan"                                                religious on april 1
-"Maundy Thursday"                                                  religious on april 17
-"Good Friday"                                                      religious on april 18
-"Black Saturday"                                                   religious on april 19
-"All Saints' Day Eve"                                              religious on october 31
-"All Saints' Day"                                                  religious on november 1
+"Maundy Thursday"                                                  religious on april 2
+"Good Friday"                                                      religious on april 3
+"Black Saturday"                                                   religious on april 4
+"All Souls' Day"                                                   religious on november 2
 "Feast of Immaculate Conception of Mary"                           religious on december 8
 "Christmas Eve"                                                    religious on december 24
 "Christmas Day"                                                    religious on december 25
@@ -45,12 +42,7 @@ description "National holiday file for Philippines"
 :: Financial
 
 :: Cultural
-"Chinese New Year"                                                 cultural on january 29
-
-:: School
-"End of School Year 2023/24"                                       school on may 31
-"Start of School Year 2025/26"                                     school on july 29
-"End of School Year 2025/26"                                       school on april 15 2026
+"Chinese New Year"                                                 cultural on february 17
 
 :: Name Days
 
