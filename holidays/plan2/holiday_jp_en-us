@@ -7,13 +7,13 @@
 ::
 :: Language: English
 ::
-:: Updated:  2025-12-29
+:: Updated:  2026-02-02
 ::
 :: Source:   https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html
 ::           https://www.nao.ac.jp/faq/a0301.html
 ::
 :: Note:     On each Februaries, Vernal and Autumnal Equinox Days of next year are announced by government.
-::           Currently Equinox Days on and after 2022 are expected dates and may be changed.
+::           Currently Equinox Days on and after 2028 are expected dates and may be changed.
 ::
 
 :: Metadata
@@ -27,7 +27,7 @@ description "National holiday file for Japan"
 "Coming of Age Day"                public on second monday in january
 "National Foundation Day"          public on february 11
 
-:: Equinox Days on and after 2022 are expected dates. See notes above.
+:: Equinox Days on and after 2028 are expected dates. See notes above.
 "Vernal Equinox Day"               public on march 20 2000
 "Vernal Equinox Day"               public on march 20 2001
 "Vernal Equinox Day"               public on march 21 2002
@@ -68,7 +68,7 @@ description "National holiday file for Japan"
 "Mountain Day"                     public on ((year != 2020 && year != 2021) ? [august 11] : noop)
 "Respect for Senior Citizens Day"  public on third monday in september
 
-:: Equinox Days on and after 2022 are expected dates. See notes above.
+:: Equinox Days on and after 2028 are expected dates. See notes above.
 "Autumnal Equinox Day"             public on september 23 2000
 "Autumnal Equinox Day"             public on september 23 2001
 "Autumnal Equinox Day"             public on september 23 2002
@@ -152,6 +152,7 @@ description "National holiday file for Japan"
 "Holiday"                public on november 24 2025
 "Holiday"                public on may 6 2026
 "Holiday"                public on september 22 2026
+"Holiday"                public on march 22 2027
 
 :: 2019 Japanese imperial transition special arrangements
 "Holiday"                public on april 30 2019
