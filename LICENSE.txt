@@ -1,0 +1,9 @@
+The kholidays library is provided according to the terms of these licenses:
+
+ - GNU Library General Public License (LGPL) version 2.0 or later
+ - GNU General Public License (GPL) version 3.0 with Bison Exception
+
+The GPL3.0 with Bison Exception license is compatible with GPL-2.0-or-later.
+
+See the full license texts in the LICENSES/ folder.
+
