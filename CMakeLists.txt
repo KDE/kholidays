@@ -25,6 +25,22 @@ include(ECMDeprecationSettings)
 include(ECMQmlModule)
 include(ECMGenerateQDoc)
 
+find_package(FLEX REQUIRED)
+set_package_properties(FLEX PROPERTIES
+                       URL "http://flex.sourceforge.net"
+                       DESCRIPTION "Fast Lexical Analyzer"
+                       TYPE REQUIRED
+                       PURPOSE "Required to generate the plan2 parser"
+)
+find_package(BISON 3.3.2 REQUIRED)
+set_package_properties(BISON PROPERTIES
+                       URL "http://www.gnu.org/software/bison"
+                       DESCRIPTION "general-purpose parser generator"
+                       TYPE REQUIRED
+                       PURPOSE
+                       "Required to generate the plan2 parser"
+)
+
 set(KHOLIDAYS_LIB_VERSION ${KF_VERSION})
 set(EXCLUDE_DEPRECATED_BEFORE_AND_AT 0 CACHE STRING "Control the range of deprecated API excluded from the build [default=0].")
 

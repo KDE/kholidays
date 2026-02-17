@@ -30,7 +30,7 @@ class location;
  * format to support non-Gregorian calendar systems, metadata, and other new
  * features.
  *
- * Implemented using Bison/Flex and the Bison C++ skeleton v2.1a, see README.
+ * Implemented using Bison/Flex and the Bison C++ skeleton v2.1a.
  * While almost all code is new, the structure of the parser is based on the
  * original Plan parser.
  *

@@ -17,16 +17,7 @@
 
 %{ /*** C/C++ Declarations ***/
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <pwd.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <limits.h>
-#include <string>
-
 #include <QString>
-
 
 %}
 
@@ -46,10 +37,10 @@
 %skeleton "lalr1.cc"
 
 /* namespace to enclose parser in */
-%name-prefix="KHolidays"
+%define api.prefix {KHolidays}
 
 /* set the parser's class identifier */
-%define "parser_class_name" "HolidayParserPlan"
+%define api.parser.class {HolidayParserPlan}
 
 /* keep track of the current position within the input */
 %locations
@@ -66,7 +57,7 @@
 %parse-param { class HolidayParserDriverPlan& driver }
 
 /* verbose error messages */
-%error-verbose
+%define parse.error verbose
 
 /*** Grammar Tokens ***/
 

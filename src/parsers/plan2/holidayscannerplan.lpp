@@ -12,6 +12,10 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+%top{
+#include <stdint.h> // https://stackoverflow.com/questions/76331604/avoiding-warning-c4005-int8-min-macro-redefinition-when-using-flex-bison-i/77120324#77120324
+}
+
 %{ /*!* C/C++ Declarations ***/
 # include <cstdlib>
 # include <errno.h>
