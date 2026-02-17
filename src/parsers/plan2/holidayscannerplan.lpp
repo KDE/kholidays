@@ -22,6 +22,11 @@
 # include <limits.h>
 # include <string>
 
+#if defined(__GNUC__)
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wzero-as-null-pointer-constant"
+#endif
+
 # include <kholidays_debug.h>
 
 # include "holidayscannerplan_p.h"
@@ -331,6 +336,10 @@ void HolidayScannerPlan::set_debug(bool b)
 }
 
 } // namespace KHolidays
+
+#if defined(__GNUC__)
+#pragma GCC diagnostic pop
+#endif
 
 /* This implementation of HolidayScannerFlexLexer::yylex() is required to fill the
  * vtable of the class HolidayScannerFlexLexer. We define the scanner's main yylex

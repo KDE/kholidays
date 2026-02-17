@@ -88,6 +88,11 @@
 
 %{
 
+#if defined(__GNUC__)
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wunused-but-set-variable"
+#endif
+
 #include "holidayparserdriverplan_p.h"
 #include "holidayscannerplan_p.h"
 
@@ -227,7 +232,9 @@ number : NUMBER
 ;
 
 %%
-
+#if defined(__GNUC__)
+#pragma GCC diagnostic pop
+#endif
 /*** Private Yacc callbacks and helper functions ***/
 
 void KHolidays::HolidayParserPlan::error( const KHolidays::HolidayParserPlan::location_type &errorLocation, const std::string &errorMessage )
