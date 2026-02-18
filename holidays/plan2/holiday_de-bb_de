@@ -34,7 +34,7 @@ description "Feiertage für Deutschland (Brandenburg)"
 "Christi Himmelfahrt"       public on easter plus 39 days
 "Pfingstmontag"             public on easter plus 50 days
 "Tag der Arbeit"            public on 1.5.
-"Tag der Deutschen Einheit" public on 3.10.
+"Tag der Deutschen Einheit" public on ((year >= 1990) ? [3.10.] : noop)
 "1. Weihnachtsfeiertag"     public on 25.12.
 "2. Weihnachtsfeiertag"     public on 26.12.
 
