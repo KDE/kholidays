@@ -31,6 +31,7 @@ description "Feiertage für Deutschland (Schleswig-Holstein)"
 "Christi Himmelfahrt"       public on easter plus 39 days
 "Pfingstmontag"             public on easter plus 50 days
 "Tag der Arbeit"            public on 1.5.
+"Tag der deutschen Einheit" public on ((year >= 1954 && year <= 1990) ? [17.6.] : noop)
 "Tag der Deutschen Einheit" public on ((year >= 1990) ? [3.10.] : noop)
 "1. Weihnachtsfeiertag"     public on 25.12.
 "2. Weihnachtsfeiertag"     public on 26.12.
