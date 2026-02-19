@@ -2,20 +2,22 @@
 # Copyright (C) 2009 This_file_is_part_of_KDE
 # This file is distributed under the same license as the libkholidays package.
 # Kevin Scannell <kscanne@gmail.com>, 2009.
+# SPDX-FileCopyrightText: 2026 charlotte <altronic25@protonmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim/libkholidays.po\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2015-06-13 09:34+0000\n"
-"PO-Revision-Date: 2005-01-10 19:58-0500\n"
-"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
-"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2026-02-18 14:50+0000\n"
+"Last-Translator: charlotte <altronic25@protonmail.com>\n"
+"Language-Team: Irish\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+"X-Generator: Lokalize 25.12.2\n"
 "X-Qt-Contexts: true\n"
 
 #: astroseasons.cpp:139
@@ -49,28 +51,19 @@ msgstr "Cónocht an Fhómhair"
 #: declarative/holidayregionsmodel.cpp:89
 msgctxt "HolidayRegionsDeclarativeModel|"
 msgid "Region"
-msgstr ""
+msgstr "Réigiún"
 
 #: declarative/holidayregionsmodel.cpp:91
-#, fuzzy
-#| msgctxt "Holiday type"
-#| msgid "Name Days"
 msgctxt "HolidayRegionsDeclarativeModel|"
 msgid "Name"
-msgstr "Laethanta na nAinmneacha"
+msgstr "Ainm"
 
 #: declarative/holidayregionsmodel.cpp:93
-#, fuzzy
-#| msgctxt "Header for Description column"
-#| msgid "Description"
 msgctxt "HolidayRegionsDeclarativeModel|"
 msgid "Description"
 msgstr "Cur Síos"
 
 #: holidayregion.cpp:200
-#, fuzzy
-#| msgctxt "Canadian region"
-#| msgid "Quebec"
 msgctxt "HolidayRegion|Canadian region"
 msgid "Quebec"
 msgstr "Québec"
@@ -165,9 +158,6 @@ msgid "England and Wales"
 msgstr "Sasana agus an Bhreatain Bheag"
 
 #: holidayregion.cpp:236
-#, fuzzy
-#| msgctxt "UK Region"
-#| msgid "England"
 msgctxt "HolidayRegion|UK Region"
 msgid "England"
 msgstr "Sasana"
@@ -181,9 +171,6 @@ msgid "Wales"
 msgstr "An Bhreatain Bheag"
 
 #: holidayregion.cpp:240
-#, fuzzy
-#| msgctxt "UK Region"
-#| msgid "Scotland"
 msgctxt "HolidayRegion|UK Region"
 msgid "Scotland"
 msgstr "Albain"
@@ -205,25 +192,16 @@ msgid "South Tyrol"
 msgstr "An Tioróil"
 
 #: holidayregion.cpp:246
-#, fuzzy
-#| msgctxt "Australian Region"
-#| msgid "New South Wales"
 msgctxt "HolidayRegion|"
 msgid "New South Wales"
 msgstr "New South Wales"
 
 #: holidayregion.cpp:248
-#, fuzzy
-#| msgctxt "Australian Region"
-#| msgid "Queensland"
 msgctxt "HolidayRegion|Australian Region"
 msgid "Queensland"
 msgstr "Queensland"
 
 #: holidayregion.cpp:250
-#, fuzzy
-#| msgctxt "Australian Region"
-#| msgid "Victoria"
 msgctxt "HolidayRegion|Australian Region"
 msgid "Victoria"
 msgstr "Victoria"
@@ -274,9 +252,6 @@ msgid "Republic of Srpska"
 msgstr ""
 
 #: holidayregion.cpp:280
-#, fuzzy
-#| msgctxt "Holiday type"
-#| msgid "Public"
 msgctxt "HolidayRegion|Holiday type"
 msgid "Public"
 msgstr "Poiblí"
@@ -329,9 +304,6 @@ msgid "Historical"
 msgstr "Victoria"
 
 #: holidayregion.cpp:296
-#, fuzzy
-#| msgctxt "Holiday type"
-#| msgid "School"
 msgctxt "HolidayRegion|Holiday type"
 msgid "School"
 msgstr "Scoil"
@@ -353,9 +325,6 @@ msgid "Name Days"
 msgstr "Laethanta na nAinmneacha"
 
 #: holidayregion.cpp:302
-#, fuzzy
-#| msgctxt "Holiday type"
-#| msgid "Personal"
 msgctxt "HolidayRegion|Holiday type"
 msgid "Personal"
 msgstr "Pearsanta"
@@ -460,12 +429,9 @@ msgstr "Ioslamach"
 msgctxt ""
 "HolidayRegion|Holiday file display name, %1 = region name, %2 = holiday type"
 msgid "%1 - %2"
-msgstr ""
+msgstr "%1 - %2"
 
 #: holidayregion.cpp:342
-#, fuzzy
-#| msgctxt "Unknown holiday region"
-#| msgid "Unknown"
 msgctxt "HolidayRegion|Unknown holiday region"
 msgid "Unknown"
 msgstr "Anaithnid"
