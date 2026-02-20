@@ -6,8 +6,6 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim/libkholidays.po\n"
-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-06-13 09:34+0000\n"
 "PO-Revision-Date: 2026-02-18 14:50+0000\n"
 "Last-Translator: charlotte <altronic25@protonmail.com>\n"
 "Language-Team: Irish\n"
@@ -17,36 +15,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
-"X-Generator: Lokalize 25.12.2\n"
 "X-Qt-Contexts: true\n"
 
 #: astroseasons.cpp:139
-#, fuzzy
-#| msgid "June Solstice"
 msgctxt "AstroSeasons|"
 msgid "June Solstice"
-msgstr "Grianstad an tSamhraidh"
+msgstr ""
 
 #: astroseasons.cpp:141
-#, fuzzy
-#| msgid "December Solstice"
 msgctxt "AstroSeasons|"
 msgid "December Solstice"
-msgstr "Grianstad an Gheimhridh"
+msgstr ""
 
 #: astroseasons.cpp:143
-#, fuzzy
-#| msgid "March Equinox"
 msgctxt "AstroSeasons|"
 msgid "March Equinox"
-msgstr "Cónocht an Earraigh"
+msgstr ""
 
 #: astroseasons.cpp:145
-#, fuzzy
-#| msgid "September Equinox"
 msgctxt "AstroSeasons|"
 msgid "September Equinox"
-msgstr "Cónocht an Fhómhair"
+msgstr ""
 
 #: declarative/holidayregionsmodel.cpp:89
 msgctxt "HolidayRegionsDeclarativeModel|"
@@ -69,12 +58,9 @@ msgid "Quebec"
 msgstr "Québec"
 
 #: holidayregion.cpp:203
-#, fuzzy
-#| msgctxt "German region"
-#| msgid "Bavaria"
 msgctxt "HolidayRegion|German region"
 msgid "Germany, Bavaria"
-msgstr "An Bhaváir"
+msgstr ""
 
 #: holidayregion.cpp:205
 msgctxt "HolidayRegion|German region"
@@ -142,20 +128,14 @@ msgid "Germany, Thuringia"
 msgstr ""
 
 #: holidayregion.cpp:232
-#, fuzzy
-#| msgctxt "Spanish region"
-#| msgid "Catalonia"
 msgctxt "HolidayRegion|Spanish region"
 msgid "Catalonia"
-msgstr "An Chatalóin"
+msgstr ""
 
 #: holidayregion.cpp:234
-#, fuzzy
-#| msgctxt "UK Region"
-#| msgid "England and Wales"
 msgctxt "HolidayRegion|UK Region"
 msgid "England and Wales"
-msgstr "Sasana agus an Bhreatain Bheag"
+msgstr ""
 
 #: holidayregion.cpp:236
 msgctxt "HolidayRegion|UK Region"
@@ -163,12 +143,9 @@ msgid "England"
 msgstr "Sasana"
 
 #: holidayregion.cpp:238
-#, fuzzy
-#| msgctxt "UK Region"
-#| msgid "Wales"
 msgctxt "HolidayRegion|UK Region"
 msgid "Wales"
-msgstr "An Bhreatain Bheag"
+msgstr ""
 
 #: holidayregion.cpp:240
 msgctxt "HolidayRegion|UK Region"
@@ -176,20 +153,14 @@ msgid "Scotland"
 msgstr "Albain"
 
 #: holidayregion.cpp:242
-#, fuzzy
-#| msgctxt "UK Region"
-#| msgid "Northern Ireland"
 msgctxt "HolidayRegion|UK Region"
 msgid "Northern Ireland"
-msgstr "Tuaisceart Éireann"
+msgstr ""
 
 #: holidayregion.cpp:244
-#, fuzzy
-#| msgctxt "Italian Region"
-#| msgid "South Tyrol"
 msgctxt "HolidayRegion|Italian Region"
 msgid "South Tyrol"
-msgstr "An Tioróil"
+msgstr ""
 
 #: holidayregion.cpp:246
 msgctxt "HolidayRegion|"
@@ -207,44 +178,29 @@ msgid "Victoria"
 msgstr "Victoria"
 
 #: holidayregion.cpp:252
-#, fuzzy
-#| msgctxt "Australian Region"
-#| msgid "South Australia"
 msgctxt "HolidayRegion|Australian Region"
 msgid "South Australia"
-msgstr "An Astráil Theas"
+msgstr ""
 
 #: holidayregion.cpp:254
-#, fuzzy
-#| msgctxt "Australian Region"
-#| msgid "Northern Territory"
 msgctxt "HolidayRegion|Australian Region"
 msgid "Northern Territory"
-msgstr "Críoch Thuaidh"
+msgstr ""
 
 #: holidayregion.cpp:256
-#, fuzzy
-#| msgctxt "Australian Region"
-#| msgid "Australian Capital Territory"
 msgctxt "HolidayRegion|Australian Region"
 msgid "Australian Capital Territory"
-msgstr "Limistéar na Príomhchathrach Astrálaí"
+msgstr ""
 
 #: holidayregion.cpp:258
-#, fuzzy
-#| msgctxt "Australian Region"
-#| msgid "Western Australia"
 msgctxt "HolidayRegion|Australian Region"
 msgid "Western Australia"
-msgstr "An Astráil Thiar"
+msgstr ""
 
 #: holidayregion.cpp:260
-#, fuzzy
-#| msgctxt "Australian Region"
-#| msgid "Tasmania"
 msgctxt "HolidayRegion|Australian Region"
 msgid "Tasmania"
-msgstr "An Tasmáin"
+msgstr ""
 
 #: holidayregion.cpp:262
 msgctxt "HolidayRegion|Bosnian and Herzegovinian Region"
@@ -262,12 +218,9 @@ msgid "Civil"
 msgstr ""
 
 #: holidayregion.cpp:284
-#, fuzzy
-#| msgctxt "Holiday type"
-#| msgid "Religious"
 msgctxt "HolidayRegion|Holiday type"
 msgid "Religious"
-msgstr "Reiligiúnach"
+msgstr ""
 
 #: holidayregion.cpp:286
 msgctxt "HolidayRegion|Holiday type"
@@ -275,20 +228,14 @@ msgid "Government"
 msgstr ""
 
 #: holidayregion.cpp:288
-#, fuzzy
-#| msgctxt "Holiday type"
-#| msgid "Financial"
 msgctxt "HolidayRegion|Holiday type"
 msgid "Financial"
-msgstr "Airgeadúil"
+msgstr ""
 
 #: holidayregion.cpp:290
-#, fuzzy
-#| msgctxt "Holiday type"
-#| msgid "Cultural"
 msgctxt "HolidayRegion|Holiday type"
 msgid "Cultural"
-msgstr "Cultúrtha"
+msgstr ""
 
 #: holidayregion.cpp:292
 msgctxt "HolidayRegion|Holiday type"
@@ -296,12 +243,9 @@ msgid "Commemorative"
 msgstr ""
 
 #: holidayregion.cpp:294
-#, fuzzy
-#| msgctxt "Australian Region"
-#| msgid "Victoria"
 msgctxt "HolidayRegion|Holiday type"
 msgid "Historical"
-msgstr "Victoria"
+msgstr ""
 
 #: holidayregion.cpp:296
 msgctxt "HolidayRegion|Holiday type"
@@ -309,20 +253,14 @@ msgid "School"
 msgstr "Scoil"
 
 #: holidayregion.cpp:298
-#, fuzzy
-#| msgctxt "Holiday type"
-#| msgid "Seasons"
 msgctxt "HolidayRegion|Holiday type"
 msgid "Seasonal"
-msgstr "Séasúir"
+msgstr ""
 
 #: holidayregion.cpp:300
-#, fuzzy
-#| msgctxt "Holiday type"
-#| msgid "Name Days"
 msgctxt "HolidayRegion|Holiday type"
 msgid "Name Days"
-msgstr "Laethanta na nAinmneacha"
+msgstr ""
 
 #: holidayregion.cpp:302
 msgctxt "HolidayRegion|Holiday type"
@@ -340,44 +278,29 @@ msgid "Anglican"
 msgstr ""
 
 #: holidayregion.cpp:308
-#, fuzzy
-#| msgctxt "Holiday type"
-#| msgid "Catholic"
 msgctxt "HolidayRegion|Holiday type"
 msgid "Catholic"
-msgstr "Caitliceach"
+msgstr ""
 
 #: holidayregion.cpp:310
-#, fuzzy
-#| msgctxt "Holiday type"
-#| msgid "Protestant"
 msgctxt "HolidayRegion|Holiday type"
 msgid "Protestant"
-msgstr "Protastúnach"
+msgstr ""
 
 #: holidayregion.cpp:312
-#, fuzzy
-#| msgctxt "Holiday type"
-#| msgid "Orthodox"
 msgctxt "HolidayRegion|Holiday type"
 msgid "Orthodox"
-msgstr "Ortadocsach"
+msgstr ""
 
 #: holidayregion.cpp:314
-#, fuzzy
-#| msgctxt "Holiday type"
-#| msgid "Jewish"
 msgctxt "HolidayRegion|Holiday type"
 msgid "Jewish"
-msgstr "Giúdach"
+msgstr ""
 
 #: holidayregion.cpp:316
-#, fuzzy
-#| msgctxt "Holiday type"
-#| msgid "Orthodox"
 msgctxt "HolidayRegion|Holiday type"
 msgid "Jewish Orthodox"
-msgstr "Ortadocsach"
+msgstr ""
 
 #: holidayregion.cpp:318
 msgctxt "HolidayRegion|Holiday type"
@@ -385,44 +308,29 @@ msgid "Jewish Conservative"
 msgstr ""
 
 #: holidayregion.cpp:320
-#, fuzzy
-#| msgctxt "Holiday type"
-#| msgid "Jewish"
 msgctxt "HolidayRegion|Holiday type"
 msgid "Jewish Reform"
-msgstr "Giúdach"
+msgstr ""
 
 #: holidayregion.cpp:322
-#, fuzzy
-#| msgctxt "Holiday type"
-#| msgid "Islamic"
 msgctxt "HolidayRegion|Holiday type"
 msgid "Islamic"
-msgstr "Ioslamach"
+msgstr ""
 
 #: holidayregion.cpp:324
-#, fuzzy
-#| msgctxt "Holiday type"
-#| msgid "Islamic"
 msgctxt "HolidayRegion|Holiday type"
 msgid "Islamic Sunni"
-msgstr "Ioslamach"
+msgstr ""
 
 #: holidayregion.cpp:326
-#, fuzzy
-#| msgctxt "Holiday type"
-#| msgid "Islamic"
 msgctxt "HolidayRegion|Holiday type"
 msgid "Islamic Shia"
-msgstr "Ioslamach"
+msgstr ""
 
 #: holidayregion.cpp:328
-#, fuzzy
-#| msgctxt "Holiday type"
-#| msgid "Islamic"
 msgctxt "HolidayRegion|Holiday type"
 msgid "Islamic Sufi"
-msgstr "Ioslamach"
+msgstr ""
 
 #: holidayregion.cpp:334
 #, qt-format
@@ -437,32 +345,24 @@ msgid "Unknown"
 msgstr "Anaithnid"
 
 #: lunarphase.cpp:28
-#, fuzzy
-#| msgid "New Moon"
 msgctxt "LunarPhase|"
 msgid "New Moon"
-msgstr "Gealach Úr"
+msgstr ""
 
 #: lunarphase.cpp:30
-#, fuzzy
-#| msgid "Full Moon"
 msgctxt "LunarPhase|"
 msgid "Full Moon"
-msgstr "Gealach Lán"
+msgstr ""
 
 #: lunarphase.cpp:32
-#, fuzzy
-#| msgid "First Quarter Moon"
 msgctxt "LunarPhase|"
 msgid "First Quarter Moon"
-msgstr "Béal Ceathrún"
+msgstr ""
 
 #: lunarphase.cpp:34
-#, fuzzy
-#| msgid "Last Quarter Moon"
 msgctxt "LunarPhase|"
 msgid "Last Quarter Moon"
-msgstr "An Cheathrú Dheireanach"
+msgstr ""
 
 #: lunarphase.cpp:38
 msgctxt "LunarPhase|"
@@ -485,197 +385,121 @@ msgid "Waning Crescent"
 msgstr ""
 
 #: zodiac.cpp:66
-#, fuzzy
-#| msgid "Aries"
 msgctxt "Zodiac|"
 msgid "Aries"
-msgstr "Reithe"
+msgstr ""
 
 #: zodiac.cpp:68
-#, fuzzy
-#| msgid "Taurus"
 msgctxt "Zodiac|"
 msgid "Taurus"
-msgstr "An Tarbh"
+msgstr ""
 
 #: zodiac.cpp:70
-#, fuzzy
-#| msgid "Gemini"
 msgctxt "Zodiac|"
 msgid "Gemini"
-msgstr "An Cúpla"
+msgstr ""
 
 #: zodiac.cpp:72
-#, fuzzy
-#| msgid "Cancer"
 msgctxt "Zodiac|"
 msgid "Cancer"
-msgstr "An Portán"
+msgstr ""
 
 #: zodiac.cpp:74
-#, fuzzy
-#| msgid "Leo"
 msgctxt "Zodiac|"
 msgid "Leo"
-msgstr "An Leon"
+msgstr ""
 
 #: zodiac.cpp:76
-#, fuzzy
-#| msgid "Virgo"
 msgctxt "Zodiac|"
 msgid "Virgo"
-msgstr "An Mhaighdean"
+msgstr ""
 
 #: zodiac.cpp:78
-#, fuzzy
-#| msgid "Libra"
 msgctxt "Zodiac|"
 msgid "Libra"
-msgstr "An Mheá"
+msgstr ""
 
 #: zodiac.cpp:80
-#, fuzzy
-#| msgid "Scorpio"
 msgctxt "Zodiac|"
 msgid "Scorpio"
-msgstr "An Scairp"
+msgstr ""
 
 #: zodiac.cpp:82
-#, fuzzy
-#| msgid "Sagittarius"
 msgctxt "Zodiac|"
 msgid "Sagittarius"
-msgstr "An Saighdeoir"
+msgstr ""
 
 #: zodiac.cpp:84
-#, fuzzy
-#| msgid "Capricorn"
 msgctxt "Zodiac|"
 msgid "Capricorn"
-msgstr "An Gabhar"
+msgstr ""
 
 #: zodiac.cpp:86
-#, fuzzy
-#| msgid "Aquarius"
 msgctxt "Zodiac|"
 msgid "Aquarius"
-msgstr "An tUisceadóir"
+msgstr ""
 
 #: zodiac.cpp:88
-#, fuzzy
-#| msgid "Pisces"
 msgctxt "Zodiac|"
 msgid "Pisces"
-msgstr "Na hÉisc"
+msgstr ""
 
 #: zodiac.cpp:258
-#, fuzzy
-#| msgctxt "zodiac symbol for Aries"
-#| msgid "ram"
 msgctxt "HolidayRegion|zodiac symbol for Aries"
 msgid "ram"
-msgstr "reithe"
+msgstr ""
 
 #: zodiac.cpp:260
-#, fuzzy
-#| msgctxt "zodiac symbol for Taurus"
-#| msgid "bull"
 msgctxt "HolidayRegion|zodiac symbol for Taurus"
 msgid "bull"
-msgstr "tarbh"
+msgstr ""
 
 #: zodiac.cpp:262
-#, fuzzy
-#| msgctxt "zodiac symbol for Gemini"
-#| msgid "twins"
 msgctxt "HolidayRegion|zodiac symbol for Gemini"
 msgid "twins"
-msgstr "cúpla"
+msgstr ""
 
 #: zodiac.cpp:264
-#, fuzzy
-#| msgctxt "zodiac symbol for Cancer"
-#| msgid "crab"
 msgctxt "HolidayRegion|zodiac symbol for Cancer"
 msgid "crab"
-msgstr "portán"
+msgstr ""
 
 #: zodiac.cpp:266
-#, fuzzy
-#| msgctxt "zodiac symbol for Leo"
-#| msgid "lion"
 msgctxt "HolidayRegion|zodiac symbol for Leo"
 msgid "lion"
-msgstr "leon"
+msgstr ""
 
 #: zodiac.cpp:268
-#, fuzzy
-#| msgctxt "zodiac symbol for Virgo"
-#| msgid "virgin"
 msgctxt "HolidayRegion|zodiac symbol for Virgo"
 msgid "virgin"
-msgstr "maighdean"
+msgstr ""
 
 #: zodiac.cpp:270
-#, fuzzy
-#| msgctxt "zodiac symbol for Libra"
-#| msgid "scales"
 msgctxt "HolidayRegion|zodiac symbol for Libra"
 msgid "scales"
-msgstr "meá"
+msgstr ""
 
 #: zodiac.cpp:272
-#, fuzzy
-#| msgctxt "zodiac symbol for Scorpion"
-#| msgid "scorpion"
 msgctxt "HolidayRegion|zodiac symbol for Scorpion"
 msgid "scorpion"
-msgstr "scairp"
+msgstr ""
 
 #: zodiac.cpp:274
-#, fuzzy
-#| msgctxt "zodiac symbol for Sagittarius"
-#| msgid "archer"
 msgctxt "HolidayRegion|zodiac symbol for Sagittarius"
 msgid "archer"
-msgstr "saighdeoir"
+msgstr ""
 
 #: zodiac.cpp:276
-#, fuzzy
-#| msgctxt "zodiac symbol for Capricorn"
-#| msgid "goat"
 msgctxt "HolidayRegion|zodiac symbol for Capricorn"
 msgid "goat"
-msgstr "gabhar"
+msgstr ""
 
 #: zodiac.cpp:278
-#, fuzzy
-#| msgctxt "zodiac symbol for Aquarius"
-#| msgid "water carrier"
 msgctxt "HolidayRegion|zodiac symbol for Aquarius"
 msgid "water carrier"
-msgstr "iompróir uisce"
+msgstr ""
 
 #: zodiac.cpp:280
-#, fuzzy
-#| msgctxt "zodiac symbol for Pices"
-#| msgid "fish"
 msgctxt "HolidayRegion|zodiac symbol for Pices"
 msgid "fish"
-msgstr "iasc"
-
-#~ msgctxt "Header for Language column"
-#~ msgid "Language"
-#~ msgstr "Teanga"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Kevin Scannell"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "kscanne@gmail.com"
-
-#~ msgctxt "zodiac symbol for Aquarius"
-#~ msgid "water"
-#~ msgstr "uisce"
+msgstr ""
