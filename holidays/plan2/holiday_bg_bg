@@ -4,10 +4,11 @@
 :: Language: Bulgarian
 ::
 :: Author:   Alexander Kurtakov <akurtakov@gmail.com>
+::           Dobromir Zyapkov <dobrikz10@gmail.com>
 ::
-:: Updated:
+:: Updated: 2026-02-24
 ::
-:: Source:
+:: Source: https://календар.com/imeni-dni.html
 ::
 
 :: Metadata
@@ -19,18 +20,25 @@ language    "bg"
 :: Public Holidays
 "Нова година"                                                           public on january 1
 "Ден на Освобождението на България от османско иго"                     public on march 3
+"Лазарова събота"                                                       public on pascha minus 8 days
+"Цветница(Връбница)"                                                    public on pascha minus 7 days
 "Великден"                                                              public religious on pascha
 "Великден"                                                              public on pascha plus 1 days
 "Ден на труда"                                                          public on may 1
-"Гергьовден, Ден на храбростта и Българската армия"                     public on may 6
+"Гергьовден, Ден на храбростта и Българската армия (Георги, Галя)"      public on may 6
 "Ден на българската просвета и култура и на славянската писменост"      public on may 24
+"Ден на Ботев и на загиналите за свободата и независимостта на България" public on june 2
 "Ден на Съединението на България"                                       public on september 6
 "Ден на Независимостта на България"                                     public on september 22
 "Бъдни вечер"                                                           public on december 24
 "Коледа, Рождество Христово"                                            public religious on december 25
 "Коледа, Рождество Христово"                                            public on december 26
 
+
 :: Religious Holidays
+"Разпети петък"                                                         religious on pascha minus 2 days
+"Велика събота"                                                         religious on pascha minus 1 days
+"Петдесетница / Св. Троица"                                              religious on pascha plus 50 days
 
 :: Financial
 
@@ -44,26 +52,127 @@ language    "bg"
 
 :: Name Days
 "Васильовден"                                                           nameday on january 1
+"Силвия, Силвестър"                                                     nameday on january 2
+"Тихомир"                                                               nameday on january 4
 "Йордановден Богоявление"                                               nameday on january 6
 "Ивановден"                                                             nameday on january 7
-"Антоновден"                                                            nameday on january 17
+"Богдан, Богдана, Богомил, Теодосий"                                    nameday on january 11
+"Таня, Тана, Татяна"                                                    nameday on january 12
+"Адам, Калчо, Нина, Нино"                                               nameday on january 14
+"Антоновден (Антон, Антония, Тони, Тоня)"                               nameday on january 17
 "Атанасовден"                                                           nameday on january 18
-"Трифоновден, Трифон Зарезан"                                           nameday on february 1
-"Петльовден"                                                            nameday on february 2
-"Зимен Симеоновден"                                                     nameday on february 3
-"Благовещение"                                                          nameday on march 25
-"Еньовден"                                                              nameday on june 24
+"Евтим (Св. Евтимий, патриарх Търновски)"                               nameday on january 20
+"Валери, Валерия, Максим, Неофит"                                       nameday on january 21
+"Ксения"                                                                nameday on january 24
+"Григор, Гриша, Григория"                                               nameday on january 25
+"Трифоновден, Трифон Зарезан (Лозан, Лоза, Трифон)"                     nameday on february 1
+"Петльовден (Момчил, Радост, Драго, Радослав, Сретен)"                  nameday on february 2
+"Зимен Симеоновден (Симеон, Симона, Мона, Мончо)"                       nameday on february 3
+"Жеко, Желязко, Жечка, Жечко"                                           nameday on february 4
+"Добрин, Добри, Добринка, Агата"                                        nameday on february 5
+"Доротоя, Огнян, Огняна, Искра, Искрен, Пламен, Светлана, Фотьо"        nameday on february 6
+"Валентин, Валентина, Валя, Ламби, Хараламби"                           nameday on february 10
+"Евлоги, Зоя (Св. Евлогий, архиепископ Александрийски)"                 nameday on february 13
+"Трифонов ден (стар стил), Св. Валентин"                                nameday on february 14
+"Евстати, Евстатия"                                                     nameday on february 21
+"баба Марта (Евдокия, Марта, Мартин)"                                   nameday on march 1 
+"Гера, Герасим, Герчо"                                                  nameday on march 4
+"Красимир, Красимира"                                                   nameday on march 6
+"Младен, Горян"                                                         nameday on march 9
+"Св. мъченица Галина (Галина, Галя, Галин, Галена)"                     nameday on march 10
+"Никифор"                                                               nameday on march 13
+"Божан, Божил, Емануил, Манол, Манчо, Тотьо"                            nameday on march 15
+"Жельо-Вилзов ден"                                                      nameday on march 16
+"Св. преподобни Алексий (Алекси)"                                       nameday on march 17
+"Дария, Найден"                                                         nameday on march 19
+"Светла, Светозар"                                                      nameday on march 20
+"Лидия"                                                                 nameday on march 23
+"Захари, Захарина, Хари"                                                nameday on march 24
+"Благовещение (Благовест, Благовеста, Благой, Мариан, Мариана)"         nameday on march 25
+"Габи, Габриела, Габриел, Гавраил"                                      nameday on march 26
+"Св. мъченик Боян (Боян, Бояна, Боянка, Албена, Бойко)"                 nameday on march 28
+"Страхил"                                                               nameday on april 6
+"Мартин, Мартина, Марта"                                                nameday on april 14
+"Виктор, Виктория"                                                      nameday on april 18
+"Жельо"                                                                 nameday on april 21
+"Марк, Марко"                                                           nameday on april 25
+"Виталий, Витан"                                                        nameday on april 28
+"Пенчо, Пенка, Пеньо, Пенко"                                            nameday on april 29
+"Тодоровден"                                                            nameday on pascha minus 43 days
+"Гергана, Лазар"                                                        nameday on pascha minus 8 days
+"Цветелина, Цветан"                                                     nameday on pascha minus 7 days
+"Светли петък (Живко, Живка, Жишо, Зоя)"                                nameday on pascha plus 5 days
+"Томина неделя (Светла неделя) / Тома"                                  nameday on pascha plus 7 days
+"Спасовден (Спас, Спаска, Спасимира, Спасимир)"                         nameday on pascha plus 40 days
+"Мая"                                                                   nameday on may 1
+"Св. цар Борис (Борис, Борислав, Борислава, Боряна)"                    nameday on may 2
+"Св. мъченица Ирина (Ирина, Ирена, Иринка, Ириней, Мирослав)"           nameday on may 5
+"Христофор"                                                             nameday on may 9
+"Кирил и Методий, Кирчо, Кирилка, Методи, Методийка"                    nameday on may 11
+"Герана, Герасим, Герда, Герман, Геро, Джерман, Искра, Искрен"          nameday on may 12
+"Св. Константин и Св. Елена (Коста, Костадин, Станимир, Трайко)"        nameday on may 21
+"Св. Емилия (Емилия, Ема, Емил)"                                        nameday on may 30
+"Марта"                                                                 nameday on june 4
+"Антония"                                                               nameday on june 10
+"Августин, Витан, Витомир"                                              nameday on june 15
+"Бисер, Бисера, Наум"                                                   nameday on june 20
+"Явор, Ясен"                                                            nameday on june 21
+"Еньовден (Деян, Деяна, Янко, Янка, Янчо, Енчо)"                        nameday on june 24
 "Петровден"                                                             nameday on june 29
-"Илинден"                                                               nameday on july 20
-"Симеоновден"                                                           nameday on september 1
-"Кръстовден"                                                            nameday on september 14
+"Апостол, Цоло"                                                         nameday on june 30
+"Св. безсребърници Козма и Дамиан"                                      nameday on july 1
+"Неделя, Недялка, Недялко, Неделина, Нели, Нено"                        nameday on july 7
+"Олег, Олга, Оля"                                                       nameday on july 11
+"Св. велик княз Владимир"                                               nameday on july 15
+"Юлия, Юлиян, Юли"                                                      nameday on july 16
+"Св. великомъченица Марина"                                             nameday on july 17
+"Илинден (Илия, Илиана, Илиан, Илко, Илка)"                             nameday on july 20
+"Св. мироносица и равноапостолна Мария Магдалина (Магда, Миглена)"      nameday on july 22
+"Св. великомъченица Христина"                                           nameday on july 24
+"Панчо, Панка, Пантелей"                                                nameday on july 27
+"Св. Калиник (Калин, Горан)"                                            nameday on july 29
+"Емил, Емилия"                                                          nameday on august 8
+"Ивайло"                                                                nameday on august 10
+"Успение Богородично (Мария, Мара, Марийка, Мима, Мими, Мариана)"       nameday on august 15
+"Св. Самуил"                                                            nameday on august 20
+"Вълко"                                                                 nameday on august 23
+"Св. мъченици Адриан и Наталия (Адриан и Наталия, Адриана, Наташа)"     nameday on august 26
+"Св. Анастасий Струмишки"                                               nameday on august 29
+"ден на Цариградския патриарх св. Александър"                           nameday on august 30
+"Гено, Гена, Генчо"                                                     nameday on august 31
+"Симеоновден, Св. Симеон Стълпник"                                      nameday on september 1
+"Св. пророк Захарий и праведна Елисавета"                               nameday on september 5
+"Кръстовден (Кръстьо, Кръстина, Кръстинка, Кристина, Кристиан)"         nameday on september 14
+"Св. Людмила Чешка"                                                     nameday on september 16
+"Св. мъченици София, Вяра, Надежда и Любов"                             nameday on september 17
+"Евстати"                                                               nameday on september 20
+"Гълъбин"                                                               nameday on september 22
+"Тома, Томи"                                                            nameday on october 6
 "Петковден"                                                             nameday on october 14
+"Св. Злата Мъгленска"                                                   nameday on october 18
 "Димитровден"                                                           nameday on october 26
-"Архангеловден"                                                         nameday on november 8
+"Нестор"                                                                nameday on october 27
+"Архангеловден (Ангел и Михаил, Ангелина, Ангелинка, Емил,Милена)"      nameday on november 8
+"Св. мъченици Мина, Виктор и Викентий (Виктор, Виктория, Мина)"         nameday on november 11
+"Филип, Управда, Юстиниан (Коледни заговезни)"                          nameday on november 14
+"Матей"                                                                 nameday on november 16
+"Св. Амфилохий, епископ Иконийски, Св. Григорий, епископ Акрагантийски" nameday on november 23
+"Св. великомъченица Екатерина"                                          nameday on november 24
+"Стилиян, Стелян, Стела, Стилян"                                        nameday on november 26
 "Андреевден"                                                            nameday on november 30
+"Св. великомъченица Варвара (Варвара, Барбара)"                         nameday on december 4
+"Св. преподобни Сава Освещени (Сава, Савка, Светослав, Владислав)"      nameday on december 5
 "Никулден"                                                              nameday on december 6
-"Игнажден"                                                              nameday on december 20
+"Ана, Анна, Анка, Анета, Яна"                                           nameday on december 9
+"Свобода"                                                               nameday on december 15
+"Св. пророк Даниил"                                                     nameday on december 17
+"Игнажден (Игнат, Искра, Искрен, Пламен, Пламена, Огнян)"               nameday on december 20
+"Св. великомъченица Анастасия"                                          nameday on december 22
+"Света Евгения (Евгения, Евгений, Женя, Бистра)"                        nameday on december 24
+"Божидар, Емил, Христо, Християн, Кристиян, Радослав, Кристина, Младен" nameday on december 25
+"Св. Йосиф Обручник и Цар Давид"                                        nameday on december 26
 "Стефановден"                                                           nameday on december 27
 
 :: To be sorted
 "Ден на народните будители - неприсъствен за всички учебни заведения"   civil on november 1
+"Всички светии (Петровни заговезни)/ Панайот, Панталей, Панчо"          civil nameday on pascha plus 56 days
