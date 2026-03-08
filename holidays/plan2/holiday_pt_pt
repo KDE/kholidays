@@ -7,7 +7,7 @@
 ::
 :: Updated:
 ::
-:: Source:   http://www.infocid.pt/infocid/0_116.htm
+:: Source:   https://pt.wikipedia.org/wiki/Feriados_em_Portugal
 ::
 
 :: Metadata
@@ -17,22 +17,22 @@ language    "pt"
 :description "(please add description in source language) National holiday file for Portugal"
 
 :: Public Holidays
-"Ano Novo"              public on january 1
-"6ª feira santa"        public religious on easter minus 2 days
-"25 de Abril"           public on april 25
-"1º de Maio"            public on may 1
-"10 de Junho"           public on june 10
-"Assunção"              public on august 15
-"Nª Senhora Conceição"  public religious on december 8
-"Natal"                 public religious on december 25
+"Ano Novo"                      public on january 1
+"Carnaval"                      public religious on easter minus 47 days
+"6ª feira santa"                public religious on easter minus 2 days
+"Páscoa"                        public religious on easter
+"25 de Abril"                   public on april 25
+"1º de Maio"                    public on may 1
+"Corpo de Deus"                 public religious on easter plus 60 days
+"Dia de Portugal"               public on june 10
+"Assunção de Nossa Senhora"     public on august 15
+"Implantação da república"      public on october 5
+"Todos os Santos"               public religious on november 1
+"Restauração da Indepedência"   public on december 1
+"Nª Senhora Conceição"          public religious on december 8
+"Natal"                         public religious on december 25
 
 :: Religious
-"Carnaval"              religious on easter minus 50 days length 4 days
-"4ª feira de cinzas"    religious on easter minus 46 days
-"Páscoa"                religious on easter
-"Ascension"             religious on easter plus 39 days
-"Trinity"               religious on easter plus 56 days
-"Pentecostes"           religious on easter plus 49 days
 
 :: Financial
 
@@ -41,13 +41,6 @@ language    "pt"
 :: School
 
 :: Daylight Saving
-
-:: Removed holidays
-:: "Corpo de Deus"         public on easter plus 60 days
-:: "República"             public on october 5
-:: "Todos os Santos"       public on november 1
-:: "Restauração"           public on december 1
-
 
 :: Name Days
 
@@ -176,7 +169,7 @@ language    "pt"
 ::   "Horta"                        on june 24
 ::   "Idanha-a-Nova"                on easter plus 15 days
 ::   "Ílhavo"                       on easter plus 1 day
-::   : "Lajes das Flores"           on segunda-feira após o 3. fim  de semana de Julho ??
+::   "Lajes das Flores"             on segunda-feira após o 3. fim  de semana de Julho ??
 ::   "Lajes das Flores"             on third sunday in july plus 1 day
 ::   "Lajes do Pico"                on june 29
 ::   "Lagoa (Açores)"               on april 11
@@ -260,7 +253,7 @@ language    "pt"
 ::   "Peso da Régua"                on august 16
 ::   "Pinhel"                       on august 25
 ::   "Pombal"                       on november 11
-::   : "Ponta Delgada"              on segunda-feira do Senhor Santo Cristo em Maio ???
+::   "Ponta Delgada"                on segunda-feira do Senhor Santo Cristo em Maio ???
 ::   "Ponta do Sol"                 on september 8
 ::   "Ponte da Barca"               on august 24
 ::   "Ponte de Lima"                on september 20
