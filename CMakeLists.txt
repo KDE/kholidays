@@ -26,23 +26,38 @@ include(ECMQmlModule)
 include(ECMGenerateQDoc)
 
 find_package(FLEX REQUIRED)
-set_package_properties(FLEX PROPERTIES
-                       URL "http://flex.sourceforge.net"
-                       DESCRIPTION "Fast Lexical Analyzer"
-                       TYPE REQUIRED
-                       PURPOSE "Required to generate the plan2 parser"
+set_package_properties(
+    FLEX
+    PROPERTIES
+        URL
+            "http://flex.sourceforge.net"
+        DESCRIPTION
+            "Fast Lexical Analyzer"
+        TYPE
+            REQUIRED
+        PURPOSE
+            "Required to generate the plan2 parser"
 )
 find_package(BISON 3.3.2 REQUIRED)
-set_package_properties(BISON PROPERTIES
-                       URL "http://www.gnu.org/software/bison"
-                       DESCRIPTION "general-purpose parser generator"
-                       TYPE REQUIRED
-                       PURPOSE
-                       "Required to generate the plan2 parser"
+set_package_properties(
+    BISON
+    PROPERTIES
+        URL
+            "http://www.gnu.org/software/bison"
+        DESCRIPTION
+            "general-purpose parser generator"
+        TYPE
+            REQUIRED
+        PURPOSE
+            "Required to generate the plan2 parser"
 )
 
 set(KHOLIDAYS_LIB_VERSION ${KF_VERSION})
-set(EXCLUDE_DEPRECATED_BEFORE_AND_AT 0 CACHE STRING "Control the range of deprecated API excluded from the build [default=0].")
+set(EXCLUDE_DEPRECATED_BEFORE_AND_AT
+    0
+    CACHE STRING
+    "Control the range of deprecated API excluded from the build [default=0]."
+)
 
 set(kholidays_version_header "${CMAKE_CURRENT_BINARY_DIR}/src/kholidays_version.h")
 ecm_setup_version(PROJECT VARIABLE_PREFIX KHOLIDAYS
@@ -53,9 +68,19 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX KHOLIDAYS
 
 ########### Find packages ###########
 set(REQUIRED_QT_VERSION 6.9.0)
-find_package(Qt6 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Core Qml)
+find_package(
+    Qt6
+    ${REQUIRED_QT_VERSION}
+    CONFIG
+    REQUIRED
+        Core
+        Qml
+)
 
-remove_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII)
+remove_definitions(
+    -DQT_NO_CAST_FROM_ASCII
+    -DQT_NO_CAST_TO_ASCII
+)
 ecm_set_disabled_deprecation_versions(
     QT 6.11
 )
@@ -64,7 +89,7 @@ ecm_set_disabled_deprecation_versions(
 add_subdirectory(src)
 
 if(BUILD_TESTING)
-  add_subdirectory(autotests)
+    add_subdirectory(autotests)
 endif()
 
 ecm_install_po_files_as_qm(poqm)
@@ -73,24 +98,27 @@ ecm_install_po_files_as_qm(poqm)
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF6Holidays")
 
 configure_package_config_file(
-  "${CMAKE_CURRENT_SOURCE_DIR}/KF6HolidaysConfig.cmake.in"
-  "${CMAKE_CURRENT_BINARY_DIR}/KF6HolidaysConfig.cmake"
-  INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR}
+    "${CMAKE_CURRENT_SOURCE_DIR}/KF6HolidaysConfig.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/KF6HolidaysConfig.cmake"
+    INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR}
 )
 
-install(FILES
-  "${CMAKE_CURRENT_BINARY_DIR}/KF6HolidaysConfig.cmake"
-  "${CMAKE_CURRENT_BINARY_DIR}/KF6HolidaysConfigVersion.cmake"
-  DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-  COMPONENT Devel
+install(
+    FILES
+        "${CMAKE_CURRENT_BINARY_DIR}/KF6HolidaysConfig.cmake"
+        "${CMAKE_CURRENT_BINARY_DIR}/KF6HolidaysConfigVersion.cmake"
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+    COMPONENT Devel
 )
 
-install(EXPORT KF6HolidaysTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF6HolidaysTargets.cmake NAMESPACE KF6::)
-
-install(FILES
-  ${kholidays_version_header}
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KHolidays COMPONENT Devel
+install(
+    EXPORT KF6HolidaysTargets
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+    FILE KF6HolidaysTargets.cmake
+    NAMESPACE KF6::
 )
+
+install(FILES ${kholidays_version_header} DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KHolidays COMPONENT Devel)
 
 include(ECMFeatureSummary)
 ecm_feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)

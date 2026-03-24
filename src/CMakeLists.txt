@@ -2,44 +2,44 @@ add_library(KF6Holidays)
 add_library(KF6::Holidays ALIAS KF6Holidays)
 
 set_target_properties(
-  KF6Holidays
-  PROPERTIES
-    VERSION
-      ${KHOLIDAYS_VERSION}
-    SOVERSION
-      ${KHOLIDAYS_SOVERSION}
-    EXPORT_NAME
-      Holidays
+    KF6Holidays
+    PROPERTIES
+        VERSION
+            ${KHOLIDAYS_VERSION}
+        SOVERSION
+            ${KHOLIDAYS_SOVERSION}
+        EXPORT_NAME
+            Holidays
 )
 
 target_sources(
-  KF6Holidays
-  PRIVATE
-    astroseasons.cpp
-    astroseasons.h
-    holiday.cpp
-    holiday.h
-    holiday_p.h
-    holidayregion.cpp
-    holidayregion.h
-    lunarphase.cpp
-    lunarphase.h
-    parsers/holidayparserdriver.cpp
-    parsers/holidayparserdriver_p.h
-    parsers/plan2/FlexLexer.h
-    parsers/plan2/holidayparserdriverplan.cpp
-    parsers/plan2/holidayparserdriverplan_p.h
-    parsers/plan2/holidayscannerplan_p.h
-    parsers/qcalendarsystem.cpp
-    parsers/qcalendarsystem_p.h
-    sunevents_p.h
-    sunevents.cpp
-    sunevents.h
-    sunriseset.cpp
-    sunriseset.h
-    zodiac.cpp
-    zodiac.h
-    ../holidays/holidays.qrc
+    KF6Holidays
+    PRIVATE
+        astroseasons.cpp
+        astroseasons.h
+        holiday.cpp
+        holiday.h
+        holiday_p.h
+        holidayregion.cpp
+        holidayregion.h
+        lunarphase.cpp
+        lunarphase.h
+        parsers/holidayparserdriver.cpp
+        parsers/holidayparserdriver_p.h
+        parsers/plan2/FlexLexer.h
+        parsers/plan2/holidayparserdriverplan.cpp
+        parsers/plan2/holidayparserdriverplan_p.h
+        parsers/plan2/holidayscannerplan_p.h
+        parsers/qcalendarsystem.cpp
+        parsers/qcalendarsystem_p.h
+        sunevents_p.h
+        sunevents.cpp
+        sunevents.h
+        sunriseset.cpp
+        sunriseset.h
+        zodiac.cpp
+        zodiac.h
+        ../holidays/holidays.qrc
 )
 bison_target(
     KF6HolidaysParser
@@ -53,14 +53,14 @@ flex_target(
     COMPILE_FLAGS "-i -B"
 )
 add_flex_bison_dependency(
-  KF6HolidaysLexer
-  KF6HolidaysParser
+    KF6HolidaysLexer
+    KF6HolidaysParser
 )
 target_sources(
     KF6Holidays
     PRIVATE
-    ${BISON_KF6HolidaysParser_OUTPUTS}
-    ${FLEX_KF6HolidaysLexer_OUTPUTS}
+        ${BISON_KF6HolidaysParser_OUTPUTS}
+        ${FLEX_KF6HolidaysLexer_OUTPUTS}
 )
 
 ecm_create_qm_loader(KF6Holidays libkholidays6_qt)
@@ -106,18 +106,18 @@ install(TARGETS KF6Holidays EXPORT KF6HolidaysTargets ${KF_INSTALL_TARGETS_DEFAU
 
 ########### install files ###############
 install(
-  FILES
-    ${CMAKE_CURRENT_BINARY_DIR}/kholidays_export.h
-    ${KHolidays_HEADERS}
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KHolidays/kholidays
-  COMPONENT Devel
+    FILES
+        ${CMAKE_CURRENT_BINARY_DIR}/kholidays_export.h
+        ${KHolidays_HEADERS}
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KHolidays/kholidays
+    COMPONENT Devel
 )
 
 install(
-  FILES
-    ${KHolidays_CamelCase_HEADERS}
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KHolidays/KHolidays
-  COMPONENT Devel
+    FILES
+        ${KHolidays_CamelCase_HEADERS}
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KHolidays/KHolidays
+    COMPONENT Devel
 )
 
 add_subdirectory(declarative)
