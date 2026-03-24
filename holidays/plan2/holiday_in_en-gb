@@ -14,7 +14,7 @@
 ::           The future dates have been taken from multiple sources, which may vary from
 ::           the official dates, when announced, and changes may have to be made for the same.
 ::           The reader is requested to contribute to expand the list and accuracy,
-::           request to the kde developers to add support for hindu calendar. If possible attempt can 
+::           request to the kde developers to add support for hindu calendar. If possible attempt can
 ::           be made to define dates as per hebrew calendar
 ::           submitted via bug report on https://bugs.kde.org/show_bug.cgi?id=392503
 
@@ -35,7 +35,7 @@ description "National holiday file for India"
 
 "Christmas"                   public religious on december 25
 
-"Maha Shivratri"              public religious on february 13 2018  
+"Maha Shivratri"              public religious on february 13 2018
 "Maha Shivratri"              public religious on march 4 2019
 "Maha Shivratri"              public religious on february 21 2020
 "Maha Shivratri"              public religious on march 11 2021

@@ -1,4 +1,4 @@
- 
+
 ::
 :: Country:  Indonesia
 ::
@@ -143,7 +143,7 @@ description "File Hari Libur Nasional Indonesia"
 "Hari Kartini"                           civil on april 21
 : Earth day
 "Hari Bumi"                              civil on april 22
-: Labor day 
+: Labor day
 "Hari Buruh"                             civil on may 1
 : National Education Day
 "Hari Pendidikan Nasional"               civil on may 2
@@ -167,15 +167,15 @@ description "File Hari Libur Nasional Indonesia"
 "Hari Olahraga Nasional"                 civil on september 9
 : Pancasila Sanctity Day
 "Hari Kesaktian Pancasila"               civil on october 1
-: Batik Day 
+: Batik Day
 "Hari Batik"                             civil on october 2
 : Indonesian National Armed Forces Day
 "Hari Tentara Nasional Indonesia"        civil on october 5
-: Youth Pledge Day 
+: Youth Pledge Day
 "Hari Sumpah Pemuda"                     civil on october 28
-: Civil Servant Corps Day 
+: Civil Servant Corps Day
 "Hari Korps Pegawai Republik Indonesia"  civil on october 29
-: Heroes' Day 
+: Heroes' Day
 "Hari Pahlawan"                          civil on november 10
 : Teacher's Day
 "Hari Guru"                              civil on november 25
@@ -183,7 +183,7 @@ description "File Hari Libur Nasional Indonesia"
 "Hari AIDS Sedunia"                      civil on december 1
 : National Social Solidarity Day
 "Hari Kesetiakawanan Sosial Nasional"    civil on december 20
-: Mother's Day 
+: Mother's Day
 "Hari Ibu"                               civil on december 22
 
 
@@ -200,4 +200,3 @@ description "File Hari Libur Nasional Indonesia"
 "Cuti Bersama Tahun Baru Hijriyah"       public on december 24 2012
 : Joint leave for 2013 New Year's Day
 "Cuti bersama Tahun Baru 2013"           public on december 31 2012
-

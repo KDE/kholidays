@@ -1,4 +1,4 @@
- 
+
 ::
 :: Country:  Indonesia
 ::
@@ -165,7 +165,7 @@ description "National Holiday file for Indonesia"
 "National Sports Day"                    civil on september 9
 : Hari Kesaktian Pancasila
 "Pancasila Sanctity Day"                 civil on october 1
-: Hari Batik 
+: Hari Batik
 "Batik Day"                              civil on october 2
 : Hari Tentara Nasional Indonesia
 "Indonesian National Armed Forces Day"   civil on october 5
@@ -199,6 +199,3 @@ description "National Holiday file for Indonesia"
 "Joint leave for Christmas"              public on december 24 2012
 : Cuti bersama Tahun Baru 2013
 "Joint leave for 2013 New Year's Day"    public on december 31 2012
-
-
-

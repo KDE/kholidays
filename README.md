@@ -17,5 +17,3 @@ special events for a geographical region.
 ```
 * Look for lines containing "syntax error" in foo.txt.
 * Fix any such syntax errors and then you can commit.
-
-

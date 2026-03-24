@@ -36,7 +36,7 @@ description "Các ngày lễ ở Việt Nam"
 "Ngày Quốc tế Lao động (ngày lễ bổ sung)"             public on ( (year >= 2000 && [may 1] == [sunday after ([may 1])]) ?
                                                                    [monday after ([may 1])] :
                                                                    noop )
-                                                                   
+
 : Independence Day (or if that day is a Sunday, then the following day)
 "Quốc khánh"                                          public on ( (year >= 2000) ? [september 2] : noop )
 "Quốc khánh (ngày lễ bổ sung)"                        public on ( (year >= 2000 && [september 2] == [sunday after ([september 2])]) ?

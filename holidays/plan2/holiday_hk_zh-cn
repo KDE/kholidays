@@ -40,13 +40,13 @@ description "香港公眾假期"
 "勞動節補假"                public on ( (year >= 1999 && [may 1] == [sunday after ([may 1])]) ?
                                                                    [monday after ([may 1])] :
                                                                    noop )
-                                                                   
+
 : 香港特別行政區成立紀念日（如該日為星期日，則為翌日）
 "香港特別行政區成立紀念日"                     public on july 1
 "香港特別行政區成立紀念日補假"        public on ( ( [july 1] == [sunday after ([july 1])]) ?
                                                                    [monday after ([july 1])] :
                                                                    noop )
-                                                                   
+
 : 國慶日（如該日為星期日，則為翌日）
 "國慶日"                                        public on october 1
 "國慶日補假"              public on ( ( [october 1] == [sunday after ([october 1])]) ?

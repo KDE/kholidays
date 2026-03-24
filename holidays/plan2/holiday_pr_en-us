@@ -4,7 +4,7 @@
 :: Language: US English
 ::
 :: Author:   Tatiana de la Cruz Monserrate <tatic90@gmail.com>
-::           
+::
 ::
 :: Updated: October 5, 2025
 ::
@@ -65,5 +65,3 @@ description "National holiday file for Puerto Rico"
 "Grito de Lares"                 school on september 23
 
 :: Daylight Saving
-
-

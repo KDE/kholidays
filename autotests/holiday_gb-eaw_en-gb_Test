@@ -49,4 +49,3 @@ description "A test file for multiple calendar systems"
 
 "Fête des mères"                civil ( ( [last sunday in may] == ([easter] + 49 days) ) ? [first sunday in june] : [last sunday in may] )
 "Vendredi saint"                religious on friday before ([easter])
-

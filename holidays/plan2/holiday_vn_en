@@ -36,7 +36,7 @@ description "Public Holidays in Viet Nam"
 "Supplementary holiday for International Workers' Day"             public on ( (year >= 2000 && [may 1] == [sunday after ([may 1])]) ?
                                                                    [monday after ([may 1])] :
                                                                    noop )
-                                                                   
+
 : Independence Day (or if that day is a Sunday, then the following day)
 "Independence Day"                                    public on ( (year >= 2000) ? [september 2] : noop )
 "Supplementary holiday for Independence Day"          public on ( (year >= 2000 && [september 2] == [sunday after ([september 2])]) ?

@@ -40,13 +40,13 @@ description "Public Holidays for Hong Kong"
 "Supplementary holiday for Labour Day"                public on ( (year >= 1999 && [may 1] == [sunday after ([may 1])]) ?
                                                                    [monday after ([may 1])] :
                                                                    noop )
-                                                                   
+
 : Hong Kong SAR Establishment Day (or if that day is a Sunday, then the following day)
 "Hong Kong SAR Establishment Day"                     public on july 1
 "Supplementary holiday for Hong Kong SAR Establishment Day"        public on ( ( [july 1] == [sunday after ([july 1])]) ?
                                                                    [monday after ([july 1])] :
                                                                    noop )
-                                                                   
+
 : National Day (or if that day is a Sunday, then the following day)
 "National Day"                                        public on october 1
 "Supplementary holiday for National Day"              public on ( ( [october 1] == [sunday after ([october 1])]) ?

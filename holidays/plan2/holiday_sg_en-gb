@@ -11,7 +11,7 @@
 ::
 :: Source:   http://www.mom.gov.sg/employment-practices/employment-rights-conditions/leave-and-holiday/Pages/PublicHolidays2012.aspx
 ::           http://www.mom.gov.sg/employment-practices/employment-rights-conditions/leave-and-holiday/pages/publicholidays2013.aspx
-::           http://www.officeholidays.com/countries/singapore/2014.html     
+::           http://www.officeholidays.com/countries/singapore/2014.html
 ::           https://www.mom.gov.sg/employment-practices/public-holidays#Year-2024
 ::           https://www.moe.gov.sg/news/press-releases/20230807-school-terms-and-holidays-for-2024
 ::           https://publicholidays.sg/2025-dates/ (estimated)
@@ -88,4 +88,3 @@ description "National holiday file for Singapore"
 
 :: Name Days
 "SAF Day"                        nameday on july 1
-

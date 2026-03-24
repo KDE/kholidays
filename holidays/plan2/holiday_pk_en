@@ -25,7 +25,7 @@ description "Holidays for the Islamic Republic of Pakistan"
 "Quaid-e-Azam Day"    public on december 25
 
 
-:: Religious    
+:: Religious
 "Ashura"                religious on hijri muharram 10
 "Eid Milad un Nabi"     public religious on hijri rabialawal 12
 "Eid ul Fitr"           public religious on hijri shawwal 1 length 3 days

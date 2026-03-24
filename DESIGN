@@ -21,7 +21,7 @@ II. Goals
    We hope that the new kholidays library will:
 
    A. allow KOrganizer to replace the holidays plugin with a KOCore
-      implementation that links to the kholidays library.  
+      implementation that links to the kholidays library.
 
    B. allow KOrganizer to support the holidays of many religions (through
       plugins if desired)
@@ -35,7 +35,7 @@ II. Goals
 III. Definitions
 
    Holiday: any day that may have special significance to a fairly large
-       number of people.  A "holy day" can be a holiday, a "day-off" for 
+       number of people.  A "holy day" can be a holiday, a "day-off" for
        all public employees can be a holiday.  Also, the remembrance of an
        historical event can be a holiday.
 
@@ -53,7 +53,7 @@ III. Definitions
 
    Religious Holiday: a special day in a religion and not bounded to any
         political region.  Religions can have holidays that range in
-        devotion to those were work/school are forbidden, days of 
+        devotion to those were work/school are forbidden, days of
         prayer obligation, to historical remembrances, etc.
         Governments often have public holidays for some religious holidays.
 
@@ -74,7 +74,7 @@ III. Definitions
         a first name and persons with that name celebrate that day as their
         "Name Day".  We will require Name Days to be bounded to a political
         region.
- 
+
    Noteworthy Event: a day of interest.  eg. Daylight Savings Time Start/Stop,
         Election Day, ...
 
@@ -131,7 +131,7 @@ IV. Requirements
      particularly applies to religious holidays in calendar systems where the
      number of months and days in  months can vary more than in Gregorian. ]
 
-   * Be able to specify holidays with compound dates; i.e, be able to 
+   * Be able to specify holidays with compound dates; i.e, be able to
      combine specifications.  For example: "First Monday after May 1"
 
    * Support lunar phases for the new moon, first quarter moon,
@@ -178,7 +178,7 @@ IV. Requirements
      the governments have religious, public holidays.  A religious holiday
      that is also a public, work/school day-off should be specified in
      government (political) holiday files.
- 
+
    * Be able to activate more than one region/locale at a time and more
      than one religion at a time.
 
@@ -239,7 +239,7 @@ V. Functionality
       *
 
    B. A KGetNewStuff mechanism will be implemented so that holiday files
-      can be donated to the project and installed by using this common 
+      can be donated to the project and installed by using this common
       PIM mechanism.
 
 
@@ -312,10 +312,10 @@ Religions: Catholic, Greek Orthodox, Jewish, Islam, Protestants,...
 Other special dates of interest:
  + start/end daylight savings time
  + election day
- + 
+ +
 
 See Reinhold's XML DTD (holiday.dtd)
-[Reinhold: I didn't check the DTD at all, so it might be completely wrong 
+[Reinhold: I didn't check the DTD at all, so it might be completely wrong
  or breaks with all XML specs or whatever. Basically, currently it's meant
  only to develop a nice structure of the files, not for real use in code yet.]
 
