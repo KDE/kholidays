@@ -57,8 +57,8 @@ static double earthOrbitEccentricity(double jcent)
 static double equationOfCenter(double jcent)
 {
     const double anomaly = sunGeometricMeanAnomaly(jcent);
-    return qDegreesToRadians(std::sin(anomaly) * (1.914602 - jcent * (0.004817 + 0.000014 * jcent))
-                             + std::sin(2 * anomaly) * (0.019993 - 0.000101 * jcent) + std::sin(3 * anomaly) * 0.000289);
+    return qDegreesToRadians(std::sin(anomaly) * (1.914602 - jcent * (0.004817 + 0.000014 * jcent)) + std::sin(2 * anomaly) * (0.019993 - 0.000101 * jcent)
+                             + std::sin(3 * anomaly) * 0.000289);
 }
 
 static double sunTrueLongitude(double jcent)
@@ -96,10 +96,8 @@ static double equationOfTime(double jcent)
     const double meanAnomaly = sunGeometricMeanAnomaly(jcent);
     const double varY = std::pow(std::tan(obliquityCorrection(jcent) / 2), 2);
 
-    return varY * std::sin(2 * meanLongitude)
-        - 2 * eccentricity * std::sin(meanAnomaly)
-        + 4 * eccentricity * varY * std::sin(meanAnomaly) * std::cos(2 * meanLongitude)
-        - 0.5 * varY * varY * std::sin(4 * meanLongitude)
+    return varY * std::sin(2 * meanLongitude) - 2 * eccentricity * std::sin(meanAnomaly)
+        + 4 * eccentricity * varY * std::sin(meanAnomaly) * std::cos(2 * meanLongitude) - 0.5 * varY * varY * std::sin(4 * meanLongitude)
         - 1.25 * eccentricity * eccentricity * std::sin(2 * meanAnomaly);
 }
 

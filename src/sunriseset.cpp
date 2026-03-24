@@ -28,7 +28,7 @@ static QTime roundToMinute(const QTime &time)
     }
 }
 
-template <typename Event>
+template<typename Event>
 static QTime timeOfEvent(const QDate &date, double latitude, double longitude, Event event)
 {
     const QDateTime referenceDateTime(date, QTime(12, 0), QTimeZone::utc());

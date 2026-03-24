@@ -25,7 +25,11 @@ public:
         NameRole,
         DescriptionRole,
     };
-    enum Columns { RegionColumn, NameColumn, DescriptionColumn };
+    enum Columns {
+        RegionColumn,
+        NameColumn,
+        DescriptionColumn
+    };
     explicit HolidayRegionsDeclarativeModel(QObject *parent = nullptr);
     ~HolidayRegionsDeclarativeModel() override;
 
