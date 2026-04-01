@@ -1,105 +1,167 @@
 ::
-:: 國家：中華民國（臺灣）
+:: Country:  Taiwan
 ::
-:: 語言：中文
+:: Language: Traditional Chinese
 ::
-:: 作者：Ricky Lindén <pm@rickylinden.com>
+:: Authors:  Ricky Lindén <pm@rickylinden.com>
+::           kuanyui <azazabc123@gmail.com>
 ::
-:: 更新日期：2022-01-17
+:: Updated:  2026-03-24
 ::
-:: 來源：https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020033
+:: Sources:  https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020033
+::           https://www.asiaa.sinica.edu.tw/guide/holiday_c.php
+::           https://www.dgpa.gov.tw/information?uid=41&pid=12573
 ::
 
-:: 元資料
+:: Metadata
 country      "TW"
 language     "zh_TW"
-:name         "可選 - 預設為國家名"
-description  "中華民國（臺灣）紀念日及節日"
+:name        "optional - defaults to country name"
+description  "臺灣（中華民國）紀念日及節日"
 
-:: 應放假之紀念日及節日
+:: ======================================================================
+:: Holidays (Solar Calendar)
+:: 應放假之紀念日及節日（國曆）
+:: ======================================================================
 
-: Republic Day/New Year's Day
-"中華民國開國紀念日"                public commemorative on January 1
-
-: Peace Memorial Day
+"中華民國開國紀念日（元旦）"        public commemorative on January 1
 "和平紀念日"                        public commemorative on ((year >= 1997) ? [February 28] : noop)
-
-: Children's Day
-"兒童節"                            public on ((year >= 2011) ? [April 4] : noop)
-
-: National Day
+"兒童節"                            public commemorative on ((year >= 2011) ? [April 4] : noop)
 "國慶日"                            public commemorative on October 10
 
-:: 應放假之紀念日及節日（以農曆為基礎）
+:: -----------
+:: [Status Changed] According to 2025/05/28 「紀念日及節日實施條例」, these commemorative days becomes public:
+"孔子誕辰紀念日（教師節）"          commemorative on ((year < 2025) ? [September 28] : noop)
+"臺灣光復節"                        commemorative on ((year < 2025) ? [October 25] : noop)
+"行憲紀念日"                        commemorative on ((year < 2025) ? [December 25] : noop)
+"勞動節"                            commemorative on ((year < 2025) ? [May 1] : noop)
 
-: Chinese New Year's Eve
+"孔子誕辰紀念日（教師節）"          public commemorative on ((year >= 2025) ? [September 28] : noop)
+"臺灣光復節"                        public commemorative on ((year >= 2025) ? [October 25] : noop)
+"行憲紀念日"                        public commemorative on ((year >= 2025) ? [December 25] : noop)
+"勞動節"                            public commemorative on ((year >= 2025) ? [May 1] : noop)
+:: -----------
+
+:: ======================================================================
+:: Substitute Holidays (Solar Calendar)
+:: 補假（國曆）
+:: ======================================================================
+
+::: 2020
+"兒童節（補假）"                    public on 3 April 2020
+"民族掃墓節（補假）"                public on 2 April 2020
+
+::: 2021
+"和平紀念日（補假）"                public on 1 March 2021
+"兒童節（補假）"                    public on 2 April 2021
+"民族掃墓節（補假）"                public on 5 April 2021
+"國慶日（補假）"                    public on 11 October 2021
+"中華民國開國紀念日（補假）"        public on 31 December 2021
+
+::: 2026
+"和平紀念日 (補假)"                 public on 27 February 2026
+"兒童節 (補假)"                     public on 3 April 2026
+"國慶日 (補假)"                     public on 9 October 2026
+"臺灣光復節 (補假)"                 public on 26 October 2026
+
+:: ======================================================================
+:: Holidays + Substitute Holiday (Lunar Calendar. As Lunar dates shift every year, group their substitute holidays together for easier maintenance)
+:: 應放假之紀念日及節日 + 補假（由於以農曆為基礎，每年不固定，為了維護方便故將其對應的補假列在一起）
+:: ======================================================================
+
+::: 2020
 "農曆除夕"                          public cultural on 24 January 2020
-: Spring Festival
 "春節"                              public cultural on 25 January 2020 length 5 days
-: Tomb Sweeping Day
 "民族掃墓節"                        public cultural on 4 April 2020
-: Dragon Boat Festival
 "端午節"                            public cultural on 25 June 2020
-: Mid-Autumn Festival
 "中秋節"                            public cultural on 1 October 2020
 
+::: 2021
 "農曆除夕"                          public cultural on 11 February 2021
 "春節"                              public cultural on 12 February 2021 length 5 days
 "民族掃墓節"                        public cultural on 4 April 2021
 "端午節"                            public cultural on 14 June 2021
 "中秋節"                            public cultural on 21 September 2021
 
+::: 2022
 "農曆除夕"                          public cultural on 31 January 2022
 "春節"                              public cultural on 1 February 2022 length 3 days
 "民族掃墓節"                        public cultural on 5 April 2022
 "端午節"                            public cultural on 3 June 2022
 "中秋節"                            public cultural on 10 September 2022
+"中秋節（補假）"                    public cultural on 9 September 2022
 
-:: Substitute holidays
-:: 補假
+::: 2026
+"小年夜"                            public cultural on 15 February 2026
+"農曆除夕"                          public cultural on 16 February 2026
+"春節"                              public cultural on 17 February 2026 length 4 days
+"民族掃墓節"                        public cultural on 5 April 2026
+"民族掃墓節（補假）"                public cultural on 6 April 2026
+"端午節"                            public cultural on 19 June 2026
+"中秋節"                            public cultural on 25 September 2026
 
-"兒童節補假"                        public on 3 April 2020
-"民族掃墓節補假"                    public on 2 April 2020
 
-"和平紀念日補假"                    public on 1 March 2021
-"兒童節補假"                        public on 2 April 2021
-"民族掃墓節補假"                    public on 5 April 2021
-"國慶日補假"                        public on 11 October 2021
-"中華民國開國紀念日補假"            public on 31 December 2021
+:: ======================================================================
+:: Other Observances or Awareness Days / Sector-specific Holidays
+:: 其他完全不放假、或部份群體放假的紀念日
+:: ======================================================================
 
-"中秋節補假"                        public cultural on 9 September 2022
-
-:: 其他紀念日
+:: ------------------------
+:: 歷史政治相關
+:: ------------------------
 
 "國父逝世紀念日"                    commemorative on March 12
-"植樹節"                            commemorative on March 12
 "反侵略日"                          commemorative on ((year >= 2006) ? [March 14] : noop)
 "革命先烈紀念日"                    commemorative on March 29
 "解嚴紀念日"                        commemorative on ((year >= 2007) ? [July 15] : noop)
-"孔子誕辰紀念日"                    commemorative on September 28
-"臺灣聯合國日"                      commemorative on October 24
-"國父誕辰紀念日"                    commemorative on November 12
-"行憲紀念日"                        commemorative on December 25
+"臺灣聯合國日"                      commemorative on 24 October
+"國父誕辰紀念日"                    commemorative on 12 November
+"中華文化復興節"                    commemorative on 12 November
 
+:: ------------------------
+:: 家族相關
+:: ------------------------
+
+"母親節"                            cultural on second Sunday in May
+"父親節"                            cultural on 8 August
+"祖父母節"                          cultural on fourth Sunday in August
+
+:: ------------------------
+:: 其他
+:: ------------------------
+
+"消防節"                            commemorative on 19 January
+"國際婦女節"                        commemorative on 8 March
+"植樹節"                            commemorative on 12 March
+"青年節"                            commemorative on 29 March
+"國際醫師節"                        commemorative on 30 March
+"國際護理師節"                      commemorative on 12 May
+"警察節"                            commemorative on 15 June
+"漁民節"                            commemorative on 1 July
+"軍人節"                            commemorative on 3 September
+"教師節"                            commemorative on 28 September
+"海巡節"                            commemorative on 8 November
+"國際身心障礙者日"                  commemorative on 3 December
+"國際人權日"                        commemorative on 10 December
+
+:: ======================================================================
+:: Religious
+:: 宗教節日（目前皆為農曆）
+:: ======================================================================
+
+:: 佛誕：農曆四月八日
 "佛陀誕辰紀念日"                    commemorative religious on 30 April 2020
 "佛陀誕辰紀念日"                    commemorative religious on 19 May 2021
 "佛陀誕辰紀念日"                    commemorative religious on 8 May 2022
 
-:: 其他節日
+:: 道教節：農曆一月一日
+"道教節"                            commemorative religious on 25 January 2020
+"道教節"                            commemorative religious on 12 February 2021
+"道教節"                            commemorative religious on 1 February 2022
 
-"婦女節"                            commemorative on March 8
-"青年節"                            commemorative on March 29
-"勞動節"                            commemorative on May 1
-"軍人節"                            commemorative on September 3
-"教師節"                            commemorative on September 28
-"臺灣光復節"                        commemorative on October 25
-"中華文化復興節"                    commemorative on November 12
-
-"道教節"                            commemorative on 25 January 2020
-"道教節"                            commemorative on 12 February 2021
-"道教節"                            commemorative on 1 February 2022
-
-:: Historical
-:: 已廢除假期
+:: ======================================================================
+:: Historical / Deprecated
+:: 已廢除的歷史上的假期
+:: ======================================================================
 
 "婦女節、兒童節合併假期"            public on ((year >= 1991) && (year <= 1997) ? [April 4] : noop)
