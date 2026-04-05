@@ -5,7 +5,7 @@
 ::
 :: Author:   Petar Margetić <pmargeti34@gmail.com>
 ::
-:: Updated:  2025-01-11
+:: Updated:  2026-04-05
 ::
 :: Source:   Official Gazette of the Republic of the Philippines
 ::           Nationwide Holidays
@@ -31,9 +31,9 @@ description "National holiday file for Philippines"
 
 :: Religious Holidays
 "Feast of Ramadhan"                                                religious on april 1
-"Maundy Thursday"                                                  religious on april 2
-"Good Friday"                                                      religious on april 3
-"Black Saturday"                                                   religious on april 4
+"Maundy Thursday"                                                  religious on easter minus 3
+"Good Friday"                                                      religious on easter minus 2
+"Black Saturday"                                                   religious on easter minus 1
 "All Souls' Day"                                                   religious on november 2
 "Feast of Immaculate Conception of Mary"                           religious on december 8
 "Christmas Eve"                                                    religious on december 24
