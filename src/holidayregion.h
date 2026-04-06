@@ -191,11 +191,25 @@ public:
     static QString description(const QString &regionCode);
 
     /*!
+     * \since 6.26
+     *
+     * Sets a list of categories to filter the types of holidays that are returned.
+     */
+    void setCategories(const QStringList &categories);
+
+    /*!
+     * \since 6.26
+     *
+     * Returns the current categories filter list.
+     */
+    [[nodiscard]] QStringList categories() const;
+
+    /*!
      * \since 5.95
      *
      * Returns the list of holidays and astronomical season dates (equinoxes
      * and solstices) that occur between \a startDate and \a endDate.
-     *
+     * The category filter is applied if one is set.
      */
     Holiday::List rawHolidaysWithAstroSeasons(const QDate &startDate, const QDate &endDate) const;
 
@@ -203,6 +217,7 @@ public:
      * \since 5.97
      *
      * Returns the list of holidays that occur between \a startDate and \a endDate.
+     * The category filter is applied if one is set.
      */
     Holiday::List rawHolidays(const QDate &startDate, const QDate &endDate) const;
 
@@ -211,6 +226,7 @@ public:
      *
      * Returns the list of holidays and astronomical season dates (equinoxes
      * and solstices) that occur on a \a date.
+     * The category filter is applied if one is set.
      */
     Holiday::List rawHolidaysWithAstroSeasons(const QDate &date) const;
 
@@ -219,18 +235,24 @@ public:
      *
      * Returns the list of holidays and astronomical season dates (equinoxes
      * and solstices) that occur in a Gregorian calendar year \a calendarYear.
+     * The category filter is applied if one is set.
      */
     Holiday::List rawHolidaysWithAstroSeasons(int calendarYear) const;
 
+#if KHOLIDAYS_ENABLE_DEPRECATED_SINCE(6, 26)
     /*!
      * \since 5.95
      *
      * Returns the list of holidays that occur between \a startDate and \a endDate and with \a category.
+     * The category filter is ignored. Only the specified category is considered for filtering.
      */
+    KHOLIDAYS_DEPRECATED_VERSION(6, 26, "use rawHolidays(start, end) with a category filter instead")
     Holiday::List rawHolidays(const QDate &startDate, const QDate &endDate, const QString &category) const;
+#endif
 
     /*!
      * Checks whether there is any holiday defined for a \a date.
+     * The category filter is applied if one is set.
      */
     bool isHoliday(const QDate &date) const;
 

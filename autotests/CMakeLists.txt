@@ -94,3 +94,18 @@ target_link_libraries(
     KF6Holidays
     Qt6::Test
 )
+
+########### next target ###############
+
+add_executable(
+    testcategories
+    testcategories.cpp
+    testcategories.h
+)
+add_test(NAME testcategories COMMAND testcategories)
+ecm_mark_as_test(testcategories)
+target_link_libraries(
+    testcategories
+    KF6Holidays
+    Qt6::Test
+)

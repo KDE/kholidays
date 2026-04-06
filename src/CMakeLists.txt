@@ -20,6 +20,8 @@ target_sources(
         holiday.cpp
         holiday.h
         holiday_p.h
+        holidaycategories.cpp
+        holidaycategories.h
         holidayregion.cpp
         holidayregion.h
         lunarphase.cpp
@@ -79,7 +81,7 @@ ecm_generate_export_header(KF6Holidays
     BASE_NAME KHolidays
     GROUP_BASE_NAME KF
     DEPRECATED_BASE_VERSION 0
-    DEPRECATION_VERSIONS 6.15
+    DEPRECATION_VERSIONS 6.15 6.26
     EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
 )
 
@@ -93,6 +95,7 @@ ecm_generate_headers(KHolidays_CamelCase_HEADERS
   HEADER_NAMES
   AstroSeasons
   Holiday
+  HolidayCategories
   HolidayRegion
   LunarPhase
   SunEvents

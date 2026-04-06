@@ -2,6 +2,7 @@
     This file is part of the kholidays library.
 
     SPDX-FileCopyrightText: 2010 John Layt <john@layt.net>
+    SPDX-FileCopyrightText: Allen Winter <winter@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -31,15 +32,17 @@ private Q_SLOTS:
     void testLoadFileCalendarSystemsForPlasma();
     void testDominicanRepublicDiadelaConstitucion();
     void testUsAmericanJuneteenth();
+    void testCategoryFiltering();
 
 private:
     void printMetadata(const KHolidays::HolidayRegion &region);
     void printHolidays(const KHolidays::Holiday::List &holidays);
+    bool holidayListContains(const KHolidays::Holiday::List &holidays, const QString &holidayName);
     void parseRegionCalendarYear(const KHolidays::HolidayRegion &region, int year, const QString &calendarType = "gregorian");
     void parseRegionDateRange(const KHolidays::HolidayRegion &region, const QDate &startDate, const QDate &endDate);
     void parseRawRegionDateRange(const KHolidays::HolidayRegion &region, const QDate &startDate, const QDate &endDate);
     void parseRegionDate(const KHolidays::HolidayRegion &region, const QDate &date);
-    void parseRegionDateRangeCategory(const KHolidays::HolidayRegion &region, const QDate &startDate, const QDate &endDate, const QString &category);
+    void parseRegionDateRangeCategory(KHolidays::HolidayRegion &region, const QDate &startDate, const QDate &endDate, const QString &category);
 };
 
 #endif // TESTHOLIDAYREGION_H

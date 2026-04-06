@@ -109,9 +109,27 @@ public:
         }
     }
 
+    Holiday::List filterCategories(KHolidays::Holiday::List &&list) const
+    {
+        if (mCategories.isEmpty()) {
+            return list;
+        }
+
+        list.erase(std::remove_if(list.begin(),
+                                  list.end(),
+                                  [this](const auto &h) {
+                                      return std::ranges::none_of(mCategories, [h](const QString &category) {
+                                          return h.categoryList().contains(category);
+                                      });
+                                  }),
+                   list.end());
+        return list;
+    }
+
     HolidayParserDriver *mDriver; // The parser driver for the holiday file
     QString mRegionCode; // region code of holiday region
     QFileInfo mHolidayFile; // file containing holiday data, or null
+    QStringList mCategories; // filter on these categories, if empty then use all categories
 };
 }
 
@@ -131,6 +149,16 @@ HolidayRegion::~HolidayRegion() = default;
 
 HolidayRegion &HolidayRegion::operator=(const HolidayRegion &) = default;
 HolidayRegion &HolidayRegion::operator=(HolidayRegion &&) = default;
+
+void HolidayRegion::setCategories(const QStringList &categories)
+{
+    d->mCategories = categories;
+}
+
+QStringList HolidayRegion::categories() const
+{
+    return d->mCategories;
+}
 
 QStringList HolidayRegion::regionCodes()
 {
@@ -393,7 +421,7 @@ Holiday::List HolidayRegion::rawHolidays(const QDate &startDate, const QDate &en
 Holiday::List HolidayRegion::rawHolidays(const QDate &startDate, const QDate &endDate) const
 {
     if (isValid()) {
-        return d->mDriver->parseRawHolidays(startDate, endDate);
+        return d->filterCategories(d->mDriver->parseRawHolidays(startDate, endDate));
     } else {
         return Holiday::List();
     }
@@ -402,7 +430,7 @@ Holiday::List HolidayRegion::rawHolidays(const QDate &startDate, const QDate &en
 Holiday::List HolidayRegion::rawHolidaysWithAstroSeasons(const QDate &startDate, const QDate &endDate) const
 {
     if (isValid()) {
-        return d->mDriver->parseHolidays(startDate, endDate);
+        return d->filterCategories(d->mDriver->parseHolidays(startDate, endDate));
     } else {
         return Holiday::List();
     }
@@ -411,7 +439,7 @@ Holiday::List HolidayRegion::rawHolidaysWithAstroSeasons(const QDate &startDate,
 Holiday::List HolidayRegion::rawHolidaysWithAstroSeasons(const QDate &date) const
 {
     if (isValid()) {
-        return d->mDriver->parseHolidays(date);
+        return d->filterCategories(d->mDriver->parseHolidays(date));
     } else {
         return Holiday::List();
     }
@@ -420,7 +448,7 @@ Holiday::List HolidayRegion::rawHolidaysWithAstroSeasons(const QDate &date) cons
 Holiday::List HolidayRegion::rawHolidaysWithAstroSeasons(int calendarYear) const
 {
     if (isValid()) {
-        return d->mDriver->parseHolidays(calendarYear);
+        return d->filterCategories(d->mDriver->parseHolidays(calendarYear));
     } else {
         return Holiday::List();
     }
