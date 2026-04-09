@@ -52,7 +52,8 @@ Holiday::List HolidayParserDriver::parseHolidays(const QDate &startDate, const Q
     m_resultList.clear();
 
     for (const KHolidays::Holiday &holidayCat : m_resultListTemp) {
-        for (const QString &mCategoryList : holidayCat.categoryList()) {
+        const QStringList categories = holidayCat.categoryList();
+        for (const QString &mCategoryList : categories) {
             if (mCategoryList == category) {
                 m_resultList.append(holidayCat);
                 break;
