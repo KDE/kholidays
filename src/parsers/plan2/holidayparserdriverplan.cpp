@@ -474,7 +474,8 @@ void HolidayParserDriverPlan::setFromWeekdayInMonth(int occurrence, int weekday,
         return;
     }
 
-    int startMonth, endMonth;
+    int startMonth;
+    int endMonth;
     if (month == LAST) {
         startMonth = m_parseCalendar.monthsInYear(m_parseYear);
         endMonth = startMonth;
@@ -489,7 +490,8 @@ void HolidayParserDriverPlan::setFromWeekdayInMonth(int occurrence, int weekday,
     // Generate all events in the required event month(s)
     for (int thisMonth = startMonth; thisMonth <= endMonth; ++thisMonth) {
         if (m_parseCalendar.isValid(m_parseYear, thisMonth, 1)) {
-            int startOccurrence, endOccurrence;
+            int startOccurrence;
+            int endOccurrence;
             if (occurrence == ANY) { // Generate 1st through 5th weekdays, assumes no month with > 35 days
                 startOccurrence = 1;
                 endOccurrence = 5;
@@ -532,7 +534,8 @@ void HolidayParserDriverPlan::setFromRelativeWeekday(int occurrence, int weekday
         thisYear = m_eventYear;
     }
 
-    int startMonth, endMonth;
+    int startMonth;
+    int endMonth;
     if (m_eventMonth == LAST) { // Generate just the last month
         startMonth = m_parseCalendar.monthsInYear(thisYear);
         endMonth = startMonth;
@@ -547,7 +550,8 @@ void HolidayParserDriverPlan::setFromRelativeWeekday(int occurrence, int weekday
     // Generate all events in the required month(s)
     int thisMonth;
     for (thisMonth = startMonth; thisMonth <= endMonth; ++thisMonth) {
-        int startDay, endDay;
+        int startDay;
+        int endDay;
         if (m_eventDay == LAST) { // Generate just the last day in the month
             startDay = m_parseCalendar.daysInMonth(thisYear, thisMonth);
             endDay = startDay;
@@ -616,7 +620,8 @@ void HolidayParserDriverPlan::setFromDate(int offset, int condition, int duratio
         thisYear = m_eventYear;
     }
 
-    int startMonth, endMonth;
+    int startMonth;
+    int endMonth;
     if (m_eventMonth == LAST) { // Generate just the last month
         startMonth = m_parseCalendar.monthsInYear(thisYear);
         endMonth = startMonth;
@@ -630,7 +635,8 @@ void HolidayParserDriverPlan::setFromDate(int offset, int condition, int duratio
 
     // Generate all events in the required month(s)
     for (int thisMonth = startMonth; thisMonth <= endMonth; ++thisMonth) {
-        int startDay, endDay;
+        int startDay;
+        int endDay;
         if (m_eventDay == LAST) { // Generate just the last day in the month
             startDay = m_parseCalendar.daysInMonth(thisYear, thisMonth);
             endDay = startDay;
