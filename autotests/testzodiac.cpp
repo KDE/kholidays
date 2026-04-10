@@ -35,8 +35,7 @@ int main(int argc, char **argv)
         if (!pStr.isNull()) {
             cout << qd.toString(Qt::TextDate).toLocal8Bit().constData() << ": " //
                  << pStr.toLocal8Bit().constData() //
-                 << " [" << qPrintable(zd.signSymbol(sign)) << "]" //
-                 << endl;
+                 << " [" << qPrintable(zd.signSymbol(sign)) << "]";
         }
         qd = qd.addDays(1);
     }
@@ -49,8 +48,7 @@ int main(int argc, char **argv)
         if (!pStr.isNull()) {
             cout << qd2.toString(Qt::TextDate).toLocal8Bit().constData() << ": " //
                  << pStr.toLocal8Bit().constData() //
-                 << " [" << qPrintable(zd2.signSymbol(sign)) << "]" //
-                 << endl;
+                 << " [" << qPrintable(zd2.signSymbol(sign)) << "]";
         }
         qd2 = qd2.addDays(1);
     }
