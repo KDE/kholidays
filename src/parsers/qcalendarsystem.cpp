@@ -1109,7 +1109,8 @@ int QCalendarSystem::monthsDifference(const QDate &fromDate, const QDate &toDate
     // Calculate the number of months in full years preceding y2.
     if (y2 == y1) {
         my = 0;
-    } else if (d->hasLeapMonths()) {
+        /* cppcheck-suppress knownConditionTrueFalse */
+    } else if (d->hasLeapMonths()) { /* always false, for now */
         my = 0;
         for (int y = y1; y < y2; y = d->addYears(y, 1)) {
             my = my + monthsInYear(y);
