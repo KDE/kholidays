@@ -160,6 +160,9 @@ private:
     int m_eventDay; // Event date fields
 
     std::string *m_fileToParse = nullptr;
+
+private:
+    Q_DISABLE_COPY_MOVE(HolidayParserDriverPlan);
 };
 
 }
