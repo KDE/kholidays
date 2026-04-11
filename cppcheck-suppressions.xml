@@ -3,4 +3,10 @@
   <suppress>
     <id>useStlAlgorithm</id>
   </suppress>
+  <suppress>
+    <id>shadowFunction</id>
+  </suppress>
+  <suppress>
+    <id>functionStatic</id>
+  </suppress>
 </suppressions>
