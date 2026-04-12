@@ -1,15 +1,15 @@
 # translation of libkholidays.po to
 # Language AR translations for PACKAGE package.
 # Automatically generated, 2007.
+# SPDX-FileCopyrightText: 2022, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 # Youssef Chahibi <chahibi@gmail.com>, 2007.
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2015, 2016, 2018.
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: libkholidays\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2015-06-13 09:34+0000\n"
-"PO-Revision-Date: 2022-09-04 21:17+0400\n"
+"PO-Revision-Date: 2026-04-11 19:29+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -18,6 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 "X-Qt-Contexts: true\n"
 
 #: astroseasons.cpp:139
@@ -56,73 +57,46 @@ msgid "Description"
 msgstr "الوصف"
 
 #: holidaycategories.cpp:39
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Public"
 msgctxt "QObject|public holiday type"
 msgid "public"
 msgstr "عامة"
 
 #: holidaycategories.cpp:42
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Civil"
 msgctxt "QObject|civil holiday type"
 msgid "civil"
 msgstr "مدنية"
 
 #: holidaycategories.cpp:45
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Religious"
 msgctxt "QObject|religious holiday type"
 msgid "religious"
 msgstr "دينية"
 
 #: holidaycategories.cpp:48
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "School"
 msgctxt "QObject|school holiday type"
 msgid "school"
 msgstr "مدرسية"
 
 #: holidaycategories.cpp:51
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Government"
 msgctxt "QObject|government holiday type"
 msgid "government"
 msgstr "حكومية"
 
 #: holidaycategories.cpp:54
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Financial"
 msgctxt "QObject|financial holiday type"
 msgid "financial"
 msgstr "مالية"
 
 #: holidaycategories.cpp:57
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Cultural"
 msgctxt "QObject|cultural holiday type"
 msgid "cultural"
 msgstr "حضارية"
 
 #: holidaycategories.cpp:60
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Commemorative"
 msgctxt "QObject|commemorative holiday type"
 msgid "commemorative"
 msgstr "تذكارية"
 
 #: holidaycategories.cpp:63
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Historical"
 msgctxt "QObject|historical holiday type"
 msgid "historical"
 msgstr "تاريخية"
@@ -130,12 +104,9 @@ msgstr "تاريخية"
 #: holidaycategories.cpp:66
 msgctxt "QObject|nameday holiday type"
 msgid "nameday"
-msgstr ""
+msgstr "اسم_اليوم"
 
 #: holidaycategories.cpp:69
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Seasonal"
 msgctxt "QObject|seasonal holiday type"
 msgid "seasonal"
 msgstr "موسمية"
@@ -147,6 +118,9 @@ msgid ""
 "historical event, or to honor people.  Public holidays are always bounded to "
 "a political region at national, regional or local level."
 msgstr ""
+"عطلة عامة: يوم عطلة من العمل أو المدرسة (عادةً) لإحياء ذكرى حدث تاريخي، أو "
+"لتكريم أشخاص. ترتبط العطلات العامة دائماً بمنطقة سياسية على المستوى الوطني أو "
+"الإقليمي أو المحلي."
 
 #: holidaycategories.cpp:82
 msgctxt "QObject|"
@@ -154,6 +128,8 @@ msgid ""
 "Civil Service Holiday: a day-off from work for government workers but not a "
 "day off for private sector workers."
 msgstr ""
+"عطلة الخدمة المدنية: يوم عطلة من العمل لموظفي الحكومة، ولكنها ليست يوم عطلة "
+"لعاملي القطاع الخاص."
 
 #: holidaycategories.cpp:85
 msgctxt "QObject|"
@@ -164,6 +140,10 @@ msgid ""
 "historical remembrances, etc. Governments often have public holidays for "
 "some religious holidays."
 msgstr ""
+"عطلة دينية: يوم خاص في دين ما وغير مرتبطة بأي منطقة سياسية. يمكن أن تتراوح "
+"عطلات الأديان في درجة التعبد من تلك التي يُحظر فيها العمل أو الدراسة، وأيام "
+"الصلاة المفروضة، إلى الذكريات التاريخية، وغيرها. غالباً ما تضع الحكومات عطلات "
+"عامة لبعض العطلات الدينية."
 
 #: holidaycategories.cpp:91
 msgctxt "QObject|"
@@ -172,6 +152,9 @@ msgid ""
 "extended periods between school terms.  This can vary widely depending on "
 "school level, type, location."
 msgstr ""
+"عطلة مدرسية: يوم عطلة من المدرسة، سواء كانت عطلة عامة لمرة واحدة أو فترات "
+"ممتدة بين الفصول الدراسية. يمكن أن يختلف هذا بشكل كبير اعتماداً على مستوى "
+"المدرسة ونوعها وموقعها."
 
 #: holidaycategories.cpp:96
 msgctxt "QObject|"
@@ -179,11 +162,13 @@ msgid ""
 "Government Holiday: a special day recognized by a political region but "
 "without a day-off for workers, students, etc."
 msgstr ""
+"عطلة حكومية: يوم خاص تعترف به منطقة سياسية ولكن دون منح يوم عطلة للعمال أو "
+"الطلاب أو غيرهم."
 
 #: holidaycategories.cpp:99
 msgctxt "QObject|"
 msgid "Financial Holiday: banks and markets may close on some public holidays"
-msgstr ""
+msgstr "عطلة مالية: قد تُغلق المصارف والأسواق في بعض العطلات العامة"
 
 #: holidaycategories.cpp:102
 msgctxt "QObject|"
@@ -192,6 +177,8 @@ msgid ""
 "to a political region. A day where people celebrate in some fashion. eg. "
 "Halloween, St. Valentines"
 msgstr ""
+"عطلة ثقافية: يوم خاص في الثقافة، ولذلك ترتبط عادة بمنطقة سياسية. يوم يحتفل "
+"فيه الناس بطريقة ما، مثل: الهالوين، وعيد الحب"
 
 #: holidaycategories.cpp:107
 msgctxt "QObject|"
@@ -199,13 +186,15 @@ msgid ""
 "Commemorative Holiday: a special day to remember usually bound to a "
 "political region. Not a day-off from work or school; banks are open, etc."
 msgstr ""
+"عطلة تذكارية: يوم خاص للتذكر يرتبط عادة بمنطقة سياسية. ليست يوم عطلة من "
+"العمل أو المدرسة؛ وتكون المصارف فيها مفتوحة، وما إلى ذلك."
 
 #: holidaycategories.cpp:111
 msgctxt "QObject|"
 msgid ""
 "Historical Holiday: similar to a Commemorative Holiday but historical in "
 "nature."
-msgstr ""
+msgstr "عطلة تاريخية: تشبه العطلة التذكارية ولكنها ذات طبيعة تاريخية."
 
 #: holidaycategories.cpp:114
 msgctxt "QObject|"
@@ -213,6 +202,8 @@ msgid ""
 "Name Day Holiday: in some political regions each day is assigned a first "
 "name and persons with that name celebrate that day as their \"Name Day\"."
 msgstr ""
+"عطلة يوم الاسم: في بعض المناطق السياسية يُخصص لكل يوم اسم أول، ويحتفل الأشخاص "
+"الذين يحملون ذلك الاسم بهذا اليوم بوصفه \"يوم الاسم\" الخاص بهم."
 
 #: holidaycategories.cpp:119
 msgctxt "QObject|"
@@ -220,6 +211,8 @@ msgid ""
 "Seasonal Days: the day corresponds to a seasonal event like an equinox, "
 "solstice, daylight saving time starts/ends."
 msgstr ""
+"أيام موسمية: يوم يتوافق مع حدث موسمي مثل الاعتدال، أو الانقلاب الشمسي، أو "
+"بدء/انتهاء التوقيت الصيفي."
 
 #: holidayregion.cpp:228
 msgctxt "HolidayRegion|Canadian region"

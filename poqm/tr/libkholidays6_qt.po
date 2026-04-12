@@ -6,13 +6,13 @@
 # H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2010.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
-# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2026 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: libkholidays\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2015-06-13 09:34+0000\n"
-"PO-Revision-Date: 2023-11-13 07:37+0300\n"
+"PO-Revision-Date: 2026-04-11 21:05+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 25.12.2\n"
 "X-Qt-Contexts: true\n"
 
 #: astroseasons.cpp:139
@@ -59,86 +59,56 @@ msgid "Description"
 msgstr "Açıklama"
 
 #: holidaycategories.cpp:39
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Public"
 msgctxt "QObject|public holiday type"
 msgid "public"
-msgstr "Kamusal"
+msgstr "Resmî"
 
 #: holidaycategories.cpp:42
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Civil"
 msgctxt "QObject|civil holiday type"
 msgid "civil"
-msgstr "Milli"
+msgstr "Kamu Hizmeti"
 
 #: holidaycategories.cpp:45
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Religious"
 msgctxt "QObject|religious holiday type"
 msgid "religious"
-msgstr "Dinsel"
+msgstr "Dinî"
 
 #: holidaycategories.cpp:48
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "School"
 msgctxt "QObject|school holiday type"
 msgid "school"
 msgstr "Okul"
 
 #: holidaycategories.cpp:51
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Government"
 msgctxt "QObject|government holiday type"
 msgid "government"
 msgstr "Devlet"
 
 #: holidaycategories.cpp:54
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Financial"
 msgctxt "QObject|financial holiday type"
 msgid "financial"
 msgstr "Finansal"
 
 #: holidaycategories.cpp:57
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Cultural"
 msgctxt "QObject|cultural holiday type"
 msgid "cultural"
 msgstr "Kültürel"
 
 #: holidaycategories.cpp:60
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Commemorative"
 msgctxt "QObject|commemorative holiday type"
 msgid "commemorative"
 msgstr "Anma"
 
 #: holidaycategories.cpp:63
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Historical"
 msgctxt "QObject|historical holiday type"
 msgid "historical"
-msgstr "Tarihsel"
+msgstr "Tarihî"
 
 #: holidaycategories.cpp:66
 msgctxt "QObject|nameday holiday type"
 msgid "nameday"
-msgstr ""
+msgstr "Ad Günü"
 
 #: holidaycategories.cpp:69
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Seasonal"
 msgctxt "QObject|seasonal holiday type"
 msgid "seasonal"
 msgstr "Mevsimsel"
@@ -150,6 +120,9 @@ msgid ""
 "historical event, or to honor people.  Public holidays are always bounded to "
 "a political region at national, regional or local level."
 msgstr ""
+"Resmî Tatil: Genellikle tarihî bir olayı anmak veya insanları onurlandırmak "
+"için işten veya okuldan verilen bir günlük izin. Resmî tatiller her zaman "
+"ulusal, bölgesel veya yerel düzeyde siyasi bir bölgeyle sınırlıdır."
 
 #: holidaycategories.cpp:82
 msgctxt "QObject|"
@@ -157,6 +130,8 @@ msgid ""
 "Civil Service Holiday: a day-off from work for government workers but not a "
 "day off for private sector workers."
 msgstr ""
+"Kamu Hizmeti Tatili: Devlet çalışanları için bir günlük izin; ancak özel "
+"sektör çalışanları için geçerli değildir."
 
 #: holidaycategories.cpp:85
 msgctxt "QObject|"
@@ -167,6 +142,11 @@ msgid ""
 "historical remembrances, etc. Governments often have public holidays for "
 "some religious holidays."
 msgstr ""
+"Dinî Bayram: Bir dinde özel bir gün olup herhangi bir siyasi bölgeye bağlı "
+"değildir. Dinlerin, ibadet günlerinden çalışma/okul tatillerine, dua "
+"yükümlülüğü günlerinden tarihi anma günlerine kadar çeşitli bayramları "
+"olabilir. Hükûmetler genellikle bazı dinî bayramlar için resmî tatil ilan "
+"eder."
 
 #: holidaycategories.cpp:91
 msgctxt "QObject|"
@@ -175,6 +155,9 @@ msgid ""
 "extended periods between school terms.  This can vary widely depending on "
 "school level, type, location."
 msgstr ""
+"Okul Tatili: Okuldan bir günlük izin, tek kerelik resmî tatil veya okul "
+"dönemleri arasında uzatılmış süreler şeklinde olabilir. Bu; okul düzeyine, "
+"türüne ve konumuna bağlı olarak büyük ölçüde değişebilir."
 
 #: holidaycategories.cpp:96
 msgctxt "QObject|"
@@ -182,11 +165,14 @@ msgid ""
 "Government Holiday: a special day recognized by a political region but "
 "without a day-off for workers, students, etc."
 msgstr ""
+"Devlet Tatili: Siyasî bir bölge tarafından tanınan; ancak çalışanlar, "
+"öğrenciler vb. için tatil günü olmayan özel bir gün."
 
 #: holidaycategories.cpp:99
 msgctxt "QObject|"
 msgid "Financial Holiday: banks and markets may close on some public holidays"
 msgstr ""
+"Finansal Tatil: Bankalar ve piyasalar bazı resmî tatillerde kapalı olabilir."
 
 #: holidaycategories.cpp:102
 msgctxt "QObject|"
@@ -195,6 +181,9 @@ msgid ""
 "to a political region. A day where people celebrate in some fashion. eg. "
 "Halloween, St. Valentines"
 msgstr ""
+"Kültürel Bayram: Kültürde özel bir yere sahip olan ve bu nedenle genellikle "
+"siyasî bir bölgeyle bağlantılı olan bir gün. İnsanların bir şekilde kutlama "
+"yaptığı bir gün. Cadılar Bayramı, Sevgililer Günü gibi örnekler verilebilir."
 
 #: holidaycategories.cpp:107
 msgctxt "QObject|"
@@ -202,13 +191,15 @@ msgid ""
 "Commemorative Holiday: a special day to remember usually bound to a "
 "political region. Not a day-off from work or school; banks are open, etc."
 msgstr ""
+"Anma Günü: Genellikle siyasî bir bölgeyle bağlantılı, anılması gereken özel "
+"bir gün. İşten veya okuldan izin günü değildir; bankalar açıktır, vb. gibi."
 
 #: holidaycategories.cpp:111
 msgctxt "QObject|"
 msgid ""
 "Historical Holiday: similar to a Commemorative Holiday but historical in "
 "nature."
-msgstr ""
+msgstr "Tarihî Tatil: Anma Tatiline benzerdir; ancak tarihî niteliktedir."
 
 #: holidaycategories.cpp:114
 msgctxt "QObject|"
@@ -216,6 +207,8 @@ msgid ""
 "Name Day Holiday: in some political regions each day is assigned a first "
 "name and persons with that name celebrate that day as their \"Name Day\"."
 msgstr ""
+"Ad Günü Tatili: Bazı siyasî bölgelerde her güne bir ad verilir ve o adı "
+"taşıyan kişiler o günü “Ad Günü” olarak kutlarlar."
 
 #: holidaycategories.cpp:119
 msgctxt "QObject|"
@@ -223,6 +216,8 @@ msgid ""
 "Seasonal Days: the day corresponds to a seasonal event like an equinox, "
 "solstice, daylight saving time starts/ends."
 msgstr ""
+"Mevsimsel Günler: Gün, ılım, gündönümü, yaz saati uygulamasının başlangıcı/"
+"sonu gibi mevsimsel bir olaya karşılık gelir."
 
 #: holidayregion.cpp:228
 msgctxt "HolidayRegion|Canadian region"
@@ -332,7 +327,7 @@ msgstr "Kuzey İrlanda"
 #: holidayregion.cpp:272
 msgctxt "HolidayRegion|Italian Region"
 msgid "South Tyrol"
-msgstr "Güney Tyrol"
+msgstr "Güney Tirol"
 
 #: holidayregion.cpp:274
 msgctxt "HolidayRegion|"
@@ -382,17 +377,17 @@ msgstr "Sırp Cumhuriyeti"
 #: holidayregion.cpp:308
 msgctxt "HolidayRegion|Holiday type"
 msgid "Public"
-msgstr "Kamusal"
+msgstr "Resmi"
 
 #: holidayregion.cpp:310
 msgctxt "HolidayRegion|Holiday type"
 msgid "Civil"
-msgstr "Milli"
+msgstr "Kamu Hizmeti"
 
 #: holidayregion.cpp:312
 msgctxt "HolidayRegion|Holiday type"
 msgid "Religious"
-msgstr "Dinsel"
+msgstr "Dinî"
 
 #: holidayregion.cpp:314
 msgctxt "HolidayRegion|Holiday type"
@@ -417,7 +412,7 @@ msgstr "Anma"
 #: holidayregion.cpp:322
 msgctxt "HolidayRegion|Holiday type"
 msgid "Historical"
-msgstr "Tarihsel"
+msgstr "Tarihî"
 
 #: holidayregion.cpp:324
 msgctxt "HolidayRegion|Holiday type"
@@ -467,22 +462,22 @@ msgstr "Ortodoks"
 #: holidayregion.cpp:342
 msgctxt "HolidayRegion|Holiday type"
 msgid "Jewish"
-msgstr "Musevi"
+msgstr "Musevî"
 
 #: holidayregion.cpp:344
 msgctxt "HolidayRegion|Holiday type"
 msgid "Jewish Orthodox"
-msgstr "Ortodoks Musevi"
+msgstr "Ortodoks Musevî"
 
 #: holidayregion.cpp:346
 msgctxt "HolidayRegion|Holiday type"
 msgid "Jewish Conservative"
-msgstr "Musevi Muhafazakar"
+msgstr "Muhafazakar Musevî"
 
 #: holidayregion.cpp:348
 msgctxt "HolidayRegion|Holiday type"
 msgid "Jewish Reform"
-msgstr "Yenilikçi Musevi"
+msgstr "Yenilikçi Musevî"
 
 #: holidayregion.cpp:350
 msgctxt "HolidayRegion|Holiday type"
@@ -502,14 +497,14 @@ msgstr "Şii Müsliman"
 #: holidayregion.cpp:356
 msgctxt "HolidayRegion|Holiday type"
 msgid "Islamic Sufi"
-msgstr "Sufi Müsliman"
+msgstr "Sufî Müslüman"
 
 #: holidayregion.cpp:362
 #, qt-format
 msgctxt ""
 "HolidayRegion|Holiday file display name, %1 = region name, %2 = holiday type"
 msgid "%1 - %2"
-msgstr "%1 - %2"
+msgstr "%1 — %2"
 
 #: holidayregion.cpp:370
 msgctxt "HolidayRegion|Unknown holiday region"

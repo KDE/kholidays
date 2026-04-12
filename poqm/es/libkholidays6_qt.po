@@ -1,5 +1,5 @@
 # Spanish translations for libkholidays6_qt.po package.
-# Copyright (C) 2005-2025 This file is copyright:
+# Copyright (C) 2005-2026 This file is copyright:
 # This file is distributed under the same license as the kholidays package.
 #
 # SPDX-FileCopyrightText: 2005 Juan Manuel Garcia Molina <juanma@superiodico.net>
@@ -7,21 +7,21 @@
 # SPDX-FileCopyrightText: 2009 Dario Andres Rodriguez <andresbajotierra@gmail.com>
 # SPDX-FileCopyrightText: 2009, 2010 Adrián Martínez <sfxgt3@gmail.com>
 # SPDX-FileCopyrightText: 2010 Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>
-# SPDX-FileCopyrightText: 2010, 2020, 2022, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2010, 2020, 2022, 2025, 2026 Eloy Cuadra <ecuadra@eloihr.net>
 # SPDX-FileCopyrightText: 2011, 2012, 2014, 2015 Javier Vinal <fjvinal@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: libkholidays6_qt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2015-06-13 09:34+0000\n"
-"PO-Revision-Date: 2025-05-17 13:07+0100\n"
+"PO-Revision-Date: 2026-04-11 12:02+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.08.0\n"
+"X-Generator: Lokalize 25.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Qt-Contexts: true\n"
 
@@ -61,89 +61,59 @@ msgid "Description"
 msgstr "Descripción"
 
 #: holidaycategories.cpp:39
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Public"
 msgctxt "QObject|public holiday type"
 msgid "public"
-msgstr "Pública"
+msgstr "pública"
 
 #: holidaycategories.cpp:42
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Civil"
 msgctxt "QObject|civil holiday type"
 msgid "civil"
-msgstr "Civil"
+msgstr "civil"
 
 #: holidaycategories.cpp:45
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Religious"
 msgctxt "QObject|religious holiday type"
 msgid "religious"
-msgstr "Religiosa"
+msgstr "religiosa"
 
 #: holidaycategories.cpp:48
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "School"
 msgctxt "QObject|school holiday type"
 msgid "school"
-msgstr "Escolar"
+msgstr "escolar"
 
 #: holidaycategories.cpp:51
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Government"
 msgctxt "QObject|government holiday type"
 msgid "government"
-msgstr "Gubernamental"
+msgstr "gubernamental"
 
 #: holidaycategories.cpp:54
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Financial"
 msgctxt "QObject|financial holiday type"
 msgid "financial"
-msgstr "Económica"
+msgstr "financiera"
 
 #: holidaycategories.cpp:57
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Cultural"
 msgctxt "QObject|cultural holiday type"
 msgid "cultural"
-msgstr "Cultural"
+msgstr "cultural"
 
 #: holidaycategories.cpp:60
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Commemorative"
 msgctxt "QObject|commemorative holiday type"
 msgid "commemorative"
-msgstr "Conmemorativa"
+msgstr "conmemorativa"
 
 #: holidaycategories.cpp:63
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Historical"
 msgctxt "QObject|historical holiday type"
 msgid "historical"
-msgstr "Histórica"
+msgstr "histórica"
 
 #: holidaycategories.cpp:66
 msgctxt "QObject|nameday holiday type"
 msgid "nameday"
-msgstr ""
+msgstr "onomástica"
 
 #: holidaycategories.cpp:69
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Seasonal"
 msgctxt "QObject|seasonal holiday type"
 msgid "seasonal"
-msgstr "Estacional"
+msgstr "estacional"
 
 #: holidaycategories.cpp:77
 msgctxt "QObject|"
@@ -152,6 +122,10 @@ msgid ""
 "historical event, or to honor people.  Public holidays are always bounded to "
 "a political region at national, regional or local level."
 msgstr ""
+"Fiesta pública: Un día libre de trabajo o de escuela (generalmente) para "
+"conmemorar un evento histórico o para honrar a personas. Los días festivos "
+"siempre están ligados a una región política a nivel nacional, regional o "
+"local."
 
 #: holidaycategories.cpp:82
 msgctxt "QObject|"
@@ -159,6 +133,8 @@ msgid ""
 "Civil Service Holiday: a day-off from work for government workers but not a "
 "day off for private sector workers."
 msgstr ""
+"Día festivo de la administración pública: Un día libre para los empleados "
+"públicos, pero no para los trabajadores del sector privado."
 
 #: holidaycategories.cpp:85
 msgctxt "QObject|"
@@ -169,6 +145,11 @@ msgid ""
 "historical remembrances, etc. Governments often have public holidays for "
 "some religious holidays."
 msgstr ""
+"Fiesta religiosa: Un día especial de una religión no relacionado con ninguna "
+"región política. Las religiones pueden tener festividades que varían en "
+"devoción, desde días en los que está prohibido trabajar o ir a la escuela, "
+"hasta días de oración obligatoria, conmemoraciones históricas, etc. Los "
+"gobiernos suelen declarar días festivos para algunas festividades religiosas."
 
 #: holidaycategories.cpp:91
 msgctxt "QObject|"
@@ -177,6 +158,9 @@ msgid ""
 "extended periods between school terms.  This can vary widely depending on "
 "school level, type, location."
 msgstr ""
+"Fiesta escolares: Un día libre de escuela, ya sea como un día festivo "
+"puntual o durante períodos prolongados entre trimestres. Esto puede variar "
+"considerablemente según el nivel, el tipo y la ubicación de la escuela."
 
 #: holidaycategories.cpp:96
 msgctxt "QObject|"
@@ -184,11 +168,15 @@ msgid ""
 "Government Holiday: a special day recognized by a political region but "
 "without a day-off for workers, students, etc."
 msgstr ""
+"Día festivo gubernamental: Un día especial reconocido por una región "
+"política pero sin día libre para trabajadores, estudiantes, etc."
 
 #: holidaycategories.cpp:99
 msgctxt "QObject|"
 msgid "Financial Holiday: banks and markets may close on some public holidays"
 msgstr ""
+"Día festivo financiero: Los bancos y los mercados pueden cerrar en algunos "
+"días festivos."
 
 #: holidaycategories.cpp:102
 msgctxt "QObject|"
@@ -197,6 +185,9 @@ msgid ""
 "to a political region. A day where people celebrate in some fashion. eg. "
 "Halloween, St. Valentines"
 msgstr ""
+"Día festivo cultural: Un día especial en la cultura y, por lo tanto, "
+"generalmente vinculado a una región política. Un día en el que la gente "
+"celebra algo de alguna manera. Por ejemplo: Halloween, San Valentín."
 
 #: holidaycategories.cpp:107
 msgctxt "QObject|"
@@ -204,6 +195,9 @@ msgid ""
 "Commemorative Holiday: a special day to remember usually bound to a "
 "political region. Not a day-off from work or school; banks are open, etc."
 msgstr ""
+"Día festivo conmemorativo: Un día especial para recordar, generalmente "
+"vinculado a una región política. No es un día libre trabajo ni de escuela; "
+"los bancos están abiertos, etc."
 
 #: holidaycategories.cpp:111
 msgctxt "QObject|"
@@ -211,6 +205,8 @@ msgid ""
 "Historical Holiday: similar to a Commemorative Holiday but historical in "
 "nature."
 msgstr ""
+"Día festivo histórico: Similar a un día festivo conmemorativo, pero de "
+"carácter histórico."
 
 #: holidaycategories.cpp:114
 msgctxt "QObject|"
@@ -218,6 +214,9 @@ msgid ""
 "Name Day Holiday: in some political regions each day is assigned a first "
 "name and persons with that name celebrate that day as their \"Name Day\"."
 msgstr ""
+"Día onomástico: En algunas regiones políticas, a cada día se le asigna el "
+"nombre de una persona y las personas con dicho nombre celebran ese día como "
+"su «día onomástico»."
 
 #: holidaycategories.cpp:119
 msgctxt "QObject|"
@@ -225,6 +224,8 @@ msgid ""
 "Seasonal Days: the day corresponds to a seasonal event like an equinox, "
 "solstice, daylight saving time starts/ends."
 msgstr ""
+"Días estacionales: El día corresponde a un evento estacional, como un "
+"equinoccio, un solsticio o el inicio/fin del horario de verano."
 
 #: holidayregion.cpp:228
 msgctxt "HolidayRegion|Canadian region"
