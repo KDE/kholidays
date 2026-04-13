@@ -1,20 +1,20 @@
 # translation of libkholidays.po to Dutch
 #
 # Bram Schoenmakers <bramschoenmakers@kde.nl>, 2005, 2007.
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2009, 2010, 2012, 2014, 2015, 2020, 2022.
+# SPDX-FileCopyrightText: 2009, 2010, 2012, 2014, 2015, 2020, 2022, 2026 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: libkholidays\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2015-06-13 09:34+0000\n"
-"PO-Revision-Date: 2022-08-29 12:04+0200\n"
+"PO-Revision-Date: 2026-04-11 14:06+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.08.0\n"
+"X-Generator: Lokalize 25.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Qt-Contexts: true\n"
 
@@ -54,89 +54,59 @@ msgid "Description"
 msgstr "Beschrijving"
 
 #: holidaycategories.cpp:39
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Public"
 msgctxt "QObject|public holiday type"
 msgid "public"
-msgstr "Publiek"
+msgstr "publiek"
 
 #: holidaycategories.cpp:42
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Civil"
 msgctxt "QObject|civil holiday type"
 msgid "civil"
-msgstr "Civiel"
+msgstr "civiel"
 
 #: holidaycategories.cpp:45
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Religious"
 msgctxt "QObject|religious holiday type"
 msgid "religious"
-msgstr "Religieus"
+msgstr "religieus"
 
 #: holidaycategories.cpp:48
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "School"
 msgctxt "QObject|school holiday type"
 msgid "school"
-msgstr "School"
+msgstr "school"
 
 #: holidaycategories.cpp:51
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Government"
 msgctxt "QObject|government holiday type"
 msgid "government"
-msgstr "Overheid"
+msgstr "overheid"
 
 #: holidaycategories.cpp:54
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Financial"
 msgctxt "QObject|financial holiday type"
 msgid "financial"
-msgstr "Financieel"
+msgstr "financieel"
 
 #: holidaycategories.cpp:57
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Cultural"
 msgctxt "QObject|cultural holiday type"
 msgid "cultural"
-msgstr "Cultureel"
+msgstr "cultureel"
 
 #: holidaycategories.cpp:60
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Commemorative"
 msgctxt "QObject|commemorative holiday type"
 msgid "commemorative"
-msgstr "Herdenking"
+msgstr "herdenking"
 
 #: holidaycategories.cpp:63
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Historical"
 msgctxt "QObject|historical holiday type"
 msgid "historical"
-msgstr "Historisch"
+msgstr "historisch"
 
 #: holidaycategories.cpp:66
 msgctxt "QObject|nameday holiday type"
 msgid "nameday"
-msgstr ""
+msgstr "naamdag"
 
 #: holidaycategories.cpp:69
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Seasonal"
 msgctxt "QObject|seasonal holiday type"
 msgid "seasonal"
-msgstr "Seizoen"
+msgstr "seizoensgebonden"
 
 #: holidaycategories.cpp:77
 msgctxt "QObject|"
@@ -145,6 +115,10 @@ msgid ""
 "historical event, or to honor people.  Public holidays are always bounded to "
 "a political region at national, regional or local level."
 msgstr ""
+"Publieke vakantie: een vrije dag van werk of school (meestal) ter herdenking "
+"van een historische gebeurtenis of ter ere van personen. Vakantiedagen zijn "
+"altijd gebonden aan een politieke regio op nationaal, regionaal of lokaal "
+"niveau."
 
 #: holidaycategories.cpp:82
 msgctxt "QObject|"
@@ -152,6 +126,8 @@ msgid ""
 "Civil Service Holiday: a day-off from work for government workers but not a "
 "day off for private sector workers."
 msgstr ""
+"Ambtenarenvakantie: een vrije dag voor overheidsmedewerkers, maar geen vrije "
+"dag voor werknemers in de particuliere sector."
 
 #: holidaycategories.cpp:85
 msgctxt "QObject|"
@@ -162,6 +138,11 @@ msgid ""
 "historical remembrances, etc. Governments often have public holidays for "
 "some religious holidays."
 msgstr ""
+"Religieuze vakantiedag: een speciale dag binnen een religie, niet gebonden "
+"aan een bepaalde politieke regio. Religies kennen feestdagen die variëren in "
+"devotie, van dagen waarop werken/school verboden is, dagen van gebedsplicht "
+"tot historische herdenkingen, enzovoort. Overheden hebben vaak officiële "
+"vrije dagen voor bepaalde religieuze feestdagen."
 
 #: holidaycategories.cpp:91
 msgctxt "QObject|"
@@ -170,6 +151,9 @@ msgid ""
 "extended periods between school terms.  This can vary widely depending on "
 "school level, type, location."
 msgstr ""
+"Schoolvakantie: een dag vrij van school, hetzij als eenmalige officiële "
+"feestdag of een langere periode tussen schoolperiodes. Dit kan sterk "
+"variëren afhankelijk van het schoolniveau, het type school en de locatie."
 
 #: holidaycategories.cpp:96
 msgctxt "QObject|"
@@ -177,11 +161,15 @@ msgid ""
 "Government Holiday: a special day recognized by a political region but "
 "without a day-off for workers, students, etc."
 msgstr ""
+"Overheidsfeestdag: een speciale dag die door een politieke regio wordt "
+"erkend, maar waarop werknemers, studenten, enz. geen vrije dag hebben."
 
 #: holidaycategories.cpp:99
 msgctxt "QObject|"
 msgid "Financial Holiday: banks and markets may close on some public holidays"
 msgstr ""
+"Financiële vrije dag: banken en markten kunnen op sommige officiële "
+"feestdagen gesloten zijn."
 
 #: holidaycategories.cpp:102
 msgctxt "QObject|"
@@ -190,6 +178,9 @@ msgid ""
 "to a political region. A day where people celebrate in some fashion. eg. "
 "Halloween, St. Valentines"
 msgstr ""
+"Culturele feestdag: een speciale dag in de cultuur en daarom meestal "
+"verbonden aan een politieke regio. Een dag waarop mensen op een bepaalde "
+"manier feestvieren. Bijvoorbeeld: Halloween, Valentijnsdag"
 
 #: holidaycategories.cpp:107
 msgctxt "QObject|"
@@ -197,6 +188,8 @@ msgid ""
 "Commemorative Holiday: a special day to remember usually bound to a "
 "political region. Not a day-off from work or school; banks are open, etc."
 msgstr ""
+"Herdenkingsdag: een speciale dag om te herdenken, meestal verbonden aan een "
+"politieke regio. Geen vrije dag van werk of school; banken zijn open, enz."
 
 #: holidaycategories.cpp:111
 msgctxt "QObject|"
@@ -204,6 +197,8 @@ msgid ""
 "Historical Holiday: similar to a Commemorative Holiday but historical in "
 "nature."
 msgstr ""
+"Historische feestdag: vergelijkbaar met een herdenkingsdag, maar met een "
+"historisch karakter."
 
 #: holidaycategories.cpp:114
 msgctxt "QObject|"
@@ -211,6 +206,8 @@ msgid ""
 "Name Day Holiday: in some political regions each day is assigned a first "
 "name and persons with that name celebrate that day as their \"Name Day\"."
 msgstr ""
+"Naamdag: in sommige politieke regio's wordt aan elke dag een voornaam "
+"toegekend en personen met die naam vieren die dag als hun \"Naamdag\"."
 
 #: holidaycategories.cpp:119
 msgctxt "QObject|"
@@ -218,6 +215,8 @@ msgid ""
 "Seasonal Days: the day corresponds to a seasonal event like an equinox, "
 "solstice, daylight saving time starts/ends."
 msgstr ""
+"Seizoensdagen: de dag komt overeen met een seizoensgebonden gebeurtenis "
+"zoals een equinox, zonnewende, begin/einde van de zomertijd."
 
 #: holidayregion.cpp:228
 msgctxt "HolidayRegion|Canadian region"

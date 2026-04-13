@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: libkholidays5\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2015-06-13 09:34+0000\n"
-"PO-Revision-Date: 2023-03-11 16:29+0100\n"
+"PO-Revision-Date: 2026-04-12 12:00+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
 "Language: sk\n"
@@ -53,89 +53,59 @@ msgid "Description"
 msgstr "Popis"
 
 #: holidaycategories.cpp:39
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Public"
 msgctxt "QObject|public holiday type"
 msgid "public"
-msgstr "Verejné"
+msgstr "verejné"
 
 #: holidaycategories.cpp:42
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Civil"
 msgctxt "QObject|civil holiday type"
 msgid "civil"
-msgstr "Civilné"
+msgstr "civilné"
 
 #: holidaycategories.cpp:45
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Religious"
 msgctxt "QObject|religious holiday type"
 msgid "religious"
-msgstr "Náboženské"
+msgstr "náboženské"
 
 #: holidaycategories.cpp:48
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "School"
 msgctxt "QObject|school holiday type"
 msgid "school"
-msgstr "Škola"
+msgstr "školské"
 
 #: holidaycategories.cpp:51
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Government"
 msgctxt "QObject|government holiday type"
 msgid "government"
-msgstr "Vláda"
+msgstr "vládne"
 
 #: holidaycategories.cpp:54
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Financial"
 msgctxt "QObject|financial holiday type"
 msgid "financial"
-msgstr "Finančné"
+msgstr "finančné"
 
 #: holidaycategories.cpp:57
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Cultural"
 msgctxt "QObject|cultural holiday type"
 msgid "cultural"
-msgstr "Kultúrbne"
+msgstr "kultúrne"
 
 #: holidaycategories.cpp:60
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Commemorative"
 msgctxt "QObject|commemorative holiday type"
 msgid "commemorative"
-msgstr "Pamätné"
+msgstr "pamätné"
 
 #: holidaycategories.cpp:63
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Historical"
 msgctxt "QObject|historical holiday type"
 msgid "historical"
-msgstr "Historické"
+msgstr "historické"
 
 #: holidaycategories.cpp:66
 msgctxt "QObject|nameday holiday type"
 msgid "nameday"
-msgstr ""
+msgstr "meniny"
 
 #: holidaycategories.cpp:69
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Seasonal"
 msgctxt "QObject|seasonal holiday type"
 msgid "seasonal"
-msgstr "Sezónne"
+msgstr "sezónne"
 
 #: holidaycategories.cpp:77
 msgctxt "QObject|"
@@ -144,6 +114,9 @@ msgid ""
 "historical event, or to honor people.  Public holidays are always bounded to "
 "a political region at national, regional or local level."
 msgstr ""
+"Verejný sviatok: voľný deň z práce alebo školy (typicky) na pripomenutie "
+"historickej udalosti alebo na počesť ľudí. Verejné sviatky sú vždy viazané "
+"na politický región na národnej, regionálnej alebo miestnej úrovni."
 
 #: holidaycategories.cpp:82
 msgctxt "QObject|"
@@ -151,6 +124,8 @@ msgid ""
 "Civil Service Holiday: a day-off from work for government workers but not a "
 "day off for private sector workers."
 msgstr ""
+"Sviatok štátnej služby: voľný deň z práce pre štátnych zamestnancov, ale nie "
+"voľný deň pre pracovníkov súkromného sektora."
 
 #: holidaycategories.cpp:85
 msgctxt "QObject|"
@@ -161,6 +136,11 @@ msgid ""
 "historical remembrances, etc. Governments often have public holidays for "
 "some religious holidays."
 msgstr ""
+"Náboženský sviatok: zvláštny deň v náboženstve, ktorý nie je viazaný na "
+"žiadny politický región. Náboženstvá môžu mať sviatky od tých, kedy je "
+"zakázaná práca/škola, cez dni povinnej modlitby, až po historické "
+"pripomienky atď. Vlády často majú verejné sviatky pre niektoré náboženské "
+"sviatky."
 
 #: holidaycategories.cpp:91
 msgctxt "QObject|"
@@ -169,6 +149,9 @@ msgid ""
 "extended periods between school terms.  This can vary widely depending on "
 "school level, type, location."
 msgstr ""
+"Školské prázdniny: voľný deň zo školy, buď ako jednorazový verejný sviatok, "
+"alebo predĺžené obdobia medzi školskými obdobiami. Toto sa môže značne líšiť "
+"v závislosti od úrovne školy, typu a lokality."
 
 #: holidaycategories.cpp:96
 msgctxt "QObject|"
@@ -176,11 +159,15 @@ msgid ""
 "Government Holiday: a special day recognized by a political region but "
 "without a day-off for workers, students, etc."
 msgstr ""
+"Vládny sviatok: zvláštny deň uznaný politickým regiónom, ale bez voľného dňa "
+"pre pracovníkov, študentov atď."
 
 #: holidaycategories.cpp:99
 msgctxt "QObject|"
 msgid "Financial Holiday: banks and markets may close on some public holidays"
 msgstr ""
+"Finančný sviatok: banky a trhy môžu byť zatvorené počas niektorých verejných "
+"sviatkov"
 
 #: holidaycategories.cpp:102
 msgctxt "QObject|"
@@ -189,6 +176,9 @@ msgid ""
 "to a political region. A day where people celebrate in some fashion. eg. "
 "Halloween, St. Valentines"
 msgstr ""
+"Kultúrny sviatok: zvláštny deň v kultúre, a preto zvyčajne viazaný na "
+"politický región. Deň, kedy ľudia nejakým spôsobom oslavujú, napr. "
+"Halloween, Valentín"
 
 #: holidaycategories.cpp:107
 msgctxt "QObject|"
@@ -196,13 +186,15 @@ msgid ""
 "Commemorative Holiday: a special day to remember usually bound to a "
 "political region. Not a day-off from work or school; banks are open, etc."
 msgstr ""
+"Pamätný sviatok: zvláštny deň na pripomenutie, zvyčajne viazaný na politický "
+"región. Nie je to voľný deň z práce alebo školy; banky sú otvorené atď."
 
 #: holidaycategories.cpp:111
 msgctxt "QObject|"
 msgid ""
 "Historical Holiday: similar to a Commemorative Holiday but historical in "
 "nature."
-msgstr ""
+msgstr "Historický sviatok: podobný pamätnému sviatku, ale historickej povahy."
 
 #: holidaycategories.cpp:114
 msgctxt "QObject|"
@@ -210,6 +202,8 @@ msgid ""
 "Name Day Holiday: in some political regions each day is assigned a first "
 "name and persons with that name celebrate that day as their \"Name Day\"."
 msgstr ""
+"Meniny: v niektorých politických regiónoch je každému dňu priradené krstné "
+"meno a osoby s týmto menom oslavujú tento deň ako svoje \"meniny\"."
 
 #: holidaycategories.cpp:119
 msgctxt "QObject|"
@@ -217,6 +211,8 @@ msgid ""
 "Seasonal Days: the day corresponds to a seasonal event like an equinox, "
 "solstice, daylight saving time starts/ends."
 msgstr ""
+"Sezónne dni: deň zodpovedá sezónnej udalosti ako rovnodennosť, slnovrat, "
+"začiatok/koniec letného času."
 
 #: holidayregion.cpp:228
 msgctxt "HolidayRegion|Canadian region"
@@ -401,7 +397,7 @@ msgstr "Finančné"
 #: holidayregion.cpp:318
 msgctxt "HolidayRegion|Holiday type"
 msgid "Cultural"
-msgstr "Kultúrbne"
+msgstr "Kultúrne"
 
 #: holidayregion.cpp:320
 msgctxt "HolidayRegion|Holiday type"

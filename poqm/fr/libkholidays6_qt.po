@@ -1,29 +1,29 @@
 # translation of libkholidays.po to
 #
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2026 Xavier Besnard <xavier.besnard@kde.org>
 # Nicolas Ternisien <nicolast@libertysurf.fr>, 2005.
 # Julien Richard-Foy <julien.rf@no-log.org>, 2008.
 # Xavier Claude <contact@xavierclaude.be>, 2010, 2011, 2012, 2013.
 # Sebastien Renard <renard@kde.org>, 2014.
 # Vincent Pinon <vpinon@kde.org>, 2017.
-# Xavier Besnard <xavier.besnard@kde.org>, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: libkholidays\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2015-06-13 09:34+0000\n"
-"PO-Revision-Date: 2022-08-30 07:00+0200\n"
-"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"PO-Revision-Date: 2026-04-12 08:40+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.0\n"
-"X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
-"X-Text-Markup: qtrich\n"
+"X-Environment: kde\n"
+"X-Generator: Lokalize 25.12.3\n"
 "X-Qt-Contexts: true\n"
+"X-Text-Markup: qtrich\n"
 
 #: astroseasons.cpp:139
 msgctxt "AstroSeasons|"
@@ -61,73 +61,46 @@ msgid "Description"
 msgstr "Description"
 
 #: holidaycategories.cpp:39
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Public"
 msgctxt "QObject|public holiday type"
 msgid "public"
 msgstr "Public"
 
 #: holidaycategories.cpp:42
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Civil"
 msgctxt "QObject|civil holiday type"
 msgid "civil"
 msgstr "Civil"
 
 #: holidaycategories.cpp:45
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Religious"
 msgctxt "QObject|religious holiday type"
 msgid "religious"
 msgstr "Religieux"
 
 #: holidaycategories.cpp:48
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "School"
 msgctxt "QObject|school holiday type"
 msgid "school"
 msgstr "Scolaire"
 
 #: holidaycategories.cpp:51
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Government"
 msgctxt "QObject|government holiday type"
 msgid "government"
 msgstr "Gouvernement"
 
 #: holidaycategories.cpp:54
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Financial"
 msgctxt "QObject|financial holiday type"
 msgid "financial"
 msgstr "Financier"
 
 #: holidaycategories.cpp:57
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Cultural"
 msgctxt "QObject|cultural holiday type"
 msgid "cultural"
 msgstr "Culturel"
 
 #: holidaycategories.cpp:60
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Commemorative"
 msgctxt "QObject|commemorative holiday type"
 msgid "commemorative"
 msgstr "Commémoratif"
 
 #: holidaycategories.cpp:63
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Historical"
 msgctxt "QObject|historical holiday type"
 msgid "historical"
 msgstr "Historique"
@@ -135,12 +108,9 @@ msgstr "Historique"
 #: holidaycategories.cpp:66
 msgctxt "QObject|nameday holiday type"
 msgid "nameday"
-msgstr ""
+msgstr "Fête"
 
 #: holidaycategories.cpp:69
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Seasonal"
 msgctxt "QObject|seasonal holiday type"
 msgid "seasonal"
 msgstr "Saisonnier"

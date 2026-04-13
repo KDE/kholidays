@@ -58,72 +58,54 @@ msgstr "Skildring"
 
 #: holidaycategories.cpp:39
 #, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Public"
 msgctxt "QObject|public holiday type"
 msgid "public"
 msgstr "Offentleg"
 
 #: holidaycategories.cpp:42
 #, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Civil"
 msgctxt "QObject|civil holiday type"
 msgid "civil"
 msgstr "Borgarleg"
 
 #: holidaycategories.cpp:45
 #, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Religious"
 msgctxt "QObject|religious holiday type"
 msgid "religious"
 msgstr "Religiøs"
 
 #: holidaycategories.cpp:48
 #, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "School"
 msgctxt "QObject|school holiday type"
 msgid "school"
 msgstr "Skule"
 
 #: holidaycategories.cpp:51
 #, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Government"
 msgctxt "QObject|government holiday type"
 msgid "government"
 msgstr "Statleg"
 
 #: holidaycategories.cpp:54
 #, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Financial"
 msgctxt "QObject|financial holiday type"
 msgid "financial"
 msgstr "Finansiell"
 
 #: holidaycategories.cpp:57
 #, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Cultural"
 msgctxt "QObject|cultural holiday type"
 msgid "cultural"
 msgstr "Kulturell"
 
 #: holidaycategories.cpp:60
 #, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Commemorative"
 msgctxt "QObject|commemorative holiday type"
 msgid "commemorative"
 msgstr "Minnedag"
 
 #: holidaycategories.cpp:63
 #, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Historical"
 msgctxt "QObject|historical holiday type"
 msgid "historical"
 msgstr "Historisk"
@@ -135,8 +117,6 @@ msgstr ""
 
 #: holidaycategories.cpp:69
 #, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Seasonal"
 msgctxt "QObject|seasonal holiday type"
 msgid "seasonal"
 msgstr "Årstid"
