@@ -53,57 +53,57 @@ msgstr "描述"
 #: holidaycategories.cpp:39
 msgctxt "QObject|public holiday type"
 msgid "public"
-msgstr ""
+msgstr "公共假日"
 
 #: holidaycategories.cpp:42
 msgctxt "QObject|civil holiday type"
 msgid "civil"
-msgstr ""
+msgstr "公务员假日"
 
 #: holidaycategories.cpp:45
 msgctxt "QObject|religious holiday type"
 msgid "religious"
-msgstr ""
+msgstr "宗教节日"
 
 #: holidaycategories.cpp:48
 msgctxt "QObject|school holiday type"
 msgid "school"
-msgstr ""
+msgstr "学校假期"
 
 #: holidaycategories.cpp:51
 msgctxt "QObject|government holiday type"
 msgid "government"
-msgstr ""
+msgstr "政府纪念日"
 
 #: holidaycategories.cpp:54
 msgctxt "QObject|financial holiday type"
 msgid "financial"
-msgstr ""
+msgstr "金融休市日"
 
 #: holidaycategories.cpp:57
 msgctxt "QObject|cultural holiday type"
 msgid "cultural"
-msgstr ""
+msgstr "文化节日"
 
 #: holidaycategories.cpp:60
 msgctxt "QObject|commemorative holiday type"
 msgid "commemorative"
-msgstr ""
+msgstr "纪念日"
 
 #: holidaycategories.cpp:63
 msgctxt "QObject|historical holiday type"
 msgid "historical"
-msgstr ""
+msgstr "历史纪念日"
 
 #: holidaycategories.cpp:66
 msgctxt "QObject|nameday holiday type"
 msgid "nameday"
-msgstr ""
+msgstr "命名日"
 
 #: holidaycategories.cpp:69
 msgctxt "QObject|seasonal holiday type"
 msgid "seasonal"
-msgstr ""
+msgstr "节气日"
 
 #: holidaycategories.cpp:77
 msgctxt "QObject|"
@@ -112,13 +112,15 @@ msgid ""
 "historical event, or to honor people.  Public holidays are always bounded to "
 "a political region at national, regional or local level."
 msgstr ""
+"公共假日：通常为纪念历史事件或致敬人物而设定的全国性、地区性或地方性的工作或"
+"学校休假。"
 
 #: holidaycategories.cpp:82
 msgctxt "QObject|"
 msgid ""
 "Civil Service Holiday: a day-off from work for government workers but not a "
 "day off for private sector workers."
-msgstr ""
+msgstr "公务员假日：政府工作人员放假，但私营部门员工不放假。"
 
 #: holidaycategories.cpp:85
 msgctxt "QObject|"
@@ -129,6 +131,9 @@ msgid ""
 "historical remembrances, etc. Governments often have public holidays for "
 "some religious holidays."
 msgstr ""
+"宗教节日：与宗教相关的特殊日子，不受任何政治区域的限制。其性质多样，如禁止工"
+"作/学习的圣日、祈祷义务日、再到历史纪念日等等。政府通常会将某些宗教节日定为公"
+"共假日。"
 
 #: holidaycategories.cpp:91
 msgctxt "QObject|"
@@ -137,18 +142,20 @@ msgid ""
 "extended periods between school terms.  This can vary widely depending on "
 "school level, type, location."
 msgstr ""
+"学校假期：指学校停课的日子，要么是公共假日，要么是学期间的长假 (如寒暑假)，具"
+"体因学校级别、类型和地区而异。"
 
 #: holidaycategories.cpp:96
 msgctxt "QObject|"
 msgid ""
 "Government Holiday: a special day recognized by a political region but "
 "without a day-off for workers, students, etc."
-msgstr ""
+msgstr "政府纪念日：由政治区域认定的特殊日子，但无工作或学校放假安排。"
 
 #: holidaycategories.cpp:99
 msgctxt "QObject|"
 msgid "Financial Holiday: banks and markets may close on some public holidays"
-msgstr ""
+msgstr "金融休市日：银行或市场可能在部分公共假日关闭。"
 
 #: holidaycategories.cpp:102
 msgctxt "QObject|"
@@ -157,6 +164,8 @@ msgid ""
 "to a political region. A day where people celebrate in some fashion. eg. "
 "Halloween, St. Valentines"
 msgstr ""
+"文化节日：在某种文化中具有特殊意义的日子，通常与某个政治区域相关联。人们会在"
+"这一天以某种方式庆祝。例如：万圣节、情人节等。"
 
 #: holidaycategories.cpp:107
 msgctxt "QObject|"
@@ -164,13 +173,14 @@ msgid ""
 "Commemorative Holiday: a special day to remember usually bound to a "
 "political region. Not a day-off from work or school; banks are open, etc."
 msgstr ""
+"纪念日：用于纪念事件或人物 (通常与政治区域相关)，无放假安排，银行等照常营业。"
 
 #: holidaycategories.cpp:111
 msgctxt "QObject|"
 msgid ""
 "Historical Holiday: similar to a Commemorative Holiday but historical in "
 "nature."
-msgstr ""
+msgstr "历史纪念日：性质与纪念日类似，侧重历史事件。"
 
 #: holidaycategories.cpp:114
 msgctxt "QObject|"
@@ -178,13 +188,15 @@ msgid ""
 "Name Day Holiday: in some political regions each day is assigned a first "
 "name and persons with that name celebrate that day as their \"Name Day\"."
 msgstr ""
+"命名日：在一些政治区域，每一天都被分配了一个名字，拥有这个名字的人会在那一天"
+"庆祝他们的“命名日”。"
 
 #: holidaycategories.cpp:119
 msgctxt "QObject|"
 msgid ""
 "Seasonal Days: the day corresponds to a seasonal event like an equinox, "
 "solstice, daylight saving time starts/ends."
-msgstr ""
+msgstr "节气日：指与季节事件相关的日子 (如春分、冬至、夏令时起止日)。"
 
 #: holidayregion.cpp:228
 msgctxt "HolidayRegion|Canadian region"
