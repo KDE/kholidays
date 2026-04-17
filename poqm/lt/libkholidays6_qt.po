@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: libkholidays\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2015-06-13 09:34+0000\n"
-"PO-Revision-Date: 2022-11-19 01:25+0200\n"
+"PO-Revision-Date: 2026-04-17 00:47+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.2.1\n"
+"X-Generator: Poedit 3.8\n"
 "X-Qt-Contexts: true\n"
 
 #: astroseasons.cpp:139
@@ -56,89 +56,59 @@ msgid "Description"
 msgstr "Aprašas"
 
 #: holidaycategories.cpp:39
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Public"
 msgctxt "QObject|public holiday type"
 msgid "public"
-msgstr "Visuomeninės"
+msgstr "visuomeninės"
 
 #: holidaycategories.cpp:42
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Civil"
 msgctxt "QObject|civil holiday type"
 msgid "civil"
-msgstr "Civilinės"
+msgstr "civilinės"
 
 #: holidaycategories.cpp:45
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Religious"
 msgctxt "QObject|religious holiday type"
 msgid "religious"
-msgstr "Religinės"
+msgstr "religinės"
 
 #: holidaycategories.cpp:48
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "School"
 msgctxt "QObject|school holiday type"
 msgid "school"
-msgstr "Mokyklinės"
+msgstr "mokyklinės"
 
 #: holidaycategories.cpp:51
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Government"
 msgctxt "QObject|government holiday type"
 msgid "government"
-msgstr "Valstybinės"
+msgstr "valstybinės"
 
 #: holidaycategories.cpp:54
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Financial"
 msgctxt "QObject|financial holiday type"
 msgid "financial"
-msgstr "Finansinės"
+msgstr "finansinės"
 
 #: holidaycategories.cpp:57
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Cultural"
 msgctxt "QObject|cultural holiday type"
 msgid "cultural"
-msgstr "Kultūrinės"
+msgstr "kultūrinės"
 
 #: holidaycategories.cpp:60
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Commemorative"
 msgctxt "QObject|commemorative holiday type"
 msgid "commemorative"
-msgstr "Atminimo"
+msgstr "atminimo"
 
 #: holidaycategories.cpp:63
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Historical"
 msgctxt "QObject|historical holiday type"
 msgid "historical"
-msgstr "Istorinės"
+msgstr "istorinės"
 
 #: holidaycategories.cpp:66
 msgctxt "QObject|nameday holiday type"
 msgid "nameday"
-msgstr ""
+msgstr "vardadieniai"
 
 #: holidaycategories.cpp:69
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Seasonal"
 msgctxt "QObject|seasonal holiday type"
 msgid "seasonal"
-msgstr "Sezoninės"
+msgstr "sezoninės"
 
 #: holidaycategories.cpp:77
 msgctxt "QObject|"
@@ -147,6 +117,10 @@ msgid ""
 "historical event, or to honor people.  Public holidays are always bounded to "
 "a political region at national, regional or local level."
 msgstr ""
+"Visuomeninė šventinė diena: laisva nuo darbo ar mokyklos diena (įprastai) "
+"siekiant paminėti istorinį įvykį ar pagerbti žmones. Visuomeninės šventinės "
+"dienos yra visada nacionaliniu, regioniniu ar vietiniu lygmeniu siejamos su "
+"politiniu regionu."
 
 #: holidaycategories.cpp:82
 msgctxt "QObject|"
@@ -154,6 +128,8 @@ msgid ""
 "Civil Service Holiday: a day-off from work for government workers but not a "
 "day off for private sector workers."
 msgstr ""
+"Valstybinės civilinės tarnybos šventinė diena: laisva nuo darbo diena "
+"valstybės tarnautojams, tačiau darbo diena privataus sektoriaus darbuotojams."
 
 #: holidaycategories.cpp:85
 msgctxt "QObject|"
@@ -164,6 +140,11 @@ msgid ""
 "historical remembrances, etc. Governments often have public holidays for "
 "some religious holidays."
 msgstr ""
+"Religinė šventinė diena: ypatinga diena religijoje ir nesiejama su jokiu "
+"politiniu regionu. Religijose būna šventinių dienų, kurios skiriasi "
+"pamaldumu: dienos, kai draudžiama dirbti/eiti į mokyklą, maldos privalomumo "
+"dienos, istoriniai atminimai ir t.t. Dažnu atveju valstybėse tam tikros "
+"religinės šventinės dienos metu būna nedarbo diena."
 
 #: holidaycategories.cpp:91
 msgctxt "QObject|"
@@ -172,6 +153,9 @@ msgid ""
 "extended periods between school terms.  This can vary widely depending on "
 "school level, type, location."
 msgstr ""
+"Mokyklinė šventinė diena: laisva nuo mokyklos diena, kuri gali būti kaip "
+"viena laisva šventinė diena arba ilgesni laikotarpiai tarp mokyklinių "
+"užsiėmimų. Tai gali kisti priklausomai nuo mokyklos lygio, tipo ir vietos."
 
 #: holidaycategories.cpp:96
 msgctxt "QObject|"
@@ -179,11 +163,15 @@ msgid ""
 "Government Holiday: a special day recognized by a political region but "
 "without a day-off for workers, students, etc."
 msgstr ""
+"Valstybinė šventinė diena: ypatinga politinio regiono pripažįstama diena, "
+"kuri anaiptol nėra laisva nuo darbo, mokslų ir pan."
 
 #: holidaycategories.cpp:99
 msgctxt "QObject|"
 msgid "Financial Holiday: banks and markets may close on some public holidays"
 msgstr ""
+"Finansinė šventinė diena: tam tikrų visuomeninių šventinių dienų metu bankai "
+"ir parduotuvės gali nedirbti."
 
 #: holidaycategories.cpp:102
 msgctxt "QObject|"
@@ -192,6 +180,9 @@ msgid ""
 "to a political region. A day where people celebrate in some fashion. eg. "
 "Halloween, St. Valentines"
 msgstr ""
+"Kultūrinė šventinė diena: ypatinga diena kultūroje ir todėl, įprastai "
+"siejama su politiniu regionu. Diena, kurią žmonės švenčia tam tikru būdu, "
+"pvz., Helovinas, šv. Valentino diena."
 
 #: holidaycategories.cpp:107
 msgctxt "QObject|"
@@ -199,6 +190,9 @@ msgid ""
 "Commemorative Holiday: a special day to remember usually bound to a "
 "political region. Not a day-off from work or school; banks are open, etc."
 msgstr ""
+"Atminimo šventinė diena: ypatinga prisiminimo diena, įprastai siejama su "
+"politiniu regionu. Nėra nedarbo ar atostogų mokykloje diena; bankai ir kitos "
+"įstaigos dirba įprastai."
 
 #: holidaycategories.cpp:111
 msgctxt "QObject|"
@@ -206,6 +200,8 @@ msgid ""
 "Historical Holiday: similar to a Commemorative Holiday but historical in "
 "nature."
 msgstr ""
+"Istorinė šventinė diena: panaši į atminimo šventinę dieną, bet labiau "
+"istorinės kilmės."
 
 #: holidaycategories.cpp:114
 msgctxt "QObject|"
@@ -213,6 +209,9 @@ msgid ""
 "Name Day Holiday: in some political regions each day is assigned a first "
 "name and persons with that name celebrate that day as their \"Name Day\"."
 msgstr ""
+"Vardadienio šventinės dienа: kai kuriuose politiniuose regionuose kiekvienai "
+"dienai yra priskiriamas vardas, o žmonės, turintys tą vardą, švenčia tą "
+"dieną kaip savo „vardadienį“."
 
 #: holidaycategories.cpp:119
 msgctxt "QObject|"
@@ -220,6 +219,8 @@ msgid ""
 "Seasonal Days: the day corresponds to a seasonal event like an equinox, "
 "solstice, daylight saving time starts/ends."
 msgstr ""
+"Sezoninės dienos: diena atitinka sezoninį įvykį, pavyzdžiui, lygiadienį, "
+"saulėgrįžą, vasaros laiko pradžią/pabaigą."
 
 #: holidayregion.cpp:228
 msgctxt "HolidayRegion|Canadian region"
@@ -374,7 +375,7 @@ msgstr "Tasmanija"
 #: holidayregion.cpp:290
 msgctxt "HolidayRegion|Bosnian and Herzegovinian Region"
 msgid "Republic of Srpska"
-msgstr "Serbų respublika"
+msgstr "Serbijos Respublika"
 
 #: holidayregion.cpp:308
 msgctxt "HolidayRegion|Holiday type"
@@ -506,7 +507,7 @@ msgstr "Musulmonų sufitų"
 msgctxt ""
 "HolidayRegion|Holiday file display name, %1 = region name, %2 = holiday type"
 msgid "%1 - %2"
-msgstr "%1 - %2"
+msgstr "%1 – %2"
 
 #: holidayregion.cpp:370
 msgctxt "HolidayRegion|Unknown holiday region"
