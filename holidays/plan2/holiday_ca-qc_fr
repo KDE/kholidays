@@ -37,8 +37,8 @@ description "Liste des jours fériés, chômés et payés"
 
 :: Cultural
 "St Valentin"                         cultural on february 14
-"Fêtes des Meres"                     cultural on second sunday in may
-"Fêtes des Peres"                     cultural on third sunday in june
+"Fête des Mères"                     cultural on second sunday in may
+"Fête des Pères"                     cultural on third sunday in june
 
 :: School
 
