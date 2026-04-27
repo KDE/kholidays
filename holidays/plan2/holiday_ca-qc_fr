@@ -22,7 +22,7 @@ description "Liste des jours fériés, chômés et payés"
 "Vendredi saint"                      public religious on easter minus 2 days
 "Pâques"                              public religious on easter
 "Lundi de Pâques"                     public on easter plus 1 day
-"Jour de la Reine (Journée nationale des patriotes)"  public on monday before may 25
+"Jour de la Reine (Journée nationale des patriotes)"  public on monday before may 24
 "Fête nationale du Québec"    public on june 24
 "Fête du Canada"            public on july 1
 "Fête du Travail"                     public on first monday in september
