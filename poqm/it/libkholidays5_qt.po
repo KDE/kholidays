@@ -1,8 +1,8 @@
 # translation of libkholidays.po to Italian
 #
+# SPDX-FileCopyrightText: 2007, 2011, 2014, 2015, 2020, 2022, 2026 Luigi Toscano <luigi.toscano@tiscali.it>
 # Alessandro Pasotti <ale.pas@tiscalinet.it>, 2005.
 # Salvatore Brigaglia <opensourcecat@gmail.com>, 2007.
-# Luigi Toscano <luigi.toscano@tiscali.it>, 2007, 2011, 2014, 2015, 2020, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: libkholidays\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.12.3\n"
 "X-Qt-Contexts: true\n"
 
 #: astroseasons.cpp:139
