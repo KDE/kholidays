@@ -1,6 +1,6 @@
 # translation of libkholidays.po to Italian
 #
-# SPDX-FileCopyrightText: 2007, 2011, 2014, 2015, 2020, 2022, 2026 Luigi Toscano <luigi.toscano@tiscali.it>
+# SPDX-FileCopyrightText: 2007, 2011, 2014-2015, 2020, 2022, 2026 Luigi Toscano <luigi.toscano@tiscali.it>
 # Alessandro Pasotti <ale.pas@tiscalinet.it>, 2005.
 # Salvatore Brigaglia <opensourcecat@gmail.com>, 2007.
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: libkholidays\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2015-06-13 09:34+0000\n"
-"PO-Revision-Date: 2026-04-29 00:55+0200\n"
+"PO-Revision-Date: 2026-05-05 00:19+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.0\n"
 "X-Qt-Contexts: true\n"
 
 #: astroseasons.cpp:139
@@ -127,6 +127,8 @@ msgid ""
 "Civil Service Holiday: a day-off from work for government workers but not a "
 "day off for private sector workers."
 msgstr ""
+"Festività di servizio civile: un giorno libero dal lavoro per il lavoratori "
+"della pubblica amministrazione ma non per quelli del settore privato."
 
 #: holidaycategories.cpp:85
 msgctxt "QObject|"
@@ -137,6 +139,11 @@ msgid ""
 "historical remembrances, etc. Governments often have public holidays for "
 "some religious holidays."
 msgstr ""
+"Festività religiosa: un giorno speciale per una religione e non collegato ad "
+"alcuna regione politica. Le religioni possono avere festività che variano in "
+"termini di devozione da quelle in cui lavoro/scuola sono proibiti, giorno "
+"con obbligo di preghiera, per commemorazione storica, ecc. I governi spesso "
+"hanno festività pubbliche in corrispondenza di alcune festività religiose."
 
 #: holidaycategories.cpp:91
 msgctxt "QObject|"
@@ -145,6 +152,9 @@ msgid ""
 "extended periods between school terms.  This can vary widely depending on "
 "school level, type, location."
 msgstr ""
+"Festività scolastica: un giorno libero da scuola, come festività pubblica "
+"singola o come periodo esteso tra periodi scolastici. Questo può variare "
+"notevolmente in base al livello, al tipo e all'ubicazione della scuola."
 
 #: holidaycategories.cpp:96
 msgctxt "QObject|"
@@ -152,6 +162,8 @@ msgid ""
 "Government Holiday: a special day recognized by a political region but "
 "without a day-off for workers, students, etc."
 msgstr ""
+"Festività governativa: un giorno speciale riconosciuto da una regione "
+"politica ma senza giorno libero per lavoratori, studenti, ecc."
 
 #: holidaycategories.cpp:99
 msgctxt "QObject|"
@@ -167,6 +179,9 @@ msgid ""
 "to a political region. A day where people celebrate in some fashion. eg. "
 "Halloween, St. Valentines"
 msgstr ""
+"Festività culturale: un giorno speciale nella cultura e perciò normalmente "
+"legato ad una regione politica. Un giorno in cui le persone celebrano in "
+"qualche modo, come ad es. Halloween, San Valentino."
 
 #: holidaycategories.cpp:107
 msgctxt "QObject|"
@@ -184,6 +199,7 @@ msgid ""
 "Historical Holiday: similar to a Commemorative Holiday but historical in "
 "nature."
 msgstr ""
+"Festività storica: simile alla festività commemoratica, ma di natura storica."
 
 #: holidaycategories.cpp:114
 msgctxt "QObject|"
@@ -191,6 +207,9 @@ msgid ""
 "Name Day Holiday: in some political regions each day is assigned a first "
 "name and persons with that name celebrate that day as their \"Name Day\"."
 msgstr ""
+"Festività dell'onomastico: in alcune regioni politiche ad ogni giorno è "
+"associato un nome proprio e le persone con quel nome celebrano quel giorno "
+"come il proprio «onomastico»."
 
 #: holidaycategories.cpp:119
 msgctxt "QObject|"
@@ -198,6 +217,8 @@ msgid ""
 "Seasonal Days: the day corresponds to a seasonal event like an equinox, "
 "solstice, daylight saving time starts/ends."
 msgstr ""
+"Giorni stagionali: il giorno corrisponde ad un evento stagionale come un "
+"equinozio, un solstizio, l'inizio o la fine dell'ora legale."
 
 #: holidayregion.cpp:228
 msgctxt "HolidayRegion|Canadian region"
