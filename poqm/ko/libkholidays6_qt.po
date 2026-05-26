@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2015, 2016, 2020, 2022.
+# SPDX-FileCopyrightText: 2015, 2016, 2020, 2022, 2026 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2015-06-13 09:34+0000\n"
-"PO-Revision-Date: 2022-10-03 15:48+0200\n"
+"PO-Revision-Date: 2026-05-25 21:11+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
-"Language-Team: Korean <kde-i18n-doc@kde.org>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.12.3\n"
 "X-Qt-Contexts: true\n"
 
 #: astroseasons.cpp:139
@@ -54,73 +54,46 @@ msgid "Description"
 msgstr "설명"
 
 #: holidaycategories.cpp:39
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Public"
 msgctxt "QObject|public holiday type"
 msgid "public"
-msgstr "공공"
+msgstr "공휴일"
 
 #: holidaycategories.cpp:42
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Civil"
 msgctxt "QObject|civil holiday type"
 msgid "civil"
-msgstr "민간"
+msgstr "공무"
 
 #: holidaycategories.cpp:45
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Religious"
 msgctxt "QObject|religious holiday type"
 msgid "religious"
 msgstr "종교"
 
 #: holidaycategories.cpp:48
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "School"
 msgctxt "QObject|school holiday type"
 msgid "school"
 msgstr "학교"
 
 #: holidaycategories.cpp:51
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Government"
 msgctxt "QObject|government holiday type"
 msgid "government"
 msgstr "정부"
 
 #: holidaycategories.cpp:54
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Financial"
 msgctxt "QObject|financial holiday type"
 msgid "financial"
-msgstr "경제"
+msgstr "금융"
 
 #: holidaycategories.cpp:57
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Cultural"
 msgctxt "QObject|cultural holiday type"
 msgid "cultural"
 msgstr "문화"
 
 #: holidaycategories.cpp:60
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Commemorative"
 msgctxt "QObject|commemorative holiday type"
 msgid "commemorative"
 msgstr "기념"
 
 #: holidaycategories.cpp:63
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Historical"
 msgctxt "QObject|historical holiday type"
 msgid "historical"
 msgstr "역사"
@@ -128,12 +101,9 @@ msgstr "역사"
 #: holidaycategories.cpp:66
 msgctxt "QObject|nameday holiday type"
 msgid "nameday"
-msgstr ""
+msgstr "명명일"
 
 #: holidaycategories.cpp:69
-#, fuzzy
-#| msgctxt "HolidayRegion|Holiday type"
-#| msgid "Seasonal"
 msgctxt "QObject|seasonal holiday type"
 msgid "seasonal"
 msgstr "계절"
@@ -145,6 +115,8 @@ msgid ""
 "historical event, or to honor people.  Public holidays are always bounded to "
 "a political region at national, regional or local level."
 msgstr ""
+"공휴일: 역사적 사건이나 특정 인물을 기념하기 위하여 직장이나 학교가 휴업하는 "
+"날입니다. 공휴일은 국가, 지역, 지자체 단위에서 결정됩니다."
 
 #: holidaycategories.cpp:82
 msgctxt "QObject|"
@@ -152,6 +124,7 @@ msgid ""
 "Civil Service Holiday: a day-off from work for government workers but not a "
 "day off for private sector workers."
 msgstr ""
+"공무 휴일: 공무원은 휴업하지만 민간 직종 종사자들은 정상적으로 영업합니다."
 
 #: holidaycategories.cpp:85
 msgctxt "QObject|"
@@ -162,6 +135,10 @@ msgid ""
 "historical remembrances, etc. Governments often have public holidays for "
 "some religious holidays."
 msgstr ""
+"종교적 휴일: 특정한 지역과 관계 없이 종교에서 기념하는 날입니다. 직장/학교에"
+"서의 활동을 중단할 정도로 엄격하게 지키거나, 일정 기간 동안 의무적으로 기도"
+"를 드리거나, 역사적인 사건을 기념하기도 합니다. 일부 종교적 휴일은 공휴일이기"
+"도 합니다."
 
 #: holidaycategories.cpp:91
 msgctxt "QObject|"
@@ -170,6 +147,8 @@ msgid ""
 "extended periods between school terms.  This can vary widely depending on "
 "school level, type, location."
 msgstr ""
+"학교 휴일: 하루 휴업하는 공휴일이나 일정 기간 동안 휴업하는 방학 기간 등입니"
+"다. 학교 종류나 위치에 따라서 달라질 수 있습니다."
 
 #: holidaycategories.cpp:96
 msgctxt "QObject|"
@@ -177,11 +156,13 @@ msgid ""
 "Government Holiday: a special day recognized by a political region but "
 "without a day-off for workers, students, etc."
 msgstr ""
+"정부 휴일: 특정한 지역에서 기념하는 날이지만 직장인이나 학생은 정상적으로 활"
+"동을 진행하는 날입니다."
 
 #: holidaycategories.cpp:99
 msgctxt "QObject|"
 msgid "Financial Holiday: banks and markets may close on some public holidays"
-msgstr ""
+msgstr "금융 휴일: 은행과 주식 시장은 일부 공휴일에 휴업합니다"
 
 #: holidaycategories.cpp:102
 msgctxt "QObject|"
@@ -190,6 +171,8 @@ msgid ""
 "to a political region. A day where people celebrate in some fashion. eg. "
 "Halloween, St. Valentines"
 msgstr ""
+"문화적 휴일: 특정 문화권에서의 특별한 날이며 지역에 따라 차이가 있습니다. 여"
+"러 형태로 기념하기도 합니다. 예: 핼러윈, 발렌타인 데이"
 
 #: holidaycategories.cpp:107
 msgctxt "QObject|"
@@ -197,13 +180,15 @@ msgid ""
 "Commemorative Holiday: a special day to remember usually bound to a "
 "political region. Not a day-off from work or school; banks are open, etc."
 msgstr ""
+"기념일: 무언가를 기리기 위한 날로 지역에 따라 차이가 있습니다. 직장이나 학교"
+"는 정상으로 업무를 진행합니다."
 
 #: holidaycategories.cpp:111
 msgctxt "QObject|"
 msgid ""
 "Historical Holiday: similar to a Commemorative Holiday but historical in "
 "nature."
-msgstr ""
+msgstr "역사적 휴일: 기념일과 비슷하지만 특정한 역사적인 사건을 기념합니다."
 
 #: holidaycategories.cpp:114
 msgctxt "QObject|"
@@ -211,6 +196,8 @@ msgid ""
 "Name Day Holiday: in some political regions each day is assigned a first "
 "name and persons with that name celebrate that day as their \"Name Day\"."
 msgstr ""
+"명명일: 일부 지역에서는 각각 이름별로 특정한 날짜를 가지고 있으며, 같은 이름"
+"을 가진 사람들이 그 날을 명명일로 기념합니다."
 
 #: holidaycategories.cpp:119
 msgctxt "QObject|"
@@ -218,6 +205,7 @@ msgid ""
 "Seasonal Days: the day corresponds to a seasonal event like an equinox, "
 "solstice, daylight saving time starts/ends."
 msgstr ""
+"계절: 하지, 동지, 일광 절약 시간 시작/끝과 같은 계절의 변화를 나타냅니다."
 
 #: holidayregion.cpp:228
 msgctxt "HolidayRegion|Canadian region"
