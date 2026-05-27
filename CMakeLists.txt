@@ -91,7 +91,7 @@ set_package_properties(
     FLEX
     PROPERTIES
         URL
-            "http://flex.sourceforge.net"
+            "https://github.com/westes/flex"
         DESCRIPTION
             "Fast Lexical Analyzer"
         TYPE
@@ -104,7 +104,7 @@ set_package_properties(
     BISON
     PROPERTIES
         URL
-            "http://www.gnu.org/software/bison"
+            "https://www.gnu.org/software/bison"
         DESCRIPTION
             "general-purpose parser generator"
         TYPE
