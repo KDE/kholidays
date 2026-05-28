@@ -637,50 +637,50 @@ msgctxt "HolidayRegion|Unknown holiday region"
 msgid "Unknown"
 msgstr "មិន​ស្គាល់​​"
 
-#: lunarphase.cpp:28
+#: lunarphase.cpp:30
 #, fuzzy
 #| msgid "New Moon"
 msgctxt "LunarPhase|"
 msgid "New Moon"
 msgstr "ព្រះ​ច័ន្ទ​ថ្មី"
 
-#: lunarphase.cpp:30
+#: lunarphase.cpp:32
 #, fuzzy
 #| msgid "Full Moon"
 msgctxt "LunarPhase|"
 msgid "Full Moon"
 msgstr "ព្រះច័ន្ទ​ពេញ​វង់​"
 
-#: lunarphase.cpp:32
+#: lunarphase.cpp:34
 #, fuzzy
 #| msgid "First Quarter Moon"
 msgctxt "LunarPhase|"
 msgid "First Quarter Moon"
 msgstr "ចំណិត​ដំបូង​នៃ​ព្រះច័ន្ទ"
 
-#: lunarphase.cpp:34
+#: lunarphase.cpp:36
 #, fuzzy
 #| msgid "Last Quarter Moon"
 msgctxt "LunarPhase|"
 msgid "Last Quarter Moon"
 msgstr "ចំណិត​ចុង​ក្រោយ​នៃ​ព្រះច័ន្ទ​"
 
-#: lunarphase.cpp:38
+#: lunarphase.cpp:40
 msgctxt "LunarPhase|"
 msgid "Waxing Crescent"
 msgstr ""
 
-#: lunarphase.cpp:40
+#: lunarphase.cpp:42
 msgctxt "LunarPhase|"
 msgid "Waxing Gibbous"
 msgstr ""
 
-#: lunarphase.cpp:42
+#: lunarphase.cpp:44
 msgctxt "LunarPhase|"
 msgid "Waning Gibbous"
 msgstr ""
 
-#: lunarphase.cpp:44
+#: lunarphase.cpp:46
 msgctxt "LunarPhase|"
 msgid "Waning Crescent"
 msgstr ""
