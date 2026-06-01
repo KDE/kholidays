@@ -123,6 +123,17 @@ install(
     COMPONENT Devel
 )
 
+ecm_add_installed_library_check(KF6Holidays
+PACKAGE_NAME "KF6Holidays"
+PACKAGE_VERSION ${PROJECT_VERSION}
+PACKAGE_TARGET_NAMESPACE "KF6::"
+)
+
+ecm_installed_library_check_include_strings(KF6Holidays
+HEADERS  ${KHolidays_CamelCase_HEADERS}
+PREFIX KHolidays
+)
+
 add_subdirectory(declarative)
 
 ecm_generate_qdoc(KF6Holidays kholidays.qdocconf)
