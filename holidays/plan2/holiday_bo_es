@@ -1,0 +1,65 @@
+::
+:: Country:  Bolivia
+::
+:: Language: Spanish
+::
+:: Author:   Allen Winter <winter@kde.org>
+::
+:: Updated:  02-JUN-2026
+::
+:: Source:
+
+:: Metadata
+country     "BO"
+language    "es"
+:name        "optional - defaults to country name"
+description "Feriados Nacionales de Bolivia"
+
+:: Public Holidays
+"Año Nuevo"                                    public on january 1
+"Día de la Fundación del Estado Plurinacional" public on january 22
+"Lunes de Carnaval"                            public on easter minus 48
+"Martes de Carnaval"                           public on easter minus 47
+"Viernes Santo"                                public on easter minus 2
+"Corpus Christi"                               public on easter plus 60
+"Día del Trabajo"                              public on may 1
+"Año Nuevo Andino, Amazónico y del Chaco"      public on june 21
+"Día de la Independencia de Bolivia"           public on august 6
+"Día de Todos los Santos"                      public on november 2
+"Navidad"                                      public on december 25
+
+:: non-working only in the department specified
+
+"Revolución de Oruro (Oruro)"                 public on february 10
+"Batalla de la Tablada (Tarija)"              public on april 15
+"Primer Grito Libertario (Chuquisaca)"        public on may 25
+"Revolución de La Paz"                        public on july 16
+"Revolución de Cochabamba (Cochabamba)"       public on september 14
+"Revolución de Santa Cruz (Santa Cruz)"       public on september 24
+"Creación de Pando (Pando)"                   public on september 24
+"Grito Libertario (Potosí)"                   public on november 10
+"Creación de Beni (Beni)"                     public on november 18
+
+:: Cultural, non-religious
+
+"Creación de la ciudad de El Alto"            cultural on march 6
+"Día del Padre"                               cultural on march 19
+"Día del Mar"                                 cultural on march 23
+"Día del Niño Boliviano"                      cultural on april 12
+"Día Nacional contra el Racismo y toda forma de Discriminación" cultural on may 24
+"Día de la Madre Boliviana"                   cultural on may 27
+"Día del Maestro Boliviano"                   cultural on june 6
+"Día de la Bandera"                           cultural on august 17
+"Día de la Mujer Boliviana"                   cultural on october 11
+
+:: Cultural, religious
+
+"Fiesta de las Alasitas"                      cultural on january 24
+"Fiesta de la Cruz / Tinku"                   cultural on may 3
+"Noche de San Juan"                           cultural on june 23
+"Fiesta de la Virgen de Copacabana"           cultural on august 5
+"Festividad de la Virgen de Urkupiña"         cultural on august 15
+"Fiesta de San Bartolomé / Ch'utillos"        cultural on august 24
+"Pujillay"                                    cultural on third sunday in march
+"Festividad del Señor Jesús del Gran Poder"   cultural on easter plus 62
+"Fiesta de San Roque"                         cultural on first sunday in september 
