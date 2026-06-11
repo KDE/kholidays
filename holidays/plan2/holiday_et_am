@@ -13,7 +13,7 @@
 :: Metadata
 country     "ET"
 language    "am"
-name        "ኢትዮጵያ"
+:name        "optional - defaults to country name"
 description "የኢትዮጵያ ብሔራዊ በዓላት"
 
 
