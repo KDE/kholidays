@@ -3,16 +3,20 @@
 ::
 :: Language: Croatian
 ::
-:: Author:   Marko Dimjašević <marko@dimjasevic.net>
+:: Authors:   Marko Dimjašević <marko@dimjasevic.net>
+::            Erik Paladin <erik.paladin@proton.me>
 ::
-:: Updated:  2011-02-13
+:: Updated:  2026-06-11
 ::
 :: Source:   Hrvatski sabor: Zakon o blagdanima, spomendanima i neradnim danima
 ::           u Republici Hrvatskoj
-::           http://narodne-novine.nn.hr/clanci/sluzbeni/309949.html
+::           https://narodne-novine.nn.hr/clanci/sluzbeni/2019_11_110_2212.html
 ::           Hrvatski sabor: Zakon o izmjenama i dopunama zakona o blagdanima,
 ::           spomendanima i neradnim danima u Republici Hrvatskoj
 ::           http://narodne-novine.nn.hr/clanci/sluzbeni/339400.html
+::           Hrvatski sabor: Odluka o proglašenju zakona o dopuni zakona o blagdanima,
+::           spomendanima i neradnim danima u Republici Hrvatskoj
+::           https://narodne-novine.nn.hr/clanci/sluzbeni/2025_04_72_936.html
 ::
 
 :: Metadata
@@ -27,14 +31,15 @@ description "Datoteka s blagdanima, spomendanima i neradnim danima u Hrvatskoj"
 "Uskrsni ponedjeljak"                                              public religious on easter plus 1 day
 "Tijelovo"                                                         public religious on easter plus 60 days
 "Praznik rada"                                                     public on may 1
+"Dan državnosti"                                                   public on may 30
 "Dan antifašističke borbe"                                         public on june 22
-"Dan državnosti"                                                   public on june 25
 "Dan pobjede i domovinske zahvalnosti i Dan hrvatskih branitelja"  public on august 5
-"Velika Gospa"                                                     public on august 15
-"Dan neovisnosti"                                                  public on october 8
+"Velika Gospa"                                                     public religious august 15
 "Svi sveti"                                                        public on november 1
+"Dan sjećanja na žrtve Domovinskog rata i Dan sjećanja na žrtvu Vukovara i Škabrnje"
+                                                                   public on november 18
 "Božić"                                                            public religious on december 25
-"Sveti Stjepan"                                                    public on december 26
+"Sveti Stjepan"                                                    public religious on december 26
 
 :: Religious Holidays
 "Uskrs"                                                            religious on easter
@@ -46,6 +51,24 @@ description "Datoteka s blagdanima, spomendanima i neradnim danima u Hrvatskoj"
 "Presveto Trojstvo"                                                religious on easter plus 56 days
 
 :: Financial
+
+:: Commemorative
+
+"Dan sjedinjenja Međimurja s maticom zemljom Hrvatskom"            commemorative on january 9
+"Dan međunarodnoga priznanja Republike Hrvatske i Dan mirne reintegracije hrvatskog Podunavlja"
+                                                                   commemorative on january 15
+"Dan osnivanja Narodne zaštite"                                    commemorative on march 15
+"Dan pogibije Zrinskog i Frankopana"                               commemorative on april 30
+"Dan sjećanja na ubijenu i stradalu djecu u Domovinskom ratu"      commemorative on may 3
+"Dan Europe i Dan pobjede nad fašizmom"                            commemorative on may 9
+"Dan spomena na hrvatske žrtve u borbi za slobodu i nezavisnost"   commemorative on may 15
+"Dan neovisnosti"                                                  commemorative on june 25
+"Europski dan sjećanja na žrtve totalitarnih i autoritarnih režima – nacizma, fašizma i komunizma"
+                                                                   commemorative on august 23
+"Dan sjećanja na nestale osobe u Domovinskom ratu"                 commemorative on august 30
+"Dan donošenja Odluke o sjedinjenju Istre, Rijeke, Zadra i otoka s maticom zemljom Hrvatskom"
+                                                                   commemorative on september 25
+"Dan Hrvatskoga sabora"                                            commemorative on october 8
 
 :: Cultural
 "Valentinovo"                                                      cultural on february 14
@@ -60,13 +83,11 @@ description "Datoteka s blagdanima, spomendanima i neradnim danima u Hrvatskoj"
 "Međunarodni dan mladih"                                           cultural on august 12
 "Dan slobodnog softvera"                                           cultural on third saturday in september
 "Međunarodni dan mira"                                             cultural on september 21
-"Dan sjećanja na Vukovar"                                          cultural on november 18
 "Dan hrvatskog kazališta"                                          cultural on november 24
 "Međunarodni dan volontera"                                        cultural on december 5
 "Sveti Nikola"                                                     cultural on december 6
 
 :: School
-"Početak školske godine"                                           school on september 1
 "Međunarodni dan pismenosti (UNESCO)"                              school on september 8
 "Europski dan jezika"                                              school on september 26
 "Međunarodni dan učitelja"                                         school on october 5
@@ -75,8 +96,3 @@ description "Datoteka s blagdanima, spomendanima i neradnim danima u Hrvatskoj"
 :: Daylight Saving
 "Ljetno računanje vremena"                                         seasonal on last sunday in march
 "Zimsko računanje vremena"                                         seasonal on last sunday in october
-
-:: Name Days
-
-:: To be sorted
-"Dan Hrvatskoga sabora"                                            civil on may 30
