@@ -1,0 +1,50 @@
+::
+:: Country:  Ethiopia
+::
+:: Language: English
+::
+:: Author:   Eyobed Awel <eyobedawel@protonmail.com>
+::
+:: Updated:  2026-06-11
+::
+:: Source:   https://en.wikipedia.org/wiki/Public_holidays_in_Ethiopia
+::
+
+:: Metadata
+country     "ET"
+language    "en"
+name        "Ethiopia"
+description "Public holidays in Ethiopia"
+
+
+:: Public Holidays
+
+: Enkutatash (New Year)
+"Enkutatash"                                       public on ethiopian meskerem 1
+: Meskel (Discovery of the True Cross)
+"Meskel"                                           public religious on ethiopian meskerem 17
+: Genna (Christmas)
+"Genna"                                            public religious on ethiopian tahsas 29
+: Timkat (Epiphany)
+"Timkat"                                           public religious on ethiopian ter 11
+: Adwa Victory Day
+"Adwa Victory Day"                                 public commemorative on ethiopian yakatit 23
+: Patriots' Victory Day
+"Patriots' Victory Day"                            public commemorative on ethiopian miyazya 27
+: Downfall of the Derg
+"Downfall of the Derg"                             public commemorative on ethiopian genbot 20
+
+: Sikilet (Good Friday)
+"Sikilet"                                          public religious on pascha minus 2 days
+: Fasika (Easter Sunday)
+"Fasika"                                           public religious on pascha
+
+: International Workers' Day
+"International Workers' Day"                       public on may 1
+
+: Eid al-Fitr (End of Ramadan)
+"Eid al-Fitr"                                      public religious on hijri shawwal 1 length 3
+: Eid al-Adha (Feast of Sacrifice)
+"Eid al-Adha"                                      public religious on hijri thualhijjah 10 length 3
+: Mawlid (Prophet's Birthday)
+"Mawlid"                                           public religious on hijri rabialawal 12
