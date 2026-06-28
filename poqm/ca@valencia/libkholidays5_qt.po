@@ -345,7 +345,7 @@ msgstr "Islam sufí"
 msgctxt ""
 "HolidayRegion|Holiday file display name, %1 = region name, %2 = holiday type"
 msgid "%1 - %2"
-msgstr "%1 - %2"
+msgstr "%1 – %2"
 
 #: holidayregion.cpp:1028
 msgctxt "HolidayRegion|Unknown holiday region"
