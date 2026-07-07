@@ -1,20 +1,19 @@
 # Translation of libkholidays6_qt to Norwegian Nynorsk
 #
 # Gaute Hvoslef Kvalnes <gaute@verdsveven.com>, 2005.
-# Karl Ove Hufthammer <karl@huftis.org>, 2008, 2018, 2020, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: libkholidays\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2015-06-13 09:34+0000\n"
-"PO-Revision-Date: 2022-09-11 19:41+0200\n"
+"PO-Revision-Date: 2026-07-06 20:43+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 26.11.70\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -56,70 +55,62 @@ msgctxt "HolidayRegionsDeclarativeModel|"
 msgid "Description"
 msgstr "Skildring"
 
+# Sjå neste tekst + seinare forklaring. Usikkert på om dette må vera berre eitt ord, men prøver på det. Er utfordrande å få brukbare namn på norsk.
 #: holidaycategories.cpp:39
-#, fuzzy
 msgctxt "QObject|public holiday type"
 msgid "public"
-msgstr "Offentleg"
+msgstr "fridag"
 
 #: holidaycategories.cpp:42
-#, fuzzy
 msgctxt "QObject|civil holiday type"
 msgid "civil"
-msgstr "Borgarleg"
+msgstr "offentleg"
 
 #: holidaycategories.cpp:45
-#, fuzzy
 msgctxt "QObject|religious holiday type"
 msgid "religious"
-msgstr "Religiøs"
+msgstr "religiøs"
 
 #: holidaycategories.cpp:48
-#, fuzzy
 msgctxt "QObject|school holiday type"
 msgid "school"
-msgstr "Skule"
+msgstr "skule"
 
+# Upresist, men det er iallfall det som liknar mest på norsk.
 #: holidaycategories.cpp:51
-#, fuzzy
 msgctxt "QObject|government holiday type"
 msgid "government"
-msgstr "Statleg"
+msgstr "flaggdag"
 
 #: holidaycategories.cpp:54
-#, fuzzy
 msgctxt "QObject|financial holiday type"
 msgid "financial"
-msgstr "Finansiell"
+msgstr "finansiell"
 
 #: holidaycategories.cpp:57
-#, fuzzy
 msgctxt "QObject|cultural holiday type"
 msgid "cultural"
-msgstr "Kulturell"
+msgstr "kulturell"
 
 #: holidaycategories.cpp:60
-#, fuzzy
 msgctxt "QObject|commemorative holiday type"
 msgid "commemorative"
-msgstr "Minnedag"
+msgstr "minnedag"
 
 #: holidaycategories.cpp:63
-#, fuzzy
 msgctxt "QObject|historical holiday type"
 msgid "historical"
-msgstr "Historisk"
+msgstr "historisk"
 
 #: holidaycategories.cpp:66
 msgctxt "QObject|nameday holiday type"
 msgid "nameday"
-msgstr ""
+msgstr "namnedag"
 
 #: holidaycategories.cpp:69
-#, fuzzy
 msgctxt "QObject|seasonal holiday type"
 msgid "seasonal"
-msgstr "Årstid"
+msgstr "sesong"
 
 #: holidaycategories.cpp:77
 msgctxt "QObject|"
@@ -128,13 +119,19 @@ msgid ""
 "historical event, or to honor people.  Public holidays are always bounded to "
 "a political region at national, regional or local level."
 msgstr ""
+"Offentleg fridag: Ein dag der ein har fri frå arbeid og skule. Offentlege "
+"fridagar er alltid knytte til eit administrativt område, anten nasjonalt, "
+"regionalt eller lokalt."
 
+# Dette har me jo ikkje i Noreg, men må jo omsetjast på eit vis likevel.
 #: holidaycategories.cpp:82
 msgctxt "QObject|"
 msgid ""
 "Civil Service Holiday: a day-off from work for government workers but not a "
 "day off for private sector workers."
 msgstr ""
+"Fridag for offentleg tilsette: Ein dag der tilsette i offentleg sektor har "
+"fri, men tilsette i privat sektor ikkje har det."
 
 #: holidaycategories.cpp:85
 msgctxt "QObject|"
@@ -145,6 +142,10 @@ msgid ""
 "historical remembrances, etc. Governments often have public holidays for "
 "some religious holidays."
 msgstr ""
+"Heilagdag: Ein særskild dag i ein religion, ikkje eit administrativt område. "
+"Religionar kan ha heilagdagar der for eksempel arbeid/skule er forbode, det "
+"er obligatorisk bønn eller ein minnest historisk-religiøse hendingar. I ein "
+"del land er heilag­dagar offentlege fridagar."
 
 #: holidaycategories.cpp:91
 msgctxt "QObject|"
@@ -153,6 +154,9 @@ msgid ""
 "extended periods between school terms.  This can vary widely depending on "
 "school level, type, location."
 msgstr ""
+"Skulefridag: Ein dag der elevar har fri. Det kan vera enkelt­dagar eller "
+"lengre periodar, for eksempel mellom semester. Kva dagar som er skulefri, "
+"kan variera mellom alderstrinn, skuletype og geografi."
 
 #: holidaycategories.cpp:96
 msgctxt "QObject|"
@@ -160,11 +164,13 @@ msgid ""
 "Government Holiday: a special day recognized by a political region but "
 "without a day-off for workers, students, etc."
 msgstr ""
+"Flaggdag: Ein dag anerkjend av staten eller ein administrativ region, men "
+"der ein ikkje nødvendigvis har fri."
 
 #: holidaycategories.cpp:99
 msgctxt "QObject|"
 msgid "Financial Holiday: banks and markets may close on some public holidays"
-msgstr ""
+msgstr "Finansiell dag: Bankar og marknadar kan vera stengde på slike dagar."
 
 #: holidaycategories.cpp:102
 msgctxt "QObject|"
@@ -173,6 +179,9 @@ msgid ""
 "to a political region. A day where people celebrate in some fashion. eg. "
 "Halloween, St. Valentines"
 msgstr ""
+"Kulturell dag: Ein dag med særskild kulturell tyding, oftast knytt til ein "
+"administrativ region. Omfattar òg dagar der ein feirar noko spesielt, for "
+"eksempel halloween eller farsdag."
 
 #: holidaycategories.cpp:107
 msgctxt "QObject|"
@@ -180,6 +189,8 @@ msgid ""
 "Commemorative Holiday: a special day to remember usually bound to a "
 "political region. Not a day-off from work or school; banks are open, etc."
 msgstr ""
+"Minnedag: Ein dag til minne om noko eller nokon. Ein har ikkje fri frå "
+"arbeid eller skule, og bankane er opne."
 
 #: holidaycategories.cpp:111
 msgctxt "QObject|"
@@ -187,6 +198,8 @@ msgid ""
 "Historical Holiday: similar to a Commemorative Holiday but historical in "
 "nature."
 msgstr ""
+"Historisk minnedag: Omtrent det same som ein minnedag, men knytt til ei "
+"historisk hending."
 
 #: holidaycategories.cpp:114
 msgctxt "QObject|"
@@ -194,6 +207,8 @@ msgid ""
 "Name Day Holiday: in some political regions each day is assigned a first "
 "name and persons with that name celebrate that day as their \"Name Day\"."
 msgstr ""
+"Namnedag: I nokre administrative område er kvar dato knytt til eitt eller "
+"fleire personnamn, og dei som har dette namnet, feirar denne dagen."
 
 #: holidaycategories.cpp:119
 msgctxt "QObject|"
@@ -201,6 +216,8 @@ msgid ""
 "Seasonal Days: the day corresponds to a seasonal event like an equinox, "
 "solstice, daylight saving time starts/ends."
 msgstr ""
+"Sesongdagar: Dagen er knytt til ei årstid, som vårjamdøgn, solkverv eller "
+"overgangen til sommar- eller vintertid."
 
 #: holidayregion.cpp:228
 msgctxt "HolidayRegion|Canadian region"
@@ -361,12 +378,12 @@ msgstr "Republika Srpska"
 #: holidayregion.cpp:308
 msgctxt "HolidayRegion|Holiday type"
 msgid "Public"
-msgstr "Offentleg"
+msgstr "Fridag"
 
 #: holidayregion.cpp:310
 msgctxt "HolidayRegion|Holiday type"
 msgid "Civil"
-msgstr "Borgarleg"
+msgstr "Offentleg"
 
 #: holidayregion.cpp:312
 msgctxt "HolidayRegion|Holiday type"
@@ -376,7 +393,7 @@ msgstr "Religiøs"
 #: holidayregion.cpp:314
 msgctxt "HolidayRegion|Holiday type"
 msgid "Government"
-msgstr "Statleg"
+msgstr "Flaggdag"
 
 #: holidayregion.cpp:316
 msgctxt "HolidayRegion|Holiday type"
@@ -406,7 +423,7 @@ msgstr "Skule"
 #: holidayregion.cpp:326
 msgctxt "HolidayRegion|Holiday type"
 msgid "Seasonal"
-msgstr "Årstid"
+msgstr "Sesong"
 
 #: holidayregion.cpp:328
 msgctxt "HolidayRegion|Holiday type"
