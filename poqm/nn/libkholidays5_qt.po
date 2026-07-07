@@ -1,20 +1,19 @@
 # Translation of libkholidays6_qt to Norwegian Nynorsk
 #
 # Gaute Hvoslef Kvalnes <gaute@verdsveven.com>, 2005.
-# Karl Ove Hufthammer <karl@huftis.org>, 2008, 2018, 2020, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: libkholidays\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2015-06-13 09:34+0000\n"
-"PO-Revision-Date: 2022-09-11 19:41+0200\n"
+"PO-Revision-Date: 2026-07-06 20:43+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 26.11.70\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -215,12 +214,12 @@ msgstr "Republika Srpska"
 #: holidayregion.cpp:966
 msgctxt "HolidayRegion|Holiday type"
 msgid "Public"
-msgstr "Offentleg"
+msgstr "Fridag"
 
 #: holidayregion.cpp:968
 msgctxt "HolidayRegion|Holiday type"
 msgid "Civil"
-msgstr "Borgarleg"
+msgstr "Offentleg"
 
 #: holidayregion.cpp:970
 msgctxt "HolidayRegion|Holiday type"
@@ -230,7 +229,7 @@ msgstr "Religiøs"
 #: holidayregion.cpp:972
 msgctxt "HolidayRegion|Holiday type"
 msgid "Government"
-msgstr "Statleg"
+msgstr "Flaggdag"
 
 #: holidayregion.cpp:974
 msgctxt "HolidayRegion|Holiday type"
@@ -260,7 +259,7 @@ msgstr "Skule"
 #: holidayregion.cpp:984
 msgctxt "HolidayRegion|Holiday type"
 msgid "Seasonal"
-msgstr "Årstid"
+msgstr "Sesong"
 
 #: holidayregion.cpp:986
 msgctxt "HolidayRegion|Holiday type"
