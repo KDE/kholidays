@@ -162,6 +162,14 @@ void HolidayRegionTest::testIsrael()
     parseRegionCalendarYear(region, 2023);
     parseRegionCalendarYear(region, 2024);
     parseRegionCalendarYear(region, 2025);
+    region.setCategories({QLatin1String("religious")});
+    auto holidays = region.rawHolidays(QDate(2026, 1, 1), QDate(2026, 12, 31));
+    QCOMPARE(holidays.size(), 12);
+    QCOMPARE(holidays.first().observedStartDate(), QDate(2026, 2, 2));
+    QCOMPARE(holidays.first().name(), QLatin1String("Tu Bishvat (Fifteenth of Shvat)"));
+    QCOMPARE(holidays.last().observedStartDate(), QDate(2026, 12, 20));
+    QCOMPARE(holidays.last().name(), QLatin1String("Tsom Asarah b-Tevet (Tenth of Tevet Fast)"));
+    QVERIFY(holidayListContains(holidays, QLatin1String("Hanukkah (Feast of Rededication)")));
 }
 
 void HolidayRegionTest::testRegions()

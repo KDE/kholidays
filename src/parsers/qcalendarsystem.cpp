@@ -1,13 +1,17 @@
 /*
-    This file is part of the kholidays library.
+    SPDX-FileCopyrightText: 2007, 2009, 2010, 2014 John Layt <john@layt.net>
 
-    SPDX-FileCopyrightText: 2014 John Layt <john@layt.net>
+    Hebrew Calendar code:
+    Copyright (c) 2003 Hans Petter Bieker <bieker@kde.org>
+    Calendar conversion routines based on Hdate v6, by Amos Shapir 1978 (rev. 1985, 1992)
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "kholidays_debug.h"
+// clang-format off
 #include "qcalendarsystem_p.h"
+#include "hebrewconverter.h"
+// clang-format on
 
 #include <QDate>
 #include <QSharedData>
@@ -76,6 +80,8 @@ qint64 QCalendarSystemPrivate::epoch() const
         return -284655; //  0001-01-01 == -5492-08-29 Gregorian
     case QCalendarSystem::IndianNationalCalendar:
         return 1749994; //  0000-01-01 == 0078-03-22 Gregorian
+    case QCalendarSystem::HebrewCalendar:
+        return 347998; // 0001-01-01 (Gregorian -3760-09-07, Julian -3761-10-07)
     case QCalendarSystem::IslamicCivilCalendar:
         return 1948440; //  0001-01-01 == 0622-07-19 Gregorian
     case QCalendarSystem::ISO8601Calendar:
@@ -106,6 +112,11 @@ qint64 QCalendarSystemPrivate::earliestValidDate() const
         return -284655; //  0001-01-01 == -5492-08-29 Gregorian
     case QCalendarSystem::IndianNationalCalendar:
         return 1749994; //  0000-01-01 == 0078-03-22 Gregorian
+    case QCalendarSystem::HebrewCalendar:
+        // Current formulas using direct Gregorian <-> Hebrew conversion using Qt
+        // will return invalid results prior to the Gregorian switchover in 1582
+        // Next valid Hebrew year starts 5344-01-01 (Gregorian 1583-09-17)
+        return 2299498;
     case QCalendarSystem::IslamicCivilCalendar:
         return 1948440; //  0001-01-01 == 0622-07-19 Gregorian
     case QCalendarSystem::ISO8601Calendar:
@@ -131,6 +142,8 @@ int QCalendarSystemPrivate::earliestValidYear() const
     case QCalendarSystem::JulianCalendar:
         return -4800;
     case QCalendarSystem::IndianNationalCalendar:
+    case QCalendarSystem::HebrewCalendar:
+        return 5344;
     case QCalendarSystem::ISO8601Calendar:
     case QCalendarSystem::ThaiCalendar:
         return 0;
@@ -152,6 +165,9 @@ qint64 QCalendarSystemPrivate::latestValidDate() const
         return 3367114; //  9999-13-05 ==  4506-09-29 Gregorian
     case QCalendarSystem::IndianNationalCalendar:
         return 5402054; //  9999-12-30 == 10078-03-21 Gregorian
+    case QCalendarSystem::HebrewCalendar:
+        // Testing shows current formulas only work up to 8119-13-29 (Gregorian 4359-10-07)
+        return 3313431;
     case QCalendarSystem::IslamicCivilCalendar:
         return 5491751; //  9999-12-29 == 10323-10-21 Gregorian
     case QCalendarSystem::ISO8601Calendar:
@@ -172,6 +188,8 @@ qint64 QCalendarSystemPrivate::latestValidDate() const
 int QCalendarSystemPrivate::latestValidYear() const
 {
     switch (calendarSystem()) {
+    case QCalendarSystem::HebrewCalendar:
+        return 8119;
     default:
         return 9999;
     }
@@ -195,6 +213,7 @@ int QCalendarSystemPrivate::maxMonthsInYear() const
     case QCalendarSystem::CopticCalendar:
     case QCalendarSystem::EthiopicCalendar:
     case QCalendarSystem::EthiopicAmeteAlemCalendar:
+    case QCalendarSystem::HebrewCalendar:
         return 13;
     default:
         return 12;
@@ -231,6 +250,22 @@ int QCalendarSystemPrivate::daysInYear(int year) const
     switch (calendarSystem()) {
     case QCalendarSystem::IslamicCivilCalendar:
         return isLeapYear(year) ? 355 : 354;
+    case QCalendarSystem::HebrewCalendar: {
+        int days;
+        // Get Regular year length
+        if (isLeapYear(year)) { // Has 13 months
+            days = 384;
+        } else { // Has 12 months
+            days = 354;
+        }
+        // Check if is Deficient or Abundant year
+        if (KHolidays::HebrewConverter::short_kislev(year)) { // Deficient
+            days = days - 1;
+        } else if (KHolidays::HebrewConverter::long_cheshvan(year)) { // Abundant
+            days = days + 1;
+        }
+        return days;
+    }
     default:
         return isLeapYear(year) ? 366 : 365;
     }
@@ -288,6 +323,29 @@ int QCalendarSystemPrivate::daysInMonth(int year, int month) const
             return 30;
         }
     }
+    case QCalendarSystem::HebrewCalendar: {
+        int mi = month;
+        if (isLeapYear(year)) {
+            if (month == 6) {
+                mi = 13; // Adar I
+            } else if (month == 7) {
+                mi = 14; // Adar II
+            } else if (month > 7) {
+                mi = month - 1; // Because of Adar II
+            }
+        }
+        if (mi == 2 && KHolidays::HebrewConverter::long_cheshvan(year)) {
+            return 30;
+        }
+        if (mi == 3 && KHolidays::HebrewConverter::short_kislev(year)) {
+            return 29;
+        }
+        if (mi % 2 == 0) { // Even number months have 29 days
+            return 29;
+        } else { // Odd number months have 30 days
+            return 30;
+        }
+    }
     case QCalendarSystem::IslamicCivilCalendar: {
         if (month == 12 && isLeapYear(year)) {
             return 30;
@@ -317,6 +375,8 @@ bool QCalendarSystemPrivate::hasYearZero() const
 bool QCalendarSystemPrivate::hasLeapMonths() const
 {
     switch (calendarSystem()) {
+    case QCalendarSystem::HebrewCalendar:
+        return true;
     default:
         return false;
     }
@@ -367,6 +427,8 @@ bool QCalendarSystemPrivate::isLeapYear(int year) const
         return (year % 4 == 0);
     case QCalendarSystem::IslamicCivilCalendar:
         return ((((11 * year) + 14) % 30) < 11);
+    case QCalendarSystem::HebrewCalendar:
+        return ((((7 * year) + 1) % 19) < 7);
     default:
         return false;
     }
@@ -454,6 +516,23 @@ void QCalendarSystemPrivate::julianDayToDate(qint64 jd, int *year, int *month, i
         dd = e - (((153 * m) + 2) / 5) + 1;
         mm = m + 3 - (12 * (m / 10));
         yy = (100 * b) + d - 4800 + (m / 10);
+        break;
+    }
+
+    case QCalendarSystem::HebrewCalendar: {
+        const KHolidays::h_date *sd = KHolidays::HebrewConverter::qdateToHebrew(QDate::fromJulianDay(jd));
+        yy = sd->hd_year;
+        mm = sd->hd_mon;
+        dd = sd->hd_day;
+        if (isLeapYear(sd->hd_year)) {
+            if (mm == 13 /*AdarI*/) {
+                mm = 6;
+            } else if (mm == 14 /*AdarII*/) {
+                mm = 7;
+            } else if (mm > 6 && mm < 13) {
+                ++mm;
+            }
+        }
         break;
     }
 
@@ -559,6 +638,13 @@ qint64 QCalendarSystemPrivate::julianDayFromDate(int year, int month, int day) c
             + (365 * year) //
             + (year / 4) //
             - 32083;
+        break;
+    }
+
+    case QCalendarSystem::HebrewCalendar: {
+        KHolidays::h_date *gd = KHolidays::HebrewConverter::hebrewToGregorian(year, month, day);
+        QDate tempDate(gd->hd_year, gd->hd_mon + 1, gd->hd_day + 1);
+        jd = tempDate.toJulianDay();
         break;
     }
 

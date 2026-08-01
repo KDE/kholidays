@@ -17,6 +17,8 @@ target_sources(
     PRIVATE
         astroseasons.cpp
         astroseasons.h
+        hebrewconverter.cpp
+        hebrewconverter.h
         holiday.cpp
         holiday.h
         holiday_p.h
@@ -94,6 +96,7 @@ target_link_libraries(KF6Holidays PUBLIC Qt6::Core)
 ecm_generate_headers(KHolidays_CamelCase_HEADERS
   HEADER_NAMES
   AstroSeasons
+  HebrewConverter
   Holiday
   HolidayCategories
   HolidayRegion
