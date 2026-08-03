@@ -9,6 +9,7 @@
 
 Checks: -*,
         bugprone-*,
+        -bugprone-assignment-in-if-condition,
         -bugprone-easily-swappable-parameters,
         -bugprone-implicit-widening-of-multiplication-result,
         -bugprone-narrowing-conversions,
@@ -23,6 +24,7 @@ Checks: -*,
         misc-*,
         -misc-definitions-in-headers,
         -misc-include-cleaner,
+        -misc-multiple-inheritance,
         -misc-no-recursion,
         -misc-use-anonymous-namespace,
         -*-non-private-member-variables-in-classes,
@@ -47,14 +49,16 @@ Checks: -*,
         -readability-redundant-casting,
         -readability-simplify-boolean-expr,
         -readability-static-accessed-through-instance,
+        -readability-use-concise-preprocessor-directives,
         -readability-use-std-min-max,
-         -readability-use-anyofallof,
+        -readability-use-anyofallof,
 #WarningsAsErrors: bugprone-*,
 #                  clang-*,
 #                  google-*,
 #                  misc-*,
 #                  performance-*,
 #                  readability-*,
+HeaderFilterRegex: '/kholidays/src/'
 CheckOptions:
     - key:  bugprone-assert-side-effects.AssertMacros
       value: 'Q_ASSERT;QVERIFY;QCOMPARE;AKVERIFY'
@@ -70,3 +74,5 @@ CheckOptions:
       value: true
     - key: VectorLikeClasses
       value: 'std::vector;QList'
+    - key: misc-override-with-different-visibility.DisallowedVisibilityChange
+      value: widening
