@@ -1,7 +1,7 @@
 /*
     This file is part of the kholidays library.
 
-    SPDX-FileCopyrightText: 2004, 2007, 2009 Allen Winter <winter@kde.org>
+    SPDX-FileCopyrightText: Allen Winter <winter@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -46,6 +46,8 @@ namespace KHolidays
 
   A very good description of the lunar phases can be read at the Wikipedia,
      https://en.wikipedia.org/wiki/Lunar_phase
+
+  The phase is computed for noon in the system timezone.
 */
 class KHOLIDAYS_EXPORT LunarPhase // krazy:exclude=dpointer
 {

@@ -55,9 +55,9 @@ LunarPhase::Phase LunarPhase::phaseAtDate(const QDate &date)
     Phase retPhase = None;
 
     const QTime midnight(0, 0, 0);
-    const QDateTime todayStart(date, midnight, QTimeZone::utc());
+    const QDateTime todayStart(date, midnight, QTimeZone::systemTimeZone());
     const double startAngle = phaseAngle(todayStart.toMSecsSinceEpoch());
-    const QDateTime todayEnd(date.addDays(1), midnight, QTimeZone::utc());
+    const QDateTime todayEnd(date.addDays(1), midnight, QTimeZone::systemTimeZone());
     const double endAngle = phaseAngle(todayEnd.toMSecsSinceEpoch());
 
     if (startAngle > endAngle) {
