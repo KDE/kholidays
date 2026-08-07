@@ -6,13 +6,13 @@
 # H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2010.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
-# SPDX-FileCopyrightText: 2022, 2023, 2026 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022-2023, 2026 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: libkholidays\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2015-06-13 09:34+0000\n"
-"PO-Revision-Date: 2026-04-11 21:05+0300\n"
+"PO-Revision-Date: 2026-08-06 20:27+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.04.2\n"
 "X-Qt-Contexts: true\n"
 
 #: astroseasons.cpp:139
@@ -462,22 +462,22 @@ msgstr "Ortodoks"
 #: holidayregion.cpp:342
 msgctxt "HolidayRegion|Holiday type"
 msgid "Jewish"
-msgstr "Musevî"
+msgstr "Mûsevî"
 
 #: holidayregion.cpp:344
 msgctxt "HolidayRegion|Holiday type"
 msgid "Jewish Orthodox"
-msgstr "Ortodoks Musevî"
+msgstr "Ortodoks Mûsevî"
 
 #: holidayregion.cpp:346
 msgctxt "HolidayRegion|Holiday type"
 msgid "Jewish Conservative"
-msgstr "Muhafazakar Musevî"
+msgstr "Muhafazakar Mûsevî"
 
 #: holidayregion.cpp:348
 msgctxt "HolidayRegion|Holiday type"
 msgid "Jewish Reform"
-msgstr "Yenilikçi Musevî"
+msgstr "Yenilikçi Mûsevî"
 
 #: holidayregion.cpp:350
 msgctxt "HolidayRegion|Holiday type"
