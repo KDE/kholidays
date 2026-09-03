@@ -8,9 +8,7 @@
 :: Updated:  2026-01-12
 ::
 :: Source:   Nepali government annual calendars / Nepali calendar converters and festival sources:
-::           https://nepalicalendar.app/public-holiday-in-nepal
-::           https://publicholidays.asia/nepal
-::           https://www.drikpanchang.com
+::           https://en.wikipedia.org/wiki/Public_holidays_in_Nepal
 ::           https://hamropatro.com
 ::           Dates converted from Bikram Sambat -> Gregorian where available.
 ::           NOTE: Moveable religious/lunar dates are shown as converted; for official/authoritative use please
@@ -42,36 +40,42 @@ description "National and major religious holiday file for Nepal (selected years
 "Maha Ashtami (Day 8)"               public religious on september 30 2025
 "Maha Navami (Day 9)"                public religious on october 1 2025
 "Vijaya Dashami (Main Tika)"         public religious on october 2 2025
+"Kojagrat Purnima (Day 15)"          public religious on october 26 2025
 
 "Ghatasthapana (Day 1)"              public religious on october 11 2026
 "Phulpati (Day 7)"                   public religious on october 17 2026
 "Maha Ashtami (Day 8)"               public religious on october 18 2026
 "Maha Navami (Day 9)"                public religious on october 19 2026
 "Vijaya Dashami (Main Tika)"         public religious on october 21 2026
+"Kojagrat Purnima (Day 15)"          public religious on october 25 2026
 
 "Ghatasthapana (Day 1)"              public religious on september 30 2027
 "Phulpati (Day 7)"                   public religious on october 6 2027
 "Maha Ashtami (Day 8)"               public religious on october 7 2027
 "Maha Navami (Day 9)"                public religious on october 9 2027
 "Vijaya Dashami (Main Tika)"         public religious on october 9 2027
+"Kojagrat Purnima (Day 15)"          public religious on october 14 2027
 
 "Ghatasthapana (Day 1)"              public religious on september 18 2028
 "Phulpati (Day 7)"                   public religious on september 25 2028
 "Maha Ashtami (Day 8)"               public religious on september 26 2028
 "Maha Navami (Day 9)"                public religious on september 27 2028
 "Vijaya Dashami (Main Tika)"         public religious on september 28 2028
+"Kojagrat Purnima (Day 15)"          public religious on october 3 2028
 
 "Ghatasthapana (Day 1)"              public religious on october 7 2029
 "Phulpati (Day 7)"                   public religious on october 14 2029
 "Maha Ashtami (Day 8)"               public religious on october 15 2029
 "Maha Navami (Day 9)"                public religious on october 16 2029
 "Vijaya Dashami (Main Tika)"         public religious on october 17 2029
+"Kojagrat Purnima (Day 15)"          public religious on october 22 2029
 
 "Ghatasthapana (Day 1)"              public religious on september 27 2030
 "Phulpati (Day 7)"                   public religious on october 3 2030
 "Maha Ashtami (Day 8)"               public religious on october 4 2030
 "Maha Navami (Day 9)"                public religious on october 5 2030
 "Vijaya Dashami (Main Tika)"         public religious on october 6 2030
+"Kojagrat Purnima (Day 15)"          public religious on october 11 2030
 
 :: Tihar / Deepawali — key days (Kaag, Kukur, Laxmi Puja, Govardhan/Mha Puja, Bhai Tika)
 "Tihar (Kaag / Crow)"                public religious on november 7 2025
@@ -79,47 +83,50 @@ description "National and major religious holiday file for Nepal (selected years
 "Tihar (Laxmi Puja)"                 public religious on october 20 2025
 "Tihar (Govardhan Puja / Mha Puja)"  public religious on october 22 2025
 "Tihar (Bhai Tika)"                  public religious on october 23 2025
-"Kojagrat Purnima (Day 15)"          public religious on october 26 2025
+
 
 "Tihar (Kaag / Crow)"                public religious on november 7 2026
 "Tihar (Kukur Tihar / Dog)"          public religious on november 8 2026
-"Tihar (Laxmi Puja)"                 public religious on october 29 2026
-"Tihar (Govardhan Puja / Mha Puja)"  public religious on october 31 2026
-"Tihar (Bhai Tika)"                  public religious on november 1 2026
-"Kojagrat Purnima (Day 15)"          public religious on october 26 2026
+"Tihar (Laxmi Puja)"                 public religious on november 9 2026
+"Tihar (Govardhan Puja / Mha Puja)"  public religious on november 10 2026
+"Tihar (Bhai Tika)"                  public religious on november 11 2026
+
 
 "Tihar (Kaag / Crow)"                public religious on october 27 2027
 "Tihar (Kukur Tihar / Dog)"          public religious on october 28 2027
 "Tihar (Laxmi Puja)"                 public religious on october 27 2027
 "Tihar (Govardhan Puja / Mha Puja)"  public religious on october 30 2027
 "Tihar (Bhai Tika)"                  public religious on october 31 2027
-"Kojagrat Purnima (Day 15)"          public religious on october 14 2027
+
 
 "Tihar (Kaag / Crow)"                public religious on october 15 2028
 "Tihar (Kukur Tihar / Dog)"          public religious on october 16 2028
 "Tihar (Laxmi Puja)"                 public religious on november 15 2028
 "Tihar (Govardhan Puja / Mha Puja)"  public religious on october 18 2028
 "Tihar (Bhai Tika)"                  public religious on october 19 2028
-"Kojagrat Purnima (Day 15)"          public religious on october 3 2028
+
 
 "Tihar (Kaag / Crow)"                public religious on november 3 2029
 "Tihar (Kukur Tihar / Dog)"          public religious on november 4 2029
 "Tihar (Laxmi Puja)"                 public religious on november 4 2029
 "Tihar (Govardhan Puja / Mha Puja)"  public religious on november 6 2029
 "Tihar (Bhai Tika)"                  public religious on november 7 2029
-"Kojagrat Purnima (Day 15)"          public religious on october 22 2029
+
 
 "Tihar (Kaag / Crow)"                public religious on october 24 2030
 "Tihar (Kukur Tihar / Dog)"          public religious on october 25 2030
 "Tihar (Laxmi Puja)"                 public religious on october 25 2030
 "Tihar (Govardhan Puja / Mha Puja)"  public religious on october 27 2030
 "Tihar (Bhai Tika)"                  public religious on october 28 2030
-"Kojagrat Purnima (Day 15)"          public religious on october 11 2030
+
+"Yomari Punhi"                       public religious on december 24 2027
+                
+"Maghe Sankranti/Maghi Parva"        public religious on january 15 2027
 
 :: Lhosar and related movable Luni-solar festivals
 "Sonam Lhosar (Tamang New Year)"     public religious on january 30 2025
 "Sonam Lhosar (Tamang New Year)"     public religious on january 19 2026
-"Sonam Lhosar (Tamang New Year)"     public religious on february 6 2027
+"Sonam Lhosar (Tamang New Year)"     public religious on february 7 2027
 "Sonam Lhosar (Tamang New Year)"     public religious on january 26 2028
 "Sonam Lhosar (Tamang New Year)"     public religious on february 13 2029
 "Sonam Lhosar (Tamang New Year)"     public religious on february 2 2030
@@ -133,7 +140,7 @@ description "National and major religious holiday file for Nepal (selected years
 
 "Gyalpo Lhosar (Tibetan New Year)"   public religious on february 28 2025
 "Gyalpo Lhosar (Tibetan New Year)"   public religious on february 18 2026
-"Gyalpo Lhosar (Tibetan New Year)"   public religious on march 8 2027
+"Gyalpo Lhosar (Tibetan New Year)"   public religious on march 9 2027
 "Gyalpo Lhosar (Tibetan New Year)"   public religious on february 25 2028
 "Gyalpo Lhosar (Tibetan New Year)"   public religious on march 15 2029
 "Gyalpo Lhosar (Tibetan New Year)"   public religious on march 5 2030
@@ -166,8 +173,8 @@ description "National and major religious holiday file for Nepal (selected years
 "Holi (hill observance)"             public religious on march 2 2026
 "Holi (Terai observance)"            public religious on march 3 2026
 
-"Holi (hill observance)"             public religious on march 22 2027
-"Holi (Terai observance)"            public religious on march 23 2027
+"Holi (hill observance)"             public religious on march 21 2027
+"Holi (Terai observance)"            public religious on march 22 2027
 
 "Holi (hill observance)"             public religious on march 11 2028
 "Holi (Terai observance)"            public religious on march 12 2028
@@ -200,13 +207,15 @@ description "National and major religious holiday file for Nepal (selected years
 "Gaijatra"                           public religious on august 14 2030
 
 "Gaura Parva"                        public religious on august 20 2025
-"Gaura Parva"                        public religious on september 8 2026
+"Gaura Parva"                        public religious on september 4 2026
 "Gaura Parva"                        public religious on august 28 2027
 "Gaura Parva"                        public religious on september 15 2028
 "Gaura Parva"                        public religious on september 5 2029
 
+"Shree Krishna Janmasthami"          public religious on september 4 2026
+
 "Haritalika Teej"                    public religious on september 14 2025
-"Haritalika Teej"                    public religious on september 3 2026
+"Haritalika Teej"                    public religious on september 14 2026
 "Haritalika Teej"                    public religious on september 21 2027
 "Haritalika Teej"                    public religious on september 10 2028
 "Haritalika Teej"                    public religious on august 31 2029
