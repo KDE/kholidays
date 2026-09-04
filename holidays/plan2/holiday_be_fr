@@ -16,14 +16,14 @@
 country     "BE"
 language    "fr"
 :name        "optional - defaults to country name"
-:description "(please add description in source language) National holiday file for Belgium"
+:description "Jours fériés et fêtes en Belgique francophone"
 
 :: Public Holidays
 "Jour de l'an"                                    public on january 1
 "Pâques"                                          public religious on easter
 "Lundi de Pâques"                                 public on easter plus 1 day
 "Fête du travail"                                 public on may 1
-"Ascencion"                                       public religious on easter plus 39 days
+"Ascension"                                       public religious on easter plus 39 days
 "Pentecôte"                                       public religious on easter plus 49 days
 "Lundi de Pentecôte"                              public religious on easter plus 50 days
 "Fête nationale - Férié"                          public on july 21
@@ -34,11 +34,13 @@ language    "fr"
 
 :: Religious
 "Épiphanie"                                       religious on january 6
+"Chandeleur"                                      religious on february 2
 "Mardi-gras"                                      religious on easter minus 47 days
 "Mercredi des cendres"                            religious on easter minus 46 days
 "Dimanche des rameaux"                            religious on easter minus 7 days
 "Jeudi saint"                                     religious on easter minus 3 days
 "Vendredi saint"                                  religious on easter minus 2 days
+"Jour des morts"                                  religious on november 2
 "Saint Nicolas"                                   religious on december 06
 "Saint-Sylvestre"                                 religious on december 31
 
@@ -62,5 +64,3 @@ language    "fr"
 
 
 :: To be sorted
-"Chandeleur"                                      civil on february 2
-"Jour des morts"                                  civil on november 2
