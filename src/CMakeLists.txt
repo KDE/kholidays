@@ -135,3 +135,17 @@ ecm_qt_install_logging_categories(
     FILE kholidays.categories
     DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}"
 )
+
+ecm_add_installed_library_check(KF6Holidays
+    PACKAGE_NAME "KF6Holidays"
+    PACKAGE_TARGET_NAMESPACE "KF6::"
+)
+
+ecm_installed_library_check_include_strings(KF6Holidays
+    HEADERS ${KHolidays_CamelCase_HEADERS}
+    PREFIX KHolidays
+)
+
+ecm_installed_library_check_version_preprocessor_macros(KF6Holidays
+    PREFIX KHOLIDAYS
+)

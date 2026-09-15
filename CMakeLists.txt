@@ -24,6 +24,7 @@ include(ECMGenerateExportHeader)
 include(ECMDeprecationSettings)
 include(ECMQmlModule)
 include(ECMGenerateQDoc)
+include(ECMInstalledLibraryCheck)
 
 if(EXISTS "${PROJECT_SOURCE_DIR}/.git/")
     set(GIT_SOURCE_TARBALL TRUE)
