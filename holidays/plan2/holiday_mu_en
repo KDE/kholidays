@@ -5,7 +5,7 @@
 ::
 :: Author:   Nadim Attari <nadim.attari@gmail.com>
 ::
-:: Updated:  2021-07-08
+:: Updated:  2026-09-28
 ::
 :: Source:   https://pmo.govmu.org/Communique/Public%20holidays%20-%202022.pdf
 ::           https://pmo.govmu.org/Communique/Public%20holidays%20-%202021.pdf
@@ -15,6 +15,8 @@
 ::           https://www.drikpanchang.com/festivals/yugadi/yugadi-newyear-date.html
 ::           https://www.drikpanchang.com/festivals/ganesh-chaturthi/ganesh-chaturthi-date-time.html
 ::           https://github.com/KDE/kholidays/blob/master/holidays/plan2/holiday_in_en-gb
+::           https://business.mega.mu/2026/09/02/public-holidays-2027-an-extra-monday-off-thanks-to-the-new-law/ (Public Holidays 2027)
+::           https://maurice-info.mu/wp-content/uploads/2026/07/The-Economic-and-Financial-Measures-Miscellaneous-Provisions-Bill.pdf (Clause 46)
 ::
 :: Notes:
 :: 1) The exact date of Eid-Ul-Fitr is subject to confirmation as its celebration
@@ -36,46 +38,47 @@ description "National holiday file for Mauritius"
 
 :: Public Holidays
 "New Year"                          public on january 01 length 2 days
-"Abolition of Slavery"              public on february 01
-"Independence and Republic Day"     public on march 12
-"Labour Day"                        public on may 01
-"Arrival of Indentured Labourers"   public on november 02
-"Christmas"                         public on december 25
+"New Year"                          public on ((([january 2] == [sunday after ([january 2])])) ? [monday after ([january 2])] : noop)
+"Abolition of Slavery"              public on february 01 shift to monday if sunday
+"Independence and Republic Day"     public on march    12 shift to monday if sunday
+"Labour Day"                        public on may      01 shift to monday if sunday
+"Arrival of Indentured Labourers"   public on november 02 shift to monday if sunday
+"Christmas"                         public on december 25 shift to monday if sunday
 
-"Eid-Ul-Fitr"                       public religious on hijri shawwal 1
+"Eid-Ul-Fitr"                       public religious on hijri shawwal 1 shift to monday if sunday
 
-"Thaipoosam Cavadee"                public religious on january 28 2021
-"Thaipoosam Cavadee"                public religious on january 18 2022
+"Thaipoosam Cavadee"                public religious on january  28 2021
+"Thaipoosam Cavadee"                public religious on january  18 2022
 "Thaipoosam Cavadee"                public religious on february 05 2023
-"Thaipoosam Cavadee"                public religious on january 25 2024
+"Thaipoosam Cavadee"                public religious on january  25 2024
 "Thaipoosam Cavadee"                public religious on february 11 2025
 "Thaipoosam Cavadee"                public religious on february 01 2026
-"Thaipoosam Cavadee"                public religious on january 22 2027
+"Thaipoosam Cavadee"                public religious on january  22 2027
 "Thaipoosam Cavadee"                public religious on february 09 2028
-"Thaipoosam Cavadee"                public religious on january 30 2029
-"Thaipoosam Cavadee"                public religious on january 19 2030
+"Thaipoosam Cavadee"                public religious on january  30 2029
+"Thaipoosam Cavadee"                public religious on january  19 2030
 
 "Chinese Spring Festival"           public religious on february 12 2021
 "Chinese Spring Festival"           public religious on february 01 2022
-"Chinese Spring Festival"           public religious on january 22 2023
+"Chinese Spring Festival"           public religious on january  22 2023
 "Chinese Spring Festival"           public religious on february 10 2024
-"Chinese Spring Festival"           public religious on january 29 2025
+"Chinese Spring Festival"           public religious on january  29 2025
 "Chinese Spring Festival"           public religious on february 17 2026
 "Chinese Spring Festival"           public religious on february 06 2027
-"Chinese Spring Festival"           public religious on january 26 2028
+"Chinese Spring Festival"           public religious on january  26 2028
 "Chinese Spring Festival"           public religious on february 13 2029
-"Chinese Spring Festival"           public religious on february 03 2030
+"Chinese Spring Festival"           public religious on february 03 2030 shift to monday if sunday
 
-"Maha Shivaratree"                  public religious on march 11 2021
-"Maha Shivaratree"                  public religious on march 01 2022
+"Maha Shivaratree"                  public religious on march    11 2021
+"Maha Shivaratree"                  public religious on march    01 2022
 "Maha Shivaratree"                  public religious on february 18 2023
-"Maha Shivaratree"                  public religious on march 08 2024
+"Maha Shivaratree"                  public religious on march    08 2024
 "Maha Shivaratree"                  public religious on february 26 2025
 "Maha Shivaratree"                  public religious on february 15 2026
-"Maha Shivaratree"                  public religious on march 06 2027
+"Maha Shivaratree"                  public religious on march    06 2027
 "Maha Shivaratree"                  public religious on february 23 2028
-"Maha Shivaratree"                  public religious on february 11 2029
-"Maha Shivaratree"                  public religious on march 02 2030
+"Maha Shivaratree"                  public religious on february 11 2029 shift to monday if sunday
+"Maha Shivaratree"                  public religious on march    02 2030
 
 "Ugaadi"                            public religious on april 13 2021
 "Ugaadi"                            public religious on april 02 2022
@@ -98,10 +101,10 @@ description "National holiday file for Mauritius"
 "Ganesh Chaturthi"                  public religious on september 01 2022
 "Ganesh Chaturthi"                  public religious on september 19 2023
 "Ganesh Chaturthi"                  public religious on september 08 2024
-"Ganesh Chaturthi"                  public religious on august 28 2025
+"Ganesh Chaturthi"                  public religious on august    28 2025
 "Ganesh Chaturthi"                  public religious on september 15 2026
-"Ganesh Chaturthi"                  public religious on september 04 2027
-"Ganesh Chaturthi"                  public religious on august 24 2028
+"Ganesh Chaturthi"                  public religious on september 05 2027 shift to monday if sunday
+"Ganesh Chaturthi"                  public religious on august    24 2028
 "Ganesh Chaturthi"                  public religious on september 12 2029
 "Ganesh Chaturthi"                  public religious on september 02 2030
 
@@ -112,15 +115,15 @@ description "National holiday file for Mauritius"
 "All Saints Day"                    public religious on november 01 2029
 
 "Divali"                            public religious on november 04 2021
-"Divali"                            public religious on october 24 2022
+"Divali"                            public religious on october  24 2022
 "Divali"                            public religious on november 12 2023
 "Divali"                            public religious on november 01 2024
-"Divali"                            public religious on october 20 2025
+"Divali"                            public religious on october  20 2025
 "Divali"                            public religious on november 08 2026
-"Divali"                            public religious on october 29 2027
-"Divali"                            public religious on october 17 2028
+"Divali"                            public religious on october  29 2027
+"Divali"                            public religious on october  17 2028
 "Divali"                            public religious on november 05 2029
-"Divali"                            public religious on october 26 2030
+"Divali"                            public religious on october  26 2030
 
 :: Religious
 
