@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: libkholidays\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2015-06-13 09:34+0000\n"
-"PO-Revision-Date: 2026-08-04 07:27+0900\n"
+"PO-Revision-Date: 2026-09-16 23:23+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -119,13 +119,15 @@ msgid ""
 "historical event, or to honor people.  Public holidays are always bounded to "
 "a political region at national, regional or local level."
 msgstr ""
+"公共假日：工作或學校（通常）的放假日，通常是歷史事件或人物的紀念。公共假日會"
+"看政治邊界，不管是全國、某區域或是地方政府層級。"
 
 #: holidaycategories.cpp:82
 msgctxt "QObject|"
 msgid ""
 "Civil Service Holiday: a day-off from work for government workers but not a "
 "day off for private sector workers."
-msgstr ""
+msgstr "公務員假日：公務員工作放假的日子，但不是私人領域工作的假日。"
 
 #: holidaycategories.cpp:85
 msgctxt "QObject|"
@@ -136,6 +138,8 @@ msgid ""
 "historical remembrances, etc. Governments often have public holidays for "
 "some religious holidays."
 msgstr ""
+"宗教節日：宗教的特別的日子，不分邊界。各種宗教有從要禮拜、到不許工作/上課、到"
+"記念歷史等等的各式各樣的節日。政府機關通常會將某些宗教節日設為公共假日。"
 
 #: holidaycategories.cpp:91
 msgctxt "QObject|"
@@ -144,19 +148,23 @@ msgid ""
 "extended periods between school terms.  This can vary widely depending on "
 "school level, type, location."
 msgstr ""
+"學校假日：學校放假的日子，包含一天的公共假日或是學期間的長期假期。學校假日依"
+"學校層級、類型、地區等等可能會有很大的不同。"
 
 #: holidaycategories.cpp:96
 msgctxt "QObject|"
 msgid ""
 "Government Holiday: a special day recognized by a political region but "
 "without a day-off for workers, students, etc."
-msgstr ""
+msgstr "政府節日：政治地區所承認但不放假的特別的日子。"
 
 #: holidaycategories.cpp:99
 msgctxt "QObject|"
 msgid "Financial Holiday: banks and markets may close on some public holidays"
-msgstr ""
+msgstr "金融休市：銀行與市場在某些公共假日也會放假"
 
+# 情人節可以指 2/14、7/7、農曆 7/7 etc.，任何一個都符合這裡要舉例的意思，因此我就不特別指定了
+# --Kisaragi
 #: holidaycategories.cpp:102
 msgctxt "QObject|"
 msgid ""
@@ -164,6 +172,8 @@ msgid ""
 "to a political region. A day where people celebrate in some fashion. eg. "
 "Halloween, St. Valentines"
 msgstr ""
+"文化節日：文化上的特殊日子，通常會依政治地區邊界改變。通常人們會以某些方式慶"
+"祝。例如：萬聖節、情人節"
 
 #: holidaycategories.cpp:107
 msgctxt "QObject|"
@@ -171,13 +181,15 @@ msgid ""
 "Commemorative Holiday: a special day to remember usually bound to a "
 "political region. Not a day-off from work or school; banks are open, etc."
 msgstr ""
+"紀念日：為了維持記憶特別記念的日子，通常會依政治地區邊界改變。工作與學校都沒"
+"有放假。"
 
 #: holidaycategories.cpp:111
 msgctxt "QObject|"
 msgid ""
 "Historical Holiday: similar to a Commemorative Holiday but historical in "
 "nature."
-msgstr ""
+msgstr "歷史紀念日：歷史性的紀念日。"
 
 #: holidaycategories.cpp:114
 msgctxt "QObject|"
@@ -185,6 +197,8 @@ msgid ""
 "Name Day Holiday: in some political regions each day is assigned a first "
 "name and persons with that name celebrate that day as their \"Name Day\"."
 msgstr ""
+"命名日：某些政治地區會為日子指定人名，而符合該名字的人們會將該日作為他們的"
+"「命名日」來慶祝。"
 
 #: holidaycategories.cpp:119
 msgctxt "QObject|"
@@ -192,6 +206,8 @@ msgid ""
 "Seasonal Days: the day corresponds to a seasonal event like an equinox, "
 "solstice, daylight saving time starts/ends."
 msgstr ""
+"季節日期：這些日子對應某些季節性的事件，像是春分秋分、夏至冬至、日光節約時間"
+"的開始日與結束日等等。"
 
 #: holidayregion.cpp:228
 msgctxt "HolidayRegion|Canadian region"
