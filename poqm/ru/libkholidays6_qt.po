@@ -139,7 +139,7 @@ msgid ""
 "day off for private sector workers."
 msgstr ""
 "Праздник гражданской службы: нерабочий день для государственных служащих, но "
-"не для работников, занятых в частном секторе. "
+"не для работников, занятых в частном секторе."
 
 #: holidaycategories.cpp:85
 msgctxt "QObject|"
@@ -202,7 +202,7 @@ msgid ""
 "Commemorative Holiday: a special day to remember usually bound to a "
 "political region. Not a day-off from work or school; banks are open, etc."
 msgstr ""
-"Праздник памяти: особый день в память (обычно связан с с политическим "
+"Праздник памяти: особый день в память (обычно связан с политическим "
 "регионом). Не является нерабочим или неучебным, банки открыты и так далее."
 
 #: holidaycategories.cpp:111
@@ -340,7 +340,7 @@ msgstr "Северная Ирландия"
 #: holidayregion.cpp:272
 msgctxt "HolidayRegion|Italian Region"
 msgid "South Tyrol"
-msgstr "Больцано"
+msgstr "Южный Тироль"
 
 #: holidayregion.cpp:274
 msgctxt "HolidayRegion|"
@@ -559,7 +559,7 @@ msgstr "Растущая выпуклая Луна"
 #: lunarphase.cpp:44
 msgctxt "LunarPhase|"
 msgid "Waning Gibbous"
-msgstr "Ущербная Луна"
+msgstr "Убывающая выпуклая Луна"
 
 #: lunarphase.cpp:46
 msgctxt "LunarPhase|"
