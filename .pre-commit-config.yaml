@@ -40,6 +40,14 @@ repos:
     hooks:
       - id: markdownlint-cli2
         files: \.(md|mdown|markdown)$
+  - repo: https://github.com/efrecon/pre-commit-hook-lxml
+    rev: v0.1.4
+    hooks:
+      - id: format-xml
+        args: [--declaration=double-quotes, --self-closing=nospace, --indent=2, --write]
+        files: \.(xml|kcfg)$
+        types: []
+        exclude: \.(svg)$
   - repo: https://github.com/google/yamlfmt
     rev: v0.21.0
     hooks:
