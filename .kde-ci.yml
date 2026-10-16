@@ -1,12 +1,12 @@
 Dependencies:
- - 'on': ['@all']
-   'require':
-    'frameworks/extra-cmake-modules': '@same'
+  - 'on': ['@all']
+    'require':
+      'frameworks/extra-cmake-modules': '@same'
 
 Options:
- test-before-installing: True
- require-passing-tests-on: ['Linux', 'FreeBSD', 'Windows']
- enable-lsan: True
- cppcheck-arguments: '--enable=warning,performance,portability,style --suppress-xml=cppcheck-suppressions.xml'
- require-cppcheck-clean: True
- run-installed-library-check-on: ['@all']
+  test-before-installing: True
+  require-passing-tests-on: ['Linux', 'FreeBSD', 'Windows']
+  enable-lsan: True
+  cppcheck-arguments: '--enable=warning,performance,portability,style --suppress-xml=cppcheck-suppressions.xml'
+  require-cppcheck-clean: True
+  run-installed-library-check-on: ['@all']

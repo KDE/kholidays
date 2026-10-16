@@ -2,12 +2,12 @@ description: Holiday calculation library
 tier: 1
 type: functional
 platforms:
-    - name: All
+  - name: All
 portingAid: false
 deprecated: false
 release: true
 libraries:
-    - cmake: "KF6::Holidays"
+  - cmake: "KF6::Holidays"
 cmakename: KF6Holidays
 
 public_lib: true
