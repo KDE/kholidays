@@ -1,0 +1,44 @@
+::
+:: Country:  Saudi Arabia
+::
+:: Language: Arabic
+::
+:: Author:   Meshary AlMutairi <meshary.allosh@gmail.com>
+::
+:: Updated:  2026-10-22
+::
+:: Source:   https://saudipedia.com/%D8%A7%D9%84%D8%B9%D8%B7%D9%84%D8%A7%D8%AA-%D8%A7%D9%84%D8%B1%D8%B3%D9%85%D9%8A%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9
+
+:: Metadata
+country     "SA"
+language    "ar"
+name        "المملكة العربية السعودية"
+description "ملف للعطلات الرسمية في المملكة العربية السعودية"
+
+:: Public Holidays
+"اليوم الوطني"      public on september 23
+"يوم التأسيس"      public on february 22
+
+:: Civil
+
+:: Religious
+"عيد الفطر"      public religious on hijri shawwal 1 length 3
+"عيد الأضحى"      public religious on hijri thualhijjah 10 length 3
+
+:: Government
+
+:: Financial
+
+:: Commemorative
+
+:: Cultural
+
+:: Historical
+
+:: School
+
+:: Daylight Saving (Winter/Summer Time)
+
+:: Seasons
+
+:: Name Days
