@@ -1,0 +1,46 @@
+::
+:: Country:  Saudi Arabia
+::
+:: Language: UK English
+::
+:: Author:   Meshary AlMutairi <meshary.allosh@gmail.com>
+::
+:: Updated:  2026-10-22
+::
+:: Source:   https://saudipedia.com/en/official-holidays-in-saudi-arabia
+::           https://ncar.gov.sa/en/document-details/eyJpdiI6ImFJdVhWTVV1ZnJPSThoVjdGUllMUnc9PSIsInZhbHVlIjoiV1BobDczR2owZzY2ZjlpbEtHaWh6dz09IiwibWFjIjoiZTE5MDZkMjU3YzEyZWIwMzg5MTk0MWFmYWNkYWNmNzkxY2QzMWNkNDgzNTcwNTdiZGRmNWIzZDM0ODA4ZTQ2ZSIsInRhZyI6IiJ9
+
+:: Metadata
+country     "SA"
+language    "en_GB"
+:name       "optional - defaults to country name"
+description "National holiday file for Saudi Arabia"
+
+:: Public Holidays
+"National Day"      public on september 23
+"Founding Day"      public on february 22
+
+:: Civil
+
+:: Religious
+"Eid al-Fitr"      public religious on hijri shawwal 1 length 3
+"Eid al-Adha"      public religious on hijri thualhijjah 10 length 3
+
+:: Government
+
+:: Financial
+
+:: Commemorative
+"Flag Day"          commemorative on march 11
+
+:: Cultural
+
+:: Historical
+
+:: School
+
+:: Daylight Saving (Winter/Summer Time)
+
+:: Seasons
+
+:: Name Days
