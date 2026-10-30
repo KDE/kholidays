@@ -11,7 +11,6 @@
 #include <QCoreApplication>
 #include <QDate>
 
-#include <cstdlib>
 #include <iostream>
 
 using namespace KHolidays;
