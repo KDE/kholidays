@@ -1,4 +1,6 @@
-ecm_add_qml_module(kholidaysdeclarativeplugin URI "org.kde.kholidays")
+ecm_add_qml_module(kholidaysdeclarativeplugin
+    CLASS_NAME KHolidaysDeclarativePlugin URI "org.kde.kholidays"
+)
 
 target_sources(
     kholidaysdeclarativeplugin
@@ -17,4 +19,4 @@ target_link_libraries(
         KF6Holidays
 )
 
-ecm_finalize_qml_module(kholidaysdeclarativeplugin DESTINATION ${KDE_INSTALL_QMLDIR})
+ecm_finalize_qml_module(kholidaysdeclarativeplugin DESTINATION ${KDE_INSTALL_QMLDIR} EXPORT KF6HolidaysTargets)
