@@ -17,28 +17,63 @@ language    "fr"
 name        "Canada, Quebec"
 description "Liste des jours fériés, chômés et payés"
 
-:: Public Holidays
+:: Public Holidays (Nationwide, Federal statutory)
 "Jour de l'An"                        public on january 1
 "Vendredi saint"                      public religious on easter minus 2 days
 "Pâques"                              public religious on easter
 "Lundi de Pâques"                     public on easter plus 1 day
 "Jour de la Reine (Journée nationale des patriotes)"  public on monday before may 24
-"Fête nationale du Québec"    public on june 24
-"Fête du Canada"            public on july 1
+"Fête nationale du Québec"            public on june 24
+"Fête du Canada"                      public on july 1
 "Fête du Travail"                     public on first monday in september
 "Journée nationale de la vérité et de la réconciliation" public  on ( (year >= 2021) ? [september 30] : noop )
 "Action de grâces"                    public on second monday in october
 "Jour du Souvenir (Armistice 1918)"   public on november 11
-"Jour de Noël"                                public religious on december 25
+"Jour de Noël"                        public religious on december 25
+
+:: Public Holidays (Provincial+Territorial)
+"Fête de la famille"                  public on third monday in february
+"Journée Louis Riel"                  public on third monday in february
+"Fête des Insulaires"                 public on third monday in february
+"Fête du Patrimoine"                  public on third monday in february
+"Journée nationale des patriotes"     public on monday before may 25
+"Memorial Day"                        public on july 1
+"Fête du Nunavut"                     public on july 9
+"Jour de la Colombie-Britannique"     public on first monday in august
+"Jour du Nouveau-Brunswick"           public on first monday in august
+"Jour de la Saskatchewan"             public on first monday in august
+"Fête du Patrimoine"                  public on first monday in august
+"Jour de la Fondation"                public on first monday in august
+"Jour de Terry Fox"                   public on first monday in august
+"Jour de la Découverte"               public on third monday in august
+"Journée de l'Alberta"                public on september 1
+
 
 :: Religious Holidays
 
 :: Financial
 
 :: Cultural
-"St Valentin"                         cultural on february 14
-"Fête des Mères"                     cultural on second sunday in may
-"Fête des Pères"                     cultural on third sunday in june
+"Jour de la marmotte"                         cultural on february 2
+"Saint-Valentin"                              cultural on february 14
+"Jour du drapeau national du Canada"          cultural on february 15
+"Journée internationale des femmes"           cultural on march 8
+"Jour du Commonwealth"                        cultural on second monday in march
+"Fête de la Saint-Patrick"                    cultural on march 17
+"Poisson d'avril"                             cultural on april 1
+"Journée du tartan"                           cultural on april 6
+"Jour de la Terre"                            cultural on april 22
+"Journée de la robe rouge"                    cultural on may 5
+"Jour de la Victoire en Europe"               cultural on may 8
+"Fête des Mères"                              cultural on second sunday in may
+"Journée des Loyalistes"                      cultural on june 19
+"Journée nationale des Autochtones"           cultural on june 21
+"Fête des Pères"                              cultural on third sunday in june
+"Journée canadienne du multiculturalisme"     cultural on june 27
+"Journée nationale des gardiens de la paix"   cultural on august 9
+"Journée nationale des grands-parents"        cultural on second sunday in september
+"Halloween"                                   cultural on october 31
+"Journée du chandail orange"                  cultural on september 30
 
 :: School
 
