@@ -109,3 +109,19 @@ target_link_libraries(
     KF6Holidays
     Qt6::Test
 )
+
+# for now let's make this test optional if Python isn't found
+find_package(Python3 COMPONENTS Interpreter)
+if(Python3_EXECUTABLE)
+    set(EXE_SUFFIX)
+    if(WIN32)
+        set(EXE_SUFFIX ".exe")
+    endif()
+    add_test(
+        NAME syntax-test
+        COMMAND
+            ${Python3_EXECUTABLE} ${PROJECT_SOURCE_DIR}/autotests/syntax-tester.py
+            ${PROJECT_BINARY_DIR}/bin/testholidayregion${EXE_SUFFIX}
+    )
+endif()
+ecm_mark_as_test(syntax-test)

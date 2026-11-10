@@ -4,7 +4,8 @@ Dependencies:
       'frameworks/extra-cmake-modules': '@same'
 
 Options:
-  test-before-installing: True
+  # the syntax check test must run after the install
+  test-before-installing: False
   require-passing-tests-on: ['Linux', 'FreeBSD', 'Windows']
   enable-lsan: True
   cppcheck-arguments: '--enable=warning,performance,portability,style --suppress-xml=cppcheck-suppressions.xml'

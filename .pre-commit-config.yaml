@@ -27,6 +27,20 @@ repos:
         # force using this project's configuration rather
         # than the one provided by CI
         args: ["--style=file:.clang-format-pre-commit"]
+  - repo: https://github.com/PyCQA/pylint
+    rev: v4.1.3
+    hooks:
+      - id: pylint
+        exclude: ^(vcpkg-install.py)
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    # Ruff version.
+    rev: v0.17.4
+    hooks:
+      # use pylint for now
+      # Run the linter.
+      # - id: ruff
+      # Run the formatter.
+      - id: ruff-format
   - repo: https://github.com/codespell-project/codespell
     rev: v2.4.3
     hooks:
