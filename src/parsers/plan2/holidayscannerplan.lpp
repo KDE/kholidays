@@ -83,8 +83,8 @@ typedef KHolidays::HolidayParserPlan::token_type token_type;
     yylloc->step();
 %}
 
-#.*\n               { yylloc->lines( yyleng ); yylloc->step(); }
-^:.*\n              { yylloc->lines( yyleng ); yylloc->step(); }
+#.*\n               { yylloc->lines(); yylloc->step(); }
+^:.*\n              { yylloc->lines(); yylloc->step(); }
 [ \t\r]+            { yylloc->step(); }
 [\n]+               { yylloc->lines( yyleng ); yylloc->step(); }
 [-+*/%.!?:()\[\]]   { return KHolidays::HolidayParserPlan::token_type( *yytext ); }

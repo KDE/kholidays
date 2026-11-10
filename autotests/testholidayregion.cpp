@@ -174,6 +174,8 @@ void HolidayRegionTest::testIsrael()
 
 void HolidayRegionTest::testRegions()
 {
+    QTest::failOnWarning(QRegularExpression("syntax error"));
+
     qDebug() << "Available region codes:";
     const QStringList regionCodes = KHolidays::HolidayRegion::regionCodes();
     for (const QString &regionCode : regionCodes) {

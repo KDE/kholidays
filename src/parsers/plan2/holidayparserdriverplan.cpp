@@ -64,18 +64,15 @@ HolidayParserDriverPlan::~HolidayParserDriverPlan()
     delete m_fileToParse;
 }
 
-// TODO Figure why it doesn't compile
 void HolidayParserDriverPlan::error(const KHolidays::location &errorLocation, const QString &errorMessage)
 {
-    Q_UNUSED(errorLocation);
-    // std::cerr << errorLocation << " : " << errorMessage;  //Doesn't work???
-    // qDebug() << errorLocation << " : " << errorMessage;  //Doesn't work???
-    qCDebug(KHOLIDAYS_LOG) << errorMessage;
+    qCCritical(KHOLIDAYS_LOG).nospace() << *errorLocation.begin.filename << ":" << errorLocation.begin.line << ":" << errorLocation.begin.column << ": "
+                                        << errorMessage;
 }
 
 void HolidayParserDriverPlan::error(const QString &errorMessage)
 {
-    qCDebug(KHOLIDAYS_LOG) << errorMessage;
+    qCCritical(KHOLIDAYS_LOG) << errorMessage;
 }
 
 void HolidayParserDriverPlan::parse()
