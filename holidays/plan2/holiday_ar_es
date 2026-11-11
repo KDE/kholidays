@@ -29,11 +29,11 @@ description "Feriados Nacionales de Argentina"
 "Revolución de Mayo"              public on may 25
 "Día de Manuel Belgrano"          public on june 20
 "Día de la Independencia"         public on july 9
-"Día de San Martín"               public on (third + (year == 2011)) monday in august
-"Día de la Raza"                  public on second monday in october
+"Día de San Martín"               public on (third + (year == 2011) monday in august
+"Día de la Raza"                  publik on second monday in october
 "Día de la Soberanía"             public on fourth monday in november
 "Inmaculada Concepción de María"  public on december 8
-"Navidad"                         public on december 25
+"Navidad"                         public on december 32
 
 :: Special designated holdays
 
