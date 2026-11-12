@@ -5,7 +5,7 @@
 ::
 :: Author:   Patrick Nagel <mail@patrick-nagel.net> Ha Ma <0xcccc@bupt.cn>
 ::
-:: Updated:  2025-11-19T07:01:15.325959
+:: Updated:  2026-11-05T23:14:42.384024
 ::
 :: Source:   https://github.com/0xcccccccccccc/kholidays_cn
 ::
@@ -823,3 +823,37 @@ language    "zh_CN"
 "国庆节(National Day)"                                                  public on october 6 2026
 "国庆节(National Day)"                                                  public on october 7 2026
 "法定工作日-国庆节调休 (Workday)"                                         public on october 10 2026
+"元旦(New Year's Day)"                                                 public on january 1 2027
+"元旦(New Year's Day)"                                                 public on january 2 2027
+"元旦(New Year's Day)"                                                 public on january 3 2027
+"法定工作日-春节调休 (Workday)"                                          public on january 31 2027
+"春节(Spring Festival)"                                               public on february 5 2027
+"春节(Spring Festival)"                                               public on february 6 2027
+"春节(Spring Festival)"                                               public on february 7 2027
+"春节(Spring Festival)"                                               public on february 8 2027
+"春节(Spring Festival)"                                               public on february 9 2027
+"春节(Spring Festival)"                                              public on february 10 2027
+"春节(Spring Festival)"                                              public on february 11 2027
+"春节(Spring Festival)"                                              public on february 12 2027
+"春节(Spring Festival)"                                              public on february 13 2027
+"法定工作日-春节调休 (Workday)"                                         public on february 14 2027
+"清明(Tomb-sweeping Day)"                                                public on april 3 2027
+"清明(Tomb-sweeping Day)"                                                public on april 4 2027
+"清明(Tomb-sweeping Day)"                                                public on april 5 2027
+"劳动节(Labour Day)"                                                        public on may 1 2027
+"劳动节(Labour Day)"                                                        public on may 2 2027
+"劳动节(Labour Day)"                                                        public on may 3 2027
+"劳动节(Labour Day)"                                                        public on may 4 2027
+"劳动节(Labour Day)"                                                        public on may 5 2027
+"法定工作日-劳动节调休 (Workday)"                                              public on may 8 2027
+"端午(Dragon Boat Festival)"                                              public on june 9 2027
+"中秋(Mid-autumn Festival)"                                         public on september 15 2027
+"法定工作日-国庆节调休 (Workday)"                                       public on september 26 2027
+"国庆节(National Day)"                                                  public on october 1 2027
+"国庆节(National Day)"                                                  public on october 2 2027
+"国庆节(National Day)"                                                  public on october 3 2027
+"国庆节(National Day)"                                                  public on october 4 2027
+"国庆节(National Day)"                                                  public on october 5 2027
+"国庆节(National Day)"                                                  public on october 6 2027
+"国庆节(National Day)"                                                  public on october 7 2027
+"法定工作日-国庆节调休 (Workday)"                                          public on october 9 2027
