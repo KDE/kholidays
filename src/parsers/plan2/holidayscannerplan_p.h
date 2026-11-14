@@ -21,7 +21,7 @@
 
 #ifndef __FLEX_LEXER_H
 #define yyFlexLexer HolidayScannerFlexLexer
-#include "FlexLexer.h"
+#include <FlexLexer.h>
 #undef yyFlexLexer
 #endif
 
