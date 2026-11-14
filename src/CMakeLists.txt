@@ -30,7 +30,6 @@ target_sources(
         lunarphase.h
         parsers/holidayparserdriver.cpp
         parsers/holidayparserdriver_p.h
-        parsers/plan2/FlexLexer.h
         parsers/plan2/holidayparserdriverplan.cpp
         parsers/plan2/holidayparserdriverplan_p.h
         parsers/plan2/holidayscannerplan_p.h
@@ -90,6 +89,7 @@ ecm_generate_export_header(KF6Holidays
 target_include_directories(KF6Holidays INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/KHolidays>")
 target_include_directories(KF6Holidays PUBLIC "$<BUILD_INTERFACE:${KHolidays_SOURCE_DIR}/src/parsers/plan2>")
 target_include_directories(KF6Holidays PRIVATE "${CMAKE_BINARY_DIR}/src")
+target_include_directories(KF6Holidays SYSTEM PRIVATE ${FLEX_INCLUDE_DIRS})
 
 target_link_libraries(KF6Holidays PUBLIC Qt6::Core)
 
