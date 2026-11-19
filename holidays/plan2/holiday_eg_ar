@@ -4,11 +4,12 @@
 :: Language: Arabic
 ::
 :: Author:   Diaa Sami <diaasami@gmail.com>
+::           Youssef Al-Bor3y <youssefelbor3y@protonmail.com>
 ::
-:: Updated:  2010-09-05
+:: Updated:  2026-11-16
 ::
-:: Source:   http://ar.wikipedia.org/wiki/%D8%A7%D8%AD%D8%AA%D9%81%D8%A7%D9%84%D8%A7%D8%AA_%D9%88%D8%A3%D8%B9%D9%8A%D8%A7%D8%AF_%D9%85%D8%B5%D8%B1%D9%8A%D8%A9
-::           http://en.wikipedia.org/wiki/Public_holidays_in_Egypt
+:: Source:   https://ar.wikipedia.org/wiki/%D8%A7%D8%AD%D8%AA%D9%81%D8%A7%D9%84%D8%A7%D8%AA_%D9%88%D8%A3%D8%B9%D9%8A%D8%A7%D8%AF_%D9%85%D8%B5%D8%B1%D9%8A%D8%A9
+::           https://en.wikipedia.org/wiki/Public_holidays_in_Egypt
 ::
 
 :: Shifts are not consistently applied by the government so they are not used
@@ -16,32 +17,34 @@
 :: Metadata
 country     "EG"
 language    "ar"
-:name        "optional - defaults to country name"
-:description "Please translate this: National holiday file for Egypt"
+name        "جمهورية مصر العربية"
+description "ملف العطلات لجمهورية مصر العربية"
 
 :: National Holidays
-: Coptic Christmas
-"عيد الميلاد المجيد"            public religious on january 7
 : Sham El Nessim (Spring Festival)
-"شم النسيم"                    public on pascha plus 1 days
+"شم النسيم"                     public on pascha plus 1 days
 : Sinai Liberation Day
-"عيد تحرير سيناء"              public on april 25
+"عيد تحرير سيناء"               public on april 25
 : Labour Day
-"عيد العمال"                   public on may 1
+"عيد العمال"                    public on may 1
 : Revolution Day
-"عيد الثورة"                   public on july 23
+"عيد الثورة"                    public on july 23
 : Armed Forces Day
-"عيد القوات المسلحة"           public on october 6
+"عيد القوات المسلحة"            public on october 6
 : Islamic New Year
-"رأس السنة الهجرية"            public on hijri muharram 1
-: Birthday of the Prophet Muhammad (Sunni)
-"المولد النبوى الشريف"         public religious on hijri rabialawal 12
-: Eid el-Fitr (End of Ramadan)
-"عيد الفطر"                    public religious on hijri shawwal 1 length 3
-: Eid al-Adha (End of the Hajj)
-"عيد الأضحى"                    public religious on hijri thualhijjah 10 length 3
+"رأس السنة الهجرية"             public on hijri muharram 1
+: Birthday of the Prophet Muhammad
+"المولد النبوى الشريف"          public on hijri rabialawal 12
 
 :: Religious Holidays
+: Eid el-Fitr
+"عيد الفطر"                     public religious on hijri shawwal 1 length 3
+: Eid al-Adha
+"عيد الأضحى"                     public religious on hijri thualhijjah 10 length 3
+: Ashura
+"عاشوراء"                       religious on hijri muharram 10
+: Coptic Christmas
+"عيد الميلاد المجيد"             public religious on january 7
 
 :: Financial
 
@@ -50,6 +53,10 @@ language    "ar"
 :: School
 
 :: Daylight Saving
+: Summer Time
+"التوقيت الصيفي"                seasonal on last friday in april
+: Winter Time
+"التوقيت الشتوي"                seasonal on last thursday in october
 
 :: Seasons
 
