@@ -100,11 +100,16 @@ set_package_properties(
         PURPOSE
             "Required to generate the plan2 parser"
 )
+
 if(FLEX_FOUND AND NOT FLEX_INCLUDE_DIRS)
-    message(
-        FATAL_ERROR
-        "FlexLexer.h of the flex installation was not found. Install the flex development files (e.g. libfl-dev) or set FLEX_INCLUDE_DIR."
-    )
+    if(NOT ANDROID)
+        message(
+            FATAL_ERROR
+            "FlexLexer.h of the flex installation was not found. Install the flex development files (e.g. libfl-dev) or set FLEX_INCLUDE_DIR."
+        )
+    else()
+        set(FLEX_INCLUDE_DIRS ${CMAKE_SOURCE_DIR}/src/fallback-flexlexer)
+    endif()
 endif()
 find_package(BISON 3.3.2 REQUIRED)
 set_package_properties(
